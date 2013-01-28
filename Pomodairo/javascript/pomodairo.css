@@ -1,0 +1,39 @@
+.newTask{
+  position: absolute;
+  left:350px;
+  top:150px;
+  display: none;
+  border: 1px solid black;
+  height: 200px;
+  width: 300px;
+}
+.about{
+  position: absolute;
+  left:350px;
+  top:50px;
+  display: none;
+  border: 1px solid black;
+  height: 570px;
+  width: 500px;
+}
+.configuration{
+  position: absolute;
+  left:350px;
+  top:150px;
+  display: none;
+  border: 1px solid black;
+  height: 100px;
+  width: 250px;
+}
+.container{
+  border: 1px solid black;
+  width: 550px;
+}
+.tasks{
+  border: 1px solid black;
+  width: 490px;
+}
+.close{
+  border: 1px solid black;
+  float: right;
+}

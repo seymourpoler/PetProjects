@@ -1,0 +1,90 @@
+<html>
+<head>
+
+<LINK REL=StyleSheet HREF="pomodairo.css" TYPE="text/css" MEDIA=screen>
+
+<script type="text/javascript" src="./Configuracion.js"></script>
+<script type="text/javascript" src="./TaskManager.js"></script>
+<script type="text/javascript" src="./PomodoroManager.js"></script>
+<script type="text/javascript" src="./UIManager.js"></script>
+<script type="text/javascript" src="./riffwave.js"></script>
+<script type="text/javascript" src="./SoundManager.js"></script>
+<script type="text/javascript" src="./TimeManager.js"></script>
+<script>
+  //Init the Pomodairo
+  var configuration = new Configuration();
+  var taskManager = new TaskManager();
+  var uiManager = new UIManager();
+  var soundManager = new SoundManager();
+  var timeManager = new TimeManager();
+  var pomodoroManager = new PomodoroManager(configuration, taskManager, uiManager, soundManager, timeManager);
+</script>
+<body>
+  <div id="container" class="container">
+    <div style="float:right;"><input type="button" value="about" onclick="pomodoroManager.showAbout();"/></div>
+    <div style="float:right;"><input type="button" value="configuration" onclick="pomodoroManager.showConfiguration();"/></div>
+    <div><label id="lblTimer">00:00</label></div>
+    <div id="buttons">
+        <input type="button" value=">" onclick="pomodoroManager.play();"/>
+        <input type="button" value="||"  onclick="pomodoroManager.pause();"/>
+        <input type="button" value="Stop"  onclick="pomodoroManager.stop();"/>
+        <input type="button" value="Tasks"  onclick="pomodoroManager.showTasks();"/>
+    </div>
+    <div id="divTasks">
+      <select id="cmbTasks" size="10" class="tasks"></select>
+      <div style="float:right;">
+        <input type="button" value="Up"  onclick="pomodoroManager.upTask();"/>
+        <br />
+        <input type="button" value="Down"  onclick="pomodoroManager.downTask();"/>
+      </div>
+      <div style="float:center;">
+        <input type="button" value="New Task"  onclick="pomodoroManager.showNewTask();"/>
+        <input type="button" value="Remove Task"  onclick="pomodoroManager.removeTask();"/>
+      <div>
+    </div>
+  </div>
+  <div id="divConfiguration" class="configuration">
+    <div class="close" onclick="pomodoroManager.hideConfiguration();"><span>x</span></div>
+    <label>Minutes: </label>
+    <input id="txtNumberOfMinutes" type="text" value="" />
+    <br />
+    <label>Seconds: </label>
+    <input id="txtNumberOfSeconds" type="text" value="" />
+    <br />
+    <input type="button" value="Save"  onclick="pomodoroManager.saveConfiguration();"/>
+    <input type="button" value="Cancel"  onclick="pomodoroManager.hideConfiguration();"/>
+  </div>
+  <div id="divNewTask" class="newTask">
+    <div class="close" onclick="pomodoroManager.hideNewTask();"><span>x</span></div>
+    <label>name: </label>
+    <input type="text" id="txtNameNewTask" value=""  />
+    <br />
+    <input type="button" value="Save"  onclick="pomodoroManager.addNewTask();"/>
+    <input type="button" value="Cancel"  onclick="pomodoroManager.hideNewTask();"/>
+  </div>
+  <div id="divAbout" class="about">
+    <div class="close" onclick="pomodoroManager.hideAbout();"><span>x</span></div>
+    <div>
+      <img src="imageAbout.jpg">
+      <br />
+      <label>programmer: Luis Rdez.</label>
+      <br />
+      <label>feedback: <a href="mailto:seymourpoler@gmail.com">toMe </a></label>
+      <br />
+      <label>version: 1.0</label>
+      <br />
+      <label>licence: GPL 3.0 or later</label>
+      <br />
+      <label>Many tkanks to:</label>
+      <br />
+      <label>original idea: <a href="http://code.google.com/p/pomodairo/" target="_blank">pomodairo</a></label>
+      <br />
+      <label>Pedro Ladaria for his riffwave.js - HTML5 sound synthesis via PCM encoding</label>
+      <br />
+      <label>Nicholas C. Zakas for event handler in javascript article 
+          <a href="http://www.nczonline.net/blog/2010/03/09/custom-events-in-javascript/" target="_blank">post</a>
+      </label>
+    </div>
+  </div>
+</body>
+</html>
