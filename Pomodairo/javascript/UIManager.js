@@ -75,7 +75,6 @@ function UIManager(){
     /* PROGRESS BAR */
     this.minimize = function(){
         document.getElementById('divProgressBar').style.display='block';
-        //document.getElementById('divBtnExpand').style.display='block';
         this.hideContainer();
         this.hideControlNewTask();
         this.hideControlAbout();
@@ -84,7 +83,6 @@ function UIManager(){
     this.expand = function(){
         this.showContainer();
         document.getElementById('divProgressBar').style.display='none';
-        //document.getElementById('divBtnExpand').style.display='none';
     }
     this.updateProgressBar = function(configTime, time){
         var totalTime = configTime.seconds + (configTime.minutes * 60);
