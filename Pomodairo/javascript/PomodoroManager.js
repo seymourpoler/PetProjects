@@ -20,7 +20,8 @@ function PomodoroManager(config, taskHandler, uiHandler, soundHandler, timeHandl
     this.manageTime = function(event){
       if(event.type == "tick"){
         instant.uiManager.setLabelTimer(event.time.minutes, event.time.seconds);
-        if(event.time.seconds <= 0 && event.time.minutes <= 0){
+        instant.uiManager.updateProgressBar(instant.configuration.getTime(), event.time);
+        if((event.time.seconds <= 0 && event.time.minutes <= 0) || (event.time.seconds < 0) || (event.time.minutes < 0)){
           instant.playAlarm();
           instant.timeManager.pause();
         }
@@ -79,6 +80,13 @@ function PomodoroManager(config, taskHandler, uiHandler, soundHandler, timeHandl
     }
     this.downTask = function(){
       this.uiManager.downSelectedTask();
+    }
+    /* MINIMIZE */
+    this.minimize = function(){
+      this.uiManager.minimize();
+    }
+    this.expand = function(){
+      this.uiManager.expand();
     }
 
     /* ABOUT */

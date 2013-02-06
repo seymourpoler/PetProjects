@@ -1,4 +1,11 @@
 function UIManager(){
+    /* CONTAINER */
+    this.showContainer = function(){
+        document.getElementById('container').style.display='block';
+    }
+    this.hideContainer = function(){
+        document.getElementById('container').style.display='none';
+    }
 	/* TIME */  
     this.setLabelTimer = function(minutes, seconds){
     	var sec = seconds;
@@ -63,6 +70,26 @@ function UIManager(){
     	cmbTasks[cmbTasks.options.selectedIndex].text = text;
 
     	cmbTasks.options.selectedIndex = position;
+    }
+
+    /* PROGRESS BAR */
+    this.minimize = function(){
+        document.getElementById('divProgressBar').style.display='block';
+        //document.getElementById('divBtnExpand').style.display='block';
+        this.hideContainer();
+        this.hideControlNewTask();
+        this.hideControlAbout();
+        this.hideControlConfiguration();
+    }
+    this.expand = function(){
+        this.showContainer();
+        document.getElementById('divProgressBar').style.display='none';
+        //document.getElementById('divBtnExpand').style.display='none';
+    }
+    this.updateProgressBar = function(configTime, time){
+        var totalTime = configTime.seconds + (configTime.minutes * 60);
+        var timeNow = time.seconds + (time.minutes * 60); 
+        document.getElementById('divBar').style.width=(timeNow*100)/totalTime+'%';  
     }
 
     /* ABOUT */

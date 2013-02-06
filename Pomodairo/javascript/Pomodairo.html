@@ -21,6 +21,7 @@
 </script>
 <body>
   <div id="container" class="container">
+    <div style="float:right;"><input type="button" value="minimize" onclick="pomodoroManager.minimize();"/></div>
     <div style="float:right;"><input type="button" value="about" onclick="pomodoroManager.showAbout();"/></div>
     <div style="float:right;"><input type="button" value="configuration" onclick="pomodoroManager.showConfiguration();"/></div>
     <div><label id="lblTimer">00:00</label></div>
@@ -85,6 +86,14 @@
           <a href="http://www.nczonline.net/blog/2010/03/09/custom-events-in-javascript/" target="_blank">post</a>
       </label>
     </div>
+  </div>
+</div>
+</div>
+  <div id="divProgressBar" class="progressBar">
+    <div id="divProgressBarContainer" class="progressBarContainer">
+      <div id="divBar" class="bar"></div>
+    </div>
+    <div id="divBtnExpand" style="float:right;"><input type="button" value="expand" onclick="pomodoroManager.expand();"/></div>
   </div>
 </body>
 </html>

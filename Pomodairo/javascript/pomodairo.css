@@ -25,6 +25,15 @@
   height: 100px;
   width: 250px;
 }
+.bar{background-color: black; height:20px; position: absolute; width: 100%;}
+.progressBarContainer{position: relative; margin: auto; height: 60px; width: 100%;}
+
+.progressBar{
+  border: 1px solid black;
+  display: none;
+  height: 50px;
+  width: 550px;
+}
 .container{
   border: 1px solid black;
   width: 550px;
