@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Reproductor de Audio</title>
+<link rel="stylesheet" href="Reproductor.css">
+<script src="Reproductor.js"></script>
+<script type="text/javascript">
+
+	var audioPlayer = new AudioPlayer();
+	function play(){
+		console.log('play');
+
+		var lstSong = document.getElementById('lstSongs');	
+		var song = lstSong.options[lstSong.selectedIndex].value;
+		console.log('play song: ' + song);
+		audioPlayer.playSong(song);
+	}
+	
+	function pause(){
+		console.log('html --> pause');
+		audioPlayer.pauseSong();
+	}
+
+	function stop(){
+		audioPlayer.stopSong();
+	}
+	
+	function addSong(){
+		console.log('addSong');
+
+		var songs = document.getElementById('lstSongs');
+		var fileInput = document.getElementById('fileSong');
+
+		var song = '';	
+        if ('files' in fileInput) {
+            if (fileInput.files.length > 0) {
+                for (var i = 0; i < fileInput.files.length; i++) {
+                    var file = fileInput.files[i];
+                    if ('name' in file) {
+                        song = file.name;
+                    }
+                    else {
+                        song = file.fileName;
+                    }
+                }
+            }
+        }
+        console.log('song: ' + song);
+		songs.options[songs.options.length] = new Option(song, song);
+	}
+	
+</script>
+</head>
+<body>
+
+<div id="divPlayer">
+
+</div>
+<div id="divButtons">
+<button type="button" id="btnPlay" onclick="play();">Play</button>
+<button type="button" id="btnPause" onclick="pause();">Pause</button>
+<button type="button" id="btnStop" onclick="stop();">Stop</button>
+<input type="file" id="fileSong" />
+<input type="button" id="btnAddSong" onclick="addSong();" value="add Song"/>
+</div>
+
+<div id="divSongs">
+	<select id="lstSongs" size="10"></select>
+</div>
+
+</body>
+</html>
