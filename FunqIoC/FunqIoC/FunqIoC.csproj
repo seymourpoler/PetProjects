@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{916B100E-6B98-45CB-AD5D-0C6A1AA061C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FunqIoC</RootNamespace>
+    <AssemblyName>FunqIoC</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="ServiceKey.cs" />
+    <Compile Include="Container.Register.cs" />
+    <Compile Include="Container.Resolve.cs" />
+    <Compile Include="Registration.cs" />
+    <Compile Include="ContainerBuilder.cs" />
+    <Compile Include="ResolutionException.cs" />
+    <Compile Include="ReuseScope.cs" />
+    <Compile Include="ServiceEntry.cs" />
+    <Compile Include="Owner.cs" />
+    <Compile Include="Syntax.cs" />
+    <Compile Include="IFluentInterface.cs" />
+    <Compile Include="IInitializable.cs" />
+    <Compile Include="Initializable.cs" />
+    <Compile Include="Registration.Generic.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

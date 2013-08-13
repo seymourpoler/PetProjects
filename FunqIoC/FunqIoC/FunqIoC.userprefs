@@ -1,0 +1,40 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FunqIoC.Test/ContainerTest.cs">
+    <Files>
+      <File FileName="FunqIoC.Console/Main.cs" Line="13" Column="69" />
+      <File FileName="FunqIoC.Test/ContainerTest.cs" Line="354" Column="4" />
+      <File FileName="FunqIoC/ContainerBuilder.cs" Line="1" Column="1" />
+      <File FileName="FunqIoC/Initializable.cs" Line="18" Column="23" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="FunqIoC" expanded="True" />
+          <Node name="FunqIoC.Console" expanded="True" />
+          <Node name="FunqIoC.Test" expanded="True">
+            <Node name="ContainerTest.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/luis/Projects/Mono/FunqIoC/FunqIoC.Console/Main.cs" line="26" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
