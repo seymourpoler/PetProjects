@@ -4,6 +4,7 @@ function Control(){
 	this.style = '';
 	this.cssClass = '';
 	this.disabled = false;
+	this.visible = null;
 	this.controls = new Array();
 	this.onClick = function(){}; //event
 	
@@ -25,6 +26,13 @@ function Control(){
 			result = result.concat(" class='" + this.cssClass + "'");
 		}
 
+		if(this.visible == true){
+			this.style = this.style.concat('visibility:visible;');
+		}
+		else if(this.visible == false){
+			this.style = this.style.concat('visibility:hidden;');
+		}
+
 		if(this.style != ''){
 			result = result.concat(" style='" + this.style + "'");
 		}
@@ -32,6 +40,7 @@ function Control(){
 		if(this.disabled){
 			result = result.concat(" disabled='disabled'");
 		}
+
 		return result.concat("></" + this.tag + ">");
 	}
 }
