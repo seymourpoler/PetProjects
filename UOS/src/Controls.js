@@ -1,6 +1,7 @@
 function Control(){
 	this.id = '';
 	this.tag = '';
+	this.type = '';
 	this.style = '';
 	this.cssClass = '';
 	this.disabled = false;
@@ -19,48 +20,53 @@ function Control(){
 		this.controls.push(control);
 	}
 
-	this.render = function(){
-		var result =  "<" + this.tag;
-
-		if(this.id != ''){
-			result = result.concat(" id='" + this.id + "'");
-		}
-		
-		if(this.cssClass != ''){
-			result = result.concat(" class='" + this.cssClass + "'");
-		}
-
-		if(this.visible == true){
-			this.style = this.style.concat('visibility:visible;');
-		}
-		else if(this.visible == false){
-			this.style = this.style.concat('visibility:hidden;');
-		}
-
-		if(this.style != ''){
-			result = result.concat(" style='" + this.style + "'");
-		}
-
-		if(this.disabled){
-			result = result.concat(" disabled='disabled'");
-		}
-
-		result = result.concat(">");
-		var subControls = renderSubControls(this.controls);
-		result = result.concat(subControls);
-		return result.concat("</" + this.tag + ">");
-	}
-
-	function renderSubControls(controls){
+	this.renderSubControls = function(){
 		var result = '';
 		var domRendered = '';
-		for(var cont = 0; cont < controls.length; cont++){
-			domRendered = controls[cont].render();
+		
+		for(var cont = 0; cont < this.controls.length; cont++){
+			domRendered = this.controls[cont].render();
 			result = result.concat(domRendered);
 		}
 		
 		return result;
 	}
+}
+
+Control.prototype.render = function(){
+	var result =  "<" + this.tag;
+
+	if(this.type != ''){
+		result = result.concat(" type='" + this.type + "'");
+	}
+
+	if(this.id != ''){
+		result = result.concat(" id='" + this.id + "'");
+	}
+	
+	if(this.cssClass != ''){
+		result = result.concat(" class='" + this.cssClass + "'");
+	}
+
+	if(this.visible == true){
+		this.style = this.style.concat('visibility:visible;');
+	}
+	else if(this.visible == false){
+		this.style = this.style.concat('visibility:hidden;');
+	}
+
+	if(this.style != ''){
+		result = result.concat(" style='" + this.style + "'");
+	}
+
+	if(this.disabled){
+		result = result.concat(" disabled='disabled'");
+	}
+
+	result = result.concat(">");
+	var subControls = this.renderSubControls();
+	result = result.concat(subControls);
+	return result.concat("</" + this.tag + ">");
 }
 
 function Div(){
@@ -75,6 +81,23 @@ Span.prototype = new Control();
 
 function Label(){
 	this.tag = 'label';
+	this.text = '';
 }
-Label.prototype = new Control();
 
+Label.prototype = new  Control();
+Label.prototype.render = function(){
+	var result = Control.prototype.render.call(this);
+	return result.replace("></", ">" + this.text + "</");
+}
+
+function TextBox(){
+	this.tag = 'input';
+	this.type = 'text';
+	this.text = '';
+}
+
+TextBox.prototype = new Control();
+TextBox.prototyperender = function(){
+	var result = Control.prototype.render.call(this);
+	return retult.replace("></", "value=" + this.text + "></");
+}

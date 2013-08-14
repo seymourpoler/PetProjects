@@ -36,10 +36,14 @@ describe("Controls", function () {
             div.visible = true;
             expect(div.render()).toEqual("<div id='divid' class='class' style='style;visibility:visible;'></div>");
         });
-        it("div render with a simple label control", function(){
+        it("div render with a two controls", function(){
             var label = new Label();
+            label.text = "Label";
+            var textBox = new TextBox();
+            textBox.disabled = true;
             div.addControl(label);
-            expect(div.render()).toEqual("<div><label></label></div>");
+            div.addControl(textBox);
+            expect(div.render()).toEqual("<div><label>Label</label><input type='text' disabled='disabled'></input></div>");
         });
     });
 
@@ -76,6 +80,16 @@ describe("Controls", function () {
             span.disabled = false;
             span.visible = false;
             expect(span.render()).toEqual("<span style='visibility:hidden;'></span>");
+        });
+        it("span remove css class with a text box", function(){
+            span.id = 'spanId';
+            span.cssClass = 'classOne classTwo classThree classFour';
+            var textBox = new TextBox();
+            textBox.cssClass = 'classOne classFour';
+            textBox.disabled = true;
+            textBox.visible = false;
+            span.addControl(textBox);
+            expect(span.render()).toEqual("<span id='spanId' class='classOne classTwo classThree classFour'><input type='text' class='classOne classFour' style='visibility:hidden;' disabled='disabled'></input></span>");
         });
     });
 });
