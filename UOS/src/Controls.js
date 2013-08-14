@@ -15,6 +15,10 @@ function Control(){
 		this.cssClass = this.cssClass.replace(" " + cssClassName, '');
 	}
 	
+	this.addControl = function(control){
+		this.controls.push(control);
+	}
+
 	this.render = function(){
 		var result =  "<" + this.tag;
 
@@ -41,19 +45,36 @@ function Control(){
 			result = result.concat(" disabled='disabled'");
 		}
 
-		return result.concat("></" + this.tag + ">");
+		result = result.concat(">");
+		var subControls = renderSubControls(this.controls);
+		result = result.concat(subControls);
+		return result.concat("</" + this.tag + ">");
+	}
+
+	function renderSubControls(controls){
+		var result = '';
+		var domRendered = '';
+		for(var cont = 0; cont < controls.length; cont++){
+			domRendered = controls[cont].render();
+			result = result.concat(domRendered);
+		}
+		
+		return result;
 	}
 }
 
 function Div(){
 	this.tag = 'div';
 }
-
 Div.prototype = new Control();
 
 function Span(){
 	this.tag = 'span';
 }
-
 Span.prototype = new Control();
+
+function Label(){
+	this.tag = 'label';
+}
+Label.prototype = new Control();
 
