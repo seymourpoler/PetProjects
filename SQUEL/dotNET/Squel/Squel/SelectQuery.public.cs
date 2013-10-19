@@ -5,8 +5,6 @@ namespace Squel
 {
     public partial class SelectQuery : QueryBase, IQuery
     {
-        
-
         public SelectQuery()
         {
             _fields = new List<string>();
@@ -92,7 +90,5 @@ namespace Squel
 
             return string.Format("{0}{1}{2}{3}{4}{5}{6}", SELECT, fields, _from, _where, groupBy, orderBy, limit);
         }
-
-        
     }
 }

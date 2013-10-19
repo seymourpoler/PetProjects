@@ -43,9 +43,9 @@
     <Compile Include="QueryBase.cs" />
     <Compile Include="SelectQuery.private.cs" />
     <Compile Include="SelectQuery.public.cs" />
-    <Compile Include="SQL.public.cs" />
+    <Compile Include="SQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQL.private.cs" />
+    <Compile Include="UpdateQuery.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
