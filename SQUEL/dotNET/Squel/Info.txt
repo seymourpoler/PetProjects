@@ -1,0 +1,71 @@
+
+
+Given table metadata (name, columns/types, etc.), generate a well-formed SQL string. 
+For example:
+String[] columns = { "a", "b" };
+assertEquals("select a,b,c from x", sql.select(tableName, columns));
+
+Do this for the usual SQL queries: SELECT, INSERT, UPDATE, DELETE. 
+To simplify the problem, consider only this data types: strings, integers and booleans.
+
+Remember to only do one thing at a time, and try not to think of the solution "ahead of time". Let the methods and objects just grow by themselves, as you write more and more tests.
+
+Don't forget:
+Try to use TDD to write code. Free Spanish book here.
+Write unit tests for generated code.
+Try to apply SOLID Principles.
+
+
+
+USER ATORIES
+
+-squel.select().from('users').toString() --> SELECT * FROM users
+-squel.delete().limit(1).where('id=1').from('users').toString() --> DELETE FROM users WHERE id=1 LIMIT 1
+-squel.select().from('students').field("GROUP_CONCAT(DISTINCT test_score ORDER BY test_score DESC SEPARATOR '')").toString() --> SELECT GOUP_CONCAT(DISTINTCT test_score ORDER BY test_score DESC SEPARATOR '') FROM students
+-squel.expr().and('id<5').and_begin().or('a = 2').or('b = 3').end().toString() --> (id<4) AND (A = 2 OR b = 3)
+-s1 = squel.select().from('table1')
+	s1 = s1.clone().field('id')
+
+	s1: SELECT * FROM table1
+	s2: SELECT id FROM table1
+
+- squel.update().table('table').set('f','?').toString() --> UPDATE table SET f = ?
+- squel().pragma().flush('students').toString() --> PRAGMA FLUSH students
+
+SELECT * FROM table;
+SELECT * FROM another_table;
+SELECT foo FROM table;
+SELECT foo, bar FROM table;
+SELECT foo, bar, xyz FROM table; -> Throws exception because xyz does not exist
+SELECT foo, bar FROM table LIMIT 1;
+SELECT foo, bar FROM table LIMIT 200;
+SELECT foo, bar FROM table ORDER BY foo;
+SELECT foo, bar FROM table ORDER BY foo, bar;
+SELECT foo, bar FROM table ORDER BY foo DESC, bar ASC;
+SELECT foo, bar FROM table ORDER BY foo DESC, xyz ASC; -> Throws exception because xyz does not exist
+SELECT foo, bar FROM table ORDER BY foo DESC, bar ASC LIMIT 2;
+SELECT foo, bar FROM table GROUP BY foo;
+SELECT foo, bar FROM table GROUP BY foo, bar;
+SELECT foo, bar FROM table GROUP BY foo ASC, bar DESC;
+SELECT foo, bar FROM table GROUP BY foo ORDER BY foo ASC, bar DESC LIMIT 5;
+SELECT foo, bar FROM table WHERE foo="sample";
+SELECT foo, bar FROM table WHERE baz=1;
+SELECT foo, bar FROM table WHERE foo="sample" AND baz=1;
+SELECT foo, bar FROM table WHERE foo="sample" OR baz=1;
+SELECT foo, bar FROM table WHERE foo="1" OR baz=1; => automatically casts an integer to string
+SELECT foo, bar FROM table WHERE foo="1" OR baz=1 ORDER BY foo DESC GROUP BY bar LIMIT 1;
+
+
+DELETE FROM table;
+DELETE FROM another_table;
+DELETE FROM table ORDER BY foo DESC LIMIT 1;
+DELETE FROM table WHERE foo="sample" AND bar="another" ORDER BY bar ASC LIMIT 4;
+
+UPDATE table SET foo="sample";
+UPDATE another_table SET foo = 1;
+UPDATE table SET foo="sample", baz=1 WHERE baz>1 OR baz<-5 ORDER BY foo DESC GROUP BY bar LIMIT 1;
+
+INSERT INTO table (foo, bar, baz) VALUES ("string value", "another string", 1);
+INSERT INTO another_table (foo, bar, baz) VALUES ("string value", "another string", 1);
+INSERT INTO table (foo, bar, baz) VALUES ("value1", "value2", 3); => Converts string "3" to integer 3
+INSERT INTO table (foo, bar, baz) VALUES ("value1", "value2", "value3"); => Throws exception -> Unable to convert "value3" to integer

@@ -1,0 +1,10 @@
+C:\Users\luis\Documents\GitHub\PetProjects\SEQUEL\dotNET\Squel\Squel\bin\Debug\Squel.dll
+C:\Users\luis\Documents\GitHub\PetProjects\SEQUEL\dotNET\Squel\Squel\bin\Debug\Squel.pdb
+C:\Users\luis\Documents\GitHub\PetProjects\SEQUEL\dotNET\Squel\Squel\obj\Debug\Squel.csprojResolveAssemblyReference.cache
+C:\Users\luis\Documents\GitHub\PetProjects\SEQUEL\dotNET\Squel\Squel\obj\Debug\Squel.dll
+C:\Users\luis\Documents\GitHub\PetProjects\SEQUEL\dotNET\Squel\Squel\obj\Debug\Squel.pdb
+C:\Users\luis\Documents\GitHub\PetProjects\SQUEL\dotNET\Squel\Squel\bin\Debug\Squel.dll
+C:\Users\luis\Documents\GitHub\PetProjects\SQUEL\dotNET\Squel\Squel\bin\Debug\Squel.pdb
+C:\Users\luis\Documents\GitHub\PetProjects\SQUEL\dotNET\Squel\Squel\obj\Debug\Squel.csprojResolveAssemblyReference.cache
+C:\Users\luis\Documents\GitHub\PetProjects\SQUEL\dotNET\Squel\Squel\obj\Debug\Squel.dll
+C:\Users\luis\Documents\GitHub\PetProjects\SQUEL\dotNET\Squel\Squel\obj\Debug\Squel.pdb
