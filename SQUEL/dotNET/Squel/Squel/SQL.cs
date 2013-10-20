@@ -34,8 +34,10 @@ namespace Squel
             return (UpdateQuery)query;
         }
 
-        
-
-        
+        public DeleteQuery Delete()
+        {
+            query = new DeleteQuery();
+            return (DeleteQuery)query;
+        }
     }
 }

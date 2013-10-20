@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 namespace Squel
 {
-    public partial class SelectQuery
+    public partial class SelectQuery : QueryBase, IQuery
     {
         private const string SELECT = "SELECT ";
+        private const string DISTINCT = "DISTINCT ";
         private const string FROM = " FROM ";
         private const string WHERE = " WHERE ";
         private const string ORDER_BY = " ORDER BY ";
@@ -15,9 +16,10 @@ namespace Squel
         private const string GROUP_BY = " GROUP BY ";
         private const string LIMIT = " LIMIT ";
 
+        private string _distinct;
         private IList<string> _fields;
         private IList<string> _orderBy;
-        private string _from;
+        private IList<string> _from;
         private string _where;
         private int _limit;
         private string _groupBy;
@@ -32,15 +34,13 @@ namespace Squel
             {
                 return _fields[0];
             }
-            var result = new StringBuilder();
-            for (var cont = 0; cont < _fields.Count; cont++)
-            {
-                result.Append(_fields[cont]);
-                if (cont < _fields.Count - 1)
-                { result.Append(", "); }
-            }
 
-            return result.ToString();
+            return Map(_fields, ", ");
+        }
+
+        private string GetStringFrom()
+        {
+            return Map(_from, ", ");
         }
 
         private string GetStringLimit()

@@ -147,5 +147,63 @@ namespace Squel.Test
 
             Assert.AreEqual(expected, sql.ToString());
         }
+
+
+
+        [TestMethod]
+        public void Should_Return_Select_From_Two_Tables()
+        {
+            var expected = "SELECT * FROM students, lecturers l, admins";
+            var sql = new SQL();
+            sql.Select()
+                .From("students")
+                .From("lecturers", "l")
+                .From("admins");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_Into_Another_Select()
+        {
+            var expected = "SELECT s.id FROM (SELECT * FROM students) s";
+            var sql = new SQL();
+            var subSql = new SQL();
+            sql.Select()
+                .From(
+                    subSql.Select()
+                          .From("students"), "s"
+                    )
+                .Field("s.id");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Simple_Select_With_Alias_In_The_Fields()
+        {
+            var expected = "SELECT s.id, s.test_score AS 'Test score', DATE_FORMAT(s.date_taken, '%M %Y') AS 'Taken on' FROM students s";
+            var sql = new SQL();
+            sql.Select()
+               .From("students", "s")
+               .Field("s.id")
+               .Field("s.test_score", "Test score")
+               .Field("DATE_FORMAT(s.date_taken, '%M %Y')", "Taken on");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Simple_Select_With_Distinct()
+        {
+            var expected = "SELECT DISTINCT id FROM students";
+            var sql = new SQL();
+            sql.Select()
+                .From("students")
+                .Field("id")
+                .Distinct();
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
     }
 }
