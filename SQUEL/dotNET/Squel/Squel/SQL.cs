@@ -34,6 +34,12 @@ namespace Squel
             return (UpdateQuery)query;
         }
 
+        public InsertQuery Insert()
+        {
+            query = new InsertQuery();
+            return (InsertQuery)query;
+        }
+
         public DeleteQuery Delete()
         {
             query = new DeleteQuery();
