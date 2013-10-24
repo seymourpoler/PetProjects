@@ -39,5 +39,11 @@ namespace Squel
             query = new DeleteQuery();
             return (DeleteQuery)query;
         }
+
+        public ConditionSentence Expr()
+        {
+            query = new ConditionSentence();
+            return (ConditionSentence)query;
+        }
     }
 }

@@ -6,14 +6,9 @@ namespace Squel
 {
     public abstract class QueryBase
     {
-        protected bool IsStringEmpty(string value)
-        {
-            return string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value);
-        }
-
         protected string GetString(string word, string value)
         {
-            if (IsStringEmpty(value))
+            if (Functions.IsStringEmpty(value))
             {
                 return string.Empty;
             }

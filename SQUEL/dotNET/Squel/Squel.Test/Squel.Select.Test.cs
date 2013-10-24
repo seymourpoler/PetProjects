@@ -84,7 +84,10 @@ namespace Squel.Test
         {
             var expected = "SELECT FieldOne, FieldTwo FROM Table ORDER BY FieldOne ASC";
             var sql = new SQL();
-            sql.Select().Field("FieldOne").Field("FieldTwo").From("Table").OrderBy("FieldOne").Asc();
+                sql.Select().Field("FieldOne")
+                            .Field("FieldTwo")
+                   .From("Table")
+                   .OrderBy("FieldOne").Asc();
 
             Assert.AreEqual(expected, sql.ToString());
         }
@@ -104,8 +107,8 @@ namespace Squel.Test
         {
             var expected = "SELECT FieldOne, FieldTwo FROM Table ORDER BY FieldOne DESC, FieldTwo ASC";
             var sql = new SQL();
-            sql
-                .Select().Field("FieldOne").Field("FieldTwo")
+            sql.Select().Field("FieldOne")
+                        .Field("FieldTwo")
                 .From("Table")
                 .OrderBy("FieldOne").Desc()
                 .OrderBy("FieldTwo").Asc();
@@ -126,9 +129,35 @@ namespace Squel.Test
         [TestMethod]
         public void Should_Return_Select_Three_Fields_From_One_Table_With_Where_Condition()
         {
-            var expected = "SELECT FieldOne, FieldTwo FROM Table WHERE FieldOne=valueOne";
+            var expected = "SELECT FieldOne, FieldTwo FROM Table WHERE (FieldOne = valueOne)";
             var sql = new SQL();
-            sql.Select().Field("FieldOne").Field("FieldTwo").From("Table").Where("FieldOne=valueOne");
+            sql.Select().Field("FieldOne").Field("FieldTwo").From("Table").Where("FieldOne = valueOne");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_Three_Fields_From_One_Table_With_Two_Where_Condition()
+        {
+            var expected = "SELECT FieldOne, FieldTwo FROM Table WHERE (FieldOne = valueOne) AND (FieldTwo = ValueTwo)";
+            var sql = new SQL();
+            sql.Select().Field("FieldOne").Field("FieldTwo")
+                        .From("Table")
+                        .Where("FieldOne = valueOne")
+                        .Where("FieldTwo = ValueTwo");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_One_Fields_From_One_Table_With_Where_Expresion()
+        {
+            var expected = "SELECT FieldOne FROM Table WHERE (FieldOne = 'valueOne' OR FieldTwo > ValueTwo)";
+            var sql = new SQL();
+            var sqlExpresion = new SQL();
+            sql.Select().Field("FieldOne")
+                        .From("Table")
+                        .Where(sqlExpresion.Expr().And("FieldOne = 'valueOne'").Or("FieldTwo > ValueTwo"));
 
             Assert.AreEqual(expected, sql.ToString());
         }
@@ -136,19 +165,17 @@ namespace Squel.Test
         [TestMethod]
         public void Should_Return_Select_Three_Fields_From_One_Table_With_Where_OrderBy_Limit_Condition()
         {
-            var expected = "SELECT FieldOne, FieldTwo FROM Table WHERE FieldOne=valueOne ORDER BY FieldOne DESC, FieldTwo ASC LIMIT 2";
+            var expected = "SELECT FieldOne, FieldTwo FROM Table WHERE (FieldOne = valueOne) ORDER BY FieldOne DESC, FieldTwo ASC LIMIT 2";
             var sql = new SQL();
             sql.Select().Field("FieldOne").Field("FieldTwo")
                 .From("Table")
-                .Where("FieldOne=valueOne")
+                .Where("FieldOne = valueOne")
                 .OrderBy("FieldOne").Desc()
                 .OrderBy("FieldTwo").Asc()
                 .Limit(2);
 
             Assert.AreEqual(expected, sql.ToString());
         }
-
-
 
         [TestMethod]
         public void Should_Return_Select_From_Two_Tables()
@@ -202,6 +229,139 @@ namespace Squel.Test
                 .From("students")
                 .Field("id")
                 .Distinct();
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Inner_Joim()
+        {
+            var expected = "SELECT * FROM students INNER JOIN teachers";
+            var sql = new SQL();
+            sql.Select()
+             .From("students")
+             .Join("teachers");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Outer_Join()
+        {
+            var expected = "SELECT * FROM students INNER JOIN teachers OUTER JOIN expelled";
+            var sql = new SQL();
+            sql.Select()
+                .From("students")
+                .Join("teachers")
+                .OuterJoin("expelled");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Outer_Join_With_Alias()
+        {
+            var expected = "SELECT * FROM students INNER JOIN teachers t OUTER JOIN expelled";
+            var sql = new SQL();
+            sql.Select()
+                .From("students")
+                .Join("teachers", "t")
+                .OuterJoin("expelled");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Left_Join()
+        {
+            var expected = "SELECT students.id FROM students LEFT JOIN teachers ON (students.id = teachers.student_id)";
+            var sql = new SQL();
+            sql.Select()
+               .Field("students.id")
+               .From("students")
+               .LeftJoin("teachers", "students.id = teachers.student_id");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Left_Join_And_Alias()
+        {
+            var expected = "SELECT students.id FROM students LEFT JOIN teachers t ON (students.id = t.student_id)";
+            var sql = new SQL();
+            sql.Select()
+               .Field("students.id")
+               .From("students")
+               .LeftJoin("teachers", "t", "students.id = t.student_id");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Right_Join()
+        {
+            var expected = "SELECT students.id FROM students RIGHT JOIN jailed ON (jailed.student_id = students.id)";
+            var sql = new SQL();
+            sql.Select()
+               .Field("students.id")
+               .From("students")
+               .RightJoin("jailed", "jailed.student_id = students.id");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Left_Join_And_Right_Join()
+        {
+            var expected = "SELECT students.id FROM students LEFT JOIN teachers ON (students.id = teachers.student_id) RIGHT JOIN jailed ON (jailed.student_id = students.id)";
+            var sql = new SQL();
+            sql.Select()
+               .Field("students.id")
+               .From("students")
+               .LeftJoin("teachers", "students.id = teachers.student_id")
+               .RightJoin("jailed", "jailed.student_id = students.id");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Left_Join_And_Right_Join_Add_Alias()
+        {
+            var expected = "SELECT students.id FROM students LEFT JOIN teachers ON (students.id = teachers.student_id) RIGHT JOIN jailed j ON (j.student_id = students.id)";
+            var sql = new SQL();
+            sql.Select()
+               .Field("students.id")
+               .From("students")
+               .LeftJoin("teachers", "students.id = teachers.student_id")
+               .RightJoin("jailed", "j", "j.student_id = students.id");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Left_Join_Add_Alias_And_Right_Join()
+        {
+            var expected = "SELECT students.id FROM students LEFT JOIN teachers t ON (students.id = t.student_id) RIGHT JOIN jailed ON (jailed.student_id = students.id)";
+            var sql = new SQL();
+            sql.Select()
+               .Field("students.id")
+               .From("students")
+               .LeftJoin("teachers", "t", "students.id = t.student_id")
+               .RightJoin("jailed", "jailed.student_id = students.id");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Select_With_Left_Join__Add_Alias_And_Right_Join_Add_Alias()
+        {
+            var expected = "SELECT students.id FROM students LEFT JOIN teachers t ON (students.id = t.student_id) RIGHT JOIN jailed j ON (j.student_id = students.id)";
+            var sql = new SQL();
+            sql.Select()
+               .Field("students.id")
+               .From("students")
+               .LeftJoin("teachers", "t", "students.id = t.student_id")
+               .RightJoin("jailed", "j", "j.student_id = students.id");
 
             Assert.AreEqual(expected, sql.ToString());
         }

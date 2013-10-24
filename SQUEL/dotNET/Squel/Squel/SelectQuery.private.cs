@@ -15,14 +15,22 @@ namespace Squel
         private const string DESC = " DESC";
         private const string GROUP_BY = " GROUP BY ";
         private const string LIMIT = " LIMIT ";
+        private const string JOIN = " INNER JOIN ";
+        private const string OUTER_JOIN = " OUTER JOIN ";
+        private const string LEFT_JOIN = " LEFT JOIN ";
+        private const string RIGHT_JOIN = " RIGHT JOIN ";
 
         private string _distinct;
         private IList<string> _fields;
         private IList<string> _orderBy;
         private IList<string> _from;
-        private string _where;
+        private IList<string>  _where;
         private int _limit;
         private string _groupBy;
+        private string _join;
+        private string _outerJoin;
+        private string _leftJoin;
+        private string _rightJoin;
 
         private string GetStringFields()
         {
@@ -73,7 +81,28 @@ namespace Squel
 
         private string GetStringWhere()
         {
-            return GetString(WHERE, _where);
+            var conditions = Map(_where, " AND ");
+            return GetString(WHERE, conditions);
+        }
+
+        private string GetStringJoin()
+        {
+            return GetString(JOIN, _join);
+        }
+
+        private string GetStringOuterJoin()
+        {
+            return GetString(OUTER_JOIN, _outerJoin);
+        }
+
+        private string GetStringLeftJoin()
+        {
+            return GetString(LEFT_JOIN, _leftJoin);
+        }
+
+        private string GetStringRightJoin()
+        {
+            return GetString(RIGHT_JOIN, _rightJoin);
         }
     }
 }

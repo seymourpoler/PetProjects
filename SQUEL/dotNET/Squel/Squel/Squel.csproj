@@ -39,7 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConditionSentence.cs" />
     <Compile Include="DeleteQuery.cs" />
+    <Compile Include="Functions.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="QueryBase.cs" />
     <Compile Include="SelectQuery.private.cs" />

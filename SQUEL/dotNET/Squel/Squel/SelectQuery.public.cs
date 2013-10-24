@@ -11,9 +11,13 @@ namespace Squel
             _fields = new List<string>();
             _orderBy = new List<string>();
             _from = new List<string>();
-            _where = string.Empty;
+            _where = new List<string>();
             _groupBy = string.Empty;
             _limit = 0;
+            _join = string.Empty;
+            _outerJoin = string.Empty;
+            _leftJoin = string.Empty;
+            _rightJoin = string.Empty;
         }
 
         public SelectQuery(string field) : this()
@@ -59,9 +63,20 @@ namespace Squel
 
         public SelectQuery Where(string condition)
         {
-            _where = string.Format("{0}{1}", WHERE, condition);
+            var newCondition = string.Format("({0})", condition);
+            _where.Add(newCondition);
             return this;
-        }        
+        }
+        public SelectQuery Where(ConditionSentence conditionSentence)
+        {
+            var sentence = conditionSentence.ToSQLString();
+            return Where(sentence);
+        }
+
+        public ConditionSentence Expr()
+        {
+            return new ConditionSentence();
+        }
 
         public SelectQuery Limit(int limit)
         {
@@ -100,15 +115,62 @@ namespace Squel
             return this;
         }
 
+        public SelectQuery Join(string join)
+        {
+            _join = join;
+            return this;
+        }
+
+        public SelectQuery Join(string join, string alias)
+        {
+            var simpleJoin = string.Format("{0} {1}", join, alias);
+            return Join(simpleJoin);
+        }
+
+        public SelectQuery OuterJoin(string outerJoin)
+        {
+            _outerJoin = outerJoin;
+            return this;
+        }
+
+        public SelectQuery LeftJoin(string leftJoin, string onLeftJoin)
+        {
+            _leftJoin = string.Format("{0} ON ({1})", leftJoin, onLeftJoin);
+            return this;
+        }
+
+        public SelectQuery LeftJoin(string leftJoin, string alias, string onLeftJoin)
+        {
+            var leftJoinAlias = string.Format("{0} {1}", leftJoin, alias);
+            return LeftJoin(leftJoinAlias, onLeftJoin);
+        }
+
+        public SelectQuery RightJoin(string rightJoin, string onRightJoin)
+        {
+            _rightJoin = string.Format("{0} ON ({1})", rightJoin, onRightJoin);
+            return this;
+        }
+
+        public SelectQuery RightJoin(string rightJoin, string alias, string onRightJoin)
+        {
+            var rightJoinAlias = string.Format("{0} {1}", rightJoin, alias);
+            return RightJoin(rightJoinAlias, onRightJoin);
+        }
+
         public string ToSQLString()
         {
             var fields = GetStringFields();
             var from = GetStringFrom();
+            var where = GetStringWhere();
             var orderBy = GetStringOrder();
             var groupBy = GetStringGroup();
             var limit = GetStringLimit();
+            var join = GetStringJoin();
+            var outerJoin = GetStringOuterJoin();
+            var leftJoin = GetStringLeftJoin();
+            var rightJoin = GetStringRightJoin();
 
-            return string.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}", SELECT, _distinct, fields, FROM ,from, _where, groupBy, orderBy, limit);
+            return string.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}", SELECT, _distinct, fields, FROM ,from, where, groupBy, orderBy, limit, join, outerJoin, leftJoin, rightJoin);
         }
     }
 }
