@@ -12,8 +12,9 @@ namespace Squel
             _orderBy = new List<string>();
             _from = new List<string>();
             _where = new List<string>();
-            _groupBy = string.Empty;
+            _groupBy = new List<string>();
             _limit = 0;
+            _offset = 0;
             _join = string.Empty;
             _outerJoin = string.Empty;
             _leftJoin = string.Empty;
@@ -84,6 +85,12 @@ namespace Squel
             return this;
         }
 
+        public SelectQuery Offset(int offset)
+        {
+            _offset = offset;
+            return this;
+        }
+
         public SelectQuery OrderBy(string orderBy)
         {
             if (_orderBy.Count > 0)
@@ -109,9 +116,9 @@ namespace Squel
             return this;
         }
 
-        public SelectQuery GroupBy(string groupBy)
+        public SelectQuery Group(string groupBy)
         {
-            _groupBy = groupBy;
+            _groupBy.Add(groupBy);
             return this;
         }
 
@@ -165,12 +172,13 @@ namespace Squel
             var orderBy = GetStringOrder();
             var groupBy = GetStringGroup();
             var limit = GetStringLimit();
+            var offset = GetStringOffset();
             var join = GetStringJoin();
             var outerJoin = GetStringOuterJoin();
             var leftJoin = GetStringLeftJoin();
             var rightJoin = GetStringRightJoin();
 
-            return string.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}", SELECT, _distinct, fields, FROM ,from, where, groupBy, orderBy, limit, join, outerJoin, leftJoin, rightJoin);
+            return string.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}{13}", SELECT, _distinct, fields, FROM ,from, where, groupBy, orderBy, limit, join, outerJoin, leftJoin, rightJoin, offset);
         }
     }
 }

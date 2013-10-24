@@ -15,6 +15,7 @@ namespace Squel
         private const string DESC = " DESC";
         private const string GROUP_BY = " GROUP BY ";
         private const string LIMIT = " LIMIT ";
+        private const string OFFSET = " OFFSET ";
         private const string JOIN = " INNER JOIN ";
         private const string OUTER_JOIN = " OUTER JOIN ";
         private const string LEFT_JOIN = " LEFT JOIN ";
@@ -25,8 +26,9 @@ namespace Squel
         private IList<string> _orderBy;
         private IList<string> _from;
         private IList<string>  _where;
+        private IList<string> _groupBy;
         private int _limit;
-        private string _groupBy;
+        private int _offset;
         private string _join;
         private string _outerJoin;
         private string _leftJoin;
@@ -60,6 +62,15 @@ namespace Squel
             return string.Empty;
         }
 
+        private string GetStringOffset()
+        {
+            if (_offset != 0)
+            {
+                return string.Format("{0}{1}", OFFSET, _offset);
+            }
+            return string.Empty;
+        }
+
         private string GetStringOrder()
         {
             if (_orderBy.Count == 0)
@@ -76,7 +87,8 @@ namespace Squel
 
         private string GetStringGroup()
         {
-            return GetString(GROUP_BY, _groupBy);
+            var conditions = Map(_groupBy, ", ");
+            return GetString(GROUP_BY, conditions);
         }
 
         private string GetStringWhere()

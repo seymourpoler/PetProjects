@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace Squel
 {
@@ -10,17 +12,20 @@ namespace Squel
         private const string WHERE = " WHERE ";
 
         private string _table;
-        private string _set;
-        private string _where;
+        private IList<string> _set;
+        private IList<string> _where;
 
         public UpdateQuery()
-        { 
+        {
+            _set = new List<string>();
+            _where = new List<string>();
         }
 
         public string ToSQLString()
         {
             var where = GetStringWhere();
-            return string.Format("{0}{1}{2}{3}{4}", UPDATE, _table, SET, _set, where);
+            var set = GetStringSet();
+            return string.Format("{0}{1}{2}{3}", UPDATE, _table, set, where);
         }
 
         public UpdateQuery Table(string table)
@@ -29,21 +34,72 @@ namespace Squel
             return this;
         }
 
+        public UpdateQuery Set(string field, int value)
+        {
+            if (value == null)
+            {
+                return Set(field, "NULL");
+            }
+            return Set(field, value.ToString());
+        }
+
+        public UpdateQuery Set(string field, object value)
+        {
+            if (value == null)
+            {
+                return Set(field, "NULL");
+            }
+            return Set(field, value.ToString());
+        }
+
+        public UpdateQuery Set(string field, bool value)
+        {
+            if (value == null)
+            {
+                return Set(field, "NULL");
+            }
+            return Set(field, value.ToString());
+        }
+
+        public UpdateQuery Set(string field, double value)
+        {
+            if (value == null)
+            {
+                return Set(field, "NULL");
+            }
+            var stringValue = value.ToString().Replace(',', '.');
+            return Set(field, stringValue);
+        }
+
         public UpdateQuery Set(string field, string value)
         {
-            _set = string.Format("{0} = {1}", field, value);
+            if (value == null)
+            {
+                value = "NULL";
+            }
+
+            var set = string.Format("{0} = {1}", field, value);
+            _set.Add(set);
             return this;
         }
 
         public UpdateQuery Where(string where)
         {
-            _where = where;
+            var expression = string.Format("({0})", where);
+            _where.Add(expression);
             return this;
         }
 
         private string GetStringWhere()
         {
-            return GetString(WHERE, _where);
+            var where = Map(_where, " AND ");
+            return GetString(WHERE, where);
+        }
+
+        private string GetStringSet()
+        {
+            var set = Map(_set, ", ");
+            return GetString(SET, set);
         }
     }
 }

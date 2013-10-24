@@ -70,6 +70,18 @@ namespace Squel.Test
         }
 
         [TestMethod]
+        public void Should_Return_Select_One_Fields_From_One_Table_With_Offset()
+        {
+            var expected = "SELECT FieldOne FROM Table OFFSET 102";
+            var sql = new SQL();
+            sql.Select().Field("FieldOne")
+                        .From("Table")
+                        .Offset(102);
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
         public void Should_Return_Select_Three_Fields_From_One_Table_With_OrderBy()
         {
             var expected = "SELECT FieldOne, FieldTwo FROM Table ORDER BY FieldOne";
@@ -121,7 +133,7 @@ namespace Squel.Test
         {
             var expected = "SELECT FieldOne, FieldTwo FROM Table GROUP BY FieldOne";
             var sql = new SQL();
-            sql.Select().Field("FieldOne").Field("FieldTwo").From("Table").GroupBy("FieldOne");
+            sql.Select().Field("FieldOne").Field("FieldTwo").From("Table").Group("FieldOne");
 
             Assert.AreEqual(expected, sql.ToString());
         }
@@ -163,7 +175,7 @@ namespace Squel.Test
         }
 
         [TestMethod]
-        public void Should_Return_Select_Three_Fields_From_One_Table_With_Where_OrderBy_Limit_Condition()
+        public void Should_Return_Select_Three_Fields_From_One_Table_With_Where_Two_OrderBys_Limit_Condition()
         {
             var expected = "SELECT FieldOne, FieldTwo FROM Table WHERE (FieldOne = valueOne) ORDER BY FieldOne DESC, FieldTwo ASC LIMIT 2";
             var sql = new SQL();
@@ -216,6 +228,20 @@ namespace Squel.Test
                .Field("s.id")
                .Field("s.test_score", "Test score")
                .Field("DATE_FORMAT(s.date_taken, '%M %Y')", "Taken on");
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
+
+        [TestMethod]
+        public void Should_Return_Simple_Select_With_Some_GroupsBy()
+        {
+            var expected = "SELECT id FROM students GROUP BY id, students.name";
+            var sql = new SQL();
+            sql.Select()
+               .Field("id")
+               .From("students")
+               .Group("id")
+               .Group("students.name");
 
             Assert.AreEqual(expected, sql.ToString());
         }
