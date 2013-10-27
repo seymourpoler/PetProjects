@@ -134,6 +134,12 @@ namespace Squel
             return Join(simpleJoin);
         }
 
+        public SelectQuery Join(string join, string alias, ConditionSentence conditionSentence)
+        {
+            var simpleJoin = string.Format("{0} {1} ON ({2})", join, alias, conditionSentence.ToSQLString());
+            return Join(simpleJoin);
+        }
+
         public SelectQuery OuterJoin(string outerJoin)
         {
             _outerJoin = outerJoin;

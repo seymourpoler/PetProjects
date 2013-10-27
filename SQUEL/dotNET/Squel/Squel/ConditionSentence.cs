@@ -12,11 +12,13 @@ namespace Squel
 
         private StringBuilder _result;
         private bool _beginOpen;
+        private string _operationBefore;
 
         public ConditionSentence()
         {
             _result = new StringBuilder();
             _beginOpen = false;
+            _operationBefore = string.Empty;
         }
 
         public ConditionSentence And(string sentence)
@@ -38,6 +40,10 @@ namespace Squel
 
         public ConditionSentence OrBegin()
         {
+            if (_operationBefore.Contains(AND))
+            {
+               return BuildConditionBegin(AND);
+            }
             return BuildConditionBegin(OR);
         }
 
@@ -69,6 +75,8 @@ namespace Squel
             {
                 AppendSentence(condition, sentence);
             }
+
+            _operationBefore = condition;
             return _result.ToString();
         }
 

@@ -391,5 +391,31 @@ namespace Squel.Test
 
             Assert.AreEqual(expected, sql.ToString());
         }
+
+        [TestMethod]
+        public void Should_Return_Select_With_INNER_Join__Add_SQL_Expression()
+        {
+            var expected = "SELECT s.id FROM students s WHERE (s.name <> 'Fred' AND (s.id = 5 OR s.id = 6)) INNER JOIN teachers t ON (s.id = t.sid AND t.name = 'Frances')";
+            var sql = new SQL();
+            var sqlExpressionJoin = new SQL();
+            var sqlExpressionWhere = new SQL();
+            sql.Select().Field("s.id")
+               .From("students", "s")
+               .Where(
+                    sqlExpressionWhere.Expr()
+                       .And("s.name <> 'Fred'")
+                       .OrBegin()
+                         .Or("s.id = 5")
+                         .Or("s.id = 6")
+                       .End()
+                     )
+              .Join("teachers", "t",
+                 sqlExpressionJoin.Expr()
+                     .And("s.id = t.sid")
+                     .And("t.name = 'Frances'")
+            );
+
+            Assert.AreEqual(expected, sql.ToString());
+        }
     }
 }
