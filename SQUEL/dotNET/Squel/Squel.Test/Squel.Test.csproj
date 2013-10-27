@@ -55,6 +55,7 @@
     <Compile Include="Squel.Delete.Test.cs" />
     <Compile Include="Squel.Update.Test.cs" />
     <Compile Include="Squel.Insert.Test.cs" />
+    <Compile Include="ConditionSentence.Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Squel\Squel.csproj">

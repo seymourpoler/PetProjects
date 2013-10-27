@@ -45,12 +45,12 @@ namespace Squel
                 return _fields[0];
             }
 
-            return Map(_fields, ", ");
+            return Functions.Map(_fields, ", ");
         }
 
         private string GetStringFrom()
         {
-            return Map(_from, ", ");
+            return Functions.Map(_from, ", ");
         }
 
         private string GetStringLimit()
@@ -87,34 +87,34 @@ namespace Squel
 
         private string GetStringGroup()
         {
-            var conditions = Map(_groupBy, ", ");
-            return GetString(GROUP_BY, conditions);
+            var conditions = Functions.Map(_groupBy, ", ");
+            return Functions.GetString(GROUP_BY, conditions);
         }
 
         private string GetStringWhere()
         {
-            var conditions = Map(_where, " AND ");
-            return GetString(WHERE, conditions);
+            var conditions = Functions.Map(_where, " AND ");
+            return Functions.GetString(WHERE, conditions);
         }
 
         private string GetStringJoin()
         {
-            return GetString(JOIN, _join);
+            return Functions.GetString(JOIN, _join);
         }
 
         private string GetStringOuterJoin()
         {
-            return GetString(OUTER_JOIN, _outerJoin);
+            return Functions.GetString(OUTER_JOIN, _outerJoin);
         }
 
         private string GetStringLeftJoin()
         {
-            return GetString(LEFT_JOIN, _leftJoin);
+            return Functions.GetString(LEFT_JOIN, _leftJoin);
         }
 
         private string GetStringRightJoin()
         {
-            return GetString(RIGHT_JOIN, _rightJoin);
+            return Functions.GetString(RIGHT_JOIN, _rightJoin);
         }
     }
 }

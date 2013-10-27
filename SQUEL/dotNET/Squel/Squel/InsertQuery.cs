@@ -35,10 +35,6 @@ namespace Squel
 
         public InsertQuery Set(string field, int value)
         {
-            if (value == null)
-            {
-                return Set(field, "NULL");
-            }
             return Set(field, value.ToString());
         }
 
@@ -51,21 +47,8 @@ namespace Squel
             return Set(field, value.ToString());
         }
 
-        public InsertQuery Set(string field, bool value)
-        {
-            if (value == null)
-            {
-                return Set(field, "NULL");
-            }
-            return Set(field, value.ToString());
-        }
-
         public InsertQuery Set(string field, double value)
         {
-            if (value == null)
-            {
-                return Set(field, "NULL");
-            }
             var stringValue = value.ToString().Replace(',', '.');
             return Set(field, stringValue);
         }
@@ -84,13 +67,13 @@ namespace Squel
 
         private string GetStringFields()
         {
-            var fields = Map(_fields, ", ");
+            var fields = Functions.Map(_fields, ", ");
             return string.Format("({0})", fields);
         }
 
         private string GetStringValues()
         {
-            var values = Map(_values, ", ");
+            var values = Functions.Map(_values, ", ");
             return string.Format("({0})", values);
         }
     }

@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 
 namespace Squel
 {
     public class UpdateQuery : QueryBase, IQuery
     {
-
         private const string UPDATE = "UPDATE ";
         private const string SET = "SET ";
         private const string WHERE = " WHERE ";
@@ -52,32 +50,18 @@ namespace Squel
             return Set(field, value.ToString());
         }
 
-        public UpdateQuery Set(string field, bool value)
-        {
-            if (value == null)
-            {
-                return Set(field, "NULL");
-            }
-            return Set(field, value.ToString());
-        }
-
         public UpdateQuery Set(string field, double value)
         {
-            if (value == null)
-            {
-                return Set(field, "NULL");
-            }
             var stringValue = value.ToString().Replace(',', '.');
             return Set(field, stringValue);
         }
-
+        
         public UpdateQuery Set(string field, string value)
         {
             if (value == null)
             {
                 value = "NULL";
             }
-
             var set = string.Format("{0} = {1}", field, value);
             _set.Add(set);
             return this;
@@ -92,14 +76,14 @@ namespace Squel
 
         private string GetStringWhere()
         {
-            var where = Map(_where, " AND ");
-            return GetString(WHERE, where);
+            var where = Functions.Map(_where, " AND ");
+            return Functions.GetString(WHERE, where);
         }
 
         private string GetStringSet()
         {
-            var set = Map(_set, ", ");
-            return GetString(SET, set);
+            var set = Functions.Map(_set, ", ");
+            return Functions.GetString(SET, set);
         }
     }
 }

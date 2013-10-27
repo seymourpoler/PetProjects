@@ -39,8 +39,8 @@ namespace Squel
 
         private string GetStringWhere()
         {
-            var where = Map(_where, " AND ");
-            return GetString(WHERE, where);
+            var where = Functions.Map(_where, " AND ");
+            return Functions.GetString(WHERE, where);
         }
     }
 }
