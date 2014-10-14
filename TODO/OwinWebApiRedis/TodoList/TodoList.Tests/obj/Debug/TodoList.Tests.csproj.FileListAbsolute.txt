@@ -1,0 +1,5 @@
+c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.Tests\bin\Debug\TodoList.Tests.dll
+c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.Tests\bin\Debug\TodoList.Tests.pdb
+c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.csprojResolveAssemblyReference.cache
+c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.dll
+c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.pdb
