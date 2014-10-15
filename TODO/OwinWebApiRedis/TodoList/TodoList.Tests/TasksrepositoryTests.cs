@@ -7,7 +7,7 @@ using TodoList.Console.Infrastructure.Data.Repositories;
 namespace TodoList.Tests
 {
     [TestClass]
-    public class TasksrepositoryTests
+    public class TasksRepositoryTests
     {
         private TasksRepository _repository;
 
