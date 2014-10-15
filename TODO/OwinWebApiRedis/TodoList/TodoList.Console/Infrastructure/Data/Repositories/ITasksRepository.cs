@@ -4,9 +4,9 @@ using TodoList.Console.UI.Models;
 
 namespace TodoList.Console.Infrastructure.Data.Repositories
 {
-    interface ITasksRepository
+    public interface ITasksRepository
     {
-        IEnumerable<Task> GetAll();
+        IList<Task> GetAll();
         Task GetById(Guid Id);
         Task Save(Task task);
         Task Update(Task task);

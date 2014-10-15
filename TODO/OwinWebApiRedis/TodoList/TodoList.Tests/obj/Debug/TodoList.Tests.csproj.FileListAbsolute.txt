@@ -3,3 +3,33 @@ c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.
 c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.csprojResolveAssemblyReference.cache
 c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.dll
 c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.pdb
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.csprojResolveAssemblyReference.cache
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.pdb
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\TodoList.Tests.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\TodoList.Tests.pdb
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\TodoList.Console.exe
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Owin.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Ninject.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\System.Web.Http.Owin.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\TodoList.Console.pdb
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Ninject.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\System.Web.Http.Owin.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\TodoList.Tests.dll.config
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Redis.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Text.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Common.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Redis.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Text.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Common.xml

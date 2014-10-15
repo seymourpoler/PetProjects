@@ -1,35 +1,45 @@
 ﻿using System;
+using ServiceStack.Redis;
 using System.Collections.Generic;
 using TodoList.Console.UI.Models;
+using ServiceStack.Redis.Generic;
 
 namespace TodoList.Console.Infrastructure.Data.Repositories
 {
     public class TasksRepository : ITasksRepository
     {
-        public Task Save(Task task)
+        private RedisClient _redisClient;
+
+        public TasksRepository()
         {
-            throw new NotImplementedException("Save");
+            _redisClient = new RedisClient();
         }
 
-        public IEnumerable<Task> GetAll()
+        public Task Save(Task task)
         {
-            return new List<Task> { 
-                new Task{Name = "TaskOne"},
-                new Task{Name = "TaskTwo"},
-                new Task{Name = "TaskThree"},
-                new Task{Name = "TaskFour"}
-            };
+   
+            task.Id = Guid.NewGuid();
+            _redisClient.Store(task);
+            return task;            
+        }
+
+        public IList<Task> GetAll()
+        {
+            return  _redisClient.GetAll<Task>();
         }
         public Task GetById(Guid Id) 
         {
-            throw new NotImplementedException();
+            return _redisClient.GetById<Task>(Id);
         }
 
-        public Task Update(Task task) {
-            throw new NotImplementedException();
+        public Task Update(Task task) 
+        {  
+            _redisClient.Store(task);
+            return task;
         }
-        public void Delete(Guid id) {
-            throw new NotImplementedException();
+        public void Delete(Guid id) 
+        {
+            _redisClient.DeleteById<Task>(id.ToString());
         }
     }
 }
