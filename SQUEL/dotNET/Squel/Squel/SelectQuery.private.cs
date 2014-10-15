@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Squel
 {
-    public partial class SelectQuery : QueryBase, IQuery
+    public partial class SelectQuery : IQuery
     {
         private const string SELECT = "SELECT ";
         private const string DISTINCT = "DISTINCT ";

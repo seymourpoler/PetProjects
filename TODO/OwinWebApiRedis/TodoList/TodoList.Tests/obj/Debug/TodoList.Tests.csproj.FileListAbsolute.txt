@@ -63,3 +63,5 @@ C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoLis
 C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.csprojResolveAssemblyReference.cache
 C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.dll
 C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\obj\Debug\TodoList.Tests.pdb
+C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.Testing.dll
+C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.Testing.xml

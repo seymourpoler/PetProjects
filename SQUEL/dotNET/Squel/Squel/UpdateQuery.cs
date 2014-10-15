@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Squel
 {
-    public class UpdateQuery : QueryBase, IQuery
+    public class UpdateQuery : IQuery
     {
         private const string UPDATE = "UPDATE ";
         private const string SET = "SET ";

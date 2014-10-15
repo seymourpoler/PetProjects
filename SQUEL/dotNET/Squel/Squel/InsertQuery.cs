@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Squel
 {
-    public class InsertQuery : QueryBase, IQuery
+    public class InsertQuery : IQuery
     {
         private const string INSERT = "INSERT ";
         private const string INTO = "INTO ";

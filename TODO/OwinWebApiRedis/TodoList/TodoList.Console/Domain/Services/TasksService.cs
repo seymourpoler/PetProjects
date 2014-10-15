@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TodoList.Console.UI.Models;
 using TodoList.Console.Infrastructure.Data.Repositories;
 
@@ -13,9 +14,14 @@ namespace TodoList.Console.Domain.Services
             _tasksRepository = tasksRepository;
         }
 
-        public IEnumerable<Task> GetAll()
+        public IList<Task> GetAll()
         {
             return _tasksRepository.GetAll();
+        }
+
+        public Task GetById(Guid id)
+        {
+            return _tasksRepository.GetById(id);
         }
     }
 }

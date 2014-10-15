@@ -44,7 +44,6 @@
     <Compile Include="Functions.cs" />
     <Compile Include="InsertQuery.cs" />
     <Compile Include="IQuery.cs" />
-    <Compile Include="QueryBase.cs" />
     <Compile Include="SelectQuery.private.cs" />
     <Compile Include="SelectQuery.public.cs" />
     <Compile Include="SQL.cs" />

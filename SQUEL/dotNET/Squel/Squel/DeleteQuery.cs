@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Squel
 {
-    public class DeleteQuery : QueryBase, IQuery
+    public class DeleteQuery : IQuery
     {
         private const string DELETE = "DELETE ";
         private const string FROM = "FROM ";
