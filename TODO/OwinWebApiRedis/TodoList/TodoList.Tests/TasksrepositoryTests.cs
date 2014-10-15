@@ -48,6 +48,25 @@ namespace TodoList.Tests
         }
 
         [TestMethod]
+        public void Tasksrepository_Update()
+        {
+            var task = _repository.Save(new Task { Name = "Task One" });
+
+            var taskToBeUpdated = _repository.GetById(task.Id);
+
+            taskToBeUpdated.Name = "Name Updated";
+
+            _repository.Update(taskToBeUpdated);
+
+            var taskExpected = _repository.GetById(taskToBeUpdated.Id);
+
+            Assert.AreEqual(taskExpected.Id, taskToBeUpdated.Id);
+            Assert.AreEqual(taskExpected.Name, taskToBeUpdated.Name);
+
+            _repository.Delete(task.Id);
+        }
+
+        [TestMethod]
         public void Tasksrepository_Delete()
         {
             var expected = _repository.Save(new Task { Name = "Task One" });
