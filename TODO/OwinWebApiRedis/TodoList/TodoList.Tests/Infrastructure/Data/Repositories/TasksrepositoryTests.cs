@@ -4,7 +4,7 @@ using TodoList.Console.UI.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TodoList.Console.Infrastructure.Data.Repositories;
 
-namespace TodoList.Tests
+namespace TodoList.Tests.Infrastructure.Data.Repositories
 {
     [TestClass]
     public class TasksRepositoryTests
@@ -21,7 +21,7 @@ namespace TodoList.Tests
         public void TearDown()
         {
             var data = _repository.GetAll();
-            data.ToList().ForEach(task => { _repository.Delete(task.Id);});
+            data.ToList().ForEach(task => { _repository.Delete(task.Id); });
         }
 
         [TestMethod]
