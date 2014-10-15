@@ -5,6 +5,6 @@ namespace TodoList.Console.Domain.Services
 {
     public interface ITasksService
     {
-        IEnumerable<Task> GetAll();
+        IList<Task> GetAll();
     }
 }

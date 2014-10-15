@@ -13,9 +13,11 @@ namespace TodoList.Console.Domain.Services
             _tasksRepository = tasksRepository;
         }
 
-        public IEnumerable<Task> GetAll()
+        public IList<Task> GetAll()
         {
             return _tasksRepository.GetAll();
         }
+
+
     }
 }

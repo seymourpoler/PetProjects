@@ -33,3 +33,5 @@ C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApi
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Redis.xml
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Text.xml
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\ServiceStack.Common.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Moq.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Moq.xml
