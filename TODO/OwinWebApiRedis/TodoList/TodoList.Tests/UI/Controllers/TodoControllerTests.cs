@@ -18,7 +18,7 @@ namespace TodoList.Tests.UI.Controllers
         private Task _taskOne, _taskTwo;
 
         [TestInitialize]
-        public void SetUp()
+        public void Initialize()
         {
             _server = TestServer.Create<StartUp>();
             _repository = new TasksRepository();
