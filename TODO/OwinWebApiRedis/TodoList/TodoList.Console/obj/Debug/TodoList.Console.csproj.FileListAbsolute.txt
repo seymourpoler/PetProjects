@@ -24,7 +24,6 @@ c:\Users\luis.rodriguez\documents\visual studio 2013\Projects\TodoList\TodoList.
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\TodoList.Console.exe.config
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\obj\Debug\TodoList.Console.exe
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\obj\Debug\TodoList.Console.pdb
-C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\obj\Debug\TodoList.Console.csprojResolveAssemblyReference.cache
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\TodoList.Console.exe
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\TodoList.Console.pdb
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\Microsoft.Owin.dll

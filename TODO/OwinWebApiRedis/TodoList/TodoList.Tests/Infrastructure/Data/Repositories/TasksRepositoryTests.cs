@@ -25,7 +25,7 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         }
 
         [TestMethod]
-        public void Tasksrepository_Save()
+        public void TasksRepository_Save()
         {
             var expected = _repository.Save(new Task { Name = "Task One" });
 
@@ -34,7 +34,20 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         }
 
         [TestMethod]
-        public void Tasksrepository_GetById()
+        public void TasksRepository_Update()
+        {
+            var task = new Task { Name = "Task One" };
+            var taskSaved = _repository.Save(task);
+            taskSaved.Name = "Name Updated";
+
+            var taskUpdated = _repository.Update(taskSaved);
+            Assert.AreEqual(taskUpdated.Id, taskSaved.Id);
+            Assert.AreEqual(taskUpdated.Name, taskSaved.Name);
+            _repository.Delete(task.Id);
+        }
+
+        [TestMethod]
+        public void TasksRepository_GetById()
         {
             var task = _repository.Save(new Task { Name = "Task One" });
 
@@ -48,7 +61,7 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         }
 
         [TestMethod]
-        public void Tasksrepository_Delete()
+        public void TasksRepository_Delete()
         {
             var expected = _repository.Save(new Task { Name = "Task One" });
             _repository.Delete(expected.Id);
@@ -59,7 +72,7 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         }
 
         [TestMethod]
-        public void Tasksrepository_GetAll()
+        public void TasksRepository_GetAll()
         {
             var expected = _repository.Save(new Task { Name = "Task One" });
 
