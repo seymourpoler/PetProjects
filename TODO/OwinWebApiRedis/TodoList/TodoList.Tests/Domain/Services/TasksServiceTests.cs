@@ -28,5 +28,13 @@ namespace TodoList.Tests.Domain.Services
             var expected = _tasksService.GetAll();
             _repository.Verify(x => x.GetAll());
         }
+
+        [TestMethod]
+        public void TasksService_GetById()
+        {
+            _repository.Setup(x => x.GetById(It.IsAny<Guid>())).Returns(new Task { Id = Guid.NewGuid(), Name = "Task One" });
+            var expected = _tasksService.GetById(Guid.NewGuid());
+            _repository.Verify(x => x.GetById(It.IsAny<Guid>()));
+        }
     }
 }
