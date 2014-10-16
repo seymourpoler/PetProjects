@@ -27,7 +27,6 @@ build/
 *.ilk
 *.meta
 *.obj
-*.pch
 *.pdb
 *.pgc
 *.pgd
@@ -45,6 +44,18 @@ build/
 *.pidb
 *.log
 *.scc
+*.exe
+*.exp
+*.dll
+*.user
+*.aps
+*.pch
+*.ncb
+*.suo
+*.bak
+*.cache
+*.zip
+*.lib
 
 # Visual C++ cache files
 ipch/
