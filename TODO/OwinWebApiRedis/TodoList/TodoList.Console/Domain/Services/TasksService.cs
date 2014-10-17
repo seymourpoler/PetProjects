@@ -23,5 +23,10 @@ namespace TodoList.Console.Domain.Services
         {
             return _tasksRepository.GetById(id);
         }
+
+        public Task Save(Task task)
+        {
+            return _tasksRepository.Save(task);
+        }
     }
 }
