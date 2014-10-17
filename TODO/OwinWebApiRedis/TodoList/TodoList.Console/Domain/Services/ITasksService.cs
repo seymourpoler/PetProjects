@@ -10,5 +10,6 @@ namespace TodoList.Console.Domain.Services
         Task GetById(Guid id);
         Task Save(Task task);
         Task Update(Task task);
+        void Delete(Guid id);
     }
 }

@@ -92,5 +92,18 @@ namespace TodoList.Tests.UI.Controllers
 
             _repository.Delete(taskFound.Id);
         }
+
+        [TestMethod]
+        public void TodoController_Delete()
+        {
+            var jsonTask = JsonHelper.JsonSerialize<Task>(_taskOne);
+
+            var content = new System.Net.Http.StringContent(jsonTask, Encoding.UTF8, "application/json");
+            var response = _server.HttpClient.DeleteAsync(string.Format("/todo/{0}", _taskOne.Id)).Result;
+            var taskFound = _repository.GetById(_taskOne.Id);
+
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.IsNull(taskFound);
+        }
     }
 }

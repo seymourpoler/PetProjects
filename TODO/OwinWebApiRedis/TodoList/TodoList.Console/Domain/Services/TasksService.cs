@@ -16,12 +16,22 @@ namespace TodoList.Console.Domain.Services
 
         public IList<Task> GetAll()
         {
-            return _tasksRepository.GetAll();
+            var tasks = _tasksRepository.GetAll();
+            if(tasks == null)
+            {
+                return new List<Task>();
+            }
+            return tasks;
         }
 
         public Task GetById(Guid id)
         {
-            return _tasksRepository.GetById(id);
+            var task = _tasksRepository.GetById(id);
+            if(task == null)
+            {
+                return new Task();
+            }
+            return task;
         }
 
         public Task Save(Task task)
@@ -32,6 +42,11 @@ namespace TodoList.Console.Domain.Services
         public Task Update(Task task)
         {
             return _tasksRepository.Update(task);
+        }
+
+        public void Delete(Guid id)
+        {
+            _tasksRepository.Delete(id);
         }
     }
 }
