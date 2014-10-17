@@ -71,5 +71,15 @@ namespace TodoList.Tests.UI.Controllers
 
             Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
         }
+
+        [TestMethod]
+        public void TodoController_Delete()
+        {
+            _tasksService.Setup(x => x.Delete(It.IsAny<Guid>())).Throws(new Exception());
+
+            var response = _todoController.Delete(Guid.NewGuid());
+
+            Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        }
     }
 }
