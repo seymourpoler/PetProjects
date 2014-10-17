@@ -41,7 +41,7 @@ namespace TodoList.Console.UI.Controllers
             }
         }
 
-        public HttpResponseMessage Pot(Task task)
+        public HttpResponseMessage Post(Task task)
         {
             try
             {

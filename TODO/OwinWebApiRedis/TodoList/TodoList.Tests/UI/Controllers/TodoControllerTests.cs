@@ -7,6 +7,7 @@ using System.Net;
 using System.Web.Http;
 using System.Net.Http;
 using System.Web.Http.Hosting;
+using TodoList.Console.UI.Models;
 
 namespace TodoList.Tests.UI.Controllers
 {
@@ -47,6 +48,26 @@ namespace TodoList.Tests.UI.Controllers
             _tasksService.Setup(x => x.GetById(It.IsAny<Guid>())).Throws(new Exception());
 
             var response = _todoController.Get(Guid.NewGuid());
+
+            Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        }
+
+        [TestMethod]
+        public void TodoController_Post()
+        {
+            _tasksService.Setup(x => x.Save(It.IsAny<Task>())).Throws(new Exception());
+
+            var response = _todoController.Post(new Task());
+
+            Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        }
+
+        [TestMethod]
+        public void TodoController_Put()
+        {
+            _tasksService.Setup(x => x.Update(It.IsAny<Task>())).Throws(new Exception());
+
+            var response = _todoController.Put(new Task());
 
             Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
         }
