@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using System.Text;
+using System.Net.Http;
 using TodoList.Console;
 using Microsoft.Owin.Testing;
 using System.Collections.Generic;
 using TodoList.Console.UI.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TodoList.Console.Infrastructure.Data.Repositories;
-using System.Net.Http;
-using System.Text;
 
 namespace TodoList.Tests.UI.Controllers
 {
