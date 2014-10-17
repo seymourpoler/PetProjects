@@ -76,13 +76,24 @@ namespace TodoList.Tests.UI.Controllers
         }
 
         [TestMethod]
-        public void TodoController_Post()
+        public void TodoController_Post_return_Internal_error()
         {
             _tasksService.Setup(x => x.Save(It.IsAny<Task>())).Throws(new Exception());
 
             var response = _todoController.Post(new Task());
 
             Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        }
+
+        [TestMethod]
+        public void TodoController_Post_return_Ok()
+        {
+            _tasksService.Setup(x => x.Save(It.IsAny<Task>())).Returns(new Task());
+
+            var response = _todoController.Post(new Task());
+
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            _tasksService.Verify(x => x.Save(It.IsAny<Task>()));
         }
 
         [TestMethod]
