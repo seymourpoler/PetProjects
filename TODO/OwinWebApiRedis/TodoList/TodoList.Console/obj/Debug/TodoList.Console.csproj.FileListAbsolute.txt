@@ -50,4 +50,3 @@ C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApi
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\ServiceStack.Common.xml
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\ServiceStack.Redis.xml
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\ServiceStack.Text.xml
-C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\obj\Debug\TodoList.Console.csprojResolveAssemblyReference.cache

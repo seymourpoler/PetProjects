@@ -42,9 +42,29 @@ namespace TodoList.Tests.Domain.Services
         {
             _repository.Setup(x => x.Save(It.IsAny<Task>())).Returns(new Task { Id = Guid.NewGuid(), Name = "Task One" });
 
-            var taskSaved = _tasksService.Save(new Task {Name = "Task One"});
+            var taskSaved = _tasksService.Save(new Task {});
 
             _repository.Verify(x => x.Save(It.IsAny<Task>()));
+        }
+
+        [TestMethod]
+        public void TasksService_Update()
+        {
+            _repository.Setup(x => x.Update(It.IsAny<Task>())).Returns(new Task { Id = Guid.NewGuid(), Name = "Task One" });
+
+            var taskSaved = _tasksService.Update(new Task {});
+
+            _repository.Verify(x => x.Update(It.IsAny<Task>()));
+        }
+
+        [TestMethod]
+        public void TasksService_Delete()
+        {
+            _repository.Setup(x => x.Delete(It.IsAny<Guid>()));
+
+            _tasksService.Delete(Guid.NewGuid());
+
+            _repository.Verify(x => x.Delete(It.IsAny<Guid>()));
         }
     }
 }
