@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using TodoList.Console.UI.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TodoList.Console.Infrastructure.Data.Repositories;
+using System.Net.Http;
+using System.Text;
 
 namespace TodoList.Tests.UI.Controllers
 {
@@ -55,6 +57,22 @@ namespace TodoList.Tests.UI.Controllers
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             Assert.AreEqual(taskFound.Id, _taskTwo.Id);
+        }
+
+        [TestMethod]
+        public void TodoController_Post()
+        {
+            var jsonTask = JsonHelper.JsonSerialize<Task>(new Task { Name= "Task to Post"});
+
+            var content = new System.Net.Http.StringContent(jsonTask, Encoding.UTF8, "application/json");
+            var response = _server.HttpClient.PostAsync("/todo", content).Result;
+            var result = response.Content.ReadAsStringAsync().Result;
+            var taskFound = JsonHelper.JsonDeserialize<Task>(result);
+
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.AreNotEqual(Guid.Empty, taskFound.Id);
+
+            _repository.Delete(taskFound.Id);
         }
     }
 }

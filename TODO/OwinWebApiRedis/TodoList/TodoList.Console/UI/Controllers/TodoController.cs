@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using TodoList.Console.Domain.Services;
+using TodoList.Console.UI.Models;
 
 namespace TodoList.Console.UI.Controllers
 {
@@ -33,6 +34,19 @@ namespace TodoList.Console.UI.Controllers
             {
                 var task = _tasksService.GetById(id);
                 return Request.CreateResponse(HttpStatusCode.OK, task);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
+        public HttpResponseMessage Pot(Task task)
+        {
+            try
+            {
+                var taskSaved = _tasksService.Save(task);
+                return Request.CreateResponse(HttpStatusCode.OK, taskSaved);
             }
             catch (Exception ex)
             {

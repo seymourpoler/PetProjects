@@ -13,5 +13,15 @@ namespace TodoList.Tests.UI.Controllers
             T obj = (T)ser.ReadObject(ms);
             return obj;
         }
+
+        public static string JsonSerialize<T>(T t)
+        {
+            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(T));
+            MemoryStream ms = new MemoryStream();
+            ser.WriteObject(ms, t);
+            string jsonString = Encoding.UTF8.GetString(ms.ToArray());
+            ms.Close();
+            return jsonString;
+        }  
     }
 }
