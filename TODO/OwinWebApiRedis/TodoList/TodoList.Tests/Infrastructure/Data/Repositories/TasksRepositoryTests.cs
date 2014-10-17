@@ -47,6 +47,17 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         }
 
         [TestMethod]
+        public void TasksRepository_Update_when_task_is_not_found()
+        {
+            var task = _repository.Update(new Task { Id = Guid.NewGuid(), Name="New Task"});
+            var taskUpdated = _repository.GetById(task.Id);
+
+            Assert.AreEqual(task.Id, taskUpdated.Id);
+
+            _repository.Delete(taskUpdated.Id);
+        }
+
+        [TestMethod]
         public void TasksRepository_GetById()
         {
             var task = _repository.Save(new Task { Name = "Task One" });
@@ -61,6 +72,14 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         }
 
         [TestMethod]
+        public void TasksRepository_GetById_Return_null_when_is_not_found()
+        {
+            var taskExpected = _repository.GetById(Guid.NewGuid());
+            
+            Assert.IsNull(taskExpected);
+        }
+
+        [TestMethod]
         public void TasksRepository_Delete()
         {
             var expected = _repository.Save(new Task { Name = "Task One" });
@@ -69,6 +88,14 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
             var taskRemoved = _repository.GetById(expected.Id);
 
             Assert.IsNull(taskRemoved);
+        }
+
+        [TestMethod]
+        public void TasksRepository_Delete_it_is_ok_when_task_is_not_found()
+        {
+            _repository.Delete(Guid.NewGuid());
+
+            Assert.IsTrue(true);
         }
 
         [TestMethod]
