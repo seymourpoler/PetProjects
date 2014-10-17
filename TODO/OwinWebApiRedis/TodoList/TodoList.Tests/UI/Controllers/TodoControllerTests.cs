@@ -8,6 +8,7 @@ using System.Web.Http;
 using System.Net.Http;
 using System.Web.Http.Hosting;
 using TodoList.Console.UI.Models;
+using System.Collections.Generic;
 
 namespace TodoList.Tests.UI.Controllers
 {
@@ -33,7 +34,7 @@ namespace TodoList.Tests.UI.Controllers
         }
 
         [TestMethod]
-        public void TodoController_GetAll()
+        public void TodoController_GetAll_return_Internal_Error()
         {
             _tasksService.Setup(x => x.GetAll()).Throws(new Exception());
 
@@ -43,13 +44,35 @@ namespace TodoList.Tests.UI.Controllers
         }
 
         [TestMethod]
-        public void TodoController_Get()
+        public void TodoController_GetAll_Return_Ok()
+        {
+            _tasksService.Setup(x => x.GetAll()).Returns(new List<Task>());
+
+            var response = _todoController.Get();
+
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            _tasksService.Verify(x => x.GetAll());
+        }
+
+        [TestMethod]
+        public void TodoController_Get_return_Internal_Error()
         {
             _tasksService.Setup(x => x.GetById(It.IsAny<Guid>())).Throws(new Exception());
 
             var response = _todoController.Get(Guid.NewGuid());
 
             Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        }
+
+        [TestMethod]
+        public void TodoController_Get_return_Ok()
+        {
+            _tasksService.Setup(x => x.GetById(It.IsAny<Guid>())).Returns(new Task());
+
+            var response = _todoController.Get(Guid.NewGuid());
+
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            _tasksService.Verify(x => x.GetById(It.IsAny<Guid>()));
         }
 
         [TestMethod]
