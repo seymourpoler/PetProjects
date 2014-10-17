@@ -97,7 +97,7 @@ namespace TodoList.Tests.UI.Controllers
         }
 
         [TestMethod]
-        public void TodoController_Put()
+        public void TodoController_Put_return_Internal_error()
         {
             _tasksService.Setup(x => x.Update(It.IsAny<Task>())).Throws(new Exception());
 
@@ -107,13 +107,35 @@ namespace TodoList.Tests.UI.Controllers
         }
 
         [TestMethod]
-        public void TodoController_Delete()
+        public void TodoController_Put_return_Ok()
+        {
+            _tasksService.Setup(x => x.Update(It.IsAny<Task>())).Returns(new Task());
+
+            var response = _todoController.Put(new Task());
+
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            _tasksService.Verify(x => x.Update(It.IsAny<Task>()));
+        }
+
+        [TestMethod]
+        public void TodoController_Delete_return_Internal_error()
         {
             _tasksService.Setup(x => x.Delete(It.IsAny<Guid>())).Throws(new Exception());
 
             var response = _todoController.Delete(Guid.NewGuid());
 
             Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        }
+
+        [TestMethod]
+        public void TodoController_Delete_return_Ok()
+        {
+            _tasksService.Setup(x => x.Delete(It.IsAny<Guid>()));
+
+            var response = _todoController.Delete(Guid.NewGuid());
+
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            _tasksService.Verify(x => x.Delete(It.IsAny<Guid>()));
         }
     }
 }
