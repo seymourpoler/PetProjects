@@ -28,5 +28,10 @@ namespace TodoList.Console.Domain.Services
         {
             return _tasksRepository.Save(task);
         }
+
+        public Task Update(Task task)
+        {
+            return _tasksRepository.Update(task);
+        }
     }
 }

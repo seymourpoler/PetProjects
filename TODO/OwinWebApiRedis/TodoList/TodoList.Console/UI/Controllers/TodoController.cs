@@ -53,5 +53,18 @@ namespace TodoList.Console.UI.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
             }
         }
+
+        public HttpResponseMessage Put(Task task)
+        {
+            try
+            {
+                var taskUpdated = _tasksService.Update(task);
+                return Request.CreateResponse(HttpStatusCode.OK, taskUpdated);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
+            }
+        }
     }
 }
