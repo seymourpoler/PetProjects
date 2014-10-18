@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using TodoList.Console.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TodoList.Console.Infrastructure.Data.Repositories;
+using TodoList.Console.UI.Models;
 
 namespace TodoList.Tests.UI.Controllers
 {
@@ -41,7 +42,7 @@ namespace TodoList.Tests.UI.Controllers
             var response = _server.HttpClient.GetAsync("/todo").Result;
             var result = response.Content.ReadAsStringAsync().Result;
 
-            var tasks = JsonHelper.JsonDeserialize<IList<Task>>(result);
+            var tasks = JsonHelper.JsonDeserialize<IList<TaskModel>>(result);
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             Assert.IsTrue(tasks.ToList().Count >= 2);
@@ -52,10 +53,10 @@ namespace TodoList.Tests.UI.Controllers
         {
             var response = _server.HttpClient.GetAsync(string.Format("/todo/{0}", _taskTwo.Id)).Result;
             var result = response.Content.ReadAsStringAsync().Result;
-            var taskFound = JsonHelper.JsonDeserialize<Task>(result);
+            var taskFound = JsonHelper.JsonDeserialize<TaskModel>(result);
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            Assert.AreEqual(taskFound.Id, _taskTwo.Id);
+            Assert.AreEqual(taskFound.id, _taskTwo.Id);
         }
 
         [TestMethod]
@@ -66,12 +67,12 @@ namespace TodoList.Tests.UI.Controllers
             var content = new System.Net.Http.StringContent(jsonTask, Encoding.UTF8, "application/json");
             var response = _server.HttpClient.PostAsync("/todo", content).Result;
             var result = response.Content.ReadAsStringAsync().Result;
-            var taskFound = JsonHelper.JsonDeserialize<Task>(result);
+            var taskFound = JsonHelper.JsonDeserialize<TaskModel>(result);
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            Assert.AreNotEqual(Guid.Empty, taskFound.Id);
+            Assert.AreNotEqual(Guid.Empty, taskFound.id);
 
-            _repository.Delete(taskFound.Id);
+            _repository.Delete(taskFound.id);
         }
 
         [TestMethod]
@@ -83,12 +84,12 @@ namespace TodoList.Tests.UI.Controllers
             var content = new System.Net.Http.StringContent(jsonTask, Encoding.UTF8, "application/json");
             var response = _server.HttpClient.PutAsync("/todo", content).Result;
             var result = response.Content.ReadAsStringAsync().Result;
-            var taskUpdated = JsonHelper.JsonDeserialize<Task>(result);
+            var taskUpdated = JsonHelper.JsonDeserialize<TaskModel>(result);
             var taskFound = _repository.GetById(_taskOne.Id);
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            Assert.AreEqual(taskUpdated.Id, taskFound.Id);
-            Assert.AreEqual(taskUpdated.Title, taskFound.Title);
+            Assert.AreEqual(taskUpdated.id, taskFound.Id);
+            Assert.AreEqual(taskUpdated.title, taskFound.Title);
 
             _repository.Delete(taskFound.Id);
         }

@@ -1,14 +1,15 @@
 ﻿using Moq;
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TodoList.Console.UI.Controllers;
-using TodoList.Console.Domain.Services;
 using System.Net;
 using System.Web.Http;
 using System.Net.Http;
 using System.Web.Http.Hosting;
-using TodoList.Console.Domain.Entities;
 using System.Collections.Generic;
+using TodoList.Console.UI.Mappers;
+using TodoList.Console.UI.Controllers;
+using TodoList.Console.Domain.Services;
+using TodoList.Console.Domain.Entities;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TodoList.Tests.UI.Controllers
 {
@@ -17,12 +18,14 @@ namespace TodoList.Tests.UI.Controllers
     {
         TodoController _todoController;
         Mock<ITasksService> _tasksService;
+        Mock<ITaskMapper> _taskMapper;
 
         [TestInitialize]
         public void setUp()
         {
             _tasksService = new Mock<ITasksService>();
-            _todoController = new TodoController(_tasksService.Object);
+            _taskMapper = new Mock<ITaskMapper>();
+            _todoController = new TodoController(_tasksService.Object, _taskMapper.Object);
             LoadRequestInController(_todoController);
         }
 

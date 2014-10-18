@@ -82,6 +82,7 @@
     <Compile Include="UI\Controllers\JsonHelper.cs" />
     <Compile Include="UI\Controllers\TodoControllerIntegrationTests.cs" />
     <Compile Include="UI\Controllers\TodoControllerTests.cs" />
+    <Compile Include="UI\Mappers\TaskMapperTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TodoList.Console\TodoList.Console.csproj">

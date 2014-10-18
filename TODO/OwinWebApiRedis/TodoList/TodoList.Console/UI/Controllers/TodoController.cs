@@ -2,6 +2,8 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TodoList.Console.UI.Models;
+using TodoList.Console.UI.Mappers;
 using TodoList.Console.Domain.Entities;
 using TodoList.Console.Domain.Services;
 
@@ -9,10 +11,13 @@ namespace TodoList.Console.UI.Controllers
 {
     public class TodoController : ApiController
     {
+        private readonly ITaskMapper _taskMapper;
         private readonly ITasksService _tasksService;
-        public TodoController(ITasksService tasksService)
+
+        public TodoController(ITasksService tasksService, ITaskMapper taskMapper)
         {
             _tasksService = tasksService;
+            _taskMapper = taskMapper;
         }
 
         public HttpResponseMessage Get()
@@ -20,6 +25,7 @@ namespace TodoList.Console.UI.Controllers
             try
             {
                 var tasks = _tasksService.GetAll();
+                var tasksModels = _taskMapper.ToModel(tasks);
                 return Request.CreateResponse(HttpStatusCode.OK, tasks);
             }
             catch(Exception ex)
@@ -33,7 +39,8 @@ namespace TodoList.Console.UI.Controllers
             try
             {
                 var task = _tasksService.GetById(id);
-                return Request.CreateResponse(HttpStatusCode.OK, task);
+                var taskModel = _taskMapper.ToModel(task);
+                return Request.CreateResponse(HttpStatusCode.OK, taskModel);
             }
             catch (Exception ex)
             {
@@ -46,7 +53,8 @@ namespace TodoList.Console.UI.Controllers
             try
             {
                 var taskSaved = _tasksService.Save(task);
-                return Request.CreateResponse(HttpStatusCode.OK, taskSaved);
+                var taskModel = _taskMapper.ToModel(taskSaved);
+                return Request.CreateResponse(HttpStatusCode.OK, taskModel);
             }
             catch (Exception ex)
             {
@@ -59,7 +67,8 @@ namespace TodoList.Console.UI.Controllers
             try
             {
                 var taskUpdated = _tasksService.Update(task);
-                return Request.CreateResponse(HttpStatusCode.OK, taskUpdated);
+                var taskModel = _taskMapper.ToModel(taskUpdated);
+                return Request.CreateResponse(HttpStatusCode.OK, taskModel);
             }
             catch (Exception ex)
             {
