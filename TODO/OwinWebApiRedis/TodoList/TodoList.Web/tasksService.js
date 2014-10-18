@@ -17,7 +17,7 @@ function TasksService (){
 	}
 	function save(task) {
 		console.log('Save from tasksService');
-		
+
 		$.ajax({url: _url, type: "post", data: task})
 		.done(function(response, textStatus, jqXHR){
 			console.log('post done', response);
@@ -28,7 +28,16 @@ function TasksService (){
 		});		
 	}
 	function update(task) {
+		console.log('Update from tasksService');
 		
+		$.ajax({url: _url, type: "put", data: task})
+		.done(function(response, textStatus, jqXHR){
+			console.log('put done', response);
+			return response;
+		})
+		.fail(function(error){
+			console.log('error on put');
+		});	
 	}
 	function remove(id) {
 		
