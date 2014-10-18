@@ -1,7 +1,7 @@
 ﻿using Moq;
 using System;
 using System.Collections.Generic;
-using TodoList.Console.UI.Models;
+using TodoList.Console.Domain.Entities;
 using TodoList.Console.Domain.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TodoList.Console.Infrastructure.Data.Repositories;
@@ -13,18 +13,22 @@ namespace TodoList.Tests.Domain.Services
     {
         private Mock<ITasksRepository> _repository;
         private TasksService _tasksService;
+        private Task _taskOne;
+        private Task _taskTwo;
 
         [TestInitialize]
         public void SetUp()
         {
             _repository = new Mock<ITasksRepository>();
             _tasksService = new TasksService(_repository.Object);
+            _taskOne = new Task { Id = Guid.NewGuid(), Title = "Task One", Description = "Description One" };
+            _taskTwo = new Task { Id = Guid.NewGuid(), Title = "Task Two", Description = "Description Two" };
         }
 
         [TestMethod]
         public void TasksService_GetAll()
         {
-            _repository.Setup(x => x.GetAll()).Returns(new List<Task> { new Task { Id = Guid.NewGuid(), Name = "Task One" }, new Task { Id = Guid.NewGuid(), Name = "Task Two" } });
+            _repository.Setup(x => x.GetAll()).Returns(new List<Task> { _taskOne, _taskTwo });
             var expected = _tasksService.GetAll();
             _repository.Verify(x => x.GetAll());
         }
@@ -32,7 +36,7 @@ namespace TodoList.Tests.Domain.Services
         [TestMethod]
         public void TasksService_GetById()
         {
-            _repository.Setup(x => x.GetById(It.IsAny<Guid>())).Returns(new Task { Id = Guid.NewGuid(), Name = "Task One" });
+            _repository.Setup(x => x.GetById(It.IsAny<Guid>())).Returns(_taskOne);
             var expected = _tasksService.GetById(Guid.NewGuid());
             _repository.Verify(x => x.GetById(It.IsAny<Guid>()));
         }
@@ -40,7 +44,7 @@ namespace TodoList.Tests.Domain.Services
         [TestMethod]
         public void TasksService_Save()
         {
-            _repository.Setup(x => x.Save(It.IsAny<Task>())).Returns(new Task { Id = Guid.NewGuid(), Name = "Task One" });
+            _repository.Setup(x => x.Save(It.IsAny<Task>())).Returns(_taskOne);
 
             var taskSaved = _tasksService.Save(new Task {});
 
@@ -50,7 +54,7 @@ namespace TodoList.Tests.Domain.Services
         [TestMethod]
         public void TasksService_Update()
         {
-            _repository.Setup(x => x.Update(It.IsAny<Task>())).Returns(new Task { Id = Guid.NewGuid(), Name = "Task One" });
+            _repository.Setup(x => x.Update(It.IsAny<Task>())).Returns(_taskOne);
 
             var taskSaved = _tasksService.Update(new Task {});
 

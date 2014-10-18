@@ -1,7 +1,7 @@
 ﻿using System;
 using ServiceStack.Redis;
 using System.Collections.Generic;
-using TodoList.Console.UI.Models;
+using TodoList.Console.Domain.Entities;
 using ServiceStack.Redis.Generic;
 
 namespace TodoList.Console.Infrastructure.Data.Repositories

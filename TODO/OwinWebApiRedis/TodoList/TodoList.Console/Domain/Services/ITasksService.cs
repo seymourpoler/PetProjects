@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using TodoList.Console.UI.Models;
+using TodoList.Console.Domain.Entities;
 
 namespace TodoList.Console.Domain.Services
 {

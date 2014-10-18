@@ -83,6 +83,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Entities\StateTask.cs" />
+    <Compile Include="Domain\Entities\Task.cs" />
     <Compile Include="Domain\Services\ITasksService.cs" />
     <Compile Include="Domain\Services\TasksService.cs" />
     <Compile Include="Infrastructure\Data\Repositories\ITasksRepository.cs" />
@@ -93,13 +95,14 @@
     <Compile Include="UI\Controllers\TodoController.cs" />
     <Compile Include="UI\IoC\NinjectConfig.cs" />
     <Compile Include="UI\IoC\NinjectResolver.cs" />
-    <Compile Include="UI\Models\Task.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UI\Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

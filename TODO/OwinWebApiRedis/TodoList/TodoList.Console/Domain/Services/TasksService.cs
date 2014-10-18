@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using TodoList.Console.UI.Models;
+using TodoList.Console.Domain.Entities;
 using TodoList.Console.Infrastructure.Data.Repositories;
 
 namespace TodoList.Console.Domain.Services

@@ -7,7 +7,7 @@ using System.Net;
 using System.Web.Http;
 using System.Net.Http;
 using System.Web.Http.Hosting;
-using TodoList.Console.UI.Models;
+using TodoList.Console.Domain.Entities;
 using System.Collections.Generic;
 
 namespace TodoList.Tests.UI.Controllers

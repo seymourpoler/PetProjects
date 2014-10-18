@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using TodoList.Console.UI.Models;
+using TodoList.Console.Domain.Entities;
 using TodoList.Console.Domain.Services;
 
 namespace TodoList.Console.UI.Controllers

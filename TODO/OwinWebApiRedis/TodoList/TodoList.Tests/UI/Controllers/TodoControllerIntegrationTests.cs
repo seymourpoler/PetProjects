@@ -6,7 +6,7 @@ using System.Net.Http;
 using TodoList.Console;
 using Microsoft.Owin.Testing;
 using System.Collections.Generic;
-using TodoList.Console.UI.Models;
+using TodoList.Console.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TodoList.Console.Infrastructure.Data.Repositories;
 
@@ -24,8 +24,8 @@ namespace TodoList.Tests.UI.Controllers
         {
             _server = TestServer.Create<StartUp>();
             _repository = new TasksRepository();
-            _taskOne = _repository.Save(new Task { Name = "TaskOne" });
-            _taskTwo = _repository.Save(new Task { Name = "TaskTwo" });
+            _taskOne = _repository.Save(new Task { Title = "TaskOne" });
+            _taskTwo = _repository.Save(new Task { Title = "TaskTwo" });
         }
 
         [TestCleanup]
@@ -61,7 +61,7 @@ namespace TodoList.Tests.UI.Controllers
         [TestMethod]
         public void TodoController_Post()
         {
-            var jsonTask = JsonHelper.JsonSerialize<Task>(new Task { Name= "Task to Post"});
+            var jsonTask = JsonHelper.JsonSerialize<Task>(new Task { Title = "Task to Post"});
 
             var content = new System.Net.Http.StringContent(jsonTask, Encoding.UTF8, "application/json");
             var response = _server.HttpClient.PostAsync("/todo", content).Result;
@@ -77,7 +77,7 @@ namespace TodoList.Tests.UI.Controllers
         [TestMethod]
         public void TodoController_Put()
         {
-            _taskOne.Name = "Name Updated";
+            _taskOne.Title = "Name Updated";
             var jsonTask = JsonHelper.JsonSerialize<Task>(_taskOne);
 
             var content = new System.Net.Http.StringContent(jsonTask, Encoding.UTF8, "application/json");
@@ -88,7 +88,7 @@ namespace TodoList.Tests.UI.Controllers
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             Assert.AreEqual(taskUpdated.Id, taskFound.Id);
-            Assert.AreEqual(taskUpdated.Name, taskFound.Name);
+            Assert.AreEqual(taskUpdated.Title, taskFound.Title);
 
             _repository.Delete(taskFound.Id);
         }
