@@ -1,16 +1,19 @@
 $(document).ready(function() {
 	console.log('Start OK');
 	console.log(configuration.url);
-	var newTask = {Title:'task'};
+	var newTask = {title:'task'};
 	var taskService = new TasksService();
 	
 	$.when(taskService.save(newTask))
-	.then(function(x){
+	.done(function(){
 		$.when(taskService.getAll())
-		.then(function(tasks){
+		.done(function(tasks){
+			console.log('done tasks: ' + tasks);
+
 			var taskUpdate = tasks[0];
 			taskUpdate.Description = 'Description added';
 			taskService.update(taskUpdate);
+			
 		});
 	});
 });

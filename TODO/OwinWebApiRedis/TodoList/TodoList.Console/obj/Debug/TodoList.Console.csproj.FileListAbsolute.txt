@@ -90,3 +90,6 @@ C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoLis
 C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\System.Web.Http.xml
 C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\System.Web.Http.Owin.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\AutoMapper.Net4.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\AutoMapper.dll
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Console\bin\Debug\AutoMapper.xml
