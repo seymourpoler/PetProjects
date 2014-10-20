@@ -12,8 +12,11 @@ $(document).ready(function() {
 
 			var taskUpdate = tasks[0];
 			taskUpdate.Description = 'Description added';
-			taskService.update(taskUpdate);
-			
+			$.when(taskService.update(taskUpdate))
+			.done(function(task){
+				console.log('delete id: ' + task.id);
+				taskService.remove(task.id);
+			});
 		});
 	});
 });
