@@ -11,7 +11,8 @@ $(document).ready(function() {
 			console.log('done tasks: ' + tasks);
 
 			var taskUpdate = tasks[0];
-			taskUpdate.Description = 'Description added';
+			taskUpdate.description = 'Description updated';
+			taskUpdate.state = 'InProgress';
 			$.when(taskService.update(taskUpdate))
 			.done(function(task){
 				console.log('delete id: ' + task.id);

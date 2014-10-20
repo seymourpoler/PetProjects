@@ -48,11 +48,12 @@ namespace TodoList.Console.UI.Controllers
             }
         }
 
-        public HttpResponseMessage Post(Task task)
+        public HttpResponseMessage Post(TaskModel task)
         {
             try
             {
-                var taskSaved = _tasksService.Save(task);
+                var taskEntity = _taskMapper.ToEntity(task);
+                var taskSaved = _tasksService.Save(taskEntity);
                 var taskModel = _taskMapper.ToModel(taskSaved);
                 return Request.CreateResponse(HttpStatusCode.OK, taskModel);
             }
@@ -62,12 +63,13 @@ namespace TodoList.Console.UI.Controllers
             }
         }
 
-        public HttpResponseMessage Put(Task task)
+        public HttpResponseMessage Put(TaskModel task)
         {
             try
             {
-                var taskUpdated = _tasksService.Update(task);
-                var taskModel = _taskMapper.ToModel(taskUpdated);
+                var taskEntity = _taskMapper.ToEntity(task);
+                var taskModelUpdated = _tasksService.Update(taskEntity);
+                var taskModel = _taskMapper.ToModel(taskModelUpdated);
                 return Request.CreateResponse(HttpStatusCode.OK, taskModel);
             }
             catch (Exception ex)
