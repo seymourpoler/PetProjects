@@ -17,7 +17,7 @@ function TasksService (){
 	function save(task) {
 		return $.ajax({url: _url, type: 'post', data: task})
 		.done(function(response, textStatus, jqXHR){
-			console.log('save OK');
+			console.log('save OK', response);
 			return response;
 		})
 		.fail(function(error){

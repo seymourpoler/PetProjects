@@ -3,7 +3,10 @@ $(document).ready(function() {
 	console.log(configuration.url);
 	var newTask = {title:'task'};
 	var taskService = new TasksService();
+	var viewManager = new ViewManager(taskService);
+	viewManager.load();
 	
+	/*
 	$.when(taskService.save(newTask))
 	.done(function(){
 		return $.when(taskService.getAll())
@@ -21,4 +24,5 @@ $(document).ready(function() {
 			});
 		});
 	});
+	*/
 });
