@@ -10,6 +10,7 @@ using TodoList.Console.UI.Controllers;
 using TodoList.Console.Domain.Services;
 using TodoList.Console.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TodoList.Console.UI.Models;
 
 namespace TodoList.Tests.UI.Controllers
 {
@@ -83,7 +84,7 @@ namespace TodoList.Tests.UI.Controllers
         {
             _tasksService.Setup(x => x.Save(It.IsAny<Task>())).Throws(new Exception());
 
-            var response = _todoController.Post(new Task());
+            var response = _todoController.Post(new TaskModel());
 
             Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
         }
@@ -93,7 +94,7 @@ namespace TodoList.Tests.UI.Controllers
         {
             _tasksService.Setup(x => x.Save(It.IsAny<Task>())).Returns(new Task());
 
-            var response = _todoController.Post(new Task());
+            var response = _todoController.Post(new TaskModel());
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             _tasksService.Verify(x => x.Save(It.IsAny<Task>()));
@@ -104,7 +105,7 @@ namespace TodoList.Tests.UI.Controllers
         {
             _tasksService.Setup(x => x.Update(It.IsAny<Task>())).Throws(new Exception());
 
-            var response = _todoController.Put(new Task());
+            var response = _todoController.Put(new TaskModel());
 
             Assert.AreEqual(HttpStatusCode.InternalServerError, response.StatusCode);
         }
@@ -114,7 +115,7 @@ namespace TodoList.Tests.UI.Controllers
         {
             _tasksService.Setup(x => x.Update(It.IsAny<Task>())).Returns(new Task());
 
-            var response = _todoController.Put(new Task());
+            var response = _todoController.Put(new TaskModel());
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             _tasksService.Verify(x => x.Update(It.IsAny<Task>()));

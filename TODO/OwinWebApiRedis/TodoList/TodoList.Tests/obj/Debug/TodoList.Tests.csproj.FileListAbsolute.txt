@@ -80,6 +80,6 @@ C:\Users\luis\Documents\GitHub\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoLis
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.Cors.dll
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\System.Web.Cors.dll
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.Cors.xml
-C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\AutoMapper.Net4.dll
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\AutoMapper.dll
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\AutoMapper.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\AutoMapper.Net4.dll

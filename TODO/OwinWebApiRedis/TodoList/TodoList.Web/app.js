@@ -6,18 +6,22 @@ $(document).ready(function() {
 	
 	$.when(taskService.save(newTask))
 	.done(function(){
-		$.when(taskService.getAll())
+		return $.when(taskService.getAll())
 		.done(function(tasks){
 			console.log('done tasks: ' + tasks);
 
 			var taskUpdate = tasks[0];
 			taskUpdate.description = 'Description updated';
-			taskUpdate.state = 'InProgress';
+			taskUpdate.title = 'title Updated';
+			taskUpdate.state = 'Done';
 			$.when(taskService.update(taskUpdate))
 			.done(function(task){
 				console.log('delete id: ' + task.id);
 				taskService.remove(task.id);
+				return task;
 			});
 		});
+	}).done(function(taskSaved){
+		console.log('taskSaved' + taskSaved);
 	});
 });

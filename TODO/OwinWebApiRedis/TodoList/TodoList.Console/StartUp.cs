@@ -1,5 +1,4 @@
 ﻿using Owin;
-using System;
 using System.Web.Http;
 using Microsoft.Owin.Cors;
 using System.Net.Http.Headers;

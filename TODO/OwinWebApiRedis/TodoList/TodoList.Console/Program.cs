@@ -1,5 +1,6 @@
 ﻿using Microsoft.Owin;
 using Microsoft.Owin.Hosting;
+using TodoList.Console.Infrastructure.CrossCutting.Configuration;
 
 namespace TodoList.Console
 {
@@ -7,10 +8,10 @@ namespace TodoList.Console
     {
         public static void Main(string[] args)
         {
-            var port = 5000;
-            using (WebApp.Start<StartUp>(new StartOptions { Port = port }))
+            var url = Configuration.Url;
+            using (WebApp.Start<StartUp>(new StartOptions { AppStartup = url }))
             {
-                System.Console.Write("server listening at: " + port);
+                System.Console.Write("server listening at: " + url);
                 System.Console.ReadKey();
             }
         }

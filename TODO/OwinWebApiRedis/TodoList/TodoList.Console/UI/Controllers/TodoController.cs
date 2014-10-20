@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Collections.Generic;
 using TodoList.Console.UI.Models;
 using TodoList.Console.UI.Mappers;
 using TodoList.Console.Domain.Entities;
@@ -25,8 +26,8 @@ namespace TodoList.Console.UI.Controllers
             try
             {
                 var tasks = _tasksService.GetAll();
-                var tasksModels = _taskMapper.ToModel(tasks);
-                return Request.CreateResponse(HttpStatusCode.OK, tasks);
+                IList<TaskModel> tasksModels = _taskMapper.ToModel(tasks);
+                return Request.CreateResponse(HttpStatusCode.OK, tasksModels);
             }
             catch(Exception ex)
             {
