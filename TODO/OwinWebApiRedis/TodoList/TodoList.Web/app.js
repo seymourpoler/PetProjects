@@ -18,10 +18,7 @@ $(document).ready(function() {
 			.done(function(task){
 				console.log('delete id: ' + task.id);
 				taskService.remove(task.id);
-				return task;
 			});
 		});
-	}).done(function(taskSaved){
-		console.log('taskSaved' + taskSaved);
 	});
 });
