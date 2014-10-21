@@ -5,7 +5,6 @@ function ViewManager(taskService)
 	function remove(id){
 		console.log('remove' + id);
 		_taskService.remove(id);
-		this.load();
 	}
 
 	function load(){
@@ -16,13 +15,11 @@ function ViewManager(taskService)
 				$('#todo_list').prepend('<div>' + task.title + ' <a id=' + task.id + ' href=\'#\' class="a_todo">Remove</a></div>');
 				$('.a_todo').click( function() {
 					var idTask = $(this).attr('id');
-					console.log('viewManager remove from a id: ' + $(this).attr('id'));
 					_taskService.remove(idTask);
 					$(this).parent().fadeOut();
 				});
 			});
 		});
-
 	}
 
 	return{
