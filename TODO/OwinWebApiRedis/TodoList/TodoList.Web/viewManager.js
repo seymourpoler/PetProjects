@@ -18,7 +18,6 @@ function ViewManager(taskService)
 					var idTask = $(this).attr('id');
 					console.log('viewManager remove from a id: ' + $(this).attr('id'));
 					_taskService.remove(idTask);
-					//$(this).parents('div').fadeOut();
 					$(this).parent().fadeOut();
 				});
 			});
