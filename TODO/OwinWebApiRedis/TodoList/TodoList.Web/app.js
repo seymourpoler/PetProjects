@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function() {
 	console.log('Start OK');
 	console.log(configuration.url);
@@ -5,8 +8,8 @@ $(document).ready(function() {
 	var taskService = new TasksService();
 	var viewManager = new ViewManager(taskService);
 	viewManager.load();
-	
-	/*
+
+	/*	
 	$.when(taskService.save(newTask))
 	.done(function(){
 		return $.when(taskService.getAll())
@@ -20,9 +23,10 @@ $(document).ready(function() {
 			$.when(taskService.update(taskUpdate))
 			.done(function(task){
 				console.log('delete id: ' + task.id);
-				taskService.remove(task.id);
+				//taskService.remove(task.id);
 			});
 		});
 	});
 	*/
+	
 });
