@@ -2,11 +2,6 @@ function ViewManager(taskService)
 {
 	var _taskService = taskService;
 	
-	function remove(id){
-		console.log('remove' + id);
-		_taskService.remove(id);
-	}
-
 	function load(){
 		$.when(_taskService.getAll())
 		.done(function(tasks){
@@ -24,6 +19,5 @@ function ViewManager(taskService)
 
 	return{
 		'load': load,
-		'remove': remove
 	}
 }
