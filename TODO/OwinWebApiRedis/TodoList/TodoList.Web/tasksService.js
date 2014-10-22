@@ -35,7 +35,7 @@ function TasksService (){
 	function update(task) {
 		return $.ajax({url: _url, type: 'put', data: task})
 		.done(function(response, textStatus, jqXHR){
-			console.log('update OK');
+			console.log('update OK : ' + task.id + ' ' + task.title + ' ' + task.description );
 			return response;
 		})
 		.fail(function(error){

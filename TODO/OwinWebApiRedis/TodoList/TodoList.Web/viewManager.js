@@ -17,10 +17,11 @@ function ViewManager(taskService)
 					var idTask = $(this).attr('id');
 					loadTaskIntoControls(idTask);
 				});
-				$('.btnUpdate').click( function() {
+				$('#btnUpdate').click( function() {
 					var idTask = $(this).attr('id');
 					var task = getTaskFromControls();
 					_taskService.update(task);
+					cleanControls();
 				});
 			});
 		});
@@ -28,17 +29,26 @@ function ViewManager(taskService)
 
 	function loadTaskIntoControls(idTask)
 	{
-		var task = _taskService.getById(idTask);
-		$('#txtTitle').val(task.title);
-		$('#txtDescription').val(task.description);
+		$.when(_taskService.getById(idTask))
+		.done(function(task){
+			$('#txtId').val(task.id);
+			$('#txtTitle').val(task.title);
+			$('#txtDescription').val(task.description);
+		});
 	}
 
 	function getTaskFromControls()
 	{
 		var task = new Task();
+		task.id = $('#txtId').val();
 		task.title = $('#txtTitle').val();
 		task.description = $('#txtDescription').val();
 		return task;
+	}
+
+	function cleanControls(){
+		$('#txtTitle').val('');
+			$('#txtDescription').val('');	
 	}
 
 	return{
