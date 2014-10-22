@@ -7,13 +7,15 @@
 <body>
 	<form id='todo_form'>
 		<div id='todo_list'></div>
+
+		<div id="divUpdate" style="border:1px solid black">
+			<label>update</label> <br />
+			<input id="txtId" style="display" /> <br />
+			<label for="txtTitle">Title: </label> <input id="txtTitle"/> <br />
+			<label for="txtDescription">Description: </label> <input id="txtDescription"/> <br />
+			<button id="btnUpdate">Update</button>
+		</div>
 	</form>
-	<div id="divUpdate" style="display">
-		<input id="txtId" style="display:none" />
-		<label for="txtTitle">Title: </label> <input id="txtTitle"/> <br />
-		<label for="txtDescription">Description: </label> <input id="txtDescription"/> <br />
-		<button id="btnUpdate">Update</button>
-	</div>
 	<script src='jquery.min.js' type='text/javascript'></script>
 	<script src='underscore.min.js' type='text/javascript'></script>
 	<script src='task.js' type='text/javascript'></script>
