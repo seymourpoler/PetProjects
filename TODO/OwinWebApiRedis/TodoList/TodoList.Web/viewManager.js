@@ -10,7 +10,6 @@ function ViewManager(taskService, viewTaskUpdateManager)
 		});
 	}
 
-	
 	return{
 		'load': load
 	}
