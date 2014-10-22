@@ -8,11 +8,19 @@ function TasksService (){
 		})
 		.fail(function(error){
 			console.log('error on get');
-			return [];
+			return new Task();
 		});
 	}
 	function getById(id) {
-		console.log('getByid from tasksService' + id);	
+		return $.ajax({url: _url + '/' + id, type: 'get'})
+		.done(function(response, textStatus, jqXHR){
+			console.log('get by id OK', response);
+			return response;
+		})
+		.fail(function(error){
+			console.log('error on get by id');
+			return new Task();
+		});	
 	}
 	function save(task) {
 		return $.ajax({url: _url, type: 'post', data: task})
@@ -42,7 +50,7 @@ function TasksService (){
 			return response;
 		})
 		.fail(function(error){
-			console.log('error on post');
+			console.log('error on delete');
 		});	
 	}
 	return{
