@@ -48,7 +48,7 @@ function ViewManager(taskService)
 
 	function cleanControls(){
 		$('#txtTitle').val('');
-			$('#txtDescription').val('');	
+		$('#txtDescription').val('');	
 	}
 
 	return{
