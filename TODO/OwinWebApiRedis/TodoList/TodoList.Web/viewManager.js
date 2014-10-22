@@ -17,7 +17,17 @@ function ViewManager(taskService)
 		});
 	}
 
+	function loadById(idTask)
+	{
+		var task = _taskService.getById(idTask);
+	}
+
+	function update(task){
+		_taskService.update(task);
+	}
 	return{
 		'load': load,
+		'loadById': loadById,
+		'update': update
 	}
 }
