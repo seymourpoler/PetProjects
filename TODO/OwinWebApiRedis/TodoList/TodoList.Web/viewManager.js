@@ -1,7 +1,6 @@
 function ViewManager(taskService)
 {
 	var _taskService = taskService;
-	var _viewTaskUpdateManager = viewTaskUpdateManager;
 	var idTxtId = '#txtId';
 	var idTxtTitle = '#txtUpdateTitle';
 	var idTxtDescription = '#txtUpdateDescription';
@@ -37,7 +36,7 @@ function ViewManager(taskService)
 
 	function setUpButtonSave(){
 		$('#btnSave').click( function() {
-					var task = getTaskFromControls();
+					var task = getTaskFromControlsForSaving();
 					$.when(_taskService.save(task))
 					.done(function(){
 						cleanAll();
@@ -82,6 +81,14 @@ function ViewManager(taskService)
 		task.id = $(idTxtId).val();
 		task.title = $(idTxtTitle).val();
 		task.description = $(idTxtDescription).val();
+		return task;
+	}
+
+	function getTaskFromControlsForSaving()
+	{
+		var task = new Task();
+		task.title = $('#txtSaveTitle').val();
+		task.description = $('#txtSaveDescription').val();
 		return task;
 	}
 
