@@ -6,7 +6,8 @@ $(document).ready(function() {
 	console.log(configuration.url);
 	var newTask = {title:'task', description:'description'};
 	var taskService = new TasksService();
-	var viewManager = new ViewManager(taskService);
+	var viewTaskUpdateManager = new ViewTaskUpdateManager(taskService);
+	var viewManager = new ViewManager(taskService, viewTaskUpdateManager);
 	viewManager.load();
 
 	/*	
