@@ -1,7 +1,5 @@
 function Task(){
-	
-	return {
-		'title' : '',
-		'description' : ''
-	};
+	this.title = '';
+	this.description = '';
+	this.state = 1;
 }
