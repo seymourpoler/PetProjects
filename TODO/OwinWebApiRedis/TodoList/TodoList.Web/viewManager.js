@@ -24,40 +24,40 @@ function ViewManager(taskService)
 
 	function setUpRemoveTask(){
 		$('.remove_task').click( function() {
-					var idTask = $(this).attr('id');
-					_taskService.remove(idTask);
-					$(this).parent().fadeOut();
-					cleanTaskControls();
-				});
+			var idTask = $(this).attr('id');
+			_taskService.remove(idTask);
+			$(this).parent().fadeOut();
+			cleanTaskControls();
+		});
 	}
 
 	function setUpUpdateTask(){
 		$('.update_task').click( function() {
-					var idTask = $(this).attr('id');
-					loadTaskForUpdateIntoControls(idTask);
-				});
+			var idTask = $(this).attr('id');
+			loadTaskForUpdateIntoControls(idTask);
+		});
 	}
 
 	function setUpButtonSave(){
 		$('#btnSave').click( function() {
-					var task = getTaskFromControlsForSaving();
-					$.when(_taskService.save(task))
-					.done(function(){
-						cleanAll();
-						load();
-					})
-				});
+			var task = getTaskFromControlsForSaving();
+			$.when(_taskService.save(task))
+			.done(function(){
+				cleanAll();
+				load();
+			})
+		});
 	}
 
 	function setUpButtonUpdate(){
 		$('#btnUpdate').click( function() {
-					var task = getTaskFromControlsForUpdating();
-					$.when(_taskService.update(task))
-					.done(function(){
-						cleanAll();
-						load();
-					})
-				});
+			var task = getTaskFromControlsForUpdating();
+			$.when(_taskService.update(task))
+			.done(function(){
+				cleanAll();
+				load();
+			})
+		});
 	}
 
 	function loadAllTasksIntoControls(tasks){
