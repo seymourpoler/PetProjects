@@ -4,7 +4,7 @@
 $(document).ready(function() {
 	console.log('Start OK');
 	console.log(configuration.url);
-	var newTask = {title:'task'};
+	var newTask = {title:'task', description:'description'};
 	var taskService = new TasksService();
 	var viewManager = new ViewManager(taskService);
 	viewManager.load();
