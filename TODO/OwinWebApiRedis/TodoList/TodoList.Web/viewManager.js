@@ -1,9 +1,12 @@
 function ViewManager(taskService)
 {
 	var _taskService = taskService;
+	
 	var idTxtId = '#txtId';
-	var idTxtTitle = '#txtUpdateTitle';
-	var idTxtDescription = '#txtUpdateDescription';
+	var idTxtUpdateTitle = '#txtUpdateTitle';
+	var idTxtSaveTitle = '#txtSaveTitle';
+	var idTxtUpdateDescription = '#txtUpdateDescription';
+	var idTxtSaveDescription = '#txtSaveDescription';
 
 	setUpButtonSave();
 	setUpButtonUpdate();
@@ -31,7 +34,7 @@ function ViewManager(taskService)
 	function setUpUpdateTask(){
 		$('.update_task').click( function() {
 					var idTask = $(this).attr('id');
-					loadTaskIntoControls(idTask);
+					loadTaskForUpdateIntoControls(idTask);
 				});
 	}
 
@@ -48,7 +51,7 @@ function ViewManager(taskService)
 
 	function setUpButtonUpdate(){
 		$('#btnUpdate').click( function() {
-					var task = getTaskFromControls();
+					var task = getTaskFromControlsForUpdating();
 					$.when(_taskService.update(task))
 					.done(function(){
 						cleanAll();
@@ -64,30 +67,30 @@ function ViewManager(taskService)
 			});
 	}
 
-	function loadTaskIntoControls(idTask)
+	function loadTaskForUpdateIntoControls(idTask)
 	{
 		$.when(_taskService.getById(idTask))
 		.done(function(task){
 			$(idTxtId).val(task.id);
-			$(idTxtTitle).val(task.title);
-			$(idTxtDescription).val(task.description);
+			$(idTxtUpdateTitle).val(task.title);
+			$(idTxtUpdateDescription).val(task.description);
 		});
 	}
 
-	function getTaskFromControls()
+	function getTaskFromControlsForUpdating()
 	{
 		var task = new Task();
 		task.id = $(idTxtId).val();
-		task.title = $(idTxtTitle).val();
-		task.description = $(idTxtDescription).val();
+		task.title = $(idTxtUpdateTitle).val();
+		task.description = $(idTxtUpdateDescription).val();
 		return task;
 	}
 
 	function getTaskFromControlsForSaving()
 	{
 		var task = new Task();
-		task.title = $('#txtSaveTitle').val();
-		task.description = $('#txtSaveDescription').val();
+		task.title = $(idTxtSaveTitle).val();
+		task.description = $(idTxtSaveDescription).val();
 		return task;
 	}
 
@@ -98,10 +101,10 @@ function ViewManager(taskService)
 
 	function cleanTaskControls(){
 		$('#txtId').val('');
-		$('#txtUpdateTitle').val('');
-		$('#txtUpdateDescription').val('');
-		$('#txtSaveTitle').val('');
-		$('#txtSaveDescription').val('');	
+		$(idTxtUpdateTitle).val('');
+		$(idTxtUpdateDescription).val('');
+		$(idTxtSaveTitle).val('');
+		$(idTxtSaveDescription).val('');	
 	}
 
 	return{
