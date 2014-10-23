@@ -18,6 +18,7 @@ namespace TodoList.Console
                 );
             httpConfiguration.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
             httpConfiguration.DependencyResolver = new NinjectResolver(NinjectConfig.CreateKernel());
+            httpConfiguration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
 
             appBuilder.UseCors(CorsOptions.AllowAll);
             appBuilder.UseWebApi(httpConfiguration);
