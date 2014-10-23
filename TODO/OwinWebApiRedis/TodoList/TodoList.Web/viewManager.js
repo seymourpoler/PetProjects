@@ -5,15 +5,17 @@ function ViewManager(taskService)
 	var idTxtTitle = '#txtUpdateTitle';
 	var idTxtDescription = '#txtUpdateDescription';
 
+	setUpButtonSave();
+	setUpButtonUpdate();
+
 	function load(){
 		$.when(_taskService.getAll())
 		.done(function(tasks){
-			loadAllTasksIntoControls(tasks);
-		}).done(function(){
-			setUpRemoveTask();
-			setUpUpdateTask();
-			setUpButtonSave();
-			setUpButtonUpdate();
+			$.when(loadAllTasksIntoControls(tasks))
+			.done(function(){
+				setUpRemoveTask();
+				setUpUpdateTask();
+			});
 		});
 	}
 
