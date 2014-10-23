@@ -9,6 +9,7 @@ function ViewManager(taskService)
 		$.when(_taskService.getAll())
 		.done(function(tasks){
 			loadAllTasksIntoControls(tasks);
+		}).done(function(){
 			setUpRemoveTask();
 			setUpUpdateTask();
 			setUpButtonSave();
@@ -45,9 +46,7 @@ function ViewManager(taskService)
 
 	function setUpButtonUpdate(){
 		$('#btnUpdate').click( function() {
-					var idTask = $(this).attr('id');
 					var task = getTaskFromControls();
-					task.id = idTask;
 					$.when(_taskService.update(task))
 					.done(function(){
 						cleanAll();
@@ -73,10 +72,6 @@ function ViewManager(taskService)
 		});
 	}
 
-	return{
-		'load': load,
-		'remove': remove,
-		'update': update
 	function getTaskFromControls()
 	{
 		var task = new Task();
@@ -102,7 +97,9 @@ function ViewManager(taskService)
 	function cleanTaskControls(){
 		$('#txtId').val('');
 		$('#txtUpdateTitle').val('');
-		$('#txtDescription').val('');	
+		$('#txtUpdateDescription').val('');
+		$('#txtSaveTitle').val('');
+		$('#txtSaveDescription').val('');	
 	}
 
 	return{
