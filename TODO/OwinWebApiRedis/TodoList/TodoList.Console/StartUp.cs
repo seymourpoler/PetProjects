@@ -2,8 +2,10 @@
 using System;
 using System.Web.Http;
 using Microsoft.Owin.Cors;
+using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using TodoList.Console.UI.IoC;
+using System.Collections.Generic;
 
 namespace TodoList.Console
 {
@@ -13,6 +15,7 @@ namespace TodoList.Console
         {
             var httpConfiguration = SetUpHttpConfiguration();
             appBuilder.UseCors(CorsOptions.AllowAll);
+            appBuilder.Use<WebComponent>();
             appBuilder.UseWebApi(httpConfiguration);
         }
 
@@ -28,6 +31,6 @@ namespace TodoList.Console
             httpConfiguration.DependencyResolver = new NinjectResolver(NinjectConfig.CreateKernel());
             httpConfiguration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
             return httpConfiguration;
-        }
+        }    
     }
 }

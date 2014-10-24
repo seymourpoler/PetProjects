@@ -113,6 +113,7 @@
     <Compile Include="UI\Mappers\TaskMapper.cs" />
     <Compile Include="UI\Models\StateTaskModel.cs" />
     <Compile Include="UI\Models\TaskModel.cs" />
+    <Compile Include="WebComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
