@@ -25,7 +25,7 @@ function TasksService (){
 	function save(task) {
 		return $.ajax({url: _url, type: 'post', data: task})
 		.done(function(response, textStatus, jqXHR){
-			console.log('save OK', response);
+			console.log('save OK: ' + task.id + ' ' + task.title + ' ' + task.description + ' ' + task.state);
 			return response;
 		})
 		.fail(function(error){
@@ -36,7 +36,7 @@ function TasksService (){
 	function update(task) {
 		return $.ajax({url: _url, type: 'put', data: task})
 		.done(function(response, textStatus, jqXHR){
-			console.log('update OK : ' + task.id + ' ' + task.title + ' ' + task.description );
+			console.log('update OK : ' + task.id + ' ' + task.title + ' ' + task.description + ' ' + task.state);
 			return response;
 		})
 		.fail(function(error){

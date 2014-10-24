@@ -1,12 +1,14 @@
 function ViewManager(taskService)
 {
 	var _taskService = taskService;
-	
+
 	var idTxtId = '#txtId';
 	var idTxtUpdateTitle = '#txtUpdateTitle';
 	var idTxtSaveTitle = '#txtSaveTitle';
 	var idTxtUpdateDescription = '#txtUpdateDescription';
 	var idTxtSaveDescription = '#txtSaveDescription';
+	var idSelectUpdateState = '#selectUpdateState';
+	var idSelectSaveState = '#selectSaveState';
 
 	setUpButtonSave();
 	setUpButtonUpdate();
@@ -74,6 +76,7 @@ function ViewManager(taskService)
 			$(idTxtId).val(task.id);
 			$(idTxtUpdateTitle).val(task.title);
 			$(idTxtUpdateDescription).val(task.description);
+			$(idSelectUpdateState).val(task.state);
 		});
 	}
 
@@ -83,6 +86,7 @@ function ViewManager(taskService)
 		task.id = $(idTxtId).val();
 		task.title = $(idTxtUpdateTitle).val();
 		task.description = $(idTxtUpdateDescription).val();
+		task.state = $(idSelectUpdateState).val();
 		return task;
 	}
 
@@ -91,6 +95,7 @@ function ViewManager(taskService)
 		var task = new Task();
 		task.title = $(idTxtSaveTitle).val();
 		task.description = $(idTxtSaveDescription).val();
+		task.state = $(idSelectSaveState).val();
 		return task;
 	}
 
@@ -103,8 +108,10 @@ function ViewManager(taskService)
 		$('#txtId').val('');
 		$(idTxtUpdateTitle).val('');
 		$(idTxtUpdateDescription).val('');
+		$(idSelectUpdateState).val('1');	
 		$(idTxtSaveTitle).val('');
 		$(idTxtSaveDescription).val('');	
+		$(idSelectSaveState).val('1');	
 	}
 
 	return{
