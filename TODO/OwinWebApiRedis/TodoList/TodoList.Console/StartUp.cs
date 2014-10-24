@@ -1,4 +1,5 @@
 ﻿using Owin;
+using System;
 using System.Web.Http;
 using Microsoft.Owin.Cors;
 using System.Net.Http.Headers;
@@ -10,6 +11,13 @@ namespace TodoList.Console
     {
         public void Configuration(IAppBuilder appBuilder)
         {
+            var httpConfiguration = SetUpHttpConfiguration();
+            appBuilder.UseCors(CorsOptions.AllowAll);
+            appBuilder.UseWebApi(httpConfiguration);
+        }
+
+        private HttpConfiguration SetUpHttpConfiguration()
+        {
             var httpConfiguration = new HttpConfiguration();
             httpConfiguration.Routes.MapHttpRoute(
                 name: "DefaultAppi",
@@ -19,9 +27,7 @@ namespace TodoList.Console
             httpConfiguration.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
             httpConfiguration.DependencyResolver = new NinjectResolver(NinjectConfig.CreateKernel());
             httpConfiguration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
-
-            appBuilder.UseCors(CorsOptions.AllowAll);
-            appBuilder.UseWebApi(httpConfiguration);
+            return httpConfiguration;
         }
     }
 }
