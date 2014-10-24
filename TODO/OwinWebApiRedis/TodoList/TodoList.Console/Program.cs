@@ -11,7 +11,7 @@ namespace TodoList.Console
             var url = Configuration.Url;
             using (WebApp.Start<StartUp>(new StartOptions { AppStartup = url }))
             {
-                System.Console.Write("server listening at: " + url);
+                System.Console.WriteLine("server listening at: " + url);
                 System.Console.ReadKey();
             }
         }
