@@ -48,6 +48,10 @@ function ViewManager(taskService)
 				cleanAll();
 				load();
 			})
+			.fail(function(error){
+				console.log('error on Save from viewManager');
+				$('#lblInformation').html(error.responseText);
+			});
 		});
 	}
 
@@ -59,6 +63,10 @@ function ViewManager(taskService)
 				cleanAll();
 				load();
 			})
+			.fail(function(error){
+				console.log('error on Update from viewManager');
+				$('#lblInformation').html(error.responseText);
+			});
 		});
 	}
 
@@ -111,7 +119,8 @@ function ViewManager(taskService)
 		$(idSelectUpdateState).val('1');	
 		$(idTxtSaveTitle).val('');
 		$(idTxtSaveDescription).val('');	
-		$(idSelectSaveState).val('1');	
+		$(idSelectSaveState).val('1');
+		$('#lblInformation').html('');	
 	}
 
 	return{

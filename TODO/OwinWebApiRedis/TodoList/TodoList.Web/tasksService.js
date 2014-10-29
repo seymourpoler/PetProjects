@@ -29,9 +29,9 @@ function TasksService (){
 			return response;
 		})
 		.fail(function(error){
-			console.log('error on post');
+			console.log('fail on post', error);
 			return {title:'', description:''};
-		});		
+		});
 	}
 	function update(task) {
 		return $.ajax({url: _url, type: 'put', data: task})
