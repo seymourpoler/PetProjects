@@ -48,5 +48,15 @@ namespace TodoList.Console.Domain.Services
         {
             _tasksRepository.Delete(id);
         }
+
+        public bool IsValidTaskForUpdate(Task task)
+        {
+            return !string.IsNullOrWhiteSpace(task.Title) && !(task.Id != null && task.Id != Guid.Empty);
+        }
+
+        public bool IsValidTaskForInsert(Task task)
+        {
+            return !string.IsNullOrWhiteSpace(task.Title);
+        }
     }
 }

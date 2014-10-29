@@ -53,6 +53,10 @@ namespace TodoList.Console.UI.Controllers
         {
             try
             {
+                if(!ModelState.IsValid)
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, "Los datos no son correctos.");
+                }
                 var taskEntity = _taskMapper.ToEntity(task);
                 var taskSaved = _tasksService.Save(taskEntity);
                 var taskModel = _taskMapper.ToModel(taskSaved);

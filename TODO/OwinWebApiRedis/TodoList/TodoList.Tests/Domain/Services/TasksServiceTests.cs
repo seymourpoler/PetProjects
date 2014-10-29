@@ -70,5 +70,19 @@ namespace TodoList.Tests.Domain.Services
 
             _repository.Verify(x => x.Delete(It.IsAny<Guid>()));
         }
+
+        [TestMethod]
+        public void TaskService_IsValidTaskForInsert()
+        {
+            var isValid = _tasksService.IsValidTaskForInsert(new Task {Id = Guid.NewGuid(), Description = "Description"});
+            Assert.IsFalse(isValid);
+        }
+
+        [TestMethod]
+        public void TaskService_IsValidTaskForUpdate()
+        {
+            var isValid = _tasksService.IsValidTaskForUpdate(new Task {  Description = "Description" });
+            Assert.IsFalse(isValid);
+        }
     }
 }
