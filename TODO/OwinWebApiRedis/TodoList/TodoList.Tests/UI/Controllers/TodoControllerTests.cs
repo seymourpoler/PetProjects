@@ -82,7 +82,7 @@ namespace TodoList.Tests.UI.Controllers
         [TestMethod]
         public void TodoController_Post_return_Internal_error()
         {
-            _tasksService.Setup(x => x.Save(It.IsAny<Task>())).Throws(new Exception());
+            _tasksService.Setup(x => x.IsValidTaskForInsert(It.IsAny<Task>())).Throws(new Exception());
 
             var response = _todoController.Post(new TaskModel());
 
@@ -92,18 +92,31 @@ namespace TodoList.Tests.UI.Controllers
         [TestMethod]
         public void TodoController_Post_return_Ok()
         {
+            _tasksService.Setup(x => x.IsValidTaskForInsert(It.IsAny<Task>())).Returns(true);
             _tasksService.Setup(x => x.Save(It.IsAny<Task>())).Returns(new Task());
 
             var response = _todoController.Post(new TaskModel());
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             _tasksService.Verify(x => x.Save(It.IsAny<Task>()));
+            _tasksService.Verify(x => x.IsValidTaskForInsert(It.IsAny<Task>()));
+        }
+
+        [TestMethod]
+        public void TodoController_Post_return_bad_request_with_bad_model()
+        {
+            _tasksService.Setup(x => x.IsValidTaskForInsert(It.IsAny<Task>())).Returns(false);
+
+            var response = _todoController.Post(new TaskModel());
+
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+            _tasksService.Verify(x => x.IsValidTaskForInsert(It.IsAny<Task>()));
         }
 
         [TestMethod]
         public void TodoController_Put_return_Internal_error()
         {
-            _tasksService.Setup(x => x.Update(It.IsAny<Task>())).Throws(new Exception());
+            _tasksService.Setup(x => x.IsValidTaskForUpdate(It.IsAny<Task>())).Throws(new Exception());
 
             var response = _todoController.Put(new TaskModel());
 
@@ -113,12 +126,25 @@ namespace TodoList.Tests.UI.Controllers
         [TestMethod]
         public void TodoController_Put_return_Ok()
         {
+            _tasksService.Setup(x => x.IsValidTaskForUpdate(It.IsAny<Task>())).Returns(true);
             _tasksService.Setup(x => x.Update(It.IsAny<Task>())).Returns(new Task());
 
             var response = _todoController.Put(new TaskModel());
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             _tasksService.Verify(x => x.Update(It.IsAny<Task>()));
+            _tasksService.Verify(x => x.IsValidTaskForUpdate(It.IsAny<Task>()));
+        }
+
+        [TestMethod]
+        public void TodoController_Put_return_bad_request_with_bad_model()
+        {
+            _tasksService.Setup(x => x.IsValidTaskForUpdate(It.IsAny<Task>())).Returns(false);
+
+            var response = _todoController.Put(new TaskModel());
+
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+            _tasksService.Verify(x => x.IsValidTaskForUpdate(It.IsAny<Task>()));
         }
 
         [TestMethod]

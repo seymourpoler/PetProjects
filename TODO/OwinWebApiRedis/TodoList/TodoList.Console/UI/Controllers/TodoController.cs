@@ -53,12 +53,13 @@ namespace TodoList.Console.UI.Controllers
         {
             try
             {
-                if(!ModelState.IsValid)
+                var taskForInsert = _taskMapper.ToEntity(task);
+                if(!_tasksService.IsValidTaskForInsert(taskForInsert))
                 {
                     return Request.CreateResponse(HttpStatusCode.BadRequest, "Los datos no son correctos.");
                 }
-                var taskEntity = _taskMapper.ToEntity(task);
-                var taskSaved = _tasksService.Save(taskEntity);
+                
+                var taskSaved = _tasksService.Save(taskForInsert);
                 var taskModel = _taskMapper.ToModel(taskSaved);
                 return Request.CreateResponse(HttpStatusCode.OK, taskModel);
             }
@@ -72,8 +73,12 @@ namespace TodoList.Console.UI.Controllers
         {
             try
             {
-                var taskEntity = _taskMapper.ToEntity(task);
-                var taskModelUpdated = _tasksService.Update(taskEntity);
+                var taskForUpdate = _taskMapper.ToEntity(task);
+                if(!_tasksService.IsValidTaskForUpdate(taskForUpdate))
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, "Los datos no son correctos.");
+                }
+                var taskModelUpdated = _tasksService.Update(taskForUpdate);
                 var taskModel = _taskMapper.ToModel(taskModelUpdated);
                 return Request.CreateResponse(HttpStatusCode.OK, taskModel);
             }

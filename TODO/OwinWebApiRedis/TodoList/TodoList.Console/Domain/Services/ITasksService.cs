@@ -11,5 +11,7 @@ namespace TodoList.Console.Domain.Services
         Task Save(Task task);
         Task Update(Task task);
         void Delete(Guid id);
+        bool IsValidTaskForUpdate(Task task);
+        bool IsValidTaskForInsert(Task task);
     }
 }

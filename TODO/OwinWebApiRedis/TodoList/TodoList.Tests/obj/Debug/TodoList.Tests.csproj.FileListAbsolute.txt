@@ -82,3 +82,4 @@ C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApi
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\Microsoft.Owin.Cors.xml
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\AutoMapper.dll
 C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\AutoMapper.xml
+C:\Users\luis.rodriguez\Documents\GitHub\PetProjects\PetProjects\TODO\OwinWebApiRedis\TodoList\TodoList.Tests\bin\Debug\AutoMapper.Net4.dll
