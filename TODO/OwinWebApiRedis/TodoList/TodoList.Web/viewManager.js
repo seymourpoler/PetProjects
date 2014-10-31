@@ -2,6 +2,7 @@ function ViewManager(taskService)
 {
 	var _taskService = taskService;
 
+	var idTodoList = '#todo_list';
 	var idTxtId = '#txtId';
 	var idTxtUpdateTitle = '#txtUpdateTitle';
 	var idTxtSaveTitle = '#txtSaveTitle';
@@ -9,6 +10,7 @@ function ViewManager(taskService)
 	var idTxtSaveDescription = '#txtSaveDescription';
 	var idSelectUpdateState = '#selectUpdateState';
 	var idSelectSaveState = '#selectSaveState';
+	var idLabelInformation = '#lblInformation';
 
 	setUpButtonSave();
 	setUpButtonUpdate();
@@ -65,7 +67,7 @@ function ViewManager(taskService)
 			})
 			.fail(function(error){
 				console.log('error on Update from viewManager');
-				$('#lblInformation').html(error.responseText);
+				$(idLabelInformation).html(error.responseText);
 			});
 		});
 	}
@@ -73,7 +75,7 @@ function ViewManager(taskService)
 	function loadAllTasksIntoControls(tasks){
 		cleanAll();
 		_.each(tasks, function(task){
-				$('#todo_list').prepend('<div>' + task.title + ' ' + task.description + ' <a id=' + task.id + ' href=\'#\' class="remove_task">Remove</a> <a id=' + task.id + ' href=\'#\' class="update_task">Update</a></div>');
+				$(idTodoList).prepend('<div>' + task.title + ' ' + task.description + ' <a id=' + task.id + ' href=\'#\' class="remove_task">Remove</a> <a id=' + task.id + ' href=\'#\' class="update_task">Update</a></div>');
 			});
 	}
 
@@ -108,7 +110,7 @@ function ViewManager(taskService)
 	}
 
 	function cleanAll(){
-		$('#todo_list').empty();
+		$(idTodoList).empty();
 		cleanTaskControls();
 	}
 
@@ -120,7 +122,7 @@ function ViewManager(taskService)
 		$(idTxtSaveTitle).val('');
 		$(idTxtSaveDescription).val('');	
 		$(idSelectSaveState).val('1');
-		$('#lblInformation').html('');	
+		$(idLabelInformation).html('');	
 	}
 
 	return{
