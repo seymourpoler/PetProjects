@@ -10,9 +10,9 @@ namespace TodoList.Console.Infrastructure.Data.Repositories
     {
         private RedisClient _redisClient;
 
-        public TasksRepository()
+        public TasksRepository(RedisClient redisClient)
         {
-            _redisClient = new RedisClient();
+            _redisClient = redisClient;
         }
 
         public Task Save(Task task)
