@@ -39,7 +39,7 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
             Assert.AreNotEqual(Guid.Empty, userExpected.Id);
             Assert.AreEqual("email@email.com", userExpected.Email);
             Assert.IsTrue(userExpected.Tasks.Count > 0);
-            Assert.AreEqual("Title", userExpected.Tasks[0].Title);
+            Assert.AreEqual("title", userExpected.Tasks[0].Title);
             _usersRepository.Delete(userExpected.Id);
         }
     }
