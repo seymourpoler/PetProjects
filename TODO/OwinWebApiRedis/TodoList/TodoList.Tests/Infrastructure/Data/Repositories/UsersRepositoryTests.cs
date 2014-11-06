@@ -16,7 +16,7 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         public void Initialize()
         {
             _usersRepository = new UsersRepository(new TasksRepository(new RedisClient()), new RedisClient());
-            _userOne = new User{ Email = "emailOne@email.com", Name="userOne", PassWord="password"};
+            _userOne = new User{ Email = "emailOne@email.com", Name="userOne", PassWord="password", Tasks = new List<Task> { new Task{ Title = "TaskOne" }, new Task{ Title = "TaskTwo" } }};
             _userTwo = new User { Email = "emailTwo@email.com", Name = "userTwo", PassWord = "password" };
             _usersRepository.Save(_userOne);
             _usersRepository.Save(_userTwo);
@@ -25,8 +25,11 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         [TestCleanup]
         public void CleanUp()
         {
-            _usersRepository.Delete(_userOne.Id);
-            _usersRepository.Delete(_userTwo.Id);
+            var allusers = _usersRepository.GetAll();
+            foreach(var user in allusers)
+            {
+                _usersRepository.Delete(user.Id);
+            }
         }
 
         [TestMethod]
@@ -63,6 +66,8 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
 
             Assert.IsNotNull(allUsers);
             Assert.IsTrue(allUsers.Count > 0);
+            Assert.IsTrue(allUsers[0].Tasks.Count > 0);
+            Assert.AreNotEqual(Guid.Empty, allUsers[0].Tasks[0].Id);
         }
     }
 }
