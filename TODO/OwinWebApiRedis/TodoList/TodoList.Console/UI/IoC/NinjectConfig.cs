@@ -12,6 +12,7 @@ namespace TodoList.Console.UI.IoC
         {
             var kernel = new StandardKernel();
 
+            kernel.Bind<IUsersService>().To<UsersService>();
             kernel.Bind<ITasksService>().To<TasksService>();
             kernel.Bind<ITasksRepository>().To<TasksRepository>();
             kernel.Bind<ITaskMapper>().To<TaskMapper>();
