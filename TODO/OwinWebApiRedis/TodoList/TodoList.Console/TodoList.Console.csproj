@@ -103,7 +103,9 @@
     <Compile Include="Domain\Services\TasksService.cs" />
     <Compile Include="Infrastructure\CrossCutting\Configuration\Configuration.cs" />
     <Compile Include="Infrastructure\Data\Repositories\ITasksRepository.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\IUsersRepository.cs" />
     <Compile Include="Infrastructure\Data\Repositories\TasksRepository.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\UsersRepository.cs" />
     <Compile Include="Printer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

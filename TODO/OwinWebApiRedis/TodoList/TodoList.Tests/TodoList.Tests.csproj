@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Domain\Services\TasksServiceTests.cs" />
     <Compile Include="Infrastructure\Data\Repositories\TasksRepositoryTests.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\UsersRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Controllers\JsonHelper.cs" />
     <Compile Include="UI\Controllers\TodoControllerIntegrationTests.cs" />
