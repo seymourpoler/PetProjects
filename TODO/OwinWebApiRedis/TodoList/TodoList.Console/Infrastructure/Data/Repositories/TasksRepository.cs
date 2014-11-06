@@ -19,8 +19,7 @@ namespace TodoList.Console.Infrastructure.Data.Repositories
         {
    
             task.Id = Guid.NewGuid();
-            _redisClient.Store(task);
-            return task;            
+            return _redisClient.Store(task);
         }
 
         public IList<Task> GetAll()
@@ -34,8 +33,7 @@ namespace TodoList.Console.Infrastructure.Data.Repositories
 
         public Task Update(Task task) 
         {  
-            _redisClient.Store(task);
-            return task;
+            return _redisClient.Store(task);
         }
         public void Delete(Guid id) 
         {
