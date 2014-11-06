@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net.Http;
 using TodoList.Console;
+using ServiceStack.Redis;
 using Microsoft.Owin.Testing;
 using System.Collections.Generic;
 using TodoList.Console.Domain.Entities;
@@ -24,7 +25,7 @@ namespace TodoList.Tests.UI.Controllers
         public void Initialize()
         {
             _server = TestServer.Create<StartUp>();
-            _repository = new TasksRepository();
+            _repository = new TasksRepository(new RedisClient());
             _taskOne = _repository.Save(new Task { Title = "TaskOne" });
             _taskTwo = _repository.Save(new Task { Title = "TaskTwo" });
         }

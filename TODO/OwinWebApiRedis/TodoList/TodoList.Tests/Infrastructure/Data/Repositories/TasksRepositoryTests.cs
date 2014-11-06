@@ -3,6 +3,7 @@ using System.Linq;
 using TodoList.Console.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TodoList.Console.Infrastructure.Data.Repositories;
+using ServiceStack.Redis;
 
 namespace TodoList.Tests.Infrastructure.Data.Repositories
 {
@@ -14,7 +15,7 @@ namespace TodoList.Tests.Infrastructure.Data.Repositories
         [TestInitialize]
         public void SetUp()
         {
-            _repository = new TasksRepository();
+            _repository = new TasksRepository(new RedisClient());
         }
 
         [TestCleanup]

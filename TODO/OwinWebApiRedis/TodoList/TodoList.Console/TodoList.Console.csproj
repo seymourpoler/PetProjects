@@ -98,6 +98,7 @@
   <ItemGroup>
     <Compile Include="Domain\Entities\StateTask.cs" />
     <Compile Include="Domain\Entities\Task.cs" />
+    <Compile Include="Domain\Entities\User.cs" />
     <Compile Include="Domain\Services\ITasksService.cs" />
     <Compile Include="Domain\Services\TasksService.cs" />
     <Compile Include="Infrastructure\CrossCutting\Configuration\Configuration.cs" />
