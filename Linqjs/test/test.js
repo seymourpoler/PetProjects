@@ -22,6 +22,10 @@ describe("linq in javascript using TDD", function(){
       var numbers =[1,2,3,4];
       expect(numbers.sum()).to.eql(10);
     });
+	it("Given array with strings when call Sum method then returns only the sum of the numbers ", function(){
+      var numbers =[1,'w', {a:1, b:3}, 5, 'rdf'];
+      expect(numbers.sum()).to.eql(6);
+    });
   });
   describe(".take(<number>)", function(){
     it("Given array when call Sum method then returns Zero ", function(){
