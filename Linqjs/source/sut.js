@@ -20,4 +20,14 @@ Array.prototype.take = function(position) {
 	return this.slice(0, position);
 };
 
+Array.prototype.where = function(condition){
+	var result = [];
+	for(var count = 0; count < this.count(); count++){
+		if(condition(this[count])){
+			result.push(this[count]);
+		}
+	}
+	return result;
+}
+
 exports.remove = function(){};
