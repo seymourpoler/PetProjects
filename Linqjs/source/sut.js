@@ -5,7 +5,9 @@ Array.prototype.count = function() {
 Array.prototype.sum = function(){
   var result = 0;
   for (var count = 0; count < this.length; count++) {
-    result = result + this[count];
+	  if(typeof(this[count]) === 'number'){
+		result = result + this[count];
+	  }
   };
   return result;
 }
