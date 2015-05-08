@@ -13,7 +13,7 @@ Array.prototype.sum = function(){
 }
 
 Array.prototype.take = function(position) {
-	if(position > this.length){
+	if(position > this.count()){
 		return [];
 	}
 
@@ -27,7 +27,17 @@ Array.prototype.where = function(condition){
 			result.push(this[count]);
 		}
 	}
-	return result;
+	return result;	
+}
+
+Array.prototype.union = function(array){
+	var result = [];
+	for(var count = 0; count < this.count(); count++){
+		if(condition(this[count])){
+			result.push(this[count]);
+		}
+	}
+	return result;	
 }
 
 exports.remove = function(){};

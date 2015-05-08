@@ -47,4 +47,14 @@ describe("linq in javascript using TDD", function(){
 	  expect(numbers.where(function(x){ return x > 458})).to.eql([]);
     });
   });
+  describe(".union(<array>)", function(){
+	it("Given array  with numbers when call union method then returns a new array with the union of the elements", function(){
+	  var numbers =[5,3,7,9];
+	  expect(numbers.union([1,2,3])).to.eql([5,3,7,9, 1,2,3]);
+    });
+	it("Given an empty array when call union method then returns an empty array", function(){
+	  var numbers =[];
+	  expect(numbers.union([])).to.eql([]);
+    });
+  });
 });
