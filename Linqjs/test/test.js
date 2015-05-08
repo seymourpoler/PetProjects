@@ -57,4 +57,14 @@ describe("linq in javascript using TDD", function(){
 	  expect(numbers.union([])).to.eql([]);
     });
   });
+  describe(".reverse(<array>)", function(){
+	it("Given array  with numbers when call reverse method then returns a new array with the reverse of the elements", function(){
+	  var numbers = [5,3,7,9];
+	  expect(numbers.reverse()).to.eql([9,7,3,5]);
+    });
+	it("Given an empty array when call reverse method then returns an empty array", function(){
+	  var numbers =[];
+	  expect(numbers.reverse()).to.eql([]);
+    });
+  });
 });
