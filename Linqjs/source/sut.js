@@ -31,13 +31,10 @@ Array.prototype.where = function(condition){
 }
 
 Array.prototype.union = function(array){
-	var result = [];
-	for(var count = 0; count < this.count(); count++){
-		if(condition(this[count])){
-			result.push(this[count]);
-		}
+	for(var count = 0; count < array.count(); count++){
+		this.push(array[count]);
 	}
-	return result;	
+	return this;	
 }
 
 exports.remove = function(){};
