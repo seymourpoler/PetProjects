@@ -85,4 +85,16 @@ describe("linq in javascript using TDD", function(){
     expect(numbers.clear()).to.eql([]);
     });
   });
+  describe(".orderAscending()", function(){
+  it("Given array  with numbers when call orderAscending method then returns an array ordered ascending", function(){
+    var numbers = [5,3,1,9,4,7];
+    expect(numbers.orderAscending()).to.eql([1,3,4,5,7,9]);
+    });
+  });
+  describe(".orderDescending()", function(){
+  it("Given array  with numbers when call orderAscending method then returns an array ordered descending", function(){
+    var numbers = [5,3,1,9,4,7];
+    expect(numbers.orderDescending()).to.eql([9,7,5,4,3,1]);
+    });
+  });
 });
