@@ -73,4 +73,16 @@ describe("linq in javascript using TDD", function(){
     expect(numbers.select(function(x){return x+1;})).to.eql([6,4,8,10]);
     });
   });
+  describe(".remove(<condition>)", function(){
+  it("Given array  with numbers when call remove method then returns a new array without the element ot be in the condition", function(){
+    var numbers = [5,3,7,9];
+    expect(numbers.remove(function(x){return x > 5;})).to.eql([7,9]);
+    });
+  });
+  describe(".clear()", function(){
+  it("Given array  with numbers when call clear method then returns a new empty array", function(){
+    var numbers = [5,3,7,9];
+    expect(numbers.clear()).to.eql([]);
+    });
+  });
 });
