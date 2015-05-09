@@ -16,7 +16,6 @@ Array.prototype.take = function(position) {
 	if(position > this.count()){
 		return [];
 	}
-
 	return this.slice(0, position);
 };
 
@@ -36,5 +35,12 @@ Array.prototype.union = function(array){
 	}
 	return this;	
 }
+
+Array.prototype.select = function(funct) {
+	for (var count = 0; count < this.count(); count ++) {
+		this[count] = funct(this[count]);
+	};
+	return this;
+};
 
 exports.remove = function(){};

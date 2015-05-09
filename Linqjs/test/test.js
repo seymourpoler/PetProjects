@@ -67,4 +67,10 @@ describe("linq in javascript using TDD", function(){
 	  expect(numbers.reverse()).to.eql([]);
     });
   });
+  describe(".select(<function>)", function(){
+  it("Given array  with numbers when call select method then returns a new array with the of the method applied to each element", function(){
+    var numbers = [5,3,7,9];
+    expect(numbers.select(function(x){return x+1;})).to.eql([6,4,8,10]);
+    });
+  });
 });
