@@ -57,4 +57,21 @@ Array.prototype.clear = function(condition) {
 	return [];
 }
 
+Array.prototype.orderAscending = function() {
+	this.sort(function(x, y){
+		return (x - y);
+	});
+	return this;
+};
+
+Array.prototype.orderDescending = function() {
+	this.orderBy(function(x, y){
+		return (y - x);
+	});
+	return this;
+};
+
+Array.prototype.orderBy = function(ordering) {
+	return this.sort(ordering);
+};
 exports.remove = function(){};
