@@ -101,13 +101,7 @@ describe("linq in javascript using TDD", function(){
   it("Given array  with numbers when call orderAscending method then returns an array ordered descending", function(){
     var numbers = [{number:5, letra:'e'},{number:3, letra:'q'},{number:1, letra:'a'},{number:9, letra:'w'},{number:4, letra:'r'},{number:7, letra:'t'}];
     expect(numbers.orderBy(function(x, y){
-            if(x.number > y.number){
-              return 1;
-            }
-            if(x.number < y.number){
-              return -1;
-            }
-            return 0;
+            return (x.number - y.number);
           })).to.eql([{number:1, letra:'a'},{number:3, letra:'q'},{number:4, letra:'r'},{number:5, letra:'e'},{number:7, letra:'t'},{number:9, letra:'w'}]);
     });
   });
