@@ -2,6 +2,10 @@ Array.prototype.count = function() {
   return this.length;
 };
 
+Array.prototype.isEmpty = function(){
+	return this.count() < 1;
+}
+
 Array.prototype.sum = function(){
   var result = 0;
   for (var count = 0; count < this.length; count++) {
@@ -73,5 +77,13 @@ Array.prototype.orderDescending = function() {
 
 Array.prototype.orderBy = function(ordering) {
 	return this.sort(ordering);
+};
+
+Array.prototype.first = function(condition) {
+	var result = this.where(condition);
+	if(result != []){
+		return result[0];
+	}
+	return undefined;
 };
 exports.remove = function(){};

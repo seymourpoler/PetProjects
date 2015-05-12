@@ -105,4 +105,25 @@ describe("linq in javascript using TDD", function(){
           })).to.eql([{number:1, letra:'a'},{number:3, letra:'q'},{number:4, letra:'r'},{number:5, letra:'e'},{number:7, letra:'t'},{number:9, letra:'w'}]);
     });
   });
+  describe(".first(<condition>)", function(){
+    it("Given array  with numbers when call first method then returns  the first element that applied the condition", function(){
+		var numbers = [{number:5, letra:'e'},{number:3, letra:'q'},{number:1, letra:'a'},{number:9, letra:'w'},{number:4, letra:'r'},{number:7, letra:'t'}];
+		expect(numbers.first(function(x){return x.number > 4; }))
+		  .to.eql({number:5, letra:'e'});
+	});
+	it("Given array  with numbers when call first method then returns  the first element that applied the condition", function(){
+		var numbers = [{number:5, letra:'e'},{number:3, letra:'q'},{number:1, letra:'a'},{number:9, letra:'w'},{number:4, letra:'r'},{number:7, letra:'t'}];
+		expect(numbers.first(function(x){return x.letra  == '?';}))
+		  .to.eql(undefined);
+	});
+	describe(".isEmpty()", function(){
+		it("Given empty array  when call isEmpty method then returns  true", function(){
+			expect([].isEmpty()).to.eql(true);
+		});
+		it("Given an array with elements when call isEmpty method then returns  false", function(){
+			expect(['dog', 'orange'].isEmpty()).to.eql(false);
+		});
+	});
+  });
+
 });
