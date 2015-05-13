@@ -86,4 +86,8 @@ Array.prototype.first = function(condition) {
 	}
 	return undefined;
 };
+
+Array.prototype.elementAt = function(position){
+	
+}
 exports.remove = function(){};

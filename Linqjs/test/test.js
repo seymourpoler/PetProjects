@@ -116,14 +116,21 @@ describe("linq in javascript using TDD", function(){
 		expect(numbers.first(function(x){return x.letra  == '?';}))
 		  .to.eql(undefined);
 	});
-	describe(".isEmpty()", function(){
-		it("Given empty array  when call isEmpty method then returns  true", function(){
-			expect([].isEmpty()).to.eql(true);
-		});
-		it("Given an array with elements when call isEmpty method then returns  false", function(){
-			expect(['dog', 'orange'].isEmpty()).to.eql(false);
-		});
+  });
+  describe(".isEmpty()", function(){
+	it("Given empty array  when call isEmpty method then returns  true", function(){
+		expect([].isEmpty()).to.eql(true);
+	});
+	it("Given an array with elements when call isEmpty method then returns  false", function(){
+		expect(['dog', 'orange'].isEmpty()).to.eql(false);
 	});
   });
-
+  describe(".elementAt(<position>)", function(){
+	it("Given an array with elements when call elementAt(<positiion>) method then returns  the element at the position", function(){
+		expect(['dog', 'orange'].elementAt(1)).to.eql('orange');
+	});
+	it("Given empty array  when call isEmpty method then returns  true", function(){
+		expect([].elementAt(3)).to.eql(undefined);
+	});
+  });
 });
