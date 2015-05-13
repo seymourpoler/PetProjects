@@ -62,7 +62,7 @@ Array.prototype.clear = function(condition) {
 }
 
 Array.prototype.orderAscending = function() {
-	this.sort(function(x, y){
+	this.orderBy(function(x, y){
 		return (x - y);
 	});
 	return this;
