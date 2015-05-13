@@ -88,6 +88,6 @@ Array.prototype.first = function(condition) {
 };
 
 Array.prototype.elementAt = function(position){
-	
+	return this[position];
 }
 exports.remove = function(){};
