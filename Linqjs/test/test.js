@@ -133,4 +133,11 @@ describe("linq in javascript using TDD", function(){
 		expect([].elementAt(3)).to.eql(undefined);
 	});
   });
+  describe(".forEach(<func>)", function(){
+	it("Given an array with elements when call forEach(<func>) method then execute the forEach loop", function(){
+		var result = 0;
+		[2, 1].forEach(function(x){ result += x});
+		expect(result).to.eql(3);
+	});
+  });
 });
