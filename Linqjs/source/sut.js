@@ -57,6 +57,11 @@ Array.prototype.remove = function(condition) {
 	return result;
 };
 
+Array.prototype.add = function(element) {
+	this.push(element);
+	return this;
+};
+
 Array.prototype.clear = function(condition) {
 	return [];
 }
@@ -90,4 +95,17 @@ Array.prototype.first = function(condition) {
 Array.prototype.elementAt = function(position){
 	return this[position];
 }
+
+Array.prototype.skip = function(number) {
+	var result = [];
+	var position = 0;
+	this.forEach(function(element){
+		if(position >= number){
+			result.push(element);
+		}
+		position ++;
+	});
+	return result;
+};
+
 exports.remove = function(){};

@@ -79,6 +79,12 @@ describe("linq in javascript using TDD", function(){
     expect(numbers.remove(function(x){return x > 5;})).to.eql([7,9]);
     });
   });
+  describe(".add(<element>)", function(){
+  it("Given array  with numbers when call add method then returns a new array without the element at the end", function(){
+    var numbers = [5,3,7,9];
+    expect(numbers.add(23)).to.eql([5,3,7,9,23]);
+    });
+  });
   describe(".clear()", function(){
   it("Given array  with numbers when call clear method then returns a new empty array", function(){
     var numbers = [5,3,7,9];
@@ -134,10 +140,20 @@ describe("linq in javascript using TDD", function(){
 	});
   });
   describe(".forEach(<func>)", function(){
-	it("Given an array with elements when call forEach(<func>) method then execute the forEach loop", function(){
-		var result = 0;
-		[2, 1].forEach(function(x){ result += x});
-		expect(result).to.eql(3);
-	});
+  	it("Given an array with elements when call forEach(<func>) method then execute the forEach loop", function(){
+  		var result = 0;
+  		[2, 1].forEach(function(x){ result += x});
+  		expect(result).to.eql(3);
+  	});
+  });
+  describe(".skip(<number>)", function(){
+    it("Given array with numbers when call skip method then return an empty array", function(){
+      var numbers = [];
+      expect(numbers.skip(3)).to.eql([]);
+    });
+    it("Given array with numbers when call skip method then Ignores the specified number of items and returns a sequence starting at the item after the last skipped item (if any)", function(){
+      var numbers = [1,2,3,4,5,6,7,8];
+      expect(numbers.skip(3)).to.eql([4,5,6,7,8]);
+    });
   });
 });
