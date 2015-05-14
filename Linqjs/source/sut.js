@@ -108,4 +108,9 @@ Array.prototype.skip = function(number) {
 	return result;
 };
 
+Array.prototype.getRange = function(position, length) {
+	return this.skip(position)
+				.take(length);
+};
+
 exports.remove = function(){};

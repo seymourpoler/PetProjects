@@ -156,4 +156,14 @@ describe("linq in javascript using TDD", function(){
       expect(numbers.skip(3)).to.eql([4,5,6,7,8]);
     });
   });
+  describe(".getRange(<position, length>)", function(){
+    it("Given an array with elements when call getRange(<position, length>) method then return a array with the elements in the range", function(){
+      var numbers = [1,2,3,4,54,62, 81];
+      expect(numbers.getRange(2,3)).to.eql([3,4,54]);
+    });
+    it("Given an empty array with elements when call getRange(<position, length>) method then return an empty array", function(){
+      var numbers = [];
+      expect(numbers.getRange(2,3)).to.eql([]);
+    });
+  });
 });
