@@ -161,9 +161,23 @@ describe("linq in javascript using TDD", function(){
       var numbers = [1,2,3,4,54,62, 81];
       expect(numbers.getRange(2,3)).to.eql([3,4,54]);
     });
-    it("Given an empty array with elements when call getRange(<position, length>) method then return an empty array", function(){
+    it("Given an empty array when call getRange(<position, length>) method then return an empty array", function(){
       var numbers = [];
       expect(numbers.getRange(2,3)).to.eql([]);
+    });
+  });
+  describe(".isEqual(<array>)", function(){
+    it("Given an array with elements when call isEqual method, with the same elements, then return true", function(){
+      var numbers = [1,2];
+      expect(numbers.isEqual([1,2])).to.eql(true);
+    });
+    it("Given an empty array when call isEqual method, with another empty array then, return true", function(){
+      var numbers = [];
+      expect(numbers.isEqual([])).to.eql(true);
+    });
+    it("Given an array with numbers when call isEqual method, with a different numbers then, return false", function(){
+      var numbers = [1,3,4,5,6];
+      expect(numbers.isEqual([4,5,6,7,8,5,4,5,6])).to.eql(false);
     });
   });
 });

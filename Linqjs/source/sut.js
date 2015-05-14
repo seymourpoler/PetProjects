@@ -113,4 +113,16 @@ Array.prototype.getRange = function(position, length) {
 				.take(length);
 };
 
+Array.prototype.isEqual = function(array) {
+	if(this.count() != array.count()){
+		return false;
+	}
+	for (var position = 0; position < this.count(); position++) {
+		if(this[position] != array[position]){
+			return false;
+		}		
+	};
+	return true;
+};
+
 exports.remove = function(){};
