@@ -92,6 +92,15 @@ Array.prototype.first = function(condition) {
 	return undefined;
 };
 
+Array.prototype.last = function() {
+	if(this.isEmpty())
+	{
+		return undefined;
+	}
+	return this[this.count()-1];
+};
+
+
 Array.prototype.elementAt = function(position){
 	return this[position];
 }

@@ -123,6 +123,16 @@ describe("linq in javascript using TDD", function(){
 		  .to.eql(undefined);
 	});
   });
+  describe(".last()", function(){
+    it("Given array  with numbers when call last method then returns  the last element", function(){
+		var numbers = [{number:5, letra:'e'},{number:3, letra:'q'},{number:1, letra:'a'},{number:9, letra:'w'},{number:4, letra:'r'},{number:7, letra:'t'}];
+		expect(numbers.last()).to.eql({number:7, letra:'t'});
+	});
+	it("Given an empty array  then returns  undefined", function(){
+		var numbers = [];
+		expect(numbers.last()).to.eql(undefined);
+	});
+  });
   describe(".isEmpty()", function(){
 	it("Given empty array  when call isEmpty method then returns  true", function(){
 		expect([].isEmpty()).to.eql(true);
