@@ -100,7 +100,6 @@ Array.prototype.last = function() {
 	return this[this.count()-1];
 };
 
-
 Array.prototype.elementAt = function(position){
 	return this[position];
 }
