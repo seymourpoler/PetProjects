@@ -133,4 +133,15 @@ Array.prototype.isEqual = function(array) {
 	return true;
 };
 
+Array.prototype.join = function(character){
+	var result = "";
+	for(var position = 0; position< this.count()-1; position++){
+		if(position + 1 < this.count()-1){
+			result = result +  this[position] + character;
+		}
+		result = result + this[position];
+	}
+	return result;
+}
+
 exports.remove = function(){};

@@ -190,4 +190,18 @@ describe("linq in javascript using TDD", function(){
       expect(numbers.isEqual([4,5,6,7,8,5,4,5,6])).to.eql(false);
     });
   });
+  describe(".join()", function(){
+    it("Given an array with elements when call join method, then return the elements joined", function(){
+      var numbers = [1,2];
+      expect(numbers.join([1,2])).to.eql("12");
+    });
+    it("Given an empty array when call join method, return string empty", function(){
+      var numbers = [];
+      expect(numbers.join()).to.eql("");
+    });
+    it("Given an array with numbers when call join method, with comma character then, return the elements joined", function(){
+      var numbers = [1,3,4,5,6];
+      expect(numbers.join(",")).to.eql("1,3,4,5,6");
+    });
+  });
 });
