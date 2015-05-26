@@ -1,5 +1,5 @@
 var sut = require("../source/sut.js"),
- expect = require("expect.js");
+expect = require("expect.js");
 
 describe("linq in javascript using TDD", function(){
   describe(".count()", function(){
