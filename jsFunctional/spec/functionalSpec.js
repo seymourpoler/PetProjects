@@ -107,4 +107,6 @@ describe("functional programming", function(){
 			expect(expectedResult).to.eql(pipedResult);
 		});
 	});
+	describe("compose function", function(){});
+	describe("curry function", function(){});
 });
