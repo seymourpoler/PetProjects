@@ -79,4 +79,32 @@ describe("functional programming", function(){
 			expect(expectedResult).to.eql(concatenatedResult);
 		});
 	});
+	describe("pipe function", function(){
+		it("return the concatenation of the functions result", function(){
+			var expectedResult = 'HELLO EVERYBODY';
+			var data = ['he', 'llo ', 'ever','ybody']
+
+			var functionOne = function(data){
+				return map(data, function(text){
+					return text.toUpperCase();
+				})
+			};
+			var functionTwo = function(data){
+				/*
+				return reduce(data, '', function(concatenatedResult, text){
+					concatenatedResult += text;
+				});
+				*/			
+				var result = '';
+				for(var position = 0; position < data.length; position++){
+					result += data[position].toUpperCase();
+				}
+				return result;
+			};
+
+			var pipedResult = pipe(pipe(data, functionOne), functionTwo);
+
+			expect(expectedResult).to.eql(pipedResult);
+		});
+	});
 });

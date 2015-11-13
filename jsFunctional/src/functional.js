@@ -29,3 +29,7 @@ function forEach(arrayOfData, handler){
 		handler(arrayOfData[position])
 	};
 }
+
+function pipe(data, secondFunction){
+	return secondFunction(data);
+}
