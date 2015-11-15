@@ -90,11 +90,6 @@ describe("functional programming", function(){
 				})
 			};
 			var functionTwo = function(data){
-				/*
-				return reduce(data, '', function(concatenatedResult, text){
-					concatenatedResult += text;
-				});
-				*/			
 				var result = '';
 				for(var position = 0; position < data.length; position++){
 					result += data[position].toUpperCase();
@@ -105,6 +100,44 @@ describe("functional programming", function(){
 			var pipedResult = pipe(pipe(data, functionOne), functionTwo);
 
 			expect(expectedResult).to.eql(pipedResult);
+		});
+	});
+	describe("PipeLine object", function(){
+		it("make pipe line through different functions", function(){
+			var arrayOfData = [1,2,3];
+			var expectedResult = 9;
+			function handlerOne(data){
+				var result = [];
+				/*
+				map(data, function(number){
+					return number +1;
+				});
+				*/
+				for (var position = 0; position < data.length; position++) {
+					result.push(data[position] +1);
+				};
+				return result;
+				
+			}
+			function handlerTwo(data){
+				var result = 0;
+				/*
+				reduce(data, result, function(result, number){
+					result += number;
+				});
+				*/
+				for(var position = 0; position < data.length; position++){
+					result += data[position];
+				}
+				return result;
+			}
+			var pipeLine = new PipeLine();
+
+			var pipeLineResult = pipeLine.pipe(handlerOne)
+										 .pipe(handlerTwo)
+										 .execute(arrayOfData);
+
+			expect(expectedResult).to.eql(pipeLineResult);							
 		});
 	});
 	describe("compose function", function(){});

@@ -33,3 +33,21 @@ function forEach(arrayOfData, handler){
 function pipe(data, secondFunction){
 	return secondFunction(data);
 }
+
+
+function PipeLine(){
+	var registeredfunctions = [];
+	var self = this;
+	
+	this.pipe = function(handler){
+		registeredfunctions.push(handler);
+		return self;
+	};
+	this.execute = function(params){
+		var result = params;
+		for(var position = 0; position < registeredfunctions.length; position++){
+			result = registeredfunctions[position](result);
+		}
+		return result;
+	};
+}
