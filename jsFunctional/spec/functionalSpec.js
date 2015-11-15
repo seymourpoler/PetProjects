@@ -107,17 +107,9 @@ describe("functional programming", function(){
 			var arrayOfData = [1,2,3];
 			var expectedResult = 9;
 			function handlerOne(data){
-				var result = [];
-				/*
-				map(data, function(number){
+				return map(data, function(number){
 					return number +1;
 				});
-				*/
-				for (var position = 0; position < data.length; position++) {
-					result.push(data[position] +1);
-				};
-				return result;
-				
 			}
 			function handlerTwo(data){
 				var result = 0;
