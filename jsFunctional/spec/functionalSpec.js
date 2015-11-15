@@ -90,11 +90,10 @@ describe("functional programming", function(){
 				})
 			};
 			var functionTwo = function(data){
-				var result = '';
-				for(var position = 0; position < data.length; position++){
-					result += data[position].toUpperCase();
-				}
-				return result;
+				var initialValue = '';
+				return reduce(data, initialValue, function(acumulativeResult, letter){
+					return acumulativeResult + letter.toUpperCase();
+				});
 			};
 
 			var pipedResult = pipe(pipe(data, functionOne), functionTwo);
@@ -113,7 +112,6 @@ describe("functional programming", function(){
 			}
 			function handlerTwo(data){
 				var result = 0;
-				
 				return reduce(data, result, function(result, number){
 					return result + number;
 				});
