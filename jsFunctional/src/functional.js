@@ -30,6 +30,7 @@ function forEach(arrayOfData, handler){
 	};
 }
 
+source: //http://blog.carbonfive.com/2015/01/14/gettin-freaky-functional-wcurried-javascript/
 function curry(fx) {
   var arity = fx.length;
 
