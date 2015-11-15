@@ -105,12 +105,12 @@ describe("functional programming", function(){
 		it("make pipe line through different functions", function(){
 			var arrayOfData = [1,2,3];
 			var expectedResult = 9;
-			function handlerOne(data){
+			var handlerOne = function(data){
 				return map(data, function(number){
 					return number +1;
 				});
 			}
-			function handlerTwo(data){
+			var handlerTwo = function(data){
 				var result = 0;
 				return reduce(data, result, function(result, number){
 					return result + number;
