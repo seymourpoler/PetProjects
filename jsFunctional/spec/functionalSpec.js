@@ -113,15 +113,10 @@ describe("functional programming", function(){
 			}
 			function handlerTwo(data){
 				var result = 0;
-				/*
-				reduce(data, result, function(result, number){
-					result += number;
+				
+				return reduce(data, result, function(result, number){
+					return result + number;
 				});
-				*/
-				for(var position = 0; position < data.length; position++){
-					result += data[position];
-				}
-				return result;
 			}
 			var pipeLine = new PipeLine();
 
