@@ -126,5 +126,15 @@ describe("functional programming", function(){
 		});
 	});
 	describe("compose function", function(){});
-	describe("curry function", function(){});
+	describe("curry function", function(){
+		var expectedResult = 10;
+		var add = function(a, b, c, d){
+			return a + b + c + d;
+		}
+		var curriedFunction = curry(add);
+
+		var result = curriedFunction(1)(2)(3)(4);
+
+		expect(expectedResult).to.eql(result);
+	});
 });
