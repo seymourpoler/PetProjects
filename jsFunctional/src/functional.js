@@ -34,14 +34,14 @@ function forEach(arrayOfData, handler){
 function curry(fx) {
   var argumentsLengthOfcurryfiedFunction = fx.length;
 
-  return function f1() {
+  return function partialFunction() {
     var args = Array.prototype.slice.apply(arguments);
     if (args.length >= argumentsLengthOfcurryfiedFunction) {
       return fx.apply(null, args);
     }    
     return function() {
 	    var args2 = Array.prototype.slice.apply(arguments);
-	    return f1.apply(null, args.concat(args2)); 
+	    return partialFunction.apply(null, args.concat(args2)); 
     }
   };
 }
