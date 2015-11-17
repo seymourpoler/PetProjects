@@ -34,16 +34,21 @@ function curry(func) {
   var argumentsLengthOfcurryfiedFunction = func.length;
 
   return function partialFunction() {
-    var argumentsOfPartialFunction = Array.prototype.slice.apply(arguments);
+    var argumentsOfPartialFunction = createArray(arguments);
     if (argumentsOfPartialFunction.length >= argumentsLengthOfcurryfiedFunction) {
       return func.apply(null, argumentsOfPartialFunction);
     }    
     return function() {
-	    var args = Array.prototype.slice.apply(arguments);
+	    var args = createArray(arguments);
 	    return partialFunction.apply(null, 
 	    					argumentsOfPartialFunction.concat(args)); 
     }
   };
+  function createArray(data){
+  	return map(data, function(element){
+  		return element;
+  	});
+  }
 }
 
 function pipe(data, secondFunction){
