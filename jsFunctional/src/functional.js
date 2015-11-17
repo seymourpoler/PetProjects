@@ -34,13 +34,13 @@ function curry(func) {
   var argumentsLengthOfcurryfiedFunction = func.length;
 
   return function partialFunction() {
-    var args = Array.prototype.slice.apply(arguments);
-    if (args.length >= argumentsLengthOfcurryfiedFunction) {
-      return func.apply(null, args);
+    var argumentsOfPartialFunction = Array.prototype.slice.apply(arguments);
+    if (argumentsOfPartialFunction.length >= argumentsLengthOfcurryfiedFunction) {
+      return func.apply(null, argumentsOfPartialFunction);
     }    
     return function() {
 	    var args2 = Array.prototype.slice.apply(arguments);
-	    return partialFunction.apply(null, args.concat(args2)); 
+	    return partialFunction.apply(null, argumentsOfPartialFunction.concat(args2)); 
     }
   };
 }
