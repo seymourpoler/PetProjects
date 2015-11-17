@@ -30,14 +30,13 @@ function forEach(arrayOfData, handler){
 	};
 }
 
-//source: http://blog.carbonfive.com/2015/01/14/gettin-freaky-functional-wcurried-javascript/
-function curry(fx) {
-  var argumentsLengthOfcurryfiedFunction = fx.length;
+function curry(func) {
+  var argumentsLengthOfcurryfiedFunction = func.length;
 
   return function partialFunction() {
     var args = Array.prototype.slice.apply(arguments);
     if (args.length >= argumentsLengthOfcurryfiedFunction) {
-      return fx.apply(null, args);
+      return func.apply(null, args);
     }    
     return function() {
 	    var args2 = Array.prototype.slice.apply(arguments);
