@@ -32,11 +32,11 @@ function forEach(arrayOfData, handler){
 
 //source: http://blog.carbonfive.com/2015/01/14/gettin-freaky-functional-wcurried-javascript/
 function curry(fx) {
-  var arity = fx.length;
+  var argumentsLengthOfcurryfiedFunction = fx.length;
 
   return function f1() {
     var args = Array.prototype.slice.apply(arguments);
-    if (args.length >= arity) {
+    if (args.length >= argumentsLengthOfcurryfiedFunction) {
       return fx.apply(null, args);
     }    
     return function f2() {
