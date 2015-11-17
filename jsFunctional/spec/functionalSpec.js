@@ -132,9 +132,35 @@ describe("functional programming", function(){
 			return a + b + c + d;
 		}
 		var curriedFunction = curry(add);
+		beforeEach(function(){});
+		it("curry function with all parameters as partial", function(){
+			var result = curriedFunction(1)(2)(3)(4);	
 
-		var result = curriedFunction(1)(2)(3)(4);
+			expect(expectedResult).to.eql(result);
+		});
 
-		expect(expectedResult).to.eql(result);
+		it("curry function with two parameters as partial", function(){
+			var result = curriedFunction(1, 2)(3)(4);	
+			
+			expect(expectedResult).to.eql(result);
+		});
+
+		it("curry function with one parameters as partial", function(){
+			var result = curriedFunction(1, 2, 3)(4);
+			
+			expect(expectedResult).to.eql(result);
+		});
+
+		it("curry function with parameters as partial in two pairs", function(){
+			var result = curriedFunction(1, 2)(3, 4);
+			
+			expect(expectedResult).to.eql(result);
+		});
+
+		it("curry function with parameters as usual", function(){
+			var result = curriedFunction(1, 2, 3, 4);
+			
+			expect(expectedResult).to.eql(result);
+		});
 	});
 });

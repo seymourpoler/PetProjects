@@ -39,8 +39,9 @@ function curry(func) {
       return func.apply(null, argumentsOfPartialFunction);
     }    
     return function() {
-	    var args2 = Array.prototype.slice.apply(arguments);
-	    return partialFunction.apply(null, argumentsOfPartialFunction.concat(args2)); 
+	    var args = Array.prototype.slice.apply(arguments);
+	    return partialFunction.apply(null, 
+	    					argumentsOfPartialFunction.concat(args)); 
     }
   };
 }
