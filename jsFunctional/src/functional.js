@@ -35,15 +35,13 @@ function curry(fx) {
   var arity = fx.length;
 
   return function f1() {
-    var args = Array.prototype.slice.call(arguments);
+    var args = Array.prototype.slice.apply(arguments);
     if (args.length >= arity) {
       return fx.apply(null, args);
-    }
-    else {
-      return function f2() {
-        var args2 = Array.prototype.slice.call(arguments);
-        return f1.apply(null, args.concat(args2)); 
-      }
+    }    
+    return function f2() {
+	    var args2 = Array.prototype.slice.apply(arguments);
+	    return f1.apply(null, args.concat(args2)); 
     }
   };
 }
