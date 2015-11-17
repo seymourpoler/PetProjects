@@ -39,7 +39,7 @@ function curry(fx) {
     if (args.length >= argumentsLengthOfcurryfiedFunction) {
       return fx.apply(null, args);
     }    
-    return function f2() {
+    return function() {
 	    var args2 = Array.prototype.slice.apply(arguments);
 	    return f1.apply(null, args.concat(args2)); 
     }
