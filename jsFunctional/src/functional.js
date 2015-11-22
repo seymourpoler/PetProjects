@@ -44,12 +44,12 @@ function curry(func) {
 	    					argumentsOfPartialFunction.concat(args)); 
     }
   };
-  
-  function createArray(data){
-  	return map(data, function(element){
-  		return element;
-  	});
-  }
+}
+
+function createArray(data){
+	return map(data, function(element){
+		return element;
+	});
 }
 
 function pipe(data, secondFunction){
@@ -75,8 +75,9 @@ function PipeLine(){
 
 //code from underscore
 function bind(handler, obj){
-	var args = Array.prototype.slice.call(arguments, 2);
+	//var args = Array.prototype.slice.call(arguments, 2);
     return function() {
-      return handler.apply(obj, args.concat(Array.prototype.slice.call(arguments)));
+      //return handler.apply(obj, args.concat(Array.prototype.slice.call(arguments)));
+      return handler.apply(obj, createArray(arguments));
     };
 }

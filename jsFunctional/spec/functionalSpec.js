@@ -164,22 +164,6 @@ describe("functional programming", function(){
 		});
 	});
 	describe("bind function", function(){
-		it("with simple function", function(){
-			function add(){
-				var result = 0;
-				for (var position = 0; position < arguments.length; position++) {
-					result += arguments[position];
-				};
-				return result;
-			}
-			var sum = bind(add, {}, 1, 2);
-			
-			var expected = 8;
-
-			var result = sum(0, 5);
-
-			expect(expected).to.eql(result);	
-		});						
 		it("with and object to bind", function(){
 			function Point(x, y)
 			{
