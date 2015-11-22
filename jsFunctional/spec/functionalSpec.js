@@ -163,4 +163,41 @@ describe("functional programming", function(){
 			expect(expectedResult).to.eql(result);
 		});
 	});
+	describe("bind function", function(){
+		it("with simple function", function(){
+			function add(){
+				var result = 0;
+				for (var position = 0; position < arguments.length; position++) {
+					result += arguments[position];
+				};
+				return result;
+			}
+			var sum = bind(add, {}, 1, 2);
+			
+			var expected = 8;
+
+			var result = sum(0, 5);
+
+			expect(expected).to.eql(result);	
+		});						
+		it("with and object to bind", function(){
+			function Point(x, y)
+			{
+				this.x = x;
+				this.y = y;
+
+				this.toString = function(){
+					return this.x + ' ' + this.y; 
+				};
+			}
+			var anotherPoint = new Point(3, 4);
+			var point = new Point(0, 5)
+			var expected = '3 4';
+
+			var bindedPoint = bind(point.toString, anotherPoint);
+			var result = bindedPoint();
+
+			expect(expected).to.eql(result);
+		});
+	});
 });

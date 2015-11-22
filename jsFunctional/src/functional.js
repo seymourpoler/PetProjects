@@ -44,6 +44,7 @@ function curry(func) {
 	    					argumentsOfPartialFunction.concat(args)); 
     }
   };
+  
   function createArray(data){
   	return map(data, function(element){
   		return element;
@@ -70,4 +71,12 @@ function PipeLine(){
 		}
 		return result;
 	};
+}
+
+//code from underscore
+function bind(handler, obj){
+	var args = Array.prototype.slice.call(arguments, 2);
+    return function() {
+      return handler.apply(obj, args.concat(Array.prototype.slice.call(arguments)));
+    };
 }
