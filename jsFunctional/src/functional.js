@@ -73,11 +73,8 @@ function PipeLine(){
 	};
 }
 
-//code from underscore
 function bind(handler, obj){
-	//var args = Array.prototype.slice.call(arguments, 2);
     return function() {
-      //return handler.apply(obj, args.concat(Array.prototype.slice.call(arguments)));
       return handler.apply(obj, createArray(arguments));
     };
 }
