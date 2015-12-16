@@ -190,5 +190,12 @@ describe("functional programming", function(){
 			
 			expect(mayBe).not.eql(undefined);
 		});
+		it("bind function", function(){
+			var monad = new MayBe(12);
+			
+			var monadResult = monad.bind(function(x){return x * 2;});
+			
+			expect(monadResult.getValue()).eql(24);
+		});
 	});
 });

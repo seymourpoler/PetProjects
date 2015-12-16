@@ -4,6 +4,6 @@ function Just(value){
 	};
 	
 	this.bind = function(func){
-		return new Maybe(func(value));
+		return new MayBe(func(value));
 	};
 }
