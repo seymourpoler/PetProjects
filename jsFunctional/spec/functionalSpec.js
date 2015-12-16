@@ -197,5 +197,13 @@ describe("functional programming", function(){
 			
 			expect(monadResult.getValue()).eql(24);
 		});
+		it("compose functions with bind", function(){
+			var monad = new MayBe(12);
+			
+			var monadResult = monad.bind(function(x){return x * 2;})
+								   .bind(function(x){return x +1});
+			
+			expect(monadResult.getValue()).eql(25);
+		});
 	});
 });
