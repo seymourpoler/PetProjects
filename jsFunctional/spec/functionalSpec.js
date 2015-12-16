@@ -184,4 +184,11 @@ describe("functional programming", function(){
 			expect(expected).to.eql(result);
 		});
 	});
+	describe("Monad Maybe", function(){
+		it("creation of monad Maybe", function(){
+			var mayBe = new MayBe(12);
+			
+			expect(mayBe).not.eql(undefined);
+		});
+	});
 });
