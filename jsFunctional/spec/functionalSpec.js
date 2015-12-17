@@ -205,5 +205,19 @@ describe("functional programming", function(){
 			
 			expect(monadResult.getValue()).eql(25);
 		});
+		it("isNothing function for Just", function(){
+			var monad = new MayBe(12);			
+			
+			var result = monad.isNothing();
+			
+			expect(result).eql(false);
+		});
+		it("isNothing function for Nothing", function(){
+			var monad = new MayBe(null);			
+			
+			var result = monad.isNothing();
+			
+			expect(result).eql(true);
+		});
 	});
 });
