@@ -1,3 +1,5 @@
+//source: https://gist.github.com/bfncs/2020943
+
 var fs = require('fs')
 
 function  Mouse(){
@@ -8,7 +10,7 @@ function  Mouse(){
   var onMoveHandler = function(){};
   var dev = typeof(mouseid) === 'number' ? 'mouse' + mouseid : 'mice';
   var buf = new Buffer(MAX_LENGTH);
-  this.fileDescription;
+  self.fileDescription = 0;
 
   fs.open('/dev/input/' + dev, 'r', onOpen);
   self.onClick = function(handler){
@@ -23,24 +25,33 @@ function  Mouse(){
        console.log('error open file', error);
        return;
      }
-     this.fileDescription = fileDescription;
-     read(this.fileDescription);
+     self.fileDescription = fileDescription;
+     read(self.fileDescription);
    };
 
    function read(fileDescription){
      fs.read(fileDescription, buf, 0, MAX_LENGTH, null, onRead);
    }
 
-   function onRead(bytesRead) {
-     var event = parse(self, buf);
+   function onRead(err) {
+     if(err){
+       return;
+     }
+     var event = parse(buf);
      event.dev = dev;
-     manageEvent(event);
-     if (this.fileDescription){
-       read(this.fileDescription);
+     manageEventType(event);
+     if (self.fileDescription){
+       read(self.fileDescription);
      }
    }
 
-   function parse(mouse, buffer) {
+   function parse(buffer) {
+     var event = getEventFrom(buffer);
+     var event = getEventTypeFrom(event);
+     return event;
+   }
+
+   function getEventFrom(buffer){
      var event = {
        leftBtn:    (buffer[0] & 1  ) > 0, // Bit 0
        rightBtn:   (buffer[0] & 2  ) > 0, // Bit 1
@@ -52,6 +63,10 @@ function  Mouse(){
        xDelta:      buffer.readInt8(1),   // Byte 2 as signed int
        yDelta:      buffer.readInt8(2)    // Byte 3 as signed int
      };
+     return event;
+   }
+
+   function getEventTypeFrom(event){
      if (event.leftBtn || event.rightBtn || event.middleBtn) {
        event.type = 'button';
      } else {
@@ -60,8 +75,7 @@ function  Mouse(){
      return event;
    }
 
-   function manageEvent(event){
-     console.log('event.type: ', event.type);
+   function manageEventType(event){
      switch (event.type) {
        case 'button':
           onClickHandler(event);
@@ -70,7 +84,6 @@ function  Mouse(){
        onMoveHandler(event);
      }
    }
-
-}//end class Mouse
+}
 
 module.exports = new Mouse();
