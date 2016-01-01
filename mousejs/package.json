@@ -1,0 +1,8 @@
+{
+  "name": "manage mouse events",
+  "version": "0.0.1",
+  "email": "seymourpoler@gmail.com"
+  "description": "Samples with mouse events",
+  "dependencies": {
+  }
+}
