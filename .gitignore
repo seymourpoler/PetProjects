@@ -156,3 +156,5 @@ $RECYCLE.BIN/
 .DS_Store
 
 Linqjs/node_modules
+example-mongodb/node_modules
+
