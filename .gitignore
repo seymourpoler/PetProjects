@@ -157,4 +157,5 @@ $RECYCLE.BIN/
 
 Linqjs/node_modules
 example-mongodb/node_modules
+example-express-mongodb/node_modules
 
