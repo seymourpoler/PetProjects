@@ -5,6 +5,8 @@ var bodyParser = require('body-parser');
 var configuration = require('./configuration');
 var theUserRepository = require('./User/Repositories/userRepository');
 var theTaskRepository = require('./Task/Repositories/taskRepository');
+var theTaskRepository = require('./Task/Repositories/taskRepository');
+var Task = require('./Task/Models/task');
 
 var userRepository = new theUserRepository(configuration);
 var taskRepository = new theTaskRepository(configuration);
@@ -47,6 +49,11 @@ router.get('/tasks', function(req, res){
   taskRepository.find(function(data){
     res.json({ task: data });
   });
+});
+router.post('/tasks', function(req, res){
+  var task = new Task({title : req.body.title});
+    taskRepository.save(task);
+  res.json({ message: 'task created' });
 });
 app.use('/api', router);
 app.listen(port);

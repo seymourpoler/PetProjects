@@ -11,3 +11,5 @@ function Task(state){
     return title;
   };
 }
+
+module.exports = Task;

@@ -19,7 +19,20 @@ function TaskRepository(configuration){
   };
 
   this.save = function(task){
-    throw 'not implemented';
+    mongoClient.connect(configuration.getConnectionString(), function(err, db) {
+      if(err) { return console.log('error on conection for saving: ', err); }
+
+      var collection = db.collection(collectionName);
+      console.log('getTitle: ', task.getTitle());
+      var taskToBeSaved = {title: task.getTitle()};
+
+      collection.insert(taskToBeSaved, function(err, result) {
+        if(err) { return console.log('error on save: ', err); }
+
+        console.log('insert: ', result);
+        db.close();
+      });
+    });
   };
 
   this.detele = function(taksId){
