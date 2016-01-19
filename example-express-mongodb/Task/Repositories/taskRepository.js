@@ -35,9 +35,16 @@ function TaskRepository(configuration){
     });
   };
 
-  this.detele = function(taksId){
-    throw 'not implemented';
+  this.detele = function(){
+    mongoClient.connect(configuration.getConnectionString(), function(err, db) {
+      if(err) { return console.log('error on conection for deleting: ', err); }
+
+      var collection = db.collection(collectionName);
+      collection.remove();
+      db.close();
+    });
   };
+  
 }
 
 module.exports = TaskRepository;

@@ -55,6 +55,13 @@ router.post('/tasks', function(req, res){
     taskRepository.save(task);
   res.json({ message: 'task created' });
 });
+router.delete('/tasks', function(req, res) {
+  taskRepository.detele();
+  res.json({ message: 'tasks removed' });
+});
+
+
+
 app.use('/api', router);
 app.listen(port);
 console.log('Magic happens on port ' + port);
