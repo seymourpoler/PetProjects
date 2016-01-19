@@ -3,11 +3,11 @@ function Task(state){
   var id = state.id;
   var title = state.title;
 
-  this.Id = function(){
+  this.getId = function(){
     return id;
   };
-  
-  this.Title = function(){
+
+  this.getTitle = function(){
     return title;
   };
 }
