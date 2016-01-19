@@ -3,7 +3,7 @@ var express    = require('express');
 var app        = express();
 var bodyParser = require('body-parser');
 var configuration = require('./configuration');
-var theUserRepository = require('./userRepository');
+var theUserRepository = require('./User/Repositories/userRepository');
 var theTaskRepository = require('./Task/Repositories/taskRepository');
 
 var userRepository = new theUserRepository(configuration);
