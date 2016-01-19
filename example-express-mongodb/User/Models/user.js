@@ -1,3 +1,4 @@
+'use strict';
 function User(state){
   var id = state.id;
   var name = state.name;

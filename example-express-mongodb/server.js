@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var configuration = require('./configuration');
 var theUserRepository = require('./User/Repositories/userRepository');
 var theTaskRepository = require('./Task/Repositories/taskRepository');
-var theTaskRepository = require('./Task/Repositories/taskRepository');
 var Task = require('./Task/Models/task');
 
 var userRepository = new theUserRepository(configuration);
@@ -59,8 +58,6 @@ router.delete('/tasks', function(req, res) {
   taskRepository.detele();
   res.json({ message: 'tasks removed' });
 });
-
-
 
 app.use('/api', router);
 app.listen(port);
