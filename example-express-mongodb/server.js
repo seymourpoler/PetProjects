@@ -2,6 +2,7 @@
 var express    = require('express');
 var app        = express();
 var bodyParser = require('body-parser');
+var path    = require("path");
 var configuration = require('./configuration');
 var theUserRepository = require('./User/Repositories/userRepository');
 var theTaskRepository = require('./Task/Repositories/taskRepository');
@@ -60,5 +61,13 @@ router.delete('/tasks', function(req, res) {
 });
 
 app.use('/api', router);
+app.get('/about',function(req,res){
+  var aboutPath = path.join(__dirname + '/About/index.html');
+  console.log('about path: ', aboutPath);
+
+  res.sendFile(aboutPath);
+
+});
+
 app.listen(port);
 console.log('Magic happens on port ' + port);
