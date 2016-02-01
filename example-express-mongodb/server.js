@@ -61,10 +61,10 @@ router.delete('/tasks', function(req, res) {
 app.use('/api', router);
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/Home/Views/index.html'));
 });
 app.get('/about',function(req,res){
-  res.sendFile(path.join(__dirname + '/About/index.html'));
+  res.sendFile(path.join(__dirname + '/About//Views/index.html'));
 });
 
 app.listen(port);
