@@ -60,6 +60,7 @@ router.delete('/tasks', function(req, res) {
 });
 app.use('/api', router);
 
+app.use('/Home/Scripts', express.static(__dirname + '/Home/Scripts'));
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/Home/Views/index.html'));
 });
