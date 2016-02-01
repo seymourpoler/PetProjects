@@ -17,7 +17,6 @@ app.use(bodyParser.json());
 var port = process.env.PORT || configuration.getServerPort();
 
 var router = express.Router();
-
 router.get('/', function(req, res) {
     res.json({ message: 'Wellcome to our api!' });
 });
@@ -59,8 +58,8 @@ router.delete('/tasks', function(req, res) {
   taskRepository.detele();
   res.json({ message: 'tasks removed' });
 });
-
 app.use('/api', router);
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
