@@ -14,6 +14,7 @@ function UserPresenter(view){
 
 function UserView(){
   this.loadUsers = function(users){
+    $("#lstUsers").empty();
     _(users).each(function(user){
       $("#lstUsers").append($("<li id='" + user._id + "'>").text(user.name));
     });
