@@ -1,9 +1,12 @@
 'use strict';
 var express = require('express');
 var router = express.Router();
+/*
 var configuration = require('../../configuration');
 var theUserRepository = require('../Repositories/userRepository');
 var userRepository = new theUserRepository(configuration);
+*/
+var findController = require('../Controllers/findController');
 
 var router = express.Router();
 
@@ -12,9 +15,12 @@ router.get('/', function(req, res) {
 });
 
 router.get('/users', function(req, res) {
+  findController.find(req, res);
+  /*
   userRepository.find(function(data){
     res.json({ user: data });
   });
+  */
 });
 
 router.get('/users/:id', function(req, res) {
