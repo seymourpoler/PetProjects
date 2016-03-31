@@ -16,18 +16,16 @@ router.get('/', function(req, res) {
 
 router.get('/users', function(req, res) {
   findController.find(req, res);
-  /*
-  userRepository.find(function(data){
-    res.json({ user: data });
-  });
-  */
 });
 
 router.get('/users/:id', function(req, res) {
+  findController.findBy(req, res);
+  /*
   var userId = req.params.id;
   userRepository.findOne(userId, function(data){
     res.json({ user: data });
   });
+  */
 });
 
 router.post('/users', function(req, res) {

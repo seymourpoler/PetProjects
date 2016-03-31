@@ -5,7 +5,10 @@ var userRepository = new theUserRepository(configuration);
 function FindController(){
 
   this.findBy = function(request, response){
-    throw 'not implemented';
+    var userId = request.params.id;
+    userRepository.findOne(userId, function(data){
+      response.json({ user: data });
+    });
   };
 
   this.find = function(request, response){
