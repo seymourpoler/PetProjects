@@ -17,4 +17,5 @@ function FindController(){
     });
   };
 }
+
 module.exports = new FindController();
