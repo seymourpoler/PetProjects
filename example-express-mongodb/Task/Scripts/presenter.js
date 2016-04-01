@@ -1,3 +1,4 @@
+'use strict';
 function TaskPresenter(){
   console.log('hello from TaskPresenter');
 }
