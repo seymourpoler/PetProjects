@@ -14,6 +14,10 @@ function UserPresenter(view){
 }
 
 function UserView(){
+  var userAddingEventHandler = function(){};
+  this.subscribesToUserAddingEvent = function(handler){
+    userAddingEventHandler = handler;
+  };
   this.loadUsers = function(users){
     $("#lstUsers").empty();
     _(users).each(function(user){
