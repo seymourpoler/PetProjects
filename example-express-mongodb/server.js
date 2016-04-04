@@ -10,8 +10,6 @@ var taskRouterConfigurator = require('./Task/Router/routerConfigurator');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || configuration.getServerPort();
-
 userRouterConfigurator.configure(app);
 taskRouterConfigurator.configure(app);
 
@@ -27,5 +25,9 @@ app.get('/about',function(req,res){
   res.sendFile(path.join(__dirname + '/About//Views/index.html'));
 });
 
-app.listen(port);
-console.log('Magic happens on port ' + port);
+var port = process.env.PORT || configuration.getServerPort();
+var server = app.listen(port, function(){
+    console.log('Magic happens on port ' + port);
+});
+
+module.exports = server;

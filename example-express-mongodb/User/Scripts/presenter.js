@@ -65,5 +65,5 @@ function UserClient(){
 function createUserPresenter(){
   return new UserPresenter(
     new UserView(),
-    new Client());
+    new UserClient());
 }
