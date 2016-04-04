@@ -1,8 +1,17 @@
 'use strict';
-var request = require('request');
+var request = require('supertest')
+  , app = require('./server');
 
-it("should respond with hello world", function(done) {
-  request("http://localhost:8080/", function(error, response, body){
-    done();
+describe('GET /user', function(){
+  var sever;
+  beforeEach(function(){
+    
   });
-}, 250);
+  it('should respond with json', function(done){
+    request(app)
+      .get('/user')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', 'json')
+      .expect(200, done);
+  })
+})
