@@ -1,6 +1,6 @@
 'use strict';
 function UserPresenter(view, client){
-  view.subscribesToUserAddingEvent(subscribesToUserAddingEventHandler);
+  view.subscribesToUserCreatingEvent(subscribesToUserCreatingEventHandler);
   loadUsers();
 
   function loadUsers(){
@@ -10,20 +10,30 @@ function UserPresenter(view, client){
       view.loadUsers(users);
     }
     function loadUserErrorHandler(users){
-      view.showErrorMessage('error loading users');
+      view.showErrorMessage('error loading users.');
     }
   }
 
-  function subscribesToUserAddingEventHandler(user){
+  function subscribesToUserCreatingEventHandler(user){
+    client.createUser(user, createUserSuccessHandler, createUserErrorHandler)
 
+    function createUserSuccessHandler(){
+      throw 'not implemented';
+    }
+
+    function createUserErrorHandler(){
+      view.showErrorMessage('error creating user.');
+    }
   }
 }
 
 function UserView(){
-  var userAddingEventHandler = function(){};
-  this.subscribesToUserAddingEvent = function(handler){
-    userAddingEventHandler = handler;
+  var userCreatingEventHandler = function(){};
+
+  this.subscribesToUserCreatingEvent = function(handler){
+    userCreatingEventHandler = handler;
   };
+
   this.loadUsers = function(users){
     $("#lstUsers").empty();
     _(users).each(function(user){
@@ -45,6 +55,10 @@ function UserClient(){
     .fail(function(error) {
       errorHandler();
     });
+  };
+
+  this.createUser = function(user, successHandler, errorHandler){
+    throw 'not implemented';
   };
 }
 

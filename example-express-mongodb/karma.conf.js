@@ -7,7 +7,7 @@ module.exports = function(config) {
       'lib/jasmine.min.js',
       'lib/utils.js',
       'User/Scripts/*.js',
-      'User/Tests/*.js'
+      'User/Tests/Scripts/*.js'
     ]
   });
 };
