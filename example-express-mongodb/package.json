@@ -1,7 +1,7 @@
 {
   "name": "learn-node-with-express",
   "version": "0.0.1",
-  "description": "Simple API with express, mongodb and nodejs",
+  "description": "Simple Web with express, mongodb and nodejs",
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",

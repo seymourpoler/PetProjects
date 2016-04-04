@@ -6,6 +6,7 @@ module.exports = function(config) {
     files: [
       'lib/jasmine.min.js',
       'lib/utils.js',
+      'Tests/*.js',
       'User/Scripts/*.js',
       'User/Tests/Scripts/*.js'
     ]
