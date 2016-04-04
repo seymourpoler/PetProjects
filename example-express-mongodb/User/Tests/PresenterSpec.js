@@ -2,23 +2,18 @@ describe("View Presenter", function(){
   var client, view, presenter;
 
   beforeEach(function(){
-    client = {
-      getUsers: function(){}
-    };
-    view = {
-      subscribesToUserAddingEvent: function(){},
-      showErrorMessage:function(){},
-      loadUsers: function(){}
-    };
+    client = new UserClient();
+    spyOnAllMethodsOf(client);
+    view = new UserView();
+    spyOnAllMethodsOf(view);
   });
 
   describe("when loads users", function(){
 
     it("shows error message if there is an error", function(){
-      spyOn(client, "getUsers").and.callFake(function(successhandler, errorHandler){
+      client.getUsers.and.callFake(function(successhandler, errorHandler){
         errorHandler();
       });
-      spyOn(view, "showErrorMessage");
 
       presenter = new UserPresenter(view, client);
 
@@ -26,10 +21,9 @@ describe("View Presenter", function(){
     });
 
     it("shows users", function(){
-      spyOn(client, "getUsers").and.callFake(function(successhandler, errorHandler){
+      client.getUsers.and.callFake(function(successhandler, errorHandler){
         successhandler();
       });
-      spyOn(view, "loadUsers");
 
       presenter = new UserPresenter(view, client);
 

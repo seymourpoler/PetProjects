@@ -4,8 +4,8 @@ module.exports = function(config) {
     reporters: ['spec'],
     browsers: ['Chrome'],
     files: [
-      'libs/jquery.min.js',
-      'libs/lodash.min.js',
+      'lib/jasmine.min.js',
+      'lib/utils.js',
       'User/Scripts/*.js',
       'User/Tests/*.js'
     ]
