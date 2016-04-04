@@ -1,15 +1,21 @@
 'use strict';
-function UserPresenter(view){
+function UserPresenter(view, client){
+  view.subscribesToUserAddingEvent(subscribesToUserAddingEventHandler);
   loadUsers();
 
   function loadUsers(){
-    $.get( "/api/Users")
-    .done(function(data) {
-      view.loadUsers(data.user);
-    })
-    .fail(function(error) {
+    client.getUsers(loadUserSuccessHandler, loadUserErrorHandler);
+
+    function loadUserSuccessHandler(users){
+      view.loadUsers(users);
+    }
+    function loadUserErrorHandler(users){
       view.showErrorMessage('error loading users');
-    });
+    }
+  }
+
+  function subscribesToUserAddingEventHandler(user){
+
   }
 }
 
@@ -30,7 +36,20 @@ function UserView(){
   };
 }
 
+function UserClient(){
+  this.getUsers = function(successHandler, errorHandler){
+    $.get( "/api/Users")
+    .done(function(data) {
+      successHandler(data.user);
+    })
+    .fail(function(error) {
+      errorHandler();
+    });
+  };
+}
+
 function createUserPresenter(){
   return new UserPresenter(
-    new UserView());
+    new UserView(),
+    new Client());
 }

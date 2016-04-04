@@ -19,6 +19,20 @@ gulp.task('server', function() {
   });
 })
 
+gulp.task('test', function (done) {
+  return new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true,
+    showStack: true
+  }, done)
+  .on('error', function(err) {
+      // Make sure failed tests cause gulp to exit non-zero
+      console.log(err);
+      this.emit('end'); //instead of erroring the stream, end it
+    })
+    .start();
+});
+
 /**
  * $ gulp
  * description: start the development environment
