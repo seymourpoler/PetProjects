@@ -2,6 +2,7 @@
 var express = require('express');
 var router = express.Router();
 var findController = require('../Controllers/findController');
+var createController = require('../Controllers/createController');
 
 router.get('/', function(req, res) {
     res.json({ message: 'Wellcome to our api!' });
@@ -16,10 +17,7 @@ router.get('/users/:id', function(req, res) {
 });
 
 router.post('/users', function(req, res) {
-  var user = {};
-  user.name = req.body.name;
-  userRepository.save(user);
-  res.json({ message: 'user created' });
+  createController.create(req, res);
 });
 
 router.delete('/users/:id', function(req, res) {

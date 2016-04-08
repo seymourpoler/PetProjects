@@ -1,4 +1,5 @@
 'use strict';
+
 function UserPresenter(view, client){
   view.subscribesToUserCreatingEvent(subscribesToUserCreatingEventHandler);
   loadUsers();
@@ -61,8 +62,14 @@ function UserClient(){
     });
   };
 
-  this.createUser = function(user, successHandler, errorHandler){
-    throw 'not implemented';
+  this.createUser = function(userName, successHandler, errorHandler){
+    $.post( "/api/Users", {name: userName})
+    .done(function(data) {
+      successHandler(data.user);
+    })
+    .fail(function(error) {
+      errorHandler();
+    });
   };
 }
 
