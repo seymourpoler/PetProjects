@@ -1,12 +1,13 @@
 'use strict';
 describe("User Presenter", function(){
-  var client, view, presenter;
+  var client, view, presenter, allUsers;
 
   beforeEach(function(){
     client = new UserClient();
     spyOnAllMethodsOf(client);
     view = new UserView();
     spyOnAllMethodsOf(view);
+    allUsers = [{_id:'idLuke',name:'luke'},{_id:'idJohn', name:'John'}];
   });
 
   describe("when loads users", function(){
@@ -56,7 +57,6 @@ describe("User Presenter", function(){
     });
 
     it("loads all users if all rigth", function(){
-      var allUsers = [{_id:'idLuke',name:'luke'},{_id:'idJohn', name:'John'}];
       client.createUser.and.callFake(function(user, successHandler, errorHandler){
         successHandler();
       });
