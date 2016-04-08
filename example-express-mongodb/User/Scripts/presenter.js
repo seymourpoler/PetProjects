@@ -32,6 +32,10 @@ function UserView(){
 
   this.subscribesToUserCreatingEvent = function(handler){
     userCreatingEventHandler = handler;
+    $('#btnSave').click(function(){
+      userCreatingEventHandler(
+        $('#txtNewUserName').val());
+    });
   };
 
   this.loadUsers = function(users){
