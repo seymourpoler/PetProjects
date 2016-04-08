@@ -5,6 +5,7 @@ function UserPresenter(view, client){
   loadUsers();
 
   function loadUsers(){
+    view.clean();
     client.getUsers(loadUserSuccessHandler, loadUserErrorHandler);
 
     function loadUserSuccessHandler(users){
@@ -46,8 +47,14 @@ function UserView(){
     });
   };
 
+  this.clean = function(){
+    $('#lblErrorMessage').empty();
+    $('#lblErrorMessage').hide();
+    $('#txtNewUserName').val('');
+  }
+
   this.showErrorMessage = function(message){
-    $('lblErrorMessage').show(message);
+    $('#lblErrorMessage').show(message);
   };
 }
 

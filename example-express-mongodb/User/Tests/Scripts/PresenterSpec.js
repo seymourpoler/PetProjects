@@ -30,6 +30,7 @@ describe("User Presenter", function(){
 
       presenter = new UserPresenter(view, client);
 
+      expect(view.clean).toHaveBeenCalled();
       expect(view.loadUsers).toHaveBeenCalled();
     });
   });
