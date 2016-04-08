@@ -22,8 +22,9 @@ describe("User Presenter", function(){
     });
 
     it("shows users", function(){
+      var allUsers = [{_id:'idLuke',name:'luke'},{_id:'idJohn', name:'John'}];
       client.getUsers.and.callFake(function(successhandler, errorHandler){
-        successhandler();
+        successhandler(allUsers);
       });
 
       presenter = new UserPresenter(view, client);
@@ -33,14 +34,17 @@ describe("User Presenter", function(){
   });
 
   describe("when new user is creating", function(){
-
-    it("shows an error if there is an error", function(){
-      debugger;
-      var userCreatingEventHandler = function(){};
-      var userCreatingRequest = {name: 'john'};
+    var userCreatingEventHandler = function(){};
+    var userCreatingRequest;
+    beforeEach(function(){
       view.subscribesToUserCreatingEvent.and.callFake(function(handler){
         userCreatingEventHandler = handler;
       });
+      userCreatingRequest = {name: 'john'};
+    });
+
+    it("shows an error if there is an error", function(){
+
       client.createUser.and.callFake(function(user, successHandler, errorHandler){
         errorHandler();
       });
@@ -49,6 +53,21 @@ describe("User Presenter", function(){
       userCreatingEventHandler(userCreatingRequest);
 
       expect(view.showErrorMessage).toHaveBeenCalled();
+    });
+
+    it("loads all users if all rigth", function(){
+      var allUsers = [{_id:'idLuke',name:'luke'},{_id:'idJohn', name:'John'}];
+      client.createUser.and.callFake(function(user, successHandler, errorHandler){
+        successHandler();
+      });
+      client.getUsers.and.callFake(function(successHandler, errorHandler){
+        successHandler(allUsers);
+      });
+      presenter = new UserPresenter(view, client);
+
+      userCreatingEventHandler(userCreatingRequest);
+
+      expect(view.loadUsers).toHaveBeenCalledWith(allUsers);
     });
   });
 });

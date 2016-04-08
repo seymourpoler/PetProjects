@@ -18,7 +18,7 @@ function UserPresenter(view, client){
     client.createUser(user, createUserSuccessHandler, createUserErrorHandler)
 
     function createUserSuccessHandler(){
-      throw 'not implemented';
+      loadUsers();
     }
 
     function createUserErrorHandler(){
