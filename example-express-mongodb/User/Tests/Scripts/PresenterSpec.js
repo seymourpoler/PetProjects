@@ -71,4 +71,25 @@ describe("User Presenter", function(){
       expect(view.loadUsers).toHaveBeenCalledWith(allUsers);
     });
   });
+
+  describe("when deletes a user", function(){
+    var userDeletingEventHandler = function(){};
+
+    beforeEach(function(){
+      view.subscribesToUserDeletingEvent.and.callFake(function(handler){
+          userDeletingEventHandler = handler;
+      });
+    });
+
+    it("shows error message if there is an error", function(){
+      client.deleteUser.and.callFake(function(userId, successHandler, errorHandler){
+        errorHandler();
+      });
+      presenter = new UserPresenter(view, client);
+
+      userDeletingEventHandler(3);
+
+      expect(view.showErrorMessage).toHaveBeenCalled();
+    });
+  });
 });

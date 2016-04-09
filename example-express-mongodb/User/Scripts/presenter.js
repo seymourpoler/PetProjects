@@ -31,7 +31,15 @@ function UserPresenter(view, client){
   }
 
   function userDeletingEventHandler(userId){
+    client.deleteUser(userId, deletingEventSuccessHandler, deletingEventErrorHandler);
 
+    function deletingEventSuccessHandler(){
+      loadUsers();
+    }
+
+    function deletingEventErrorHandler(){
+      view.showErrorMessage('error creating user.');
+    }
   }
 }
 
@@ -93,6 +101,10 @@ function UserClient(){
     .fail(function(error) {
       errorHandler();
     });
+  };
+
+  this.deleteUser = function(userId, successHandler, errorHandler){
+
   };
 }
 
