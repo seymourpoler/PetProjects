@@ -9,7 +9,7 @@ function RouterConfigurator(){
     app.get('/users', function(req, res) {
         res.sendFile(path.join(__dirname + '/../Views/index.html'));
     });
-    app.use('/api', userApiRouter);
+    //app.use('/api', userApiRouter);
   };
 }
 

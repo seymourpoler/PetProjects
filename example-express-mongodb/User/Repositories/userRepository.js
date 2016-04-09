@@ -1,4 +1,5 @@
 'use strict';
+
 var mongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
@@ -17,6 +18,7 @@ function UserRepository(configuration){
       });
     });
   };
+
   this.delete = function(){
     mongoClient.connect(configuration.getConnectionString(), function(err, db) {
       if(err) { return console.log('error on conection for deleting: ', err); }

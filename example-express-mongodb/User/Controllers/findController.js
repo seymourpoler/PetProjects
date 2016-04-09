@@ -1,10 +1,6 @@
 'use strict';
 
-var configuration = require('../../configuration');
-var theUserRepository = require('../Repositories/userRepository');
-var userRepository = new theUserRepository(configuration);
-
-function FindController(){
+function FindController(userRepository){
 
   this.findBy = function(request, response){
     var userId = request.params.id;
@@ -20,4 +16,4 @@ function FindController(){
   };
 }
 
-module.exports = new FindController();
+module.exports = FindController;

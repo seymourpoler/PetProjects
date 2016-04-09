@@ -1,16 +1,21 @@
 'use strict';
+
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 var configuration = require('./configuration');
-var userRouterConfigurator = require('./User/Router/routerConfigurator');
+var theUserRouterConfigurator = require('./Factory/User/routerConfigurator');
+var userConfigurator = new theUserRouterConfigurator(express, path);
 var taskRouterConfigurator = require('./Task/Router/routerConfigurator');
+
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-userRouterConfigurator.configure(app);
+//userRouterConfigurator.configure(app);
+userConfigurator.configure(app);
 taskRouterConfigurator.configure(app);
 
 app.use('/lib', express.static(__dirname + '/lib'));
@@ -22,7 +27,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about',function(req,res){
-  res.sendFile(path.join(__dirname + '/About//Views/index.html'));
+  res.sendFile(path.join(__dirname + '/About/Views/index.html'));
 });
 
 var port = process.env.PORT || configuration.getServerPort();
