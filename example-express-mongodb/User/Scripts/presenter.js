@@ -1,8 +1,10 @@
 'use strict';
 
 function UserPresenter(view, client){
-  view.subscribesToUserCreatingEvent(subscribesToUserCreatingEventHandler);
+  view.subscribesToUserCreatingEvent(userCreatingEventHandler);
+  view.subscribesToUserDeletingEvent(userDeletingEventHandler);
   loadUsers();
+
 
   function loadUsers(){
     view.clean();
@@ -16,7 +18,7 @@ function UserPresenter(view, client){
     }
   }
 
-  function subscribesToUserCreatingEventHandler(user){
+  function userCreatingEventHandler(user){
     client.createUser(user, createUserSuccessHandler, createUserErrorHandler)
 
     function createUserSuccessHandler(){
@@ -27,24 +29,38 @@ function UserPresenter(view, client){
       view.showErrorMessage('error creating user.');
     }
   }
+
+  function userDeletingEventHandler(userId){
+
+  }
 }
 
 function UserView(){
-  var userCreatingEventHandler = function(){};
-
+  var userDeletingEventHandler = function() {};
   this.subscribesToUserCreatingEvent = function(handler){
-    userCreatingEventHandler = handler;
     $('#btnSave').click(function(){
-      userCreatingEventHandler(
+      handler(
         $('#txtNewUserName').val());
     });
   };
 
+  this.subscribesToUserDeletingEvent = function (handler){
+    userDeletingEventHandler = handler;
+  };
+
+  function attachDeletingUserEvent(handler){
+    $('.remove').click(function(){
+      handler($(this)[0].id);
+    });
+  }
+
   this.loadUsers = function(users){
     $("#lstUsers").empty();
     _(users).each(function(user){
-      $("#lstUsers").append($("<li id='" + user._id + "'>").text(user.name));
+      $("#lstUsers").append(
+        $("<li id='" + user._id + "'>" + user.name + " <a id='" + user._id + "' class='remove'>X</a></li>"));
     });
+    attachDeletingUserEvent(userDeletingEventHandler);
   };
 
   this.clean = function(){

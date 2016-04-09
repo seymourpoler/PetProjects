@@ -10,7 +10,6 @@ var userConfigurator = new theUserRouterConfigurator(express, path);
 var taskRouterConfigurator = require('./Task/Router/routerConfigurator');
 
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

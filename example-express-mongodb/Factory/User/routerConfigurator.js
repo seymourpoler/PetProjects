@@ -20,11 +20,9 @@ function RouterConfigurator(express, path){
     });
 
     app.delete('/api/users/:id', function(req, res) {
-      var userId = req.params.id;
-      userRepository.deleteOne(userId, function(data){
-        res.json({ user: data });
-      });
+      controllerFactory.deletingUserController().delete(req, ress);
     });
+
   };
 }
 
