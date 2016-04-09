@@ -20,7 +20,7 @@ function RouterConfigurator(express, path){
     });
 
     app.delete('/api/users/:id', function(req, res) {
-      controllerFactory.deletingUserController().delete(req, ress);
+      controllerFactory.deletingUserController().delete(req, res);
     });
 
   };

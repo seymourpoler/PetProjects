@@ -1,10 +1,10 @@
 'use strict';
 
 function UserPresenter(view, client){
+
   view.subscribesToUserCreatingEvent(userCreatingEventHandler);
   view.subscribesToUserDeletingEvent(userDeletingEventHandler);
   loadUsers();
-
 
   function loadUsers(){
     view.clean();
@@ -104,7 +104,16 @@ function UserClient(){
   };
 
   this.deleteUser = function(userId, successHandler, errorHandler){
-
+    $.ajax({
+      url: "/api/Users" + '/' + userId,
+      type: 'DELETE'
+    })
+    .done(function(data) {
+      successHandler();
+    })
+    .fail(function(error) {
+      errorHandler();
+    });
   };
 }
 

@@ -3,9 +3,11 @@
 function DeletingUserController(userRepository){
 
   this.delete = function(request, response){
-    var userId = req.params.id;
+    var userId = request.params.id;
     userRepository.deleteOne(userId, function(data){
-      res.json({ user: data });
+      response.json({ user: data });
     });
   };
 }
+
+module.exports = DeletingUserController;
