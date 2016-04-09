@@ -14,7 +14,6 @@ var taskRouterConfigurator = require('./Task/Router/routerConfigurator');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//userRouterConfigurator.configure(app);
 userConfigurator.configure(app);
 taskRouterConfigurator.configure(app);
 
