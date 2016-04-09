@@ -23,7 +23,6 @@ describe("User Presenter", function(){
     });
 
     it("shows users", function(){
-      var allUsers = [{_id:'idLuke',name:'luke'},{_id:'idJohn', name:'John'}];
       client.getUsers.and.callFake(function(successhandler, errorHandler){
         successhandler(allUsers);
       });
@@ -38,6 +37,7 @@ describe("User Presenter", function(){
   describe("when new user is creating", function(){
     var userCreatingEventHandler = function(){};
     var userCreatingRequest;
+
     beforeEach(function(){
       view.subscribesToUserCreatingEvent.and.callFake(function(handler){
         userCreatingEventHandler = handler;
@@ -90,6 +90,20 @@ describe("User Presenter", function(){
       userDeletingEventHandler(3);
 
       expect(view.showErrorMessage).toHaveBeenCalled();
+    });
+
+    it("loads all the users again", function(){
+      client.deleteUser.and.callFake(function(userId, successHandler, errorHandler){
+        successHandler(allUsers);
+      });
+      client.getUsers.and.callFake(function(successhandler, errorHandler){
+        successhandler(allUsers);
+      });
+      presenter = new UserPresenter(view, client);
+
+      userDeletingEventHandler(3);
+
+      expect(view.loadUsers).toHaveBeenCalledWith(allUsers);
     });
   });
 });
