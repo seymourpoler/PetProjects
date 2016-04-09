@@ -1,6 +1,6 @@
 'use strict';
 
-function CreateController(userRepository){
+function CreatingUserController(userRepository){
 
   this.create = function(request, response){
     var user = {};
@@ -10,4 +10,4 @@ function CreateController(userRepository){
   };
 }
 
-module.exports = CreateController;
+module.exports = CreatingUserController;

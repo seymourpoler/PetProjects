@@ -1,17 +1,17 @@
 'use strict';
 
 var repositoryFactory = require('./repositoryFactory');
-var FindController = require('../../User/Controllers/findController');
-var CreateController = require('../../User/Controllers/createController');
+var SearchUserController = require('../../User/Controllers/searchUserController');
+var CreatingUserController = require('../../User/Controllers/creatingUserController');
 
 function ControllerFactory(){
-  this.findController = function(){
-    return new FindController(
+  this.searchUserController = function(){
+    return new SearchUserController(
           repositoryFactory.userRepository());
   };
 
-  this.createController = function(){
-    return new CreateController(
+  this.creatingUserController = function(){
+    return new CreatingUserController(
           repositoryFactory.userRepository());
   };
 }
