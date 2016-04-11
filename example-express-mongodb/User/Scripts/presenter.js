@@ -87,18 +87,23 @@ function UserView(){
 }
 
 function UserClient(){
+  var client = new delta.Client();
+  const url = '/api/Users';
+
   this.getUsers = function(successHandler, errorHandler){
-    $.get( "/api/Users")
+    $.get( url)
     .done(function(data) {
       successHandler(data.user);
     })
     .fail(function(error) {
       errorHandler();
     });
-  };
 
+  };
   this.createUser = function(userName, successHandler, errorHandler){
-    $.post( "/api/Users", {name: userName})
+    //client.post(url, {name: userName}, )
+
+    $.post( url, {name: userName})
     .done(function(data) {
       successHandler(data.user);
     })
@@ -109,7 +114,7 @@ function UserClient(){
 
   this.deleteUser = function(userId, successHandler, errorHandler){
     $.ajax({
-      url: "/api/Users" + '/' + userId,
+      url: url + '/' + userId,
       type: 'DELETE'
     })
     .done(function(data) {

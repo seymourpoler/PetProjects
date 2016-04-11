@@ -311,7 +311,6 @@ https://github.com/albertojs
 			$('#' + domId).append(htmlItem);
 		};
 
-
 		self.removeItem = function(itemId){
 				$('#' + domId).find(itemId).remove();
 		};
@@ -333,8 +332,7 @@ https://github.com/albertojs
 				});
 		};
 
-		self.post = function(data, url, successCallback, errorCallback)
-		{
+		self.post = function(data, url, successCallback, errorCallback){
 			$.ajax({
 					url: url,
 					data: JSON.stringify(data),
@@ -348,6 +346,19 @@ https://github.com/albertojs
 		        	}
 				});
 		};
+
+		self.delete = function(url, successCallback, errorCallback){
+			$.ajax({
+	      url: "/api/Users" + '/' + userId,
+	      type: 'DELETE'
+	    })
+	    .done(function() {
+	      successCallback();
+	    })
+	    .fail(function(error) {
+	      errorCallback(error);
+	    });
+	  };
 	};
 
 	delta.Redirector = function(){
