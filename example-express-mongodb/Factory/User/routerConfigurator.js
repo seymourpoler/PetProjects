@@ -16,7 +16,7 @@ function RouterConfigurator(express, path){
       controllerFactory.searchUserController().searchBy(req, res);
     });
     app.post('/api/users', function(req, res) {
-      controllerFactory.creatingUserController().create(req, res);
+      controllerFactory.creationUserController().create(req, res);
     });
 
     app.delete('/api/users/:id', function(req, res) {

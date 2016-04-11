@@ -2,11 +2,11 @@
 
 var repositoryFactory = require('./repositoryFactory');
 var SearchUserController = require('../../User/Controllers/searchUserController');
-var CreatingUserController = require('../../User/Controllers/creationUserController');
+var CreationUserController = require('../../User/Controllers/creationUserController');
 var DeletingUserController = require('../../User/Controllers/deletingUserController');
 
 function ControllerFactory(){
-  
+
   this.searchUserController = function(){
     return new SearchUserController(
           repositoryFactory.userRepository());

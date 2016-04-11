@@ -44,11 +44,13 @@ function UserPresenter(view, client){
 }
 
 function UserView(){
+  var btnSave = new delta.Button('btnSave');
+  var listOfUser = new delta.List('lstUsers');
+  var txtNewUserName = new delta.TextBox('txtNewUserName');
   var userDeletingEventHandler = function() {};
   this.subscribesToUserCreatingEvent = function(handler){
-    $('#btnSave').click(function(){
-      handler(
-        $('#txtNewUserName').val());
+    btnSave.onClick(function(){
+      handler(txtNewUserName.getText());
     });
   };
 
