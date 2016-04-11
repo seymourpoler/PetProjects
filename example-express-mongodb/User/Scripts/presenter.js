@@ -91,6 +91,8 @@ function UserClient(){
   const url = '/api/Users';
 
   this.getUsers = function(successHandler, errorHandler){
+    //client.get(url, successHandler, errorHandler);
+
     $.get( url)
     .done(function(data) {
       successHandler(data.user);
@@ -98,10 +100,10 @@ function UserClient(){
     .fail(function(error) {
       errorHandler();
     });
-
   };
+  
   this.createUser = function(userName, successHandler, errorHandler){
-    //client.post(url, {name: userName}, )
+    //client.post(url, {name: userName}, successHandler, errorHandler);
 
     $.post( url, {name: userName})
     .done(function(data) {
