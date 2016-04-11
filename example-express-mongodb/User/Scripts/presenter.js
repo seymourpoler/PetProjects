@@ -48,6 +48,7 @@ function UserView(){
   var listOfUser = new delta.List('lstUsers');
   var txtNewUserName = new delta.TextBox('txtNewUserName');
   var userDeletingEventHandler = function() {};
+
   this.subscribesToUserCreatingEvent = function(handler){
     btnSave.onClick(function(){
       handler(txtNewUserName.getText());
@@ -65,10 +66,14 @@ function UserView(){
   }
 
   this.loadUsers = function(users){
-    $("#lstUsers").empty();
+    //$("#lstUsers").empty();
+    listOfUser.clear();
     _(users).each(function(user){
+      /*
       $("#lstUsers").append(
         $("<li id='" + user._id + "'>" + user.name + " <a id='" + user._id + "' class='remove'>X</a></li>"));
+        */
+        listOfUser.addHtmlItem("<li id='" + user._id + "'>" + user.name + " <a id='" + user._id + "' class='remove'>X</a></li>");
     });
     attachDeletingUserEvent(userDeletingEventHandler);
   };

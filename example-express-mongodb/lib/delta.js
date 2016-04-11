@@ -355,13 +355,18 @@ https://github.com/albertojs
 		var self = this;
 
 		self.clear = function(){
-			$('#' + domId).clear();
+			$('#' + domId).empty();
 		};
 
 		self.addItem = function(item){
 			$('#' + domId).append(
         $("<li id='" + item.id + "'>" + item.name + "</li>"));
 		};
+
+		self.addHtmlItem = function(htmlItem){
+			$('#' + domId).append(htmlItem);
+		};
+
 
 		self.removeItem = function(itemId){
 				$('#' + domId).find(itemId).remove();
