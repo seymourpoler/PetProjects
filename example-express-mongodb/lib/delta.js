@@ -349,7 +349,7 @@ https://github.com/albertojs
 
 		self.delete = function(url, successCallback, errorCallback){
 			$.ajax({
-	      url: "/api/Users" + '/' + userId,
+	      url: url,
 	      type: 'DELETE'
 	    })
 	    .done(function() {

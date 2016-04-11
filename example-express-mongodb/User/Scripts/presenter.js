@@ -113,16 +113,7 @@ function UserClient(){
   };
 
   this.deleteUser = function(userId, successHandler, errorHandler){
-    $.ajax({
-      url: url + '/' + userId,
-      type: 'DELETE'
-    })
-    .done(function(data) {
-      successHandler();
-    })
-    .fail(function(error) {
-      errorHandler();
-    });
+    client.delete(url + '/' + userId, successHandler, errorHandler);
   };
 }
 
