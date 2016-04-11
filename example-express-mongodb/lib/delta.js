@@ -14,6 +14,10 @@ https://github.com/albertojs
 			return $('#' + domId).text();
 		};
 
+		self.clear = function(){
+			  $('#' + domId).empty();
+		};
+
 		self.hide = function(miliseconds){
 			$('#' + domId).hide(miliseconds);
 		};
@@ -291,6 +295,28 @@ https://github.com/albertojs
 
 	};
 
+	delta.List = function(domId){
+		var self = this;
+
+		self.clear = function(){
+			$('#' + domId).empty();
+		};
+
+		self.addItem = function(item){
+			$('#' + domId).append(
+        $("<li id='" + item.id + "'>" + item.name + "</li>"));
+		};
+
+		self.addHtmlItem = function(htmlItem){
+			$('#' + domId).append(htmlItem);
+		};
+
+
+		self.removeItem = function(itemId){
+				$('#' + domId).find(itemId).remove();
+		};
+	};
+
 	delta.Client = function(){
 		var self = this;
 
@@ -348,28 +374,6 @@ https://github.com/albertojs
 
 		self.remove = function(name){
 			$.removeCookie(name);
-		};
-	};
-
-	delta.List = function(domId){
-		var self = this;
-
-		self.clear = function(){
-			$('#' + domId).empty();
-		};
-
-		self.addItem = function(item){
-			$('#' + domId).append(
-        $("<li id='" + item.id + "'>" + item.name + "</li>"));
-		};
-
-		self.addHtmlItem = function(htmlItem){
-			$('#' + domId).append(htmlItem);
-		};
-
-
-		self.removeItem = function(itemId){
-				$('#' + domId).find(itemId).remove();
 		};
 	};
 

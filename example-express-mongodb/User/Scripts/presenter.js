@@ -44,6 +44,7 @@ function UserPresenter(view, client){
 }
 
 function UserView(){
+  var lblErrorMessage = new delta.Label('lblErrorMessage');
   var btnSave = new delta.Button('btnSave');
   var listOfUser = new delta.List('lstUsers');
   var txtNewUserName = new delta.TextBox('txtNewUserName');
@@ -66,26 +67,22 @@ function UserView(){
   }
 
   this.loadUsers = function(users){
-    //$("#lstUsers").empty();
     listOfUser.clear();
     _(users).each(function(user){
-      /*
-      $("#lstUsers").append(
-        $("<li id='" + user._id + "'>" + user.name + " <a id='" + user._id + "' class='remove'>X</a></li>"));
-        */
         listOfUser.addHtmlItem("<li id='" + user._id + "'>" + user.name + " <a id='" + user._id + "' class='remove'>X</a></li>");
     });
     attachDeletingUserEvent(userDeletingEventHandler);
   };
 
   this.clean = function(){
-    $('#lblErrorMessage').empty();
-    $('#lblErrorMessage').hide();
-    $('#txtNewUserName').val('');
+    lblErrorMessage.clear();
+    lblErrorMessage.hide();
+    txtNewUserName.clear();
   }
 
   this.showErrorMessage = function(message){
-    $('#lblErrorMessage').show(message);
+    lblErrorMessage.setText(message);
+    lblErrorMessage.show();
   };
 }
 
