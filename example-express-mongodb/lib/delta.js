@@ -5,33 +5,34 @@ https://github.com/albertojs
 
 	delta.Label = function(domId){
 		var self = this;
+		var label = $('#' + domId);
 
 		self.setText = function(text){
-			$('#' + domId).text(text);
+			label.text(text);
 		};
 
 		self.getText = function(){
-			return $('#' + domId).text();
+			return label.text();
 		};
 
 		self.clear = function(){
-			  $('#' + domId).empty();
+			  label.empty();
 		};
 
 		self.hide = function(miliseconds){
-			$('#' + domId).hide(miliseconds);
+			label.hide(miliseconds);
 		};
 
 		self.show = function(miliseconds){
-			$('#' + domId).show(miliseconds);
+			label.show(miliseconds);
 		};
 
 		self.toggle = function(miliseconds){
-			$('#' + domId).toggle(miliseconds);
+			label.toggle(miliseconds);
 		};
 
 		self.onHover = function(callback){
-			$('#' + domId).hover(function(){
+			label.hover(function(){
 				callback()
 			});
 		};
@@ -39,73 +40,75 @@ https://github.com/albertojs
 
 	delta.Panel = function(domId){
 		var self = this;
+		var panel = $('#' + domId);
 
 		self.hide = function(miliseconds){
-			$('#' + domId).hide(miliseconds);
+			panel.hide(miliseconds);
 		};
 
 		self.show = function(miliseconds){
-			$('#' + domId).show(miliseconds);
+			panel.show(miliseconds);
 		};
 
 		self.toggle = function(miliseconds){
-			$('#' + domId).toggle(miliseconds);
+			panel.toggle(miliseconds);
 		};
 
 		self.onHover = function(callback){
-			$('#' + domId).hover(function(){
+			panel.hover(function(){
 				callback()
 			});
 		};
 
 		self.setHtml = function(html){
-			$('#' + domId).append(html);
+			panel.append(html);
 		};
 
 		self.clear = function(){
-			$('#' + domId).empty();
+			panel.empty();
 		};
 	};
 
 	delta.TextBox = function(domId){
 		var self = this;
+		var textBox = $('#' + domId);
 
 		self.getText = function(){
-			return $('#' + domId).val();
+			return textBox.val();
 		};
 
 		self.setText = function(text){
-			$('#' + domId).val(text);
+			textBox.val(text);
 		};
 
 		self.hide = function(miliseconds){
-			$('#' + domId).hide(miliseconds);
+			textBox.hide(miliseconds);
 		};
 
 		self.show = function(miliseconds){
-			$('#' + domId).show(miliseconds);
+			textBox.show(miliseconds);
 		};
 
 		self.toggle = function(miliseconds){
-			$('#' + domId).toggle(miliseconds);
+			textBox.toggle(miliseconds);
 		};
 
 		self.clear = function(){
-			$('#' + domId).val('');
+			textBox.val('');
 		};
 
 		self.focus = function(){
-			$('#' + domId).focus();
+			textBox.focus();
 		};
 
 		self.onKeyPress = function(callback){
-			$('#' + domId).keypress(function(){
+			textBox.keypress(function(){
 				callback();
 			});
 		};
 
 		self.onKeyRelease = function(callback){
-			$('#' + domId).keyup(function() {
+			textBox.keyup(function() {
 		        callback();
 		    });
 		};
@@ -115,33 +118,33 @@ https://github.com/albertojs
 		var self = this;
 
 		self.onClick = function(callback){
-			$('#' + domId).click(function(){
+			textBox.click(function(){
 				callback();
 			});
 		};
 
 		self.getText = function(){
-			return $('#' + domId).val();
+			return textBox.val();
 		};
 
 		self.setText = function(text){
-			$('#' + domId).val(text);
+			textBox.val(text);
 		};
 
 		self.hide = function(miliseconds){
-			$('#' + domId).hide(miliseconds);
+			textBox.hide(miliseconds);
 		};
 
 		self.show = function(miliseconds){
-			$('#' + domId).show(miliseconds);
+			textBox.show(miliseconds);
 		};
 
 		self.toggle = function(miliseconds){
-			$('#' + domId).toggle(miliseconds);
+			textBox.toggle(miliseconds);
 		};
 
 		self.focus = function(){
-			$('#' + domId).focus();
+			textBox.focus();
 		};
 	};
 
@@ -223,43 +226,44 @@ https://github.com/albertojs
 
 	delta.DropDownList = function(domId){
 		var self = this;
+		var dropDownList = $('#' + domId);
 
 		self.hide = function(miliseconds){
-			$('#' + domId).hide(miliseconds);
+			dropDownList.hide(miliseconds);
 		};
 
 		self.show = function(miliseconds){
-			$('#' + domId).show(miliseconds);
+			dropDownList.show(miliseconds);
 		};
 
 		self.toggle = function(miliseconds){
-			$('#' + domId).toggle(miliseconds);
+			dropDownList.toggle(miliseconds);
 		};
 
 		self.focus = function(){
-			$('#' + domId).focus();
+			dropDownList.focus();
 		};
 
 		self.onChange = function(callback){
-			$('#' + domId).change(function(){
+			dropDownList.change(function(){
 				callback();
 			});
 		};
 
 		self.setSelectedIndex = function(index){
-			$('#' + domId).prop('selectedIndex', index);
+			dropDownList.prop('selectedIndex', index);
 		};
 
 		self.getSelectedIndex = function(){
-			return $('#' + domId).prop('selectedIndex');
+			return dropDownList.prop('selectedIndex');
 		};
 
 		self.setSelectedValue = function(value){
-			$('#' + domId).val(value);
+			dropDownList.val(value);
 		};
 
 		self.getSelectedValue = function(){
-			return $('#' + domId).val();
+			return dropDownList.val();
 		};
 
 		self.setSelectedText = function(text){
@@ -274,7 +278,7 @@ https://github.com/albertojs
 			if(index)
 				$('#' + domId + ' option').eq(index).before($('<option></option>').val(value).html(text));
 			else
-				$('#' + domId).append($('<option></option>').val(value).html(text));
+				dropDownList.append($('<option></option>').val(value).html(text));
 		};
 
 		self.removeByIndex = function(index){
@@ -290,29 +294,30 @@ https://github.com/albertojs
 		};
 
 		self.clear = function(){
-			$('#' + domId).find('option').remove();
+			dropDownList.find('option').remove();
 		};
 
 	};
 
 	delta.List = function(domId){
 		var self = this;
+		var list = $('#' + domId);
 
 		self.clear = function(){
-			$('#' + domId).empty();
+			list.empty();
 		};
 
 		self.addItem = function(item){
-			$('#' + domId).append(
+			list.append(
         $("<li id='" + item.id + "'>" + item.name + "</li>"));
 		};
 
 		self.addHtmlItem = function(htmlItem){
-			$('#' + domId).append(htmlItem);
+			list.append(htmlItem);
 		};
 
 		self.removeItem = function(itemId){
-				$('#' + domId).find(itemId).remove();
+				list.find(itemId).remove();
 		};
 	};
 
