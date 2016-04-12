@@ -150,37 +150,38 @@ https://github.com/albertojs
 
 	delta.CheckBox = function(domId){
 		var self = this;
+		var checkBox = $('#' + domId);
 
 		self.isChecked = function(){
-			return $('#' + domId).prop('checked');
+			return checkBox.prop('checked');
 		};
 
 		self.show = function(miliseconds){
-			$('#' + domId).show(miliseconds);
+			checkBox.show(miliseconds);
 		};
 
 		self.hide = function(miliseconds){
-			$('#' + domId).hide(miliseconds);
+			checkBox.hide(miliseconds);
 		};
 
 		self.toggle = function(miliseconds){
-			$('#' + domId).toggle(miliseconds);
+			checkBox.toggle(miliseconds);
 		};
 
 		self.check = function(){
-			$('#' + domId).prop('checked', true);
+			checkBox.prop('checked', true);
 		};
 
 		self.unCheck = function(){
-			$('#' + domId).prop('checked', false);
+			checkBox.prop('checked', false);
 		};
 
 		self.focus = function(){
-			$('#' + domId).focus();
+			checkBox.focus();
 		};
 
 		self.onChange = function(callback){
-			$('#' + domId).change(function(){
+			checkBox.change(function(){
 				callback();
 			});
 		};
@@ -188,37 +189,38 @@ https://github.com/albertojs
 
 	delta.RadioButton = function(domId){
 		var self = this;
+		var radioButton = $('#' + domId);
 
 		self.hide = function(miliseconds){
-			$('#' + domId).hide(miliseconds);
+			radioButton.hide(miliseconds);
 		};
 
 		self.show = function(miliseconds){
-			$('#' + domId).show(miliseconds);
+			radioButton.show(miliseconds);
 		};
 
 		self.check = function(){
-			$('#' + domId).prop('checked', true);
+			radioButton.prop('checked', true);
 		};
 
 		self.unCheck = function(){
-			$('#' + domId).prop('checked', false);
+			radioButton.prop('checked', false);
 		};
 
 		self.focus = function(){
-			$('#' + domId).focus();
+			radioButton.focus();
 		};
 
 		self.toggle = function(miliseconds){
-			$('#' + domId).toggle(miliseconds);
+			radioButton.toggle(miliseconds);
 		};
 
 		self.isChecked = function(){
-			return $('#' + domId).prop('checked');
+			return radioButton.prop('checked');
 		};
 
 		self.onChange = function(callback){
-			$('#' + domId).change(function(){
+			radioButton.change(function(){
 				callback();
 			});
 		};
