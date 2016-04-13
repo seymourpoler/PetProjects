@@ -1,6 +1,7 @@
 /*! delta v1.0.0
 https://github.com/albertojs
 */
+
 (function(delta){
 
 	delta.Label = function(domId){
@@ -116,35 +117,36 @@ https://github.com/albertojs
 
 	delta.Button = function(domId){
 		var self = this;
+		var button = $('#' + domId);
 
 		self.onClick = function(callback){
-			textBox.click(function(){
+			button.click(function(){
 				callback();
 			});
 		};
 
 		self.getText = function(){
-			return textBox.val();
+			return button.val();
 		};
 
 		self.setText = function(text){
-			textBox.val(text);
+			button.val(text);
 		};
 
 		self.hide = function(miliseconds){
-			textBox.hide(miliseconds);
+			button.hide(miliseconds);
 		};
 
 		self.show = function(miliseconds){
-			textBox.show(miliseconds);
+			button.show(miliseconds);
 		};
 
 		self.toggle = function(miliseconds){
-			textBox.toggle(miliseconds);
+			button.toggle(miliseconds);
 		};
 
 		self.focus = function(){
-			textBox.focus();
+			button.focus();
 		};
 	};
 
