@@ -5,6 +5,7 @@ module.exports = function(config) {
     browsers: ['Chrome'],
     files: [
       'lib/jasmine.min.js',
+      'lib/jquery.min.js',
       'lib/delta.js',
       'lib/utils.js',
       'Tests/*.js',
