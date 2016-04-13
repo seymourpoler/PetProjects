@@ -93,7 +93,7 @@ function UserClient(){
   this.getUsers = function(successHandler, errorHandler){
     //client.get(url, successHandler, errorHandler);
 
-    $.get( url)
+    $.get(url)
     .done(function(data) {
       successHandler(data.user);
     })
@@ -101,11 +101,11 @@ function UserClient(){
       errorHandler();
     });
   };
-  
+
   this.createUser = function(userName, successHandler, errorHandler){
     //client.post(url, {name: userName}, successHandler, errorHandler);
 
-    $.post( url, {name: userName})
+    $.post(url, {name: userName})
     .done(function(data) {
       successHandler(data.user);
     })
