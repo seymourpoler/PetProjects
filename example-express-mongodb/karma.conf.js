@@ -1,6 +1,10 @@
 module.exports = function(config) {
   config.set({
-    frameworks: ['jasmine'],
+    frameworks: ['browserify', 'jasmine'],
+    "preprocessors": {
+        "server.js": [ "browserify" ],
+        "Tests/serverSpec.js": [ "browserify" ]
+    }
     reporters: ['spec'],
     browsers: ['Chrome'],
     files: [
