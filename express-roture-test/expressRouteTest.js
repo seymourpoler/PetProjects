@@ -1,25 +1,25 @@
 function config(app){
     var self = this;
-    var currentUrl;
+    var currentVerb;
        
-    self.shouldMap = function(url){
-        currentUrl = url;
+    self.withVerb = function(verb){
+        currentVerb = verb;
         return self;
     };
     
-    self.to = function(method){
+    self.forUrl = function(url){
       for(var position = 0; position < app._router.stack.length; position++){
           if(app._router.stack[position].route && 
-                app._router.stack[position].route.path == currentUrl &&
-                hasMethodFor(method, app._router.stack[position].route)){
-              return console.log('has method: ' + method + ' for: ' + currentUrl);
+                app._router.stack[position].route.path == url &&
+                hasVerbFor(currentVerb, app._router.stack[position].route)){
+              return console.log('has verb: ' + currentVerb + ' for url: ' + url);
           }
       }
-      throw new Error('there is NO method: ' + method + ' for: ' + currentUrl);
+      throw new Error('there is NO verb: ' + currentVerb + ' for: ' + url);
       
-      function hasMethodFor(method, route){
+      function hasVerbFor(verb, route){
           for(var position=0; position < route.stack.length; position++){
-              if(route.stack[position].method == method){
+              if(route.stack[position].method == verb){
                   return true;
               }
           }
