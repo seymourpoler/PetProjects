@@ -11,9 +11,9 @@ app.get('/users/:id', function(req, res){
     res.send('Users --> id');
 });
 
-console.log(app.routes());
 
-console.log(config);
-
-config(app.routes)
-    .shouldMap('/users');
+var result = config(app)
+                        .shouldMap('/users')
+                        .to('get');
+                        
+console.log('result: ', result);
