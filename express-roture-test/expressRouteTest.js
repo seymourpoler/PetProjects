@@ -1,3 +1,9 @@
+/*
+ * express route test
+ * Released under the MIT license
+ * email: seymourpoler@gmail.com
+ */
+
 function config(app){
     var self = this;
     var currentVerb;
