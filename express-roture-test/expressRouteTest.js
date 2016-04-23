@@ -2,6 +2,7 @@
  * express route test
  * Released under the MIT license
  * email: seymourpoler@gmail.com
+ * comments: it is for express v4.0
  */
 
 function config(app){
