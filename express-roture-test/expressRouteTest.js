@@ -11,21 +11,20 @@ function config(app){
       for(var position = 0; position < app._router.stack.length; position++){
           if(app._router.stack[position].route && 
                 app._router.stack[position].route.path == currentUrl &&
-                hasMethod(method)){
-              return true;
+                hasMethodFor(method, app._router.stack[position].route)){
+              return console.log('has method: ' + method + ' for: ' + currentUrl);
           }
       }
+      throw new Error('there is NO method: ' + method + ' for: ' + currentUrl);
       
-      
-      function hasMethod(method){
-          for(var position=0; position < app._router.stack[position].route.stack.length; position++){
-              if(app._router.stack[position].route.stack.method == method){
+      function hasMethodFor(method, route){
+          for(var position=0; position < route.stack.length; position++){
+              if(route.stack[position].method == method){
                   return true;
               }
           }
           return false;
-      }
-      return false;          
+      }        
     };
     
     return self;
