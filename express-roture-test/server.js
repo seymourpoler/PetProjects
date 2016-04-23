@@ -13,5 +13,5 @@ app.get('/users/:id', function(req, res){
 
 
 var result = config(app)
-                        .shouldMap('/users')
-                        .to('get');
+                .shouldMap('/users')
+                .to('get');
