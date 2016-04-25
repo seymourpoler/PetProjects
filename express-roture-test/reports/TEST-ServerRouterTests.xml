@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuites>
-<testsuite name="Server Router Tests" errors="0" tests="3" failures="0" time="0.009" timestamp="2016-04-25T19:05:42">
-  <testcase classname="Server Router Tests" name="maps to put /users" time="0.005"></testcase>
-  <testcase classname="Server Router Tests" name="maps to /users/:id" time="0.001"></testcase>
-  <testcase classname="Server Router Tests" name="maps to delete /users" time="0"></testcase>
-</testsuite>
-</testsuites>
