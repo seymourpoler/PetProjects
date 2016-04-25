@@ -19,10 +19,10 @@ function config(app){
           if(app._router.stack[position].route && 
                 app._router.stack[position].route.path == url &&
                 hasVerbFor(currentVerb, app._router.stack[position].route)){
-              return console.log('has verb: ' + currentVerb + ' for url: ' + url);
+              return true
           }
       }
-      throw new Error('there is NO verb: ' + currentVerb + ' for: ' + url);
+      return false;
       
       function hasVerbFor(verb, route){
           for(var position=0; position < route.stack.length; position++){
