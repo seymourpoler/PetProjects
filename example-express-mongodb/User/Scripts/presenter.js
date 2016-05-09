@@ -4,6 +4,7 @@ function UserPresenter(view, client){
 
   view.subscribesToUserCreatingEvent(userCreatingEventHandler);
   view.subscribesToUserDeletingEvent(userDeletingEventHandler);
+  view.subscribesToAllUsersDeletingEvent(allUserDeletingEventHandler);
   loadUsers();
 
   function loadUsers(){
@@ -41,11 +42,27 @@ function UserPresenter(view, client){
       view.showErrorMessage('error creating user.');
     }
   }
+
+  function allUserDeletingEventHandler()
+  {
+    client.deleteAllUsers(successHandler, errorHandler);
+
+    function successHandler(){
+      view.clean();
+      loadUsers();
+    }
+
+    function errorHandler(){
+      throw 'not implemented';
+    }
+  }
 }
 
 function UserView(){
+  var self = this;
   var lblErrorMessage = new delta.Label('lblErrorMessage');
   var btnSave = new delta.Button('btnSave');
+  var btnRemoveAllUsers = new delta.Button('btnRemoveAllUsers');
   var listOfUser = new delta.List('lstUsers');
   var txtNewUserName = new delta.TextBox('txtNewUserName');
   var userDeletingEventHandler = function() {};
@@ -59,6 +76,8 @@ function UserView(){
   this.subscribesToUserDeletingEvent = function (handler){
     userDeletingEventHandler = handler;
   };
+
+  self.subscribesToAllUsersDeletingEvent = function(handler){};
 
   function attachDeletingUserEvent(handler){
     $('.remove').click(function(){
@@ -87,6 +106,7 @@ function UserView(){
 }
 
 function UserClient(){
+  var self = this;
   var client = new delta.Client();
   const url = '/api/Users';
 
@@ -117,6 +137,10 @@ function UserClient(){
   this.deleteUser = function(userId, successHandler, errorHandler){
     client.delete(url + '/' + userId, successHandler, errorHandler);
   };
+
+  self.deleteAllUsers = function(successHandler, errorHandler){
+    client.delete(url, successHandler, errorHandler);
+  }
 }
 
 function createUserPresenter(){
