@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23DDEC40-D984-417F-B5E0-22A7AE407E3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BugTracker.Data.MongoDb</RootNamespace>
+    <AssemblyName>BugTracker.Data.MongoDb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\MongoDB.Bson.2.2.4\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.2.4\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\MongoDB.Driver.2.2.4\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\Entities\User.cs" />
+    <Compile Include="Bugs\Entities\Bug.cs" />
+    <Compile Include="Bugs\BugsStore.Save.cs" />
+    <Compile Include="Bugs\BugsStore.FindByUserEmail.cs" />
+    <Compile Include="Users\UsersStore.Exists.cs" />
+    <Compile Include="Users\UsersStore.FindByEmail.cs" />
+    <Compile Include="Users\UsersStore.Save.cs" />
+    <Compile Include="Users\UsersStore.cs" />
+    <Compile Include="Bugs\BugsStore.cs" />
+    <Compile Include="Bugs\BugsStore.Remove.cs" />
+    <Compile Include="Bugs\BugsStore.Exists.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugTracker.Domain\BugTracker.Domain.csproj">
+      <Project>{8AC0CEAE-A1F2-45AE-9EFC-DFB5E1429D1A}</Project>
+      <Name>BugTracker.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Users\" />
+    <Folder Include="Bugs\" />
+    <Folder Include="Users\Entities\" />
+    <Folder Include="Bugs\Entities\" />
+  </ItemGroup>
+</Project>

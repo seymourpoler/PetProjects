@@ -1,0 +1,41 @@
+﻿<Properties StartupItem="BugTracker.Web.ASP.Net.MVC/BugTracker.Web.ASP.Net.MVC.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="chromium-browser" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BugTracker.Web.ASP.Net.MVC/Bugs/Scripts/Presenter.js">
+    <Files>
+      <File FileName="BugTracker.Web.ASP.Net.MVC/Bugs/Scripts/Presenter.js" Line="59" Column="41" />
+      <File FileName="BugTracker.Web.ASP.Net.MVC/Bugs/Controllers/BugsController.rest.cs" Line="101" Column="49" />
+      <File FileName="BugTracker.Data.MongoDb/Bugs/BugsStore.Remove.cs" Line="13" Column="1" />
+      <File FileName="BugTracker.Data.MongoDb/Bugs/BugsStore.Save.cs" Line="10" Column="43" />
+      <File FileName="BugTracker.Domain/Bugs/Commands/Repositories/IBugRepository.cs" Line="9" Column="34" />
+      <File FileName="BugTracker.Web.ASP.Net.MVC/App_Start/RoutersRegister.cs" Line="57" Column="61" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BugTracker" expanded="True">
+            <Node name="BugTracker.Data.MongoDb" expanded="True">
+              <Node name="Bugs" expanded="True" />
+            </Node>
+            <Node name="BugTracker.Web.ASP.Net.MVC" expanded="True">
+              <Node name="App_Start" expanded="True" />
+              <Node name="Bugs" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Scripts" expanded="True">
+                  <Node name="Presenter.js" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Factories" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
