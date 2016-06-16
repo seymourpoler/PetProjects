@@ -160,4 +160,12 @@ example-mongodb/node_modules
 example-express-mongodb/node_modules
 express-roture-test/node_modules
 express-roture-test/.vscode
-
+BugTracker/BugTracker.CrossCutting/bin
+BugTracker/BugTracker.CrossCutting/obj
+BugTracker/BugTracker.Data.MongoDb/bin
+BugTracker/BugTracker.Data.MongoDb/obj
+BugTracker/BugTracker.Domain/bin
+BugTracker/BugTracker.Domain/obj
+BugTracker/BugTracker.Web.ASP.Net.MVC/bin
+BugTracker/BugTracker.Web.ASP.Net.MVC/obj
+BugTracker/packages
