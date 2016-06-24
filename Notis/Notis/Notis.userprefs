@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Notis.Gui.Gtk/Notis.Gui.Gtk.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Notis.Infrastructure/Logger/NullLogger.cs">
+    <Files>
+      <File FileName="Notis.Gui.Gtk/Program.cs" Line="1" Column="1" />
+      <File FileName="Notis.Infrastructure/MyClass.cs" Line="1" Column="1" />
+      <File FileName="Notis.Infrastructure/Logger/ILogger.cs" Line="8" Column="3" />
+      <File FileName="Notis.Infrastructure/Logger/NullLogger.cs" Line="5" Column="9" />
+      <File FileName="Notis.Infrastructure/Logger/ConsoleLogger.cs" Line="5" Column="9" />
+      <File FileName="Notis.Infrastructure/Logger/Logger.cs" Line="29" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
