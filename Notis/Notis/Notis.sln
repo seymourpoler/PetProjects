@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notis", "Notis\Notis.csproj", "{471E2805-2BED-4F90-AD57-94AD21C59023}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notis.Gui.Gtk", "Notis.Gui.Gtk\Notis.Gui.Gtk.csproj", "{0DF5B74C-D395-4ED7-A295-D0EC45422712}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notis.Infrastructure", "Notis.Infrastructure\Notis.Infrastructure.csproj", "{F3BCB92D-88C7-4386-8325-95EAD3B1FE54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notis.Domain", "Notis.Domain\Notis.Domain.csproj", "{4D8D52F9-E1FE-4440-9358-D10B5914F33A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{0DF5B74C-D395-4ED7-A295-D0EC45422712}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DF5B74C-D395-4ED7-A295-D0EC45422712}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DF5B74C-D395-4ED7-A295-D0EC45422712}.Release|Any CPU.Build.0 = Release|Any CPU
-		{471E2805-2BED-4F90-AD57-94AD21C59023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{471E2805-2BED-4F90-AD57-94AD21C59023}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{471E2805-2BED-4F90-AD57-94AD21C59023}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{471E2805-2BED-4F90-AD57-94AD21C59023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D8D52F9-E1FE-4440-9358-D10B5914F33A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D8D52F9-E1FE-4440-9358-D10B5914F33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D8D52F9-E1FE-4440-9358-D10B5914F33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D8D52F9-E1FE-4440-9358-D10B5914F33A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F3BCB92D-88C7-4386-8325-95EAD3B1FE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F3BCB92D-88C7-4386-8325-95EAD3B1FE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3BCB92D-88C7-4386-8325-95EAD3B1FE54}.Release|Any CPU.ActiveCfg = Release|Any CPU

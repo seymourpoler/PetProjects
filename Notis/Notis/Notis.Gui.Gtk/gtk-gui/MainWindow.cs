@@ -6,9 +6,8 @@ public partial class MainWindow
 	protected virtual void Build ()
 	{
 		global::Stetic.Gui.Initialize (this);
-		// Widget MainWindow
-		this.Name = "MainWindow";
-		this.Title = global::Mono.Unix.Catalog.GetString ("MainWindow");
+		this.Name = "Notis";
+		this.Title = global::Mono.Unix.Catalog.GetString ("Notis");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();

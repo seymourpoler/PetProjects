@@ -8,6 +8,10 @@ public partial class MainWindow: Gtk.Window
 		Build ();
 	}
 
+	protected virtual void OnOpen(object sender, System.EventArgs e)
+	{
+	}
+
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 	{
 		Application.Quit ();
