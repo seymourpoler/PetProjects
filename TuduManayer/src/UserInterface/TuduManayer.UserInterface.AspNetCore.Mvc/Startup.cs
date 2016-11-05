@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -26,6 +27,11 @@ namespace TuduManayer.UserInterface.AspNetCore.Mvc
         {
             // Add framework services.
             services.AddTransient<IControllerFactory, TuduManayerControllerFactory>();
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                options.ViewLocationExpanders.Clear();
+                options.ViewLocationExpanders.Add(new TuduManayerViewLocationExpander());
+            });
             services.AddMvc();
         }
 
