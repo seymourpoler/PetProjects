@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Web.Login.Controllers
+namespace TuduManayer.UserInterface.AspNetCore.Mvc.Login.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController :  Controller
     {
         public IActionResult Index()
         {

@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using System;
-using Web.Login.Controllers;
-using Web.Controllers;
+using TuduManayer.UserInterface.AspNetCore.Mvc.Login.Controllers;
+using TuduManayer.UserInterface.AspNetCore.Mvc.Controllers;
 
-namespace Web
+namespace TuduManayer.UserInterface.AspNetCore.Mvc
 {
     public class CustomControllerFactory : IControllerFactory
     {
         public object CreateController(ControllerContext context)
         {
-            if(context.ActionDescriptor.ControllerTypeInfo.AsType() == typeof(LoginController))
+            if (context.ActionDescriptor.ControllerTypeInfo.AsType() == typeof(LoginController))
             {
                 return new LoginController();
             }

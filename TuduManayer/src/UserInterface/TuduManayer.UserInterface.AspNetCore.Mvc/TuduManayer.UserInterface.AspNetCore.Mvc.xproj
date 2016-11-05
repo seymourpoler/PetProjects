@@ -6,8 +6,8 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>6ff95c10-5bd3-415c-938e-797e52997903</ProjectGuid>
-    <RootNamespace>TuduManayer.UserInterface.Web</RootNamespace>
+    <ProjectGuid>3e95f200-9048-4555-af12-9864f04d51c7</ProjectGuid>
+    <RootNamespace>TuduManayer.UserInterface.AspNetCore.Mvc</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>

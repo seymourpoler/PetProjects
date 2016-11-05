@@ -169,5 +169,5 @@ BugTracker/BugTracker.Domain/obj
 BugTracker/BugTracker.Web.ASP.Net.MVC/bin
 BugTracker/BugTracker.Web.ASP.Net.MVC/obj
 BugTracker/packages
-TuduManayer\src\UserInterface\Web\bin
-TuduManayer\src\UserInterface\Web\obj
+TuduManayer\src\UserInterface\TuduManayer.UserInterface.AspNetCore.Mvc\bin
+TuduManayer\src\UserInterface\TuduManayer.UserInterface.AspNetCore.Mvc\obj
