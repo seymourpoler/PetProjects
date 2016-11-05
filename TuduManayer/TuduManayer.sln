@@ -7,8 +7,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{221C1D19-536
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F8023B8F-6A54-403E-9F82-46B6A05F09C7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BussinessLogic", "BussinessLogic", "{ADFA9C30-5472-4898-8230-DBC2EFE0A0EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{F6401E24-6A57-4FA4-A893-0AEC460B9F6C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{7ED988B6-E0F3-43DD-975A-DCDB7696D730}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Web", "src\UserInterface\Web\Web.xproj", "{6FF95C10-5BD3-415C-938E-797E52997903}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FF95C10-5BD3-415C-938E-797E52997903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF95C10-5BD3-415C-938E-797E52997903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF95C10-5BD3-415C-938E-797E52997903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF95C10-5BD3-415C-938E-797E52997903}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ADFA9C30-5472-4898-8230-DBC2EFE0A0EF} = {221C1D19-5360-48B1-953A-AB236A34C682}
+		{F6401E24-6A57-4FA4-A893-0AEC460B9F6C} = {221C1D19-5360-48B1-953A-AB236A34C682}
+		{7ED988B6-E0F3-43DD-975A-DCDB7696D730} = {221C1D19-5360-48B1-953A-AB236A34C682}
+		{6FF95C10-5BD3-415C-938E-797E52997903} = {7ED988B6-E0F3-43DD-975A-DCDB7696D730}
 	EndGlobalSection
 EndGlobal
