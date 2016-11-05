@@ -2,7 +2,7 @@
 
 namespace TuduManayer.UserInterface.AspNetCore.Mvc.Login.Controllers
 {
-    public class LoginController :  Controller
+    public partial class LoginController :  Controller
     {
         public IActionResult Index()
         {
