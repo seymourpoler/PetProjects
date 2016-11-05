@@ -7,8 +7,6 @@ namespace TuduManayer.UserInterface.AspNetCore.Mvc.Login.Controllers
         public IActionResult Index()
         {
             return View();
-            //return View("Index.cshtml");
-            //return View("~/Login/Views/Index.cshtml");
         }
     }
 }
