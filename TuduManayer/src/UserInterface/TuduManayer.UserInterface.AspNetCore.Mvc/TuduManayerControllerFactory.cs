@@ -6,7 +6,7 @@ using TuduManayer.UserInterface.AspNetCore.Mvc.Controllers;
 
 namespace TuduManayer.UserInterface.AspNetCore.Mvc
 {
-    public class CustomControllerFactory : IControllerFactory
+    public class TuduManayerControllerFactory : IControllerFactory
     {
         public object CreateController(ControllerContext context)
         {

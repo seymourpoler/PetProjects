@@ -26,8 +26,7 @@ namespace TuduManayer.UserInterface.AspNetCore.Mvc
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddTransient<IControllerFactory, CustomControllerFactory>();
-            services.AddSingleton<IRazorViewEngine, CustomRazorViewEngine>();
+            services.AddTransient<IControllerFactory, TuduManayerControllerFactory>();
             services.AddMvc();
         }
 
