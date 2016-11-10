@@ -1,1 +1,19 @@
 ﻿<h4>Login View</h4>
+
+<div id="loginContainer">
+    <div>
+        <label>Email: </label>
+        <input type="text" id="txtEmail"/>
+        <label>PassWord: </label>
+        <input type="text" id="txtPassword" />
+    </div>
+    <div>
+        <a id="btnLogin">Login</a>
+        <p id="lblMessage" stye="display:none"></p>
+    </div>
+</div>
+
+<script src="@Url.Content("~/Login/Scripts/Presenter.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    createPresenter();
+</script>
