@@ -5,12 +5,12 @@ namespace TuduManayer.BussinessLogic.Login
 {
     public interface ILoginValidator
     {
-        bool Validate(Credentials credentials);
+        bool Validate(LoginValidationRequest request);
     }
 
     public class LoginValidator : ILoginValidator
     {
-        public bool Validate(Credentials credentials)
+        public bool Validate(LoginValidationRequest request)
         {
             throw new NotImplementedException();
         }

@@ -12,7 +12,8 @@ namespace TuduManayer.UserInterface.AspNetCore.Mvc
         {
             if (context.ActionDescriptor.ControllerTypeInfo.AsType() == typeof(LoginController))
             {
-                return new LoginController();
+                return new LoginController(
+                    loginValidator: new TuduManayer.BussinessLogic.Login.LoginValidator());
             }
             return new HomeController();
         }

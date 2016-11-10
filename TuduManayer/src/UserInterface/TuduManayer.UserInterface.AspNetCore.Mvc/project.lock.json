@@ -3804,6 +3804,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "TuduManayer.BussinessLogic.NETCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "netstandard1.6/TuduManayer.BussinessLogic.NETCore.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/TuduManayer.BussinessLogic.NETCore.dll": {}
+        }
       }
     }
   },
@@ -9874,6 +9887,11 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "TuduManayer.BussinessLogic.NETCore/1.0.0": {
+      "type": "project",
+      "path": "../../BussinessLogic/TuduManayer.BussinessLogic.NETCore/project.json",
+      "msbuildProject": "../../BussinessLogic/TuduManayer.BussinessLogic.NETCore/TuduManayer.BussinessLogic.NETCore.xproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9892,7 +9910,8 @@
       "Microsoft.Extensions.Logging.Debug >= 1.0.0",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.0.0",
       "Microsoft.NETCore.App >= 1.0.1",
-      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0"
+      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0",
+      "TuduManayer.BussinessLogic.NETCore >= 1.0.0-*"
     ],
     ".NETCoreApp,Version=v1.0": []
   },
