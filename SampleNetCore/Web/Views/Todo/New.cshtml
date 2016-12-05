@@ -1,0 +1,22 @@
+﻿<br/>
+
+<div>
+    <input type="text" id="txtTitle" />
+    <p id="lblErrorMessageForTxtTitle" style="display:none"></p>
+</div>
+
+<div>
+    <textarea col="5" row="5" id="txtDescription"></textarea>
+    <p id="lblErrorMessageForTxtDescription" style="display:none"></p>
+</div>
+<br />
+<a id="btnSave">Save</a>
+<p id="lblErrorMessage" style="display:none"></p>
+<p id="lblMessage" style="display:none"></p>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/Todo/Create/Presenter.js"></script>
+
+<script type="text/javascript">
+    createPresenter();
+</script>

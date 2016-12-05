@@ -1,0 +1,12 @@
+﻿<h4>TODO</h4>
+
+<ul>
+    @foreach (var todo in Model)
+    {
+        <li>
+            id: @Html.Raw(todo.Id)
+            title: @Html.Raw(todo.Title)
+            description: @Html.Raw(todo.Description)
+        </li>
+    }
+</ul>
