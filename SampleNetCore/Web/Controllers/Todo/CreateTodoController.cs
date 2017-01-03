@@ -2,9 +2,11 @@
 using Infrestructura;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Web.Filters;
 
 namespace Web.Controllers.Todo
 {
+    [TypeFilter(typeof(InternalServerErrorExceptionFilterAttribute))]
     public class CreateTodoController : Controller
     {
         private readonly ITodoCreator creator;
@@ -19,23 +21,18 @@ namespace Web.Controllers.Todo
         [HttpPost]
         public IActionResult Create(TodoCreationRequest request)
         {
-            try {
-                var creationResult = Domain.Commands.Models.TodoCreationRequest.Create(
-                    title: request.Title,
-                    description: request.Description);
-                if (!creationResult.IsValid)
-                {
-                    return BadRequest(
-                        error: serializer.Serialize(
-                            entity: creationResult.Errors));
-                }
-                creator.Create(
-                    request: creationResult.Model);
-                return Ok();
+            var creationResult = Domain.Commands.Models.TodoCreationRequest.Create(
+                title: request.Title,
+                description: request.Description);
+            if (!creationResult.IsValid)
+            {
+                return BadRequest(
+                    error: serializer.Serialize(
+                        entity: creationResult.Errors));
             }
-            catch (Exception ex) {
-                return StatusCode(500);
-            }
+            creator.Create(
+                request: creationResult.Model);
+            return Ok();
         }
     }
 

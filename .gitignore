@@ -173,3 +173,12 @@ TuduManayer\src\UserInterface\TuduManayer.UserInterface.AspNetCore.Mvc\bin
 TuduManayer\src\UserInterface\TuduManayer.UserInterface.AspNetCore.Mvc\obj
 TuduManayer\src\BussinessLogic\TuduManayer.BussinessLogic.NETCore\bin
 TuduManayer\src\BussinessLogic\TuduManayer.BussinessLogic.NETCore\obj
+SampleNetCore\Data\bin
+SampleNetCore\Data\obj
+SampleNetCore\Domain\bin
+SampleNetCore\Domain\obj
+SampleNetCore\Infrestructura\bin
+SampleNetCore\Infrestructura\obj
+SampleNetCore\Web\bin
+SampleNetCore\Web\obj
+

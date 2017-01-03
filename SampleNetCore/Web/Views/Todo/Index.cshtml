@@ -1,12 +1,24 @@
 ﻿<h4>TODO</h4>
 
-<ul>
+<table>
     @foreach (var todo in Model)
     {
-        <li>
-            id: @Html.Raw(todo.Id)
-            title: @Html.Raw(todo.Title)
-            description: @Html.Raw(todo.Description)
-        </li>
+        <tr>
+           <td class="id"> @Html.Raw(todo.Id) </td>
+            <td>title: @Html.Raw(todo.Title)</td>
+            <td>description: @Html.Raw(todo.Description)</td>
+            <td><a class="remove">remove</a></td>
+        </tr>
     }
-</ul>
+    @Html.ActionLink("New Todo","New", "Todo", null, null)
+</table>
+
+<label id="lblMessage"></label>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/Todo/Index/Presenter.js"></script>
+
+<script type="text/javascript">
+    createPresenter();
+</script>

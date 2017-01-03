@@ -1,8 +1,11 @@
 ﻿using Domain.Queries;
 using Microsoft.AspNetCore.Mvc;
+using Web.Filters;
 
 namespace Web.Controllers.Todo
 {
+    [TypeFilter(typeof(SessionRequiredFilterAttribute))]
+    [TypeFilter(typeof(InternalServerErrorExceptionFilterAttribute))]
     public class TodoController : Controller
     {
         private readonly ITodoFindRepository repository;
@@ -12,7 +15,6 @@ namespace Web.Controllers.Todo
             this.repository = repository;
         }
 
-        // GET: /<controller>/
         public IActionResult Index()
         {
             return View(

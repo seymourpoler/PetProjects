@@ -9,6 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
+using Web.Filters;
+using Web.Services;
 
 namespace Web
 {
@@ -31,10 +34,20 @@ namespace Web
         {
             // Add framework services.
             services.AddMvc();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.CookieName = "Session";
+            });
+
+            services.AddScoped<InternalServerErrorExceptionFilterAttribute>();
             services.AddTransient<IJsonSerializer, JsonSerializer>();
+            services.AddTransient<IStringEncoder, StringEncoder>();
+            services.AddTransient<ILoginValidator, LoginValidator>();
             services.AddTransient<ITodoFindRepository, TodoFindRepository>();
             services.AddTransient<ITodoCreator, TodoCreator>();
             services.AddTransient<ITodoInsertRepository, TodoInsertRepository>();
+            services.AddTransient<ITodoRemover, TodoRemover>();
+            services.AddTransient<ITodoDeleteRepository, TodoDeleteRepository>();
             services.AddDbContext<SampleDbContext>(options => options.UseInMemoryDatabase());
         }
 
@@ -44,15 +57,17 @@ namespace Web
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseBrowserLink();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
+            app.UseSession();
+
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //    app.UseBrowserLink();
+            //}
+            //else
+            //{
+            //    app.UseExceptionHandler("/Home/Error");
+            //}
 
             app.UseStaticFiles();
 
@@ -72,6 +87,31 @@ namespace Web
                    name: "CreateTodo",
                    template: "api/todos",
                    defaults: new { controller = "CreateTodo", action = "Create" });
+
+                routes.MapRoute(
+                   name: "DeleteTodo",
+                   template: "api/todos/{id}",
+                   defaults: new { controller = "DeleteTodo", action = "Delete" });
+
+                routes.MapRoute(
+                   name: "LoginIndex",
+                   template: "login/Index",
+                   defaults: new { controller = "Login", action = "Index" });
+
+                routes.MapRoute(
+                   name: "Login",
+                   template: "api/login",
+                   defaults: new { controller = "Login", action = "Login" });
+
+                routes.MapRoute(
+                    name: "InternalServerError",
+                    template: "Error/InternalServerError",
+                    defaults: new { controller = "Error", action = "InternalServerError" });
+
+                routes.MapRoute(
+                    name: "Forbidden",
+                    template: "Error/Forbiden",
+                    defaults: new { controller = "Error", action = "Forbidden" });
 
                 routes.MapRoute(
                     name: "HelloWorldIndex",

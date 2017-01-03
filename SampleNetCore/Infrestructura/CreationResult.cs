@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Infrestructura.Extensions;
+using System.Collections.ObjectModel;
 
 namespace Infrestructura
 {
@@ -20,7 +21,7 @@ namespace Infrestructura
 
         public bool IsValid
         {
-            get { return Errors.IsEmpty(); }
+            get { return Errors == null || Errors.IsEmpty(); }
         }
     }
 

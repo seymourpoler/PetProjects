@@ -91,10 +91,6 @@ function Client() {
             }
             errorHandler(response.responseJSON);
         });
-
-
-        
-
     };
 }
 
