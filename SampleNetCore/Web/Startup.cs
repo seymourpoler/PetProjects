@@ -75,12 +75,12 @@ namespace Web
             {
                 routes.MapRoute(
                    name: "TodoIndex",
-                   template: "todo/Index",
+                   template: "todos/Index",
                    defaults: new { controller = "Todo", action = "Index" });
 
                 routes.MapRoute(
                    name: "NewTodo",
-                   template: "todo/New",
+                   template: "todos/New",
                    defaults: new { controller = "Todo", action = "New" });
 
                 routes.MapRoute(
