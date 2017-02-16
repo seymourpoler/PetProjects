@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyList", "ReadOnlyList\ReadOnlyList.csproj", "{75EBEB59-4008-45D9-90FA-884B44DA9EDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyList.Tests", "ReadOnlyList.Tests\ReadOnlyList.Tests.csproj", "{60DA1D92-A15C-495F-A9EB-24316C8814AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60DA1D92-A15C-495F-A9EB-24316C8814AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DA1D92-A15C-495F-A9EB-24316C8814AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DA1D92-A15C-495F-A9EB-24316C8814AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DA1D92-A15C-495F-A9EB-24316C8814AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75EBEB59-4008-45D9-90FA-884B44DA9EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EBEB59-4008-45D9-90FA-884B44DA9EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EBEB59-4008-45D9-90FA-884B44DA9EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EBEB59-4008-45D9-90FA-884B44DA9EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
