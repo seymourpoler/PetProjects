@@ -332,6 +332,24 @@ namespace ReadOnlyList.Tests
 			result.Count.ShouldEqual(3);
 			result.First.Number.ShouldEqual (5);
 		}
+
+		[Test]
+		public void ReturnsZippedListWithAnotherEmptyLists()
+		{
+			var listOne = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_three", 5),
+					new DataTest("_two", 1),
+					new DataTest("_one", 4),
+				});
+
+			var listTwo = ReadOnlyList<DataTest>.Empty;
+
+			var result = listTwo.Zip(listOne);
+
+			result.Count.ShouldEqual(3);
+			result.First.Number.ShouldEqual (5);
+		}
 	}
 
 	internal class DataTest{

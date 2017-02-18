@@ -164,10 +164,16 @@ namespace ReadOnlyList
 
 		public ReadOnlyList<T> Zip(ReadOnlyList<T> list)
 		{
+			if(list.IsEmpty && this.IsEmpty){
+				return ReadOnlyList<T>.Empty;
+			}
 			if(list.IsEmpty){
 				return this;
 			}
-			return ReadOnlyList<T>.Empty;
+			if(IsEmpty){
+				return list;
+			}
+			throw new NotImplementedException ();
 		}
 
 		/*
