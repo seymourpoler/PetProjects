@@ -164,7 +164,7 @@ namespace ReadOnlyList
 
 		public ReadOnlyList<T> Zip(ReadOnlyList<T> list)
 		{
-			throw new NotImplementedException ();
+			return ReadOnlyList<T>.Empty;
 		}
 
 		/*
