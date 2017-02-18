@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace ReadOnlyList
@@ -13,6 +14,27 @@ namespace ReadOnlyList
 			list.ForEach (x => result.Add (function (x)));
 			return new ReadOnlyList<TResult> (result);
 		}
+
+		public static ReadOnlyList<T> OrderAscendingBy<T, TKey>(this ReadOnlyList<T> list, Func<T, TKey> ordering)
+			where TKey : class
+			where T : class
+		{
+			var result = new List<T>();
+			list.ForEach(x => result.Add(x));
+			return new ReadOnlyList<T>(
+				items: result.OrderBy(ordering));
+		}
+
+		public static ReadOnlyList<T> OrderDescendingBy<T, TKey>(this ReadOnlyList<T> list, Func<T, TKey> ordering)
+			where TKey : class
+			where T : class
+		{
+			var result = new List<T>();
+			list.ForEach(x => result.Add(x));
+			return new ReadOnlyList<T>(
+				items: result.OrderByDescending(ordering));
+		}
+	
 	}
 }
 

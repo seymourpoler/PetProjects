@@ -262,6 +262,58 @@ namespace ReadOnlyList.Tests
 			result.ShouldBeNull ();
 		}
 
+		[Test]
+		public void ReturnsOrderedListAscending()
+		{
+			var elements = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_three", 5),
+					new DataTest("_two", 1),
+					new DataTest("_one", 4),
+				});
+
+			var result = elements.OrderAscendingBy(x => x.Id);
+
+			result.First.Id.ShouldEqual ("_one");
+			result.Last.Id.ShouldEqual ("_two");
+		}
+
+		[Test]
+		public void ReturnsOrderedListDescending()
+		{
+			var elements = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_three", 5),
+					new DataTest("_two", 1),
+					new DataTest("_one", 4),
+				});
+
+			var result = elements.OrderDescendingBy(x => x.Id);
+
+			result.First.Id.ShouldEqual ("_two");
+			result.Last.Id.ShouldEqual ("_one");
+		}
+
+		[Test]
+		public void ReturnsEmptyList()
+		{
+			var result = ReadOnlyList<DataTest>.Empty;
+
+			result.Count.ShouldEqual (0);
+			result.IsEmpty.ShouldBeTrue();
+		}
+
+		[Test]
+		public void ReturnsZippedListWithAnEmptyLists()
+		{
+			var listOne = ReadOnlyList<DataTest>.Empty;
+
+			var listTwo = ReadOnlyList<DataTest>.Empty;
+
+			var result = listOne.Zip(listTwo);
+
+			result.IsEmpty.ShouldBeTrue();
+		}
 	}
 
 	internal class DataTest{

@@ -13,6 +13,13 @@ namespace ReadOnlyList
 			_items = items.ToList ();
 		}
 
+		public static ReadOnlyList<T> Empty{
+			get{
+				return new ReadOnlyList<T> (
+					new List<T> ());
+			}
+		}
+
 		public bool IsEmpty
 		{
 			get{return _items.Count == 0;}
@@ -153,6 +160,11 @@ namespace ReadOnlyList
 				result.Add(action(item));
 			}
 			return new ReadOnlyList<T>(result);
+		}
+
+		public ReadOnlyList<T> Zip(ReadOnlyList<T> list)
+		{
+			throw new NotImplementedException ();
 		}
 
 		/*
