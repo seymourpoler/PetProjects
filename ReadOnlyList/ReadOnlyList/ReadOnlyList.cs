@@ -164,6 +164,9 @@ namespace ReadOnlyList
 
 		public ReadOnlyList<T> Zip(ReadOnlyList<T> list)
 		{
+			if(list.IsEmpty){
+				return this;
+			}
 			return ReadOnlyList<T>.Empty;
 		}
 
