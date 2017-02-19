@@ -218,20 +218,16 @@ namespace ReadOnlyList
 				}
 				return new ReadOnlyList<T> (result);
 			}
-			if(this.Count < list.Count){
-				for(var position=0; position < list.Count; position++)
-				{
-					if (this.Count > position) {
-						result.Add (_items [position]);
-						result.Add (list [position]);
-					}else{ 
-						result.Add (list[position]);
-					}
+			for(var position=0; position < list.Count; position++)
+			{
+				if (this.Count > position) {
+					result.Add (_items [position]);
+					result.Add (list [position]);
+				}else{ 
+					result.Add (list[position]);
 				}
-				return new ReadOnlyList<T> (result);
 			}
-			return new ReadOnlyList<T> (
-				new List<T>{ First, list.First });
+			return new ReadOnlyList<T> (result);
 		}
 
 		private ReadOnlyList<T> Zip(ReadOnlyList<T> listOne, ReadOnlyList<T> listTwo){
