@@ -181,4 +181,8 @@ SampleNetCore\Infrestructura\bin
 SampleNetCore\Infrestructura\obj
 SampleNetCore\Web\bin
 SampleNetCore\Web\obj
-
+ReadOnlyList\packages
+ReadOnlyList\ReadOnlyList\bin
+ReadOnlyList\ReadOnlyList\obj
+ReadOnlyList\ReadOnlyList.Tests\bin
+ReadOnlyList\ReadOnlyList.Tests\obj

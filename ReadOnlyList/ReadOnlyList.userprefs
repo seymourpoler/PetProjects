@@ -2,17 +2,17 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ReadOnlyList/ReadOnlyList.cs">
     <Files>
-      <File FileName="ReadOnlyList/ReadOnlyList.cs" Line="41" Column="1" />
-      <File FileName="ReadOnlyList.Tests/ReadOnlyListTests.cs" Line="92" Column="1" />
+      <File FileName="ReadOnlyList/ReadOnlyList.cs" Line="189" Column="51" />
+      <File FileName="ReadOnlyList.Tests/ReadOnlyListTests.cs" Line="128" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ReadOnlyList" expanded="True">
-            <Node name="ReadOnlyList" expanded="True" />
-            <Node name="ReadOnlyList.Tests" expanded="True">
-              <Node name="ReadOnlyListTests.cs" selected="True" />
+            <Node name="ReadOnlyList" expanded="True">
+              <Node name="ReadOnlyList.cs" selected="True" />
             </Node>
+            <Node name="ReadOnlyList.Tests" expanded="True" />
           </Node>
         </State>
       </Pad>
