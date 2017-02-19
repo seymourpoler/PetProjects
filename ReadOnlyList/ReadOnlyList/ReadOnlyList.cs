@@ -78,6 +78,15 @@ namespace ReadOnlyList
 			return result;
 		}
 
+		public bool Contains(T element){
+			foreach(var item in _items){
+				if(item == element){
+					return true;
+				}
+			}
+			return false;
+		}
+
 		public decimal Average(Func<T, int> average)
 		{
 			var result = 0;

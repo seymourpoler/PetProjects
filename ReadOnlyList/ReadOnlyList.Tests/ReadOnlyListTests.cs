@@ -73,6 +73,16 @@ namespace ReadOnlyList.Tests
 		}
 
 		[Test]
+		public void ReturnsTrueIfContainsElement()
+		{
+			var elements = new ReadOnlyList<string> (new List<string> {"one", "two", "three"});
+
+			var result = elements.Contains("three");
+
+			result.ShouldBeTrue ();
+		}
+
+		[Test]
 		public void ReturnsNewReadOnlyListWithNewItemAppended()
 		{
 			var newElement = new DataTest ("_three", 3);
