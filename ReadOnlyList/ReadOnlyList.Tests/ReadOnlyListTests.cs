@@ -350,6 +350,68 @@ namespace ReadOnlyList.Tests
 			result.Count.ShouldEqual(3);
 			result.First.Number.ShouldEqual (5);
 		}
+
+		[Test]
+		public void ReturnsZippedListWithOneElement()
+		{
+			var listOne = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_one", 1)
+				});
+
+			var listTwo = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_two", 2)
+				});
+
+			var result = listOne.Zip (listTwo);
+
+			result.Count.ShouldEqual(2);
+			result.First.Number.ShouldEqual (1);
+			result.Last.Number.ShouldEqual (2);
+		}
+
+		[Test]
+		public void ReturnsZippedListWithOneElementAndAnotherTwoElements()
+		{
+			var listOne = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_one", 1),
+					new DataTest("_three", 3)
+				});
+
+			var listTwo = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_two", 2)
+				});
+
+			var result = listOne.Zip (listTwo);
+
+			result.Count.ShouldEqual(3);
+			result.First.Number.ShouldEqual (1);
+			result.Last.Number.ShouldEqual (3);
+		}
+
+		[Test]
+		public void ReturnsZippedListWithDifferentElements()
+		{
+			var listOne = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_one", 1)
+				});
+
+			var listTwo = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_two", 2),
+					new DataTest("_three", 3)
+				});
+
+			var result = listOne.Zip (listTwo);
+
+			result.Count.ShouldEqual(3);
+			result.First.Number.ShouldEqual (1);
+			result.Last.Number.ShouldEqual (3);
+		}
 	}
 
 	internal class DataTest{

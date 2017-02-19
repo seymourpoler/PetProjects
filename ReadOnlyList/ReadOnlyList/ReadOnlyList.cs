@@ -173,6 +173,44 @@ namespace ReadOnlyList
 			if(IsEmpty){
 				return list;
 			}
+			var result = new List<T> ();
+			if(this.Count == list.Count){
+				for(var position=0; position < this.Count; position++)
+				{
+					result.Add (this[position]);
+					result.Add (list [position]);
+				}
+				return new ReadOnlyList<T> (result);
+			}
+			if(this.Count > list.Count){
+				for(var position=0; position < this.Count; position++)
+				{
+					if (list.Count > position) {
+						result.Add (_items [position]);
+						result.Add (list [position]);
+					}else{ 
+						result.Add (_items[position]);
+					}
+				}
+				return new ReadOnlyList<T> (result);
+			}
+			if(this.Count < list.Count){
+				for(var position=0; position < list.Count; position++)
+				{
+					if (this.Count > position) {
+						result.Add (_items [position]);
+						result.Add (list [position]);
+					}else{ 
+						result.Add (list[position]);
+					}
+				}
+				return new ReadOnlyList<T> (result);
+			}
+			return new ReadOnlyList<T> (
+				new List<T>{ First, list.First });
+		}
+
+		private ReadOnlyList<T> Zip(ReadOnlyList<T> listOne, ReadOnlyList<T> listTwo){
 			throw new NotImplementedException ();
 		}
 
