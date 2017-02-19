@@ -73,6 +73,62 @@ namespace ReadOnlyList.Tests
 		}
 
 		[Test]
+		public void ReturnsNumberOfElementsSelected()
+		{
+			var elements = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_one", 1),
+					new DataTest("_two", 2),
+					new DataTest("_three", 3),
+					new DataTest("_four", 4),
+					new DataTest("_five", 5),
+				});
+
+			var result = elements.Take (3);
+
+			result.Count.ShouldEqual (3);
+			result.First.Number.ShouldEqual (1);
+			result.Last.Number.ShouldEqual (3);
+			
+		}
+
+		[Test]
+		public void ReturnsNumberOfElementsIfHigherThanTheNumberOfElements()
+		{
+			var elements = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_one", 1),
+					new DataTest("_two", 2),
+					new DataTest("_three", 3),
+					new DataTest("_four", 4),
+					new DataTest("_five", 5),
+				});
+
+			var result = elements.Take (9);
+
+			result.Count.ShouldEqual (5);
+			result.First.Number.ShouldEqual (1);
+			result.Last.Number.ShouldEqual (5);
+		}
+
+		[Test]
+		public void ReturnsNumberOfElementsIfLowerThanTheNumberOfElements()
+		{
+			var elements = new ReadOnlyList<DataTest> (
+				new List<DataTest>{ 
+					new DataTest("_one", 1),
+					new DataTest("_two", 2),
+					new DataTest("_three", 3),
+					new DataTest("_four", 4),
+					new DataTest("_five", 5),
+				});
+
+			var result = elements.Take (0);
+
+			result.Count.ShouldEqual (0);
+		}
+
+		[Test]
 		public void ReturnsTrueIfContainsElement()
 		{
 			var elements = new ReadOnlyList<string> (new List<string> {"one", "two", "three"});

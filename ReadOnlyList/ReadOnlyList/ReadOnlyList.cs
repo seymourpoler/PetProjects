@@ -45,6 +45,21 @@ namespace ReadOnlyList
 			get { return _items.Count; }
 		}	
 
+		public ReadOnlyList<T> Take(int numberOfElements)
+		{
+			if(numberOfElements <= 0){
+				return ReadOnlyList<T>.Empty;
+			}
+			if(numberOfElements >= Count){
+				return this;
+			}
+			var result = new List<T> ();
+			for(var position=0; position<numberOfElements; position++){
+				result.Add (_items [position]);
+			}
+			return new ReadOnlyList<T> (result);
+		}
+
 		public ReadOnlyList<T> Append(T item){
 			_items.Add(item);
 			return new ReadOnlyList<T>(_items);
