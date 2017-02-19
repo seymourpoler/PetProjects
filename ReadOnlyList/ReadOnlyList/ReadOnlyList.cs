@@ -213,19 +213,6 @@ namespace ReadOnlyList
 		private ReadOnlyList<T> Zip(ReadOnlyList<T> listOne, ReadOnlyList<T> listTwo){
 			throw new NotImplementedException ();
 		}
-
-		/*
-		public ReadOnlyList<TResult> Select<T, TResult>(Func<T, TResult> selector)
-		{
-			var result = new List<TResult> ();
-			foreach(var item in _items){
-				var selectedItem = selector ((T)item);
-				result.Add(selectedItem);
-			}
-			return new ReadOnlyList<TResult>(result);
-		}
-		*/
-
 	}
 }
 
