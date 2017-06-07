@@ -15,7 +15,5 @@
 			return new Some<T> (value);
 		}
 	}
-
-	public class None<T> : IOptional<T> where T : class{}
 }
 
