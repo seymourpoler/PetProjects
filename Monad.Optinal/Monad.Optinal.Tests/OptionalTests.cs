@@ -14,6 +14,14 @@ namespace Monad.Optinal.Tests
 
 			some.Should ().BeOfType<Some<string>> ();
 		}
+
+		[Test]
+		public void ReturnsNoneWhenThereIsNoneValue()
+		{
+			var some = Optional.From<string> (null);
+
+			some.Should ().BeOfType<None<string>> ();
+		}
 	}
 }
 
