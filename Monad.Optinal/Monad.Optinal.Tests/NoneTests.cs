@@ -12,13 +12,13 @@ namespace Monad.Optinal.Tests
         {
             var some = None<string>.From(null);
 
-            some.Should().BeOfType<Some<string>>();
+            some.Should().BeOfType<None<string>>();
         }
 
         [Test]
         public void ThrowsArgumentNullExceptionWhenHasValue()
         {
-            Action action = () => Some<string>.From("Tom");
+            Action action = () => None<string>.From("Tom");
 
             action.ShouldThrow<ArgumentNullException>();
         }
