@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="OptionalExtensionsTests.cs" />
     <Compile Include="OptionalTests.cs" />
+    <Compile Include="SomeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Monad.Optinal\Monad.Optinal.csproj">
