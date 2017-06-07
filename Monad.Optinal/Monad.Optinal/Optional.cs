@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Monad.Optinal
+﻿namespace Monad.Optinal
 {
 	public interface IOptional<T> where T : class
 	{
