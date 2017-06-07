@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using FluentAssertions;
 
 namespace Monad.Optinal.Tests
@@ -12,6 +13,14 @@ namespace Monad.Optinal.Tests
             var some = None<string>.From(null);
 
             some.Should().BeOfType<Some<string>>();
+        }
+
+        [Test]
+        public void ThrowsArgumentNullExceptionWhenHasValue()
+        {
+            Action action = () => Some<string>.From("Tom");
+
+            action.ShouldThrow<ArgumentNullException>();
         }
     }
 }
