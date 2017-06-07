@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using Monad.Optinal;
 
 namespace Monad.Optinal.Tests
 {
@@ -18,7 +17,7 @@ namespace Monad.Optinal.Tests
         [Test]
         public void ConvertsToNoneFromNull()
         {
-            User user;
+            User user = default(User);
             var none = user.ToOptional();
 
             none.Should().BeOfType<None<string>>();

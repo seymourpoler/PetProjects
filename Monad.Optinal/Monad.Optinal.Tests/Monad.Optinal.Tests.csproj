@@ -46,6 +46,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NoneTests.cs" />
     <Compile Include="OptionalExtensionsTests.cs" />
     <Compile Include="OptionalTests.cs" />
     <Compile Include="SomeTests.cs" />
