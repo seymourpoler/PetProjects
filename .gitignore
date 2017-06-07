@@ -156,6 +156,7 @@ $RECYCLE.BIN/
 .DS_Store
 
 Linqjs/node_modules
+ArrayWithLinqInJS/node_modules
 example-mongodb/node_modules
 example-express-mongodb/node_modules
 express-roture-test/node_modules
