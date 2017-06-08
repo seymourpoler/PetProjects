@@ -36,6 +36,7 @@
     <Compile Include="OptionalExtensions.cs" />
     <Compile Include="Some.cs" />
     <Compile Include="SomeExtensions.cs" />
+    <Compile Include="NoneExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
