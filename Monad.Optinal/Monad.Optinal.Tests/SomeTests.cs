@@ -33,6 +33,19 @@ namespace Monad.Optinal.Tests
 			result.Should().BeOfType<Some<User>>();
 		}
 
+		[Test]
+		public void BindsWithAction()
+		{
+			const string name = "John";
+			var monad = new Some<string> (name);
+			var value = String.Empty;
+
+			var result = monad.Bind (some: (x) =>  new User{Name = x}, none: () =>  value = name);
+
+			result.Should().BeOfType<Some<User>>();
+			value.Should ().BeEmpty();
+		}
+
 		private class User{
 			public string Name{ get; set;}
 		}
