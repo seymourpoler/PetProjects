@@ -20,7 +20,7 @@ namespace Monad.Optinal.Tests
             User user = default(User);
             var none = user.ToOptional();
 
-            none.Should().BeOfType<None<string>>();
+            none.Should().BeOfType<None<User>>();
         }
 
         private class User { }
