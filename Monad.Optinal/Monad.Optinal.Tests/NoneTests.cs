@@ -28,11 +28,24 @@ namespace Monad.Optinal.Tests
 		{
 			var monad = new None<string> ();
 			const string name = "John";
-			var result = monad.Bind (some: null, none: (_) =>  new User{Name = name});
+
+			var result = monad.Bind (some: null, none: (_) => new User{ Name = name });
 
 			result.Should().BeOfType<Some<User>>();
 		}
 
+		[Test]
+		public void BindsNoneWithAction()
+		{
+			var monad = new None<string> ();
+			const string name = "John";
+			var value = String.Empty;
+
+			var result = monad.Bind (some: (_) =>  new User{Name = name}, none: () =>  value = name);
+
+			result.Should().BeOfType<None<User>>();
+			value.Should ().Be (name);
+		}
 		private class User{
 			public string Name{ get; set;}
 		}
