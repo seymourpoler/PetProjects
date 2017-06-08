@@ -27,7 +27,6 @@ namespace Monad.Optinal.Tests
 		public void Binds()
 		{
 			var monad = new None<string> ();
-			var value = String.Empty;
 			const string name = "John";
 			var result = monad.Bind (some: null, none: (_) =>  new User{Name = name});
 
