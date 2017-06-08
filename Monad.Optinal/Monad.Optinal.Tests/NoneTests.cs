@@ -46,6 +46,7 @@ namespace Monad.Optinal.Tests
 			result.Should().BeOfType<None<User>>();
 			value.Should ().Be (name);
 		}
+
 		private class User{
 			public string Name{ get; set;}
 		}
