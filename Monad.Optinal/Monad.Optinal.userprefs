@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="Monad.Optinal/Monad.Optinal.csproj">
+﻿<Properties StartupItem="Monad.Optinal/Monad.Optinal.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Monad.Optinal.Tests/OptionalTests.cs">
     <Files>

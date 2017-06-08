@@ -22,5 +22,19 @@ namespace Monad.Optinal.Tests
 
             action.ShouldThrow<ArgumentNullException>();
         }
+
+		[Test]
+		public void Binds()
+		{
+			var monad = new Some<string> ("Tom");
+
+			var result = monad.Bind (some: (name) => new User{ Name = name }, none: null);
+
+			result.Should().BeOfType<Some<User>>();
+		}
+
+		private class User{
+			public string Name{ get; set;}
+		}
     }
 }

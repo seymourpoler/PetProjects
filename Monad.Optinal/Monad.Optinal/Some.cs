@@ -2,9 +2,13 @@
 
 namespace Monad.Optinal
 {
-    public class Some<T> : IOptional<T> where T : class
+	public class Some<T> : IOptional<T> where T : class
     {
         private readonly T _value;
+
+		public T Value{
+			get{return _value;}
+		}
 
         public Some(T value)
         {
