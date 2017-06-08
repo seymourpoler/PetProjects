@@ -24,7 +24,7 @@ namespace Monad.Optinal.Tests
         }
 
 		[Test]
-		public void Binds()
+		public void BindsNoneWithFunction()
 		{
 			var monad = new None<string> ();
 			const string name = "John";
