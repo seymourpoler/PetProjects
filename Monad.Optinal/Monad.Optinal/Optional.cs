@@ -4,7 +4,7 @@ namespace Monad.Optinal
 {
 	public interface IOptional<T> where T : class
 	{
-		IOptional<T> Bind (Action some, Action none);
+		IOptional<T> Bind (Action<T> some, Action none);
 	}
 
 	public class Optional

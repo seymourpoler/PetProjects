@@ -14,7 +14,7 @@ namespace Monad.Optinal
             throw new ArgumentNullException();
         }
 
-		public IOptional<T> Bind(Action some, Action none)
+		public IOptional<T> Bind (Action<T> some, Action none)
 		{
 			none ();
 			return this;

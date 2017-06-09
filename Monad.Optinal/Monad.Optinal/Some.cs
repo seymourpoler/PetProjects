@@ -24,9 +24,9 @@ namespace Monad.Optinal
             return new Some<T>(value);
         }
 
-		public IOptional<T> Bind(Action some, Action none)
+		public IOptional<T> Bind (Action<T> some, Action none)
 		{
-			some ();
+			some (_value);
 			return this;
 		}
     }

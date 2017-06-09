@@ -28,7 +28,7 @@ namespace Monad.Optinal.Tests
 		{
 			var monad = new Some<string> ("Tom");
 
-			var result = monad.Bind (some: (name) => new User{ Name = name }, none: null);
+			var result = monad.Bind<string, User> (some: (name) => new User{ Name = name }, none: null);
 
 			result.Should().BeOfType<Some<User>>();
 		}
@@ -40,10 +40,10 @@ namespace Monad.Optinal.Tests
 			var monad = new Some<string> (name);
 			var value = String.Empty;
 
-			var result = monad.Bind (some: (x) =>  new User{Name = x}, none: () =>  value = name);
+			var result = monad.Bind (some: (x) =>  value = x, none: () =>  value = name);
 
-			result.Should().BeOfType<Some<User>>();
-			value.Should ().BeEmpty();
+			result.Should().BeOfType<Some<string>>();
+			value.Should ().Be (name);
 		}
 
 		[Test]
@@ -53,7 +53,7 @@ namespace Monad.Optinal.Tests
 			var monad = new User{ Name = name }.ToOptional<User> ();
 			var value = String.Empty;
 
-			var result = monad.Bind (some: () => value = name, none: null);
+			var result = monad.Bind (some: (_) => value = name, none: null);
 
 			value.Should ().Be (name);
 		}
