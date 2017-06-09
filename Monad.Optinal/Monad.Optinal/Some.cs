@@ -34,5 +34,10 @@ namespace Monad.Optinal
 		{
 			return this;
 		}
+
+		public IOptional<T> Or (Func<T> func)
+		{
+			return this;
+		}
     }
 }

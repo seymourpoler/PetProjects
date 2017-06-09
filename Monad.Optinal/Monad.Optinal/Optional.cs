@@ -7,6 +7,7 @@ namespace Monad.Optinal
 		T Value{get;}
 		IOptional<T> Bind (Action<T> some, Action none);
 		IOptional<T> Or (T value);
+		IOptional<T> Or (Func<T> func);
 	}
 
 	public class Optional

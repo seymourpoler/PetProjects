@@ -25,5 +25,10 @@ namespace Monad.Optinal
 		{
 			return value.ToOptional<T> ();
 		}
+
+		public IOptional<T> Or (Func<T> func)
+		{
+			return func ().ToOptional ();
+		}
     }
 }
