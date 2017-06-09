@@ -39,5 +39,13 @@ namespace Monad.Optinal
 		{
 			return this;
 		}
+
+		public IOptional<T> Where (Func<T, bool> predicate)
+		{
+			if(predicate(_value)){
+				return this;
+			}
+			return new None<T> ();
+		}
     }
 }

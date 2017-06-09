@@ -30,5 +30,10 @@ namespace Monad.Optinal
 		{
 			return func ().ToOptional ();
 		}
+
+		public IOptional<T> Where (Func<T, bool> predicate)
+		{
+			return this;
+		}
     }
 }

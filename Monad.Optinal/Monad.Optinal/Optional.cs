@@ -8,6 +8,7 @@ namespace Monad.Optinal
 		IOptional<T> Bind (Action<T> some, Action none);
 		IOptional<T> Or (T value);
 		IOptional<T> Or (Func<T> func);
+		IOptional<T> Where(Func<T, bool> predicate);
 	}
 
 	public class Optional
