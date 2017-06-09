@@ -95,6 +95,15 @@ namespace Monad.Optinal.Tests
 		public void ReturnsSomeWhereIsTrue(){
 			var monad = new User{Name = "John"}.ToOptional(); 
 
+			var result = monad.Where ((x) => x.Name.Contains("o"));
+
+			result.Should ().BeOfType<Some<User>> ();
+		}
+
+		[Test]
+		public void ReturnsNoneWhereIsTrue(){
+			var monad = new User{Name = "John"}.ToOptional(); 
+
 			var result = monad.Where ((x) => x.Name == "Tom");
 
 			result.Should ().BeOfType<None<User>> ();
