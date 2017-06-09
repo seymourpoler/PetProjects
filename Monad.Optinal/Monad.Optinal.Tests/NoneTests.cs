@@ -72,6 +72,15 @@ namespace Monad.Optinal.Tests
 			value.Should ().Be (name);
 		}
 
+		[Test]
+		public void OrValue(){
+			var monad = Optional.From<string>(null);
+
+			var result = monad.Or ("Peter");
+
+			result.Value.Should ().Be ("Peter");
+		}
+
 		private class User{
 			public string Name{ get; set;}
 		}
