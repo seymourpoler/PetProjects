@@ -28,9 +28,21 @@ namespace Monad.Optinal.Tests
 		{
 			var monad = new Some<string> ("Tom");
 
-			var result = monad.Bind<string, User> (some: (name) => new User{ Name = name }, none: null);
+			var result = monad.Bind<string, User> (some: (name) => new User{ Name = name }, none: (_) => new User{ Name = _ });
 
 			result.Should().BeOfType<Some<User>>();
+		}
+
+		[Test]
+		public void BindsWithFunctionWithoutParameters()
+		{
+			const string name = "Tom";
+			var monad = new Some<string> (name);
+
+			var result = monad.Bind<string, User> (some: (x) => new User{ Name = x}, none: () => new User{ Name = name} );
+
+			result.Should().BeOfType<Some<User>>();
+			result.Value.Name.Should().Be(name);
 		}
 
 		[Test]
