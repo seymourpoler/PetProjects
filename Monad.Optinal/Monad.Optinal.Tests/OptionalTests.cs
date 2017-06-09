@@ -23,4 +23,3 @@ namespace Monad.Optinal.Tests
 		}
 	}
 }
-

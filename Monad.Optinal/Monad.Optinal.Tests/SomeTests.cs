@@ -46,6 +46,18 @@ namespace Monad.Optinal.Tests
 			value.Should ().BeEmpty();
 		}
 
+		[Test]
+		public void BindOnlyWithActions()
+		{
+			const string name = "Paul";
+			var monad = new User{ Name = name }.ToOptional<User> ();
+			var value = String.Empty;
+
+			var result = monad.Bind (some: () => value = name, none: null);
+
+			value.Should ().Be (name);
+		}
+
 		private class User{
 			public string Name{ get; set;}
 		}

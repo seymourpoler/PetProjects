@@ -1,8 +1,10 @@
-﻿namespace Monad.Optinal
+﻿using System;
+
+namespace Monad.Optinal
 {
 	public interface IOptional<T> where T : class
 	{
-		
+		IOptional<T> Bind (Action some, Action none);
 	}
 
 	public class Optional
