@@ -64,9 +64,9 @@ namespace Monad.Optinal.Tests
 			const string name = "John";
 			var value = String.Empty;
 
-			var result = monad.Bind (some: (x) => value = x, none: () => value = name);
+			var result = monad.Bind<string> (some: (x) => value = x, none: () => value = name);
 
-			result.Should().BeOfType<None<string>>();
+			result.Should().BeOfType<Some<string>>();
 			value.Should ().Be (name);
 		}
 
