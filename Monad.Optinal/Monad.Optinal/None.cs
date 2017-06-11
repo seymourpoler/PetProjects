@@ -16,12 +16,6 @@ namespace Monad.Optinal
             throw new ArgumentNullException();
         }
 
-		public IOptional<T> Bind (Action<T> some, Action none)
-		{
-			none ();
-			return this;
-		}
-
 		public IOptional<TResult> Bind<TResult> (Func<T, TResult> func) 
 			where TResult : class
 		{
@@ -32,6 +26,19 @@ namespace Monad.Optinal
 			where TResult : class
 		{
 			return none().ToOptional();
+		}
+
+		public IOptional<TResult> Bind<TResult>(Func<T, TResult> some, Action none) 
+			where TResult : class
+		{
+			none ();
+			return new None<TResult> ();
+		}
+
+		public IOptional<T> Bind (Action<T> some, Action none)
+		{
+			none ();
+			return this;
 		}
 
 		public IOptional<T> Or(T value)

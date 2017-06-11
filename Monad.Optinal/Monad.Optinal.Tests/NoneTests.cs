@@ -29,9 +29,10 @@ namespace Monad.Optinal.Tests
 			var monad = new None<string> ();
 			const string name = "John";
 
-			var result = monad.Bind (some: null, none: () => new User{ Name = name });
+			var result = monad.Bind (some: (x) => new User{ Name = x }, none: () => new User{ Name = name });
 
 			result.Should().BeOfType<Some<User>>();
+			result.Value.Name.Should ().Be (name);
 		}
 
 		[Test]
@@ -40,7 +41,7 @@ namespace Monad.Optinal.Tests
 			const string name = "Tom";
 			var monad = new Some<string> (name);
 
-			var result = monad.Bind<string, User> (some: (_) => new User{ Name = name}, none: () => new User{ Name = name});
+			var result = monad.Bind<User> (some: (_) => new User{ Name = name}, none: () => new User{ Name = name});
 
 			result.Should().BeOfType<Some<User>>();
 			result.Value.Name.Should().Be(name);
@@ -64,9 +65,9 @@ namespace Monad.Optinal.Tests
 			const string name = "John";
 			var value = String.Empty;
 
-			var result = monad.Bind<string> (some: (x) => value = x, none: () => value = name);
+			var result = monad.Bind<string> (some: (x) => value = x, none: () => {value = name;});
 
-			result.Should().BeOfType<Some<string>>();
+			result.Should().BeOfType<None<string>>();
 			value.Should ().Be (name);
 		}
 
@@ -77,9 +78,9 @@ namespace Monad.Optinal.Tests
 			var monad = new None<User> ();
 			var value = String.Empty;
 
-			var result = monad.Bind<string> (some: (x) => value = "James" , none: () => value = name);
+			var result = monad.Bind<string> (some: (x) => value = "James" , none: () => {value = name;});
 
-			result.Should().BeOfType<Some<string>>();
+			result.Should().BeOfType<None<string>>();
 			value.Should ().Be (name);
 		}
 
@@ -90,9 +91,10 @@ namespace Monad.Optinal.Tests
 			var monad = new None<User> ();
 			var value = String.Empty;
 
-			var result = monad.Bind (some: null, none: () => value = name);
+			var result = monad.Bind (some: null, none: () => {value = name;});
 
 			value.Should ().Be (name);
+			result.Should().BeOfType<None<User>> ();
 		}
 
 		[Test]

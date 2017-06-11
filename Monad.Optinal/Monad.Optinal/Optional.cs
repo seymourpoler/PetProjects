@@ -5,13 +5,13 @@ namespace Monad.Optinal
 	public interface IOptional<T> where T : class
 	{
 		T Value{get;}
-		IOptional<T> Bind (Action<T> some, Action none);
 		IOptional<T> Or (T value);
 		IOptional<T> Or (Func<T> func);
 		IOptional<T> Where(Func<T, bool> predicate);
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> func) where TResult : class;
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Func<TResult> none) where TResult : class;
-
+		IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Action none) where TResult : class;
+		IOptional<T> Bind (Action<T> some, Action none);
 	}
 
 	public class Optional
