@@ -21,11 +21,17 @@ namespace Monad.Optinal
 			none ();
 			return this;
 		}
-		//TODO: as extensions
+
 		public IOptional<TResult> Bind<TResult> (Func<T, TResult> func) 
 			where TResult : class
 		{
 			return new None<TResult> ();
+		}
+
+		public IOptional<TResult> Bind<TResult>(Func<T, TResult> some, Func<TResult> none) 
+			where TResult : class
+		{
+			return none().ToOptional();
 		}
 
 		public IOptional<T> Or(T value)
