@@ -34,6 +34,18 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void BindsFunctionOnlyForSome()
+		{
+			const string name = "Tom";
+			var monad = new Some<string> ("Luke");
+
+			var result = monad.Bind<string, User> ((_) => new User{ Name = name});
+
+			result.Should().BeOfType<Some<User>>();
+			result.Value.Name.Should().Be(name);
+		}
+
+		[Test]
 		public void BindsWithFunctionWithoutParameters()
 		{
 			const string name = "Tom";
@@ -68,6 +80,16 @@ namespace Monad.Optinal.Tests
 			var result = monad.Bind (some: (_) => value = name, none: null);
 
 			value.Should ().Be (name);
+		}
+
+		[Test]
+		public void BindsOnlyWithSome(){
+			var monad = new Some<string> ("Henry");
+
+			var result = monad.Bind<string, User> ((name) => new User{ Name = name });
+
+			result.Should ().BeOfType<Some<User>> ();
+			result.Value.Name.Should ().Be ("Henry");
 		}
 
 		[Test]

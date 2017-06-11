@@ -26,6 +26,13 @@ namespace Monad.Optinal
 			none ();
 			return new None<TResult> ();
 		}
+
+		public static IOptional<TResult> Bind<T, TResult>(this None<T> @this, Func<T, TResult> some) 
+			where TResult : class, new()
+			where T : class
+		{
+			return new None<TResult> ();
+		}
 	}
 }
 

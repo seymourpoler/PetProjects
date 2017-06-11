@@ -24,6 +24,13 @@ namespace Monad.Optinal
             return new Some<T>(value);
         }
 
+		//TODO: as extensions
+		public IOptional<TResult> Bind<TResult> (Func<T, TResult> func)
+			where TResult : class
+		{
+			return func (_value).ToOptional ();
+		}
+
 		public IOptional<T> Bind (Action<T> some, Action none)
 		{
 			some (_value);
