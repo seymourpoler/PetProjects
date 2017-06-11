@@ -5,7 +5,7 @@ namespace Monad.Optinal
 	public class None<T> : IOptional<T> where T : class
     {
 
-		public T Value{ get { return null; } }
+		public T Value{ get { return default(T); } }
 		
         public static None<T> From(T value)
         {
