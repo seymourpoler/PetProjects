@@ -71,6 +71,19 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void BindsWithActionOnlyForSome()
+		{
+			const string name = "John";
+			var monad = new Some<string> (name);
+			var value = String.Empty;
+
+			var result = monad.Bind (func: (x) =>  value = x);
+
+			result.Should().BeOfType<Some<string>>();
+			value.Should ().Be (name);
+		}
+
+		[Test]
 		public void BindOnlyWithActions()
 		{
 			const string name = "Paul";

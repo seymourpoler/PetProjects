@@ -48,6 +48,12 @@ namespace Monad.Optinal
 			return this;
 		}
 
+		public IOptional<T> Bind (Action<T> some)
+		{
+			some (_value);
+			return this;
+		}
+
 		public IOptional<T> Or(T value)
 		{
 			return this;

@@ -4,7 +4,6 @@ namespace Monad.Optinal
 {
 	public class None<T> : IOptional<T> where T : class
     {
-
 		public T Value{ get { return default(T); } }
 		
         public static None<T> From(T value)
@@ -38,6 +37,11 @@ namespace Monad.Optinal
 		public IOptional<T> Bind (Action<T> some, Action none)
 		{
 			none ();
+			return this;
+		}
+
+		public IOptional<T> Bind (Action<T> some)
+		{
 			return this;
 		}
 
