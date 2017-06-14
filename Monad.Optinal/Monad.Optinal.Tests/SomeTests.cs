@@ -77,7 +77,7 @@ namespace Monad.Optinal.Tests
 			var monad = new Some<string> (name);
 			var value = String.Empty;
 
-			var result = monad.Bind (func: (x) =>  value = x);
+			var result = monad.Bind (action: (x) =>  {value = x;});
 
 			result.Should().BeOfType<Some<string>>();
 			value.Should ().Be (name);

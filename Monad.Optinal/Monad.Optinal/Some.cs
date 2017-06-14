@@ -48,9 +48,9 @@ namespace Monad.Optinal
 			return this;
 		}
 
-		public IOptional<T> Bind (Action<T> some)
+		public IOptional<T> Bind (Action<T> action)
 		{
-			some (_value);
+			action (_value);
 			return this;
 		}
 
@@ -71,5 +71,5 @@ namespace Monad.Optinal
 			}
 			return new None<T> ();
 		}
-    }
+	}
 }

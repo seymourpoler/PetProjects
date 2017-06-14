@@ -40,7 +40,7 @@ namespace Monad.Optinal
 			return this;
 		}
 
-		public IOptional<T> Bind (Action<T> some)
+		public IOptional<T> Bind (Action<T> action)
 		{
 			return this;
 		}
