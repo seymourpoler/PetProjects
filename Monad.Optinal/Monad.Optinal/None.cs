@@ -72,10 +72,5 @@ namespace Monad.Optinal
 		{
 			return func ();
 		}
-
-		public IOptional<T> Filter (Func<T, bool> predicate)
-		{
-			return this;
-		}
     }
 }
