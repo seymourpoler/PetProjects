@@ -150,7 +150,7 @@ namespace Monad.Optinal.Tests
 		public void ValueOrFailure(){
 			var monad = Optional.From<User>(null); 
 
-			Action action = () => monad.ValueOrFailure();
+			Action action = () => monad.ValueOrFailure;
 
 			action.ShouldThrow<ValueMissingException> ();
 		}
@@ -164,6 +164,16 @@ namespace Monad.Optinal.Tests
 			var result = monad.ValueOr(()=> name);
 
 			result.Should().Be(name);
+		}
+
+		[Test]
+		public void Filter ()
+		{
+			var monad = Optional.From<string>(null); 
+
+			var result = monad.Filter((x)=> x.StartsWith("T"));
+
+			result.Should ().BeOfType<None<string>> ();
 		}
 
 		private class User{

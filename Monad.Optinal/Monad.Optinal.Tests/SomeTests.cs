@@ -149,7 +149,7 @@ namespace Monad.Optinal.Tests
 			const string name = "John";
 			var monad = new User{Name = name}.ToOptional(); 
 
-			var result = monad.ValueOrFailure ();
+			var result = monad.ValueOrFailure;
 
 			result.Name.Should ().Be(name);
 		}

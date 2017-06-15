@@ -82,5 +82,13 @@ namespace Monad.Optinal
 		{
 			return _value;
 		}
+
+		public IOptional<T> Filter (Func<T, bool> predicate)
+		{
+			if(predicate(_value)){
+				return this;
+			}
+			return new None<T> ();
+		}
 	}
 }
