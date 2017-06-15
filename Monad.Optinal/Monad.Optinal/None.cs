@@ -64,5 +64,10 @@ namespace Monad.Optinal
 		{
 			throw new ValueMissingException ();
 		}
+
+		public T ValueOr (Func<T> func)
+		{
+			return func ();
+		}
     }
 }

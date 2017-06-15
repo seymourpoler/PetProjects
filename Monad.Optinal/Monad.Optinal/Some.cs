@@ -76,5 +76,10 @@ namespace Monad.Optinal
 		{
 			return _value;
 		}
+
+		public T ValueOr (Func<T> func)
+		{
+			return _value;
+		}
 	}
 }

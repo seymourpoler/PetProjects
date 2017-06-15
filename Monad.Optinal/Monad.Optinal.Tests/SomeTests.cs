@@ -154,6 +154,17 @@ namespace Monad.Optinal.Tests
 			result.Name.Should ().Be(name);
 		}
 
+		[Test]
+		public void ValueOr ()
+		{
+			var name = "John";
+			var monad = new User{Name = name}.ToOptional(); 
+
+			var result = monad.ValueOr (() => new User{Name = "Tom"});
+
+			result.Name.Should ().Be (name);
+		}
+
 		private class User{
 			public string Name{ get; set;}
 		}

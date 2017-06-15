@@ -155,6 +155,17 @@ namespace Monad.Optinal.Tests
 			action.ShouldThrow<ValueMissingException> ();
 		}
 
+		[Test]
+		public void ValueOr ()
+		{
+			var name = "Jim";
+			var monad = Optional.From<string>(null); 
+
+			var result = monad.ValueOr(()=> name);
+
+			result.Should().Be(name);
+		}
+
 		private class User{
 			public string Name{ get; set;}
 		}
