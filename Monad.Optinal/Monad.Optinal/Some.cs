@@ -6,7 +6,13 @@ namespace Monad.Optinal
     {
 		private readonly T _value;
 
-		public T Value{
+		public T Value
+		{
+			get{return _value;}
+		}
+
+		public T ValueOrFailure 
+		{
 			get{return _value;}
 		}
 
@@ -70,11 +76,6 @@ namespace Monad.Optinal
 				return this;
 			}
 			return new None<T> ();
-		}
-
-		public T ValueOrFailure ()
-		{
-			return _value;
 		}
 
 		public T ValueOr (Func<T> func)

@@ -4,8 +4,16 @@ namespace Monad.Optinal
 {
 	public class None<T> : IOptional<T> where T : class
     {
-		public T Value{ get { return default(T); } }
-		
+		public T Value
+		{ 
+			get { return default(T); } 
+		}
+
+		public T ValueOrFailure
+		{
+			get{throw new ValueMissingException ();}
+		}
+
         public static None<T> From(T value)
         {
             if (default(T) == value)
@@ -58,11 +66,6 @@ namespace Monad.Optinal
 		public IOptional<T> Where (Func<T, bool> predicate)
 		{
 			return this;
-		}
-
-		public T ValueOrFailure ()
-		{
-			throw new ValueMissingException ();
 		}
 
 		public T ValueOr (Func<T> func)

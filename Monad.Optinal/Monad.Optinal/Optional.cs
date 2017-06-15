@@ -8,7 +8,7 @@ namespace Monad.Optinal
 		IOptional<T> Or (T value);
 		IOptional<T> Or (Func<T> func);
 		T ValueOr (Func<T> func);
-		T ValueOrFailure ();
+		T ValueOrFailure { get;}
 		IOptional<T> Where(Func<T, bool> predicate);
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> func) where TResult : class;
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Func<TResult> none) where TResult : class;
