@@ -150,7 +150,7 @@ namespace Monad.Optinal.Tests
 		public void ValueOrFailure(){
 			var monad = Optional.From<User>(null); 
 
-			Action action = () => monad.ValueOrFailure;
+			Action action = () => {var value = monad.ValueOrFailure;};
 
 			action.ShouldThrow<ValueMissingException> ();
 		}

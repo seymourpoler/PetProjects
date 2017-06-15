@@ -165,6 +165,16 @@ namespace Monad.Optinal.Tests
 			result.Name.Should ().Be (name);
 		}
 
+		[Test]
+		public void ReturnsNoneWhenFilteringIsFalse ()
+		{
+			var monad = Optional.From<string> ("James"); 
+
+			var result = monad.Filter((x)=> x.StartsWith("T"));
+
+			result.Should ().BeOfType<None<string>> ();
+		}
+
 		private class User{
 			public string Name{ get; set;}
 		}
