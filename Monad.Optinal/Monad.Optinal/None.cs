@@ -59,5 +59,10 @@ namespace Monad.Optinal
 		{
 			return this;
 		}
+
+		public T ValueOrFailure ()
+		{
+			throw new ValueMissingException ();
+		}
     }
 }

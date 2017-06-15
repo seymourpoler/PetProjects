@@ -13,6 +13,7 @@ namespace Monad.Optinal
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Action none) where TResult : class;
 		IOptional<T> Bind (Action<T> some, Action none);
 		IOptional<T> Bind (Action<T> action);
+		T ValueOrFailure ();
 	}
 
 	public class Optional
@@ -25,5 +26,7 @@ namespace Monad.Optinal
 			return new Some<T> (value);
 		}
 	}
+
+	public class ValueMissingException : Exception{}
 }
 

@@ -146,6 +146,15 @@ namespace Monad.Optinal.Tests
 			result.Should ().BeOfType<None<User>> ();
 		}
 
+		[Test]
+		public void ValueOrFailure(){
+			var monad = Optional.From<User>(null); 
+
+			Action action = () => monad.ValueOrFailure();
+
+			action.ShouldThrow<ValueMissingException> ();
+		}
+
 		private class User{
 			public string Name{ get; set;}
 		}

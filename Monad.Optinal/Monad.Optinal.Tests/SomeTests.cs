@@ -144,6 +144,16 @@ namespace Monad.Optinal.Tests
 			result.Should ().BeOfType<None<User>> ();
 		}
 
+		[Test]
+		public void ValueOrFailure(){
+			const string name = "John";
+			var monad = new User{Name = name}.ToOptional(); 
+
+			var result = monad.ValueOrFailure ();
+
+			result.Name.Should ().Be(name);
+		}
+
 		private class User{
 			public string Name{ get; set;}
 		}

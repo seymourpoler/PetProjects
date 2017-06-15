@@ -71,5 +71,10 @@ namespace Monad.Optinal
 			}
 			return new None<T> ();
 		}
+
+		public T ValueOrFailure ()
+		{
+			return _value;
+		}
 	}
 }
