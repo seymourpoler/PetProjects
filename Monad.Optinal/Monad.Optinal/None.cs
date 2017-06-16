@@ -14,6 +14,11 @@ namespace Monad.Optinal
 			get{throw new ValueMissingException ();}
 		}
 
+		public T ValueOr (Func<T> func)
+		{
+			return func ();
+		}
+
         public static None<T> From(T value)
         {
             if (default(T) == value)
@@ -22,6 +27,11 @@ namespace Monad.Optinal
             }
             throw new ArgumentNullException();
         }
+
+		public IOptional<T> Bind (Func<T> func)
+		{
+			return new Some<T> (func());
+		}
 
 		public IOptional<TResult> Bind<TResult> (Func<T, TResult> func) 
 			where TResult : class
@@ -66,11 +76,6 @@ namespace Monad.Optinal
 		public IOptional<T> Where (Func<T, bool> predicate)
 		{
 			return this;
-		}
-
-		public T ValueOr (Func<T> func)
-		{
-			return func ();
 		}
     }
 }

@@ -16,6 +16,11 @@ namespace Monad.Optinal
 			get{return _value;}
 		}
 
+		public T ValueOr (Func<T> func)
+		{
+			return _value;
+		}
+
         public Some(T value)
         {
             _value = value;
@@ -60,6 +65,11 @@ namespace Monad.Optinal
 			return this;
 		}
 
+		public IOptional<T> Bind (Func<T> func)
+		{
+			return new Some<T> (func());
+		}
+
 		public IOptional<T> Or(T value)
 		{
 			return this;
@@ -76,11 +86,6 @@ namespace Monad.Optinal
 				return this;
 			}
 			return new None<T> ();
-		}
-
-		public T ValueOr (Func<T> func)
-		{
-			return _value;
 		}
 	}
 }
