@@ -12,6 +12,7 @@ namespace Monad.Optinal
 		IOptional<T> Where(Func<T, bool> predicate);
 		IOptional<T> Bind (Func<T> func);
 		IOptional<T> Bind (Func<T> some, Action none);
+		IOptional<TResult> Bind<TResult> (Func<TResult> some, Action none) where TResult: class;
 		IOptional<TResult> Bind<TResult> (Func<TResult> func) where TResult : class;
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> func) where TResult : class;
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Func<TResult> none) where TResult : class;

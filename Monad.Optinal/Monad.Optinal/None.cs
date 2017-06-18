@@ -64,6 +64,13 @@ namespace Monad.Optinal
 			return this;
 		}
 
+		public IOptional<TResult> Bind<TResult> (Func<TResult> some, Action none) 
+			where TResult: class
+		{
+			none ();
+			return new None<TResult> ();
+		}
+
 		public IOptional<T> Bind (Action<T> some, Action none)
 		{
 			none ();
