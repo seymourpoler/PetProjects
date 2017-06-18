@@ -83,6 +83,17 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsNoneWithFunctionAndAction()
+		{
+			const string name = "Tom";
+			var monad = new None<string> ();
+
+			var result = monad.Bind (some:() => {return name;}, none:() => {Console.WriteLine("Hello");});	
+
+			result.Should().BeOfType<None<string>>();
+		}
+
+		[Test]
 		public void BindsNoneWithAction()
 		{
 			var monad = new None<string> ();
