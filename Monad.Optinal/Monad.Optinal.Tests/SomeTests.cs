@@ -70,6 +70,19 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsSomeFromNoneFunction()
+		{
+			var monad = new None<string> ();
+			const string name = "John";
+			const string anotherName = "Harris";
+
+			var result = monad.Bind (some: () => new User{ Name = name}, none: () => new User{ Name = anotherName });
+
+			result.Should().BeOfType<Some<User>>();
+			result.Value.Name.Should ().Be (name);
+		}
+
+		[Test]
 		public void ReturnsSomeFromFunctionForSome()
 		{
 			const string name = "Tom";
