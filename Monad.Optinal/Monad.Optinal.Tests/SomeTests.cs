@@ -120,6 +120,21 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsSomeFromActionAndFunction()
+		{
+			const string name = "Paul";
+			const string anotherName = "Jim";
+			var monad = new Some<User> (new User{ Name = name });
+			var value = String.Empty;
+
+			var result = monad.Bind (some: (x) => {value = x.Name;}, none: () => {return new User{Name = anotherName};});
+
+			result.Should().BeOfType<Some<User>> ();
+			value.Should ().Be (name);
+			result.Value.Name.Should ().Be (name);
+		}
+
+		[Test]
 		public void ReturnsSomeWithOtherTypeAndNoneWithAction()
 		{
 			const string name = "Tom";

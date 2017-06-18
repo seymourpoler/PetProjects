@@ -190,6 +190,19 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsSomeFromActionAndFunction()
+		{
+			const string name = "Paul";
+			var monad = new None<User> ();
+			var value = String.Empty;
+
+			var result = monad.Bind (some: (x) => {value = x.Name; }, none: () => {return new User{Name = name};});
+
+			result.Should().BeOfType<Some<User>> ();
+			result.Value.Name.Should ().Be (name);
+		}
+
+		[Test]
 		public void OrValue(){
 			var monad = Optional.From<string>(null);
 

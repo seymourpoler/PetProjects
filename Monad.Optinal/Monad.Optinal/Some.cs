@@ -90,6 +90,12 @@ namespace Monad.Optinal
 			return new Some<TResult> (value);
 		}
 
+		public IOptional<T> Bind (Action<T> some, Func<T> none)
+		{
+			some (_value);
+			return this;
+		}
+
 		public IOptional<T> Bind (Action<T> some, Action none)
 		{
 			some (_value);
