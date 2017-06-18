@@ -35,6 +35,18 @@ namespace Monad.Optinal
             return new Some<T>(value);
         }
 
+		public IOptional<T> Bind (Func<T> func)
+		{
+			return new Some<T> (func());
+		}
+
+		public IOptional<TResult> Bind<TResult> (Func<TResult> func) 
+			where TResult : class
+		{
+			var value = func ();
+			return new Some<TResult> (value);
+		}
+
 		public IOptional<TResult> Bind<TResult>(Func<T, TResult> some, Func< TResult> none) 
 			where TResult : class
 		{
@@ -63,11 +75,6 @@ namespace Monad.Optinal
 		{
 			action (_value);
 			return this;
-		}
-
-		public IOptional<T> Bind (Func<T> func)
-		{
-			return new Some<T> (func());
 		}
 
 		public IOptional<T> Or(T value)

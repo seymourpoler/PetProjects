@@ -28,15 +28,22 @@ namespace Monad.Optinal
             throw new ArgumentNullException();
         }
 
+		public IOptional<TResult> Bind<TResult> (Func<T, TResult> func) 
+			where TResult : class
+		{
+			return new None<TResult> ();
+		}
+
 		public IOptional<T> Bind (Func<T> func)
 		{
 			return new Some<T> (func());
 		}
 
-		public IOptional<TResult> Bind<TResult> (Func<T, TResult> func) 
+		public IOptional<TResult> Bind<TResult> (Func<TResult> func) 
 			where TResult : class
 		{
-			return new None<TResult> ();
+			var value = func ();
+			return new Some<TResult> (value);
 		}
 
 		public IOptional<TResult> Bind<TResult>(Func<T, TResult> some, Func<TResult> none) 
