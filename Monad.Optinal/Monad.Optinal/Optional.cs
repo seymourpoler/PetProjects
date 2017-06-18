@@ -10,13 +10,19 @@ namespace Monad.Optinal
 		T ValueOr (Func<T> func);
 		T ValueOrFailure { get;}
 		IOptional<T> Where(Func<T, bool> predicate);
+
 		IOptional<T> Bind (Func<T> func);
+		IOptional<T> Bind (Func<T> some, Func<T> none);
 		IOptional<T> Bind (Func<T> some, Action none);
-		IOptional<TResult> Bind<TResult> (Func<TResult> some, Action none) where TResult: class;
+
 		IOptional<TResult> Bind<TResult> (Func<TResult> func) where TResult : class;
+		IOptional<TResult> Bind<TResult> (Func<TResult> some, Action none) where TResult: class;
+
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> func) where TResult : class;
-		IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Func<TResult> none) where TResult : class;
 		IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Action none) where TResult : class;
+
+		IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Func<TResult> none) where TResult : class;
+
 		IOptional<T> Bind (Action<T> some, Action none);
 		IOptional<T> Bind (Action<T> action);
 	}
