@@ -72,7 +72,7 @@ namespace Monad.Optinal.Tests
 		[Test]
 		public void ReturnsSomeFromNoneFunction()
 		{
-			var monad = new None<string> ();
+			var monad = new Some<string> ("Jim");
 			const string name = "John";
 			const string anotherName = "Harris";
 
