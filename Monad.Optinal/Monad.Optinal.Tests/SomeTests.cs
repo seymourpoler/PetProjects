@@ -278,7 +278,7 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void BindsOnlyWithSome(){
+		public void ReturnsSomeWirthFunctionForSome(){
 			var monad = new Some<string> ("Henry");
 
 			var result = monad.Bind<User> (func:(name) => new User{ Name = name });
