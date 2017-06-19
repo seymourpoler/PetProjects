@@ -93,12 +93,23 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void BindsFunctionOnlyForSome()
+		public void ReturnsNoneWithFunctionOnlyForSome()
 		{
 			const string name = "Tom";
 			var monad = new None<string> ();
 
 			var result = monad.Bind<User> (func:(_) => new User{ Name = name});
+
+			result.Should().BeOfType<None<User>>();
+		}
+
+		[Test]
+		public void ReturnsNoneWhenFunctionOnlyForSomeReturnsDefault()
+		{
+			const string name = "Tom";
+			var monad = new None<string> ();
+
+			var result = monad.Bind<User> (func:(_) => default(User));
 
 			result.Should().BeOfType<None<User>>();
 		}
