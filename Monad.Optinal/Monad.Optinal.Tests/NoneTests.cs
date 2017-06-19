@@ -230,7 +230,7 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void BindOnlyWithActionsWithParameters()
+		public void ReturnsNoneForActionsWithParameters()
 		{
 			const string name = "Paul";
 			var monad = new None<User> ();
