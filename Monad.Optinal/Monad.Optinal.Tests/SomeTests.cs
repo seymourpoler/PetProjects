@@ -272,7 +272,7 @@ namespace Monad.Optinal.Tests
 			var monad = new User{ Name = name }.ToOptional<User> ();
 			var value = String.Empty;
 
-			var result = monad.Bind (some: (_) => value = name, none: null);
+			var result = monad.Bind (some: (_) => value = name, none: () => value = "Jones");
 
 			value.Should ().Be (name);
 		}
