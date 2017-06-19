@@ -279,12 +279,13 @@ namespace Monad.Optinal.Tests
 
 		[Test]
 		public void ReturnsSomeWirthFunctionForSome(){
-			var monad = new Some<string> ("Henry");
+			const string name = "Henry";
+			var monad = new Some<string> (name);
 
-			var result = monad.Bind<User> (func:(name) => new User{ Name = name });
+			var result = monad.Bind<User> (func:(x) => new User{ Name = x });
 
 			result.Should ().BeOfType<Some<User>> ();
-			result.Value.Name.Should ().Be ("Henry");
+			result.Value.Name.Should ().Be (name);
 		}
 
 		[Test]
