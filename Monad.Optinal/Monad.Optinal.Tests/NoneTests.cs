@@ -183,7 +183,7 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void ReturnsNoneWithFunctionAndAction()
+		public void ReturnsNoneWithFunctionForSomeAndActionForNone()
 		{
 			const string name = "Tom";
 			var monad = new None<string> ();
