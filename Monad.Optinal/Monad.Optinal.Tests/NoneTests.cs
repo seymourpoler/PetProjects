@@ -59,6 +59,17 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsNoneFromNoneFunctionWithoutParameters()
+		{
+			var monad = new None<string> ();
+			const string name = "John";
+
+			var result = monad.Bind (some: () => new User{ Name = name}, none: () => {return default(User);});
+
+			result.Should().BeOfType<None<User>>();
+		}
+
+		[Test]
 		public void BindsWithFunctionWithoutParameters()
 		{
 			const string name = "Tom";
