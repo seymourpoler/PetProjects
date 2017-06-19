@@ -288,6 +288,15 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsNoneWirthFunctionForSome(){
+			var monad = new Some<string> ("Henry");
+
+			var result = monad.Bind<User> (func:(name) => {return default(User);});
+
+			result.Should ().BeOfType<None<User>> ();
+		}
+
+		[Test]
 		public void OrValue(){
 			var monad = "Paul".ToOptional<string> ();
 
