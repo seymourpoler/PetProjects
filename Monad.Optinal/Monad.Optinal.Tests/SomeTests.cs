@@ -24,7 +24,7 @@ namespace Monad.Optinal.Tests
         }
 
 		[Test]
-		public void BindsWithFunction()
+		public void ReturnsSomeFromFunctionForNoneAndSome()
 		{
 			var monad = new Some<string> ("Tom");
 
