@@ -37,7 +37,7 @@ namespace Monad.Optinal
 
 		public IOptional<T> Bind (Func<T> func)
 		{
-			return new Some<T> (func());
+			return func ().ToOptional ();
 		}
 
 		public IOptional<T> Bind (Func<T> some, Func<T> none){
