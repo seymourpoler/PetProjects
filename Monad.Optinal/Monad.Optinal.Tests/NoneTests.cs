@@ -70,7 +70,7 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void BindsWithFunctionWithoutParameters()
+		public void ReturnsSoneWithFunctionWithoutParameters()
 		{
 			const string name = "Tom";
 			var monad = new Some<string> (name);
@@ -79,6 +79,17 @@ namespace Monad.Optinal.Tests
 
 			result.Should().BeOfType<Some<User>>();
 			result.Value.Name.Should().Be(name);
+		}
+
+		[Test]
+		public void ReturnsNoneWithFunctionWithoutParameters()
+		{
+			const string name = "Tom";
+			var monad = new Some<string> (name);
+
+			var result = monad.Bind<User> (some: (_) => {return default(User);}, none: () => new User{ Name = name});
+
+			result.Should().BeOfType<None<User>>();
 		}
 
 		[Test]
