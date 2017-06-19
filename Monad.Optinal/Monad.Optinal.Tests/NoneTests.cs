@@ -256,10 +256,19 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void BindsOnlyWithSome(){
+		public void ReturnsNoneWithFunctionForSome(){
 			var monad = new None<string> ();
 
 			var result = monad.Bind<User> (func:(name) => new User{ Name = name });
+
+			result.Should ().BeOfType<None<User>> ();
+		}
+
+		[Test]
+		public void ReturnsNoneWithFunctionForSomeReturnsNull(){
+			var monad = new None<string> ();
+
+			var result = monad.Bind<User> (func:(name) => {return default(User);});
 
 			result.Should ().BeOfType<None<User>> ();
 		}
