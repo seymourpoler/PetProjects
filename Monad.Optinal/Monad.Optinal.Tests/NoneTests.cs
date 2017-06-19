@@ -307,13 +307,26 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void OrFunction()
+		public void ReturnsSomeWhenOrFunction()
 		{
 			var name = "Pepe";
 			var monad = Optional.From<User>(null); 
 
 			var result = monad.Or (() => new User{ Name = name });
 
+			result.Should().BeOfType<Some<User>> ();
+			result.Value.Name.Should ().Be (name);
+		}
+
+		[Test]
+		public void ReturnsNoneWhenOrFunctionReturnsNull()
+		{
+			var name = "Pepe";
+			var monad = Optional.From<User>(null); 
+
+			var result = monad.Or (() => {return default(User);});
+
+			result.Should().BeOfType<None<User>> ();
 			result.Value.Name.Should ().Be (name);
 		}
 
