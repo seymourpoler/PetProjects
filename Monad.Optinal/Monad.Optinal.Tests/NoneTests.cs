@@ -46,7 +46,7 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void ReturnsSomeFromNoneFunction()
+		public void ReturnsSomeFromNoneFunctionWithoutParameters()
 		{
 			var monad = new None<string> ();
 			const string name = "John";
