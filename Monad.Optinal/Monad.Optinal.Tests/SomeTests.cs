@@ -171,6 +171,16 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsNoneWithOtherType()
+		{
+			var monad = new Some<string> ("Jim");
+
+			var result = monad.Bind (() => {return default(User);});	
+
+			result.Should().BeOfType<None<User>>();
+		}
+
+		[Test]
 		public void ReturnsNoneWithFunctionAndAction()
 		{
 			const string name = "Tom";
