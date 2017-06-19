@@ -148,6 +148,17 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsNoneFromFunctionForSomeReturnsNull()
+		{
+			const string surName = "Harris";
+			var monad = new Some<string> ("Jim");
+
+			var result = monad.Bind (some:() => {return null;}, none: () => {return surName;});	
+
+			result.Should().BeOfType<None<string>>();
+		}
+
+		[Test]
 		public void ReturnsSomeWithOtherType()
 		{
 			const string name = "Tom";
