@@ -287,6 +287,18 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsNoneFromActionForSomeAndFunctionFormNoneReturnsNull()
+		{
+			const string name = "Paul";
+			var monad = new None<User> ();
+			var value = String.Empty;
+
+			var result = monad.Bind (some: (x) => {value = x.Name; }, none: () => {return default(User);});
+
+			result.Should().BeOfType<None<User>> ();
+		}
+
+		[Test]
 		public void OrValue(){
 			var monad = Optional.From<string>(null);
 
