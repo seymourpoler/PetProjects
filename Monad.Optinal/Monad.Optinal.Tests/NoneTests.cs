@@ -226,6 +226,7 @@ namespace Monad.Optinal.Tests
 			var result = monad.Bind (action: (x) =>  {value = x;});
 
 			result.Should().BeOfType<None<string>>();
+			value.Should ().Be (String.Empty);
 		}
 
 		[Test]
