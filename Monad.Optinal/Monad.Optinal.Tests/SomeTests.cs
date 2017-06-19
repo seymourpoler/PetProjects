@@ -66,7 +66,7 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void BindsWithFunctionWithoutParameters()
+		public void ReturnsSomeWithFunctionWithoutParameters()
 		{
 			const string name = "Tom";
 			var monad = new Some<string> (name);
