@@ -44,7 +44,7 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void BindsFunctionOnlyForSome()
+		public void ReturnsSomeFromFunctionOnlyForSome()
 		{
 			const string name = "Tom";
 			var monad = new Some<string> ("Luke");
