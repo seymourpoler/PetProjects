@@ -289,7 +289,6 @@ namespace Monad.Optinal.Tests
 		[Test]
 		public void ReturnsNoneFromActionForSomeAndFunctionFormNoneReturnsNull()
 		{
-			const string name = "Paul";
 			var monad = new None<User> ();
 			var value = String.Empty;
 
