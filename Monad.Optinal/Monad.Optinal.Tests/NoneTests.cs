@@ -249,10 +249,10 @@ namespace Monad.Optinal.Tests
 			var monad = new None<User> ();
 			var value = String.Empty;
 
-			var result = monad.Bind (some: null, none: () => {value = name;});
+			var result = monad.Bind (some: (x) => {value = x.Name;} , none: () => {value = name;});
 
-			value.Should ().Be (name);
 			result.Should().BeOfType<None<User>> ();
+			value.Should ().Be (name);
 		}
 
 		[Test]
