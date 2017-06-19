@@ -24,7 +24,7 @@ namespace Monad.Optinal.Tests
         }
 
 		[Test]
-		public void BindsNoneWithFunction()
+		public void ReturnsSomeFromFunction()
 		{
 			var monad = new None<string> ();
 			const string name = "John";
@@ -33,6 +33,16 @@ namespace Monad.Optinal.Tests
 
 			result.Should().BeOfType<Some<User>>();
 			result.Value.Name.Should ().Be (name);
+		}
+
+		[Test]
+		public void ReturnsNoneFromFunction()
+		{
+			var monad = new None<string> ();
+
+			var result = monad.Bind (some: (x) => new User{ Name = x }, none: () => {return default(User);});
+
+			result.Should().BeOfType<None<User>>();
 		}
 
 		[Test]
