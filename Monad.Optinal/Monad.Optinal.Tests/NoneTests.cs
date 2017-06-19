@@ -321,13 +321,11 @@ namespace Monad.Optinal.Tests
 		[Test]
 		public void ReturnsNoneWhenOrFunctionReturnsNull()
 		{
-			const string name = "Pepe";
 			var monad = Optional.From<User>(null); 
 
 			var result = monad.Or (() => {return default(User);});
 
 			result.Should().BeOfType<None<User>> ();
-			result.Value.Name.Should ().Be (name);
 		}
 
 		[Test]
