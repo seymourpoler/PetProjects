@@ -41,8 +41,9 @@ namespace Monad.Optinal
 			return func ().ToOptional ();
 		}
 
-		public IOptional<T> Bind (Func<T> some, Func<T> none){
-			return some ().ToOptional ();
+		public IOptional<T> Bind (Func<T> functionSome, Func<T> none){
+			ArgumentChecker.CheckNull (functionSome);
+			return functionSome ().ToOptional ();
 		}
 
 		public IOptional<TResult> Bind<TResult> (Func<TResult> function) 

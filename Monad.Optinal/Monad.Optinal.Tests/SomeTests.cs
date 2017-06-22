@@ -192,10 +192,21 @@ namespace Monad.Optinal.Tests
 			const string surName = "Harris";
 			var monad = new Some<string> ("Jim");
 
-			var result = monad.Bind (some:() => {return name;}, none: () => {return surName;});	
+			var result = monad.Bind (functionSome:() => {return name;}, none: () => {return surName;});	
 
 			result.Should().BeOfType<Some<string>>();
 			result.Value.Should ().Be (name);
+		}
+
+		[Test]
+		public void ThrowsArgumentNullExceptionWhenFunctionForSomeIsNull()
+		{
+			const string surName = "Harris";
+			var monad = new Some<string> ("Jim");
+
+			Action action = () => monad.Bind (functionSome:null, none: () => {return surName;});	
+
+			action.ShouldThrow<ArgumentNullException> ();
 		}
 
 		[Test]
@@ -204,7 +215,7 @@ namespace Monad.Optinal.Tests
 			const string surName = "Harris";
 			var monad = new Some<string> ("Jim");
 
-			var result = monad.Bind (some:() => {return null;}, none: () => {return surName;});	
+			var result = monad.Bind (functionSome:() => {return null;}, none: () => {return surName;});	
 
 			result.Should().BeOfType<None<string>>();
 		}
