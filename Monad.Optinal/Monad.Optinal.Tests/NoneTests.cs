@@ -464,6 +464,16 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsNoneWhenWhereFunctionIsNull()
+		{
+			var monad = Optional.From<User>(null); 
+
+			var result = monad.Where (null);
+
+			result.Should ().BeOfType<None<User>> ();
+		}
+
+		[Test]
 		public void ValueOrFailure(){
 			var monad = Optional.From<User>(null); 
 
