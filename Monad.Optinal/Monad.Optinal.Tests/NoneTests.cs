@@ -434,6 +434,16 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsArgumentNullExceptionWhenSomeOrFunctionIsNull()
+		{
+			var monad = Optional.From<User>(null); 
+
+			Action action = () => monad.Or (null);
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsNoneWhenOrFunctionReturnsNull()
 		{
 			var monad = Optional.From<User>(null); 
