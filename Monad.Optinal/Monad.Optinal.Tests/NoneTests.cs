@@ -438,7 +438,7 @@ namespace Monad.Optinal.Tests
 		{
 			var monad = Optional.From<User>(null); 
 
-			Action action = () => monad.Or (null);
+			Action action = () => monad.Or (func: null);
 
 			action.ShouldThrow<ArgumentNullException> ();
 		}
@@ -480,6 +480,16 @@ namespace Monad.Optinal.Tests
 			var result = monad.ValueOr(()=> name);
 
 			result.Should().Be(name);
+		}
+
+		[Test]
+		public void ThrowsArgumentNullExceptionWhenValueOrIsNull ()
+		{
+			var monad = Optional.From<string>(null); 
+
+			Action action = () =>  monad.ValueOr(func: null);
+
+			action.ShouldThrow<ArgumentNullException> ();
 		}
 
 		private class User{
