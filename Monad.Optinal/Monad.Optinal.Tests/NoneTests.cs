@@ -360,6 +360,17 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void TrowsArgumentNullExceptionWhrnOnlyWithActionsIsNull()
+		{
+			var monad = new None<User> ();
+			var value = String.Empty;
+
+			Action action = () => monad.Bind (some: (x) => {value = x.Name;} , none: null);
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsNoneWithFunctionForSome(){
 			var monad = new None<string> ();
 
