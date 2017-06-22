@@ -52,10 +52,11 @@ namespace Monad.Optinal
 			return function ().ToOptional ();
 		}
 
-		public IOptional<TResult> Bind<TResult> (Func<TResult> some, Func<TResult> none) 
+		public IOptional<TResult> Bind<TResult> (Func<TResult> functionSome, Func<TResult> none) 
 			where TResult : class
 		{
-			return some ().ToOptional();
+			ArgumentChecker.CheckNull (functionSome);
+			return functionSome ().ToOptional();
 		}
 
 		public IOptional<TResult> Bind<TResult>(Func<T, TResult> some, Func< TResult> none) 
