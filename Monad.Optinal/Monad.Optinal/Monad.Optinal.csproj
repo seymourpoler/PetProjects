@@ -35,6 +35,7 @@
     <Compile Include="Optional.cs" />
     <Compile Include="OptionalExtensions.cs" />
     <Compile Include="Some.cs" />
+    <Compile Include="ArgumentChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

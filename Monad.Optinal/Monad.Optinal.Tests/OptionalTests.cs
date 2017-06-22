@@ -1,8 +1,7 @@
-﻿using NUnit.Framework;
-using FluentAssertions;
-using System;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Collections.Generic;
+using FluentAssertions;
+using NUnit.Framework;
 
 namespace Monad.Optinal.Tests
 {
