@@ -141,6 +141,16 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ReturnsNoneWithFunctionWithoutParametersForSomeAndNone()
+		{
+			var monad = new Some<string> ("Jim");
+
+			Action action = () => monad.Bind (func: null);	
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsSomeFromFunctionwithoutParameters()
 		{
 			var monad = new Some<string> ("Jim");
