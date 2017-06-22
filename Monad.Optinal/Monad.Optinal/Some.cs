@@ -109,6 +109,7 @@ namespace Monad.Optinal
 
 		public IOptional<T> Bind (Action<T> action)
 		{
+			ArgumentChecker.CheckNull (action);
 			action (_value);
 			return this;
 		}

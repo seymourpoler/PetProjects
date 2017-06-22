@@ -360,6 +360,17 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsExceptionNullExceptionWhenhActionOnlyForSomeIsNull()
+		{
+			const string name = "John";
+			var monad = new Some<string> (name);
+
+			Action action = () => monad.Bind (action: null);
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void BindOnlyWithActions()
 		{
 			const string name = "Paul";
