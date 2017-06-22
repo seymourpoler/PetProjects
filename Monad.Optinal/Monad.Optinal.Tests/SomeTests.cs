@@ -290,6 +290,18 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsArgumentNullExceptionWhenActionAndFunctionIsNull()
+		{
+			const string name = "Paul";
+			const string anotherName = "Jim";
+			var monad = new Some<User> (new User{ Name = name });
+
+			Action action = () => monad.Bind (some: null, none: () => {return new User{Name = anotherName};});
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsSomeWithOtherTypeAndNoneWithAction()
 		{
 			const string name = "Tom";
