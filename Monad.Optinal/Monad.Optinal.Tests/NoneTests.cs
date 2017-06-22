@@ -69,6 +69,17 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsArgumentNullExceptionWhenSomeFromNoneFunctionWithoutParametersIsNull()
+		{
+			var monad = new None<string> ();
+			const string name = "John";
+
+			Action action = () => monad.Bind<User> (some: () => new User{ Name = name}, none: null);
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsNoneFromNoneFunctionWithoutParameters()
 		{
 			var monad = new None<string> ();
@@ -89,6 +100,17 @@ namespace Monad.Optinal.Tests
 
 			result.Should().BeOfType<Some<User>>();
 			result.Value.Name.Should().Be(name);
+		}
+
+		[Test]
+		public void ThrowArgumentNullExceptionWhenSoneWithFunctionWithoutParametersIsNull()
+		{
+			const string name = "Tom";
+			var monad = new Some<string> (name);
+
+			Action action = () => monad.Bind<User> (some: (_) => new User{ Name = name}, none: null);
+
+			action.ShouldThrow<ArgumentNullException> ();
 		}
 
 		[Test]
