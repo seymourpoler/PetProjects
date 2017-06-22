@@ -121,6 +121,7 @@ namespace Monad.Optinal
 
 		public IOptional<T> Or (Func<T> func)
 		{
+			ArgumentChecker.CheckNull (func);
 			return this;
 		}
 

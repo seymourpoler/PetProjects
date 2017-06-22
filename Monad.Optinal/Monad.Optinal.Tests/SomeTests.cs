@@ -424,6 +424,17 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsArgumentNullExceptionWhenOrFunctionIsNull()
+		{
+			const string originalName = "Franc";
+			var monad = Optional.From<User>(new User{Name= originalName}); 
+
+			Action action = () => monad.Or (func: null);
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsSomeWhereIsTrue()
 		{
 			var monad = new User{Name = "John"}.ToOptional(); 
