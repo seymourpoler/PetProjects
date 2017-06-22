@@ -76,6 +76,16 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsArgumentNullExceptionWhenFunctionOnlyForSomeReturnsNullIsNull()
+		{
+			var monad = new Some<string> ("Luke");
+
+			Action action = () => monad.Bind<User> (func:null);
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsSomeWithFunctionWithoutParameters()
 		{
 			const string name = "Tom";
