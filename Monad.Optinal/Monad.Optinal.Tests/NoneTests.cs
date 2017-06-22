@@ -103,17 +103,6 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void ThrowArgumentNullExceptionWhenSoneWithFunctionWithoutParametersIsNull()
-		{
-			const string name = "Tom";
-			var monad = new Some<string> (name);
-
-			Action action = () => monad.Bind<User> (some: (_) => new User{ Name = name}, none: null);
-
-			action.ShouldThrow<ArgumentNullException> ();
-		}
-
-		[Test]
 		public void ReturnsNoneWithFunctionWithoutParameters()
 		{
 			const string name = "Tom";

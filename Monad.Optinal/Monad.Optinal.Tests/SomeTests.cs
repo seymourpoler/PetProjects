@@ -296,7 +296,7 @@ namespace Monad.Optinal.Tests
 			const string anotherName = "Jim";
 			var monad = new Some<User> (new User{ Name = name });
 
-			Action action = () => monad.Bind (some: null, none: () => {return new User{Name = anotherName};});
+			Action action = () => monad.Bind<User> (some: null, none: () => {return new User{Name = anotherName};});
 
 			action.ShouldThrow<ArgumentNullException> ();
 		}
@@ -307,10 +307,20 @@ namespace Monad.Optinal.Tests
 			const string name = "Tom";
 			var monad = new Some<string> ("Jim");
 
-			var result = monad.Bind (() => {return new User{Name = name};}, none: () => {Console.WriteLine("Hello");});	
+			var result = monad.Bind<User> (() => new User {	Name = name	}, none: () => {Console.WriteLine("Hello");});	
 
 			result.Should().BeOfType<Some<User>>();
 			result.Value.Name.Should ().Be (name);
+		}
+
+		[Test]
+		public void ThrowsArgumentNullExceptionWhenSomeWithOtherTypeAndNoneWithActionIsNull()
+		{
+			var monad = new Some<string> ("Jim");
+
+			Action action = () => monad.Bind<User> (functionSome: null, none: () => {Console.WriteLine("Hello");});	
+
+			action.ShouldThrow<ArgumentNullException> ();
 		}
 
 		[Test]

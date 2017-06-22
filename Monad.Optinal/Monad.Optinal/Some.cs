@@ -63,7 +63,7 @@ namespace Monad.Optinal
 		public IOptional<TResult> Bind<TResult>(Func<T, TResult> some, Func< TResult> none) 
 			where TResult : class
 		{
-			ArgumentChecker.CheckNull (none);
+			ArgumentChecker.CheckNull (some);
 			return some (_value).ToOptional ();
 		}
 
@@ -77,6 +77,7 @@ namespace Monad.Optinal
 		public IOptional<TResult> Bind<TResult> (Func<T, TResult> some, Action none) 
 			where TResult : class
 		{
+			ArgumentChecker.CheckNull (some);
 			return some (_value).ToOptional();
 		}
 
@@ -86,10 +87,11 @@ namespace Monad.Optinal
 			return some ().ToOptional();
 		}
 
-		public IOptional<TResult> Bind<TResult> (Func<TResult> some, Action none) 
+		public IOptional<TResult> Bind<TResult> (Func<TResult> functionSome, Action none) 
 			where TResult: class
 		{
-			return some ().ToOptional ();
+			ArgumentChecker.CheckNull (functionSome);
+			return functionSome ().ToOptional ();
 		}
 
 		public IOptional<T> Bind (Action<T> some, Func<T> none)
