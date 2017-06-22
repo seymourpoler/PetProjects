@@ -454,7 +454,8 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void Where(){
+		public void Where()
+		{
 			var monad = Optional.From<User>(null); 
 
 			var result = monad.Where ((x) => x.Name == "Tom");

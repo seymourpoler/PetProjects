@@ -115,6 +115,7 @@ namespace Monad.Optinal
 
 		public IOptional<T> Where (Func<T, bool> predicate)
 		{
+			ArgumentChecker.CheckNull (predicate);
 			if(predicate(_value)){
 				return this;
 			}

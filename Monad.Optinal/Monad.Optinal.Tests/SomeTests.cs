@@ -319,7 +319,8 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void ReturnsSomeWhereIsTrue(){
+		public void ReturnsSomeWhereIsTrue()
+		{
 			var monad = new User{Name = "John"}.ToOptional(); 
 
 			var result = monad.Where ((x) => x.Name.Contains("o"));
@@ -328,12 +329,23 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void ReturnsNoneWhereIsTrue(){
+		public void ReturnsNoneWhereIsTrue()
+		{
 			var monad = new User{Name = "John"}.ToOptional(); 
 
 			var result = monad.Where ((x) => x.Name == "Tom");
 
 			result.Should ().BeOfType<None<User>> ();
+		}
+
+		[Test]
+		public void ThrowsArgumentNullExcpetionWhenWhereFunctionIsNull()
+		{
+			var monad = new User{Name = "John"}.ToOptional(); 
+
+			Action action = () =>  monad.Where (null);
+
+			action.ShouldThrow<ArgumentNullException> ();
 		}
 
 		[Test]
