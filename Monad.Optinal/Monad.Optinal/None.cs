@@ -59,6 +59,7 @@ namespace Monad.Optinal
 		public IOptional<TResult> Bind<TResult>(Func<T, TResult> some, Func<TResult> none) 
 			where TResult : class
 		{
+			ArgumentChecker.CheckNull (none);
 			return none ().ToOptional ();
 		}
 

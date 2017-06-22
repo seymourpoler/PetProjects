@@ -36,6 +36,16 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsArgumentNullExceptionWhenFunctionFromNoneIsNull()
+		{
+			var monad = new None<string> ();
+
+			Action action = ()=>  monad.Bind<User> (some: (x) => new User{ Name = x }, none: null);
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsNoneFromFunction()
 		{
 			var monad = new None<string> ();
