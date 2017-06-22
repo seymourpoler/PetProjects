@@ -444,17 +444,7 @@ namespace Monad.Optinal.Tests
 			result.Should ().BeOfType<Some<User>> ();
 		}
 
-		[Test]
-		public void ThrowsArgumentNullExceptinWhenWhereFunctionIsNull()
-		{
-			var monad = new User{Name = "John"}.ToOptional(); 
-
-			Action action = () => monad.Where (predicate: null);
-
-			action.ShouldThrow<ArgumentNullException> ();
-		}
-
-		[Test]
+				[Test]
 		public void ReturnsNoneWhereIsTrue()
 		{
 			var monad = new User{Name = "John"}.ToOptional(); 
@@ -465,7 +455,7 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
-		public void ThrowsArgumentNullExcpetionWhenWhereFunctionIsNull()
+		public void ThrowsArgumentNullExceptionWhenWhereFunctionIsNull()
 		{
 			var monad = new User{Name = "John"}.ToOptional(); 
 
