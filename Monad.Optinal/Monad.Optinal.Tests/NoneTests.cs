@@ -140,7 +140,7 @@ namespace Monad.Optinal.Tests
 		{
 			var monad = new None<string> ();
 
-			Action action = () => monad.Bind<User> (function:null);
+			Action action = () => monad.Bind<User> (function: null);
 
 			action.ShouldThrow<ArgumentNullException> ();
 		}
@@ -165,6 +165,16 @@ namespace Monad.Optinal.Tests
 
 			result.Should().BeOfType<Some<string>>();
 			result.Value.Should ().Be (name);
+		}
+
+		[Test]
+		public void ThrowsArgumentNullExceptionWhenSomeWithFunctionIsNull()
+		{
+			var monad = new None<string> ();
+
+			Action action = () => monad.Bind (null);	
+
+			action.ShouldThrow<ArgumentNullException> ();
 		}
 
 		[Test]

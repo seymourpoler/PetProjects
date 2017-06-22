@@ -44,6 +44,7 @@ namespace Monad.Optinal
 
 		public IOptional<T> Bind (Func<T> func)
 		{
+			ArgumentChecker.CheckNull (func);
 			return func ().ToOptional ();
 		}
 
