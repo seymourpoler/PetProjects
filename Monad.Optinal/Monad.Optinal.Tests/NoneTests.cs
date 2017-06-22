@@ -130,18 +130,27 @@ namespace Monad.Optinal.Tests
 			const string name = "Tom";
 			var monad = new None<string> ();
 
-			var result = monad.Bind<User> (func:(_) => new User{ Name = name});
+			var result = monad.Bind<User> (function:(_) => new User{ Name = name});
 
 			result.Should().BeOfType<None<User>>();
 		}
 
 		[Test]
-		public void ReturnsNoneWhenFunctionOnlyForSomeReturnsDefault()
+		public void ThrowArgumentNullExceptionWhenNoneWithFunctionOnlyForSomeIsNull()
 		{
-			const string name = "Tom";
 			var monad = new None<string> ();
 
-			var result = monad.Bind<User> (func:(_) => default(User));
+			Action action = () => monad.Bind<User> (function:null);
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
+		public void ReturnsNoneWhenFunctionOnlyForSomeReturnsDefault()
+		{
+			var monad = new None<string> ();
+
+			var result = monad.Bind<User> (function:(_) => default(User));
 
 			result.Should().BeOfType<None<User>>();
 		}
@@ -291,7 +300,7 @@ namespace Monad.Optinal.Tests
 		public void ReturnsNoneWithFunctionForSome(){
 			var monad = new None<string> ();
 
-			var result = monad.Bind<User> (func:(name) => new User{ Name = name });
+			var result = monad.Bind<User> (function:(name) => new User{ Name = name });
 
 			result.Should ().BeOfType<None<User>> ();
 		}
@@ -300,7 +309,7 @@ namespace Monad.Optinal.Tests
 		public void ReturnsNoneWithFunctionForSomeReturnsNull(){
 			var monad = new None<string> ();
 
-			var result = monad.Bind<User> (func:(name) => {return default(User);});
+			var result = monad.Bind<User> (function:(name) => {return default(User);});
 
 			result.Should ().BeOfType<None<User>> ();
 		}

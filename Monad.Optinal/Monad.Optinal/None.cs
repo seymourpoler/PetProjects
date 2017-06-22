@@ -28,9 +28,10 @@ namespace Monad.Optinal
             throw new ArgumentNullException();
         }
 
-		public IOptional<TResult> Bind<TResult> (Func<T, TResult> func) 
+		public IOptional<TResult> Bind<TResult> (Func<T, TResult> function) 
 			where TResult : class
 		{
+			ArgumentChecker.CheckNull (function);
 			return new None<TResult> ();
 		}
 
