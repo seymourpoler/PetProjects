@@ -255,6 +255,16 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsArgumentNullExceptionWhenFunctionAndActionIsNull()
+		{
+			var monad = new Some<string> ("Jim");
+
+			Action action = () =>  monad.Bind (some:null, none:() => {Console.WriteLine("Hello");});	
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsNoneWithFunctionAndAction()
 		{
 			var monad = new Some<string> ("Jim");

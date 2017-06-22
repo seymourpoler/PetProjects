@@ -80,7 +80,9 @@ namespace Monad.Optinal
 			return some (_value).ToOptional();
 		}
 
-		public IOptional<T> Bind (Func<T> some, Action none){
+		public IOptional<T> Bind (Func<T> some, Action none)
+		{
+			ArgumentChecker.CheckNull (some);
 			return some ().ToOptional();
 		}
 
