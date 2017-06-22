@@ -201,6 +201,17 @@ namespace Monad.Optinal.Tests
 		}
 
 		[Test]
+		public void ThrowsArgumentNullExceptionwhenFunctionForNoneIsNull()
+		{
+			const string name = "Tom";
+			var monad = new None<string> ();
+
+			Action action = () => monad.Bind (some:() => {return name;}, none: null);	
+
+			action.ShouldThrow<ArgumentNullException> ();
+		}
+
+		[Test]
 		public void ReturnsNoneWhenFunctionForNoneReturnsNull()
 		{
 			const string name = "Tom";
