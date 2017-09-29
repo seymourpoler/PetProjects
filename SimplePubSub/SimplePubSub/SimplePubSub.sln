@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePubSub", "SimplePubSub\SimplePubSub.csproj", "{5CC7FA9E-319E-40D3-B076-8900B4B98420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePubSubTests", "SimplePubSubTests\SimplePubSubTests.csproj", "{BDC98F90-5CA6-4413-8C73-B2AC7CD7953A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CC7FA9E-319E-40D3-B076-8900B4B98420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC7FA9E-319E-40D3-B076-8900B4B98420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC7FA9E-319E-40D3-B076-8900B4B98420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC7FA9E-319E-40D3-B076-8900B4B98420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC98F90-5CA6-4413-8C73-B2AC7CD7953A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC98F90-5CA6-4413-8C73-B2AC7CD7953A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC98F90-5CA6-4413-8C73-B2AC7CD7953A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC98F90-5CA6-4413-8C73-B2AC7CD7953A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
