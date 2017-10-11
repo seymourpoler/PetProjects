@@ -1,7 +1,7 @@
-﻿using NUnit.Framework;
-using SimplePubSub;
-using System;
+﻿using System;
+using NUnit.Framework;
 using Shouldly;
+using SimplePubSub;
 
 namespace SimplePubSubTests
 {
@@ -9,6 +9,7 @@ namespace SimplePubSubTests
     public class HubTests
     {
         private Hub hub;
+
         [SetUp]
         public void SetUp()
         {
