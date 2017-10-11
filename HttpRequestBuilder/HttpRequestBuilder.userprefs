@@ -1,0 +1,38 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HttpRequestBuilder/Builder.cs">
+    <Files>
+      <File FileName="HttpRequestBuilder/Builder.cs" Line="51" Column="8" />
+      <File FileName="HttpRequestBuilder.Tests/BuilderTest.cs" Line="37" Column="12" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HttpRequestBuilder" expanded="True" selected="True">
+            <Node name="HttpRequestBuilder" expanded="True" />
+            <Node name="HttpRequestBuilder.Tests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="HttpRequestBuilder" expanded="True">
+            <Node name="HttpRequestBuilder.Tests" expanded="True">
+              <Node name="HttpRequestBuilder" expanded="True">
+                <Node name="Tests" expanded="True">
+                  <Node name="BuilderTest" expanded="True">
+                    <Node name="BuildHttpRequestBaseWithContentType" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

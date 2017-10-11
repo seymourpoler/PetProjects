@@ -1,10 +1,25 @@
 ﻿<Properties StartupConfiguration="{BDC98F90-5CA6-4413-8C73-B2AC7CD7953A}|Unit Tests">
   <MonoDevelop.Ide.ItemProperties.SimplePubSubTests PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SimplePubSub/Hub.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SimplePubSubTests/HubTests.cs">
     <Files>
-      <File FileName="SimplePubSubTests/HubTests.cs" Line="48" Column="13" />
-      <File FileName="SimplePubSub/Hub.cs" Line="28" Column="17" />
+      <File FileName="SimplePubSubTests/HubTests.cs" Line="117" Column="43" />
+      <File FileName="SimplePubSub/Hub.cs" Line="2" Column="19" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="SimplePubSub" expanded="True">
+            <Node name="SimplePubSubTests" expanded="True">
+              <Node name="SimplePubSubTests" expanded="True">
+                <Node name="HubTests" expanded="True">
+                  <Node name="UnSubscribeWhenThereIsNoHandler" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
