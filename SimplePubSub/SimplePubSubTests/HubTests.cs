@@ -78,7 +78,6 @@ namespace SimplePubSubTests
 			result.ShouldNotBe(contentMessage);
 		}
 
-
 		[Test]
 		public void UnSubscribeWhenThereAreHandlers()
 		{
