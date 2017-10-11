@@ -28,7 +28,7 @@ namespace SimplePubSubTests
         }
 
         [Test]
-        public void DoeSNothingWhenThereIsNoHandler()
+        public void DoesNothingWhenThereIsNoHandler()
         {
             var result = String.Empty;
             var contentMessage = "Message";
@@ -38,9 +38,40 @@ namespace SimplePubSubTests
             result.ShouldNotBe(contentMessage);
         }
 
+		[Test]
+		public void PublishsMessageWithSomeHandlers()
+		{
+			var result = String.Empty;
+			var contentMessage = "Message";
+			hub.Subscribe<Message>(x => result = x.Content);
+            hub.Subscribe<AnotherMessage>(x => result = x.Id);
+
+
+			hub.Publish(new Message { Content = contentMessage });
+
+			result.ShouldBe(contentMessage);
+		}
+
+        [Test]
+        public void UnSubscribeWhenThereIsNoHandler()
+        {
+			var result = String.Empty;
+			var contentMessage = "Message";
+            hub.Subscribe<AnotherMessage>(x => result = x.Id);
+            hub.UnSubscribe<Message>();
+
+            hub.Publish(new  Message{ Content = contentMessage });
+
+            result.ShouldNotBe(contentMessage);
+        }
+
         internal class Message
         {
             public string Content { get; set; }
+        }
+        internal class AnotherMessage
+        {
+            public string Id { get; set; }    
         }
     }
 }

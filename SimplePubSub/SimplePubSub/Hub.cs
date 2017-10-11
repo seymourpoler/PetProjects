@@ -25,15 +25,21 @@ namespace SimplePubSub
         {
             lock(locker)
             {
+                if(!handlers.ContainsKey(typeof(T).ToString())){ return; }
                 var handler = handlers[typeof(T).ToString()];
                 if (handler == null) return;
                 ((Action<T>)handler)(message);
             }
         }
 
-        public void Unsubscribe<T>(Action<T> handler = null)
+        public void UnSubscribe<T>()
         {
-            throw new NotImplementedException();
+            lock (locker)
+            {
+                if (!handlers.ContainsKey(typeof(T).ToString())) { return; }
+
+                throw new NotImplementedException();
+            }
         }
     }
 }

@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{BDC98F90-5CA6-4413-8C73-B2AC7CD7953A}|Unit Tests">
+  <MonoDevelop.Ide.ItemProperties.SimplePubSubTests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SimplePubSub/Hub.cs">
+    <Files>
+      <File FileName="SimplePubSubTests/HubTests.cs" Line="48" Column="13" />
+      <File FileName="SimplePubSub/Hub.cs" Line="28" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
