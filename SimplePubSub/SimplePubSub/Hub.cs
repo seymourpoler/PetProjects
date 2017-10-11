@@ -7,6 +7,7 @@ namespace SimplePubSub
     {
         private Dictionary<string, Delegate> handlers;
         private object locker;
+
         public Hub()
         {
             locker = new object();
