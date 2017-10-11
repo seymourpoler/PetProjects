@@ -78,6 +78,21 @@ namespace SimplePubSubTests
 			result.ShouldNotBe(contentMessage);
 		}
 
+
+		[Test]
+		public void UnSubscribeWhenThereAreHandlers()
+		{
+			var result = String.Empty;
+			var contentMessage = "Message";
+			hub.Subscribe<Message>(x => result = x.Content);
+            hub.Subscribe<AnotherMessage>(x => result = x.Id);
+			hub.UnSubscribe<Message>();
+
+			hub.Publish(new Message { Content = contentMessage });
+
+			result.ShouldNotBe(contentMessage);
+		}
+
         internal class Message
         {
             public string Content { get; set; }
