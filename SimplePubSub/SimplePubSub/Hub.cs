@@ -37,8 +37,7 @@ namespace SimplePubSub
             lock (locker)
             {
                 if (!handlers.ContainsKey(typeof(T).ToString())) { return; }
-
-                throw new NotImplementedException();
+                handlers.Remove(typeof(T).ToString());
             }
         }
     }
