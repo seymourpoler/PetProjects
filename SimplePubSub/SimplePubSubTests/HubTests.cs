@@ -111,9 +111,10 @@ namespace SimplePubSubTests
         {
             public string Content { get; set; }
         }
+
         internal class AnotherMessage
         {
-            public string Id { get; set; }    
+            public string Id { get; set; }
         }
     }
 }
