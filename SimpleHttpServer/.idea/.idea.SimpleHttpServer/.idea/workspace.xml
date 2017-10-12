@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b4ed821-f621-4dca-b142-3235357e4a46" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Server.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Server.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="40" column="66" lean-forward="false" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
+              <folding>
+                <marker date="1506348026798" expanded="false" signature="7:58" ph="..." />
+                <marker date="1506348026798" expanded="true" signature="86:2423" ph="{...}" />
+                <marker date="1506348026798" expanded="true" signature="112:2421" ph="{...}" />
+                <marker date="1506348026798" expanded="true" signature="337:446" ph="{...}" />
+                <marker date="1506348026798" expanded="true" signature="483:1640" ph="{...}" />
+                <marker date="1506348026798" expanded="true" signature="721:1516" ph="{...}" />
+                <marker date="1506348026798" expanded="true" signature="767:1502" ph="{...}" />
+                <marker date="1506348026798" expanded="true" signature="948:1072" ph="/* var requestData = stream.ConvertToString(); ... */" />
+                <marker date="1506348026798" expanded="true" signature="1136:1255" ph="/* Request request = GetRequest(requestData); ... */" />
+                <marker date="1506348026798" expanded="true" signature="1536:1630" ph="{...}" />
+                <marker date="1506348026798" expanded="true" signature="1668:1717" ph="{...}" />
+                <marker date="1506348026798" expanded="true" signature="1726:2150" ph="/* private Request GetRequest(string data) ... */" />
+                <marker date="1506348026798" expanded="true" signature="2254:2415" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpStatusCodeResult.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleHttpServer/HttpStatusCodeResult.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding>
+                <marker date="1506347628600" expanded="true" signature="26:216" ph="{...}" />
+                <marker date="1506347628600" expanded="true" signature="73:214" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <marker date="1505915761717" expanded="false" signature="6:196" ph="..." />
+                <marker date="1505915761717" expanded="true" signature="224:695" ph="{...}" />
+                <marker date="1505915761717" expanded="true" signature="244:693" ph="{...}" />
+                <marker date="1505915761717" expanded="true" signature="290:687" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpListener.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleHttpServer/HttpListener.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="45" />
+              <folding>
+                <marker date="1505829933689" expanded="false" signature="6:57" ph="..." />
+                <marker date="1505829933689" expanded="true" signature="85:658" ph="{...}" />
+                <marker date="1505829933689" expanded="true" signature="117:656" ph="{...}" />
+                <marker date="1505829933689" expanded="true" signature="235:303" ph="{...}" />
+                <marker date="1505829933689" expanded="true" signature="344:650" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetWorkStreamExtensions.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleHttpServer/NetWorkStreamExtensions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <marker date="1506346567974" expanded="false" signature="6:39" ph="..." />
+                <marker date="1506346567974" expanded="true" signature="67:514" ph="{...}" />
+                <marker date="1506346567974" expanded="true" signature="117:512" ph="{...}" />
+                <marker date="1506346567974" expanded="true" signature="195:506" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestParser.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SimpleHttpServer/RequestParser.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <marker date="1506346567984" expanded="false" signature="6:39" ph="..." />
+                <marker date="1506346567984" expanded="true" signature="67:974" ph="{...}" />
+                <marker date="1506346567984" expanded="true" signature="100:920" ph="{...}" />
+                <marker date="1506346567984" expanded="true" signature="191:245" ph="{...}" />
+                <marker date="1506346567984" expanded="true" signature="297:911" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/Request.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/Response.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/RequestParser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/Logger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/Server.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/HttpStatusCodeResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/NetWorkStreamExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SimpleHttpServer/HttpListener.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SimpleHttpServer/RequestBuilder.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/Response.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/Logger.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/Request.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/RequestParser.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/HttpStaticCodeResult.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/HttpListener.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/NetWorkStreamExtensions.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/Program.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/HttpStatusCodeResult.cs" />
+        <option value="$PROJECT_DIR$/SimpleHttpServer/Server.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1672" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleHttpServer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleHttpServer" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="riderModule" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="riderModule" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="riderModule" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="riderModule" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SimpleHttpServer/SimpleHttpServer.csproj" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.5" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/SimpleHttpServer/bin/Debug/SimpleHttpServer.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b4ed821-f621-4dca-b142-3235357e4a46" name="Default" comment="" />
+      <created>1505743827306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1505743827306</updated>
+      <workItem from="1505743829169" duration="9279000" />
+      <workItem from="1505834283278" duration="4537000" />
+      <workItem from="1506346579028" duration="1451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15267000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1672" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SimpleHttpServer/Server.cs</url>
+          <line>31</line>
+          <properties startOffset="795" endOffset="832" documentPath="$PROJECT_DIR$/SimpleHttpServer/Server.cs" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SimpleHttpServer/Program.cs</url>
+          <line>18</line>
+          <properties startOffset="464" endOffset="501" documentPath="$PROJECT_DIR$/SimpleHttpServer/Program.cs" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506348026798" expanded="false" signature="7:58" ph="..." />
+            <marker date="1506348026798" expanded="true" signature="86:2423" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="112:2421" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="337:446" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="483:1640" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="721:1516" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="767:1502" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="948:1072" ph="/* var requestData = stream.ConvertToString(); ... */" />
+            <marker date="1506348026798" expanded="true" signature="1136:1255" ph="/* Request request = GetRequest(requestData); ... */" />
+            <marker date="1506348026798" expanded="true" signature="1536:1630" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="1668:1717" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="1726:2150" ph="/* private Request GetRequest(string data) ... */" />
+            <marker date="1506348026798" expanded="true" signature="2254:2415" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1505915761717" expanded="false" signature="6:196" ph="..." />
+            <marker date="1505915761717" expanded="true" signature="224:695" ph="{...}" />
+            <marker date="1505915761717" expanded="true" signature="244:693" ph="{...}" />
+            <marker date="1505915761717" expanded="true" signature="290:687" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/HttpListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <marker date="1505829933689" expanded="false" signature="6:57" ph="..." />
+            <marker date="1505829933689" expanded="true" signature="85:658" ph="{...}" />
+            <marker date="1505829933689" expanded="true" signature="117:656" ph="{...}" />
+            <marker date="1505829933689" expanded="true" signature="235:303" ph="{...}" />
+            <marker date="1505829933689" expanded="true" signature="344:650" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/NetWorkStreamExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <marker date="1506346567974" expanded="false" signature="6:39" ph="..." />
+            <marker date="1506346567974" expanded="true" signature="67:514" ph="{...}" />
+            <marker date="1506346567974" expanded="true" signature="117:512" ph="{...}" />
+            <marker date="1506346567974" expanded="true" signature="195:506" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/RequestParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <marker date="1506346567984" expanded="false" signature="6:39" ph="..." />
+            <marker date="1506346567984" expanded="true" signature="67:974" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="100:920" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="191:245" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="297:911" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506348026798" expanded="false" signature="7:58" ph="..." />
+            <marker date="1506348026798" expanded="true" signature="86:2423" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="112:2421" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="337:446" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="483:1640" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="721:1516" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="767:1502" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="948:1072" ph="/* var requestData = stream.ConvertToString(); ... */" />
+            <marker date="1506348026798" expanded="true" signature="1136:1255" ph="/* Request request = GetRequest(requestData); ... */" />
+            <marker date="1506348026798" expanded="true" signature="1536:1630" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="1668:1717" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="1726:2150" ph="/* private Request GetRequest(string data) ... */" />
+            <marker date="1506348026798" expanded="true" signature="2254:2415" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/NetWorkStreamExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <marker date="1506346567974" expanded="false" signature="6:39" ph="..." />
+            <marker date="1506346567974" expanded="true" signature="67:514" ph="{...}" />
+            <marker date="1506346567974" expanded="true" signature="117:512" ph="{...}" />
+            <marker date="1506346567974" expanded="true" signature="195:506" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/RequestParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <marker date="1506346567984" expanded="false" signature="6:39" ph="..." />
+            <marker date="1506346567984" expanded="true" signature="67:974" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="100:920" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="191:245" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="297:911" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/HttpStaticCodeResult.cs" />
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Request.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Response.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Logger.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/App.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/HttpListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <marker date="1505829933689" expanded="false" signature="6:57" ph="..." />
+            <marker date="1505829933689" expanded="true" signature="85:658" ph="{...}" />
+            <marker date="1505829933689" expanded="true" signature="117:656" ph="{...}" />
+            <marker date="1505829933689" expanded="true" signature="235:303" ph="{...}" />
+            <marker date="1505829933689" expanded="true" signature="344:650" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1505915761717" expanded="false" signature="6:196" ph="..." />
+            <marker date="1505915761717" expanded="true" signature="224:695" ph="{...}" />
+            <marker date="1505915761717" expanded="true" signature="244:693" ph="{...}" />
+            <marker date="1505915761717" expanded="true" signature="290:687" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/NetWorkStreamExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1506346567974" expanded="false" signature="6:39" ph="..." />
+            <marker date="1506346567974" expanded="true" signature="67:514" ph="{...}" />
+            <marker date="1506346567974" expanded="true" signature="117:512" ph="{...}" />
+            <marker date="1506346567974" expanded="true" signature="195:506" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/RequestParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1506346567984" expanded="false" signature="6:39" ph="..." />
+            <marker date="1506346567984" expanded="true" signature="67:974" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="100:920" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="191:245" ph="{...}" />
+            <marker date="1506346567984" expanded="true" signature="297:911" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/HttpStatusCodeResult.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding>
+            <marker date="1506347628600" expanded="true" signature="26:216" ph="{...}" />
+            <marker date="1506347628600" expanded="true" signature="73:214" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimpleHttpServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="40" column="66" lean-forward="false" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
+          <folding>
+            <marker date="1506348026798" expanded="false" signature="7:58" ph="..." />
+            <marker date="1506348026798" expanded="true" signature="86:2423" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="112:2421" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="337:446" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="483:1640" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="721:1516" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="767:1502" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="948:1072" ph="/* var requestData = stream.ConvertToString(); ... */" />
+            <marker date="1506348026798" expanded="true" signature="1136:1255" ph="/* Request request = GetRequest(requestData); ... */" />
+            <marker date="1506348026798" expanded="true" signature="1536:1630" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="1668:1717" ph="{...}" />
+            <marker date="1506348026798" expanded="true" signature="1726:2150" ph="/* private Request GetRequest(string data) ... */" />
+            <marker date="1506348026798" expanded="true" signature="2254:2415" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -192,3 +192,7 @@ SimplePubSub\SimplePubSub\bin
 SimplePubSub\SimplePubSub\obj
 SimplePubSub\SimplePubSubTests\bin
 SimplePubSub\SimplePubSubTests\obj
+SimpleHttpServer\.idea
+SimpleHttpServer\packages
+SimpleHttpServer\SimpleHttpServer\bin
+SimpleHttpServer\SimpleHttpServer\obj
