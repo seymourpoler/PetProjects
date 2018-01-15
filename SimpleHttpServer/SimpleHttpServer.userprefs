@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{E67A9962-A5B4-49C6-9F70-7DF43133E62E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SimpleHttpServer/HttpRequest.txt">
+    <Files>
+      <File FileName="SimpleHttpServer/HttpRequest.txt" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

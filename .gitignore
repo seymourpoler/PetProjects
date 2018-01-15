@@ -196,6 +196,6 @@ SimpleHttpServer\.idea
 SimpleHttpServer\packages
 SimpleHttpServer\SimpleHttpServer\bin
 SimpleHttpServer\SimpleHttpServer\obj
-#Gambon/Gambon/src/bin
-#Gambon/Gambon/test/unit/Gambon/bin
-#Gambon/Gambon/test/integration/Gambon/bin
+Gambon/Gambon/src/bin
+Gambon/Gambon/test/unit/Gambon/bin
+Gambon/Gambon/test/integration/Gambon/bin

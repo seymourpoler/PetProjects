@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 5.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CF5E4F7E-8A78-4009-9F32-BE8F72F45FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambon", "src\Gambon.csproj", "{24229E2E-5385-414A-B78E-D1B0B89A0F60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{86F1CA57-B34C-406E-9238-AD18FBF2DE16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{F3B505A0-EE4B-4CB9-A53F-322537FFF9DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambon", "test\unit\Gambon\Gambon.csproj", "{2E67E80C-B0C6-470A-B290-CDB254ECF6F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration", "{85B08CEE-C4AE-4E9D-BC12-8A07CC012960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambon", "test\integration\Gambon\Gambon.csproj", "{5CADDAA3-E15A-44DE-8CD0-014E4FF399A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vendors", "vendors", "{A3767F1C-3B2E-426A-9A47-85379093D65D}"
+	ProjectSection(SolutionItems) = preProject
+		vendors\nunit.framework.dll = vendors\nunit.framework.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24229E2E-5385-414A-B78E-D1B0B89A0F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24229E2E-5385-414A-B78E-D1B0B89A0F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24229E2E-5385-414A-B78E-D1B0B89A0F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24229E2E-5385-414A-B78E-D1B0B89A0F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E67E80C-B0C6-470A-B290-CDB254ECF6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E67E80C-B0C6-470A-B290-CDB254ECF6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E67E80C-B0C6-470A-B290-CDB254ECF6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E67E80C-B0C6-470A-B290-CDB254ECF6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CADDAA3-E15A-44DE-8CD0-014E4FF399A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CADDAA3-E15A-44DE-8CD0-014E4FF399A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CADDAA3-E15A-44DE-8CD0-014E4FF399A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CADDAA3-E15A-44DE-8CD0-014E4FF399A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24229E2E-5385-414A-B78E-D1B0B89A0F60} = {CF5E4F7E-8A78-4009-9F32-BE8F72F45FC8}
+		{F3B505A0-EE4B-4CB9-A53F-322537FFF9DE} = {86F1CA57-B34C-406E-9238-AD18FBF2DE16}
+		{2E67E80C-B0C6-470A-B290-CDB254ECF6F7} = {F3B505A0-EE4B-4CB9-A53F-322537FFF9DE}
+		{85B08CEE-C4AE-4E9D-BC12-8A07CC012960} = {86F1CA57-B34C-406E-9238-AD18FBF2DE16}
+		{5CADDAA3-E15A-44DE-8CD0-014E4FF399A8} = {85B08CEE-C4AE-4E9D-BC12-8A07CC012960}
+	EndGlobalSection
+EndGlobal
