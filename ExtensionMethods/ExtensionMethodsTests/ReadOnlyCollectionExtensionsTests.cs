@@ -48,6 +48,16 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
+        public void ReturnTrueWhenIsNotEmpty()
+        {
+            var values = new List<string> {"John"}.AsReadOnly();
+
+            var result = values.IsNotEmpty();
+            
+            result.ShouldBeTrue();
+        }
+        
+        [Fact]
         public void ReturnsTrueWhenIsNull()
         {
             IReadOnlyCollection<string> values = null;

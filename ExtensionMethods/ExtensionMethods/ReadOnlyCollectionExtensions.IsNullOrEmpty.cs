@@ -11,7 +11,13 @@ namespace ExtensionMethods
             {
                 return true;
             }
-            throw new NotImplementedException();
+
+            if (collection.IsEmpty())
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
