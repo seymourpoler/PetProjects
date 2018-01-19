@@ -5,7 +5,7 @@ using Xunit;
 
 namespace ExtensionMethodsTests
 {
-    public class DynamicObjectExtensionsTests
+    public class DynamicConverterTests
     {
         [Fact]
         public void ReturnsNullWhenIsNull()
