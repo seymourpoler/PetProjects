@@ -1,4 +1,5 @@
-﻿using ExtensionMethods;
+﻿using System;
+using ExtensionMethods;
 using Shouldly;
 using Xunit;
 
@@ -19,7 +20,17 @@ namespace ExtensionMethodsTests
         {
             var entity = new { Name="John" };
             
-            var result = new Dynamic(entity).HasProperty("Name");
+            var result = new Dynamic(entity).HasProperty(null);
+
+            result.ShouldBeFalse();
+        }
+        
+        [Fact]
+        public void ReturnsFalseWhenPropertyNameIsEmpty()
+        {
+            var entity = new { Name="John" };
+            
+            var result = new Dynamic(entity).HasProperty(String.Empty);
 
             result.ShouldBeFalse();
         }

@@ -17,6 +17,10 @@ namespace ExtensionMethods
             {
                 return false;
             }
+            if (propertyName.IsNullOrWhiteSpace())
+            {
+                return false;
+            }
             throw new NotImplementedException();
         }
     }
