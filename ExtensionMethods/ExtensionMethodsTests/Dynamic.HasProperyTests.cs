@@ -13,5 +13,15 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeFalse();
         }
+
+        [Fact]
+        public void ReturnsFalseWhenPropertyNameIsNull()
+        {
+            var entity = new { Name="John" };
+            
+            var result = new Dynamic(entity).HasProperty("Name");
+
+            result.ShouldBeFalse();
+        }
     }
 }
