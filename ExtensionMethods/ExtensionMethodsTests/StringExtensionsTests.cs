@@ -1,5 +1,6 @@
 ﻿using System;
 using ExtensionMethods;
+using ExtensionMethods.String;
 using Shouldly;
 using Xunit;
 

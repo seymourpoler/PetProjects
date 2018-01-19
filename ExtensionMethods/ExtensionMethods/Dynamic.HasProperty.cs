@@ -1,4 +1,6 @@
-﻿namespace ExtensionMethods
+﻿using ExtensionMethods.String;
+
+namespace ExtensionMethods
 {
     public partial class Dynamic
     {
