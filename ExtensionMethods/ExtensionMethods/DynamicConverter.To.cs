@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ExtensionMethods
 {
-    public partial class DynamicConverter
+    public class DynamicConverter
     {
         public static T To<T>(dynamic entity) where T : class
         {
@@ -21,7 +19,7 @@ namespace ExtensionMethods
             {
                 if (HasProperty(entity, property.Name))
                 {
-                    var value = property.GetValue(entity, null);
+                    var value = GetValue(entity, property.Name);
                     property.SetValue(result, value, null);
                 }
             }
@@ -35,6 +33,16 @@ namespace ExtensionMethods
                 return ((IDictionary<string, object>) entity).ContainsKey(propertyName);
             }
             return entity.GetType().GetProperty(propertyName) != null;
+        }
+
+        private static object GetValue(object thing, string propertyName)
+        {
+            var property = thing.GetType().GetProperty(propertyName);
+            if (property == null)
+            {
+                return null;
+            }
+            return property.GetValue(thing, null);
         }
     }
 }
