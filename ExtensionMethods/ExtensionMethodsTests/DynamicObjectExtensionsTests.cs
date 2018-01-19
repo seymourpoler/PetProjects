@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net.Cache;
 using ExtensionMethods;
 using Shouldly;
 using Xunit;
