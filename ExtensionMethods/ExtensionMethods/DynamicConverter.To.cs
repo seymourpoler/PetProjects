@@ -6,6 +6,10 @@ namespace ExtensionMethods
     {
         public static T To<T>(dynamic entity) where T : class
         {
+            if (entity == null)
+            {
+                return null;
+            }
             throw new NotImplementedException();
         }
     }

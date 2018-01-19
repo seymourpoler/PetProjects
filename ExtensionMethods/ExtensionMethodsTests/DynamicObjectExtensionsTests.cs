@@ -1,4 +1,5 @@
 ﻿using ExtensionMethods;
+using Shouldly;
 using Xunit;
 
 namespace ExtensionMethodsTests
@@ -8,12 +9,11 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ReturnsNullWhenIsNull()
         {
-            dynamic entity = null;
-
-            var result = DynamicConverter.To<User>(entity);
+            var result = DynamicConverter.To<User>(null);
 
             result.ShouldBeNull();
         }
+        
         private class User
         {
             public string Name { get; set; }
