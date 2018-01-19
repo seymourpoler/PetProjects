@@ -13,14 +13,11 @@ namespace ExtensionMethods
 
         public bool HasProperty(string propertyName)
         {
-            if (entity == null)
+            if (entity == null || propertyName.IsNullOrWhiteSpace())
             {
                 return false;
             }
-            if (propertyName.IsNullOrWhiteSpace())
-            {
-                return false;
-            }
+            
             throw new NotImplementedException();
         }
     }

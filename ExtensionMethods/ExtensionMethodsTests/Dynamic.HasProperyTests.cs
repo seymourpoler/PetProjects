@@ -34,5 +34,15 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeFalse();
         }
+        
+        [Fact]
+        public void ReturnsFalseWhenPropertyNameIsWhiteSpace()
+        {
+            var entity = new { Name="John" };
+            
+            var result = new Dynamic(entity).HasProperty(" ");
+
+            result.ShouldBeFalse();
+        }
     }
 }
