@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 
 namespace ExtensionMethods
@@ -21,12 +22,10 @@ namespace ExtensionMethods
                 if (HasProperty(entity, property.Name))
                 {
                     var value = property.GetValue(entity, null);
-                    property.SetValue(result, value);
+                    property.SetValue(result, value, null);
                 }
             }
-
             return result;
-            throw new NotImplementedException();
         }
         
         private static bool HasProperty(dynamic entity, string propertyName)
