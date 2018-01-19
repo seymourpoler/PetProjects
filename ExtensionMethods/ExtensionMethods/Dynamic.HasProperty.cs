@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ExtensionMethods
+﻿namespace ExtensionMethods
 {
     public partial class Dynamic
     {
@@ -17,8 +15,8 @@ namespace ExtensionMethods
             {
                 return false;
             }
-            
-            throw new NotImplementedException();
+
+            return entity.GetType().GetProperty(propertyName) != null;
         }
     }
 }

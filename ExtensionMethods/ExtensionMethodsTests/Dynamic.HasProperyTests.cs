@@ -44,5 +44,16 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeFalse();
         }
+        
+        
+        [Fact]
+        public void ReturnsTrueWhenHasProperty()
+        {
+            var entity = new { Name="John" };
+            
+            var result = new Dynamic(entity).HasProperty("Name");
+
+            result.ShouldBeTrue();
+        }
     }
 }
