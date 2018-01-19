@@ -26,5 +26,15 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeTrue();
         }
+        
+        [Fact]
+        public void ReturnsFalseWhenIsStringWhiteSpace()
+        {
+            string text = " ";
+            
+            var result = text.IsNullOrWhiteSpace();
+
+            result.ShouldBeTrue();
+        }
     }
 }
