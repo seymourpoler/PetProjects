@@ -12,7 +12,6 @@ namespace ExtensionMethods
             {
                 return entity;
             }
-            dynamic result = new ExpandoObject();
             var dynamicObject = new ExpandoObject() as IDictionary<string, Object>;
             foreach (var propertyInfo in typeof(T).GetProperties())
             {
