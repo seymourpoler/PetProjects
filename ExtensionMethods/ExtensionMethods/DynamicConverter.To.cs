@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Dynamic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ExtensionMethods
 {
@@ -10,7 +13,29 @@ namespace ExtensionMethods
             {
                 return null;
             }
+
+            var result = Activator.CreateInstance<T>();
+            var properties = result.GetType().GetProperties();
+            foreach (var property in properties)
+            {
+                if (HasProperty(entity, property.Name))
+                {
+                    var value = property.GetValue(entity, null);
+                    property.SetValue(result, value);
+                }
+            }
+
+            return result;
             throw new NotImplementedException();
+        }
+        
+        private static bool HasProperty(dynamic entity, string propertyName)
+        {
+            if (entity is ExpandoObject)
+            {
+                return ((IDictionary<string, object>) entity).ContainsKey(propertyName);
+            }
+            return entity.GetType().GetProperty(propertyName) != null;
         }
     }
 }

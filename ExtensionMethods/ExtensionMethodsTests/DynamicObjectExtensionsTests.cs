@@ -1,4 +1,5 @@
-﻿using ExtensionMethods;
+﻿using System;
+using ExtensionMethods;
 using Shouldly;
 using Xunit;
 
@@ -12,6 +13,16 @@ namespace ExtensionMethodsTests
             var result = DynamicConverter.To<User>(null);
 
             result.ShouldBeNull();
+        }
+
+        [Fact]
+        public void ReturnsEmptyEntityFromDynamicWhenHasNoTheSameProperties()
+        {
+            var entity = new {Id = Guid.NewGuid()};
+
+            var result = DynamicConverter.To<User>(entity);
+            
+            result.Name.ShouldBeNullOrEmpty();
         }
         
         private class User
