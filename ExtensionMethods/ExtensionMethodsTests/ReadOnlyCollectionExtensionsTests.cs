@@ -76,5 +76,15 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeTrue();
         }
+        
+        [Fact]
+        public void ReturnsFalseWhenIsNotNullAndNotEmpty()
+        {
+            var values = new List<string> {"John"}.AsReadOnly();
+
+            var result = values.IsNullOrEmpty();
+
+            result.ShouldBeFalse();
+        }
     }
 }
