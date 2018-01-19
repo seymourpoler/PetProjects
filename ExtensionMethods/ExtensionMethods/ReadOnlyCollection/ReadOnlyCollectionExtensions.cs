@@ -1,4 +1,4 @@
-﻿namespace ExtensionMethods
+﻿namespace ExtensionMethods.ReadOnlyCollection
 {
     public static partial class ReadOnlyCollectionExtensions
     {

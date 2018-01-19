@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Dynamic;
 
-namespace ExtensionMethods
+namespace ExtensionMethods.Object
 {
     public static partial class ObjectExtensions
     {
@@ -12,7 +11,7 @@ namespace ExtensionMethods
             {
                 return entity;
             }
-            var dynamicObject = new ExpandoObject() as IDictionary<string, Object>;
+            var dynamicObject = new ExpandoObject() as IDictionary<string, System.Object>;
             foreach (var propertyInfo in typeof(T).GetProperties())
             {
                 var currentPropertyName = propertyInfo.Name;

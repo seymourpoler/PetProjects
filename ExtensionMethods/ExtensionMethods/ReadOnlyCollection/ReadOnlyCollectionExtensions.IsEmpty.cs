@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ExtensionMethods.Object;
 
-namespace ExtensionMethods
+namespace ExtensionMethods.ReadOnlyCollection
 {
     public static partial class ReadOnlyCollectionExtensions
     {

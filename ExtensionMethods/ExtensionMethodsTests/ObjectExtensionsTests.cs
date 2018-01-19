@@ -1,6 +1,7 @@
 ﻿using ExtensionMethods;
 using Shouldly;
 using System;
+using ExtensionMethods.Object;
 using Xunit;
 
 namespace ExtensionMethodsTests
