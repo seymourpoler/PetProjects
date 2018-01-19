@@ -7,17 +7,8 @@ namespace ExtensionMethods
     {
         public static bool IsNullOrEmpty<T>(this IReadOnlyCollection<T> collection)
         {
-            if (collection.IsNull())
-            {
-                return true;
-            }
-
-            if (collection.IsEmpty())
-            {
-                return true;
-            }
-
-            return false;
+            return collection.IsNull() ||
+                   collection.IsEmpty();
         }
     }
 }
