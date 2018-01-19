@@ -78,13 +78,43 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
-        public void ReturnsFalseWhenIsNotNullAndNotEmpty()
+        public void ReturnsFalseWhenIsNoEmpty()
         {
             var values = new List<string> {"John"}.AsReadOnly();
 
             var result = values.IsNullOrEmpty();
 
             result.ShouldBeFalse();
+        }
+        
+        [Fact]
+        public void ReturnsFalseWhenIsNull()
+        {
+            IReadOnlyCollection<string> values = null;
+
+            var result = values.IsNotNullAndNotEmpty();
+
+            result.ShouldBeFalse();
+        }
+        
+        [Fact]
+        public void ReturnsFalseWhenIsEmpty()
+        {
+            var values = new List<string>().AsReadOnly();
+
+            var result = values.IsNotNullAndNotEmpty();
+
+            result.ShouldBeFalse();
+        }
+        
+        [Fact]
+        public void ReturnsTrueWhenIsNotNullAndNotEmpty()
+        {
+            var values = new List<string> {"John"}.AsReadOnly();
+
+            var result = values.IsNotNullAndNotEmpty();
+
+            result.ShouldBeTrue();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ExtensionMethods
 {
@@ -9,6 +8,12 @@ namespace ExtensionMethods
         {
             return collection.IsNull() ||
                    collection.IsEmpty();
+        }
+        
+        public static bool IsNotNullAndNotEmpty<T>(this IReadOnlyCollection<T> collection)
+        {
+            return collection.IsNotNull() &&
+                   collection.IsNotEmpty();
         }
     }
 }
