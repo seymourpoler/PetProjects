@@ -16,5 +16,15 @@ namespace ExtensionMethodsTests
             
             result.ShouldBeTrue();
         }
+        
+        [Fact]
+        public void ReturnTrueWhenIsEmpty()
+        {
+            var values = new List<string>().AsReadOnly();
+
+            var result = values.IsEmpty();
+            
+            result.ShouldBeTrue();
+        }
     }
 }

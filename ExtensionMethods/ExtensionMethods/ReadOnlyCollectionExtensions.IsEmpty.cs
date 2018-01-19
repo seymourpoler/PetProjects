@@ -11,7 +11,8 @@ namespace ExtensionMethods
             {
                 return true;
             }
-            throw new NotImplementedException();
+
+            return collection.Count == 0;
         }
     }
 }
