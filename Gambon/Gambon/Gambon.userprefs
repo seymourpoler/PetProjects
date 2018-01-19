@@ -4,30 +4,11 @@
       <File FileName="src/Core/ObjectExtensions.cs" Line="43" Column="1" />
       <File FileName="test/unit/Gambon/Core/ObjectExtensionsTests.cs" Line="44" Column="4" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Gambon" expanded="True">
-            <Node name="test" expanded="True">
-              <Node name="unit" expanded="True">
-                <Node name="Gambon" expanded="True">
-                  <Node name="GambonUnitTest" expanded="True">
-                    <Node name="Core" expanded="True">
-                      <Node name="ObjectExtensionsTests" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/home/luis/Documents/code/GitHub/Utils/DAL/Gambon/Gambon/test/unit/Gambon/Core/ObjectExtensionsTests.cs" relfile="test/unit/Gambon/Core/ObjectExtensionsTests.cs" line="106" column="18" />
+      <Breakpoint file="/home/osboxes/Documents/code/GitHub/PetProjects/PetProjects/Gambon/Gambon/test/unit/Gambon/Core/ObjectExtensionsTests.cs" relfile="test/unit/Gambon/Core/ObjectExtensionsTests.cs" line="106" column="18" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.test.unit.Gambon PreferredExecutionTarget="MonoDevelop.Default" />
