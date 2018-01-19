@@ -18,7 +18,7 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
-        public void ReturnsTrueWhenIsStringEmpty()
+        public void ReturnsTrueWhenIsEmpty()
         {
             string text = String.Empty;
             
@@ -41,6 +41,16 @@ namespace ExtensionMethodsTests
         public void ReturnsFalseWhenIsNull()
         {
             string text = null;
+
+            var result = text.IsNotNullAndNotWhiteSpace();
+            
+            result.ShouldBeFalse();
+        }
+        
+        [Fact]
+        public void ReturnsFalseWhenIsEmpty()
+        {
+            string text = String.Empty;
 
             var result = text.IsNotNullAndNotWhiteSpace();
             
