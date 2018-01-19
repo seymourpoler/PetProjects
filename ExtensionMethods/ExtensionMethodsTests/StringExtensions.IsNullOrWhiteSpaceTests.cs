@@ -8,7 +8,7 @@ namespace ExtensionMethodsTests
     public class StringExtensionsIsNullOrWhiteSpaceTests
     {
         [Fact]
-        public void ReturnsFalseWhenIsNull()
+        public void ReturnsTrueWhenIsNull()
         {
             string text = null;
             
@@ -18,7 +18,7 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
-        public void ReturnsFalseWhenIsStringEmpty()
+        public void ReturnsTrueWhenIsStringEmpty()
         {
             string text = String.Empty;
             
@@ -28,13 +28,23 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
-        public void ReturnsFalseWhenIsStringWhiteSpace()
+        public void ReturnsTrueWhenIsStringWhiteSpace()
         {
             string text = " ";
             
             var result = text.IsNullOrWhiteSpace();
 
             result.ShouldBeTrue();
+        }
+
+        [Fact]
+        public void ReturnsFalseWhenIsNull()
+        {
+            string text = null;
+
+            var result = text.IsNotNullAndNotWhiteSpace();
+            
+            result.ShouldBeFalse();
         }
     }
 }
