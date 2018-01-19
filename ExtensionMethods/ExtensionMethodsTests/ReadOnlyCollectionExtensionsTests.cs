@@ -26,5 +26,16 @@ namespace ExtensionMethodsTests
             
             result.ShouldBeTrue();
         }
+
+        [Fact]
+        public void ReturnsTrueWhenIsNull()
+        {
+            IReadOnlyCollection<string> values = null;
+
+            var result = values.IsNullOrEmpty();
+
+            result.ShouldBeTrue();
+        }
+        
     }
 }
