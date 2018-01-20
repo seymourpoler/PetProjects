@@ -67,5 +67,15 @@ namespace ExtensionMethodsTests
             
             result.ShouldBeFalse();
         }
+
+        [Fact]
+        public void ReturnsBuiltText()
+        {
+            var text = "valueOne: {0}, valueTwo: {1}";
+
+            var result = text.Build(text, "name", "age");
+            
+            result.ShouldBe("valueOne: name, valueTwo: age");
+        }
     }
 }
