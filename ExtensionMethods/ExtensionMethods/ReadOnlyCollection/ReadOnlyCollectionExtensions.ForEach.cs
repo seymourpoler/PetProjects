@@ -9,7 +9,8 @@ namespace ExtensionMethods.ReadOnlyCollection
         public static void ForEach<T>(this IReadOnlyCollection<T> collection, Action<T> action)
         {
             if(collection.IsNull()){return;}
-            
+            if(action.IsNull()){return;}
+
             foreach (var item in collection)
             {
                 action(item);

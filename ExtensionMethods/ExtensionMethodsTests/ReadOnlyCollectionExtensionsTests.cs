@@ -129,7 +129,18 @@ namespace ExtensionMethodsTests
             
             result.ShouldBe(0);
         }
-        
+
+        [Fact]
+        public void DoesNotingWhenActionIsNull()
+        {
+            var values = new List<int>{1,2,3}.AsReadOnly();
+            var result = 0;
+
+            values.ForEach(null);
+            
+            result.ShouldBe(0);
+        }
+
         [Fact]
         public void ReturnsTheSumOfItems()
         {
