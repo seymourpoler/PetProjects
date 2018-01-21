@@ -78,6 +78,16 @@ namespace ExtensionMethodsTests
             
             result.ShouldBeNull();
         }
+        
+        [Fact]
+        public void ReturnsEmptyWhenIsEmptyInBuildingString()
+        {
+            string value = String.Empty;
+
+            var result = value.Build("name", "age");
+            
+            result.ShouldBeEmpty();
+        }
 
         [Fact]
         public void ReturnsBuiltText()

@@ -6,7 +6,7 @@ namespace ExtensionMethods.String
     {
         public static string Build(this string text, params object[] parameters)
         {
-            if (text.IsNull())
+            if (text.IsNullOrWhiteSpace())
             {
                 return text;
             }
