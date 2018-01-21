@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using ExtensionMethods;
 using ExtensionMethods.String;
 using Shouldly;
@@ -66,6 +67,16 @@ namespace ExtensionMethodsTests
             var result = text.IsNotNullAndNotWhiteSpace();
             
             result.ShouldBeFalse();
+        }
+
+        [Fact]
+        public void ReturnsNullWhenIsNullInBuildingString()
+        {
+            string value = null;
+
+            var result = value.Build("name", "age");
+            
+            result.ShouldBeNull();
         }
 
         [Fact]
