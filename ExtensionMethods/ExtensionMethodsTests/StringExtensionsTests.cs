@@ -82,7 +82,7 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ReturnsEmptyWhenIsEmpty()
         {
-            string value = String.Empty;
+            var value = String.Empty;
 
             var result = value.FormatWith("name", "age");
             
