@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using ExtensionMethods;
 using ExtensionMethods.ReadOnlyCollection;
+using Microsoft.VisualStudio.TestPlatform.Common.DataCollection;
 using Shouldly;
 using Xunit;
 
@@ -116,6 +117,17 @@ namespace ExtensionMethodsTests
             var result = values.IsNotNullAndNotEmpty();
 
             result.ShouldBeTrue();
+        }
+
+        [Fact]
+        public void ReturnsTheSumOfItems()
+        {
+            var values = new List<int>{1,2,3}.AsReadOnly();
+
+            var result = 0;
+            values.ForEach(x => result = result + x);
+            
+            result.ShouldBe(6);
         }
     }
 }
