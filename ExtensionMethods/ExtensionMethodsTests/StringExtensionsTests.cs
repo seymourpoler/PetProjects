@@ -21,7 +21,7 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ReturnsTrueWhenIsEmpty()
         {
-            string text = String.Empty;
+            var text = String.Empty;
             
             var result = text.IsNullOrWhiteSpace();
 
@@ -31,7 +31,7 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ReturnsTrueWhenIsStringWhiteSpace()
         {
-            string text = " ";
+            var text = " ";
             
             var result = text.IsNullOrWhiteSpace();
 
@@ -51,7 +51,7 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ReturnsFalseWhenIsEmpty()
         {
-            string text = String.Empty;
+            var text = String.Empty;
 
             var result = text.IsNotNullAndNotWhiteSpace();
             
@@ -61,7 +61,7 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ReturnsFalseWhenIsWhiteSpace()
         {
-            string text = " ";
+            const string text = " ";
 
             var result = text.IsNotNullAndNotWhiteSpace();
             
@@ -73,7 +73,7 @@ namespace ExtensionMethodsTests
         {
             var text = "valueOne: {0}, valueTwo: {1}";
 
-            var result = text.Build(text, "name", "age");
+            var result = text.Build("name", "age");
             
             result.ShouldBe("valueOne: name, valueTwo: age");
         }
