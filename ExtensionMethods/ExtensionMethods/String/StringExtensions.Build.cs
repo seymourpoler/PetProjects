@@ -4,7 +4,7 @@ namespace ExtensionMethods.String
 {
     public static partial class StringExtensions
     {
-        public static string Build(this string text, params object[] parameters)
+        public static string FormatWith(this string text, params object[] parameters)
         {
             if (text.IsNullOrWhiteSpace())
             {

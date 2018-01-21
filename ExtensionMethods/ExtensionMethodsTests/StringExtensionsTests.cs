@@ -70,31 +70,31 @@ namespace ExtensionMethodsTests
         }
 
         [Fact]
-        public void ReturnsNullWhenIsNullInBuildingString()
+        public void ReturnsNullWhenIsNull()
         {
             string value = null;
 
-            var result = value.Build("name", "age");
+            var result = value.FormatWith("name", "age");
             
             result.ShouldBeNull();
         }
         
         [Fact]
-        public void ReturnsEmptyWhenIsEmptyInBuildingString()
+        public void ReturnsEmptyWhenIsEmpty()
         {
             string value = String.Empty;
 
-            var result = value.Build("name", "age");
+            var result = value.FormatWith("name", "age");
             
             result.ShouldBeEmpty();
         }
 
         [Fact]
-        public void ReturnsBuiltText()
+        public void ReturnsFormattedText()
         {
             var text = "valueOne: {0}, valueTwo: {1}";
 
-            var result = text.Build("name", "age");
+            var result = text.FormatWith("name", "age");
             
             result.ShouldBe("valueOne: name, valueTwo: age");
         }
