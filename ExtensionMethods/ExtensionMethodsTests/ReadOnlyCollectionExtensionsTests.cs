@@ -120,6 +120,17 @@ namespace ExtensionMethodsTests
         }
 
         [Fact]
+        public void ReturnsNullWhenIsNull()
+        {
+            IReadOnlyCollection<int> values = null;
+            var result = 0;
+
+            values.ForEach(x => result = result + x);
+            
+            result.ShouldBe(0);
+        }
+        
+        [Fact]
         public void ReturnsTheSumOfItems()
         {
             var values = new List<int>{1,2,3}.AsReadOnly();
