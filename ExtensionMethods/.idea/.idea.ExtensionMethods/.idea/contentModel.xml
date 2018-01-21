@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2017.3/system/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_ExtensionMethods.377424923.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="ExtensionMethods" t="IncludeRecursive">
+        <e p="Dynamic.HasProperty.cs" t="Include" />
+        <e p="DynamicConverter.To.cs" t="Include" />
+        <e p="ExtensionMethods.csproj" t="IncludeRecursive" />
+        <e p="Object" t="Include">
+          <e p="ObjectExtensions.IsNotNull.cs" t="Include" />
+          <e p="ObjectExtensions.IsNull.cs" t="Include" />
+          <e p="ObjectExtensions.ToDynamic.cs" t="Include" />
+        </e>
+        <e p="ReadOnlyCollection" t="Include">
+          <e p="ReadOnlyCollectionExtensions.ForEach.cs" t="Include" />
+          <e p="ReadOnlyCollectionExtensions.IsEmpty.cs" t="Include" />
+          <e p="ReadOnlyCollectionExtensions.IsNotEmpty.cs" t="Include" />
+          <e p="ReadOnlyCollectionExtensions.IsNotNullAndNotEmpty.cs" t="Include" />
+          <e p="ReadOnlyCollectionExtensions.IsNullOrEmpty.cs" t="Include" />
+          <e p="ReadOnlyCollectionExtensions.cs" t="Include" />
+        </e>
+        <e p="String" t="Include">
+          <e p="StringExtensions.FormatWith.cs" t="Include" />
+          <e p="StringExtensions.IsNotNullAndNotWhiteSpace.cs" t="Include" />
+          <e p="StringExtensions.IsNullOrWhiteSpace.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="ExtensionMethods.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="ExtensionMethods.sln" t="IncludeFlat" />
+      <e p="ExtensionMethodsTests" t="IncludeRecursive">
+        <e p="DynamicConverterTests.cs" t="Include" />
+        <e p="DynamicTests.cs" t="Include" />
+        <e p="ExtensionMethodsTests.csproj" t="IncludeRecursive" />
+        <e p="ObjectExtensionsTests.cs" t="Include" />
+        <e p="ReadOnlyCollectionExtensionsTests.cs" t="Include" />
+        <e p="StringExtensionsTests.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="ExtensionMethodsTests.AssemblyInfo.cs" t="Include" />
+              <e p="ExtensionMethodsTests.Program.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66e7afad-cc57-4305-b587-84d0eb1efdd8" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ReadOnlyCollectionExtensions.ForEach.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.ForEach.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding>
+                <marker date="1516551429078" expanded="true" signature="6:78" ph="..." />
+                <marker date="1516551429078" expanded="true" signature="125:508" ph="{...}" />
+                <marker date="1516551429078" expanded="true" signature="188:506" ph="{...}" />
+                <marker date="1516551429078" expanded="true" signature="290:500" ph="{...}" />
+                <marker date="1516551429078" expanded="true" signature="432:490" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadOnlyCollectionExtensionsTests.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExtensionMethodsTests/ReadOnlyCollectionExtensionsTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+              <folding>
+                <marker date="1516551469558" expanded="false" signature="6:194" ph="..." />
+                <marker date="1516551469558" expanded="true" signature="227:3716" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="280:3714" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="344:511" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="579:749" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="817:988" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="1057:1231" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="1302:1482" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="1550:1711" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="1780:1944" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="2016:2188" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="2257:2426" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="2496:2668" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="2750:2928" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="2988:3188" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="3253:3441" ph="{...}" />
+                <marker date="1516551469558" expanded="true" signature="3500:3708" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E6EBE112-EBB2-4EEF-8125-CAFAD5249F3F/af/34da57c5/Binder.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/74C8172C-E9D1-4BB9-BA38-B75C870811D2/9b/06ba1061/CallSite`1.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/74C8172C-E9D1-4BB9-BA38-B75C870811D2/d4/c2d862fc/UpdateDelegates.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/8c/7276915c/ExecutionContextSwitcher.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/55/6745464a/AsyncTaskMethodBuilder.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FC73CFC6-637F-43C7-B075-209993A74E64/18/442be9fd/Activator.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/Dynamic.HasProperty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethodsTests/DynamicTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNullOrWhiteSpace.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethodsTests/StringExtensionsTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.FormatWith.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethodsTests/ReadOnlyCollectionExtensionsTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsEmpty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNullOrEmpty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNotEmpty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNotNullAndNotEmpty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.ToDynamic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.IsNotNull.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/DynamicConverter.To.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNotNullAndNotWhiteSpace.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.IsNull.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethodsTests/DynamicConverterTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/55/203c0b74/String.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethodsTests/ObjectExtensionsTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.ForEach.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E6EBE112-EBB2-4EEF-8125-CAFAD5249F3F/3d/2def8aa6/CSharpArgumentInfo.cs" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ExtensionMethods/DynamicConverter.To.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ObjectExtensions.ToDynamic.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/Dynamic.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethodsTests/DynamicObjectExtensionsTests.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethodsTests/StringExtensions.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethodsTests/StringExtensions.IsNullOrWhiteSpaceTests.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/Dynamic.HasProperty.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethodsTests/Dynamic.HasProperyTests.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethodsTests/ReadOnlyCollectionExtensions.IsNullTests.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethodsTests/DynamicConverterTests.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollectionExtensions.IsNotEmpty.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollectionExtensions.IsNotNullAndNotEmpty.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollectionExtensions.IsNullOrEmpty.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollectionExtensions.IsEmpty.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollectionExtensions.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNullOrEmpty.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ObjectExtensions.IsNull.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ObjectExtensions.IsNotNull.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.IsNull.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/StringExtensions.IsNullOrWhiteSpace.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/StringExtensions.IsNotNullAndNotWhiteSpace.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNotNullAndNotWhiteSpace.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNullOrWhiteSpace.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.Format.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.Build.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethodsTests/StringExtensionsTests.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.FormatWith.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.ForEach.cs" />
+        <option value="$PROJECT_DIR$/ExtensionMethodsTests/ReadOnlyCollectionExtensionsTests.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="-1" />
+    <option name="width" value="1922" />
+    <option name="height" value="941" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ExtensionMethods (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ExtensionMethods (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ExtensionMethods" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ExtensionMethods (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ExtensionMethodsTests" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66e7afad-cc57-4305-b587-84d0eb1efdd8" name="Default" comment="" />
+      <created>1516350520327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516350520327</updated>
+      <workItem from="1516350528941" duration="13878000" />
+      <workItem from="1516458566670" duration="1429000" />
+      <workItem from="1516544771068" duration="5064000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20371000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-1" width="1922" height="941" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28023952" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814372" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="32" y="79" width="357" height="835" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ExtensionMethods/DynamicConverter.To.cs</url>
+          <line>30</line>
+          <properties documentPath="$PROJECT_DIR$/ExtensionMethods/DynamicConverter.To.cs">
+            <startOffsets>
+              <startOffset value="860" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="888" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ExtensionMethods/DynamicConverter.To.cs</url>
+          <line>25</line>
+          <properties documentPath="$PROJECT_DIR$/ExtensionMethods/DynamicConverter.To.cs">
+            <startOffsets>
+              <startOffset value="727" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="741" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNullOrWhiteSpace.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1516458940610" expanded="true" signature="85:240" ph="{...}" />
+            <marker date="1516458940610" expanded="true" signature="155:234" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsEmpty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding>
+            <marker date="1516369345688" expanded="true" signature="45:156" ph="{...}" />
+            <marker date="1516369345688" expanded="true" signature="108:154" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNotNullAndNotEmpty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNullOrEmpty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/Dynamic.HasProperty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.IsNull.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNullOrWhiteSpace.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <marker date="1516458940610" expanded="true" signature="85:240" ph="{...}" />
+            <marker date="1516458940610" expanded="true" signature="155:234" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNotNullAndNotWhiteSpace.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.IsNotNull.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/8c/7276915c/ExecutionContextSwitcher.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/55/6745464a/AsyncTaskMethodBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/74C8172C-E9D1-4BB9-BA38-B75C870811D2/d4/c2d862fc/UpdateDelegates.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="297" column="10" lean-forward="false" selection-start-line="297" selection-start-column="10" selection-end-line="297" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/74C8172C-E9D1-4BB9-BA38-B75C870811D2/9b/06ba1061/CallSite`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="53" column="6" lean-forward="false" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E6EBE112-EBB2-4EEF-8125-CAFAD5249F3F/af/34da57c5/Binder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1692">
+          <caret line="94" column="6" lean-forward="false" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E6EBE112-EBB2-4EEF-8125-CAFAD5249F3F/3d/2def8aa6/CSharpArgumentInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FC73CFC6-637F-43C7-B075-209993A74E64/18/442be9fd/Activator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1601">
+          <caret line="136" column="20" lean-forward="false" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/DynamicConverter.To.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <marker date="1516361804560" expanded="true" signature="6:69" ph="..." />
+            <marker date="1516361804560" expanded="true" signature="97:1401" ph="{...}" />
+            <marker date="1516361804560" expanded="true" signature="133:1399" ph="{...}" />
+            <marker date="1516361804560" expanded="true" signature="201:751" ph="{...}" />
+            <marker date="1516361804560" expanded="true" signature="243:300" ph="{...}" />
+            <marker date="1516361804560" expanded="true" signature="469:714" ph="{...}" />
+            <marker date="1516361804560" expanded="true" signature="539:700" ph="{...}" />
+            <marker date="1516361804560" expanded="true" signature="837:1086" ph="{...}" />
+            <marker date="1516361804560" expanded="true" signature="888:1005" ph="{...}" />
+            <marker date="1516361804560" expanded="true" signature="1275:1332" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.ToDynamic.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethodsTests/ObjectExtensionsTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethodsTests/DynamicTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="895">
+          <caret line="57" column="14" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="57" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethodsTests/DynamicConverterTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNotEmpty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="53" lean-forward="false" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsEmpty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNullOrEmpty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/55/203c0b74/String.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2824">
+          <caret line="1493" column="25" lean-forward="false" selection-start-line="1493" selection-start-column="25" selection-end-line="1493" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.IsNotNull.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/Object/ObjectExtensions.IsNull.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/Dynamic.HasProperty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.IsNotNullAndNotEmpty.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNullOrWhiteSpace.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <marker date="1516458940610" expanded="true" signature="85:240" ph="{...}" />
+            <marker date="1516458940610" expanded="true" signature="155:234" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.IsNotNullAndNotWhiteSpace.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <marker date="1516369345688" expanded="true" signature="45:156" ph="{...}" />
+            <marker date="1516369345688" expanded="true" signature="108:154" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/String/StringExtensions.FormatWith.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1516549317079" expanded="true" signature="65:395" ph="{...}" />
+            <marker date="1516549317079" expanded="true" signature="116:393" ph="{...}" />
+            <marker date="1516549317079" expanded="true" signature="208:387" ph="{...}" />
+            <marker date="1516549317079" expanded="true" signature="261:318" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethodsTests/StringExtensionsTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1093">
+          <caret line="84" column="26" lean-forward="false" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
+          <folding>
+            <marker date="1516549337883" expanded="false" signature="6:136" ph="..." />
+            <marker date="1516549337883" expanded="true" signature="169:2324" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="228:2322" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="293:446" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="515:673" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="753:902" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="963:1124" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="1194:1360" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="1427:1593" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="1653:1813" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="1883:2049" ph="{...}" />
+            <marker date="1516549337883" expanded="true" signature="2108:2316" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethodsTests/ReadOnlyCollectionExtensionsTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <folding>
+            <marker date="1516551469558" expanded="false" signature="6:194" ph="..." />
+            <marker date="1516551469558" expanded="true" signature="227:3716" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="280:3714" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="344:511" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="579:749" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="817:988" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="1057:1231" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="1302:1482" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="1550:1711" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="1780:1944" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="2016:2188" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="2257:2426" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="2496:2668" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="2750:2928" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="2988:3188" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="3253:3441" ph="{...}" />
+            <marker date="1516551469558" expanded="true" signature="3500:3708" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExtensionMethods/ReadOnlyCollection/ReadOnlyCollectionExtensions.ForEach.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <marker date="1516551429078" expanded="true" signature="6:78" ph="..." />
+            <marker date="1516551429078" expanded="true" signature="125:508" ph="{...}" />
+            <marker date="1516551429078" expanded="true" signature="188:506" ph="{...}" />
+            <marker date="1516551429078" expanded="true" signature="290:500" ph="{...}" />
+            <marker date="1516551429078" expanded="true" signature="432:490" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
