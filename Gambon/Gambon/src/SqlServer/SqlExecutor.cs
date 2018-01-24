@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using Gambon.Core;
 using System.Linq;
 
 namespace Gambon.SqlServer
