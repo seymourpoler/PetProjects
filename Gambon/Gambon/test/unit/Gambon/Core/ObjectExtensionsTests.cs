@@ -86,6 +86,16 @@ namespace GambonUnitTest.Core
 
 			Assert.AreEqual(id, result["Id"]);
 		}
+		
+		[Test]
+		public void ReturnsTrueWhenIsNull()
+		{
+			string name = null;
+			
+			var result = name.IsNull();
+			
+			Assert.IsTrue(result);
+		}
 
         private class User{
             public Guid Id { get; set; }
