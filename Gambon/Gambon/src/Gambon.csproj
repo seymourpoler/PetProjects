@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\ObjectExtensions.cs" />
+    <Compile Include="Core\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServer\Configuration.cs" />
     <Compile Include="SqlServer\SqlBuilder.cs" />
