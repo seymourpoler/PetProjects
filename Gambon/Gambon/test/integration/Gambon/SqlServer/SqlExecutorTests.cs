@@ -3,7 +3,7 @@ using Gambon.SqlServer;
 using NUnit.Framework;
 using System;
 
-namespace GambonIntegrationTest.SqlServer
+namespace Gambon.Integration.Test.SqlServer
 {
 	[TestFixture]
 	public class SqlExecutorTests

@@ -38,17 +38,6 @@ namespace Gambon.Core
             return result;
         }
         
-        public static dynamic ToDynamic<T>(this T thing)
-        {
-            var expando = new ExpandoObject();
-            var result = expando as IDictionary<string, object>; 
-			var properties = thing.GetType().GetProperties();
-                foreach (var property in properties) {
-                    result.Add(property.Name, property.GetValue(thing, null));
-                }
-            return result;
-        }
-		
         public static bool IsNull(this object thing){
         	return thing == null;
         }
