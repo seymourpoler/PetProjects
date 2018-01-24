@@ -10,9 +10,7 @@ namespace Gambon.Unit.Test.SqlServer
 		[Test]
 		public void ReturnsSqlSelectAllFields()
 		{
-			var sqlBuilder = new SqlBuilder<User>();
-			
-			var result = sqlBuilder.Select();
+			var result = new SqlBuilder<User>().Select();
 			
 			Assert.AreEqual("SELECT Id, Name, Age, Email FROM Users", result);
 		}
@@ -20,9 +18,7 @@ namespace Gambon.Unit.Test.SqlServer
 		[Test]
 		public void ReturnsSqlSelectSomeFields()
 		{
-			var sqlBuilder = new SqlBuilder<User>();
-			
-			var result = sqlBuilder.Select(new[]{"Id", "Email"});
+			var result = new SqlBuilder<User>().Select(new[]{"Id", "Email"});
 			
 			Assert.AreEqual("SELECT Id, Email FROM Users", result);
 		}	
