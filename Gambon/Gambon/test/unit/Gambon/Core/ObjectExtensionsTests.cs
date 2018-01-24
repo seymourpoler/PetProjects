@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 using System;
 using System.Collections.Generic;
 
-namespace GambonUnitTest.Core
+namespace Gambon.Test.Unit.Core
 {
     [TestFixture]
 	public class ObjectExtensionsTests

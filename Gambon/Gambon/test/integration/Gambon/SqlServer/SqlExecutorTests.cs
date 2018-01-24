@@ -3,7 +3,7 @@ using Gambon.SqlServer;
 using NUnit.Framework;
 using System;
 
-namespace Gambon.Integration.Test.SqlServer
+namespace Gambon.Test.Integration.SqlServer
 {
 	[TestFixture]
 	public class SqlExecutorTests
@@ -17,6 +17,11 @@ namespace Gambon.Integration.Test.SqlServer
 			configuration = new Configuration();
 			sqlConnectionFactory = new SqlConnectionFactory(configuration);
 			sqlExecutor = new SqlExecutor(sqlConnectionFactory);
+			sqlExecutor.ExecuteNonQuery("DELETE FROM Users");
+		}
+		
+		[TearDown]
+		public void TearDown(){
 			sqlExecutor.ExecuteNonQuery("DELETE FROM Users");
 		}
 		
