@@ -17,7 +17,6 @@ namespace Gambon.Unit.Test.SqlServer
 			Assert.AreEqual("SELECT Id, Name, Age, Email FROM Users", result);
 		}
 
-
 		[Test]
 		public void ReturnsSqlSelectSomeFields()
 		{
@@ -28,7 +27,7 @@ namespace Gambon.Unit.Test.SqlServer
 			Assert.AreEqual("SELECT Id, Email FROM Users", result);
 		}	
 		
-		private class User
+		class User
 		{
 			public Guid Id{get; set;}
 			public string Name{get;set;}
