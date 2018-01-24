@@ -8,19 +8,9 @@ namespace Gambon.Unit.Test.SqlServer
 	public class SqlBuilderTests
 	{
 		[Test]
-		public void ReturnsStringEmptyWhenEnityIsNull()
-		{
-			var sqlBuilder = new SqlBuilder<User>(null);
-			
-			var result = sqlBuilder.Select();
-			
-			Assert.AreEqual(String.Empty, result);
-		}
-		
-		[Test]
 		public void ReturnsSqlSelectAllFields()
 		{
-			var sqlBuilder = new SqlBuilder<User>(null);
+			var sqlBuilder = new SqlBuilder<User>();
 			
 			var result = sqlBuilder.Select();
 			
