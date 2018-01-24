@@ -35,5 +35,13 @@ namespace Gambon.SqlServer
                 return command.ExecuteNonQuery();
 			}
 		}
+
+		public dynamic ExecuteScalar(string sql){
+			using(var connection = sqlConnectionFactory.Create()){
+				return new SqlCommand(sql, connection)
+					.ExecuteScalar()
+					.ToDynamic();
+			}
+		}
 	}
 }
