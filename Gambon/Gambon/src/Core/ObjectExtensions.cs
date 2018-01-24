@@ -11,10 +11,11 @@ namespace Gambon.Core
 	{
         public static dynamic ToDynamic(this object thing)
         {
-			if (thing is ExpandoObject)
-				return thing;
+			if (thing is ExpandoObject){return thing;}
+
             var expando = new ExpandoObject();
             var result = expando as IDictionary<string, object>; 
+
             if (IsNameValueCollection(thing)) {
                 var nameValueCollection = (NameValueCollection)thing;
 				nameValueCollection.Cast<string>()
@@ -23,6 +24,7 @@ namespace Gambon.Core
                 	.ForEach(result.Add);
                 return result;
             }
+
             if (IsDictionary(thing))
 			{
                 var nameValueCollection = (Dictionary <string, object>)thing;
@@ -31,10 +33,12 @@ namespace Gambon.Core
 					.ForEach(result.Add);
 				return result;
 			}
+
 			var properties = thing.GetType().GetProperties();
                 foreach (var property in properties) {
                     result.Add(property.Name, property.GetValue(thing, null));
                 }
+
             return result;
         }
 
@@ -48,8 +52,8 @@ namespace Gambon.Core
         }
 
         private static bool IsDictionary(object thing){
-            	return typeof(IDictionary).IsAssignableFrom(thing.GetType());
-            }
+        	return typeof(IDictionary).IsAssignableFrom(thing.GetType());
+		}
 
 		public static IDictionary<string, object> ToDictionary(this object thing) {
             if(thing == null){
