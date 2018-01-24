@@ -12,7 +12,7 @@ namespace Gambon.Test.Unit.Core
 		{
 			string text = null;
 			
-			var result = text.FormatWith("");
+			var result = text.FormatWith(String.Empty);
 			
 			Assert.AreEqual(String.Empty, result);
 		}
@@ -20,9 +20,7 @@ namespace Gambon.Test.Unit.Core
 		[Test]
 		public void ReturnsStringEmptyWhenTextIsEmpty()
 		{
-			string text = String.Empty;
-			
-			var result = text.FormatWith("");
+			var result = String.Empty.FormatWith("");
 			
 			Assert.AreEqual(String.Empty, result);
 		}
@@ -30,11 +28,17 @@ namespace Gambon.Test.Unit.Core
 		[Test]
 		public void ReturnsStringEmptyWhenParametersAreNull()
 		{
-			var text = "text";
-			
-			var result = text.FormatWith(null);
+			var result = "text".FormatWith(null);
 			
 			Assert.AreEqual(String.Empty, result);
 		}
+
+		[Test]
+		public void ReturnsFormattedTextWithParameters()
+		{
+			var result = "value: {0}".FormatWith("name");
+			
+			Assert.AreEqual("value: name", result);
+		}	
 	}
 }
