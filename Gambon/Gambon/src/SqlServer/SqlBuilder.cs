@@ -7,10 +7,11 @@ namespace Gambon.SqlServer
 {
 	public class SqlBuilder<T> where T : class
 	{
-		public string Select(IEnumerable<string> fields=null){
+		public string Select(IEnumerable<string> fields=null)
+		{
 			var typeName = typeof(T).Name;
 			var sqlFields = BuildSqlFields(fields);
-			return String.Format("SELECT {0} FROM {1}s", sqlFields, typeName);
+			return "SELECT {0} FROM {1}s".FormatWith(sqlFields, typeName);
 		}
 		
 		private string BuildSqlFields(IEnumerable<string> fields)
@@ -21,11 +22,12 @@ namespace Gambon.SqlServer
 		
 		private IEnumerable<string> GetSqlFieldsFrom(IEnumerable<string> fields)
 		{
-			if(fields.IsNull()){
+			if(fields.IsNull())
+			{
 				return typeof(T)
-				.GetProperties()
-				.Where(b => b.CanRead)
-				.Select(c => c.Name);
+					.GetProperties()
+					.Where(b => b.CanRead)
+					.Select(c => c.Name);
 			}
 			return fields;
 		}
