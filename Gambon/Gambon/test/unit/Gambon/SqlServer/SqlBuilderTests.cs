@@ -26,7 +26,8 @@ namespace Gambon.Unit.Test.SqlServer
 			var result = sqlBuilder.Select(new[]{"Id", "Email"});
 			
 			Assert.AreEqual("SELECT Id, Email FROM Users", result);
-		}		
+		}	
+		
 		private class User
 		{
 			public Guid Id{get; set;}
