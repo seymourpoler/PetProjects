@@ -1,29 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Gambon.Core;
 
 namespace Gambon.SqlServer
 {
 	public class SqlBuilder<T> where T : class
 	{
-		public string Select(){
+		public string Select(IEnumerable<string> fields=null){
 			var typeName = typeof(T).Name;
-			var fields = BuildSqlFields();
-			return String.Format("SELECT {0} FROM {1}s", fields, typeName);
+			var sqlFields = BuildSqlFields(fields);
+			return String.Format("SELECT {0} FROM {1}s", sqlFields, typeName);
 		}
 		
-		private IEnumerable<string> GetFieldsFrom()
+		private string BuildSqlFields(IEnumerable<string> fields)
 		{
-			return typeof(T)
+			var sqlFields = GetSqlFieldsFrom(fields);
+			return String.Join(", ", sqlFields);
+		}
+		
+		private IEnumerable<string> GetSqlFieldsFrom(IEnumerable<string> fields)
+		{
+			if(fields.IsNull()){
+				return typeof(T)
 				.GetProperties()
 				.Where(b => b.CanRead)
 				.Select(c => c.Name);
-		}
-		
-		private string BuildSqlFields()
-		{
-			var fields = GetFieldsFrom();
-			return String.Join(", ", fields);
+			}
+			return fields;
 		}
 	}
 }
