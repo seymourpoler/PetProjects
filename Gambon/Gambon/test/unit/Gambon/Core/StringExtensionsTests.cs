@@ -30,11 +30,17 @@ namespace Gambon.Test.Unit.Core
 		[Test]
 		public void ReturnsTrueWhenIsWhiteSpace()
 		{
-			var text = " ";
-			
-			var result = text.IsNullOrWhiteSpace();
+			var result = " ".IsNullOrWhiteSpace();
 			
 			Assert.IsTrue(result);
+		}
+
+		[Test]
+		public void ReturnsFalseWhenHasValue()
+		{
+			var result = "text".IsNullOrWhiteSpace();
+			
+			Assert.IsFalse(result);
 		}
 
 		[Test]
