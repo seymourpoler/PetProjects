@@ -26,8 +26,8 @@ namespace Gambon.SqlServer
 			{
 				return typeof(T)
 					.GetProperties()
-					.Where(b => b.CanRead)
-					.Select(c => c.Name);
+					.Where(a => a.CanRead)
+					.Select(b => b.Name);
 			}
 			return fields;
 		}
