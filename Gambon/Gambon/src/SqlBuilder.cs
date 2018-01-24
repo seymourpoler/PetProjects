@@ -13,13 +13,13 @@ namespace Gambon
 			var sqlFields = BuildSqlFields(fields);
 			return "SELECT {0} FROM {1}s".FormatWith(sqlFields, typeName);
 		}
-		
+
 		private string BuildSqlFields(IEnumerable<string> fields)
 		{
 			var sqlFields = GetSqlFieldsFrom(fields);
 			return String.Join(", ", sqlFields);
 		}
-		
+
 		private IEnumerable<string> GetSqlFieldsFrom(IEnumerable<string> fields)
 		{
 			if(fields.IsNull())
@@ -31,7 +31,7 @@ namespace Gambon
 			}
 			return fields;
 		}
-	
+
 		public string Delete()
 		{
 			var typeName = typeof(T).Name;
