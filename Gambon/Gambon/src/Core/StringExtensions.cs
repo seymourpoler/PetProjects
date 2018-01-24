@@ -8,13 +8,15 @@ namespace Gambon.Core
 		{
 			return String.IsNullOrWhiteSpace(text);
 		}
-		
+
 		public static string FormatWith(this string text, params object[] parameters)
 		{
-			if(String.IsNullOrWhiteSpace(text)){
+			if(String.IsNullOrWhiteSpace(text))
+			{
 				return String.Empty;
 			}
-			if(parameters.IsNull()){
+			if(parameters.IsNull())
+			{
 				return String.Empty;
 			}
 			return String.Format(text, parameters);
