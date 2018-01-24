@@ -8,6 +8,16 @@ namespace Gambon.Test.Unit.Core
 	public class StringExtensionsTests
 	{
 		[Test]
+		public void ReturnsTrueWhenIsNull()
+		{
+			string text = null;
+			
+			var result = text.IsNullOrWhiteSpace();
+			
+			Assert.IsTrue(result);
+		}
+		
+		[Test]
 		public void ReturnsStringEmptyWhenTextIsNull()
 		{
 			string text = null;

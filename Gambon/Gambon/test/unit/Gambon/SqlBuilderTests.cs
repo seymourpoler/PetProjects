@@ -30,7 +30,7 @@ namespace Gambon.Test.Unit
 			
 			Assert.AreEqual("DELETE FROM Users", result);
 		}
-		
+
 		class User
 		{
 			public Guid Id{get; set;}
