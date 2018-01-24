@@ -37,20 +37,20 @@ namespace Gambon.Core
                 }
             return result;
         }
-        
+
         public static bool IsNull(this object thing){
         	return thing == null;
         }
-        
+
         private static bool IsNameValueCollection(object thing){
         	return thing.GetType() == typeof(NameValueCollection) || 
         		thing.GetType().IsSubclassOf(typeof(NameValueCollection));
         }
-        
+
         private static bool IsDictionary(object thing){
             	return typeof(IDictionary).IsAssignableFrom(thing.GetType());
             }
-        
+
 		public static IDictionary<string, object> ToDictionary(this object thing) {
             if(thing == null){
                 return null;
