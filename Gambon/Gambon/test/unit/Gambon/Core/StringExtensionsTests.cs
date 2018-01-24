@@ -20,7 +20,17 @@ namespace Gambon.Test.Unit.Core
 		[Test]
 		public void ReturnsTrueWhenIsEmpty()
 		{
-			string text = String.Empty;
+			var text = String.Empty;
+			
+			var result = text.IsNullOrWhiteSpace();
+			
+			Assert.IsTrue(result);
+		}
+		
+		[Test]
+		public void ReturnsTrueWhenIsWhiteSpace()
+		{
+			var text = " ";
 			
 			var result = text.IsNullOrWhiteSpace();
 			
