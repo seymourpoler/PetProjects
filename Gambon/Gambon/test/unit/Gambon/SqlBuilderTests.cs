@@ -2,7 +2,7 @@
 using System;
 using NUnit.Framework;
 
-namespace Gambon.Test.Unit.SqlServer
+namespace Gambon.Test.Unit
 {
 	[TestFixture]
 	public class SqlBuilderTests
