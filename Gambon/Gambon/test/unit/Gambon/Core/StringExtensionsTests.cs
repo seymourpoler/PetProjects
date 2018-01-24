@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using NUnit.Framework;
 using Gambon.Core;
 
@@ -28,7 +27,6 @@ namespace Gambon.Test.Unit.Core
 			Assert.AreEqual(String.Empty, result);
 		}
 
-
 		[Test]
 		public void ReturnsStringEmptyWhenParametersAreNull()
 		{
@@ -37,6 +35,6 @@ namespace Gambon.Test.Unit.Core
 			var result = text.FormatWith(null);
 			
 			Assert.AreEqual(String.Empty, result);
-		}	
+		}
 	}
 }
