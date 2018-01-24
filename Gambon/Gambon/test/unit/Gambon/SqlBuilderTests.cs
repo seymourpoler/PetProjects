@@ -21,7 +21,15 @@ namespace Gambon.Test.Unit
 			var result = new SqlBuilder<User>().Select(new[]{"Id", "Email"});
 			
 			Assert.AreEqual("SELECT Id, Email FROM Users", result);
-		}	
+		}
+
+		[Test]
+		public void ReturnsSqlDeleteAll()
+		{
+			var result = new SqlBuilder<User>().Delete();
+			
+			Assert.AreEqual("DELETE FROM Users", result);
+		}
 		
 		class User
 		{

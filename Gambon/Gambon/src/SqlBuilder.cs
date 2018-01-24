@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Gambon.Core;
 
-namespace Gambon.SqlServer
+namespace Gambon
 {
 	public class SqlBuilder<T> where T : class
 	{
@@ -30,6 +30,12 @@ namespace Gambon.SqlServer
 					.Select(b => b.Name);
 			}
 			return fields;
+		}
+	
+		public string Delete()
+		{
+			var typeName = typeof(T).Name;
+			return "DELETE FROM {0}s".FormatWith(typeName);
 		}
 	}
 }
