@@ -35,6 +35,10 @@ namespace Gambon
 
 		public string Insert(T entity)
 		{
+			if(entity.IsNull())
+			{
+				return String.Empty;
+			}
 			var typeName = typeof(T).Name;
 			var sqlFields = GetSqlFieldsWithoutId();
 			var sqlValues = GetSqlValuesWithoutId(entity);

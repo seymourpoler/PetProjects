@@ -24,6 +24,14 @@ namespace Gambon.Test.Unit
 		}
 
 		[Test]
+		public void ReturnsStringEmptyWhenEntityIsNull()
+		{
+			var result = new SqlBuilder<User>().Insert(null);
+
+			Assert.AreEqual(String.Empty, result);
+		}
+
+		[Test]
 		public void ReturnsSqlInsert()
 		{
 			var newUser = new User{ Id = Guid.NewGuid(), Name = "Name", Age=12, Email="a@a.es"};
