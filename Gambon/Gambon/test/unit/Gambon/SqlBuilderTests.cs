@@ -24,6 +24,16 @@ namespace Gambon.Test.Unit
 		}
 
 		[Test]
+		public void ReturnsSqlInsert()
+		{
+			var newUser = new User{ Id = Guid.NewGuid(), Name = "Name", Age=12, Email="a@a.es"};
+
+			var result = new SqlBuilder<User>().Insert(newUser);
+
+			Assert.AreEqual("INSERT INTO Users (Name, Age, Email) VALUES ('Name', 12, 'a@a.es')", result);
+		}
+
+		[Test]
 		public void ReturnsSqlDeleteAll()
 		{
 			var result = new SqlBuilder<User>().Delete();
