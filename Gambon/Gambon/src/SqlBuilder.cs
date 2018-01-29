@@ -56,7 +56,8 @@ namespace Gambon
 				if(property.PropertyType  == typeof(string)) 
 				{
 					values.Append(String.Format("{0} = '{1}'", propertyName, propertyValue));
-				}else
+				}
+				else
 				{
 					values.Append(String.Format("{0} = {1}", propertyName, propertyValue));
 				}
