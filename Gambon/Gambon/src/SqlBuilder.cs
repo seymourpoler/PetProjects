@@ -86,7 +86,7 @@ namespace Gambon
 			return String.Join(", ", values);
 		}
 		
-		private static object BuildValue(T entity, PropertyInfo property)
+		private object BuildValue(T entity, PropertyInfo property)
 		{
 			if(property.PropertyType  == typeof(string)) 
 			{
@@ -95,7 +95,7 @@ namespace Gambon
 			return property.GetValue(entity, null);
 		}
 
-		public static string BuildWhereSql(T entity, dynamic condition)
+		public string BuildWhereSql(T entity, dynamic condition)
 		{
 			var properties = condition.GetType().GetProperties();
 			var values = new StringBuilder();
