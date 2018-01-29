@@ -62,8 +62,7 @@ namespace Gambon
 				}
 			}
 			var sqlWhere =  String.Join(" AND ", values);
-			var result = String.Format("INSERT INTO {0}s ({1}) VALUES ({2}) WHERE {3}", typeName, sqlFields, sqlValues, sqlWhere);
-			return result;
+			return String.Format("INSERT INTO {0}s ({1}) VALUES ({2}) WHERE {3}", typeName, sqlFields, sqlValues, sqlWhere);
 		}
 
 		private string BuildSqlFieldsWithoutId()
