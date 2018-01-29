@@ -34,11 +34,23 @@ namespace Gambon.Test.Unit
 		[Test]
 		public void ReturnsSqlInsert()
 		{
-			var newUser = new User{ Id = Guid.NewGuid(), Name = "Name", Age=12, Email="a@a.es"};
+			var newUser = new User{ Id = Guid.NewGuid().ToString(), Name = "Name", Age=12, Email="a@a.es"};
 
 			var result = new SqlBuilder<User>().Insert(newUser);
 
 			Assert.AreEqual("INSERT INTO Users (Name, Age, Email) VALUES ('Name', 12, 'a@a.es')", result);
+		}
+
+		[Test]
+		public void ReturnsSqlInsertWithWhere()
+		{
+			var newUser = new User{ Id = Guid.NewGuid().ToString(), Name = "Name", Age=12, Email="a@a.es"};
+
+			var result = new SqlBuilder<User>().Insert(entity: newUser, condition: new { Id = "identificator"});
+
+			Assert.AreEqual(
+				expected: "INSERT INTO Users (Name, Age, Email) VALUES ('Name', 12, 'a@a.es') WHERE Id = 'identificator'", 
+				actual: result);
 		}
 
 		[Test]
@@ -51,7 +63,7 @@ namespace Gambon.Test.Unit
 
 		class User
 		{
-			public Guid Id{get; set;}
+			public string Id{get; set;}
 			public string Name{get;set;}
 			public int Age{get;set;}
 			public string Email{get; set;}

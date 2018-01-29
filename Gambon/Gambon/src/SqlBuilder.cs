@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using Gambon.Core;
 
 namespace Gambon
@@ -33,19 +34,39 @@ namespace Gambon
 			return fields;
 		}
 
-		public string Insert(T entity)
+		public string Insert(T entity, dynamic condition=null)
 		{
 			if(entity.IsNull())
 			{
 				return String.Empty;
 			}
 			var typeName = typeof(T).Name;
-			var sqlFields = GetSqlFieldsWithoutId();
-			var sqlValues = GetSqlValuesWithoutId(entity);
-			return "INSERT INTO {0}s ({1}) VALUES ({2})".FormatWith(typeName, sqlFields, sqlValues);
+			var sqlFields = BuildSqlFieldsWithoutId();
+			var sqlValues = BuildSqlValuesWithoutId(entity);
+			if(condition == null)
+			{
+				return "INSERT INTO {0}s ({1}) VALUES ({2})".FormatWith(typeName, sqlFields, sqlValues);
+			}
+			var properties = condition.GetType().GetProperties();
+			var values = new StringBuilder();
+			foreach(var property in properties)
+			{
+				var propertyName = property.Name;
+				var propertyValue = property.GetValue(condition, null);
+				if(property.PropertyType  == typeof(string)) 
+				{
+					values.Append(String.Format("{0} = '{1}'", propertyName, propertyValue));
+				}else
+				{
+					values.Append(String.Format("{0} = {1}", propertyName, propertyValue));
+				}
+			}
+			var sqlWhere =  String.Join(" AND ", values);
+			var result = String.Format("INSERT INTO {0}s ({1}) VALUES ({2}) WHERE {3}", typeName, sqlFields, sqlValues, sqlWhere);
+			return result;
 		}
 
-		private string GetSqlFieldsWithoutId()
+		private string BuildSqlFieldsWithoutId()
 		{
 			var fields = typeof(T)
 				.GetProperties()
@@ -55,7 +76,7 @@ namespace Gambon
 			return String.Join(", ", fields);			
 		}
 		
-		private string GetSqlValuesWithoutId(T entity)
+		private string BuildSqlValuesWithoutId(T entity)
 		{
 			var values = typeof(T)
 				.GetProperties()
@@ -65,7 +86,7 @@ namespace Gambon
 			return String.Join(", ", values);
 		}
 		
-		private object BuildValue(T entity, PropertyInfo property)
+		private static object BuildValue(T entity, PropertyInfo property)
 		{
 			if(property.PropertyType  == typeof(string)) 
 			{
@@ -73,7 +94,29 @@ namespace Gambon
 			}
 			return property.GetValue(entity, null);
 		}
-		
+
+		public static string BuildWhereSql(T entity, dynamic condition)
+		{
+			var properties = condition.GetType().GetProperties();
+			var values = new StringBuilder();
+			foreach(var property in properties)
+			{
+				values.Append(BuildCondition(condition, property));
+			}
+			return String.Join(" AND ", values);
+		}
+
+		private string BuildCondition(dynamic condition, PropertyInfo property)
+		{
+			var propertyName = property.Name;
+			var propertyValue = property.GetValue(condition, null);
+			if(property.PropertyType  == typeof(string)) 
+			{
+				return String.Format("{0} = '{1}'", propertyName, propertyValue);
+			}
+			return String.Format("{0} = {1}", propertyName, propertyValue);
+		}
+
 		public string Delete()
 		{
 			var typeName = typeof(T).Name;
