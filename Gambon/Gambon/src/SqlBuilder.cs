@@ -48,18 +48,18 @@ namespace Gambon
 				return "INSERT INTO {0}s ({1}) VALUES ({2})".FormatWith(typeName, sqlFields, sqlValues);
 			}
 			var properties = condition.GetType().GetProperties();
-			var values = new StringBuilder();
+			var values = new List<string>();
 			foreach(var property in properties)
 			{
 				var propertyName = property.Name;
 				var propertyValue = property.GetValue(condition, null);
 				if(property.PropertyType  == typeof(string)) 
 				{
-					values.Append(String.Format("{0} = '{1}'", propertyName, propertyValue));
+					values.Add(String.Format("{0} = '{1}'", propertyName, propertyValue));
 				}
 				else
 				{
-					values.Append(String.Format("{0} = {1}", propertyName, propertyValue));
+					values.Add(String.Format("{0} = {1}", propertyName, propertyValue));
 				}
 			}
 			var sqlWhere =  String.Join(" AND ", values);
