@@ -199,8 +199,11 @@ SimpleHttpServer\SimpleHttpServer\obj
 Gambon/Gambon/.idea
 Gambon/Gambon/Gambon.userprefs
 Gambon/Gambon/src/bin
-Gambon/Gambon/test/unit/GambonUnitTest/bin
-Gambon/Gambon/test/integration/GambonIntegrationTest/bin
+Gambon/Gambon/src/obj
+#Gambon/Gambon/test/unit/GambonUnitTest/bin
+#Gambon/Gambon/test/unit/GambonUnitTest/obj
+#Gambon/Gambon/test/integration/GambonIntegrationTest/bin
+#Gambon/Gambon/test/integration/GambonIntegrationTest/obj
 ExtensionMethods/.idea
 ExtensionMethods/.vs
 ExtensionMethods/ExtensionMethods/bin
