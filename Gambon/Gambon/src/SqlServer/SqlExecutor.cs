@@ -18,11 +18,11 @@ namespace Gambon.SqlServer
 		public IEnumerable<dynamic> ExecuteReader(string sql){
 			using(var connection = sqlConnectionFactory.Create()){
 				var command = new SqlCommand(sql, connection);
-                var dataReader = command.ExecuteReader();
+				var dataReader = command.ExecuteReader();
 				 while (dataReader.Read())
-                 {
-				 	yield return dataReader.ToDynamic();
-                 }
+				 {
+					yield return dataReader.ToDynamic();
+				 }
 			}
 		}
 		
@@ -33,7 +33,7 @@ namespace Gambon.SqlServer
 		public int ExecuteNonQuery(string sql){
 			using(var connection = sqlConnectionFactory.Create()){
 				var command = new SqlCommand(sql, connection);
-                return command.ExecuteNonQuery();
+				return command.ExecuteNonQuery();
 			}
 		}
 
