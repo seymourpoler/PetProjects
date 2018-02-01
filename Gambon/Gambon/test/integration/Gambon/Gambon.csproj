@@ -55,18 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServer\SqlExecutorTests.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SqlServer" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="DataBase.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Gambon.csproj">
-      <Project>{24229e2e-5385-414a-b78e-d1b0b89a0f60}</Project>
-      <Name>Gambon</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

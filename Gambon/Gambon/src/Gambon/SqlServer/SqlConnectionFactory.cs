@@ -4,9 +4,9 @@ namespace Gambon.SqlServer
 {
     public class SqlConnectionFactory
     {
-        private readonly Configuration configuration;
+        private readonly AppConfiguration configuration;
 
-        public SqlConnectionFactory(Configuration configuration)
+        public SqlConnectionFactory(AppConfiguration configuration)
         {
             this.configuration = configuration;
         }
