@@ -107,6 +107,16 @@ namespace Gambon.Test.Unit.Sql
             Assert.Equal("DELETE FROM Users", result);
         }
 
+        [Fact]
+        public void ReturnsSqlDeleteWithSomeConditions()
+        {
+            var user = new User { Id = "Identificator", Name = "Name", Age = 12, Email = "a@a.es" };
+
+            var result = sqlBuilder.Delete<User>(condition: new { Id = "identificator", Age = 13 });
+
+            Assert.Equal(expected: "DELETE FROM Users WHERE Id = 'identificator' AND Age = 13", actual: result);
+        }
+
         public class User
         {
             public string Id { get; set; }

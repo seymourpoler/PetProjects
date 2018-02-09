@@ -1,5 +1,4 @@
-﻿using Gambon.Core;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Gambon.Sql
 {
@@ -7,7 +6,8 @@ namespace Gambon.Sql
     {
         public string Select<T>(IEnumerable<string> fields = null) where T : class
         {
-            return new SqlSelectBuilder<T>(fields)
+            return new SqlSelectBuilder<T>(
+                    fields: fields)
                 .ToSql();
         }
 
@@ -22,15 +22,16 @@ namespace Gambon.Sql
         public string Update<T>(T entity, dynamic condition = null) where T : class
         {
             return new SqlUpdateBuilder<T>(
-                entity: entity,
-                condition: condition)
+                    entity: entity,
+                    condition: condition)
                 .ToSql();
         }
 
-        public string Delete<T>() where T : class
+        public string Delete<T>(dynamic condition = null) where T : class
         {
-            var typeName = typeof(T).Name;
-            return "DELETE FROM {0}s".FormatWith(typeName);
+            return new SqlDeleteBuilder<T>(
+                    condition: condition)
+                .ToSql();
         }
     }
 }
