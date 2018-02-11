@@ -21,6 +21,11 @@ namespace Gambon.Sql
             {
                 return String.Empty;
             }
+            return BuildSql(entity, condition);
+        }
+
+        private string BuildSql(T entity, dynamic condition)
+        {
             var typeName = typeof(T).Name;
             var properties = entity.GetType().GetProperties()
                 .Where(a => a.CanRead)
@@ -44,8 +49,10 @@ namespace Gambon.Sql
             {
                 return "UPDATE {0}s {1} WHERE {2}".FormatWith(typeName, sqlUpdate, BuildWhereSql());
             }
-            var sqlWhere = new SqlWhereBuilder(condition).Build();
-            return String.Format("UPDATE {0}s {1} WHERE {2}", typeName, sqlUpdate, sqlWhere);
+            return BuildSqlWithCondition(
+                condition: condition,
+                tableName: typeName,
+                sqlUpdate: sqlUpdate);
         }
 
         private string BuildWhereSql()
@@ -58,6 +65,12 @@ namespace Gambon.Sql
                 return "{0} = '{1}'".FormatWith(propertyName, propertyValue);
             }
             return "{0} = {1}".FormatWith(propertyName, propertyValue);
+        }
+
+        private string BuildSqlWithCondition(dynamic condition, string tableName, string sqlUpdate)
+        {
+            var sqlWhere = new SqlWhereBuilder(condition).Build();
+            return String.Format("UPDATE {0}s {1} WHERE {2}", tableName, sqlUpdate, sqlWhere);
         }
     }
 }
