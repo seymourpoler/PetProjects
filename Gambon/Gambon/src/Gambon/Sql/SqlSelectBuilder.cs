@@ -29,18 +29,18 @@ namespace Gambon.Sql
         {
             var sqlFields = GetSqlFieldsFrom(fields);
             return String.Join(", ", sqlFields);
+        }
 
-            IEnumerable<string> GetSqlFieldsFrom(IEnumerable<string> tableFields)
+        private IEnumerable<string> GetSqlFieldsFrom(IEnumerable<string> fields)
+        {
+            if (fields.IsNull())
             {
-                if (fields.IsNull())
-                {
-                    return typeof(T)
-                        .GetProperties()
-                        .Where(a => a.CanRead)
-                        .Select(b => b.Name);
-                }
-                return tableFields;
+                return typeof(T)
+                    .GetProperties()
+                    .Where(a => a.CanRead)
+                    .Select(b => b.Name);
             }
+            return fields;
         }
 
         private string BuildSql(string sqlFields, string tableName)
@@ -49,13 +49,16 @@ namespace Gambon.Sql
             {
                 return "SELECT {0} FROM {1}s".FormatWith(sqlFields, tableName);
             }
-            return BuildSqlWithCondition(condition, sqlFields, tableName);
+            return BuildSqlWithCondition(
+                condition: condition,
+                sqlFields: sqlFields,
+                tableName: tableName);
+        }
 
-            string BuildSqlWithCondition(dynamic condition, string fields, string name)
-            {
-                var sqlWhere = new SqlWhereBuilder(condition).Build();
-                return String.Format("SELECT {0} FROM {1}s WHERE {2}", fields, name, sqlWhere);
-            }
+        private string BuildSqlWithCondition(dynamic condition, string sqlFields, string tableName)
+        {
+            var sqlWhere = new SqlWhereBuilder(condition).Build();
+            return String.Format("SELECT {0} FROM {1}s WHERE {2}", sqlFields, tableName, sqlWhere);
         }
     }
 }
