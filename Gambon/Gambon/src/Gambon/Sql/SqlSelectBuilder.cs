@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Gambon.Sql
 {
-    public class SqlSelectBuilder<T> where T : class
+    public class SqlSelectBuilder<T> : SqlBaseBuilder where T : class
     {
         private readonly IEnumerable<string> fields;
         private readonly dynamic condition;
@@ -53,11 +53,6 @@ namespace Gambon.Sql
                 condition: condition,
                 sqlFields: sqlFields,
                 tableName: tableName);
-        }
-
-        private bool ThereIsNo(dynamic condition)
-        {
-            return condition == null;
         }
 
         private string BuildSqlWithCondition(dynamic condition, string sqlFields, string tableName)

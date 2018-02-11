@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Gambon.Sql
 {
-    public class SqlUpdateBuilder<T> where T : class
+    public class SqlUpdateBuilder<T> : SqlBaseBuilder where T : class
     {
         private readonly T entity;
         private readonly dynamic condition;
@@ -40,7 +40,7 @@ namespace Gambon.Sql
                 }
             }
             var sqlUpdate = String.Join(", ", values);
-            if (condition == null)
+            if (ThereIsNo(condition))
             {
                 return "UPDATE {0}s {1} WHERE {2}".FormatWith(typeName, sqlUpdate, BuildWhereSql());
             }

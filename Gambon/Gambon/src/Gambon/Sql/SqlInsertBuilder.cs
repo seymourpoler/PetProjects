@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Gambon.Sql
 {
-    public class SqlInsertBuilder<T> where T : class
+    public class SqlInsertBuilder<T> : SqlBaseBuilder where T : class
     {
         private readonly T entity;
         private readonly dynamic condition;
@@ -67,11 +67,6 @@ namespace Gambon.Sql
                 return "'{0}'".FormatWith(property.GetValue(entity, null));
             }
             return property.GetValue(entity, null);
-        }
-
-        private bool ThereIsNo(dynamic condition)
-        {
-            return condition == null;
         }
 
         private string BuildSqlWithCondition(string tableName, string sqlFields, string sqlValues)
