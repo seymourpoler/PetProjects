@@ -22,12 +22,7 @@ namespace Gambon.Sql
         {
             var typeName = typeof(T).Name;
             var sqlFields = BuildSqlFields(fields);
-            if (condition == null)
-            {
-                return "SELECT {0} FROM {1}s".FormatWith(sqlFields, typeName);
-            }
-            var sqlWhere = new SqlWhereBuilder(condition).Build();
-            return String.Format("SELECT {0} FROM {1}s WHERE {2}", sqlFields, typeName, sqlWhere);
+            return BuildSql(tableName: typeName, sqlFields: sqlFields);
         }
 
         private string BuildSqlFields(IEnumerable<string> fields = null)
@@ -46,6 +41,29 @@ namespace Gambon.Sql
                     .Select(b => b.Name);
             }
             return fields;
+        }
+
+        private string BuildSql(string sqlFields, string tableName)
+        {
+            if (ThereIsNo(condition))
+            {
+                return "SELECT {0} FROM {1}s".FormatWith(sqlFields, tableName);
+            }
+            return BuildSqlWithCondition(
+                condition: condition,
+                sqlFields: sqlFields,
+                tableName: tableName);
+        }
+
+        private bool ThereIsNo(dynamic condition)
+        {
+            return condition == null;
+        }
+
+        private string BuildSqlWithCondition(dynamic condition, string sqlFields, string tableName)
+        {
+            var sqlWhere = new SqlWhereBuilder(condition).Build();
+            return String.Format("SELECT {0} FROM {1}s WHERE {2}", sqlFields, tableName, sqlWhere);
         }
     }
 }

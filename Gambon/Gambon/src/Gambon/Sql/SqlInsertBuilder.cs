@@ -22,16 +22,22 @@ namespace Gambon.Sql
             {
                 return String.Empty;
             }
+            return BuildSql(entity, condition);
+        }
+
+        private string BuildSql(T entity, dynamic condition)
+        {
             var typeName = typeof(T).Name;
             var sqlFields = BuildSqlFieldsWithoutId();
             var sqlValues = BuildSqlValuesWithoutId(entity);
-            if (condition == null)
+            if (ThereIsNo(condition))
             {
                 return "INSERT INTO {0}s ({1}) VALUES ({2})".FormatWith(typeName, sqlFields, sqlValues);
             }
-
-            var sqlWhere = new SqlWhereBuilder(condition).Build();
-            return "INSERT INTO {0}s ({1}) VALUES ({2}) WHERE {3}".FormatWith(typeName, sqlFields, sqlValues, sqlWhere);
+            return BuildSqlWithCondition(
+                tableName: typeName,
+                sqlFields: sqlFields,
+                sqlValues: sqlValues);
         }
 
         private string BuildSqlFieldsWithoutId()
@@ -61,6 +67,17 @@ namespace Gambon.Sql
                 return "'{0}'".FormatWith(property.GetValue(entity, null));
             }
             return property.GetValue(entity, null);
+        }
+
+        private bool ThereIsNo(dynamic condition)
+        {
+            return condition == null;
+        }
+
+        private string BuildSqlWithCondition(string tableName, string sqlFields, string sqlValues)
+        {
+            var sqlWhere = new SqlWhereBuilder(condition).Build();
+            return "INSERT INTO {0}s ({1}) VALUES ({2}) WHERE {3}".FormatWith(tableName, sqlFields, sqlValues, sqlWhere);
         }
     }
 }
