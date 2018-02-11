@@ -26,7 +26,7 @@ namespace Gambon.Sql
             {
                 return "SELECT {0} FROM {1}s".FormatWith(sqlFields, typeName);
             }
-            var sqlWhere = BuildSqlWhere(condition);
+            var sqlWhere = new SqlWhereBuilder(condition).ToSql();
             return String.Format("SELECT {0} FROM {1}s WHERE {2}", sqlFields, typeName, sqlWhere);
         }
 
@@ -46,26 +46,6 @@ namespace Gambon.Sql
                     .Select(b => b.Name);
             }
             return fields;
-        }
-
-        private string BuildSqlWhere(dynamic condition)
-        {
-            var properties = condition.GetType().GetProperties();
-            var values = new List<string>();
-            foreach (var property in properties)
-            {
-                var propertyName = property.Name;
-                var propertyValue = property.GetValue(condition, null);
-                if (property.PropertyType == typeof(string))
-                {
-                    values.Add(String.Format("{0} = '{1}'", propertyName, propertyValue));
-                }
-                else
-                {
-                    values.Add(String.Format("{0} = {1}", propertyName, propertyValue));
-                }
-            }
-            return String.Join(" AND ", values);
         }
     }
 }

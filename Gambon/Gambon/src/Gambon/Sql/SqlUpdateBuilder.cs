@@ -44,7 +44,8 @@ namespace Gambon.Sql
             {
                 return "UPDATE {0}s {1} WHERE {2}".FormatWith(typeName, sqlUpdate, BuildWhereSql());
             }
-            return String.Format("UPDATE {0}s {1} WHERE {2}", typeName, sqlUpdate, BuildWhereSql(condition));
+            var sqlWhere = new SqlWhereBuilder(condition).ToSql();
+            return String.Format("UPDATE {0}s {1} WHERE {2}", typeName, sqlUpdate, sqlWhere);
         }
 
         private string BuildWhereSql()
@@ -57,26 +58,6 @@ namespace Gambon.Sql
                 return "{0} = '{1}'".FormatWith(propertyName, propertyValue);
             }
             return "{0} = {1}".FormatWith(propertyName, propertyValue);
-        }
-
-        private string BuildWhereSql(dynamic condition)
-        {
-            var properties = condition.GetType().GetProperties();
-            var values = new List<string>();
-            foreach (var property in properties)
-            {
-                var propertyName = property.Name;
-                var propertyValue = property.GetValue(condition, null);
-                if (property.PropertyType == typeof(string))
-                {
-                    values.Add(String.Format("{0} = '{1}'", propertyName, propertyValue));
-                }
-                else
-                {
-                    values.Add(String.Format("{0} = {1}", propertyName, propertyValue));
-                }
-            }
-            return String.Join(" AND ", values);
         }
     }
 }

@@ -1,9 +1,7 @@
 ﻿using Gambon.Core;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace Gambon.Sql
 {
@@ -31,22 +29,8 @@ namespace Gambon.Sql
             {
                 return "INSERT INTO {0}s ({1}) VALUES ({2})".FormatWith(typeName, sqlFields, sqlValues);
             }
-            var properties = condition.GetType().GetProperties();
-            var values = new List<string>();
-            foreach (var property in properties)
-            {
-                var propertyName = property.Name;
-                var propertyValue = property.GetValue(condition, null);
-                if (property.PropertyType == typeof(string))
-                {
-                    values.Add(String.Format("{0} = '{1}'", propertyName, propertyValue));
-                }
-                else
-                {
-                    values.Add(String.Format("{0} = {1}", propertyName, propertyValue));
-                }
-            }
-            var sqlWhere = String.Join(" AND ", values);
+
+            var sqlWhere = new SqlWhereBuilder(condition).ToSql();
             return "INSERT INTO {0}s ({1}) VALUES ({2}) WHERE {3}".FormatWith(typeName, sqlFields, sqlValues, sqlWhere);
         }
 
@@ -77,28 +61,6 @@ namespace Gambon.Sql
                 return "'{0}'".FormatWith(property.GetValue(entity, null));
             }
             return property.GetValue(entity, null);
-        }
-
-        private string BuildWhereSql(T entity, dynamic condition)
-        {
-            var properties = condition.GetType().GetProperties();
-            var values = new StringBuilder();
-            foreach (var property in properties)
-            {
-                values.Append(BuildCondition(condition, property));
-            }
-            return String.Join(" AND ", values);
-        }
-
-        private string BuildCondition(dynamic condition, PropertyInfo property)
-        {
-            var propertyName = property.Name;
-            var propertyValue = property.GetValue(condition, null);
-            if (property.PropertyType == typeof(string))
-            {
-                return String.Format("{0} = '{1}'", propertyName, propertyValue);
-            }
-            return String.Format("{0} = {1}", propertyName, propertyValue);
         }
     }
 }
