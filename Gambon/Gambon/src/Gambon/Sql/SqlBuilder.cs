@@ -4,10 +4,11 @@ namespace Gambon.Sql
 {
     public class SqlBuilder
     {
-        public string Select<T>(IEnumerable<string> fields = null) where T : class
+        public string Select<T>(IEnumerable<string> fields = null, dynamic condition = null) where T : class
         {
             return new SqlSelectBuilder<T>(
-                    fields: fields)
+                    fields: fields,
+                    condition: condition)
                 .ToSql();
         }
 
