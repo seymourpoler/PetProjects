@@ -15,12 +15,22 @@ namespace Gambon.Sql
         public string ToSql()
         {
             var typeName = typeof(T).Name;
+            return BuildSql(typeName);
+        }
+
+        private string BuildSql(string tableName)
+        {
             if (condition == null)
             {
-                return "DELETE FROM {0}s".FormatWith(typeName);
+                return "DELETE FROM {0}s".FormatWith(tableName);
             }
+            return BuildSqlWithCondition(tableName: tableName, condition: condition);
+        }
+
+        private string BuildSqlWithCondition(string tableName, dynamic condition)
+        {
             var sqlWhere = new SqlWhereBuilder(condition).Build();
-            return String.Format("DELETE FROM {0}s WHERE {1}", typeName, sqlWhere);
+            return String.Format("DELETE FROM {0}s WHERE {1}", tableName, sqlWhere);
         }
     }
 }
