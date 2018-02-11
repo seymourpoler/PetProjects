@@ -10,6 +10,7 @@ namespace Gambon.Sql
     {
         private readonly T entity;
         private readonly dynamic condition;
+
         public SqlUpdateBuilder(T entity, dynamic condition)
         {
             this.entity = entity;
