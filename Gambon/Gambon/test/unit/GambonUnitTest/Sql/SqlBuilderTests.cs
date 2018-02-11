@@ -32,7 +32,9 @@ namespace Gambon.Test.Unit.Sql
         [Fact]
         public void ReturnsSqlSelectSomeFieldsAndCondition()
         {
-            var result = sqlBuilder.Select<User>(fields: new[] { "Id", "Email" }, condition: new { Age = 12, Name = "John" });
+            var result = sqlBuilder.Select<User>(
+                fields: new[] { "Id", "Email" },
+                condition: new { Age = 12, Name = "John" });
 
             Assert.Equal("SELECT Id, Email FROM Users WHERE Age = 12 AND Name = 'John'", result);
         }

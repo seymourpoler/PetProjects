@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 
 namespace Gambon.Sql
 {
@@ -26,8 +24,8 @@ namespace Gambon.Sql
             {
                 return "SELECT {0} FROM {1}s".FormatWith(sqlFields, typeName);
             }
-            var sqlWhere = BuildSqlWhere();
-            return "SELECT {0} FROM {1}s WHERE {2}".FormatWith(sqlFields, typeName, sqlWhere);
+            var sqlWhere = BuildSqlWhere(condition);
+            return String.Format("SELECT {0} FROM {1}s WHERE {2}", sqlFields, typeName, sqlWhere);
         }
 
         private string BuildSqlFields(IEnumerable<string> fields = null)
@@ -48,26 +46,24 @@ namespace Gambon.Sql
             return fields;
         }
 
-        private string BuildSqlWhere()
+        private string BuildSqlWhere(dynamic condition)
         {
             var properties = condition.GetType().GetProperties();
-            var values = new StringBuilder();
+            var values = new List<string>();
             foreach (var property in properties)
             {
-                values.Append(BuildCondition(condition, property));
+                var propertyName = property.Name;
+                var propertyValue = property.GetValue(condition, null);
+                if (property.PropertyType == typeof(string))
+                {
+                    values.Add(String.Format("{0} = '{1}'", propertyName, propertyValue));
+                }
+                else
+                {
+                    values.Add(String.Format("{0} = {1}", propertyName, propertyValue));
+                }
             }
             return String.Join(" AND ", values);
-        }
-
-        private string BuildCondition(dynamic condition, PropertyInfo property)
-        {
-            var propertyName = property.Name;
-            var propertyValue = property.GetValue(condition, null);
-            if (property.PropertyType == typeof(string))
-            {
-                return String.Format("{0} = '{1}'", propertyName, propertyValue);
-            }
-            return String.Format("{0} = {1}", propertyName, propertyValue);
         }
     }
 }
