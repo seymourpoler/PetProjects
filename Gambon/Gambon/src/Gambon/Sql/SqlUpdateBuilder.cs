@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace Gambon.Sql
 {
@@ -27,9 +28,7 @@ namespace Gambon.Sql
         private string BuildSql(T entity, dynamic condition)
         {
             var typeName = typeof(T).Name;
-            var properties = entity.GetType().GetProperties()
-                .Where(a => a.CanRead)
-                .Where(c => c.Name != "Id");
+            var properties = GetPropertiesWithoutId(entity);
             var values = new List<string>();
             foreach (var property in properties)
             {
@@ -53,6 +52,13 @@ namespace Gambon.Sql
                 condition: condition,
                 tableName: typeName,
                 sqlUpdate: sqlUpdate);
+        }
+
+        private IEnumerable<PropertyInfo> GetPropertiesWithoutId(T entity)
+        {
+            return entity.GetType().GetProperties()
+                .Where(a => a.CanRead)
+                .Where(c => c.Name != "Id");
         }
 
         private string BuildWhereSql()
