@@ -20,11 +20,16 @@ namespace Gambon.Sql
 
         private string BuildSql(string tableName)
         {
-            if (condition == null)
+            if (ThereIsNo(condition))
             {
                 return "DELETE FROM {0}s".FormatWith(tableName);
             }
             return BuildSqlWithCondition(tableName: tableName, condition: condition);
+        }
+
+        private bool ThereIsNo(dynamic condition)
+        {
+            return condition == null;
         }
 
         private string BuildSqlWithCondition(string tableName, dynamic condition)
