@@ -10,7 +10,9 @@ namespace Gambon.Sql
         private readonly IEnumerable<string> fields;
         private readonly dynamic condition;
 
-        public SqlSelectBuilder(IEnumerable<string> fields = null, dynamic condition = null)
+        public SqlSelectBuilder(
+            IEnumerable<string> fields = null,
+            dynamic condition = null)
         {
             this.fields = fields;
             this.condition = condition;
