@@ -44,7 +44,7 @@ namespace Gambon.Sql
             {
                 return "UPDATE {0}s {1} WHERE {2}".FormatWith(typeName, sqlUpdate, BuildWhereSql());
             }
-            var sqlWhere = new SqlWhereBuilder(condition).ToSql();
+            var sqlWhere = new SqlWhereBuilder(condition).Build();
             return String.Format("UPDATE {0}s {1} WHERE {2}", typeName, sqlUpdate, sqlWhere);
         }
 

@@ -19,7 +19,7 @@ namespace Gambon.Sql
             {
                 return "DELETE FROM {0}s".FormatWith(typeName);
             }
-            var sqlWhere = new SqlWhereBuilder(condition).ToSql();
+            var sqlWhere = new SqlWhereBuilder(condition).Build();
             return String.Format("DELETE FROM {0}s WHERE {1}", typeName, sqlWhere);
         }
     }

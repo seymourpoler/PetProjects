@@ -26,7 +26,7 @@ namespace Gambon.Sql
             {
                 return "SELECT {0} FROM {1}s".FormatWith(sqlFields, typeName);
             }
-            var sqlWhere = new SqlWhereBuilder(condition).ToSql();
+            var sqlWhere = new SqlWhereBuilder(condition).Build();
             return String.Format("SELECT {0} FROM {1}s WHERE {2}", sqlFields, typeName, sqlWhere);
         }
 

@@ -30,7 +30,7 @@ namespace Gambon.Sql
                 return "INSERT INTO {0}s ({1}) VALUES ({2})".FormatWith(typeName, sqlFields, sqlValues);
             }
 
-            var sqlWhere = new SqlWhereBuilder(condition).ToSql();
+            var sqlWhere = new SqlWhereBuilder(condition).Build();
             return "INSERT INTO {0}s ({1}) VALUES ({2}) WHERE {3}".FormatWith(typeName, sqlFields, sqlValues, sqlWhere);
         }
 
