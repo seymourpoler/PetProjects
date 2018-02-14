@@ -5,17 +5,17 @@ using Xunit;
 
 namespace Gambon.Test.Integration.SqlServer
 {
-    public class SqlExecutorTests : IDisposable
+    public class SqlExecutorWithDynamicTests : IDisposable
     {
         private AppConfiguration configuration;
         private SqlConnectionFactory sqlConnectionFactory;
-        private SqlExecutor sqlExecutor;
+        private SqlExecutorWithDynamic sqlExecutor;
 
-        public SqlExecutorTests()
+        public SqlExecutorWithDynamicTests()
         {
             configuration = new AppConfiguration();
             sqlConnectionFactory = new SqlConnectionFactory(configuration);
-            sqlExecutor = new SqlExecutor(sqlConnectionFactory);
+            sqlExecutor = new SqlExecutorWithDynamic(sqlConnectionFactory);
             sqlExecutor.ExecuteNonQuery("DELETE FROM Users");
         }
 

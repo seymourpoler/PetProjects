@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace Gambon.SqlServer
 {
-    public class SqlExecutor : ISqlExecutor
+    public class SqlExecutorWithDynamic : ISqlExecutor
     {
         private readonly SqlConnectionFactory sqlConnectionFactory;
 
-        public SqlExecutor(SqlConnectionFactory sqlConnectionFactory)
+        public SqlExecutorWithDynamic(SqlConnectionFactory sqlConnectionFactory)
         {
             this.sqlConnectionFactory = sqlConnectionFactory;
         }
