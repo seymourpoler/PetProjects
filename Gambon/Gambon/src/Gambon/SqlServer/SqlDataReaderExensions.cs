@@ -15,10 +15,9 @@ namespace Gambon.SqlServer
             dataReader.GetValues(values);
             for (var position = 0; position < values.Length; position++)
             {
-                var value = values[position];
                 result.Add(
                     key: GetNameFrom(dataReader, position),
-                    value: GetValueFrom(value));
+                    value: GetValue(values, position));
             }
             return result as dynamic;
         }
@@ -35,6 +34,27 @@ namespace Gambon.SqlServer
                 return null;
             }
             return value;
+        }
+
+        public static T To<T>(this SqlDataReader dataReader) where T : class, new()
+        {
+            var instance = Activator.CreateInstance<T>();
+            var values = new object[dataReader.FieldCount];
+            dataReader.GetValues(values);
+            for (var position = 0; position < values.Length; position++)
+            {
+                var nameField = GetNameFrom(dataReader, position);
+                var valueField = GetValue(values, position);
+                var property = instance.GetType().GetProperty(nameField);
+                property.SetValue(instance, valueField);
+            }
+            return instance;
+        }
+
+        private static object GetValue(object[] values, int position)
+        {
+            var value = values[position];
+            return GetValueFrom(value);
         }
     }
 }
