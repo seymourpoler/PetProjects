@@ -18,7 +18,7 @@ namespace Gambon.SqlServer
         {
             using (var connection = sqlConnectionFactory.Create())
             {
-                var command = new SqlCommand(sql, connection);
+                var command = new SqlCommand(cmdText: sql, connection: connection);
                 var dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -36,7 +36,7 @@ namespace Gambon.SqlServer
         {
             using (var connection = sqlConnectionFactory.Create())
             {
-                var command = new SqlCommand(sql, connection);
+                var command = new SqlCommand(cmdText: sql, connection: connection);
                 return command.ExecuteNonQuery();
             }
         }
@@ -45,7 +45,7 @@ namespace Gambon.SqlServer
         {
             using (var connection = sqlConnectionFactory.Create())
             {
-                return new SqlCommand(sql, connection)
+                return new SqlCommand(cmdText: sql, connection: connection)
                     .ExecuteScalar()
                     .ToDynamic();
             }
