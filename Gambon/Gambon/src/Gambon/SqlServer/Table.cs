@@ -1,14 +1,12 @@
-﻿using System;
-
-namespace Gambon.SqlServer
+﻿namespace Gambon.SqlServer
 {
-	public class Table
-	{
-		private string name;
-		
-		public Table(string name)
-		{
-			this.name = name;
-		}
-	}
+    public class Table
+    {
+        private string name;
+
+        public Table(string name)
+        {
+            this.name = name;
+        }
+    }
 }
