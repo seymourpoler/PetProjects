@@ -36,7 +36,7 @@ namespace Gambon.SqlServer
             return value;
         }
 
-        public static T To<T>(this SqlDataReader dataReader) where T : class, new()
+        public static T To<T>(this SqlDataReader dataReader) where T : class
         {
             var instance = Activator.CreateInstance<T>();
             var values = new object[dataReader.FieldCount];
