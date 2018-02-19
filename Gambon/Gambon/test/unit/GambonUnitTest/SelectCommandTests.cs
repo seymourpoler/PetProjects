@@ -10,7 +10,7 @@ namespace Gambon.Test.Unit
         public void ExecuteSelectCommandWithAllFields()
         {
             var sqlBuilder = new SqlBuilder();
-            var sqlExecutor = new Mock<ISqlExecutor>();
+            var sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
             var selectCommand = new SelectCommand(
                 sqlBuilder: sqlBuilder,
                 sqlExecutor: sqlExecutor.Object);
@@ -18,7 +18,7 @@ namespace Gambon.Test.Unit
             selectCommand.Execute<User>();
 
             sqlExecutor
-                .Verify(x => x.ExecuteReader(It.Is<string>(y => y.Contains("FROM Users"))));
+                .Verify(x => x.ExecuteReader<User>(It.Is<string>(y => y.Contains("FROM Users"))));
         }
 
         public class User

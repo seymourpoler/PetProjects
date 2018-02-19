@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace Gambon.SqlServer
 {
-    public class SqlExecutorWithGeneric
+    public class SqlExecutorWithGeneric : ISqlExecutorWithGeneric
     {
         private readonly SqlConnectionFactory sqlConnectionFactory;
 

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Gambon.SqlServer
 {
-    public class SqlExecutorWithDynamic : ISqlExecutor
+    public class SqlExecutorWithDynamic : ISqlExecutorwithDynamic
     {
         private readonly SqlConnectionFactory sqlConnectionFactory;
 

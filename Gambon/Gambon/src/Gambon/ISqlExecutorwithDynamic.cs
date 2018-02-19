@@ -2,7 +2,7 @@
 
 namespace Gambon
 {
-    public interface ISqlExecutor
+    public interface ISqlExecutorwithDynamic
     {
         IEnumerable<dynamic> ExecuteReader(string sql);
         dynamic ExecuteFirstOrDefault(string sql);
