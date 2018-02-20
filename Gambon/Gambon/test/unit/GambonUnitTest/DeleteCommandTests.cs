@@ -25,8 +25,7 @@ namespace Gambon.Test.Unit
             command.Execute<User>();
 
             sqlExecutor
-                .Verify(x => x.ExecuteReader<User>(It.Is<string>(y =>
-                    y.Contains("DELETE * FROM Users"))));
+                .Verify(x => x.ExecuteNonQuery("DELETE FROM Users"));
         }
 
         public class User

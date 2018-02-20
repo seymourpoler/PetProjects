@@ -1,5 +1,4 @@
 ﻿using Gambon.Sql;
-using System;
 
 namespace Gambon
 {
@@ -16,7 +15,8 @@ namespace Gambon
 
         public void Execute<T>(dynamic condition = null) where T : class
         {
-            throw new NotImplementedException();
+            var sql = sqlBuilder.Delete<T>(condition);
+            sqlExecutor.ExecuteNonQuery(sql);
         }
     }
 }

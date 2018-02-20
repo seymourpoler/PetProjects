@@ -12,6 +12,15 @@ namespace Gambon.SqlServer
             this.sqlConnectionFactory = sqlConnectionFactory;
         }
 
+        public int ExecuteNonQuery(string sql)
+        {
+            using (var connection = sqlConnectionFactory.Create())
+            {
+                var command = new SqlCommand(cmdText: sql, connection: connection);
+                return command.ExecuteNonQuery();
+            }
+        }
+
         public IEnumerable<T> ExecuteReader<T>(string sql) where T : class
         {
             using (var connection = sqlConnectionFactory.Create())
