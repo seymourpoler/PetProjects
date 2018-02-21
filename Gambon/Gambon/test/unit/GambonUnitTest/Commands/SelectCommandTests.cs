@@ -14,8 +14,8 @@ namespace Gambon.Test.Unit.Commands
         public SelectCommandTests()
         {
             sqlBuilder = new SqlBuilder();
-            var sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
-            var selectCommand = new SelectCommand(
+            sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
+            command = new SelectCommand(
                 sqlBuilder: sqlBuilder,
                 sqlExecutor: sqlExecutor.Object);
         }

@@ -140,13 +140,5 @@ namespace Gambon.Test.Unit.Sql
                 expected: "DELETE FROM Users WHERE Id = 'identificator' AND Age = 13",
                 actual: result);
         }
-
-        public class User
-        {
-            public string Id { get; set; }
-            public string Name { get; set; }
-            public int Age { get; set; }
-            public string Email { get; set; }
-        }
     }
 }

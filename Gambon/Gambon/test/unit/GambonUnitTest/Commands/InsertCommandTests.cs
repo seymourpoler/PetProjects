@@ -19,7 +19,7 @@ namespace Gambon.Test.Unit.Commands
             command = new InsertCommand(
                 sqlBuilder: sqlBuilder,
                 sqlExecutor: sqlExecutor.Object);
-            user = new User { Id = 12, Age = 34, Name = "John" };
+            user = new User { Id = "identificator", Age = 34, Name = "John" };
         }
 
         [Fact]
