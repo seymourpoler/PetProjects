@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Gambon.Test.Unit.Commands
 {
-    public class DeleteCommandTests
+    public partial class DeleteCommandTests
     {
         private readonly Mock<ISqlExecutorWithGeneric> sqlExecutor;
         private readonly ISqlBuilder sqlBuilder;
@@ -36,13 +36,6 @@ namespace Gambon.Test.Unit.Commands
 
             sqlExecutor
                 .Verify(x => x.ExecuteNonQuery(It.Is<string>(y => y.Contains("WHERE Age = 23 AND Email = 'a@a.es'"))));
-        }
-
-        public class User
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public int Age { get; set; }
         }
     }
 }
