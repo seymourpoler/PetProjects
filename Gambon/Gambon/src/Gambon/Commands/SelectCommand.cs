@@ -1,7 +1,7 @@
 ﻿using Gambon.Sql;
 using System.Collections.Generic;
 
-namespace Gambon
+namespace Gambon.Commands
 {
     public class SelectCommand
     {
@@ -22,7 +22,6 @@ namespace Gambon
                 fields: fields,
                 condition: condition);
             return sqlExecutor.ExecuteReader<T>(sql);
-
         }
     }
 }

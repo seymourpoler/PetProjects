@@ -1,8 +1,9 @@
-﻿using Gambon.Sql;
+﻿using Gambon.Commands;
+using Gambon.Sql;
 using Moq;
 using Xunit;
 
-namespace Gambon.Test.Unit
+namespace Gambon.Test.Unit.Commands
 {
     public class DeleteCommandTests
     {

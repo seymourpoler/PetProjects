@@ -1,6 +1,6 @@
 ﻿using Gambon.Sql;
 
-namespace Gambon
+namespace Gambon.Commands
 {
     public class DeleteCommand
     {
