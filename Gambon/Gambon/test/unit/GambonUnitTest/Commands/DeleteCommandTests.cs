@@ -9,7 +9,7 @@ namespace Gambon.Test.Unit.Commands
     {
         private readonly Mock<ISqlExecutorWithGeneric> sqlExecutor;
         private readonly ISqlBuilder sqlBuilder;
-        DeleteCommand command;
+        private readonly DeleteCommand command;
 
         public DeleteCommandTests()
         {
