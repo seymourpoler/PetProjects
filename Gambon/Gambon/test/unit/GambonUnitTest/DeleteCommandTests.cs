@@ -28,6 +28,15 @@ namespace Gambon.Test.Unit
                 .Verify(x => x.ExecuteNonQuery("DELETE FROM Users"));
         }
 
+        [Fact]
+        public void DeleteWithCondition()
+        {
+            command.Execute<User>(condition: new { Age = 23, Email = "a@a.es" });
+
+            sqlExecutor
+                .Verify(x => x.ExecuteNonQuery(It.Is<string>(y => y.Contains("WHERE Age = 23 AND Email = 'a@a.es'"))));
+        }
+
         public class User
         {
             public int Id { get; set; }
