@@ -7,15 +7,22 @@ namespace Gambon.Test.Unit.Commands
 {
     public class SelectCommandTests
     {
-        [Fact]
-        public void SelectsAllFields()
+        private SqlBuilder sqlBuilder;
+        private Mock<ISqlExecutorWithGeneric> sqlExecutor;
+        private SelectCommand selectCommand;
+
+        public SelectCommandTests()
         {
-            var sqlBuilder = new SqlBuilder();
+            sqlBuilder = new SqlBuilder();
             var sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
             var selectCommand = new SelectCommand(
                 sqlBuilder: sqlBuilder,
                 sqlExecutor: sqlExecutor.Object);
+        }
 
+        [Fact]
+        public void SelectsAllFields()
+        {
             selectCommand.Execute<User>();
 
             sqlExecutor
@@ -25,12 +32,6 @@ namespace Gambon.Test.Unit.Commands
         [Fact]
         public void SelectsSomeFields()
         {
-            var sqlBuilder = new SqlBuilder();
-            var sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
-            var selectCommand = new SelectCommand(
-                sqlBuilder: sqlBuilder,
-                sqlExecutor: sqlExecutor.Object);
-
             selectCommand.Execute<User>(fields: new[] { "Id", "FirstName" });
 
             sqlExecutor
@@ -40,12 +41,6 @@ namespace Gambon.Test.Unit.Commands
         [Fact]
         public void SelectsWithCondition()
         {
-            var sqlBuilder = new SqlBuilder();
-            var sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
-            var selectCommand = new SelectCommand(
-                sqlBuilder: sqlBuilder,
-                sqlExecutor: sqlExecutor.Object);
-
             selectCommand.Execute<User>(fields: new[] { "Id", "FirstName" }, condition: new { Age = 12 });
 
             sqlExecutor
