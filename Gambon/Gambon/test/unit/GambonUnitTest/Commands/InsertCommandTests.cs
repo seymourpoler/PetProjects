@@ -12,12 +12,12 @@ namespace Gambon.Test.Unit.Commands
         {
             var sqlBuilder = new SqlBuilder();
             var sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
-            var insertCommand = new InsertCommand(
+            var command = new InsertCommand(
                 sqlBuilder: sqlBuilder,
                 sqlExecutor: sqlExecutor.Object);
             var user = new User { };
 
-            insertCommand.Execute(entity: user);
+            command.Execute(entity: user);
 
             sqlExecutor
                 .Verify(x => x.ExecuteNonQuery(It.Is<string>(y => y.Contains("INSERT INTO Users"))));
