@@ -3,7 +3,12 @@ using System.Collections.Generic;
 
 namespace Gambon.Commands
 {
-    public class SelectCommand
+    public interface ISelectCommand
+    {
+        IEnumerable<T> Execute<T>(IEnumerable<string> fields = null, dynamic condition = null);
+    }
+
+    public class SelectCommand : ISelectCommand
     {
         private readonly ISqlExecutorWithGeneric sqlExecutor;
         private readonly ISqlBuilder sqlBuilder;

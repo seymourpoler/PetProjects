@@ -6,6 +6,7 @@ namespace Gambon.SqlServer
     public class AppConfiguration
     {
         private readonly IConfiguration configuration;
+
         public AppConfiguration()
         {
             configuration = new ConfigurationBuilder()
