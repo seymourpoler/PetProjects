@@ -15,7 +15,6 @@ namespace Gambon.Test.Unit.Commands
         {
             sqlBuilder = new SqlBuilder();
             sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
-
             var user = new User { };
             var command = new UpdateCommand(
                 sqlBuilder: sqlBuilder,
@@ -25,6 +24,22 @@ namespace Gambon.Test.Unit.Commands
 
             sqlExecutor
                 .Verify(x => x.ExecuteNonQuery(It.Is<string>(y => y.Contains("UPDATE Users"))));
+        }
+
+        [Fact]
+        public void UpdatesUserWithCondition()
+        {
+            sqlBuilder = new SqlBuilder();
+            sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
+            var user = new User { Id = "identificator" };
+            var command = new UpdateCommand(
+                sqlBuilder: sqlBuilder,
+                sqlExecutor: sqlExecutor.Object);
+
+            command.Execute(entity: user, condition: new { Name = "James" });
+
+            sqlExecutor
+                .Verify(x => x.ExecuteNonQuery(It.Is<string>(y => y.Contains("WHERE Name = 'James'"))));
         }
     }
 }
