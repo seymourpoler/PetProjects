@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Xunit;
 
-
 namespace Gambon.Test.Integration.SqlServer
 {
     public class SqlExecutorWithGenericTests
@@ -14,7 +13,7 @@ namespace Gambon.Test.Integration.SqlServer
         public SqlExecutorWithGenericTests()
         {
             configuration = new AppConfiguration();
-            sqlConnectionFactory = new SqlConnectionFactory(configuration);
+            sqlConnectionFactory = new SqlConnectionFactory(configuration.ConnectionString);
             sqlExecutor = new SqlExecutorWithGeneric(sqlConnectionFactory);
         }
 

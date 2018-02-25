@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace Gambon.SqlServer
+namespace Gambon.Test.Integration
 {
     public class AppConfiguration
     {

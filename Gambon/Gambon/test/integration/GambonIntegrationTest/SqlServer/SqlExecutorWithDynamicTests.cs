@@ -14,7 +14,7 @@ namespace Gambon.Test.Integration.SqlServer
         public SqlExecutorWithDynamicTests()
         {
             configuration = new AppConfiguration();
-            sqlConnectionFactory = new SqlConnectionFactory(configuration);
+            sqlConnectionFactory = new SqlConnectionFactory(configuration.ConnectionString);
             sqlExecutor = new SqlExecutorWithDynamic(sqlConnectionFactory);
             sqlExecutor.ExecuteNonQuery("DELETE FROM Users");
         }

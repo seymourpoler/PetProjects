@@ -25,28 +25,28 @@ namespace Gambon.SqlServer
         }
 
         //TODO: move to Factory
-        public static DataBase Create()
+        public static DataBase Create(string connectionString)
         {
             return new DataBase(
                 selectCommand: new SelectCommand(
                     sqlExecutor: new SqlExecutorWithGeneric(
                         sqlConnectionFactory: new SqlConnectionFactory(
-                            configuration: new AppConfiguration())),
+                            connectionString: connectionString)),
                     sqlBuilder: new SqlBuilder()),
                 insertCommand: new InsertCommand(
                     sqlExecutor: new SqlExecutorWithGeneric(
                         sqlConnectionFactory: new SqlConnectionFactory(
-                            configuration: new AppConfiguration())),
+                            connectionString: connectionString)),
                     sqlBuilder: new SqlBuilder()),
                 deleteCommand: new DeleteCommand(
                     sqlExecutor: new SqlExecutorWithGeneric(
                         sqlConnectionFactory: new SqlConnectionFactory(
-                            configuration: new AppConfiguration())),
+                            connectionString: connectionString)),
                     sqlBuilder: new SqlBuilder()),
                 updateCommand: new UpdateCommand(
                     sqlExecutor: new SqlExecutorWithGeneric(
                         sqlConnectionFactory: new SqlConnectionFactory(
-                            configuration: new AppConfiguration())),
+                            connectionString: connectionString)),
                     sqlBuilder: new SqlBuilder()));
         }
 

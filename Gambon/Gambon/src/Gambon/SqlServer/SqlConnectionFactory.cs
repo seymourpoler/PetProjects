@@ -4,16 +4,16 @@ namespace Gambon.SqlServer
 {
     public class SqlConnectionFactory
     {
-        private readonly AppConfiguration configuration;
+        private readonly string connectionString;
 
-        public SqlConnectionFactory(AppConfiguration configuration)
+        public SqlConnectionFactory(string connectionString)
         {
-            this.configuration = configuration;
+            this.connectionString = connectionString;
         }
 
         public SqlConnection Create()
         {
-            var connection = new SqlConnection(configuration.ConnectionString);
+            var connection = new SqlConnection(connectionString);
             connection.Open();
             return connection;
         }
