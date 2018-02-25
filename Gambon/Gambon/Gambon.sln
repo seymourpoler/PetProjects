@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CF5E4F7E-8A78-4009-9F32-BE8F72F45FC8}"
 EndProject
@@ -15,7 +15,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GambonUnitTest", "test\unit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GambonIntegrationTest", "test\integration\GambonIntegrationTest\GambonIntegrationTest.csproj", "{3807CC11-B60F-4899-9451-7A60E1A087CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambon", "src\Gambon\Gambon.csproj", "{8729BCE2-B47A-4BE8-A88D-D37EC66585D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gambon", "src\Gambon\Gambon.csproj", "{8729BCE2-B47A-4BE8-A88D-D37EC66585D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{519EF205-ECAC-4404-BC63-7838F9E3801C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
