@@ -1,5 +1,5 @@
 ﻿using Gambon.Commands;
-using Gambon.Sql;
+using Gambon.Factories;
 using System.Collections.Generic;
 
 namespace Gambon.SqlServer
@@ -28,26 +28,10 @@ namespace Gambon.SqlServer
         public static DataBase Create(string connectionString)
         {
             return new DataBase(
-                selectCommand: new SelectCommand(
-                    sqlExecutor: new SqlExecutorWithGeneric(
-                        sqlConnectionFactory: new SqlConnectionFactory(
-                            connectionString: connectionString)),
-                    sqlBuilder: new SqlBuilder()),
-                insertCommand: new InsertCommand(
-                    sqlExecutor: new SqlExecutorWithGeneric(
-                        sqlConnectionFactory: new SqlConnectionFactory(
-                            connectionString: connectionString)),
-                    sqlBuilder: new SqlBuilder()),
-                deleteCommand: new DeleteCommand(
-                    sqlExecutor: new SqlExecutorWithGeneric(
-                        sqlConnectionFactory: new SqlConnectionFactory(
-                            connectionString: connectionString)),
-                    sqlBuilder: new SqlBuilder()),
-                updateCommand: new UpdateCommand(
-                    sqlExecutor: new SqlExecutorWithGeneric(
-                        sqlConnectionFactory: new SqlConnectionFactory(
-                            connectionString: connectionString)),
-                    sqlBuilder: new SqlBuilder()));
+                selectCommand: CommandFactory.Select(connectionString),
+                insertCommand: CommandFactory.Insert(connectionString),
+                deleteCommand: CommandFactory.Delete(connectionString),
+                updateCommand: CommandFactory.Update(connectionString));
         }
 
         public IEnumerable<T> Select<T>(
