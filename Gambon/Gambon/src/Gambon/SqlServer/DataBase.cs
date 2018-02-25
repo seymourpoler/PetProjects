@@ -51,7 +51,8 @@ namespace Gambon.SqlServer
                 condition: condition);
         }
 
-        public void Insert<T>(T entity,
+        public void Insert<T>(
+            T entity,
             dynamic condition = null) where T : class
         {
             insertCommand.Execute<T>(
@@ -59,7 +60,8 @@ namespace Gambon.SqlServer
                 condition: condition);
         }
 
-        public void Delete<T>(dynamic condition = null) where T : class
+        public void Delete<T>(
+            dynamic condition = null) where T : class
         {
             deleteCommand.Execute<T>(condition: condition);
         }
