@@ -7,18 +7,23 @@ namespace Gambon.Test.Unit.Commands
 {
     public class UpdateCommandTests
     {
-        private SqlBuilder sqlBuilder;
-        private Mock<ISqlExecutorWithGeneric> sqlExecutor;
+        private readonly SqlBuilder sqlBuilder;
+        private readonly Mock<ISqlExecutorWithGeneric> sqlExecutor;
+        private readonly UpdateCommand command;
+
+        public UpdateCommandTests()
+        {
+            sqlBuilder = new SqlBuilder();
+            sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
+            command = new UpdateCommand(
+                sqlBuilder: sqlBuilder,
+                sqlExecutor: sqlExecutor.Object);
+        }
 
         [Fact]
         public void UpdatesUser()
         {
-            sqlBuilder = new SqlBuilder();
-            sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
             var user = new User { };
-            var command = new UpdateCommand(
-                sqlBuilder: sqlBuilder,
-                sqlExecutor: sqlExecutor.Object);
 
             command.Execute(user);
 
@@ -29,12 +34,7 @@ namespace Gambon.Test.Unit.Commands
         [Fact]
         public void UpdatesUserWithCondition()
         {
-            sqlBuilder = new SqlBuilder();
-            sqlExecutor = new Mock<ISqlExecutorWithGeneric>();
             var user = new User { Id = "identificator" };
-            var command = new UpdateCommand(
-                sqlBuilder: sqlBuilder,
-                sqlExecutor: sqlExecutor.Object);
 
             command.Execute(entity: user, condition: new { Name = "James" });
 
