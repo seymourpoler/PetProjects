@@ -10,15 +10,18 @@ namespace Gambon.SqlServer
         private readonly SelectCommand selectCommand;
         private readonly InsertCommand insertCommand;
         private readonly DeleteCommand deleteCommand;
+        private readonly UpdateCommand updateCommand;
 
         private DataBase(
             SelectCommand selectCommand,
             InsertCommand insertCommand,
-            DeleteCommand deleteCommand)
+            DeleteCommand deleteCommand,
+            UpdateCommand updateCommand)
         {
             this.selectCommand = selectCommand;
             this.insertCommand = insertCommand;
             this.deleteCommand = deleteCommand;
+            this.updateCommand = updateCommand;
         }
 
         //TODO: move to Factory
@@ -39,6 +42,11 @@ namespace Gambon.SqlServer
                     sqlExecutor: new SqlExecutorWithGeneric(
                         sqlConnectionFactory: new SqlConnectionFactory(
                             configuration: new AppConfiguration())),
+                    sqlBuilder: new SqlBuilder()),
+                updateCommand: new UpdateCommand(
+                    sqlExecutor: new SqlExecutorWithGeneric(
+                        sqlConnectionFactory: new SqlConnectionFactory(
+                            configuration: new AppConfiguration())),
                     sqlBuilder: new SqlBuilder()));
         }
 
@@ -56,6 +64,15 @@ namespace Gambon.SqlServer
             dynamic condition = null) where T : class
         {
             insertCommand.Execute<T>(
+                entity: entity,
+                condition: condition);
+        }
+
+        public void Update<T>(
+            T entity,
+            dynamic condition = null) where T : class
+        {
+            updateCommand.Execute<T>(
                 entity: entity,
                 condition: condition);
         }
