@@ -20,4 +20,16 @@ function Http(){
         xmlHttpRequest.open("GET", url, true);
         xmlHttpRequest.send();
     };
+
+    self.put = function(){
+        throw 'not implemented exception';
+    };
+
+    self.post = function(){
+        throw 'not implemented exception';
+    };
+
+    self.delete = function(){
+        throw 'not implemented exception';
+    };
 }
