@@ -17,6 +17,7 @@ function Http(){
                     response.status == 200;
             }
         }
-        throw 'not implemented';
+        xmlHttpRequest.open("GET", url, true);
+        xmlHttpRequest.send();
     };
 }
