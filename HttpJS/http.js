@@ -13,8 +13,10 @@ function Http(){
             return;
 
             function isOk(response){
-                return response.readyState == 4 && 
-                    response.status == 200;
+                const ready = 4;
+                const ok = 200;
+                return response.readyState == ready && 
+                    response.status == ok;
             }
         }
         xmlHttpRequest.open("GET", url, true);
