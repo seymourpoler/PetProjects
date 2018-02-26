@@ -11,17 +11,20 @@ namespace Gambon.SqlServer
         private readonly InsertCommand insertCommand;
         private readonly DeleteCommand deleteCommand;
         private readonly UpdateCommand updateCommand;
+        private readonly ISqlExecutorWithGeneric sqlExecutor;
 
         private DataBase(
             SelectCommand selectCommand,
             InsertCommand insertCommand,
             DeleteCommand deleteCommand,
-            UpdateCommand updateCommand)
+            UpdateCommand updateCommand,
+            ISqlExecutorWithGeneric sqlExecutor)
         {
             this.selectCommand = selectCommand;
             this.insertCommand = insertCommand;
             this.deleteCommand = deleteCommand;
             this.updateCommand = updateCommand;
+            this.sqlExecutor = sqlExecutor;
         }
 
         //TODO: move to Factory
@@ -31,7 +34,8 @@ namespace Gambon.SqlServer
                 selectCommand: CommandFactory.Select(connectionString),
                 insertCommand: CommandFactory.Insert(connectionString),
                 deleteCommand: CommandFactory.Delete(connectionString),
-                updateCommand: CommandFactory.Update(connectionString));
+                updateCommand: CommandFactory.Update(connectionString),
+                sqlExecutor: SqlExecutorFactory.SqlExecutorWithGeneric(connectionString));
         }
 
         public IEnumerable<T> Select<T>(
@@ -65,6 +69,11 @@ namespace Gambon.SqlServer
             dynamic condition = null) where T : class
         {
             deleteCommand.Execute<T>(condition: condition);
+        }
+
+        public void Sql(string sql)
+        {
+            sqlExecutor.ExecuteNonQuery(sql);
         }
     }
 }

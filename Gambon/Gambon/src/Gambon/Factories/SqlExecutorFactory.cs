@@ -4,7 +4,7 @@ namespace Gambon.Factories
 {
     public class SqlExecutorFactory
     {
-        public static SqlExecutorWithGeneric SqlExecutorWithGeneric(string connectionString)
+        public static ISqlExecutorWithGeneric SqlExecutorWithGeneric(string connectionString)
         {
             return new SqlExecutorWithGeneric(
                         sqlConnectionFactory: new SqlConnectionFactory(
