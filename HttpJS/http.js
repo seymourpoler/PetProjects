@@ -4,8 +4,8 @@ function Http(){
     self.get = function(url, request, successHandler, errorHandler){
         var xmlHttpRequest = new XMLHttpRequest();
         xmlHttpRequest.setRequestHeader("Content-type", "application/json; charset=utf-8");
-        xmlHttpRequest.onreadystatechange = function ParseResult(response) {
-            if (isOk(response)) {
+        xmlHttpRequest.onreadystatechange = function () {
+            if (isOk(xmlHttpRequest)) {
                 successHandler(response);
                 return;
             }
