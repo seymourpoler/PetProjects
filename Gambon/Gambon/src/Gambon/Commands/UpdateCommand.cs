@@ -2,7 +2,12 @@
 
 namespace Gambon.Commands
 {
-    public class UpdateCommand
+    public interface IUpdateCommand
+    {
+        void Execute<T>(T entity, dynamic condition = null) where T : class;
+    }
+
+    public class UpdateCommand : IUpdateCommand
     {
         private readonly SqlBuilder sqlBuilder;
         private readonly ISqlExecutorWithGeneric sqlExecutor;

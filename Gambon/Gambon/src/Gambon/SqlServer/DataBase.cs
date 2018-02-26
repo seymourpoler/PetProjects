@@ -10,14 +10,14 @@ namespace Gambon.SqlServer
         private readonly ISelectCommand selectCommand;
         private readonly IInsertCommand insertCommand;
         private readonly DeleteCommand deleteCommand;
-        private readonly UpdateCommand updateCommand;
+        private readonly IUpdateCommand updateCommand;
         private readonly ISqlExecutorWithGeneric sqlExecutor;
 
         private DataBase(
             ISelectCommand selectCommand,
             IInsertCommand insertCommand,
             DeleteCommand deleteCommand,
-            UpdateCommand updateCommand,
+            IUpdateCommand updateCommand,
             ISqlExecutorWithGeneric sqlExecutor)
         {
             this.selectCommand = selectCommand;

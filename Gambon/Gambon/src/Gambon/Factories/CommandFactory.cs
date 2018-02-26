@@ -21,7 +21,7 @@ namespace Gambon.Factories
                     sqlBuilder: new SqlBuilder());
         }
 
-        public static UpdateCommand Update(string connectionString)
+        public static IUpdateCommand Update(string connectionString)
         {
             return new UpdateCommand(
                     sqlExecutor: SqlExecutorFactory.SqlExecutorWithGeneric(
