@@ -1,7 +1,7 @@
 function Http(){
     var self = this;
 
-    self.get = function(request, successHandler, errorHandler){
+    self.get = function(url, request, successHandler, errorHandler){
         var xmlHttpRequest = new XMLHttpRequest();
         xmlHttpRequest.setRequestHeader("Content-type", "application/json; charset=utf-8");
         xmlHttpRequest.onreadystatechange = function ParseResult(response) {
