@@ -7,14 +7,14 @@ namespace Gambon.SqlServer
     public class DataBase
     {
         //TODO: refactor extract interface
-        private readonly SelectCommand selectCommand;
+        private readonly ISelectCommand selectCommand;
         private readonly InsertCommand insertCommand;
         private readonly DeleteCommand deleteCommand;
         private readonly UpdateCommand updateCommand;
         private readonly ISqlExecutorWithGeneric sqlExecutor;
 
         private DataBase(
-            SelectCommand selectCommand,
+            ISelectCommand selectCommand,
             InsertCommand insertCommand,
             DeleteCommand deleteCommand,
             UpdateCommand updateCommand,

@@ -5,7 +5,7 @@ namespace Gambon.Factories
 {
     public class CommandFactory
     {
-        public static SelectCommand Select(string connectionString)
+        public static ISelectCommand Select(string connectionString)
         {
             return new SelectCommand(
                     sqlExecutor: SqlExecutorFactory.SqlExecutorWithGeneric(

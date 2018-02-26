@@ -9,7 +9,7 @@ namespace Gambon.Test.Unit.Commands
     {
         private SqlBuilder sqlBuilder;
         private Mock<ISqlExecutorWithGeneric> sqlExecutor;
-        private SelectCommand command;
+        private ISelectCommand command;
 
         public SelectCommandTests()
         {
