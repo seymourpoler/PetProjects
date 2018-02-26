@@ -2,7 +2,12 @@
 
 namespace Gambon.Commands
 {
-    public class DeleteCommand
+    public interface IDeleteCommand
+    {
+        void Execute<T>(dynamic condition = null) where T : class;
+    }
+
+    public class DeleteCommand : IDeleteCommand
     {
         private readonly ISqlExecutorWithGeneric sqlExecutor;
         private readonly ISqlBuilder sqlBuilder;

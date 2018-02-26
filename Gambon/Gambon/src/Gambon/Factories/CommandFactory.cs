@@ -29,7 +29,7 @@ namespace Gambon.Factories
                     sqlBuilder: new SqlBuilder());
         }
 
-        public static DeleteCommand Delete(string connectionString)
+        public static IDeleteCommand Delete(string connectionString)
         {
             return new DeleteCommand(
                     sqlExecutor: SqlExecutorFactory.SqlExecutorWithGeneric(
