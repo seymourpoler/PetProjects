@@ -196,16 +196,6 @@ SimpleHttpServer\.idea
 SimpleHttpServer\packages
 SimpleHttpServer\SimpleHttpServer\bin
 SimpleHttpServer\SimpleHttpServer\obj
-#Gambon/Gambon/.idea
-#Gambon/Gambon/.vs
-#Gambon/Gambon/Gambon.userprefs
-#Gambon/Gambon/src/bin
-#Gambon/Gambon/src/obj
-#Gambon/Gambon/test/unit/GambonUnitTest/bin
-#Gambon/Gambon/test/unit/GambonUnitTest/obj
-#Gambon/Gambon/test/integration/GambonIntegrationTest/bin
-#Gambon/Gambon/test/integration/GambonIntegrationTest/obj
-Gambon/Gambon/.vs/Gambon/v15/Server/sqlite3
 ExtensionMethods/.idea
 ExtensionMethods/.vs
 ExtensionMethods/ExtensionMethods/bin
