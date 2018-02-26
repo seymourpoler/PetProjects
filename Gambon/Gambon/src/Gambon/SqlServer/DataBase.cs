@@ -8,14 +8,14 @@ namespace Gambon.SqlServer
     {
         //TODO: refactor extract interface
         private readonly ISelectCommand selectCommand;
-        private readonly InsertCommand insertCommand;
+        private readonly IInsertCommand insertCommand;
         private readonly DeleteCommand deleteCommand;
         private readonly UpdateCommand updateCommand;
         private readonly ISqlExecutorWithGeneric sqlExecutor;
 
         private DataBase(
             ISelectCommand selectCommand,
-            InsertCommand insertCommand,
+            IInsertCommand insertCommand,
             DeleteCommand deleteCommand,
             UpdateCommand updateCommand,
             ISqlExecutorWithGeneric sqlExecutor)

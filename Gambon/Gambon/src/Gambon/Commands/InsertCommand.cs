@@ -2,7 +2,12 @@
 
 namespace Gambon.Commands
 {
-    public class InsertCommand
+    public interface IInsertCommand
+    {
+        void Execute<T>(T entity, dynamic condition = null) where T : class;
+    }
+
+    public class InsertCommand : IInsertCommand
     {
         private readonly ISqlExecutorWithGeneric sqlExecutor;
         private readonly ISqlBuilder sqlBuilder;

@@ -13,7 +13,7 @@ namespace Gambon.Factories
                     sqlBuilder: new SqlBuilder());
         }
 
-        public static InsertCommand Insert(string connectionString)
+        public static IInsertCommand Insert(string connectionString)
         {
             return new InsertCommand(
                     sqlExecutor: SqlExecutorFactory.SqlExecutorWithGeneric(
