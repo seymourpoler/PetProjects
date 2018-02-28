@@ -1,15 +1,14 @@
 function Http(){
     var self = this;
 
-    self.get = function(url, request, successHandler, errorHandler){
+    self.get = function(url, uccessHandler, errorHandler){
         var xmlHttpRequest = new XMLHttpRequest();
-        xmlHttpRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xmlHttpRequest.onreadystatechange = function () {
             if (isOk(xmlHttpRequest)) {
-                successHandler(response);
+                successHandler(xmlHttpRequest);
                 return;
             }
-            errorHandler(response);
+            errorHandler(xmlHttpRequest);
             return;
 
             function isOk(response){
@@ -20,6 +19,7 @@ function Http(){
             }
         }
         xmlHttpRequest.open('GET', url, true);
+        xmlHttpRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xmlHttpRequest.send();
     };
 
