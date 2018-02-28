@@ -1,14 +1,9 @@
 function Http(){
     const contentTypeHeader  = 'Content-type';
     const contentTypeJson = 'application/json; charset=utf-8';
+
     var self = this;
     var xmlHttpRequest = new XMLHttpRequest();
-    function isOk(response){
-        const ready = 4;
-        const ok = 200;
-        return response.readyState == ready && 
-            response.status == ok;
-    }
 
     self.get = function(url, successHandler, errorHandler){
         xmlHttpRequest.onreadystatechange = function () {
@@ -65,4 +60,11 @@ function Http(){
         xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
         xmlHttpRequest.send();
     };
+
+    function isOk(response){
+        const ready = 4;
+        const ok = 200;
+        return response.readyState == ready && 
+            response.status == ok;
+    }
 }
