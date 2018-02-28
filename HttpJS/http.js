@@ -1,8 +1,14 @@
 function Http(){
     var self = this;
+    var xmlHttpRequest = new XMLHttpRequest();
+    function isOk(response){
+        const ready = 4;
+        const ok = 200;
+        return response.readyState == ready && 
+            response.status == ok;
+    }
 
     self.get = function(url, uccessHandler, errorHandler){
-        var xmlHttpRequest = new XMLHttpRequest();
         xmlHttpRequest.onreadystatechange = function () {
             if (isOk(xmlHttpRequest)) {
                 successHandler(xmlHttpRequest);
@@ -10,13 +16,6 @@ function Http(){
             }
             errorHandler(xmlHttpRequest);
             return;
-
-            function isOk(response){
-                const ready = 4;
-                const ok = 200;
-                return response.readyState == ready && 
-                    response.status == ok;
-            }
         }
         xmlHttpRequest.open('GET', url, true);
         xmlHttpRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
@@ -24,7 +23,6 @@ function Http(){
     };
 
     self.post = function(url, request, successHandler, errorHandler){
-        var xmlHttpRequest = new XMLHttpRequest();
         xmlHttpRequest.onreadystatechange = function () {
             if (isOk(xmlHttpRequest)) {
                 successHandler(xmlHttpRequest);
@@ -32,13 +30,6 @@ function Http(){
             }
             errorHandler(xmlHttpRequest);
             return;
-
-            function isOk(response){
-                const ready = 4;
-                const ok = 200;
-                return response.readyState == ready && 
-                    response.status == ok;
-            }
         }
         xmlHttpRequest.open('POST', url, true);
         xmlHttpRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
