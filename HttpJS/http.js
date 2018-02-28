@@ -37,7 +37,17 @@ function Http(){
     };
 
     self.put = function(){
-        throw 'not implemented exception';
+        xmlHttpRequest.onreadystatechange = function () {
+            if (isOk(xmlHttpRequest)) {
+                successHandler(xmlHttpRequest);
+                return;
+            }
+            errorHandler(xmlHttpRequest);
+            return;
+        }
+        xmlHttpRequest.open('PUT', url, true);
+        xmlHttpRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xmlHttpRequest.send(JSON.stringify(request));
     };
 
     self.delete = function(){
