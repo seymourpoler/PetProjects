@@ -23,11 +23,29 @@ function Http(){
         xmlHttpRequest.send();
     };
 
-    self.put = function(){
-        throw 'not implemented exception';
+    self.post = function(url, request, successHandler, errorHandler){
+        var xmlHttpRequest = new XMLHttpRequest();
+        xmlHttpRequest.onreadystatechange = function () {
+            if (isOk(xmlHttpRequest)) {
+                successHandler(xmlHttpRequest);
+                return;
+            }
+            errorHandler(xmlHttpRequest);
+            return;
+
+            function isOk(response){
+                const ready = 4;
+                const ok = 200;
+                return response.readyState == ready && 
+                    response.status == ok;
+            }
+        }
+        xmlHttpRequest.open('POST', url, true);
+        xmlHttpRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xmlHttpRequest.send(JSON.stringify(request));
     };
 
-    self.post = function(){
+    self.put = function(){
         throw 'not implemented exception';
     };
 
