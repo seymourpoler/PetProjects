@@ -10,7 +10,7 @@ function Http(){
             response.status == ok;
     }
 
-    self.get = function(url, uccessHandler, errorHandler){
+    self.get = function(url, successHandler, errorHandler){
         xmlHttpRequest.onreadystatechange = function () {
             if (isOk(xmlHttpRequest)) {
                 successHandler(xmlHttpRequest);
@@ -38,7 +38,7 @@ function Http(){
         xmlHttpRequest.send(JSON.stringify(request));
     };
 
-    self.put = function(){
+    self.put = function(url, request, successHandler, errorHandler){
         xmlHttpRequest.onreadystatechange = function () {
             if (isOk(xmlHttpRequest)) {
                 successHandler(xmlHttpRequest);
@@ -52,7 +52,7 @@ function Http(){
         xmlHttpRequest.send(JSON.stringify(request));
     };
 
-    self.delete = function(){
+    self.delete = function(url, successHandler, errorHandler){
         xmlHttpRequest.onreadystatechange = function () {
             if (isOk(xmlHttpRequest)) {
                 successHandler(xmlHttpRequest);
