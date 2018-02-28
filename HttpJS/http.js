@@ -51,6 +51,16 @@ function Http(){
     };
 
     self.delete = function(){
-        throw 'not implemented exception';
+        xmlHttpRequest.onreadystatechange = function () {
+            if (isOk(xmlHttpRequest)) {
+                successHandler(xmlHttpRequest);
+                return;
+            }
+            errorHandler(xmlHttpRequest);
+            return;
+        }
+        xmlHttpRequest.open('DELETE', url, true);
+        xmlHttpRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xmlHttpRequest.send();
     };
 }
