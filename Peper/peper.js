@@ -94,6 +94,14 @@
             //control.style.visibility='hidden';
         };
 
+        self.focus = function(){
+            throw 'not implemented';
+        };
+
+        self.onChange = function(handler){
+            throw 'not implemented';
+        };
+
         self.setSelectedIndex = function(index){
             throw 'not implemented';
         };
@@ -119,7 +127,7 @@
         };
 
         self.add = function(value, text){
-            throw 'not implemented';
+            control.appendChild(new Option(value, text));
         };
 
         self.removeByIndex = function(index){
