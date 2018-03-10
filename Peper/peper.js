@@ -147,6 +147,51 @@
         };
     };
 
+    peper.Radio = function(id){
+        var self = this;
+        var control = document.getElementById(id);
+
+        self.show = function(){
+            control.style.display = 'inline';
+            //control.style.visibility='visible';
+        };
+
+        self.hide = function(){
+            control.style.display = 'none';
+            //control.style.visibility='hidden';
+        };
+    };
+
+    peper.Checkbox = function(id){
+        var self = this;
+        var control = document.getElementById(id);
+
+        self.show = function(){
+            control.style.display = 'inline';
+            //control.style.visibility='visible';
+        };
+
+        self.hide = function(){
+            control.style.display = 'none';
+            //control.style.visibility='hidden';
+        };s
+    };
+
+    peper.Panel = function(id){
+        var self = this;
+        var control = document.getElementById(id);
+
+        self.show = function(){
+            control.style.display = 'inline';
+            //control.style.visibility='visible';
+        };
+
+        self.hide = function(){
+            control.style.display = 'none';
+            //control.style.visibility='hidden';
+        };
+    };
+
     peper.Redirector = function(){
         var self = this;
 
