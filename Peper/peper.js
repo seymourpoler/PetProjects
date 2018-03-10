@@ -99,7 +99,7 @@
         };
 
         self.onChange = function(handler){
-            throw 'not implemented';
+            control.onchange = handler;
         };
 
         self.setSelectedIndex = function(index){
