@@ -1,4 +1,5 @@
 (function(peper){
+    
     peper.Label = function(id){
         var self = this;
         var control = document.getElementById(id);
@@ -199,4 +200,5 @@
             window.location = url;
         };
     };
+
 })(window.peper || {})
