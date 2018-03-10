@@ -147,7 +147,7 @@
         };
     };
 
-    peper.Radio = function(id){
+    peper.InputRadio = function(id){
         var self = this;
         var control = document.getElementById(id);
 
