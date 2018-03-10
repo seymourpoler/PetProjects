@@ -174,7 +174,7 @@
         self.hide = function(){
             control.style.display = 'none';
             //control.style.visibility='hidden';
-        };s
+        };
     };
 
     peper.Panel = function(id){
