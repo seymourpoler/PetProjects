@@ -140,8 +140,7 @@
         };
 
         self.clear = function(){
-            var length = select.options.length;
-            for (i = 0; i < length; i++) {
+            for (i = 0; i < control.options.length; i++) {
                 control.options[i] = null;
             }
         };
