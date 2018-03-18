@@ -31,12 +31,13 @@ module SQUEL
 
         private def join(fields : Array(String))
             result = ""
-            last_field = fields.last
+            last_field = fields.last   
             fields.each do |field|
-                if field = last_field
+                puts field
+                if field == last_field
                     result = result + field
                 else
-                    result = result + ", " + field
+                    result = result +  field + ", "
                 end
             end
             return result
