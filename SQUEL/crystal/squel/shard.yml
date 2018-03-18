@@ -1,0 +1,14 @@
+name: squel
+version: 0.1.0
+
+authors:
+  -  Seymour Poler <seymourpoler@gmail.com>
+
+crystal: 0.24.2
+
+license: MIT
+
+development_dependencies:
+   minitest:
+     github: ysbaddaden/minitest.cr
+     version: "0.3.6"
