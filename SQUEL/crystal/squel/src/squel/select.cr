@@ -3,11 +3,13 @@ module SQUEL
         @table : String
         @acronimus : String 
         @fields: Array(String)
+        @limit : Int32
 
         def initialize
             @table = ""
             @acronimus = ""
             @fields = [] of String
+            @limit = 0
         end
 
         def field(field : String)
@@ -26,11 +28,16 @@ module SQUEL
             return self
         end
 
-        def to_string
-            return "SELECT " + build_sql_fields() + " FROM " + build_sql_table()
+        def limit(limit : Int32)
+            @limit = limit
+            return self
         end
 
-        private def build_sql_fields
+        def to_string
+            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit()
+        end
+
+        private def build_fields
             if(@fields.empty?)
                 return "*"
             end
@@ -50,11 +57,18 @@ module SQUEL
             return result
         end
 
-        private def build_sql_table
+        private def build_table
             if @acronimus == ""
                 return @table
             end
             return @table + " " + @acronimus
+        end
+
+        private def build_limit
+            if(@limit == 0)
+                return ""
+            end
+            return " LIMIT " + @limit.to_s
         end
     end
 end
