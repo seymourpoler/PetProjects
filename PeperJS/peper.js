@@ -95,10 +95,6 @@
             //control.style.visibility='hidden';
         };
 
-        self.focus = function(){
-            throw 'not implemented';
-        };
-
         self.onChange = function(handler){
             control.onchange = handler;
         };
@@ -144,7 +140,9 @@
         };
 
         self.clear = function(){
-            throw 'not implemented';
+            for (i = 0; i < control.options.length; i++) {
+                control.options[i] = null;
+            }
         };
     };
 
