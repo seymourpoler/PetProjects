@@ -7,7 +7,7 @@ class SelectTest < Minitest::Test
         @sqlSelect ||= SQUEL::Select.new
     end
 
-    def test_select_all_from_table
+    def returns_select_all_from_table
         assert_equal "SELECT * FROM students", sqlSelect.from("students").to_string
     end
 end
