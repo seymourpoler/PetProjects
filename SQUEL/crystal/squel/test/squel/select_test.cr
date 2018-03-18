@@ -3,10 +3,6 @@ require "minitest/autorun"
 require "../../src/squel/select.cr"
 
 class SelectTest < Minitest::Test
-    #def sqlSelect
-    #    @sqlSelect ||= SQUEL::Select.new
-    #end
-
     def test_select_all_from_table
         sqlSelect = SQUEL::Select.new
         assert_equal "SELECT * FROM students", sqlSelect.from("students").to_string
@@ -20,5 +16,10 @@ class SelectTest < Minitest::Test
     def test_select_fields_from_table
         sqlSelect = SQUEL::Select.new
         assert_equal "SELECT id, name FROM students", sqlSelect.field("id").field("name").from("students").to_string
+    end
+
+    def test_select_fields_from_table_with_acronimus
+        sqlSelect = SQUEL::Select.new
+        assert_equal "SELECT id, name FROM students s", sqlSelect.field("id").field("name").from("students", "s").to_string
     end
 end

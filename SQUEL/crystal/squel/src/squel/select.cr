@@ -1,10 +1,12 @@
 module SQUEL
     class Select
         @table : String
+        @acronimus : String 
         @fields: Array(String)
 
         def initialize
             @table = ""
+            @acronimus = ""
             @fields = [] of String
         end
 
@@ -18,11 +20,17 @@ module SQUEL
             return self
         end
 
-        def to_string
-            return "SELECT " + fields() + " FROM " + @table
+        def from(table : String, acronimus : String)
+            @table = table
+            @acronimus = acronimus
+            return self
         end
 
-        private def fields
+        def to_string
+            return "SELECT " + build_sql_fields() + " FROM " + build_sql_table()
+        end
+
+        private def build_sql_fields
             if(@fields.empty?)
                 return "*"
             end
@@ -33,7 +41,6 @@ module SQUEL
             result = ""
             last_field = fields.last   
             fields.each do |field|
-                puts field
                 if field == last_field
                     result = result + field
                 else
@@ -41,6 +48,13 @@ module SQUEL
                 end
             end
             return result
+        end
+
+        private def build_sql_table
+            if @acronimus == ""
+                return @table
+            end
+            return @table + " " + @acronimus
         end
     end
 end
