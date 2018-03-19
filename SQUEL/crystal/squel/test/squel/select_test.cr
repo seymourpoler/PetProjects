@@ -4,6 +4,7 @@ require "../../src/squel/select.cr"
 require "../../src/squel/fields_builder.cr"
 require "../../src/squel/table_builder.cr"
 require "../../src/squel/limit_builder.cr"
+require "../../src/squel/offset_builder.cr"
 
 class SelectTest < Minitest::Test
     def test_select_all_from_table
@@ -35,4 +36,6 @@ class SelectTest < Minitest::Test
         sqlSelect = SQUEL::Select.new
         assert_equal "SELECT id, name FROM students OFFSET 102", sqlSelect.field("id").field("name").from("students").offset(102).to_string
     end
+
+    
 end

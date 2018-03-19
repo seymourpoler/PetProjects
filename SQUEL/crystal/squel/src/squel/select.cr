@@ -8,6 +8,7 @@ module SQUEL
         @tableBuilder : TableBuilder
         @limitBuilder : LimitBuilder
         @offset : Int32
+        @offsetBuilder : OffsetBuilder
 
         def initialize
             @table = ""
@@ -18,6 +19,7 @@ module SQUEL
             @tableBuilder = TableBuilder.new
             @limitBuilder = LimitBuilder.new
             @offset = 0
+            @offsetBuilder = OffsetBuilder.new
         end
 
         def field(field : String)
@@ -63,10 +65,7 @@ module SQUEL
         end
 
         private def build_offset : String
-            if @offset == 0
-                return ""
-            end
-            return " OFFSET " + @offset.to_s
+            return @offsetBuilder.build(@offset)
         end
     end
 end
