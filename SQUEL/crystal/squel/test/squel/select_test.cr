@@ -47,4 +47,9 @@ class SelectTest < Minitest::Test
         sqlSelect = SQUEL::Select.new
         assert_equal "SELECT name FROM students ORDER BY age ASC", sqlSelect.field("name").from("students").order_by("age").asc().to_string
     end
+
+    def test_select_fields_from_table_order_by_descending
+        sqlSelect = SQUEL::Select.new
+        assert_equal "SELECT name FROM students ORDER BY age DESC", sqlSelect.field("name").from("students").order_by("age").desc().to_string
+    end
 end
