@@ -30,4 +30,9 @@ class SelectTest < Minitest::Test
         sqlSelect = SQUEL::Select.new
         assert_equal "SELECT id, name FROM students s LIMIT 2", sqlSelect.field("id").field("name").from("students", "s").limit(2).to_string
     end
+
+    def test_select_fields_from_table_with_offset
+        sqlSelect = SQUEL::Select.new
+        assert_equal "SELECT id, name FROM students OFFSET 102", sqlSelect.field("id").field("name").from("students").offset(102).to_string
+    end
 end

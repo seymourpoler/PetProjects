@@ -7,6 +7,7 @@ module SQUEL
         @fieldsBuilder : FieldsBuilder
         @tableBuilder : TableBuilder
         @limitBuilder : LimitBuilder
+        @offset : Int32
 
         def initialize
             @table = ""
@@ -16,6 +17,7 @@ module SQUEL
             @fieldsBuilder = FieldsBuilder.new
             @tableBuilder = TableBuilder.new
             @limitBuilder = LimitBuilder.new
+            @offset = 0
         end
 
         def field(field : String)
@@ -39,8 +41,13 @@ module SQUEL
             return self
         end
 
+        def offset(offset : Int32)  
+            @offset = offset
+            return self
+        end
+
         def to_string : String
-            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit()
+            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit() + build_offset()
         end
 
         private def build_fields : String
@@ -53,6 +60,13 @@ module SQUEL
 
         private def build_limit : String
             return @limitBuilder.build(@limit)
+        end
+
+        private def build_offset : String
+            if @offset == 0
+                return ""
+            end
+            return " OFFSET " + @offset.to_s
         end
     end
 end
