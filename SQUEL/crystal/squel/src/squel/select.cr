@@ -9,7 +9,7 @@ module SQUEL
         @limitBuilder : LimitBuilder
         @offset : Int32
         @offsetBuilder : OffsetBuilder
-        @order_by : String
+        @order_by_field : String
         @order_by_ascending : Bool
 
         def initialize
@@ -22,7 +22,7 @@ module SQUEL
             @limitBuilder = LimitBuilder.new
             @offset = 0
             @offsetBuilder = OffsetBuilder.new
-            @order_by = ""
+            @order_by_field = ""
             @order_by_ascending = false
         end
 
@@ -52,12 +52,12 @@ module SQUEL
             return self
         end
 
-        def order_by(order_by : String)
-            @order_by = order_by
+        def order_by(field : String)
+            @order_by_field = field
             return self
         end
 
-        def asc 
+        def asc()
             @order_by_ascending = true
             return self
         end
@@ -83,13 +83,13 @@ module SQUEL
         end
 
         private def build_order_by : String
-            if @order_by == ""
+            if @order_by_field == ""
                 return ""
             end
             if @order_by_ascending
-                return " ORDER BY " + @order_by + " ASC"
+                return " ORDER BY " + @order_by_field + " ASC"
             end
-            return " ORDER BY " + @order_by
+            return " ORDER BY " + @order_by_field
         end
     end
 end
