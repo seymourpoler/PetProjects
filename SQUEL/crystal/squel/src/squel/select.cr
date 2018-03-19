@@ -11,6 +11,7 @@ module SQUEL
         @offsetBuilder : OffsetBuilder
         @order_by_field : String
         @order_by_ascending : Bool
+        @orderBuilder : OrderBuilder
 
         def initialize
             @table = ""
@@ -24,6 +25,7 @@ module SQUEL
             @offsetBuilder = OffsetBuilder.new
             @order_by_field = ""
             @order_by_ascending = false
+            @orderBuilder = OrderBuilder.new
         end
 
         def field(field : String)
@@ -83,13 +85,7 @@ module SQUEL
         end
 
         private def build_order_by : String
-            if @order_by_field == ""
-                return ""
-            end
-            if @order_by_ascending
-                return " ORDER BY " + @order_by_field + " ASC"
-            end
-            return " ORDER BY " + @order_by_field
+            return @orderBuilder.build(@order_by_field, @order_by_ascending)
         end
     end
 end
