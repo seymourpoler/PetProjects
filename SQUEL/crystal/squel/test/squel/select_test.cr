@@ -1,6 +1,7 @@
 require "minitest/autorun"
 
 require "../../src/squel/select.cr"
+require "../../src/squel/fields_builder.cr"
 
 class SelectTest < Minitest::Test
     def test_select_all_from_table

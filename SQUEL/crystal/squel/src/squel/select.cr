@@ -4,12 +4,14 @@ module SQUEL
         @acronimus : String 
         @fields: Array(String)
         @limit : Int32
+        @fieldsBuilder : FieldsBuilder
 
         def initialize
             @table = ""
             @acronimus = ""
             @fields = [] of String
             @limit = 0
+            @fieldsBuilder = FieldsBuilder.new
         end
 
         def field(field : String)
@@ -33,38 +35,22 @@ module SQUEL
             return self
         end
 
-        def to_string
+        def to_string : String
             return "SELECT " + build_fields() + " FROM " + build_table() + build_limit()
         end
 
-        private def build_fields
-            if(@fields.empty?)
-                return "*"
-            end
-            return join(@fields)
+        private def build_fields : String
+            return @fieldsBuilder.build(@fields)
         end
-
-        private def join(fields : Array(String))
-            result = ""
-            last_field = fields.last   
-            fields.each do |field|
-                if field == last_field
-                    result = result + field
-                else
-                    result = result +  field + ", "
-                end
-            end
-            return result
-        end
-
-        private def build_table
+        
+        private def build_table : String
             if @acronimus == ""
                 return @table
             end
             return @table + " " + @acronimus
         end
 
-        private def build_limit
+        private def build_limit : String
             if(@limit == 0)
                 return ""
             end
