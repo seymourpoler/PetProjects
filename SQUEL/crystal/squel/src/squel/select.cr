@@ -5,6 +5,7 @@ module SQUEL
         @fields: Array(String)
         @limit : Int32
         @fieldsBuilder : FieldsBuilder
+        @tableBuilder : TableBuilder
 
         def initialize
             @table = ""
@@ -12,6 +13,7 @@ module SQUEL
             @fields = [] of String
             @limit = 0
             @fieldsBuilder = FieldsBuilder.new
+            @tableBuilder = TableBuilder.new
         end
 
         def field(field : String)
@@ -42,12 +44,9 @@ module SQUEL
         private def build_fields : String
             return @fieldsBuilder.build(@fields)
         end
-        
+
         private def build_table : String
-            if @acronimus == ""
-                return @table
-            end
-            return @table + " " + @acronimus
+            return @tableBuilder.build(@table, @acronimus)
         end
 
         private def build_limit : String
