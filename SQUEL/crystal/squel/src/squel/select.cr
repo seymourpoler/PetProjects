@@ -9,6 +9,8 @@ module SQUEL
         @limitBuilder : LimitBuilder
         @offset : Int32
         @offsetBuilder : OffsetBuilder
+        @order_by : String
+        @order_by_ascending : Bool
 
         def initialize
             @table = ""
@@ -20,6 +22,8 @@ module SQUEL
             @limitBuilder = LimitBuilder.new
             @offset = 0
             @offsetBuilder = OffsetBuilder.new
+            @order_by = ""
+            @order_by_ascending = false
         end
 
         def field(field : String)
@@ -48,8 +52,18 @@ module SQUEL
             return self
         end
 
+        def order_by(order_by : String)
+            @order_by = order_by
+            return self
+        end
+
+        def asc 
+            @order_by_ascending = true
+            return self
+        end
+
         def to_string : String
-            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit() + build_offset()
+            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by()
         end
 
         private def build_fields : String
@@ -66,6 +80,16 @@ module SQUEL
 
         private def build_offset : String
             return @offsetBuilder.build(@offset)
+        end
+
+        private def build_order_by : String
+            if @order_by == ""
+                return ""
+            end
+            if @order_by_ascending
+                return " ORDER BY " + @order_by + " ASC"
+            end
+            return " ORDER BY " + @order_by
         end
     end
 end
