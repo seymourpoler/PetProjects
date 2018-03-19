@@ -6,6 +6,7 @@ module SQUEL
         @limit : Int32
         @fieldsBuilder : FieldsBuilder
         @tableBuilder : TableBuilder
+        @limitBuilder : LimitBuilder
 
         def initialize
             @table = ""
@@ -14,6 +15,7 @@ module SQUEL
             @limit = 0
             @fieldsBuilder = FieldsBuilder.new
             @tableBuilder = TableBuilder.new
+            @limitBuilder = LimitBuilder.new
         end
 
         def field(field : String)
@@ -50,10 +52,7 @@ module SQUEL
         end
 
         private def build_limit : String
-            if(@limit == 0)
-                return ""
-            end
-            return " LIMIT " + @limit.to_s
+            return @limitBuilder.build(@limit)
         end
     end
 end
