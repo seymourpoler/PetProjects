@@ -105,6 +105,11 @@ module SQUEL
             return self
         end
 
+        def join(table : String, acronimus : String)
+            @inner_join_table = table + " " + acronimus
+            return self
+        end
+
         def outer_join(table : String)
             @outer_join_table = table
             return self
