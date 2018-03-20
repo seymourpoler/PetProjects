@@ -13,7 +13,7 @@ module SQUEL
         @orderBuilder : OrderBuilder
         @group_field : String
         @groupBuilder : GroupBuilder
-        @where_condition : String
+        @where_conditions : Array(String)
 
         def initialize
             @table = ""
@@ -29,7 +29,7 @@ module SQUEL
             @orderBuilder = OrderBuilder.new
             @group_field = ""
             @groupBuilder = GroupBuilder.new
-            @where_condition = ""
+            @where_conditions = [] of String
         end
 
         def field(field : String)
@@ -83,7 +83,7 @@ module SQUEL
         end
 
         def where(condition : String)
-            @where_condition = condition
+            @where_conditions << condition
             return self
         end
 
@@ -116,10 +116,19 @@ module SQUEL
         end
 
         private def build_where_condition : String
-            if @where_condition.empty?
+            if @where_conditions.empty?
                 return ""
             end
-            return " WHERE " + @where_condition
+            result = " WHERE "
+            last_condition = @where_conditions.last   
+            @where_conditions.each do |condition|
+                if condition == last_condition
+                    result = result + condition
+                else
+                    result = result +  condition + " AND "
+                end
+            end
+            return result
         end
     end
 end
