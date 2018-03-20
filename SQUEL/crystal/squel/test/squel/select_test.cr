@@ -55,6 +55,11 @@ class SelectTest < Minitest::Test
 
     def test_select_fields_from_table_order_by_descending_and_ascending
         sqlSelect = SQUEL::Select.new
-        assert_equal "SELECT name FROM students ORDER BY id DESC, name ASC", sqlSelect.field("name").from("students").order_by("id").desc().order_by("name").asc().to_string
+        assert_equal "SELECT id, name FROM students ORDER BY id DESC, name ASC", sqlSelect.field("id").field("name").from("students").order_by("id").desc().order_by("name").asc().to_string
+    end
+
+    def test_select_fields_from_table_group_by
+        sqlSelect = SQUEL::Select.new
+        assert_equal "SELECT id, name FROM students GROUP BY email", sqlSelect.field("id").field("name").from("students").group("email").to_string
     end
 end

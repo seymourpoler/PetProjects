@@ -11,6 +11,7 @@ module SQUEL
         @offsetBuilder : OffsetBuilder
         @order_by_fields : Array(String)
         @orderBuilder : OrderBuilder
+        @group_field : String
 
         def initialize
             @table = ""
@@ -24,6 +25,7 @@ module SQUEL
             @offsetBuilder = OffsetBuilder.new
             @order_by_fields = [] of String
             @orderBuilder = OrderBuilder.new
+            @group_field = ""
         end
 
         def field(field : String)
@@ -71,8 +73,13 @@ module SQUEL
             return self
         end
 
+        def group(field : String)
+            @group_field = field
+            return self
+        end
+
         def to_string : String
-            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by()
+            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by()
         end
 
         private def build_fields : String
@@ -93,6 +100,13 @@ module SQUEL
 
         private def build_order_by : String
             return @orderBuilder.build(@order_by_fields)
+        end
+
+        private def build_group_by : String
+            if @group_field == ""
+                return ""
+            end
+            return " GROUP BY " + @group_field
         end
     end
 end
