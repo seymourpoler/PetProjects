@@ -15,6 +15,7 @@ module SQUEL
         @where_conditions : Array(String)
         @distinct_selector : Bool
         @inner_join_table : String
+        @outer_join_table : String
 
         def initialize
             @tables = [] of String
@@ -32,6 +33,7 @@ module SQUEL
             @where_conditions = [] of String
             @distinct_selector = false
             @inner_join_table = ""
+            @outer_join_table = ""
         end
 
         def field(field : String)
@@ -103,8 +105,13 @@ module SQUEL
             return self
         end
 
+        def outer_join(table : String)
+            @outer_join_table = table
+            return self
+        end
+
         def to_string : String
-            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join()
+            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join() + build_outer_join()
         end
 
         private def build_fields : String
@@ -159,6 +166,13 @@ module SQUEL
                 return ""
             end
             return " INNER JOIN " + @inner_join_table
+        end
+
+        private def build_outer_join : String
+            if @outer_join_table.empty?
+                return ""
+            end
+            return " OUTER JOIN " + @outer_join_table
         end
     end
 end

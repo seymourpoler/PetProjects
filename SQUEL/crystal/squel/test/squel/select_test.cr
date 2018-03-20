@@ -105,9 +105,15 @@ class SelectTest < Minitest::Test
         assert_equal "SELECT id, name FROM students WHERE email = 'a@a.es' AND age > 18", sqlSelect.field("id").field("name").from("students").where("email = 'a@a.es'").where("age > 18").to_string
     end
 
-    def test_select_fields_from_table_with_conditions_with_inner_join
+    def test_select_fields_from_table_with_inner_join
         sqlSelect = SQUEL::Select.new
         
         assert_equal "SELECT id, name FROM students INNER JOIN teachers", sqlSelect.field("id").field("name").from("students").join("teachers").to_string
+    end
+
+    def test_select_fields_from_table_with_outer_join
+        sqlSelect = SQUEL::Select.new
+        
+        assert_equal "SELECT id, name FROM students OUTER JOIN teachers", sqlSelect.field("id").field("name").from("students").outer_join("teachers").to_string
     end
 end
