@@ -37,6 +37,11 @@ module SQUEL
             return self
         end
 
+        def field(field : String, acronimus : String)
+            @fields << field + " " + "'" + acronimus + "'"
+            return self
+        end
+
         def distinct()
             @distinct_selector = true
             return self

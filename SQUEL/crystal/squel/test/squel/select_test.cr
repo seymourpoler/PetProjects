@@ -45,6 +45,12 @@ class SelectTest < Minitest::Test
         assert_equal "SELECT id, name FROM students s", sqlSelect.field("id").field("name").from("students", "s").to_string
     end
 
+    def test_select_fields_with_acronimus_from_table
+        sqlSelect = SQUEL::Select.new
+       
+        assert_equal "SELECT identificator AS 'id', name FROM students s", sqlSelect.field("identificator", "id").field("name").from("students", "s").to_string
+    end
+
     def test_select_fields_from_table_with_acronimus_with_limit
         sqlSelect = SQUEL::Select.new
         
