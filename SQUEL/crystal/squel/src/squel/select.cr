@@ -14,6 +14,7 @@ module SQUEL
         @groupBuilder : GroupBuilder
         @where_conditions : Array(String)
         @distinct_selector : Bool
+        @inner_join_table : String
 
         def initialize
             @tables = [] of String
@@ -30,6 +31,7 @@ module SQUEL
             @groupBuilder = GroupBuilder.new
             @where_conditions = [] of String
             @distinct_selector = false
+            @inner_join_table = ""
         end
 
         def field(field : String)
@@ -38,7 +40,7 @@ module SQUEL
         end
 
         def field(field : String, acronimus : String)
-            @fields << field + " " + "'" + acronimus + "'"
+            @fields << field + " AS " + "'" + acronimus + "'"
             return self
         end
 
@@ -96,8 +98,13 @@ module SQUEL
             return self
         end
 
+        def join(table : String)
+            @inner_join_table = table
+            return self
+        end
+
         def to_string : String
-            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition()
+            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join()
         end
 
         private def build_fields : String
@@ -145,6 +152,13 @@ module SQUEL
                 return "DISTINCT "
             end
             return ""
+        end
+
+        private def build_inner_join : String
+            if @inner_join_table.empty?
+                return ""
+            end
+            return " INNER JOIN " + @inner_join_table
         end
     end
 end
