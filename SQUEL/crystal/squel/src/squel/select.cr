@@ -115,6 +115,11 @@ module SQUEL
             return self
         end
 
+        def outer_join(table : String, acronimus : String)
+            @outer_join_table = table + " " + acronimus
+            return self
+        end
+
         def to_string : String
             return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join() + build_outer_join()
         end
