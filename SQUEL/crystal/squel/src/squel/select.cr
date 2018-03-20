@@ -12,6 +12,7 @@ module SQUEL
         @order_by_fields : Array(String)
         @orderBuilder : OrderBuilder
         @group_field : String
+        @groupBuilder : GroupBuilder
 
         def initialize
             @table = ""
@@ -26,6 +27,7 @@ module SQUEL
             @order_by_fields = [] of String
             @orderBuilder = OrderBuilder.new
             @group_field = ""
+            @groupBuilder = GroupBuilder.new
         end
 
         def field(field : String)
@@ -103,10 +105,7 @@ module SQUEL
         end
 
         private def build_group_by : String
-            if @group_field == ""
-                return ""
-            end
-            return " GROUP BY " + @group_field
+            return @groupBuilder.build(@group_field)
         end
     end
 end
