@@ -7,6 +7,7 @@ require "../../src/squel/limit_builder.cr"
 require "../../src/squel/offset_builder.cr"
 require "../../src/squel/order_builder.cr"
 require "../../src/squel/group_builder.cr"
+require "../../src/squel/string_joiner.cr"
 
 class SelectTest < Minitest::Test
     def test_select_all_from_table
