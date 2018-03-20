@@ -13,6 +13,7 @@ module SQUEL
         @orderBuilder : OrderBuilder
         @group_field : String
         @groupBuilder : GroupBuilder
+        @where_condition : String
 
         def initialize
             @table = ""
@@ -28,6 +29,7 @@ module SQUEL
             @orderBuilder = OrderBuilder.new
             @group_field = ""
             @groupBuilder = GroupBuilder.new
+            @where_condition = ""
         end
 
         def field(field : String)
@@ -80,8 +82,13 @@ module SQUEL
             return self
         end
 
+        def where(condition : String)
+            @where_condition = condition
+            return self
+        end
+
         def to_string : String
-            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by()
+            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition()
         end
 
         private def build_fields : String
@@ -106,6 +113,13 @@ module SQUEL
 
         private def build_group_by : String
             return @groupBuilder.build(@group_field)
+        end
+
+        private def build_where_condition : String
+            if @where_condition.empty?
+                return ""
+            end
+            return " WHERE " + @where_condition
         end
     end
 end

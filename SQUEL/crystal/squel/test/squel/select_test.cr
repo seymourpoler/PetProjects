@@ -63,4 +63,9 @@ class SelectTest < Minitest::Test
         sqlSelect = SQUEL::Select.new
         assert_equal "SELECT id, name FROM students GROUP BY email", sqlSelect.field("id").field("name").from("students").group("email").to_string
     end
+
+    def test_select_fields_from_table_with_condition
+        sqlSelect = SQUEL::Select.new
+        assert_equal "SELECT id, name FROM students WHERE email = 'a@a.es'", sqlSelect.field("id").field("name").from("students").where("email = 'a@a.es'").to_string
+    end
 end
