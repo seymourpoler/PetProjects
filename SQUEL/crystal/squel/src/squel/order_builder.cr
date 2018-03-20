@@ -1,16 +1,14 @@
 module SQUEL
     class OrderBuilder
-        def build(field : String, ascending : Bool, descending : Bool) : String
-            if field == ""
+        def build(order_by_fields : Array(String)) : String
+            if order_by_fields.empty?
                 return ""
             end
-            if ascending
-                return " ORDER BY " + field + " ASC"
+            result = ""
+            order_by_fields.each do |field|
+                result = result + field
             end
-            if descending
-                return " ORDER BY " + field + " DESC"
-            end
-            return " ORDER BY " + field
+            return result
         end
     end
 end

@@ -9,9 +9,7 @@ module SQUEL
         @limitBuilder : LimitBuilder
         @offset : Int32
         @offsetBuilder : OffsetBuilder
-        @order_by_field : String
-        @order_by_ascending : Bool
-        @order_by_descending : Bool
+        @order_by_fields : Array(String)
         @orderBuilder : OrderBuilder
 
         def initialize
@@ -24,9 +22,7 @@ module SQUEL
             @limitBuilder = LimitBuilder.new
             @offset = 0
             @offsetBuilder = OffsetBuilder.new
-            @order_by_field = ""
-            @order_by_ascending = false
-            @order_by_descending = false
+            @order_by_fields = [] of String
             @orderBuilder = OrderBuilder.new
         end
 
@@ -57,17 +53,21 @@ module SQUEL
         end
 
         def order_by(field : String)
-            @order_by_field = field
+            if @order_by_fields.empty?
+                @order_by_fields << " ORDER BY " + field
+            else
+                @order_by_fields << ", " + field
+            end
             return self
         end
 
         def asc()
-            @order_by_ascending = true
+            @order_by_fields << " ASC"
             return self
         end
 
         def desc()
-            @order_by_descending = true
+            @order_by_fields << " DESC"
             return self
         end
 
@@ -92,7 +92,7 @@ module SQUEL
         end
 
         private def build_order_by : String
-            return @orderBuilder.build(@order_by_field, @order_by_ascending, @order_by_descending)
+            return @orderBuilder.build(@order_by_fields)
         end
     end
 end
