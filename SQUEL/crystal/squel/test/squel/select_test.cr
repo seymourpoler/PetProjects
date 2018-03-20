@@ -117,4 +117,10 @@ class SelectTest < Minitest::Test
         
         assert_equal "SELECT id, name FROM students OUTER JOIN teachers", sqlSelect.field("id").field("name").from("students").outer_join("teachers").to_string
     end
+
+    def test_select_fields_from_table_with_inner_join_and_with_outer_join
+        sqlSelect = SQUEL::Select.new
+        
+        assert_equal "SELECT id, name FROM students INNER JOIN teachers OUTER JOIN users", sqlSelect.field("id").field("name").from("students").join("teachers").outer_join("users").to_string
+    end
 end
