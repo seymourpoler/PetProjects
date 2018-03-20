@@ -14,6 +14,7 @@ module SQUEL
         @group_field : String
         @groupBuilder : GroupBuilder
         @where_conditions : Array(String)
+        @distinct_selector : Bool
 
         def initialize
             @table = ""
@@ -30,10 +31,16 @@ module SQUEL
             @group_field = ""
             @groupBuilder = GroupBuilder.new
             @where_conditions = [] of String
+            @distinct_selector = false
         end
 
         def field(field : String)
             @fields << field
+            return self
+        end
+
+        def distinct()
+            @distinct_selector = true
             return self
         end
 
@@ -88,7 +95,7 @@ module SQUEL
         end
 
         def to_string : String
-            return "SELECT " + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition()
+            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition()
         end
 
         private def build_fields : String
@@ -129,6 +136,13 @@ module SQUEL
                 end
             end
             return result
+        end
+
+        private def build_distinct : String
+            if @distinct_selector
+                return "DISTINCT "
+            end
+            return ""
         end
     end
 end

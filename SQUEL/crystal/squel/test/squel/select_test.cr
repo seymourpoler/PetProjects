@@ -19,6 +19,11 @@ class SelectTest < Minitest::Test
         assert_equal "SELECT id FROM students", sqlSelect.field("id").from("students").to_string
     end
 
+    def test_select_distinct_field_from_table
+        sqlSelect = SQUEL::Select.new
+        assert_equal "SELECT DISTINCT id FROM students", sqlSelect.field("id").distinct().from("students").to_string
+    end
+
     def test_select_fields_from_table
         sqlSelect = SQUEL::Select.new
         assert_equal "SELECT id, name FROM students", sqlSelect.field("id").field("name").from("students").to_string
