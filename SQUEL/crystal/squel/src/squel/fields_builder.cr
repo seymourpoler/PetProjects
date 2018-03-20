@@ -8,6 +8,7 @@ module SQUEL
         end
 
         private def join(fields : Array(String)) : String
+            #TODO : refactor: extract funcitonality
             result = ""
             last_field = fields.last   
             fields.each do |field|

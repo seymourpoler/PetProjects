@@ -29,6 +29,11 @@ class SelectTest < Minitest::Test
         assert_equal "SELECT id, name FROM students", sqlSelect.field("id").field("name").from("students").to_string
     end
 
+    def test_select_all_fields_from_tables
+        sqlSelect = SQUEL::Select.new
+        assert_equal "SELECT * FROM students, admins ad, users", sqlSelect.from("students").from("admins", "ad").from("users").to_string
+    end
+
     def test_select_fields_from_table_with_acronimus
         sqlSelect = SQUEL::Select.new
         assert_equal "SELECT id, name FROM students s", sqlSelect.field("id").field("name").from("students", "s").to_string

@@ -1,10 +1,20 @@
 module SQUEL
     class TableBuilder
-        def build(table : String, acronimus : String) : String
-            if acronimus == ""
-                return table
+        def build(tables : Array(String)) : String
+            #TODO : refactor: extract funcitonality
+            if tables.empty?
+                return ""
             end
-            return table + " " + acronimus
+            result = ""
+            last_table = tables.last   
+            tables.each do |table|
+                if table == last_table
+                    result = result + table
+                else
+                    result = result +  table + ", "
+                end
+            end
+            return result
         end
     end
 end

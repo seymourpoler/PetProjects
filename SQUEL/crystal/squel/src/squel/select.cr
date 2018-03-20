@@ -1,7 +1,6 @@
 module SQUEL
     class Select
-        @table : String
-        @acronimus : String 
+        @tables : Array(String)
         @fields: Array(String)
         @limit : Int32
         @fieldsBuilder : FieldsBuilder
@@ -17,8 +16,7 @@ module SQUEL
         @distinct_selector : Bool
 
         def initialize
-            @table = ""
-            @acronimus = ""
+            @tables = [] of String
             @fields = [] of String
             @limit = 0
             @fieldsBuilder = FieldsBuilder.new
@@ -45,13 +43,12 @@ module SQUEL
         end
 
         def from(table : String)
-            @table = table
+            @tables << table
             return self
         end
 
         def from(table : String, acronimus : String)
-            @table = table
-            @acronimus = acronimus
+            @tables << table + " " + acronimus
             return self
         end
 
@@ -103,7 +100,7 @@ module SQUEL
         end
 
         private def build_table : String
-            return @tableBuilder.build(@table, @acronimus)
+            return @tableBuilder.build(@tables)
         end
 
         private def build_limit : String
