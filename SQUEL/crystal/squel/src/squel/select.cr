@@ -17,6 +17,7 @@ module SQUEL
         @inner_join_table : String
         @outer_join_table : String
         @left_join_sentence : String
+        @right_join_sentence : String
 
         def initialize
             @tables = [] of String
@@ -36,6 +37,7 @@ module SQUEL
             @inner_join_table = ""
             @outer_join_table = ""
             @left_join_sentence = ""
+            @right_join_sentence = ""
         end
 
         def field(field : String)
@@ -132,8 +134,13 @@ module SQUEL
             return self
         end
 
+        def right_join(table : String, condition : String)
+            @right_join_sentence = " RIGHT JOIN " + table + " ON " + "(" + condition + ")"
+            return self
+        end
+
         def to_string : String
-            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join() + build_outer_join() + @left_join_sentence
+            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join() + build_outer_join() + @left_join_sentence + @right_join_sentence
         end
 
         private def build_fields : String
