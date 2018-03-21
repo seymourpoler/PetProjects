@@ -16,7 +16,7 @@ module SQUEL
         end
 
         def or(condition : String)
-            raise Exception.new("not implemented")
+            @sentenceResult = @sentenceResult + " OR "  + condition
             return self
         end
 
