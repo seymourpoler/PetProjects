@@ -139,6 +139,11 @@ module SQUEL
             return self
         end
 
+        def right_join(table : String, acronimus : String, condition : String)
+            @right_join_sentence = " RIGHT JOIN " + table + " " + acronimus +  " ON " + "(" + condition + ")"
+            return self
+        end
+
         def to_string : String
             return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join() + build_outer_join() + @left_join_sentence + @right_join_sentence
         end
