@@ -141,4 +141,10 @@ class SelectTest < Minitest::Test
         
         assert_equal "SELECT id, name FROM students LEFT JOIN teachers ON (students.id = teachers.student_id)", sqlSelect.field("id").field("name").from("students").left_join("teachers", "students.id = teachers.student_id").to_string
     end
+
+    def test_select_fields_from_table_with_left_join_with_table_acronimus
+        sqlSelect = SQUEL::Select.new
+        
+        assert_equal "SELECT id, name FROM students LEFT JOIN teachers t ON (students.id = teachers.student_id)", sqlSelect.field("id").field("name").from("students").left_join("teachers", "t", "students.id = teachers.student_id").to_string
+    end
 end

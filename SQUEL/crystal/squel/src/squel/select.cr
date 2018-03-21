@@ -127,6 +127,11 @@ module SQUEL
             return self
         end
 
+        def left_join(table : String, acronimus : String, condition : String)
+            @left_join_sentence = " LEFT JOIN " + table + " " + acronimus +  " ON " + "(" + condition + ")"
+            return self
+        end
+
         def to_string : String
             return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join() + build_outer_join() + @left_join_sentence
         end
