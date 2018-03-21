@@ -19,6 +19,6 @@ class ConditionSentenceBuilderTest < Minitest::Test
     def test_expression_with_combination_of_or_conditions
         builder = SQUEL::ConditionSentenceBuilder.new
 
-        assert_equal "name <> 'Fred' AND (id = 5 OR id = 6)", builder.and("name <> 'Fred'").or_begin().or("id = 5").or("s.id = 6").end().to_string
+        assert_equal "name <> 'Fred' AND (id = 5 OR id = 6)", builder.and("name <> 'Fred'").or_begin().or("id = 5").or("id = 6").end().to_string
     end
 end

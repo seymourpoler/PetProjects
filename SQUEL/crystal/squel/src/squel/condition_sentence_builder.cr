@@ -44,6 +44,7 @@ module SQUEL
 
         def end()
             @sentenceResult = @sentenceResult + ")"
+            return self
         end
 
         def to_string : String
