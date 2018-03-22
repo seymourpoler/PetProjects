@@ -2,10 +2,12 @@ module SQUEL
     class Update
         @sets : Array(String)
         @table : String
+        @where : String
 
         def initialize
             @sets = [] of String
             @table = ""
+            @where = ""
         end
 
         def table(table : String)
@@ -38,8 +40,13 @@ module SQUEL
             return self
         end
 
+        def where(condition : String)
+            @where = " WHERE " + "(" + condition + ")"
+            return self
+        end
+
         def to_string
-            return "UPDATE " + @table + " SET " + StringUtil.join(@sets, ", ")
+            return "UPDATE " + @table + " SET " + StringUtil.join(@sets, ", ") + @where
         end
     end
 end

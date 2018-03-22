@@ -14,4 +14,10 @@ class UpdateTest < Minitest::Test
 
         assert_equal "UPDATE students s SET name = 'Fred'", sqlUpdate.table("students", "s").set("name", "'Fred'").to_string
     end
+
+    def test_update_fields_from_table_with_condition
+        sqlUpdate = SQUEL::Update.new
+
+        assert_equal "UPDATE students s SET name = 'Fred' WHERE (age = 12)", sqlUpdate.table("students", "s").set("name", "'Fred'").where("age = 12").to_string
+    end
 end
