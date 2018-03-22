@@ -94,6 +94,12 @@ class SelectTest < Minitest::Test
         assert_equal "SELECT id, name FROM students GROUP BY email", sqlSelect.field("id").field("name").from("students").group("email").to_string
     end
 
+    def test_select_fields_from_table_group_by_with_having
+        sqlSelect = SQUEL::Select.new
+        
+        assert_equal "SELECT id, name FROM students GROUP BY email HAVING (a = 2)", sqlSelect.field("id").field("name").from("students").group("email").having("a = 2").to_string
+    end
+
     def test_select_fields_from_table_with_condition
         sqlSelect = SQUEL::Select.new
         

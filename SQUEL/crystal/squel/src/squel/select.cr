@@ -18,6 +18,7 @@ module SQUEL
         @outer_join_table : String
         @left_join_sentence : String
         @right_join_sentence : String
+        @having_sentence : String
 
         def initialize
             @tables = [] of String
@@ -38,6 +39,7 @@ module SQUEL
             @outer_join_table = ""
             @left_join_sentence = ""
             @right_join_sentence = ""
+            @having_sentence = ""
         end
 
         def field(field : String)
@@ -144,8 +146,13 @@ module SQUEL
             return self
         end
 
+        def having(sentence : String)
+            @having_sentence = " HAVING " + "(" + sentence + ")"
+            return self
+        end
+
         def to_string : String
-            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join() + build_outer_join() + @left_join_sentence + @right_join_sentence
+            return "SELECT " + build_distinct() + build_fields() + " FROM " + build_table() + build_limit() + build_offset() + build_order_by() + build_group_by() + build_where_condition() + build_inner_join() + build_outer_join() + @left_join_sentence + @right_join_sentence + @having_sentence
         end
 
         private def build_fields : String
