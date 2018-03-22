@@ -13,6 +13,11 @@ module SQUEL
             return self
         end
 
+        def table(table : String, acronimus : String)
+            @table = table + " " + acronimus
+            return self
+        end
+
         def set(field : String, value : String)
             @sets << field + " = " + value
             return self
