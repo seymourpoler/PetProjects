@@ -12,12 +12,13 @@ dependencies:
 
 ## Development
 
-1._crystal init lib ReadOnly
-2._cd ReadOnly
-3._git clone https://github.com/f/guardian.git && cd guardian
-4._crystal build --release ./dev/guardian/src/guardian.cr -o ./guardian
-5._guardian --init
-6._edit .guardian.yml and the content is:
+1. crystal init lib ReadOnly
+2. cd ReadOnly
+3. git clone https://github.com/f/guardian.git && cd guardian
+4. crystal build --release ./dev/guardian/src/guardian.cr -o ./guardian
+5. guardian --init
+6. edit .guardian.yml and the content is:
+
 files: ./src/*.cr
 run: crystal spec
 ---
