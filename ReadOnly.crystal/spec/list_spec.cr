@@ -17,5 +17,13 @@ describe ReadOnly::List do
 
             result.count.should eq 1
         end
+
+        it "returns list with elements" do
+            list = ReadOnly::List(Int32).new([1,2,3,4])
+
+            result = list.add(3)
+
+            result.count.should eq 5
+        end
     end
 end
