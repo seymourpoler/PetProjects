@@ -27,6 +27,7 @@ run: crystal spec
 ---
 files: ./shard.yml
 run: crystal deps
+---
 
 ## Contributing
 
