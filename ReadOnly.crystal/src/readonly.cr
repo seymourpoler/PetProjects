@@ -18,7 +18,21 @@ module ReadOnly
       return List.new(@elements)
     end
 
-    def count : Int
+    def each(&block : T ->)
+      @elements.each do |element|
+        block.call(element)
+      end
+    end
+
+    def add(list : List(T))
+      list.each do |element|
+        @elements << element
+      end
+
+      return List.new(@elements)
+    end
+
+    def count()s : Int32
       return @elements.size
     end
   end

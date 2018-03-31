@@ -10,7 +10,7 @@ describe ReadOnly::List do
             result.count.should eq 3
         end
 
-        it "returns list with an added element" do
+        it "returns new list with an added element" do
             list = ReadOnly::List(Int32).new
             
             result = list.add(3)
@@ -18,12 +18,21 @@ describe ReadOnly::List do
             result.count.should eq 1
         end
 
-        it "returns list with elements" do
+        it "returns new  list with elements" do
             list = ReadOnly::List(Int32).new([1,2,3,4])
 
             result = list.add(3)
 
             result.count.should eq 5
+        end
+
+        it "returns new list with elements of another list" do
+            list = ReadOnly::List(Int32).new([1,2,3,4])
+            anotherList = ReadOnly::List(Int32).new([5,6,7,8,9])
+
+            result = list.add(anotherList)
+
+            result.count.should eq 9
         end
     end
 end
