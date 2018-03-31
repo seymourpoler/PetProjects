@@ -38,7 +38,7 @@ module Guardian
       loop do
         watch_changes
         watch_newfiles
-        sleep 1
+        sleep 5
       end
     end
 
@@ -53,7 +53,7 @@ module Guardian
 
       @watchers.each do |watcher|
         Dir.glob(watcher.files) do |file|
-          unless File.executable? file
+          #unless File.executable? file
             @files << file
             @timestamps[file] = file_creation_date(file)
 
@@ -62,7 +62,7 @@ module Guardian
             else
               @runners[file] << watcher.run
             end
-          end
+          #end
         end
       end
     end

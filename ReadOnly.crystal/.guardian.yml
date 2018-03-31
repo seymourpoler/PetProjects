@@ -3,6 +3,3 @@ run: crystal spec
 ---
 files: ./spec/*.cr
 run: crystal spec
----
-files: ./shard.yml
-run: crystal deps

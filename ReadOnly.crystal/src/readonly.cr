@@ -31,8 +31,8 @@ module ReadOnly
 
       return List.new(@elements)
     end
-
-    def count()s : Int32
+  
+    def count() : Int32
       return @elements.size
     end
   end
