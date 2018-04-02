@@ -1,7 +1,7 @@
 require "./spec_helper"
 
 describe ReadOnly::List do
-    describe "when adding new element" do
+    describe "when count is requested" do
         it "returns the number of elements" do
             list = ReadOnly::List(Int32).new
             
@@ -9,7 +9,9 @@ describe ReadOnly::List do
 
             result.count.should eq 3
         end
+    end
 
+    describe "when adding new element" do
         it "returns new list with an added element" do
             list = ReadOnly::List(Int32).new
             
