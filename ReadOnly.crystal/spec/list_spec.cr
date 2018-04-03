@@ -62,4 +62,14 @@ describe ReadOnly::List do
             result.should eq false
         end
     end
+
+    describe "when sum is requested" do
+        it "returns zero if is empty" do
+            list = ReadOnly::List(Int32).new
+            
+            result = list.sum
+
+            result.should eq 0
+        end
+    end
 end

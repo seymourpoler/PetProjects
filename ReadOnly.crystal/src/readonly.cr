@@ -39,5 +39,10 @@ module ReadOnly
     def empty? : Bool
       return @elements.size == 0
     end
+
+    def sum : Int32
+      return 0
+    end
+    
   end
 end
