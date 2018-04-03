@@ -2,6 +2,13 @@ require "./spec_helper"
 
 describe ReadOnly::List do
     describe "when count is requested" do
+        it "returns zero if there is no elements" do
+            list = ReadOnly::List(Int32).new
+            
+            result = list.count
+
+            result.should eq 0
+        end
         it "returns the number of elements" do
             list = ReadOnly::List(Int32).new
             
@@ -20,7 +27,7 @@ describe ReadOnly::List do
             result.count.should eq 1
         end
 
-        it "returns new  list with elements" do
+        it "returns new list with elements" do
             list = ReadOnly::List(Int32).new([1,2,3,4])
 
             result = list.add(3)
