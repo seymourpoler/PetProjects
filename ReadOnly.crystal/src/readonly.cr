@@ -35,5 +35,9 @@ module ReadOnly
     def count() : Int32
       return @elements.size
     end
+
+    def empty? : Bool
+      return @elements.size == 0
+    end
   end
 end

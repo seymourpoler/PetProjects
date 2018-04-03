@@ -44,4 +44,14 @@ describe ReadOnly::List do
             result.count.should eq 9
         end
     end
+
+    describe "when empty? is requested" do
+        it "returns true if is empty" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.empty?
+
+            result.should eq true
+        end
+    end
 end
