@@ -97,5 +97,13 @@ describe ReadOnly::List do
 
             result.empty?.should eq true
         end
+
+        it "return the same list if the number of taking requested is minus than one" do
+            list = ReadOnly::List(Int32).new.add(1).add(2).add(3)
+
+            result = list.take(2)
+
+            result.equal?(ReadOnly::List.new([1,2]))
+        end
     end
 end

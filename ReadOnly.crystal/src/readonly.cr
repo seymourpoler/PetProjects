@@ -1,5 +1,7 @@
 module ReadOnly
   class List(T)
+    NOELEMENTS = 0
+    
     @elements : Array(T)
 
     def initialize
@@ -37,7 +39,21 @@ module ReadOnly
     end
 
     def empty? : Bool
-      return @elements.size == 0
+      return @elements.size == NOELEMENTS
+    end
+
+    def equal?(list : List(T)) : Bool
+      if self.count != list.count
+        return false
+      end
+      position = 0
+      list.each do |element|
+        if @elements[position] != element
+          next false
+        end
+        position = position + 1
+      end
+      return true
     end
 
     def sum : Int32
@@ -54,7 +70,14 @@ module ReadOnly
       if self.empty?
         return self
       end
-       raise Exception.new("Not implemented")
+      result = [] of T
+      @elements.each do |element|
+        if numberOfElements > NOELEMENTS
+          result << element
+        end
+        numberOfElements = numberOfElements - 1
+      end
+      return ReadOnly::List.new(result)
     end
 
   end
