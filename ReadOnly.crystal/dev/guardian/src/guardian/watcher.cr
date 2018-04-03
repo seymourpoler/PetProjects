@@ -38,7 +38,7 @@ module Guardian
       loop do
         watch_changes
         watch_newfiles
-        sleep 5
+        sleep 2
       end
     end
 
