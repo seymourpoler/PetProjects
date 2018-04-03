@@ -72,7 +72,7 @@ describe ReadOnly::List do
             result.should eq 0
         end
 
-        it "returns the sum of values" do
+        it "returns the sum of values Int32" do
             list = ReadOnly::List(Int32).new.add(1).add(2).add(3)
 
             result = list.sum
@@ -80,6 +80,12 @@ describe ReadOnly::List do
             result.should eq 6
         end
 
-        
+        it "returns zero if there is no numbers" do
+            list = ReadOnly::List(String).new.add("Helo").add("every").add("body")
+
+            result = list.sum
+            
+            result.should eq 0
+        end
     end
 end
