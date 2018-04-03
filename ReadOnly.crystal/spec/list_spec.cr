@@ -53,5 +53,13 @@ describe ReadOnly::List do
 
             result.should eq true
         end
+
+        it "returns false if is not empty" do
+            list = ReadOnly::List(Int32).new.add(1).add(2)
+
+            result = list.empty?
+
+            result.should eq false
+        end
     end
 end
