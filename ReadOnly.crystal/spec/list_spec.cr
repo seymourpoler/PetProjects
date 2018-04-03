@@ -114,4 +114,15 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List.new([1,2]))
         end
     end
+
+    describe "when equal? is requested" do
+        it "returns false if have not the same number of elements" do
+            listOne = ReadOnly::List(Int32).new.add(1).add(2).add(3).add(4)
+            listTwo = ReadOnly::List(Int32).new.add(1).add(2).add(4)
+
+            result = listOne.equal?(listTwo)
+
+            result.should eq false
+        end
+    end
 end
