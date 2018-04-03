@@ -43,7 +43,9 @@ module ReadOnly
     def sum : Int32
       result = 0
       @elements.each do |element|
+        if element.is_a?(Int32)
           result = result + element
+        end
       end
       return result
     end

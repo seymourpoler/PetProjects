@@ -79,5 +79,7 @@ describe ReadOnly::List do
 
             result.should eq 6
         end
+
+        
     end
 end
