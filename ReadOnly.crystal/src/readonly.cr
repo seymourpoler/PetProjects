@@ -41,8 +41,12 @@ module ReadOnly
     end
 
     def sum : Int32
-      return 0
+      result = 0
+      @elements.each do |element|
+          result = result + element
+      end
+      return result
     end
-    
+
   end
 end

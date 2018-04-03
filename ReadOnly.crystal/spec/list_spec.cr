@@ -71,5 +71,13 @@ describe ReadOnly::List do
 
             result.should eq 0
         end
+
+        it "returns the sum of values" do
+            list = ReadOnly::List(Int32).new.add(1).add(2).add(3)
+
+            result = list.sum
+
+            result.should eq 6
+        end
     end
 end
