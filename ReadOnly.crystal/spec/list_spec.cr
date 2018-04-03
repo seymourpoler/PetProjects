@@ -88,4 +88,14 @@ describe ReadOnly::List do
             result.should eq 0
         end
     end
+
+    describe "when take is requested" do
+        it "return empty list when there is no elements" do
+            list = ReadOnly::List(String).new
+        
+            result = list.take 3
+
+            result.empty?.should eq true
+        end
+    end
 end

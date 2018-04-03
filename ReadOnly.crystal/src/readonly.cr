@@ -50,5 +50,13 @@ module ReadOnly
       return result
     end
 
+    def take(numberOfElements : Int32) : self
+      if self.empty?
+        return self
+      end
+       raise Exception.new("Not implemented")
+    end
+
   end
 end
+
