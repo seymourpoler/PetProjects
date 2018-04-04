@@ -22,22 +22,22 @@ module ReadOnly
     end
 
     def addAt(position : Int32, value : T)
-      if(self.empty?)
+      if self.empty?
         return self
       end
-      if(position < FIRSTPOSITION)
+      if position < FIRSTPOSITION
         return self
       end
       if position > self.count
         return self
       end
+      
       raise Exception.new("Not Implemented")
     end
 
-
     def each(&block : T ->)
       @elements.each do |element|
-        block.call(element)
+        block.call element
       end
     end
 
@@ -49,7 +49,7 @@ module ReadOnly
       return List.new(@elements)
     end
   
-    def count() : Int32
+    def count : Int32
       return @elements.size
     end
 
@@ -75,7 +75,7 @@ module ReadOnly
     def sum : Int32
       result = 0
       @elements.each do |element|
-        if element.is_a?(Int32)
+        if element.is_a? Int32
           result = result + element
         end
       end
