@@ -31,7 +31,9 @@ module ReadOnly
       if position > self.count
         return self
       end
-      
+      if position == self.count
+        return self.add(value)
+      end
       raise Exception.new("Not Implemented")
     end
 
