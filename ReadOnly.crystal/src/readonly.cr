@@ -34,7 +34,16 @@ module ReadOnly
       if position == self.count
         return self.add(value)
       end
-      raise Exception.new("Not Implemented")
+      index = 0      
+      values = [] of T
+      while index < self.count
+        if position == index
+          values << value
+        end
+        values << @elements[index]
+        index = index + 1
+      end
+      return ReadOnly::List.new(values)
     end
 
     def each(&block : T ->)

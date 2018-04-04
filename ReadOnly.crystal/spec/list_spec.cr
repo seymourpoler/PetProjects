@@ -176,5 +176,13 @@ describe ReadOnly::List do
 
             result.equal?(ReadOnly::List(Int32).new([1, 2, 3, 4, 5])).should eq true
         end
+
+        it "returns new list with the element at the beginning" do
+            list = ReadOnly::List(Int32).new([1, 2, 3, 4])
+
+            result = list.addAt(0, 5)
+
+            result.equal?(ReadOnly::List(Int32).new([5, 1, 2, 3, 4])).should eq true
+        end
     end
 end
