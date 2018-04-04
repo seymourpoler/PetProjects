@@ -124,5 +124,14 @@ describe ReadOnly::List do
 
             result.should eq false
         end
+
+        it "returns false if have not the same of elements" do
+            listOne = ReadOnly::List(Int32).new.add(1).add(2).add(3).add(4)
+            listTwo = ReadOnly::List(Int32).new.add(1).add(2).add(4).add(3)
+
+            result = listOne.equal?(listTwo)
+
+            result.should eq false
+        end
     end
 end

@@ -47,13 +47,14 @@ module ReadOnly
         return false
       end
       position = 0
+      result = true
       list.each do |element|
         if @elements[position] != element
-          next false
+          result = false
         end
         position = position + 1
       end
-      return true
+      return result && true
     end
 
     def sum : Int32
@@ -82,4 +83,3 @@ module ReadOnly
 
   end
 end
-
