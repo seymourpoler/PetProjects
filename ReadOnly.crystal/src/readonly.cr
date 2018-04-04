@@ -28,6 +28,9 @@ module ReadOnly
       if(position < FIRSTPOSITION)
         return self
       end
+      if position > self.count
+        return self
+      end
       raise Exception.new("Not Implemented")
     end
 

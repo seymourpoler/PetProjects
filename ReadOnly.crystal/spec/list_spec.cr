@@ -160,5 +160,13 @@ describe ReadOnly::List do
 
             list.equal?(ReadOnly::List(Int32).new([1, 2, 3, 4])).should eq true
         end
+
+        it "returns the same list if the position is major than the size of the list" do
+            list = ReadOnly::List(Int32).new([1, 2, 3, 4])
+
+            result = list.addAt(10, 5)
+
+            list.equal?(ReadOnly::List(Int32).new([1, 2, 3, 4])).should eq true
+        end
     end
 end
