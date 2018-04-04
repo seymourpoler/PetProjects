@@ -1,6 +1,7 @@
 module ReadOnly
   class List(T)
     NOELEMENTS = 0
+    FIRSTPOSITION = 0
     
     @elements : Array(T)
 
@@ -22,6 +23,9 @@ module ReadOnly
 
     def addAt(position : Int32, value : T)
       if(self.empty?)
+        return self
+      end
+      if(position < FIRSTPOSITION)
         return self
       end
       raise Exception.new("Not Implemented")
