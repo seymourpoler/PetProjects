@@ -20,6 +20,14 @@ module ReadOnly
       return List.new(@elements)
     end
 
+    def addAt(position : Int32, value : T)
+      if(self.empty?)
+        return self
+      end
+      raise Exception.new("Not Implemented")
+    end
+
+
     def each(&block : T ->)
       @elements.each do |element|
         block.call(element)

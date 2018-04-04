@@ -143,4 +143,14 @@ describe ReadOnly::List do
             result.should eq true
         end
     end
+
+    describe "when addAt is requested" do
+        it "returns the same list if is an empty list" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.addAt(2, 5)
+
+            list.empty?.should eq true
+        end
+    end
 end
