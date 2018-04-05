@@ -205,5 +205,13 @@ describe ReadOnly::List do
             result.equal?(list = ReadOnly::List(Int32).new).should eq true
         end
 
+        it "returns new reversed list" do
+            list = ReadOnly::List(Int32).new([1,2,3,4])
+
+            result = list.reverse
+
+            result.equal?(list = ReadOnly::List(Int32).new([4,3,2,1])).should eq true
+        end
+
     end
 end

@@ -123,7 +123,13 @@ module ReadOnly
       if self.empty?
         return self
       end
-      raise Exception.new("Not Implemented")
+      values = [] of T
+      position = self.count - 1
+      while position >= NOELEMENTS
+        values << @elements[position]
+        position = position -1
+      end
+      return ReadOnly::List.new(values)
     end
 
   end
