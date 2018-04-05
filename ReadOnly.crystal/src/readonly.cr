@@ -107,5 +107,17 @@ module ReadOnly
       return ReadOnly::List.new(result)
     end
 
+    def where(&block : T -> Bool) : self
+      values = [] of T
+      position = 0
+      while position < self.count
+        if block.call(@elements[position])
+          values << @elements[position]
+        end  
+        position = position + 1
+      end
+      return ReadOnly::List(Int32).new(values)
+    end
+
   end
 end

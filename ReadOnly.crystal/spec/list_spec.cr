@@ -185,4 +185,14 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List(Int32).new([5, 1, 2, 3, 4])).should eq true
         end
     end
+
+    describe "when where is requested" do
+        it "returns the same list if condition is null" do
+            list = ReadOnly::List(Int32).new([1, 2, 3, 4])
+
+            result = list.where{ |x| x > 2 }
+
+            result.equal?(ReadOnly::List(Int32).new([3, 4])).should eq true
+        end
+    end
 end
