@@ -133,9 +133,10 @@ module ReadOnly
     end
 
     def select(&block : T -> U) forall U
-      if self.empty?
-        return  ReadOnly::List(U).new
-      end
+      
+
+      values = @elements.map{|x| block.call(x)}
+      return ReadOnly::List(U).new(values)
       raise Exception.new("Not Implemented")
     end
 

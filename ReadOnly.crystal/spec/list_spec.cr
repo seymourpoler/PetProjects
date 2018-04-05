@@ -216,12 +216,20 @@ describe ReadOnly::List do
     end
 
     describe "when select is requested" do
-        it "returns the same list if is empty" do
+        it "returns new list if is empty" do
             list = ReadOnly::List(Int32).new
 
             result = list.select{ |x| x.to_s }
 
             result.equal?(ReadOnly::List(String).new).should eq true
+        end
+
+        it "returns new selected list" do
+            list = ReadOnly::List(Int32).new([1,2,3])
+
+            result = list.select{ |x| x.to_s }
+
+            result.equal?(ReadOnly::List(String).new(["1", "2", "3"])).should eq true
         end
     end
 end
