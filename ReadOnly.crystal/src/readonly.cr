@@ -21,6 +21,14 @@ module ReadOnly
       return List.new(@elements)
     end
 
+    def add(list : List(T))
+      list.each do |element|
+        @elements << element
+      end
+
+      return List.new(@elements)
+    end
+
     def addAt(position : Int32, value : T)
       if self.empty?
         return self
@@ -50,14 +58,6 @@ module ReadOnly
       @elements.each do |element|
         block.call element
       end
-    end
-
-    def add(list : List(T))
-      list.each do |element|
-        @elements << element
-      end
-
-      return List.new(@elements)
     end
   
     def count : Int32
@@ -117,6 +117,13 @@ module ReadOnly
         position = position + 1
       end
       return ReadOnly::List(Int32).new(values)
+    end
+
+    def reverse : self
+      if self.empty?
+        return self
+      end
+      raise Exception.new("Not Implemented")
     end
 
   end

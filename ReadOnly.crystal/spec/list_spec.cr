@@ -195,4 +195,15 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List(Int32).new([3, 4])).should eq true
         end
     end
+
+    describe "when reverse is requested" do
+        it "returns the same list if is empty" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.reverse
+
+            result.equal?(list = ReadOnly::List(Int32).new).should eq true
+        end
+
+    end
 end
