@@ -232,4 +232,14 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List(String).new(["1", "2", "3"])).should eq true
         end
     end
+
+    describe "when remove is requested" do
+        it "returns new list without removed elements" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
+
+            result = list.remove{|x| x > 2}
+
+            result.equal?(ReadOnly::List(Int32).new([3,4,5,6])).should eq true
+        end
+    end
 end

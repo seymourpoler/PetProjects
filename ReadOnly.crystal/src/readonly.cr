@@ -137,5 +137,17 @@ module ReadOnly
       return ReadOnly::List(U).new(values)
     end
 
+    def remove(&condition : T -> Bool) : self
+      values = [] of T
+      position = 0
+      while position < self.count
+        if condition.call(@elements[position])
+          values << @elements[position]  
+        end
+        position = position + 1
+      end
+      return ReadOnly::List(T).new(values)
+    end
+
   end
 end
