@@ -214,4 +214,14 @@ describe ReadOnly::List do
         end
 
     end
+
+    describe "when select is requested" do
+        it "returns the same list if is empty" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.select{ |x| x.to_s }
+
+            result.equal?(ReadOnly::List(String).new).should eq true
+        end
+    end
 end

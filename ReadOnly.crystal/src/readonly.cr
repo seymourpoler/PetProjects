@@ -132,5 +132,12 @@ module ReadOnly
       return ReadOnly::List.new(values)
     end
 
+    def select(&block : T -> U) forall U
+      if self.empty?
+        return  ReadOnly::List(U).new
+      end
+      raise Exception.new("Not Implemented")
+    end
+
   end
 end
