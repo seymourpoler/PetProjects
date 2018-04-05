@@ -187,7 +187,7 @@ describe ReadOnly::List do
     end
 
     describe "when where is requested" do
-        it "returns the same list if condition is null" do
+        it "returns new list with filtered elements" do
             list = ReadOnly::List(Int32).new([1, 2, 3, 4])
 
             result = list.where{ |x| x > 2 }
