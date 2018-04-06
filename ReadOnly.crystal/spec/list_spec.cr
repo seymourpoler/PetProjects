@@ -321,6 +321,14 @@ describe ReadOnly::List do
 
             result.should be_nil
         end
+
+        it "returns the first element that satisfed the condition" do
+            list = ReadOnly::List(Int32).new([1,2,2,3,4,5])
+
+            result = list.first{ |x| x > 2 }
+
+            result.should eq 3
+        end
     end
 
 end
