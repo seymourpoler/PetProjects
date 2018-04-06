@@ -181,7 +181,13 @@ module ReadOnly
       if self.empty?
         return nil
       end
-      raise Exception.new("Not Implemented")
+      result = nil
+      @elements.each do |element|
+        if condition.call(element)
+          result = element
+        end
+      end
+      return result
     end
 
   end
