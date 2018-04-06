@@ -149,5 +149,13 @@ module ReadOnly
       return ReadOnly::List(T).new(values)
     end
 
+    def removeAt(position : Int32) : self
+      if position < self.count
+        return self
+      end
+
+      raise Exception.new("Not Implemented")
+    end
+
   end
 end
