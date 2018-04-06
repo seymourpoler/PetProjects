@@ -306,13 +306,15 @@ describe ReadOnly::List do
     end
 
     describe "when first is requested" do
-        it "returns Nil if is empty list" do
+        it "returns nil if is empty list" do
             list = ReadOnly::List(Int32).new
 
             result = list.first{ |x| x > 2}
 
             result.should be_nil
         end
+
+        
     end
 
 end
