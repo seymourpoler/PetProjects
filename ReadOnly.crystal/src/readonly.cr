@@ -177,5 +177,12 @@ module ReadOnly
       return @elements[position]
     end
 
+    def first(&condition : T -> Bool)
+      if self.empty?
+        return nil
+      end
+      raise Exception.new("Not Implemented")
+    end
+
   end
 end
