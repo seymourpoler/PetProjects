@@ -150,11 +150,20 @@ module ReadOnly
     end
 
     def removeAt(position : Int32) : self
-      if position < self.count || position >= self.count
+      if position < NOELEMENTS || position >= self.count
         return self
       end
-
-      raise Exception.new("Not Implemented")
+      
+      values = [] of T
+      index = 0
+      while index < self.count
+        if index != position
+          values << @elements[index]  
+        end
+        index = index + 1
+      end
+      
+      return ReadOnly::List(T).new(values)
     end
 
   end

@@ -259,5 +259,13 @@ describe ReadOnly::List do
 
             result.equal?(list).should eq true
         end
+
+        it "returns new list without the element at position" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5])
+
+            result = list.removeAt(2) 
+
+            result.equal?(ReadOnly::List(Int32).new([1,2,4,5])).should eq true
+        end
     end
 end
