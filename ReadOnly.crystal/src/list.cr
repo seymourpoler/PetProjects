@@ -182,9 +182,11 @@ module ReadOnly
         return nil
       end
       result = nil
+      first? = true
       @elements.each do |element|
-        if condition.call(element)
+        if condition.call(element) && first?
           result = element
+          first? = false
         end
       end
       return result

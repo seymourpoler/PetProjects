@@ -314,7 +314,7 @@ describe ReadOnly::List do
             result.should be_nil
         end
 
-        it "returns nil if there is no first element that satisfed the condition" do
+        it "returns nil if there is no first element that satisfied the condition" do
             list = ReadOnly::List(Int32).new([1,2,2,3,4,5])
 
             result = list.first{ |x| x > 20 }
@@ -322,7 +322,7 @@ describe ReadOnly::List do
             result.should be_nil
         end
 
-        it "returns the first element that satisfed the condition" do
+        it "returns the first element that satisfied  the condition" do
             list = ReadOnly::List(Int32).new([1,2,2,3,4,5])
 
             result = list.first{ |x| x > 2 }
