@@ -251,5 +251,13 @@ describe ReadOnly::List do
 
             result.equal?(list).should eq true
         end
+
+        it "returns the same list if position is major than length of the list" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
+
+            result = list.removeAt(8) 
+
+            result.equal?(list).should eq true
+        end
     end
 end

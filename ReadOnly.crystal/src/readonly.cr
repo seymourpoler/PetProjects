@@ -150,7 +150,7 @@ module ReadOnly
     end
 
     def removeAt(position : Int32) : self
-      if position < self.count
+      if position < self.count || position >= self.count
         return self
       end
 
