@@ -347,6 +347,14 @@ describe ReadOnly::List do
 
             result.should be_nil
         end
+
+        it "returns the last element that satisfied  the condition" do
+            list = ReadOnly::List(Int32).new([1,2,2,3,4,5])
+
+            result = list.last{ |x| x > 2 }
+
+            result.should eq 5
+        end
     end
 
 end
