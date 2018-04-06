@@ -51,7 +51,7 @@ describe ReadOnly::List do
 
             result = list.empty?
 
-            result.should eq true
+            result.should be_true
         end
 
         it "returns false if is not empty" do
@@ -59,7 +59,7 @@ describe ReadOnly::List do
 
             result = list.empty?
 
-            result.should eq false
+            result.should be_false
         end
     end
 
@@ -95,7 +95,7 @@ describe ReadOnly::List do
         
             result = list.take 3
 
-            result.empty?.should eq true
+            result.empty?.should be_true
         end
 
         it "return the same list if the number of taking requested is minus than one" do
@@ -122,7 +122,7 @@ describe ReadOnly::List do
 
             result = listOne.equal?(listTwo)
 
-            result.should eq false
+            result.should be_false
         end
 
         it "returns false if have not the same of elements" do
@@ -131,7 +131,7 @@ describe ReadOnly::List do
 
             result = listOne.equal?(listTwo)
 
-            result.should eq false
+            result.should be_false
         end
 
         it "returns true if have the same elements" do
@@ -140,7 +140,7 @@ describe ReadOnly::List do
 
             result = listOne.equal?(listTwo)
 
-            result.should eq true
+            result.should be_true
         end
     end
 
@@ -150,7 +150,7 @@ describe ReadOnly::List do
 
             result = list.addAt(2, 5)
 
-            result.empty?.should eq true
+            result.empty?.should be_true
         end
 
         it "returns the same list if the position is minor than zero" do
@@ -192,7 +192,7 @@ describe ReadOnly::List do
 
             result = list.where{ |x| x > 2 }
 
-            result.equal?(ReadOnly::List(Int32).new([3, 4])).should eq true
+            result.equal?(ReadOnly::List(Int32).new([3, 4])).should be_true
         end
     end
 
@@ -202,7 +202,7 @@ describe ReadOnly::List do
 
             result = list.reverse
 
-            result.equal?(list = ReadOnly::List(Int32).new).should eq true
+            result.equal?(list = ReadOnly::List(Int32).new).should be_true
         end
 
         it "returns new reversed list" do
@@ -210,7 +210,7 @@ describe ReadOnly::List do
 
             result = list.reverse
 
-            result.equal?(list = ReadOnly::List(Int32).new([4,3,2,1])).should eq true
+            result.equal?(list = ReadOnly::List(Int32).new([4,3,2,1])).should be_true
         end
 
     end
@@ -221,7 +221,7 @@ describe ReadOnly::List do
 
             result = list.select{ |x| x.to_s }
 
-            result.equal?(ReadOnly::List(String).new).should eq true
+            result.equal?(ReadOnly::List(String).new).should be_true
         end
 
         it "returns new selected list" do
@@ -229,7 +229,7 @@ describe ReadOnly::List do
 
             result = list.select{ |x| x.to_s }
 
-            result.equal?(ReadOnly::List(String).new(["1", "2", "3"])).should eq true
+            result.equal?(ReadOnly::List(String).new(["1", "2", "3"])).should be_true
         end
     end
 
@@ -239,7 +239,7 @@ describe ReadOnly::List do
 
             result = list.remove{|x| x > 2}
 
-            result.equal?(ReadOnly::List(Int32).new([3,4,5,6])).should eq true
+            result.equal?(ReadOnly::List(Int32).new([3,4,5,6])).should be_true
         end
     end
 
@@ -249,7 +249,7 @@ describe ReadOnly::List do
 
             result = list.removeAt(-2) 
 
-            result.equal?(list).should eq true
+            result.equal?(list).should be_true
         end
 
         it "returns the same list if position is major than length of the list" do
@@ -257,7 +257,7 @@ describe ReadOnly::List do
 
             result = list.removeAt(8) 
 
-            result.equal?(list).should eq true
+            result.equal?(list).should be_true
         end
 
         it "returns new list without the element at position" do
@@ -265,7 +265,7 @@ describe ReadOnly::List do
 
             result = list.removeAt(2) 
 
-            result.equal?(ReadOnly::List(Int32).new([1,2,4,5])).should eq true
+            result.equal?(ReadOnly::List(Int32).new([1,2,4,5])).should be_true
         end
     end
     
@@ -275,7 +275,7 @@ describe ReadOnly::List do
 
             result = list.clear
 
-            result.equal?(list = ReadOnly::List(Int32).new).should eq true
+            result.equal?(list = ReadOnly::List(Int32).new).should be_true
         end
-    end 
+    end
 end
