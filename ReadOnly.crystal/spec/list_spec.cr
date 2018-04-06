@@ -339,6 +339,14 @@ describe ReadOnly::List do
 
             result.should be_nil
         end
+
+        it "returns nil if there is no last element that satisfied the condition" do
+            list = ReadOnly::List(Int32).new([1,2,2,3,4,5])
+
+            result = list.last{ |x| x > 20 }
+
+            result.should be_nil
+        end
     end
 
 end

@@ -203,8 +203,15 @@ module ReadOnly
       if self.empty?
         return nil
       end
-      
-      raise Exception.new("Not Implemented")
+
+      position = self.count - 1
+      while position >= 0
+        if condition.call(@elements[position])
+          return @elements[position]
+        end
+        position = position - 1
+      end
+      return nil
     end
 
   end
