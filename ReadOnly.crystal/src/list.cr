@@ -199,5 +199,13 @@ module ReadOnly
       return result
     end
 
+    def last(&condition : T -> Bool)
+      if self.empty?
+        return nil
+      end
+      
+      raise Exception.new("Not Implemented")
+    end
+
   end
 end

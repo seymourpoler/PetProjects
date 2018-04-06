@@ -331,4 +331,14 @@ describe ReadOnly::List do
         end
     end
 
+    describe "when last is requested" do
+        it "returns nil if is empty list" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.last{ |x| x > 2}
+
+            result.should be_nil
+        end
+    end
+
 end
