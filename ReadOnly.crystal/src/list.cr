@@ -199,6 +199,7 @@ module ReadOnly
       return result
     end
 
+    #TODO: extract method
     def last(&condition : T -> Bool)
       if self.empty?
         return nil
