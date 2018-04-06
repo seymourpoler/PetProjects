@@ -166,5 +166,9 @@ module ReadOnly
       return ReadOnly::List(T).new(values)
     end
 
+    def clear : self
+      return ReadOnly::List(T).new
+    end
+
   end
 end

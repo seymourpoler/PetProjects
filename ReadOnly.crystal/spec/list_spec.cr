@@ -268,4 +268,14 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List(Int32).new([1,2,4,5])).should eq true
         end
     end
+    
+    describe "when clear is requested" do
+        it "returns an empty list" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
+
+            result = list.clear
+
+            result.equal?(list = ReadOnly::List(Int32).new).should eq true
+        end
+    end 
 end
