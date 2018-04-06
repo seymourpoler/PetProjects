@@ -287,5 +287,13 @@ describe ReadOnly::List do
                 list.elementAt(-2)
             end
         end
+
+        it "raise IndexError if position is major than length of list" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
+
+            expect_raises IndexError do 
+                list.elementAt(14)
+            end
+        end
     end
 end

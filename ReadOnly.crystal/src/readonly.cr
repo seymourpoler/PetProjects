@@ -170,5 +170,12 @@ module ReadOnly
       return ReadOnly::List(T).new
     end
 
+    def elementAt(position : Int32)
+      if position < NOELEMENTS || position >= self.count
+        raise IndexError.new
+      end
+      raise Exception.new("Not Implemented")
+    end
+
   end
 end
