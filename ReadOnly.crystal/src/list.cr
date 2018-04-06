@@ -177,6 +177,7 @@ module ReadOnly
       return @elements[position]
     end
 
+    #TODO: extract method
     def first(&condition : T -> Bool)
       if self.empty?
         return nil
