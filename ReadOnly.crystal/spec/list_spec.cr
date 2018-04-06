@@ -278,4 +278,14 @@ describe ReadOnly::List do
             result.equal?(list = ReadOnly::List(Int32).new).should be_true
         end
     end
+
+    describe "when elementAt is requested" do
+        it "raise IndexError if position is minus than zero" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
+
+            expect_raises IndexError do 
+                list.elementAt(-2)
+            end
+        end
+    end
 end
