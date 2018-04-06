@@ -25,10 +25,10 @@ module ReadOnly
       list.each do |element|
         @elements << element
       end
-
       return List.new(@elements)
     end
 
+    #TODO: extract method and conditions
     def addAt(position : Int32, value : T)
       if self.empty?
         return self
@@ -68,10 +68,12 @@ module ReadOnly
       return @elements.size == NOELEMENTS
     end
 
+    #TODO: extract method
     def equal?(list : List(T)) : Bool
       if self.count != list.count
         return false
       end
+
       position = 0
       result = true
       list.each do |element|
@@ -97,6 +99,7 @@ module ReadOnly
       if self.empty?
         return self
       end
+
       result = [] of T
       @elements.each do |element|
         if numberOfElements > NOELEMENTS
@@ -123,6 +126,7 @@ module ReadOnly
       if self.empty?
         return self
       end
+
       values = [] of T
       position = self.count - 1
       while position >= NOELEMENTS
@@ -149,6 +153,7 @@ module ReadOnly
       return ReadOnly::List(T).new(values)
     end
 
+    #TODO: extract method
     def removeAt(position : Int32) : self
       if position < NOELEMENTS || position >= self.count
         return self
@@ -182,6 +187,7 @@ module ReadOnly
       if self.empty?
         return nil
       end
+
       result = nil
       first? = true
       @elements.each do |element|
