@@ -174,7 +174,7 @@ module ReadOnly
       if position < NOELEMENTS || position >= self.count
         raise IndexError.new
       end
-      raise Exception.new("Not Implemented")
+      return @elements[position]
     end
 
   end

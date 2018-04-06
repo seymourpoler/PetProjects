@@ -295,5 +295,13 @@ describe ReadOnly::List do
                 list.elementAt(14)
             end
         end
+
+        it "returns element at position" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
+
+            result = list.elementAt(2)
+            
+            result.should eq 3
+        end
     end
 end
