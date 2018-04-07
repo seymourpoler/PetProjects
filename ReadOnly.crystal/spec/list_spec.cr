@@ -365,6 +365,14 @@ describe ReadOnly::List do
 
             result.equal?(list).should be_true
         end
+
+        it "returns ordered by ascending" do
+            list = ReadOnly::List(Int32).new([3, 4, 1, 2, 5, 6])
+
+            result = list.order_by_ascending
+
+            result.equal?(ReadOnly::List(Int32).new([1, 2, 3, 4, 5, 6])).should be_true
+        end
     end
 
 end

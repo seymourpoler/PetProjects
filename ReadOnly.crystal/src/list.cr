@@ -219,7 +219,7 @@ module ReadOnly
       if !@elements.is_a?(Int32)
         return self
       end
-      raise Exception.new("Not Implemented")
+      return ReadOnly::List.new(@elements.sort)
     end
 
   end
