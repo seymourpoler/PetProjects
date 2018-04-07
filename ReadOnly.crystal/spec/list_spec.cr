@@ -367,4 +367,14 @@ describe ReadOnly::List do
         end
     end
 
+    describe "when order by descending is requested" do
+        it "returns ordered by descending" do
+            list = ReadOnly::List(Int32).new([3, 4, 1, 2, 5, 6])
+
+            result = list.order_by_descending
+
+            result.equal?(ReadOnly::List(Int32).new([6,5,4,3,2,1])).should be_true
+        end
+    end
+
 end
