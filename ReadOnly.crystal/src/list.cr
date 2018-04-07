@@ -220,7 +220,6 @@ module ReadOnly
     end
 
     def order_by_descending
-      #raise Exception.new("Not Implemented")
       return ReadOnly::List.new(@elements.sort.reverse)
     end
 
