@@ -358,14 +358,6 @@ describe ReadOnly::List do
     end
 
     describe "when order by ascending is requested" do
-        it "returns the same list if has no integers" do
-            list = ReadOnly::List(String).new(["h", "e", "l", "o"])
-
-            result = list.order_by_ascending
-
-            result.equal?(list).should be_true
-        end
-
         it "returns ordered by ascending" do
             list = ReadOnly::List(Int32).new([3, 4, 1, 2, 5, 6])
 

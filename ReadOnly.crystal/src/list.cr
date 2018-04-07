@@ -216,9 +216,6 @@ module ReadOnly
     end
 
     def order_by_ascending
-      if !@elements.is_a?(Int32)
-        return self
-      end
       return ReadOnly::List.new(@elements.sort)
     end
 
