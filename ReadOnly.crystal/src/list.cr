@@ -255,6 +255,10 @@ module ReadOnly
       if position > self.count
         raise ArgumentError.new
       end 
+
+      if position + length > self.count
+        raise ArgumentError.new
+      end
       raise Exception.new("Not Implemented")
     end
   end

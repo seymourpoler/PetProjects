@@ -439,5 +439,14 @@ describe ReadOnly::List do
                 list.get_range(position: 8, length: 4)
             end
         end
+
+        it "raise ArgumentError if there is not enough elements" do
+            list = ReadOnly::List(Int32).new([1,2,3,4])
+
+            expect_raises ArgumentError do 
+                list.get_range(position: 2, length: 3)
+            end
+        end
+        
     end
 end
