@@ -1,7 +1,9 @@
 module ReadOnly
     module ListCommands
         class Take(T)
+
             NO_ELEMENTS = 0
+            
             @elements : Array(T)
             @numberOfElementsForTaking : Int32
 
