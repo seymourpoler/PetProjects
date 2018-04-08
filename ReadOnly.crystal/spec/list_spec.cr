@@ -376,5 +376,15 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List(Int32).new([6,5,4,3,2,1])).should be_true
         end
     end
+    
+    describe "when reverse is requested" do
+        it "return reversed list" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5])
+
+            result = list.reverse
+
+            result.equal?(ReadOnly::List(Int32).new([5,4,3,2,1])).should be_true
+        end
+    end
 
 end
