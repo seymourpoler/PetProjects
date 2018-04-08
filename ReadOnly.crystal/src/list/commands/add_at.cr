@@ -26,6 +26,16 @@ module ReadOnly
                 if @position == @elements.size
                     return add_at_the_end(@elements, @value)
                 end
+                return add_value_at_position(@elements, @position, @value)
+            end
+
+            def add_at_the_end(elements : Array(T), value : T)
+                values = @elements
+                values << @value
+                return ReadOnly::List.new(values)
+            end
+
+            def add_value_at_position(@elements : Array(T), @position : Int32, @value : T)
                 index = 0      
                 values = [] of T
                 while index < @elements.size
@@ -35,12 +45,6 @@ module ReadOnly
                     values << @elements[index]
                     index = index + 1
                 end
-                return ReadOnly::List.new(values)
-            end
-
-            def add_at_the_end(elements : Array(T), value : T)
-                values = @elements
-                values << @value
                 return ReadOnly::List.new(values)
             end
         end
