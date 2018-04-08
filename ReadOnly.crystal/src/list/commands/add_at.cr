@@ -1,6 +1,7 @@
 module ReadOnly
     module ListCommands
         class AddAt(T)
+
             FIRST_POSITION = 0
 
             @elements : Array(T)
@@ -17,10 +18,8 @@ module ReadOnly
                 if @elements.empty?
                     return ReadOnly::List.new(@elements)
                 end
-                if @position < FIRST_POSITION
-                    return ReadOnly::List.new(@elements)
-                end
-                if @position > @elements.size
+                if @position < FIRST_POSITION || 
+                   @position > @elements.size
                     return ReadOnly::List.new(@elements)
                 end
                 if @position == @elements.size
