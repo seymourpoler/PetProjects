@@ -1,2 +1,3 @@
 require "spec"
-require "../src/*"
+require "../src/list/list.cr"
+require "../src/list/commands/add_at.cr"

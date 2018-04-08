@@ -1,3 +1,5 @@
+require "./commands/add_at.cr"
+
 module ReadOnly
   class List(T)
     NOELEMENTS = 0
@@ -30,28 +32,7 @@ module ReadOnly
 
     #TODO: extract method and conditions
     def addAt(position : Int32, value : T)
-      if self.empty?
-        return self
-      end
-      if position < FIRSTPOSITION
-        return self
-      end
-      if position > self.count
-        return self
-      end
-      if position == self.count
-        return self.add(value)
-      end
-      index = 0      
-      values = [] of T
-      while index < self.count
-        if position == index
-          values << value
-        end
-        values << @elements[index]
-        index = index + 1
-      end
-      return ReadOnly::List.new(values)
+      return ReadOnly::ListCommands::AddAt.new(@elements, position, value).execute
     end
 
     def each(&block : T ->)

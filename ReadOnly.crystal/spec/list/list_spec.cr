@@ -1,4 +1,4 @@
-require "./spec_helper"
+require "../spec_helper"
 
 describe ReadOnly::List do
     describe "when count is requested" do
