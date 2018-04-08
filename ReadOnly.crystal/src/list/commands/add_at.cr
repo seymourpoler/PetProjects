@@ -2,7 +2,7 @@ module ReadOnly
     module ListCommands
         class AddAt(T)
             FIRST_POSITION = 0
-            NO_ELEMENTS = 0
+
             @elements : Array(T)
             @position : Int32
             @value : T
@@ -14,7 +14,7 @@ module ReadOnly
             end
 
             def execute
-                if empty?(@elements)
+                if @elements.empty?
                     return ReadOnly::List.new(@elements)
                 end
                 if @position < FIRST_POSITION
@@ -24,9 +24,7 @@ module ReadOnly
                     return ReadOnly::List.new(@elements)
                 end
                 if @position == @elements.size
-                    values = @elements
-                    values << @value
-                    return ReadOnly::List.new(values)
+                    return add_at_the_end(@elements, @value)
                 end
                 index = 0      
                 values = [] of T
@@ -40,8 +38,10 @@ module ReadOnly
                 return ReadOnly::List.new(values)
             end
 
-            private def empty?(elements : Array(T))
-                return elements.size == NO_ELEMENTS
+            def add_at_the_end(elements : Array(T), value : T)
+                values = @elements
+                values << @value
+                return ReadOnly::List.new(values)
             end
         end
     end
