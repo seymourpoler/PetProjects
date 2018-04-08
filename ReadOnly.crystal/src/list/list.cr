@@ -2,9 +2,11 @@ require "./commands/add_at.cr"
 require "./commands/equals.cr"
 require "./commands/take.cr"
 require "./commands/remove_at.cr"
+require "./commands/sum.cr"
 
 module ReadOnly
   class List(T)
+
     NOELEMENTS = 0
     FIRSTPOSITION = 0
     
@@ -56,13 +58,7 @@ module ReadOnly
     end
 
     def sum : Int32
-      result = 0
-      @elements.each do |element|
-        if element.is_a? Int32
-          result = result + element
-        end
-      end
-      return result
+      return ReadOnly::ListCommands::Sum.new(@elements).execute
     end
 
     def take(numberOfElements : Int32) : self
@@ -111,7 +107,8 @@ module ReadOnly
     end
 
     def elementAt(position : Int32)
-      if position < NOELEMENTS || position >= self.count
+      if position < NOELEMENTS || 
+        position >= self.count
         raise IndexError.new
       end
       return @elements[position]
