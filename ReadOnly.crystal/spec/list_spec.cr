@@ -396,4 +396,14 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List(Int32).new([5,4,3,2,1])).should be_true
         end
     end
+
+    describe "when skip is requested" do
+        it "returns an empty list if is empty" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.skip 3
+
+            result.equal?(ReadOnly::List(Int32).new).should be_true
+        end
+    end
 end

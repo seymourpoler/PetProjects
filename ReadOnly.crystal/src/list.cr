@@ -228,5 +228,12 @@ module ReadOnly
       return ReadOnly::List.new(ordered_values)
     end
 
+    def skip(numberOfElements : Int32) : self
+      if self.empty?
+        return self
+      end
+      raise Exception.new("Not Implemented")
+    end
+
   end
 end
