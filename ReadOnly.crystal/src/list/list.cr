@@ -1,5 +1,6 @@
 require "./commands/add_at.cr"
 require "./commands/equals.cr"
+require "./commands/take.cr"
 
 module ReadOnly
   class List(T)
@@ -64,22 +65,7 @@ module ReadOnly
     end
 
     def take(numberOfElements : Int32) : self
-      if self.empty?
-        return self
-      end
-
-      if numberOfElements == NOELEMENTS
-        return self
-      end
-
-      result = [] of T
-      @elements.each do |element|
-        if numberOfElements > NOELEMENTS
-          result << element
-        end
-        numberOfElements = numberOfElements - 1
-      end
-      return ReadOnly::List.new(result)
+      return ReadOnly::ListCommands::Take.new(@elements, numberOfElements).execute
     end
 
     def where(&condition : T -> Bool) : self
