@@ -270,5 +270,13 @@ module ReadOnly
       end
       return ReadOnly::List.new(ranged_values)
     end
+
+    def zip(list : List(T)) : self
+      if list.empty?
+        return self
+      end
+      raise Exception.new("Not Implemented")
+    end
+
   end
 end
