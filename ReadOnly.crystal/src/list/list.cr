@@ -102,7 +102,6 @@ module ReadOnly
       return ReadOnly::List(T).new(values)
     end
 
-    #TODO: extract method
     def removeAt(position : Int32) : self
       return ReadOnly::ListCommands::RemoveAt.new(@elements, position).execute
     end
