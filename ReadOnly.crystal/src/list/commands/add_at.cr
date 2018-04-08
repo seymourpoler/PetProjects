@@ -14,7 +14,7 @@ module ReadOnly
             end
 
             def execute
-                if @elements.size == NO_ELEMENTS
+                if empty?(@elements)
                     return ReadOnly::List.new(@elements)
                 end
                 if @position < FIRST_POSITION
@@ -38,6 +38,10 @@ module ReadOnly
                     index = index + 1
                 end
                 return ReadOnly::List.new(values)
+            end
+
+            private def empty?(elements : Array(T))
+                return elements.size == NO_ELEMENTS
             end
         end
     end
