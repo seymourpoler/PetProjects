@@ -431,5 +431,13 @@ describe ReadOnly::List do
 
             result.empty?.should be_true
         end
+
+        it "raise ArgumentError if position is major than the count of elements" do
+            list = ReadOnly::List(Int32).new([1,2,3,4])
+
+            expect_raises ArgumentError do 
+                list.get_range(position: 8, length: 4)
+            end
+        end
     end
 end

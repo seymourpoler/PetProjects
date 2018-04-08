@@ -251,6 +251,10 @@ module ReadOnly
       if self.empty?
         return self
       end
+
+      if position > self.count
+        raise ArgumentError.new
+      end 
       raise Exception.new("Not Implemented")
     end
   end
