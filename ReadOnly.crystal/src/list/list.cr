@@ -30,7 +30,6 @@ module ReadOnly
       return List.new(@elements)
     end
 
-    #TODO: extract method and conditions
     def addAt(position : Int32, value : T)
       return ReadOnly::ListCommands::AddAt.new(@elements, position, value).execute
     end
