@@ -413,5 +413,13 @@ describe ReadOnly::List do
                 list.skip 5
             end
         end
+
+        it "returns skipped list" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
+
+            result = list.skip 3
+
+            result.equal?(ReadOnly::List(Int32).new([4,5,6])).should be_true
+        end
     end
 end

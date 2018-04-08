@@ -228,14 +228,23 @@ module ReadOnly
       return ReadOnly::List.new(ordered_values)
     end
 
-    def skip(numberOfElements : Int32) : self
+    #TODO: refactor condition
+    def skip(numberOfElementsForSkipping : Int32) : self
       if self.empty?
         return self
       end
-      if self.count < numberOfElements
+      if self.count < numberOfElementsForSkipping
         raise ArgumentError.new
       end
-      raise Exception.new("Not Implemented")
+      skipped_values = [] of T
+      position = 0
+      while position < self.count
+        if position > numberOfElementsForSkipping - 1
+          skipped_values << @elements[position]
+        end
+        position = position + 1
+      end
+      return ReadOnly::List.new(skipped_values)
     end
 
   end
