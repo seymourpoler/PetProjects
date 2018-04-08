@@ -378,7 +378,7 @@ describe ReadOnly::List do
     end
     
     describe "when reverse is requested" do
-        it "return reversed list" do
+        it "returns reversed list" do
             list = ReadOnly::List(Int32).new([1,2,3,4,5])
 
             result = list.reverse
