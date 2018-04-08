@@ -232,6 +232,9 @@ module ReadOnly
       if self.empty?
         return self
       end
+      if self.count < numberOfElements
+        raise ArgumentError.new
+      end
       raise Exception.new("Not Implemented")
     end
 

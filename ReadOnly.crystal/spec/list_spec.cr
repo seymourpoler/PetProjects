@@ -405,5 +405,13 @@ describe ReadOnly::List do
 
             result.equal?(ReadOnly::List(Int32).new).should be_true
         end
+
+        it "raise ArgumentError if there is not enough element for skipping" do
+            list = ReadOnly::List(Int32).new([1,2,3])
+
+            expect_raises ArgumentError do 
+                list.skip 5
+            end
+        end
     end
 end
