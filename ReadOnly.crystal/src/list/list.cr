@@ -49,7 +49,6 @@ module ReadOnly
       return @elements.size == NOELEMENTS
     end
 
-    #TODO: extract method
     def equal?(list : List(T)) : Bool
       return ReadOnly::ListCommands::Equals.new(@elements, list).execute
     end
