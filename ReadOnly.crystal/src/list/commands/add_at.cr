@@ -23,12 +23,12 @@ module ReadOnly
                     return ReadOnly::List.new(@elements)
                 end
                 if @position == @elements.size
-                    return add_at_the_end(@elements, @value)
+                    return add_value_at_the_end(@elements, @value)
                 end
                 return add_value_at_position(@elements, @position, @value)
             end
 
-            def add_at_the_end(elements : Array(T), value : T)
+            def add_value_at_the_end(elements : Array(T), value : T)
                 values = @elements
                 values << @value
                 return ReadOnly::List.new(values)
