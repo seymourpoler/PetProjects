@@ -103,8 +103,9 @@ module ReadOnly
 
     #TODO: extract method
     def removeAt(position : Int32) : self
-      if position < NOELEMENTS || position >= self.count
-        return self
+      if position < NOELEMENTS || 
+         position >= self.count
+          return self
       end
       
       values = [] of T
@@ -115,7 +116,6 @@ module ReadOnly
         end
         index = index + 1
       end
-      
       return ReadOnly::List(T).new(values)
     end
 
