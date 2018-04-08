@@ -223,5 +223,10 @@ module ReadOnly
       return ReadOnly::List.new(@elements.sort.reverse)
     end
 
+    def order_by(&condition : T -> _)
+      ordered_values = @elements.sort_by &condition
+      return ReadOnly::List.new(ordered_values)
+    end
+
   end
 end

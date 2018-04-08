@@ -377,6 +377,16 @@ describe ReadOnly::List do
         end
     end
     
+    describe "when order by" do
+        it "returns an ordered list" do
+            list = ReadOnly::List(String).new(["foo", "a", "hello"])
+
+            result = list.order_by{|x| x.size}
+
+            result.equal?(ReadOnly::List(String).new(["a", "foo", "hello"]))
+        end
+    end
+
     describe "when reverse is requested" do
         it "returns reversed list" do
             list = ReadOnly::List(Int32).new([1,2,3,4,5])
@@ -386,5 +396,4 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List(Int32).new([5,4,3,2,1])).should be_true
         end
     end
-
 end
