@@ -259,7 +259,16 @@ module ReadOnly
       if position + length > self.count
         raise ArgumentError.new
       end
-      raise Exception.new("Not Implemented")
+
+      index = 0
+      ranged_values = [] of T
+      while index < self.count
+        if ( index >= position ) && ( index < position + length)
+          ranged_values << @elements[index]
+        end
+        index = index + 1
+      end
+      return ReadOnly::List.new(ranged_values)
     end
   end
 end

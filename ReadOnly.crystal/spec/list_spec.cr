@@ -447,6 +447,14 @@ describe ReadOnly::List do
                 list.get_range(position: 2, length: 3)
             end
         end
+
+        it "returns raged list" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
+
+            result = list.get_range(position: 2, length: 3)
+
+            result.equal?(ReadOnly::List(Int32).new([3,4,5])).should be_true 
+        end
         
     end
 end
