@@ -1,4 +1,5 @@
 require "./commands/add_at.cr"
+require "./commands/equals.cr"
 
 module ReadOnly
   class List(T)
@@ -50,19 +51,7 @@ module ReadOnly
 
     #TODO: extract method
     def equal?(list : List(T)) : Bool
-      if self.count != list.count
-        return false
-      end
-
-      position = 0
-      result = true
-      list.each do |element|
-        if @elements[position] != element
-          result = false
-        end
-        position = position + 1
-      end
-      return result && true
+      return ReadOnly::ListCommands::Equals.new(@elements, list).execute
     end
 
     def sum : Int32
@@ -77,6 +66,10 @@ module ReadOnly
 
     def take(numberOfElements : Int32) : self
       if self.empty?
+        return self
+      end
+
+      if numberOfElements == NOELEMENTS
         return self
       end
 
