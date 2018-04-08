@@ -81,17 +81,7 @@ module ReadOnly
     end
 
     def reverse : self
-      if self.empty?
-        return self
-      end
-
-      values = [] of T
-      position = self.count - 1
-      while position >= NOELEMENTS
-        values << @elements[position]
-        position = position -1
-      end
-      return ReadOnly::List.new(values)
+      return ReadOnly::List.new(@elements.reverse)
     end
 
     def select(&block : T -> U) forall U
