@@ -247,5 +247,11 @@ module ReadOnly
       return ReadOnly::List.new(skipped_values)
     end
 
+    def get_range(position : Int32, length : Int32) : self
+      if self.empty?
+        return self
+      end
+      raise Exception.new("Not Implemented")
+    end
   end
 end

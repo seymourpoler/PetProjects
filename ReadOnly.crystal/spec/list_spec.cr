@@ -422,4 +422,14 @@ describe ReadOnly::List do
             result.equal?(ReadOnly::List(Int32).new([4,5,6])).should be_true
         end
     end
+
+    describe "when get_range is requested" do
+        it "returns an empty list id is empty" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.get_range(position: 1, length: 4)
+
+            result.empty?.should be_true
+        end
+    end
 end
