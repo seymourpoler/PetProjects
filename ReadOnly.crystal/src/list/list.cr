@@ -1,6 +1,7 @@
 require "./commands/add_at.cr"
 require "./commands/equals.cr"
 require "./commands/take.cr"
+require "./commands/remove_at.cr"
 
 module ReadOnly
   class List(T)
@@ -103,20 +104,7 @@ module ReadOnly
 
     #TODO: extract method
     def removeAt(position : Int32) : self
-      if position < NOELEMENTS || 
-         position >= self.count
-          return self
-      end
-      
-      values = [] of T
-      index = 0
-      while index < self.count
-        if index != position
-          values << @elements[index]  
-        end
-        index = index + 1
-      end
-      return ReadOnly::List(T).new(values)
+      return ReadOnly::ListCommands::RemoveAt.new(@elements, position).execute
     end
 
     def clear : self
