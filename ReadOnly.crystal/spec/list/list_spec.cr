@@ -464,7 +464,7 @@ describe ReadOnly::List do
 
             result = list.index_of 3
 
-            result.should eq ReadOnly::List::NOPOSITION
+            result.should eq ReadOnly::ListCommands::IndexOf::NO_POSITION
         end
 
         it "returns -1 if not exists" do
@@ -472,7 +472,7 @@ describe ReadOnly::List do
 
             result = list.index_of 9
 
-            result.should eq ReadOnly::List::NOPOSITION
+            result.should eq ReadOnly::ListCommands::IndexOf::NO_POSITION
         end
 
         it "returns the position" do
