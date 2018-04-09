@@ -3,6 +3,7 @@ require "./commands/equals.cr"
 require "./commands/take.cr"
 require "./commands/remove_at.cr"
 require "./commands/sum.cr"
+require "./commands/skip.cr"
 
 module ReadOnly
   class List(T)
@@ -162,21 +163,7 @@ module ReadOnly
 
     #TODO: refactor condition
     def skip(numberOfElementsForSkipping : Int32) : self
-      if self.empty?
-        return self
-      end
-      if self.count < numberOfElementsForSkipping
-        raise ArgumentError.new
-      end
-      skipped_values = [] of T
-      position = 0
-      while position < self.count
-        if position > numberOfElementsForSkipping - 1
-          skipped_values << @elements[position]
-        end
-        position = position + 1
-      end
-      return ReadOnly::List.new(skipped_values)
+      return ReadOnly::ListCommands::Skip.new(@elements, numberOfElementsForSkipping).execute
     end
 
     def get_range(position : Int32, length : Int32) : self
