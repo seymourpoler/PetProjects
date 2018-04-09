@@ -5,6 +5,7 @@ require "./commands/remove_at.cr"
 require "./commands/sum.cr"
 require "./commands/skip.cr"
 require "./commands/get_range.cr"
+require "./commands/index_of.cr"
 
 module ReadOnly
   class List(T)
@@ -173,17 +174,7 @@ module ReadOnly
     end
 
     def index_of(value : T) : Int32
-      if self.empty?
-        return NOPOSITION
-      end
-      position = 0
-      while position < self.count
-        if @elements[position] == value
-          return position
-        end
-        position = position + 1
-      end
-      return NOPOSITION
+      return ReadOnly::ListCommands::IndexOf.new(@elements, value).execute
     end
 
     def zip(list : List(T)) : self
