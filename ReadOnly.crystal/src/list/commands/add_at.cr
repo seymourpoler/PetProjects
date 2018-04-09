@@ -15,8 +15,12 @@ module ReadOnly
             end
 
             def execute
+                if @elements.empty? && 
+                    @position == FIRST_POSITION
+                    return ReadOnly::List(T).new([@value])
+                end
                 if @elements.empty?
-                    return ReadOnly::List.new(@elements)
+                    return ReadOnly::List(T).new()
                 end
                 if @position < FIRST_POSITION || 
                    @position > @elements.size

@@ -153,6 +153,14 @@ describe ReadOnly::List do
             result.empty?.should be_true
         end
 
+        it "returns new list with added elements if is an empty list" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.addAt(0, 1)
+
+            result.equal?(ReadOnly::List(Int32).new([1])).should be_true
+        end
+
         it "returns the same list if the position is minor than zero" do
             list = ReadOnly::List(Int32).new([1, 2, 3, 4])
 
@@ -506,9 +514,18 @@ describe ReadOnly::List do
             other = ReadOnly::List(Int32).new([1,2,3])
             another = ReadOnly::List(Int32).new([4,5,6])
             
-            result  = other.zip(another)
-
+            result = other.zip(another)
+            
             result.equal?(ReadOnly::List(Int32).new([1,4,2,5,3,6])).should be_true
+        end
+
+        it "returns zipped list" do
+            other = ReadOnly::List(Int32).new([1,2,3])
+            another = ReadOnly::List(Int32).new([4,5])
+            
+            result  = other.zip(another)
+            
+            result.equal?(ReadOnly::List(Int32).new([1,4,2,5,3])).should be_true
         end
     end
 end

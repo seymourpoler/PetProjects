@@ -6,6 +6,7 @@ require "./commands/sum.cr"
 require "./commands/skip.cr"
 require "./commands/get_range.cr"
 require "./commands/index_of.cr"
+require "./commands/zip.cr"
 
 module ReadOnly
   class List(T)
@@ -118,6 +119,10 @@ module ReadOnly
       return @elements[position]
     end
 
+    def first : T
+      return @elements.first()
+    end
+    
     #TODO: extract method
     def first(&condition : T -> Bool)
       if self.empty?
@@ -178,24 +183,7 @@ module ReadOnly
     end
 
     def zip(list : List(T)) : self
-      if list.empty?
-        return self
-      end
-      if self.empty?
-        return list
-      end
-      if self.count == list.count
-        position = 0
-        zipped_values = [] of T
-        list.each{ |x|
-          zipped_values << @elements[position]
-          zipped_values << x
-          position = position + 1
-        }
-        return ReadOnly::List.new(zipped_values)
-      end
-      
-      raise Exception.new("Not Implemented")
+      return ReadOnly::ListCommands::Zip.new(ReadOnly::List.new(@elements), list).execute
     end
 
   end
