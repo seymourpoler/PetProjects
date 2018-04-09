@@ -175,7 +175,7 @@ module ReadOnly
       if self.empty?
         return -1
       end
-      raise Exception.new("Not Implemented")
+      return @elements.find(-1){|x| x == value}
     end
 
     def zip(list : List(T)) : self

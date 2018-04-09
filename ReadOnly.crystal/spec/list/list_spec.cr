@@ -466,6 +466,14 @@ describe ReadOnly::List do
 
             result.should eq -1
         end
+
+        it "returns -1 if not exists" do
+            list = ReadOnly::List(Int32).new([1,2,3,4,5])
+
+            result = list.index_of 9
+
+            result.should eq -1
+        end
     end
 
     describe "when zip is requested" do
