@@ -184,6 +184,17 @@ module ReadOnly
       if self.empty?
         return list
       end
+      if self.count == list.count
+        position = 0
+        zipped_values = [] of T
+        list.each{ |x|
+          zipped_values << @elements[position]
+          zipped_values << x
+          position = position + 1
+        }
+        return ReadOnly::List.new(zipped_values)
+      end
+      
       raise Exception.new("Not Implemented")
     end
 

@@ -501,5 +501,14 @@ describe ReadOnly::List do
 
             result.equal?(ReadOnly::List(Int32).new([1,2,3,4,5,6])).should be_true
         end
+
+        it "returns zipped list with the same length" do
+            other = ReadOnly::List(Int32).new([1,2,3])
+            another = ReadOnly::List(Int32).new([4,5,6])
+            
+            result  = other.zip(another)
+
+            result.equal?(ReadOnly::List(Int32).new([1,4,2,5,3,6])).should be_true
+        end
     end
 end
