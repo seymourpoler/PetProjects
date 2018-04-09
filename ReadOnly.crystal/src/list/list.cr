@@ -171,6 +171,13 @@ module ReadOnly
       return ReadOnly::ListCommands::GetRange.new(@elements, position, length).execute
     end
 
+    def index_of(value : T) : Int32
+      if self.empty?
+        return -1
+      end
+      raise Exception.new("Not Implemented")
+    end
+
     def zip(list : List(T)) : self
       if list.empty?
         return self

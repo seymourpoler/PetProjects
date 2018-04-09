@@ -458,6 +458,16 @@ describe ReadOnly::List do
         
     end
 
+    describe "when index_of is requested" do
+        it "returns -1 if is empty" do
+            list = ReadOnly::List(Int32).new
+
+            result = list.index_of 3
+
+            result.should eq -1
+        end
+    end
+
     describe "when zip is requested" do
         it "returns the same list if another is empty" do
             list = ReadOnly::List(Int32).new([1,2,3,4,5,6])
