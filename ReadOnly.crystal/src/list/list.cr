@@ -4,6 +4,7 @@ require "./commands/take.cr"
 require "./commands/remove_at.cr"
 require "./commands/sum.cr"
 require "./commands/skip.cr"
+require "./commands/get_range.cr"
 
 module ReadOnly
   class List(T)
@@ -167,27 +168,7 @@ module ReadOnly
     end
 
     def get_range(position : Int32, length : Int32) : self
-      if self.empty?
-        return self
-      end
-
-      if position > self.count
-        raise ArgumentError.new
-      end 
-
-      if position + length > self.count
-        raise ArgumentError.new
-      end
-
-      index = 0
-      ranged_values = [] of T
-      while index < self.count
-        if ( index >= position ) && ( index < position + length)
-          ranged_values << @elements[index]
-        end
-        index = index + 1
-      end
-      return ReadOnly::List.new(ranged_values)
+      return ReadOnly::ListCommands::GetRange.new(@elements, position, length).execute
     end
 
     def zip(list : List(T)) : self
