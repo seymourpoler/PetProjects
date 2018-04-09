@@ -176,7 +176,14 @@ module ReadOnly
       if self.empty?
         return NOPOSITION
       end
-      return @elements.find(NOPOSITION){|x| x == value}
+      position = 0
+      while position < self.count
+        if @elements[position] == value
+          return position
+        end
+        position = position + 1
+      end
+      return NOPOSITION
     end
 
     def zip(list : List(T)) : self

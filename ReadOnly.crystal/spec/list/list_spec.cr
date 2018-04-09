@@ -475,6 +475,14 @@ describe ReadOnly::List do
             result.should eq ReadOnly::List::NOPOSITION
         end
 
+        it "returns the position" do
+            list = ReadOnly::List(Int32).new([4,3,7,5,6,2,1,6])
+
+            result = list.index_of 7
+
+            result.should eq 2
+        end
+
     end
 
     describe "when zip is requested" do
