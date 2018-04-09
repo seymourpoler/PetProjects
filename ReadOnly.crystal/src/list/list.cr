@@ -11,6 +11,7 @@ module ReadOnly
 
     NOELEMENTS = 0
     FIRSTPOSITION = 0
+    NOPOSITION = -1
     
     @elements : Array(T)
 
@@ -173,9 +174,9 @@ module ReadOnly
 
     def index_of(value : T) : Int32
       if self.empty?
-        return -1
+        return NOPOSITION
       end
-      return @elements.find(-1){|x| x == value}
+      return @elements.find(NOPOSITION){|x| x == value}
     end
 
     def zip(list : List(T)) : self

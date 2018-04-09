@@ -464,7 +464,7 @@ describe ReadOnly::List do
 
             result = list.index_of 3
 
-            result.should eq -1
+            result.should eq ReadOnly::List::NOPOSITION
         end
 
         it "returns -1 if not exists" do
@@ -472,8 +472,9 @@ describe ReadOnly::List do
 
             result = list.index_of 9
 
-            result.should eq -1
+            result.should eq ReadOnly::List::NOPOSITION
         end
+
     end
 
     describe "when zip is requested" do
