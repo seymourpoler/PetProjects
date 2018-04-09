@@ -181,6 +181,9 @@ module ReadOnly
       if list.empty?
         return self
       end
+      if self.empty?
+        return list
+      end
       raise Exception.new("Not Implemented")
     end
 
