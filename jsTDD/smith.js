@@ -25,8 +25,8 @@ function testCase(name, tests){
     numberOfAsserts = 0;
     var successfullyTests  = 0;
     var numberOfTests = 0;
-    var hasSetUp = typeof tests.setUp == 'function';
-    var hasTearDown = typeof tests.tearDown == 'function';
+    var testHasSetUp = typeof tests.setUp == 'function';
+    var testHasTearDown = typeof tests.tearDown == 'function';
 
     for(var test in tests){
         if(!/^test/.test(test)){
@@ -34,13 +34,13 @@ function testCase(name, tests){
         }
         numberOfTests ++;
         try{
-            if (hasSetUp){
+            if (testHasSetUp){
                 tests.setUp();
             }
             tests[test]();
             output(test, '#0c0');
 
-            if(hasTearDown){
+            if(testHasTearDown){
                 tests.tearDown();
             }
 
