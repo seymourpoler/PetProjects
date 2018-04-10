@@ -12,6 +12,15 @@ function output(text, color){
     console.log('%c' + text, 'color: ' + color);
 }
 
+/*
+function output(text, color) {
+    var p = document.createElement("p");
+    p.innerHTML = text;
+    p.style.color = color;
+    document.body.appendChild(p);
+}
+*/
+
 function testCase(name, tests){
     assert.count = 0;
     var successful  = 0;
