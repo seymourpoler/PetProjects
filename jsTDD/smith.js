@@ -1,5 +1,4 @@
-var numberOfAsserts;  
-numberOfAsserts = 0;
+var numberOfAsserts = 0;  
 
 function assert(message, expression){
     if(!expression){
