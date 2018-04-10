@@ -9,7 +9,7 @@ testCase("demo tests", {
     "test --> with true assertion": function(){
         assert("is true", true == true);
     },
-    
+
     tearDown: function(){
         console.log('tearDown');
     }
