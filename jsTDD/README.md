@@ -1,0 +1,1 @@
+code from Test-Driven Javascript Development by Christian Johansen
