@@ -1,3 +1,18 @@
+var assert;  
+assert.count = 0;
+
+function assert(message, expression){
+    if(!expression){
+        throw new Error(message)
+    }
+    assert.count ++;
+    return true;
+}
+
+function output(text, color){
+    console.log('%c' + text, 'color: ' + color);
+}
+
 function testCase(name, tests){
     assert.count = 0;
     var successful  = 0;
@@ -12,13 +27,13 @@ function testCase(name, tests){
         testCount ++;
         try{
             if (hasSetUp){
-                test.setUp();
+                tests.setUp();
             }
             tests[test]();
-            output(tests, '#0c0');
+            output(test, '#0c0');
 
             if(hasTearDown){
-                test.tearDown();
+                tests.tearDown();
             }
 
             successful++;
