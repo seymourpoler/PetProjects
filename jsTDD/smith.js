@@ -1,11 +1,11 @@
-var assert;  
-assert.count = 0;
+var numberOfAsserts;  
+numberOfAsserts = 0;
 
 function assert(message, expression){
     if(!expression){
         throw new Error(message)
     }
-    assert.count ++;
+    numberOfAsserts ++;
 }
 
 function output(text, color){
@@ -22,9 +22,9 @@ function output(text, color) {
 */
 
 function testCase(name, tests){
-    assert.count = 0;
-    var successful  = 0;
-    var testCount = 0;
+    numberOfAsserts = 0;
+    var successfullyTests  = 0;
+    var numberOfTests = 0;
     var hasSetUp = typeof tests.setUp == 'function';
     var hasTearDown = typeof tests.tearDown == 'function';
 
@@ -32,7 +32,7 @@ function testCase(name, tests){
         if(!/^test/.test(test)){
             continue;
         }
-        testCount ++;
+        numberOfTests ++;
         try{
             if (hasSetUp){
                 tests.setUp();
@@ -44,12 +44,12 @@ function testCase(name, tests){
                 tests.tearDown();
             }
 
-            successful++;
+            successfullyTests++;
         }catch(e){
             output(test + ' failed: ' + e.message, '#c00');
         }
     }
 
-    var color = successful == testCount? '#0c0' : '#c00';
-    output(testCount + ' tests, '  + (testCount - successful) + ' failures', color);
+    var color = successfullyTests == numberOfTests? '#0c0' : '#c00';
+    output(numberOfTests + ' tests, '  + (numberOfTests - successfullyTests) + ' failures', color);
 }
