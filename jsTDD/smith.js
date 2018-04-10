@@ -6,7 +6,6 @@ function assert(message, expression){
         throw new Error(message)
     }
     assert.count ++;
-    return true;
 }
 
 function output(text, color){
