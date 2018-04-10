@@ -1,4 +1,4 @@
-var assert;  
+var assert = {};  
 assert.count = 0;
 function assert(message, expression){
     if(!expression){
