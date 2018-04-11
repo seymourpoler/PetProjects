@@ -17,3 +17,14 @@ testCase("demo tests", {
         console.log('tearDown');
     }
 });
+
+testCase("namespace", {
+    "test when namespace is requested" : function(){
+        var namespace = createNamespace("tdd.js.tests");
+
+        assertObject(namespace);
+        assertObject(namespace.tdd);
+        assertObject(namespace.tdd.js);
+        assertObject(namespace.tdd.js.tests);
+    }
+});

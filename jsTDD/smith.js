@@ -14,6 +14,13 @@ function assertEquals(expected, got){
     numberOfAsserts ++;
 }
 
+function assertObject(value){
+    if(value != undefined && typeof(value) === Object(value)){
+        throw new Error(value + ' is not an object');
+    }
+    numberOfAsserts ++;
+}
+
 function output(text, color){
     console.log('%c' + text, 'color: ' + color);
 }
@@ -58,4 +65,21 @@ function testCase(name, tests){
 
     var color = successfullyTests == numberOfTests? '#0c0' : '#c00';
     output(numberOfTests + ' tests, '  + (numberOfTests - successfullyTests) + ' failures', color);
+}
+
+function createNamespace(namespace){
+    var values = namespace.split(".");
+    return buildNamespace(values);
+
+    function buildNamespace(values){
+        if (values.length == 0 || values == undefined){
+            return {};
+        }
+        
+        var head = values[0];
+        var result = {};
+        values.shift()
+        result[head] = buildNamespace(values);
+        return result;
+    }
 }
