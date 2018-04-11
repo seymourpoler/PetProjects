@@ -20,8 +20,8 @@ testCase("demo tests", {
 
 testCase("namespace", {
     "test when namespace is requested" : function(){
-        tddjs = new Tddjs();
-        
+        var tddjs = new Tddjs();
+
         var namespace = tddjs.namespace("tdd.js.tests");
 
         assertObject(namespace);
@@ -29,4 +29,15 @@ testCase("namespace", {
         assertObject(namespace.tdd.js);
         assertObject(namespace.tdd.js.tests);
     }
+});
+
+testCase("uid",{
+    "test returns the same uid with the same parameter" : function(){
+        var tddjs = new Tddjs();
+        var object = {};
+        
+        var uid = tddjs.uid(object);
+
+        assertEquals(uid, tddjs.uid(object));
+    },
 });

@@ -70,6 +70,7 @@ function testCase(name, tests){
 
 function Tddjs(){
     var self = this;
+    var id = 0;
 
     self.namespace = function(namespace){
         var values = namespace.split(".");
@@ -86,5 +87,13 @@ function Tddjs(){
             result[head] = buildNamespace(values);
             return result;
         }
+    };
+
+    self.uid = function(object){
+        if(typeof(object.__uid) == 'Number'){
+            object.__uid = id;
+            id++;
+        }
+        return object.__uid;
     };
 }
