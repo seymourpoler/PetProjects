@@ -1,18 +1,7 @@
 function benchmark(name, tests, iterations) {
     var iterations = iterations || 1000;
-    var view = createView(name);
+    var view = new View(name);
     runAllBenchmarks(tests, view, iterations);
-}
-
-//TODO: create view class with method append/show
-function createView(name){
-    var heading = document.createElement("h2");
-    heading.innerHTML = name;
-    document.body.appendChild(heading);
-
-    var ol = document.createElement("ol");
-    document.body.appendChild(ol);
-    return ol;
 }
 
 function runAllBenchmarks(benchmarks, view, iterations){
@@ -35,29 +24,26 @@ function runOneBenchmark(test, view, iterations){
 
         var total = new Date().getTime() - start;
 
-        var li = document.createElement("li");
-        li.innerHTML = test.name + ": " + total + " ms (total), "+ (total / iterations) + "ms (avg)";
-        view.appendChild(li);
+        var benchmark = {name: test.name, total: total, iterations: iterations};
+        view.show(benchmark);
+
     }, 15);
 }
 
+function View(name){
+    var self = this;
+    self.name = name;
 
-var ol
-function runBenchmark(name, test){
-    if(!ol){
-        ol = document.createElement("ol");
-    }
+    var heading = document.createElement("h2");
+    heading.innerHTML = name;
+    document.body.appendChild(heading);
+
+    var ol = document.createElement("ol");
     document.body.appendChild(ol);
 
-    setTimeout(function(){
-        var start = new Date().getTime();
-
-        test();
-
-        var total = new Date().getTime() - start;
-
+    self.show = function(benchmark){
         var li = document.createElement("li");
-        li.innerHTML = name + ": " + total + " ms";
+        li.innerHTML = benchmark.name + ": " + benchmark.total + " ms (total), "+ (benchmark.total / benchmark.iterations) + "ms (avg)";
         ol.appendChild(li);
-    }, 15);
+    };
 }
