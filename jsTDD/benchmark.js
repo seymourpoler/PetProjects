@@ -26,12 +26,17 @@ function runOneBenchmark(test, view, iterations){
     function executeBenchmark(test, iterations){
         var start = new Date().getTime();
 
-        var l = iterations;
-        while (l--) {
+        var numberOfIterations = iterations;
+        while (isPositive(numberOfIterations)) {
             test();
+            numberOfIterations--;
         }
 
         return new Date().getTime() - start;
+
+        function isPositive(value){
+            return value >= 0;
+        }
     }
 }
 
