@@ -20,7 +20,9 @@ testCase("demo tests", {
 
 testCase("namespace", {
     "test when namespace is requested" : function(){
-        var namespace = createNamespace("tdd.js.tests");
+        tddjs = new Tddjs();
+        
+        var namespace = tddjs.namespace("tdd.js.tests");
 
         assertObject(namespace);
         assertObject(namespace.tdd);

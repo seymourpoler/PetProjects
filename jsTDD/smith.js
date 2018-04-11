@@ -67,19 +67,24 @@ function testCase(name, tests){
     output(numberOfTests + ' tests, '  + (numberOfTests - successfullyTests) + ' failures', color);
 }
 
-function createNamespace(namespace){
-    var values = namespace.split(".");
-    return buildNamespace(values);
 
-    function buildNamespace(values){
-        if (values.length == 0 || values == undefined){
-            return {};
+function Tddjs(){
+    var self = this;
+
+    self.namespace = function(namespace){
+        var values = namespace.split(".");
+        return buildNamespace(values);
+    
+        function buildNamespace(values){
+            if (values.length == 0 || values == undefined){
+                return {};
+            }
+            
+            var head = values[0];
+            var result = {};
+            values.shift()
+            result[head] = buildNamespace(values);
+            return result;
         }
-        
-        var head = values[0];
-        var result = {};
-        values.shift()
-        result[head] = buildNamespace(values);
-        return result;
-    }
+    };
 }
