@@ -7,9 +7,9 @@ function assert(message, expression){
     numberOfAsserts ++;
 }
 
-function assertEquals(expected, result){
-    if(expected != result){
-        throw new Error('expected: ' + expected + ', but got: ' + result);
+function assertEquals(expected, got){
+    if(expected != got){
+        throw new Error('expected: ' + expected + ', but got: ' + got);
     }
     numberOfAsserts ++;
 }
