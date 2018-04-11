@@ -6,15 +6,24 @@ function benchmark(name, tests, iterations) {
 
 function runAllBenchmarks(benchmarks, view, iterations){
     for(var benchmark in  benchmarks){
-        if(typeof(benchmarks[benchmark]) != 'function'){
-            continue;
-        }
         runOneBenchmark(benchmarks[benchmark], view, iterations);
     }
 }
 
 function runOneBenchmark(test, view, iterations){
-    setTimeout(function(){
+    if(isNotValid(test)){
+        return;
+    }    
+    var total = executeBenchmark(test, iterations)
+    var benchmark = {name: test.name, total: total, iterations: iterations};
+    view.show(benchmark);
+    return;
+
+    function isNotValid(benchmark){
+        return typeof(benchmark) != 'function';
+    }
+
+    function executeBenchmark(test, iterations){
         var start = new Date().getTime();
 
         var l = iterations;
@@ -22,12 +31,8 @@ function runOneBenchmark(test, view, iterations){
             test();
         }
 
-        var total = new Date().getTime() - start;
-
-        var benchmark = {name: test.name, total: total, iterations: iterations};
-        view.show(benchmark);
-
-    }, 15);
+        return new Date().getTime() - start;
+    }
 }
 
 function View(name){
