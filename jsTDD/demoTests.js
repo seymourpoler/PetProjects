@@ -9,6 +9,9 @@ testCase("demo tests", {
     "test --> with true assertion": function(){
         assert("is true", true == true);
     },
+    "test --> assert equals": function(){
+        assertEquals(2,3);
+    },
 
     tearDown: function(){
         console.log('tearDown');

@@ -2,7 +2,14 @@ var numberOfAsserts = 0;
 
 function assert(message, expression){
     if(!expression){
-        throw new Error(message)
+        throw new Error(message);
+    }
+    numberOfAsserts ++;
+}
+
+function assertEquals(expected, result){
+    if(expected != result){
+        throw new Error('expected: ' + expected + ', but got: ' + result);
     }
     numberOfAsserts ++;
 }
