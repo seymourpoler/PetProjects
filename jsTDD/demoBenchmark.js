@@ -18,5 +18,19 @@ function forLoopCachedLength() {
 
 }
 
+/*
 runBenchmark("forLoop", forLoop);
 runBenchmark("forLoopCachedLength", forLoopCachedLength);
+*/
+benchmark("Benchmark",{
+    "forLoop": function(){
+        for (var i = 0, item; i < array.length; i++) {
+            item = array[i];
+        }
+    },
+    "forLoopCachedLength": function(){
+        for (var i = 0, l = array.length, item; i < l; i++) {
+            item = array[i];
+        }
+    }
+}, 1000);
