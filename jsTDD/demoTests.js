@@ -19,10 +19,11 @@ testCase("demo tests", {
 });
 
 testCase("namespace", {
+    setUp: function(){
+        this.tddjs = new Tddjs();
+    },
     "test when namespace is requested" : function(){
-        var tddjs = new Tddjs();
-
-        var namespace = tddjs.namespace("tdd.js.tests");
+        var namespace = this.tddjs.namespace("tdd.js.tests");
 
         assertObject(namespace);
         assertObject(namespace.tdd);
@@ -32,12 +33,20 @@ testCase("namespace", {
 });
 
 testCase("uid",{
+    setUp : function() {
+        this.tddjs = new Tddjs();
+    },
     "test returns the same uid with the same parameter" : function(){
-        var tddjs = new Tddjs();
         var object = {};
-        
-        var uid = tddjs.uid(object);
+
+        var uid = this.tddjs.uid(object);
 
         assertEquals(uid, tddjs.uid(object));
     },
+    "test returns diferent uid form diferent objects":function(){
+        var aObject = {};
+        var anotherObject = 12;
+
+        assertNotEquals(this.tddjs.uid(anotherObject), this.tddjs.uid(aObject));
+    } 
 });

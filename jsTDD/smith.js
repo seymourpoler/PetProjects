@@ -14,6 +14,13 @@ function assertEquals(expected, got){
     numberOfAsserts ++;
 }
 
+function assertNotEquals(expected, got){
+    if(expected == got){
+        throw new Error('expected: ' + expected + ', but got: ' + got);
+    }
+    numberOfAsserts ++;
+}
+
 function assertObject(value){
     if(value != undefined && typeof(value) === Object(value)){
         throw new Error(value + ' is not an object');
@@ -66,7 +73,6 @@ function testCase(name, tests){
     var color = successfullyTests == numberOfTests? '#0c0' : '#c00';
     output(numberOfTests + ' tests, '  + (numberOfTests - successfullyTests) + ' failures', color);
 }
-
 
 function Tddjs(){
     var self = this;
