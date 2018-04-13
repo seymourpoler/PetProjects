@@ -14,4 +14,9 @@ testCase("Observable", {
 
         assertTrue(observable.hasObserver(observer));
     },
+    "test should return false when no observers" : function () {
+        var observable = new Observable();
+
+        assertFalse(observable.hasObserver(function(){}));
+    },
 });

@@ -9,7 +9,14 @@ function assert(message, expression){
 
 function assertTrue(expression){
     if(!expression){
-        throw new Error('expected: true , but got: false');
+        throw new Error('expected: true, but got: false');
+    }
+    numberOfAsserts ++;
+}
+
+function assertFalse(expression){
+    if(expression){
+        throw new Error('expected: false, but got: true');
     }
     numberOfAsserts ++;
 }
