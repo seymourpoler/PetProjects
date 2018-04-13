@@ -11,21 +11,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="observable.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="observable.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/observable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="231">
+              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="observable_tests.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="observable_tests.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/observable_tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="51" />
+            <state relative-caret-position="294">
+              <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smith.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/smith.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -37,6 +47,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/observable.js" />
+        <option value="$PROJECT_DIR$/lib/smith.js" />
         <option value="$PROJECT_DIR$/test/observable_tests.js" />
       </list>
     </option>
@@ -74,6 +85,11 @@
             <path>
               <item name="Observable" type="b2602c69:ProjectViewProjectNode" />
               <item name="Observable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Observable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Observable" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Observable" type="b2602c69:ProjectViewProjectNode" />
@@ -123,12 +139,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523630718958</updated>
       <workItem from="1523630720012" duration="369000" />
-      <workItem from="1523631093620" duration="307000" />
+      <workItem from="1523631093620" duration="1253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="676000" />
+    <option name="totallyTimeSpent" value="1622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="976" height="1038" extended-state="0" />
@@ -173,18 +189,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/observable_tests.js">
+    <entry file="file://$PROJECT_DIR$/src/observable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="51" />
+        <state relative-caret-position="231">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/observable.js">
+    <entry file="file://$PROJECT_DIR$/lib/smith.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="189">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/observable_tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding />
         </state>
       </provider>
