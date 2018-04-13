@@ -7,11 +7,6 @@ function Observable(){
     };
 
     self.hasObserver = function(observer){
-        for(var position = 0; position < self.observers.length; position++){
-            if(self.observers[position] == observer){
-                return true;
-            }
-        }
-        return false;
+        return self.observers.indexOf(observer) >= 0;
     };
 }
