@@ -15,7 +15,7 @@
         <entry file="file://$PROJECT_DIR$/src/observable.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -139,12 +139,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523630718958</updated>
       <workItem from="1523630720012" duration="369000" />
-      <workItem from="1523631093620" duration="2105000" />
+      <workItem from="1523631093620" duration="2203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2474000" />
+    <option name="totallyTimeSpent" value="2572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="976" height="1038" extended-state="0" />
@@ -208,7 +208,7 @@
     <entry file="file://$PROJECT_DIR$/src/observable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
           <folding />
         </state>
       </provider>

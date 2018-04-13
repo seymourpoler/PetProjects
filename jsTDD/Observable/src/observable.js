@@ -7,6 +7,7 @@ function Observable(){
     };
 
     self.hasObserver = function(observer){
-        return self.observers.indexOf(observer) >= 0;
+        const FIRST_OBSERVER_POSITION = 0;
+        return self.observers.indexOf(observer) >= FIRST_OBSERVER_POSITION;
     };
 }
