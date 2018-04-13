@@ -19,4 +19,14 @@ testCase("Observable", {
 
         assertFalse(observable.hasObserver(function(){}));
     },
+    "test should store functions" : function () {
+        var observable = new Observable();
+        var observers = [function(){}, function () {}];
+
+        observable.addObserver(observers[0]);
+        observable.addObserver(observers[1]);
+
+        assertTrue(observable.hasObserver(observers[0]));
+        assertTrue(observable.hasObserver(observers[1]));
+    },
 });

@@ -11,21 +11,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="observable.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="observable.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/observable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+            <state relative-caret-position="252">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="observable_tests.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="observable_tests.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/observable_tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="441">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -46,9 +46,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/observable_tests.js" />
         <option value="$PROJECT_DIR$/lib/smith.js" />
         <option value="$PROJECT_DIR$/src/observable.js" />
+        <option value="$PROJECT_DIR$/test/observable_tests.js" />
       </list>
     </option>
   </component>
@@ -139,12 +139,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523630718958</updated>
       <workItem from="1523630720012" duration="369000" />
-      <workItem from="1523631093620" duration="2203000" />
+      <workItem from="1523631093620" duration="2966000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2572000" />
+    <option name="totallyTimeSpent" value="3335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="976" height="1038" extended-state="0" />
@@ -197,18 +197,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/observable_tests.js">
+    <entry file="file://$PROJECT_DIR$/src/observable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/observable.js">
+    <entry file="file://$PROJECT_DIR$/test/observable_tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="74" lean-forward="false" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+        <state relative-caret-position="441">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="32" />
           <folding />
         </state>
       </provider>
