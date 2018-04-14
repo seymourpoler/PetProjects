@@ -3,6 +3,9 @@ function Observable(){
     self.observers = [];
 
     self.addObserver = function(observer){
+        if( typeof observer != "function"){
+            throw new Error("observer is not function");
+        }
         self.observers.push(observer);
     };
 

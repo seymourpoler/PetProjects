@@ -57,4 +57,11 @@ testCase("Observable", {
         assertEquals(3, actual.length);
         assertEquals("String", actual[0]);
     },
+    "test should throw for uncallable observer" : function(){
+        var observable = new Observable();
+
+        assertException(function () {
+            observable.addObserver({});
+        }, "Error");
+    },
 });

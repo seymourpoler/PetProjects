@@ -21,16 +21,16 @@ function assertFalse(expression){
     numberOfAsserts ++;
 }
 
-function assertEquals(expected, got){
-    if(expected != got){
-        throw new Error('expected: ' + expected + ', but got: ' + got);
+function assertEquals(expected, found){
+    if(expected != found){
+        throw new Error('expected: ' + expected + ', but found: ' + found);
     }
     numberOfAsserts ++;
 }
 
-function assertNotEquals(expected, got){
+function assertNotEquals(expected, found){
     if(expected == got){
-        throw new Error('expected: ' + expected + ', but got: ' + got);
+        throw new Error('expected: ' + expected + ', but found: ' + found);
     }
     numberOfAsserts ++;
 }
@@ -40,6 +40,18 @@ function assertObject(value){
         throw new Error(value + ' is not an object');
     }
     numberOfAsserts ++;
+}
+
+function assertException(handler, errorType){
+    try
+    {
+        handler();
+    }catch (e){
+        if(e.name != errorType){
+            throw  new Error('expected: ' + errorType + ', but found: ' + e);
+        }
+        numberOfAsserts ++;
+    }
 }
 
 function output(text, color){
