@@ -39,6 +39,7 @@ testCase("Observable", {
         };
         observable.addObserver(observer1);
         observable.addObserver(observer2);
+        
         observable.notifyObservers();
 
         assertTrue(observer1.called);
