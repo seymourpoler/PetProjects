@@ -29,4 +29,19 @@ testCase("Observable", {
         assertTrue(observable.hasObserver(observers[0]));
         assertTrue(observable.hasObserver(observers[1]));
     },
+    "test should call all observers" : function () {
+        var observable = new Observable();
+        var observer1 = function () {
+            observer1.called = true;
+        };
+        var observer2 = function () {
+            observer2.called = true;
+        };
+        observable.addObserver(observer1);
+        observable.addObserver(observer2);
+        observable.notifyObservers();
+
+        assertTrue(observer1.called);
+        assertTrue(observer2.called);
+    },
 });
