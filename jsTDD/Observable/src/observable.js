@@ -13,7 +13,8 @@ function Observable(){
 
     self.notifyObservers = function(){
         for(var position = 0; position < self.observers.length; position++){
-            self.observers[position]();
+            //self.observers[position]();
+            self.observers[position].apply(self, arguments);
         }
     };
 }

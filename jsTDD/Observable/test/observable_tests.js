@@ -39,10 +39,22 @@ testCase("Observable", {
         };
         observable.addObserver(observer1);
         observable.addObserver(observer2);
-        
+
         observable.notifyObservers();
 
         assertTrue(observer1.called);
         assertTrue(observer2.called);
+    },
+    "test should pass through arguments" : function(){
+        var observable = new Observable();
+        var actual;
+        observable.addObserver(function(){
+            actual = arguments;
+        });
+
+        observable.notifyObservers("String", 1, 32);
+
+        assertEquals(3, actual.length);
+        assertEquals("String", actual[0]);
     },
 });
