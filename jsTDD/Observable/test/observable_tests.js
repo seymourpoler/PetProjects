@@ -64,4 +64,15 @@ testCase("Observable", {
             observable.addObserver({});
         }, "Error");
     },
+    "test should notify all even when some fail" : function(){
+        var observable = new Observable();
+        function observer1(){throw new Error('Oops');}
+        var observer2 = function () { observer2.called = true; };
+        observable.addObserver(observer1);
+        observable.addObserver(observer2);
+
+        observable.notifyObservers();
+
+        assertTrue(observer2.called);
+    },
 });

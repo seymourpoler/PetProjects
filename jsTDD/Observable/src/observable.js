@@ -16,8 +16,13 @@ function Observable(){
 
     self.notifyObservers = function(){
         for(var position = 0; position < self.observers.length; position++){
-            //self.observers[position]();
-            self.observers[position].apply(self, arguments);
+            try{
+                //self.observers[position]();
+                self.observers[position].apply(self, arguments);
+            }
+            catch (e){
+                console.log('error notifying to observers: ', e);
+            }
         }
     };
 }
