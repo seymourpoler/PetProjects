@@ -2,23 +2,31 @@ function Observable(){
     var self = this;
     self.observers = [];
 
-    self.addObserver = function(observer){
-        if( typeof observer != "function"){
-            throw new Error("observer is not function");
+    self.addObserver = function(event, handler){
+        if(!self.observers[event]){
+            self.observers[event] = [];
         }
-        self.observers.push(observer);
+        if(typeof handler != 'function'){
+            throw new TypeError("observer is nor a function");
+        }
+        self.observers[event].push(handler);
     };
 
-    self.hasObserver = function(observer){
+    self.hasObserver = function(event, observer){
         const FIRST_OBSERVER_POSITION = 0;
-        return self.observers.indexOf(observer) >= FIRST_OBSERVER_POSITION;
+        var observersByEvent = self.observers[event];
+        if(!observersByEvent){return false;}
+        return observersByEvent.indexOf(observer) >= FIRST_OBSERVER_POSITION;
     };
 
-    self.notifyObservers = function(){
-        for(var position = 0; position < self.observers.length; position++){
+    self.notifyObservers = function(event){
+        var args = Array.prototype.slice.call(arguments, 1);
+        var obseversByEvent = self.observers[event];
+        if(!obseversByEvent){return;}
+        for(var position = 0; position < obseversByEvent.length; position++){
             try{
                 //self.observers[position]();
-                self.observers[position].apply(self, arguments);
+                obseversByEvent[position].apply(self, args);
             }
             catch (e){
                 console.log('error notifying to observers: ', e);
