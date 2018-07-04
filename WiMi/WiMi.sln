@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain", "WiMi.Domain\WiMi.Domain.csproj", "{A8D2F500-9FE4-45CA-AAAF-B19BCB8D7D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Repositories.SQLite", "WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj", "{1ACAE8D9-79C2-43DC-A06F-2D46245F224C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8D2F500-9FE4-45CA-AAAF-B19BCB8D7D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8D2F500-9FE4-45CA-AAAF-B19BCB8D7D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8D2F500-9FE4-45CA-AAAF-B19BCB8D7D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8D2F500-9FE4-45CA-AAAF-B19BCB8D7D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ACAE8D9-79C2-43DC-A06F-2D46245F224C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ACAE8D9-79C2-43DC-A06F-2D46245F224C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ACAE8D9-79C2-43DC-A06F-2D46245F224C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ACAE8D9-79C2-43DC-A06F-2D46245F224C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35C71B5C-B4DA-4C81-8CEC-8123DEC1FAB2}
+	EndGlobalSection
+EndGlobal
