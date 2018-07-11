@@ -1,8 +1,10 @@
 ﻿window.WiMi = window.WiMi || {};
 (function (WiMi) {
-    function namespace (namespace) {
-        var values = namespace.split(".");
-        return buildNamespace(values);
+    function namespace(namespace) {
+        const values = namespace.split(".");
+        let result = buildNamespace(values);
+        const nameClass = Object.keys(result)[0];
+        WiMi[nameClass] = result[nameClass];
 
         function buildNamespace(values) {
             if (values.length == 0 || values == undefined) {
