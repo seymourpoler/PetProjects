@@ -1,23 +1,35 @@
 ﻿(function (WiMi) {
     function IndexPresenter(view, client) {
+        let self = this;
 
+        self.create = function(){}
     }
 
     function IndexView(view, client) {
+        let self = this;
 
+        self.showErrors = function(errors){
+            throw 'not implemented';
+        };
     }
 
     function IndexClient(view, client) {
+        let self = this;
 
+        self.save = function(page, successHandler, errorHandler){
+            throw 'not implemented';
+        };
     }
 
     function createIndexPresenter() {
-
     }
 
-    function createIndexView(){}
+    function createIndexView(){
+    }
 
-    function createIndexClient(){}
+    function createIndexClient(){
+
+    }
     
     WiMi.namespace("Pages.Index");
     WiMi.Pages.Index.IndexPresenter = IndexPresenter;

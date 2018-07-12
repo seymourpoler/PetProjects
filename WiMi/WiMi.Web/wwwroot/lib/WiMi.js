@@ -26,4 +26,9 @@
         };
     }
     WiMi.spyAllMethodsOf = spyAllMethodsOf;
+    WiMi.HttpStatusCode = {
+        InternalServerError : 500,
+        BadRequest : 400,
+        Ok : 200
+    };
 })(WiMi || {})
