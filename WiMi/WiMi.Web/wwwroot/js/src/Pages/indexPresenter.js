@@ -20,7 +20,7 @@
                 throw 'not implemented';
             }
             function successHandler() {
-                throw 'not implemented';
+                view.showCreatedPageMessage();
             }
         }
     }
@@ -46,6 +46,10 @@
         };
 
         self.showErrors = function (errors) {
+            throw 'not implemented';
+        };
+
+        self.showCreatedPageMessage = function(){
             throw 'not implemented';
         };
     }

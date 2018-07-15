@@ -50,6 +50,23 @@
             creationPageRequestedHandler();
 
             expect(view.showErrors).toHaveBeenCalledWith(errors);
-        });   
+        });  
+        
+        it('shows  message if page is created', function () {
+            const title = 'title';
+            const body = 'body';
+            view.getTitle.and.returnValue(title);
+            view.getBody.and.returnValue(body);
+            client.save.and.callFake(function (request, successHandler, errorHandler) {
+                expect(request.title).toBe(title);
+                expect(request.body).toBe(body);
+                successHandler();
+            });
+            presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
+
+            creationPageRequestedHandler();
+
+            expect(view.showCreatedPageMessage).toHaveBeenCalled();
+        });
     });
 });
