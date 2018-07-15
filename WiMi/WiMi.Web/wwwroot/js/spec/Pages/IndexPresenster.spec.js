@@ -33,5 +33,23 @@
 
             expect(view.showInternalServerError).toHaveBeenCalled();
         });   
+
+        it('shows an error if there are errors', function () {
+            const title = 'title';
+            const body = 'body';
+            const errors = [{ fieldId:'title', errorCode:'Required' }, { fieldId:'body', errorCode:'Required' }];
+            view.getTitle.and.returnValue(title);
+            view.getBody.and.returnValue(body);
+            client.save.and.callFake(function (request, successHandler, errorHandler) {
+                expect(request.title).toBe(title);
+                expect(request.body).toBe(body);
+                errorHandler({ statusCode: WiMi.httpStatusCode.badRequest, errors: errors })
+            });
+            presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
+
+            creationPageRequestedHandler();
+
+            expect(view.showErrors).toHaveBeenCalledWith(errors);
+        });   
     });
 });

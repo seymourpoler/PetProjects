@@ -13,6 +13,10 @@
                     view.showInternalServerError();
                     return;
                 }
+                if (response.statusCode == WiMi.httpStatusCode.badRequest) {
+                    view.showErrors(response.errors);
+                    return;
+                }
                 throw 'not implemented';
             }
             function successHandler() {
@@ -38,6 +42,10 @@
         };
 
         self.showInternalServerError = function () {
+            throw 'not implemented';
+        };
+
+        self.showErrors = function (errors) {
             throw 'not implemented';
         };
     }
