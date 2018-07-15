@@ -17,7 +17,7 @@
             });
         });
 
-        it('shows an error if there is an error', function () {
+        it('shows an error if there is an internal server error', function () {
             const title = 'title';
             const body = 'body';
             view.getTitle.and.returnValue(title);
