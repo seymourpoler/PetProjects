@@ -1,4 +1,5 @@
 ﻿window.WiMi = window.WiMi || {};
+
 (function (WiMi) {
     function namespace(namespace) {
         const values = namespace.split(".");
@@ -26,4 +27,9 @@
         };
     }
     WiMi.spyAllMethodsOf = spyAllMethodsOf;
+    WiMi.httpStatusCode = {
+        internalServerError: 500,
+        badRequest: 400,
+        ok : 200
+    };
 })(WiMi || {})

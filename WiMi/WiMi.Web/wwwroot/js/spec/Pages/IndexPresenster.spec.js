@@ -1,15 +1,37 @@
 ﻿describe('Index Presenter', function () {
     var presenter, view, client;
+
     beforeEach(function () {
         view = WiMi.Pages.Index.createIndexView();
         WiMi.spyAllMethodsOf(view);
         client = WiMi.Pages.Index.createIndexClient();
         WiMi.spyAllMethodsOf(client);
-        presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
     });
+
     describe('when creation new page is requested', function () {
-        it('shows an error if there is an error', function () {
-            expect(true).toBe(false);
+        var creationPageRequestedHandler = function () { };
+
+        beforeEach(function () {
+            view.subscribeToCreationPageRequested.and.callFake(function (handler) {
+                creationPageRequestedHandler = handler;
+            });
         });
+
+        it('shows an error if there is an error', function () {
+            const title = 'title';
+            const body = 'body';
+            view.getTitle.and.returnValue(title);
+            view.getBody.and.returnValue(body);
+            client.save.and.callFake(function (request, successHandler, errorHandler) {
+                expect(request.title).toBe(title);
+                expect(request.body).toBe(body);
+                errorHandler({ statusCode: WiMi.httpStatusCode.internalServerError, errors: [] })
+            });
+            presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
+
+            creationPageRequestedHandler();
+
+            expect(view.showInternalServerError).toHaveBeenCalled();
+        });   
     });
 });

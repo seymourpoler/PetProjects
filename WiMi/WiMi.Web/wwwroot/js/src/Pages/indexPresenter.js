@@ -1,23 +1,68 @@
 ﻿(function (WiMi) {
     function IndexPresenter(view, client) {
+        var self = this;
+        view.subscribeToCreationPageRequested(creationPageRequestedHandler);
 
+        function creationPageRequestedHandler() {
+            const title = view.getTitle();
+            const body = view.getBody();
+            const request = { title: title, body: body };
+            client.save(request, successHandler, errorHandler);
+            function errorHandler(response) {
+                if (response.statusCode == WiMi.httpStatusCode.internalServerError) {
+                    view.showInternalServerError();
+                    return;
+                }
+                throw 'not implemented';
+            }
+            function successHandler() {
+                throw 'not implemented';
+            }
+        }
     }
 
     function IndexView(view, client) {
+        var self = this;
+        var creationPageRequestedHandler = function () { };
 
+        self.subscribeToCreationPageRequested = function (handler) {
+            creationPageRequestedHandler = handler;
+        };
+
+        self.getTitle = function () {
+            throw 'not implemented';
+        };
+
+        self.getBody = function () {
+            throw 'not implemented';
+        };
+
+        self.showInternalServerError = function () {
+            throw 'not implemented';
+        };
     }
 
     function IndexClient(view, client) {
+        var self = this;
 
+        self.save = function (request, successHandler, errorHandler) {
+            throw 'not implemented';
+        };
     }
 
     function createIndexPresenter() {
-
+        return new WiMi.Pages.Index.IndexPresenter(
+            WiMi.Pages.Index.createIndexView(),
+            WiMi.Pages.Index.createIndexClient());
     }
 
-    function createIndexView(){}
+    function createIndexView() {
+        return new WiMi.Pages.Index.IndexView();
+    }
 
-    function createIndexClient(){}
+    function createIndexClient() {
+        return new WiMi.Pages.Index.IndexClient();
+    }
     
     WiMi.namespace("Pages.Index");
     WiMi.Pages.Index.IndexPresenter = IndexPresenter;
