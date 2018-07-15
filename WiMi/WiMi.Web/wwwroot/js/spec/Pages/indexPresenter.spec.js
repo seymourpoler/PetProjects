@@ -79,7 +79,7 @@
             });
         });
         
-        it('redirect to page before', function(){
+        it('redirects to page before', function(){
             presenter = new presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
 
             pageClosingRequestedHandler();
