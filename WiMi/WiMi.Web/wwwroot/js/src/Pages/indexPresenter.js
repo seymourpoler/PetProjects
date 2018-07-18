@@ -2,6 +2,7 @@
     function IndexPresenter(view, client) {
         var self = this;
         view.subscribeToCreationPageRequested(creationPageRequestedHandler);
+        view.subscribeToClosingPageRequested(closingPageRequestedHandler);
 
         function creationPageRequestedHandler() {
             const title = view.getTitle();
@@ -23,14 +24,23 @@
                 view.showCreatedPageMessage();
             }
         }
+
+        function closingPageRequestedHandler(){
+            view.redirectToPageBefore();
+        }
     }
 
     function IndexView(view, client) {
         var self = this;
         var creationPageRequestedHandler = function () { };
+        var closingPageRequestedHandler = function(){};
 
         self.subscribeToCreationPageRequested = function (handler) {
             creationPageRequestedHandler = handler;
+        };
+
+        self.subscribeToClosingPageRequested = function(handler){
+            closingPageRequestedHandler = handler;
         };
 
         self.getTitle = function () {
@@ -50,6 +60,10 @@
         };
 
         self.showCreatedPageMessage = function(){
+            throw 'not implemented';
+        };
+
+        self.redirectToPageBefore = function(){
             throw 'not implemented';
         };
     }

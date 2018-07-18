@@ -71,20 +71,21 @@
     });
 
     describe('when close is requested', function(){
-        var pageClosingRequestedHandler = function(){};
+        var closingPageRequestedHandler = function(){};
 
         beforeEach(function(){
-            view.pageClosingRequested.and.callFake(function(handler){
-                pageClosingRequestedHandler = handler;
+            debugger;
+            view.subscribeToClosingPageRequested.and.callFake(function(handler){
+                closingPageRequestedHandler = handler;
             });
         });
         
         it('redirects to page before', function(){
-            presenter = new presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
+            presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
 
-            pageClosingRequestedHandler();
+            closingPageRequestedHandler();
 
-            expect(view.redirectToPAgeBefore).toHaveBeenCalled();
+            expect(view.redirectToPageBefore).toHaveBeenCalled();
         });
     });
 });
