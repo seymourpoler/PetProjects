@@ -74,7 +74,6 @@
         var closingPageRequestedHandler = function(){};
 
         beforeEach(function(){
-            debugger;
             view.subscribeToClosingPageRequested.and.callFake(function(handler){
                 closingPageRequestedHandler = handler;
             });
