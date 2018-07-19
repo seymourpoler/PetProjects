@@ -44,11 +44,11 @@
         };
 
         self.getTitle = function () {
-            throw 'not implemented';
+            return self._txtTitle.getText();
         };
 
         self.getBody = function () {
-            throw 'not implemented';
+            return self._txtBody.getText();
         };
 
         self.showInternalServerError = function () {
