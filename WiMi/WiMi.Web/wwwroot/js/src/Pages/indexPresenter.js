@@ -10,11 +10,11 @@
             const request = { title: title, body: body };
             client.save(request, successHandler, errorHandler);
             function errorHandler(response) {
-                if (response.statusCode == WiMi.httpStatusCode.internalServerError) {
+                if (response.statusCode === WiMi.httpStatusCode.internalServerError) {
                     view.showInternalServerError();
                     return;
                 }
-                if (response.statusCode == WiMi.httpStatusCode.badRequest) {
+                if (response.statusCode === WiMi.httpStatusCode.badRequest) {
                     view.showErrors(response.errors);
                     return;
                 }
@@ -30,7 +30,7 @@
         }
     }
 
-    function IndexView(view, client) {
+    function IndexView() {
         var self = this;
         var creationPageRequestedHandler = function () { };
         var closingPageRequestedHandler = function(){};
@@ -68,11 +68,11 @@
         };
     }
 
-    function IndexClient(view, client) {
+    function IndexClient(http) {
         var self = this;
 
         self.save = function (request, successHandler, errorHandler) {
-            throw 'not implemented';
+            http.post('/pages', request, successHandler, errorHandler);
         };
     }
 
@@ -83,11 +83,14 @@
     }
 
     function createIndexView() {
-        return new WiMi.Pages.Index.IndexView();
+        var view = new WiMi.Pages.Index.IndexView();
+        view._txtTitle = new Peper.InputText('txtTitle');
+        view._txtBody = new Peper.InputText('txtBody');
+        view._btnCreate = new Peper.Button('btnCreate');
     }
 
     function createIndexClient() {
-        return new WiMi.Pages.Index.IndexClient();
+        return new WiMi.Pages.Index.IndexClient(new WiMi.Http());
     }
     
     WiMi.namespace("Pages.Index");

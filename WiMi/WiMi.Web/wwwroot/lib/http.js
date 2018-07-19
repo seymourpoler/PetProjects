@@ -1,3 +1,4 @@
+window.Http = window.Http|| {};
 (function (WiMi) {
     function Http() {
         const contentTypeHeader = 'Content-type';
@@ -69,5 +70,5 @@
                 response.status == ok;
         }
     }
-    WiMi.Http = Http;
-})(WiMi || {})
+    Http = Http;
+})(Http || {})

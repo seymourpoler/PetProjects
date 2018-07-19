@@ -1,24 +1,35 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using WiMi.Web.Models;
 
 namespace WiMi.Web.Controllers
 {
     public class PagesController : Controller
     {
         // GET: Pages
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
 
-        // GET: Pages/Create
-        public ActionResult New()
+        // GET: Pages/New
+        public IActionResult New()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(PageCreationRequest request)
+        {
+            if (request is null)
+            {
+                return BadRequest("request can not be null");
+            }
+            throw new NotImplementedException();
         }
 
         // GET: Pages/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult Edit(int id)
         {
             return View();
         }

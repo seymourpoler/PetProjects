@@ -14,7 +14,7 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'wwwroot/lib/WiMi.js',
+            'wwwroot/lib/*.js',
             'wwwroot/js/src/Pages/*.js',
             'wwwroot/js/spec/Pages/*.spec.js'
         ],
