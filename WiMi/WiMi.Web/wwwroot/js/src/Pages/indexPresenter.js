@@ -52,19 +52,19 @@
         };
 
         self.showInternalServerError = function () {
-            throw 'not implemented';
+            self._lblError.show();
         };
 
         self.showErrors = function (errors) {
-            throw 'not implemented';
+            self._lblError.show();
         };
 
         self.showCreatedPageMessage = function(){
-            throw 'not implemented';
+            self._lblInformation.show('page saved');
         };
 
         self.redirectToPageBefore = function(){
-            throw 'not implemented';
+            window.history.back();
         };
     }
 
@@ -87,6 +87,9 @@
         view._txtTitle = new Peper.InputText('txtTitle');
         view._txtBody = new Peper.InputText('txtBody');
         view._btnCreate = new Peper.Button('btnCreate');
+        view._lblError = new Peper.Label('lblError');
+        view._lblInformation = new Peper.Label('lblInformation');
+        return view;
     }
 
     function createIndexClient() {

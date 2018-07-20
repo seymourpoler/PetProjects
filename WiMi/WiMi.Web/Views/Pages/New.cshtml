@@ -5,9 +5,18 @@
 
 <h2>New</h2>
 
+<link rel="stylesheet" href="~/css/mini.min.css">
+
 <script src="~/lib/http.js"></script>
 <script src="~/lib/peper.js"></script>
 <script src="~/lib/WiMi.js"></script>
 <script src="~/js/src/Pages/indexPresenter.js">
     WiMi.Pages.Index.createIndexPresenter();
 </script>
+
+<input type="text" id="txtTitle" />
+<textarea id="txtBody" rows="40" cols="40" ></textarea>
+<button id="btnCreate">Create</button>
+
+<label id="lblError"></label>
+<label id="lblInformation"></label>
