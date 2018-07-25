@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using WiMi.CrossCutting;
 
 namespace WiMi.Domain.Pages
 {
@@ -11,18 +13,22 @@ namespace WiMi.Domain.Pages
     {
         public ServiceExecutionResult Create(PageCreationRequest request)
         {
-
+			var errors = new List<Error>();
 			if(String.IsNullOrWhiteSpace(request.Title))
             {
-                return new ServiceExecutionResult(new Error(
-                    fieldId: nameof(request.Title), errorCode: nameof(Error.ErrorCodes.Required)));
+				errors.Add(
+					new Error(fieldId: nameof(request.Title), errorCode: nameof(Error.ErrorCodes.Required)));
             }
 			if(String.IsNullOrWhiteSpace(request.Body))
 			{
-				return new ServiceExecutionResult(new Error(
-					fieldId: nameof(request.Body), errorCode: nameof(Error.ErrorCodes.Required)));
+				errors.Add(
+					new Error(fieldId: nameof(request.Body), errorCode: nameof(Error.ErrorCodes.Required)));
 			}
-            throw new System.NotImplementedException();
+			if(errors.IsNotEmpty())
+			{
+				return new ServiceExecutionResult(errors);
+			}
+            throw new NotImplementedException();
         }
     }
 }

@@ -54,5 +54,14 @@ namespace WiMi.Domain.Unit.Test.Pages
             result.Errors.First().FieldId.ShouldBe("Body");
             result.Errors.First().ErrorCode.ShouldBe(nameof(Error.ErrorCodes.Required));
         }
+
+		[Fact]
+        public void return_some_errors_when_there_are_some_errors()
+        {
+            var result = creator.Create(new PageCreationRequest(title: null, body: String.Empty));
+
+            result.IsOk.ShouldBeFalse();
+			result.Errors.Count.ShouldBe(2);
+        }
 	}
 }
