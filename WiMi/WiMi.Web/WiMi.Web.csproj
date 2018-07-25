@@ -16,5 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WiMi.CrossCutting\WiMi.CrossCutting.csproj" />
+    <ProjectReference Include="..\WiMi.Domain\WiMi.Domain.csproj" />
   </ItemGroup>
 </Project>

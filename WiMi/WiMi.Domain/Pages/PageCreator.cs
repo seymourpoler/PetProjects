@@ -1,10 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace WiMi.Domain.Pages
+﻿namespace WiMi.Domain.Pages
 {
-    class PageCreator
+    public interface IPageCreator
     {
+        ServiceExecutionResult Create(PageCreationRequest request);
+    }
+
+    public class PageCreator : IPageCreator
+    {
+        public ServiceExecutionResult Create(PageCreationRequest request)
+        {
+
+            if(request.Title is null)
+            {
+                return new ServiceExecutionResult(new Error(
+                    fieldId: nameof(request.Title), errorCode: nameof(Error.ErrorCodes.Required)));
+            }
+            throw new System.NotImplementedException();
+        }
     }
 }
