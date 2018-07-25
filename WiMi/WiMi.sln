@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Web", "WiMi.Web\WiMi.Web.csproj", "{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Web", "WiMi.Web\WiMi.Web.csproj", "{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain", "WiMi.Domain\WiMi.Domain.csproj", "{76141C0A-547E-430F-BCB7-F5F8F78D7671}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Domain", "WiMi.Domain\WiMi.Domain.csproj", "{76141C0A-547E-430F-BCB7-F5F8F78D7671}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Repositories.SQLite", "WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj", "{F120FEE7-CD2D-4168-A966-C14FF9DE7E90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Repositories.SQLite", "WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj", "{F120FEE7-CD2D-4168-A966-C14FF9DE7E90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.CrossCutting", "WiMi.CrossCutting\WiMi.CrossCutting.csproj", "{1D871A6E-2B2E-4B8D-9D68-18933A03525A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.CrossCutting", "WiMi.CrossCutting\WiMi.CrossCutting.csproj", "{1D871A6E-2B2E-4B8D-9D68-18933A03525A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain.Unit.Test", "WiMi.Domain.Unit.Test\WiMi.Domain.Unit.Test.csproj", "{CCA4FF2E-ACDB-48F2-AADE-77020B0F9AB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1D871A6E-2B2E-4B8D-9D68-18933A03525A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D871A6E-2B2E-4B8D-9D68-18933A03525A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D871A6E-2B2E-4B8D-9D68-18933A03525A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA4FF2E-ACDB-48F2-AADE-77020B0F9AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA4FF2E-ACDB-48F2-AADE-77020B0F9AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA4FF2E-ACDB-48F2-AADE-77020B0F9AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA4FF2E-ACDB-48F2-AADE-77020B0F9AB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
