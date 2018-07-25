@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WiMi.CrossCutting;
 using WiMi.Domain.Pages;
+using WiMi.Web.Controllers;
 
 namespace WiMi.Web
 {
@@ -19,6 +21,8 @@ namespace WiMi.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IPageCreator, PageCreator>();
+            services.AddTransient<ISerializer, JsonSerializer>();
+            services.AddTransient<HttpActionResultBuilder>();
             services.AddMvc();
         }
 

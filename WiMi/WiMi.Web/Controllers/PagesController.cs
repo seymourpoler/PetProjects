@@ -1,11 +1,25 @@
 ﻿using System;
+using System.Net;
+using System.Web.Http;
 using Microsoft.AspNetCore.Mvc;
-using WiMi.Web.Models;
+using WiMi.Domain;
+using WiMi.Domain.Pages;
 
 namespace WiMi.Web.Controllers
 {
     public class PagesController : Controller
     {
+        readonly IPageCreator pageCreator;
+        readonly HttpActionResultBuilder httpActionResultBuilder;
+
+        public PagesController(
+            IPageCreator pageCreator, 
+            HttpActionResultBuilder httpActionResultBuilder)
+        {
+            this.pageCreator = pageCreator;
+            this.httpActionResultBuilder = httpActionResultBuilder;
+        }
+
         // GET: Pages
         public IActionResult Index()
         {
@@ -18,12 +32,14 @@ namespace WiMi.Web.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Create([FromBody]PageCreationRequest request)
+        [System.Web.Http.HttpPost]
+        public IHttpActionResult Create([System.Web.Http.FromBody]Models.PageCreationRequest request)
         {
             if (request is null)
             {
-                return BadRequest("request can not be null");
+                return  httpActionResultBuilder.Build(
+                    httpStatuscode: HttpStatusCode.BadRequest, 
+                    entity: nameof(Error.ErrorCodes.RequestCanNotBeNull));
             }
             throw new NotImplementedException();
         }

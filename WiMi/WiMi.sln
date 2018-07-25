@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.CrossCutting", "WiMi.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain.Unit.Test", "WiMi.Domain.Unit.Test\WiMi.Domain.Unit.Test.csproj", "{5CEF0330-1C63-4027-B6C3-9C6440D6F509}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Web.Unit.Test", "WiMi.Web.Unit.Test\WiMi.Web.Unit.Test.csproj", "{C5AFB75F-5A40-4507-8246-677BBE8B2666}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5CEF0330-1C63-4027-B6C3-9C6440D6F509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CEF0330-1C63-4027-B6C3-9C6440D6F509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CEF0330-1C63-4027-B6C3-9C6440D6F509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
