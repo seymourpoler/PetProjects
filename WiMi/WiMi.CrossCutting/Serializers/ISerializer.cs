@@ -1,4 +1,4 @@
-﻿namespace WiMi.CrossCutting
+﻿namespace WiMi.CrossCutting.Serializers
 {
     public interface ISerializer
     {

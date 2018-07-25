@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WiMi.CrossCutting;
+using WiMi.CrossCutting.Serializers;
 using WiMi.Domain.Pages;
 using WiMi.Web.Controllers;
 

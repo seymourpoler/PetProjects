@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Text;
 using System.Web.Http;
 using System.Web.Http.Results;
-using WiMi.CrossCutting;
+using WiMi.CrossCutting.Serializers;
 using System;
 
 namespace WiMi.Web.Controllers

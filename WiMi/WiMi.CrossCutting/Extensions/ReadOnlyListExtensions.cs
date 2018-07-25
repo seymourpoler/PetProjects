@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WiMi.CrossCutting
+namespace WiMi.CrossCutting.Extensions
 {
     public static class ReadOnlyListExtensions
     {

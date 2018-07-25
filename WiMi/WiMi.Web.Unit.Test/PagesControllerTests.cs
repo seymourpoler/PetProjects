@@ -3,7 +3,7 @@ using Shouldly;
 using System.Collections.Generic;
 using System.Net;
 using System.Web.Http.Results;
-using WiMi.CrossCutting;
+using WiMi.CrossCutting.Serializers;
 using WiMi.Domain;
 using WiMi.Domain.Pages;
 using WiMi.Web.Controllers;

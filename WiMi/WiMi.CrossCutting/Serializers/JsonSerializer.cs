@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace WiMi.CrossCutting
+namespace WiMi.CrossCutting.Serializers
 {
 	public class JsonSerializer : ISerializer
     {
