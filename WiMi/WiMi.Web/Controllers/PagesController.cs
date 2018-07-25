@@ -44,7 +44,7 @@ namespace WiMi.Web.Controllers
 			var result = pageCreator.Create(new PageCreationRequest(title: request.Title, body: request.Body));
 			if(result.IsOk)
 			{
-				throw new NotImplementedException();
+				return httpActionResultBuilder.Build(httpStatuscode: HttpStatusCode.OK);
 			}
 			return httpActionResultBuilder.Build(
 				httpStatuscode: HttpStatusCode.BadRequest,

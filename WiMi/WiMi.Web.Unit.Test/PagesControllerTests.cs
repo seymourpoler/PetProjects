@@ -50,5 +50,19 @@ namespace WiMi.Web.Unit.Test
 			result.Response.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
 			result.Response.Content.ReadAsStringAsync().Result.ShouldContain(nameof(Error.ErrorCodes.Required));
 		}
+
+		[Fact]
+        public void return_ok()
+        {
+            const string title = "title";
+            const string body = "body";
+            creator
+				.Setup(x => x.Create(It.Is<PageCreationRequest>(y => y.Body == body)))
+				.Returns(new ServiceExecutionResult());
+
+            var result = controller.Create(new Models.PageCreationRequest { Title = title, Body = body }) as ResponseMessageResult;
+
+			result.Response.StatusCode.ShouldBe(HttpStatusCode.OK);
+        }
     }
 }

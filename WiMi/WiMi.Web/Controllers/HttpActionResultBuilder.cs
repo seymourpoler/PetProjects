@@ -4,6 +4,7 @@ using System.Text;
 using System.Web.Http;
 using System.Web.Http.Results;
 using WiMi.CrossCutting;
+using System;
 
 namespace WiMi.Web.Controllers
 {
@@ -27,6 +28,20 @@ namespace WiMi.Web.Controllers
 			};
 
 			return new ResponseMessageResult(response);
+        }
+
+		public IHttpActionResult Build(HttpStatusCode httpStatuscode)
+        {
+            var response = new HttpResponseMessage
+            {
+				StatusCode = httpStatuscode,
+                Content = new StringContent(
+					content: String.Empty,
+                    encoding: Encoding.UTF8,
+                    mediaType: "application/json")
+            };
+
+            return new ResponseMessageResult(response);
         }
     }
 }
