@@ -80,6 +80,10 @@ window.Peper = window.Perper|| {};
             control.style.display = 'none';
             //control.style.visibility='hidden';
         };
+
+        self.on = function (event, handler) {
+            control.addEventListener(event, handler);
+        };
     };
 
     Peper.Select = function(id){

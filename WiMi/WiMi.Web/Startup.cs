@@ -38,8 +38,18 @@ namespace WiMi.Web
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "pager-create",
+                    name: "page index",
                     template: "pages",
+                    defaults: new { controller = "Pages", action = "Index" });
+
+                routes.MapRoute(
+                    name: "page new",
+                    template: "pages/new",
+                    defaults: new { controller = "Pages", action = "New" });
+
+                routes.MapRoute(
+                    name: "pagecreator",
+                    template: "api/pages",
                     defaults: new { controller = "Pages", action = "Create" });
 
                 routes.MapRoute(

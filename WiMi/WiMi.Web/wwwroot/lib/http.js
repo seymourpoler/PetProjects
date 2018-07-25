@@ -1,8 +1,7 @@
-window.Http = window.Http|| {};
 (function (WiMi) {
     function Http() {
-        const contentTypeHeader = 'Content-type';
-        const contentTypeJson = 'application/json; charset=utf-8';
+        const contentTypeHeader = 'Content-Type';
+        const contentTypeJson = 'application/json;charset=UTF-8';
 
         var self = this;
         var xmlHttpRequest = new XMLHttpRequest();
@@ -30,7 +29,8 @@ window.Http = window.Http|| {};
                 errorHandler(xmlHttpRequest);
                 return;
             }
-            xmlHttpRequest.open('POST', url, true);
+            //xmlHttpRequest.open('POST', url, true);
+            xmlHttpRequest.open('POST', url);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
             xmlHttpRequest.send(JSON.stringify(request));
         };
@@ -70,5 +70,5 @@ window.Http = window.Http|| {};
                 response.status == ok;
         }
     }
-    Http = Http;
-})(Http || {})
+    WiMi.Http = Http;
+})(WiMi || {})

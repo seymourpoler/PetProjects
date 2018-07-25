@@ -19,7 +19,7 @@ namespace WiMi.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(PageCreationRequest request)
+        public IActionResult Create([FromBody]PageCreationRequest request)
         {
             if (request is null)
             {

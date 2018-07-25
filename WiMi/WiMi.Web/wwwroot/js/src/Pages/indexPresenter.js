@@ -10,15 +10,14 @@
             const request = { title: title, body: body };
             client.save(request, successHandler, errorHandler);
             function errorHandler(response) {
-                if (response.statusCode === WiMi.httpStatusCode.internalServerError) {
+                if (response.status === WiMi.httpStatusCode.internalServerError) {
                     view.showInternalServerError();
                     return;
                 }
-                if (response.statusCode === WiMi.httpStatusCode.badRequest) {
+                if (response.status === WiMi.httpStatusCode.badRequest) {
                     view.showErrors(response.errors);
                     return;
                 }
-                throw 'not implemented';
             }
             function successHandler() {
                 view.showCreatedPageMessage();
@@ -37,11 +36,14 @@
 
         self.subscribeToCreationPageRequested = function (handler) {
             creationPageRequestedHandler = handler;
+            self._btnCreate.on('click', creationPageRequestedHandler);
         };
 
         self.subscribeToClosingPageRequested = function(handler){
             closingPageRequestedHandler = handler;
+            self._btnClose.on('click', closingPageRequestedHandler);
         };
+
 
         self.getTitle = function () {
             return self._txtTitle.getText();
@@ -72,7 +74,7 @@
         var self = this;
 
         self.save = function (request, successHandler, errorHandler) {
-            http.post('/pages', request, successHandler, errorHandler);
+            http.post('/api/pages', request, successHandler, errorHandler);
         };
     }
 
@@ -87,6 +89,7 @@
         view._txtTitle = new Peper.InputText('txtTitle');
         view._txtBody = new Peper.InputText('txtBody');
         view._btnCreate = new Peper.Button('btnCreate');
+        view._btnClose = new Peper.Button('btnClose');
         view._lblError = new Peper.Label('lblError');
         view._lblInformation = new Peper.Label('lblInformation');
         return view;
