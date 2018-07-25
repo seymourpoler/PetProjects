@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using WiMi.CrossCutting;
+using WiMi.CrossCutting.Extensions;
 
 namespace WiMi.Domain
 {
-    public class ServiceExecutionResult
+	public class ServiceExecutionResult
     {
 		List<Error> errors;
         public IReadOnlyList<Error> Errors { get { return errors.AsReadOnly(); } }

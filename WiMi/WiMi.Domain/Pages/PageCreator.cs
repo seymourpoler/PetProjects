@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using WiMi.CrossCutting;
+using WiMi.CrossCutting.Extensions;
 
 namespace WiMi.Domain.Pages
 {
