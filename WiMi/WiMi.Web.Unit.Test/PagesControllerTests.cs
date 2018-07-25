@@ -1,5 +1,6 @@
 ﻿using Moq;
 using Shouldly;
+using System.Collections.Generic;
 using System.Net;
 using System.Web.Http.Results;
 using WiMi.CrossCutting;
@@ -32,7 +33,22 @@ namespace WiMi.Web.Unit.Test
 
             result.Response.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             result.Response.Content.ReadAsStringAsync().Result.ShouldContain(nameof(Error.ErrorCodes.RequestCanNotBeNull));
-               
         }
+        
+        [Fact]
+        public void return_bad_request_when_there_is_a_error()
+		{
+			const string title = "title";
+			const string body = "body";
+			var executionResult = new ServiceExecutionResult(new List<Error> { new Error(fieldId: "Title", errorCode: nameof(Error.ErrorCodes.Required)) });
+			creator
+				.Setup(x => x.Create(It.Is<PageCreationRequest>(y => y.Title == title)))
+				.Returns(executionResult);
+			
+			var result = controller.Create(new Models.PageCreationRequest{Title = title, Body = body}) as ResponseMessageResult;
+
+			result.Response.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+			result.Response.Content.ReadAsStringAsync().Result.ShouldContain(nameof(Error.ErrorCodes.Required));
+		}
     }
 }

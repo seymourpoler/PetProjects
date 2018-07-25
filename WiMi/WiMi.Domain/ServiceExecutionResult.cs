@@ -5,31 +5,37 @@ namespace WiMi.Domain
 {
     public class ServiceExecutionResult
     {
-        List<Error> _errors;
-        public IReadOnlyList<Error> Errors { get { return _errors.AsReadOnly(); } }
-        public bool IsOk { get { return _errors.IsEmpty(); } }
+		List<Error> errors;
+        public IReadOnlyList<Error> Errors { get { return errors.AsReadOnly(); } }
+        public bool IsOk { get { return errors.IsEmpty(); } }
 
         public ServiceExecutionResult()
         {
-            _errors = new List<Error>();
+            errors = new List<Error>();
         }
 
         public ServiceExecutionResult(Error error)
         {
-            _errors = new List<Error> { error };
+            errors = new List<Error> { error };
+        }
+
+		public ServiceExecutionResult(List<Error> errors) : this()
+        {
+			if (errors is null) { return; }
+			this.errors = errors;
         }
 
         public void AddError(Error error)
         {
             if (error is null) { return; }
-            _errors.Add(error);
+            errors.Add(error);
         }
 
         public void AddErrors(IReadOnlyList<Error> errors)
         {
             if(errors is null) { return; }
             if(errors.IsEmpty()) { return; }
-            _errors.AddRange(errors);
+			this.errors.AddRange(errors);
         }
     }
 }
