@@ -3,7 +3,7 @@ using System.Linq;
 using WiMi.Domain.Pages;
 using Xunit;
 
-namespace WiMi.Domain.Unit.Test
+namespace WiMi.Domain.Unit.Test.Pages
 {
     public class PageCreatorTests
     {
