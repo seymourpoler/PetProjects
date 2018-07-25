@@ -3,16 +3,19 @@ using System.Linq;
 using WiMi.Domain.Pages;
 using Xunit;
 using System;
+using Moq;
 
 namespace WiMi.Domain.Unit.Test.Pages
 {
     public class PageCreatorTests
     {
+		Mock<IPageRepository> repository;
         IPageCreator creator;
 
         public PageCreatorTests()
         {
-            creator = new PageCreator();
+			repository = new Mock<IPageRepository>();
+			creator = new PageCreator(repository: repository.Object);
         }
 
         [Fact]
@@ -62,6 +65,19 @@ namespace WiMi.Domain.Unit.Test.Pages
 
             result.IsOk.ShouldBeFalse();
 			result.Errors.Count.ShouldBe(2);
+        }
+
+		[Fact]
+        public void creates_page()
+        {
+			const string title = "title";
+			const string body = "body";
+
+			var result = creator.Create(new PageCreationRequest(title: title, body: body));
+
+			result.IsOk.ShouldBeTrue();
+			repository
+				.Verify(x => x.Save(It.Is<Page>(y => y.Title == title)));
         }
 	}
 }

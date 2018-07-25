@@ -11,6 +11,13 @@ namespace WiMi.Domain.Pages
 
     public class PageCreator : IPageCreator
     {
+		readonly IPageRepository repository;
+
+		public PageCreator(IPageRepository repository)
+		{
+			this.repository = repository;
+		}
+
         public ServiceExecutionResult Create(PageCreationRequest request)
         {
 			var errors = new List<Error>();
@@ -28,7 +35,9 @@ namespace WiMi.Domain.Pages
 			{
 				return new ServiceExecutionResult(errors);
 			}
-            throw new NotImplementedException();
+			var page = new Page(title: request.Title, body: request.Body);
+			repository.Save(page);
+			return new ServiceExecutionResult();
         }
     }
 }
