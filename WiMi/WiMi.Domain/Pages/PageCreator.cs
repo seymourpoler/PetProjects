@@ -1,4 +1,6 @@
-﻿namespace WiMi.Domain.Pages
+﻿using System;
+
+namespace WiMi.Domain.Pages
 {
     public interface IPageCreator
     {
@@ -10,12 +12,12 @@
         public ServiceExecutionResult Create(PageCreationRequest request)
         {
 
-            if(request.Title is null)
+            if(String.IsNullOrWhiteSpace(request.Title))
             {
                 return new ServiceExecutionResult(new Error(
                     fieldId: nameof(request.Title), errorCode: nameof(Error.ErrorCodes.Required)));
             }
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

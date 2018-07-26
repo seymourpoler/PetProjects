@@ -32,7 +32,6 @@ namespace WiMi.Web.Unit.Test
 
             result.Response.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             result.Response.Content.ReadAsStringAsync().Result.ShouldContain(nameof(Error.ErrorCodes.RequestCanNotBeNull));
-               
         }
     }
 }
