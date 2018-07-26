@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace WiMi.Migrations.SQLite
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
