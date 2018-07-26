@@ -2,8 +2,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WiMi.CrossCutting;
+using WiMi.CrossCutting.Serializers;
 using WiMi.Domain.Pages;
+using WiMi.Repositories.SQLite;
 using WiMi.Web.Controllers;
 
 namespace WiMi.Web
@@ -20,6 +21,7 @@ namespace WiMi.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+			services.AddTransient<IPageRepository, PageRepository>();
             services.AddTransient<IPageCreator, PageCreator>();
             services.AddTransient<ISerializer, JsonSerializer>();
             services.AddTransient<HttpActionResultBuilder>();

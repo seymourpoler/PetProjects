@@ -17,5 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WiMi.CrossCutting\WiMi.CrossCutting.csproj" />
     <ProjectReference Include="..\WiMi.Domain\WiMi.Domain.csproj" />
+    <ProjectReference Include="..\WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj" />
+    <ProjectReference Include="..\WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj" />
   </ItemGroup>
 </Project>

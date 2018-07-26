@@ -15,4 +15,7 @@
     <ProjectReference Include="..\WiMi.Domain\WiMi.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
 </Project>

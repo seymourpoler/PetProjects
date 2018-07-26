@@ -41,7 +41,14 @@ namespace WiMi.Web.Controllers
                     httpStatuscode: HttpStatusCode.BadRequest, 
                     entity: nameof(Error.ErrorCodes.RequestCanNotBeNull));
             }
-            throw new NotImplementedException();
+			var result = pageCreator.Create(new PageCreationRequest(title: request.Title, body: request.Body));
+			if(result.IsOk)
+			{
+				return httpActionResultBuilder.Build(httpStatuscode: HttpStatusCode.OK);
+			}
+			return httpActionResultBuilder.Build(
+				httpStatuscode: HttpStatusCode.BadRequest,
+				entity: result.Errors);
         }
 
         // GET: Pages/Edit/5

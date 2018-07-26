@@ -1,5 +1,7 @@
 ﻿using System;
 
+using WiMi.CrossCutting.Extensions;
+
 namespace WiMi.Domain.Pages
 {
     public interface IPageCreator
@@ -9,20 +11,33 @@ namespace WiMi.Domain.Pages
 
     public class PageCreator : IPageCreator
     {
+		readonly IPageRepository repository;
+
+		public PageCreator(IPageRepository repository)
+		{
+			this.repository = repository;
+		}
+
         public ServiceExecutionResult Create(PageCreationRequest request)
         {
-
-            if(String.IsNullOrWhiteSpace(request.Title))
+			var errors = new List<Error>();
+			if(String.IsNullOrWhiteSpace(request.Title))
             {
-                return new ServiceExecutionResult(new Error(
-                    fieldId: nameof(request.Title), errorCode: nameof(Error.ErrorCodes.Required)));
+				errors.Add(
+					new Error(fieldId: nameof(request.Title), errorCode: nameof(Error.ErrorCodes.Required)));
             }
-            if (String.IsNullOrWhiteSpace(request.Body))
-            {
-                return new ServiceExecutionResult(new Error(
-                    fieldId: nameof(request.Body), errorCode: nameof(Error.ErrorCodes.Required)));
-            }
-            throw new NotImplementedException();
+			if(String.IsNullOrWhiteSpace(request.Body))
+			{
+				errors.Add(
+					new Error(fieldId: nameof(request.Body), errorCode: nameof(Error.ErrorCodes.Required)));
+			}
+			if(errors.IsNotEmpty())
+			{
+				return new ServiceExecutionResult(errors);
+			}
+			var page = new Page(title: request.Title, body: request.Body);
+			repository.Save(page);
+			return new ServiceExecutionResult();
         }
     }
 }
