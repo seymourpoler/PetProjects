@@ -1,4 +1,5 @@
-﻿using Shouldly;
+﻿using Moq;
+using Shouldly;
 using System;
 using System.Linq;
 using WiMi.Domain.Pages;
@@ -8,11 +9,13 @@ namespace WiMi.Domain.Unit.Test
 {
     public class PageCreatorTests
     {
+        Mock<IPageRepository> repository;
         IPageCreator creator;
 
         public PageCreatorTests()
         {
-            creator = new PageCreator();
+            repository = new Mock<IPageRepository>();
+            creator = new PageCreator(repository.Object);
         }
 
         [Fact]
