@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.108" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WiMi.Domain\WiMi.Domain.csproj" />
   </ItemGroup>
 </Project>
