@@ -5,7 +5,7 @@ namespace WiMi.Repositories.SQLite
 {
 	public class PageRepository : IPageRepository
 	{
-		void IPageRepository.Save(Page page)
+		public void Save(Page page)
 		{
 			throw new NotImplementedException();
 		}

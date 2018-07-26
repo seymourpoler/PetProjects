@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WiMi.Domain.Pages
+﻿namespace WiMi.Domain.Pages
 {
     public interface IPageRepository
     {
