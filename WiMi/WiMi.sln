@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain.Unit.Test", "Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Web.Unit.Test", "WiMi.Web.Unit.Test\WiMi.Web.Unit.Test.csproj", "{C5AFB75F-5A40-4507-8246-677BBE8B2666}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Migrations.SQLite", "WiMi.Migrations.SQLite\WiMi.Migrations.SQLite.csproj", "{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
