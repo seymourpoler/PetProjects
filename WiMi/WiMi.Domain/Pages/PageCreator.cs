@@ -17,6 +17,11 @@ namespace WiMi.Domain.Pages
                 return new ServiceExecutionResult(new Error(
                     fieldId: nameof(request.Title), errorCode: nameof(Error.ErrorCodes.Required)));
             }
+            if (String.IsNullOrWhiteSpace(request.Body))
+            {
+                return new ServiceExecutionResult(new Error(
+                    fieldId: nameof(request.Body), errorCode: nameof(Error.ErrorCodes.Required)));
+            }
             throw new NotImplementedException();
         }
     }
