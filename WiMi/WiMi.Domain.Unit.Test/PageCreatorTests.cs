@@ -44,5 +44,15 @@ namespace WiMi.Domain.Unit.Test
             result.Errors.First().FieldId.ShouldBe("Body");
             result.Errors.First().ErrorCode.ShouldBe(nameof(Error.ErrorCodes.Required));
         }
+
+        [Fact]
+        public void return_error_when_body_is_empty()
+        {
+            var result = creator.Create(new PageCreationRequest(title: "a", body: String.Empty));
+
+            result.IsOk.ShouldBeFalse();
+            result.Errors.First().FieldId.ShouldBe("Body");
+            result.Errors.First().ErrorCode.ShouldBe(nameof(Error.ErrorCodes.Required));
+        }
     }
 }
