@@ -4,6 +4,7 @@ using WiMi.Domain.Pages;
 using Xunit;
 using System;
 using Moq;
+using WiMi.Domain.Pages.Create;
 
 namespace WiMi.Domain.Unit.Test.Pages
 {

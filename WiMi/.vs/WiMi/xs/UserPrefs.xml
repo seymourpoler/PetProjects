@@ -1,14 +1,26 @@
 ﻿<Properties StartupConfiguration="{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DataBase/DataBaseConfiguration.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WiMi.Web.Unit.Test/PagesControllerTests.cs">
     <Files>
       <File FileName="WiMi.Migrations.SQLite/Program.cs" Line="24" Column="75" />
       <File FileName="WiMi.Migrations.SQLite/Migrations/201807261444147_CreatePagesTable.cs" Line="1" Column="1" />
       <File FileName="DataBase/DataBaseConfiguration.cs" Line="5" Column="51" />
+      <File FileName="WiMi.Web/Controllers/PagesController.cs" Line="5" Column="1" />
+      <File FileName="WiMi.Web/Startup.cs" Line="26" Column="36" />
+      <File FileName="WiMi.Domain/Pages/Page.cs" Line="3" Column="28" />
+      <File FileName="WiMi.Domain/Pages/Create/PageCreationRequest.cs" Line="1" Column="35" />
+      <File FileName="WiMi.Domain/Pages/Create/PageCreator.cs" Line="7" Column="1" />
+      <File FileName="WiMi.Domain/Pages/IPageRepository.cs" Line="1" Column="1" />
+      <File FileName="WiMi.Domain/Error.cs" Line="15" Column="35" />
+      <File FileName="WiMi.Domain.Unit.Test/PageCreatorTests.cs" Line="14" Column="10" />
+      <File FileName="WiMi.Domain.Unit.Test/Pages/PageCreatorTests.cs" Line="14" Column="10" />
+      <File FileName="WiMi.Web.Unit.Test/PagesControllerTests.cs" Line="9" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/seymourpoler/Documents/code/GitHub/PetProjects/PetProjects/WiMi/WiMi.Web/Controllers/PagesController.cs" relfile="WiMi.Web/Controllers/PagesController.cs" line="37" column="18" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.WiMi.Web PreferredExecutionTarget="MonoDevelop.Default" />

@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using WiMi.CrossCutting.Extensions;
 
-namespace WiMi.Domain.Pages
+namespace WiMi.Domain.Pages.Create
 {
-    public interface IPageCreator
-    {
-        ServiceExecutionResult Create(PageCreationRequest request);
-    }
-
-    public class PageCreator : IPageCreator
+	public class PageCreator : IPageCreator
     {
 		readonly IPageRepository repository;
 

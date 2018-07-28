@@ -15,6 +15,12 @@ namespace WiMi.Domain
             ErrorCode = errorCode;
         }
 
+		public Error(string fieldId, ErrorCodes errorCode)
+        {
+            FieldId = fieldId;
+			ErrorCode = errorCode.ToString();
+        }
+
         public Error(string errorCode)
         {
             FieldId = GeneralFieldIdError;

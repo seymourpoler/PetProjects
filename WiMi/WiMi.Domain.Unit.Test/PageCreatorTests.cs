@@ -3,6 +3,7 @@ using Shouldly;
 using System;
 using System.Linq;
 using WiMi.Domain.Pages;
+using WiMi.Domain.Pages.Create;
 using Xunit;
 
 namespace WiMi.Domain.Unit.Test

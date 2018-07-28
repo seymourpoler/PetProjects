@@ -5,13 +5,13 @@ using System.Net;
 using System.Web.Http.Results;
 using WiMi.CrossCutting.Serializers;
 using WiMi.Domain;
-using WiMi.Domain.Pages;
+using WiMi.Domain.Pages.Create;
 using WiMi.Web.Controllers;
 using Xunit;
 
 namespace WiMi.Web.Unit.Test
 {
-    public class PagesControllerTests
+	public class PagesControllerTests
     {
         Mock<IPageCreator> creator;
         HttpActionResultBuilder httpActionResultBuilder;

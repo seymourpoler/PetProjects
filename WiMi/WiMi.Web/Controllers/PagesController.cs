@@ -1,13 +1,12 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Web.Http;
 using Microsoft.AspNetCore.Mvc;
 using WiMi.Domain;
-using WiMi.Domain.Pages;
+using WiMi.Domain.Pages.Create;
 
 namespace WiMi.Web.Controllers
 {
-    public class PagesController : Controller
+	public class PagesController : Controller
     {
         readonly IPageCreator pageCreator;
         readonly HttpActionResultBuilder httpActionResultBuilder;

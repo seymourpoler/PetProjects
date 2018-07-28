@@ -1,4 +1,4 @@
-﻿namespace WiMi.Domain.Pages
+﻿namespace WiMi.Domain.Pages.Create
 {
     public class PageCreationRequest
     {
