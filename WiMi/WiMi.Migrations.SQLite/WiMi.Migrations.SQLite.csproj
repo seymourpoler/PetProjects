@@ -12,4 +12,14 @@
     <PackageReference Include="Microsoft.Data.Sqlite" Version="2.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\DataBase\WiMi.sqlite">
+      <Link>WiMi.sqlite</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\DataBase\DataBaseConfiguration.cs">
+      <Link>DataBaseConfiguration.cs</Link>
+    </Compile>
+  </ItemGroup>
 </Project>

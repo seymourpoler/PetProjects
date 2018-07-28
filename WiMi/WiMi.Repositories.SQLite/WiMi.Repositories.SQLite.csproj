@@ -11,4 +11,14 @@
   <ItemGroup>
     <ProjectReference Include="..\WiMi.Domain\WiMi.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DataBase\WiMi.sqlite">
+      <Link>WiMi.sqlite</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\DataBase\DataBaseConfiguration.cs">
+      <Link>DataBaseConfiguration.cs</Link>
+    </Compile>
+  </ItemGroup>
 </Project>
