@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WiMi.Migrations.SQLite/Migrations/201807261444147_CreatePagesTable.cs">
+    <Files>
+      <File FileName="WiMi.Migrations.SQLite/Program.cs" Line="24" Column="75" />
+      <File FileName="WiMi.Migrations.SQLite/Migrations/201807261444147_CreatePagesTable.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WiMi.Web PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
