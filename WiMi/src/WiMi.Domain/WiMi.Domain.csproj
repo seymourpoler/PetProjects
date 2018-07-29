@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Create\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WiMi.CrossCutting\WiMi.CrossCutting.csproj" />
+  </ItemGroup>
+</Project>

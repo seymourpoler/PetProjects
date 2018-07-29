@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\DataBase\DataBaseConfiguration.cs" Link="DataBaseConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DataBase\WiMi.sqlite">
+      <Link>WiMi.sqlite</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.108" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WiMi.Domain\WiMi.Domain.csproj" />
+  </ItemGroup>
+</Project>

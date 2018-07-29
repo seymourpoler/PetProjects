@@ -3,25 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Web", "WiMi.Web\WiMi.Web.csproj", "{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain", "WiMi.Domain\WiMi.Domain.csproj", "{76141C0A-547E-430F-BCB7-F5F8F78D7671}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Repositories.SQLite", "WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj", "{F120FEE7-CD2D-4168-A966-C14FF9DE7E90}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.CrossCutting", "WiMi.CrossCutting\WiMi.CrossCutting.csproj", "{1D871A6E-2B2E-4B8D-9D68-18933A03525A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain.Unit.Test", "WiMi.Domain.Unit.Test\WiMi.Domain.Unit.Test.csproj", "{5CEF0330-1C63-4027-B6C3-9C6440D6F509}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Web.Unit.Test", "WiMi.Web.Unit.Test\WiMi.Web.Unit.Test.csproj", "{C5AFB75F-5A40-4507-8246-677BBE8B2666}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Migrations.SQLite", "WiMi.Migrations.SQLite\WiMi.Migrations.SQLite.csproj", "{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{C60764FB-4206-45A7-B1F1-AE271F4B02D4}"
 	ProjectSection(SolutionItems) = preProject
-		DataBase\WiMi.sqlite = DataBase\WiMi.sqlite
 		DataBase\DataBaseConfiguration.cs = DataBase\DataBaseConfiguration.cs
+		DataBase\WiMi.sqlite = DataBase\WiMi.sqlite
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F833394B-096A-4197-90A7-FE00AA45F711}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BF2FC097-39C7-4B26-B84A-A4BC648F969E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.CrossCutting", "src\WiMi.CrossCutting\WiMi.CrossCutting.csproj", "{1D86B447-9A0F-4AC0-B83A-3BACB13B89F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Domain", "src\WiMi.Domain\WiMi.Domain.csproj", "{7662E824-5B7E-4A6F-92D1-DAEB2D19C37C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Migrations.SQLite", "src\WiMi.Migrations.SQLite\WiMi.Migrations.SQLite.csproj", "{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Repositories.SQLite", "src\WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj", "{5DA2B5FF-05F2-4A17-B105-35C1650C2F13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Web", "src\WiMi.Web\WiMi.Web.csproj", "{CD95EB3E-89E7-4013-B248-B90436C58B7C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Domain.Unit.Test", "test\WiMi.Domain.Unit.Test\WiMi.Domain.Unit.Test.csproj", "{1A2DD6FE-F6DA-4EBC-A5B2-6306F6329D9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Web.Unit.Test", "test\WiMi.Web.Unit.Test\WiMi.Web.Unit.Test.csproj", "{E0D8E439-A472-4A2C-B2B4-2165AD13BC89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,37 +33,46 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76141C0A-547E-430F-BCB7-F5F8F78D7671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76141C0A-547E-430F-BCB7-F5F8F78D7671}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76141C0A-547E-430F-BCB7-F5F8F78D7671}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76141C0A-547E-430F-BCB7-F5F8F78D7671}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F120FEE7-CD2D-4168-A966-C14FF9DE7E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F120FEE7-CD2D-4168-A966-C14FF9DE7E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F120FEE7-CD2D-4168-A966-C14FF9DE7E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F120FEE7-CD2D-4168-A966-C14FF9DE7E90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D871A6E-2B2E-4B8D-9D68-18933A03525A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D871A6E-2B2E-4B8D-9D68-18933A03525A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D871A6E-2B2E-4B8D-9D68-18933A03525A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D871A6E-2B2E-4B8D-9D68-18933A03525A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5CEF0330-1C63-4027-B6C3-9C6440D6F509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CEF0330-1C63-4027-B6C3-9C6440D6F509}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CEF0330-1C63-4027-B6C3-9C6440D6F509}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CEF0330-1C63-4027-B6C3-9C6440D6F509}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5AFB75F-5A40-4507-8246-677BBE8B2666}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84C41B8C-7BBA-4D45-8F8D-ECA593DA7AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D86B447-9A0F-4AC0-B83A-3BACB13B89F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D86B447-9A0F-4AC0-B83A-3BACB13B89F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D86B447-9A0F-4AC0-B83A-3BACB13B89F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D86B447-9A0F-4AC0-B83A-3BACB13B89F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7662E824-5B7E-4A6F-92D1-DAEB2D19C37C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7662E824-5B7E-4A6F-92D1-DAEB2D19C37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7662E824-5B7E-4A6F-92D1-DAEB2D19C37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7662E824-5B7E-4A6F-92D1-DAEB2D19C37C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA2B5FF-05F2-4A17-B105-35C1650C2F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA2B5FF-05F2-4A17-B105-35C1650C2F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA2B5FF-05F2-4A17-B105-35C1650C2F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DA2B5FF-05F2-4A17-B105-35C1650C2F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD95EB3E-89E7-4013-B248-B90436C58B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD95EB3E-89E7-4013-B248-B90436C58B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD95EB3E-89E7-4013-B248-B90436C58B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD95EB3E-89E7-4013-B248-B90436C58B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2DD6FE-F6DA-4EBC-A5B2-6306F6329D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2DD6FE-F6DA-4EBC-A5B2-6306F6329D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2DD6FE-F6DA-4EBC-A5B2-6306F6329D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2DD6FE-F6DA-4EBC-A5B2-6306F6329D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D8E439-A472-4A2C-B2B4-2165AD13BC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D8E439-A472-4A2C-B2B4-2165AD13BC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D8E439-A472-4A2C-B2B4-2165AD13BC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D8E439-A472-4A2C-B2B4-2165AD13BC89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D86B447-9A0F-4AC0-B83A-3BACB13B89F4} = {F833394B-096A-4197-90A7-FE00AA45F711}
+		{7662E824-5B7E-4A6F-92D1-DAEB2D19C37C} = {F833394B-096A-4197-90A7-FE00AA45F711}
+		{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9} = {F833394B-096A-4197-90A7-FE00AA45F711}
+		{5DA2B5FF-05F2-4A17-B105-35C1650C2F13} = {F833394B-096A-4197-90A7-FE00AA45F711}
+		{CD95EB3E-89E7-4013-B248-B90436C58B7C} = {F833394B-096A-4197-90A7-FE00AA45F711}
+		{1A2DD6FE-F6DA-4EBC-A5B2-6306F6329D9B} = {BF2FC097-39C7-4B26-B84A-A4BC648F969E}
+		{E0D8E439-A472-4A2C-B2B4-2165AD13BC89} = {BF2FC097-39C7-4B26-B84A-A4BC648F969E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F096069-C4F3-4187-8800-0811BBDA873A}
