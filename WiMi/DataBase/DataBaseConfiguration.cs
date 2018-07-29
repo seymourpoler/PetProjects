@@ -2,6 +2,6 @@
 {
     public static string ConnectionString
     {
-		get { return "Data Source=WiMi.sqlite;Version=3;"; }
+		get { return "Data Source=WiMi.sqlite;"; }
     }
 }
