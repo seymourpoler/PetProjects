@@ -7,14 +7,11 @@ namespace WiMi.Web.Controllers
     public class PagesController : Controller
     {
         readonly IPageCreator pageCreator;
-        readonly HttpActionResultBuilder httpActionResultBuilder;
 
         public PagesController(
-            IPageCreator pageCreator, 
-            HttpActionResultBuilder httpActionResultBuilder)
+            IPageCreator pageCreator)
         {
             this.pageCreator = pageCreator;
-            this.httpActionResultBuilder = httpActionResultBuilder;
         }
 
         // GET: Pages
@@ -34,20 +31,13 @@ namespace WiMi.Web.Controllers
         {
             if (request is null)
             {
-                //return  httpActionResultBuilder.Build(
-                //    httpStatuscode: HttpStatusCode.BadRequest, 
-                //    entity: nameof(Error.ErrorCodes.RequestCanNotBeNull));
                 return BadRequest(Error.ErrorCodes.RequestCanNotBeNull);
             }
 			var result = pageCreator.Create(new PageCreationRequest(title: request.Title, body: request.Body));
 			if(result.IsOk)
 			{
-                //return httpActionResultBuilder.Build(httpStatuscode: HttpStatusCode.OK);
                 return Ok();
 			}
-            //return httpActionResultBuilder.Build(
-            //	httpStatuscode: HttpStatusCode.BadRequest,
-            //	entity: result.Errors);
             return BadRequest(result.Errors);
         }
 

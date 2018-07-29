@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
-using WiMi.CrossCutting.Serializers;
 using WiMi.Domain;
 using WiMi.Domain.Pages.Create;
 using WiMi.Web.Controllers;
@@ -16,16 +15,12 @@ namespace WiMi.Web.Unit.Test
     public class PagesControllerTests
     {
         Mock<IPageCreator> creator;
-        HttpActionResultBuilder httpActionResultBuilder;
         PagesController controller;
 
         public PagesControllerTests()
         {
             creator = new Mock<IPageCreator>();
-            httpActionResultBuilder = new HttpActionResultBuilder(new JsonSerializer());
-            controller = new PagesController(
-                pageCreator: creator.Object,
-                httpActionResultBuilder: httpActionResultBuilder);
+            controller = new PagesController(pageCreator: creator.Object);
         }
 
         [Fact]

@@ -26,7 +26,6 @@ namespace WiMi.Web
 			services.AddTransient<IPageRepository, PageRepository>();
             services.AddTransient<IPageCreator, PageCreator>();
             services.AddTransient<ISerializer, JsonSerializer>();
-            services.AddTransient<HttpActionResultBuilder>();
 
             services.AddMvc();
         }
