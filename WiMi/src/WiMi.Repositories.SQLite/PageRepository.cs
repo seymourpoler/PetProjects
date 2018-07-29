@@ -19,7 +19,7 @@ namespace WiMi.Repositories.SQLite
             {
                 connection.Open();
                 string sql = $"INSER INTO Pages (Id, Title, Body, CreationDate) VALUES ({page.Id.ToString()}, {page.Title}, {page.Body}, {page.CreationDate.ToString("yyyy-MM-dd HH:mm:ss")})";
-                using (var command = new SQLiteCommand(connection))
+                using (var command = new SQLiteCommand(commandText: sql, connection: connection))
                 {
                     //command.CommandText = "INSERT INTO Language(LangTitle) VALUES (@Lang)";
                     //command.Prepare();

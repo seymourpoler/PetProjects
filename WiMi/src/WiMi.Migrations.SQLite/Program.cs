@@ -21,7 +21,7 @@ namespace WiMi.Migrations.SQLite
                 .AddFluentMigratorCore()
                 .ConfigureRunner(rb => rb
                     .AddSQLite() //TODO: locate dataBase
-				    .WithGlobalConnectionString(DataBaseConfiguration.ConnectionString)
+				    .WithGlobalConnectionString(new DataBaseConfiguration().ConnectionString)
                     .ScanIn(Assembly.GetExecutingAssembly()).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 .BuildServiceProvider(false);

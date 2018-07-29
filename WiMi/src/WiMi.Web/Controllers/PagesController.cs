@@ -1,12 +1,10 @@
-﻿using System.Net;
-using System.Web.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WiMi.Domain;
 using WiMi.Domain.Pages.Create;
 
 namespace WiMi.Web.Controllers
 {
-	public class PagesController : Controller
+    public class PagesController : Controller
     {
         readonly IPageCreator pageCreator;
         readonly HttpActionResultBuilder httpActionResultBuilder;
@@ -31,23 +29,26 @@ namespace WiMi.Web.Controllers
             return View();
         }
 
-        [System.Web.Http.HttpPost]
-        public IHttpActionResult Create([System.Web.Http.FromBody]Models.PageCreationRequest request)
+        [HttpPost]
+        public IActionResult Create([FromBody]Models.PageCreationRequest request)
         {
             if (request is null)
             {
-                return  httpActionResultBuilder.Build(
-                    httpStatuscode: HttpStatusCode.BadRequest, 
-                    entity: nameof(Error.ErrorCodes.RequestCanNotBeNull));
+                //return  httpActionResultBuilder.Build(
+                //    httpStatuscode: HttpStatusCode.BadRequest, 
+                //    entity: nameof(Error.ErrorCodes.RequestCanNotBeNull));
+                return BadRequest(Error.ErrorCodes.RequestCanNotBeNull);
             }
 			var result = pageCreator.Create(new PageCreationRequest(title: request.Title, body: request.Body));
 			if(result.IsOk)
 			{
-				return httpActionResultBuilder.Build(httpStatuscode: HttpStatusCode.OK);
+                //return httpActionResultBuilder.Build(httpStatuscode: HttpStatusCode.OK);
+                return Ok();
 			}
-			return httpActionResultBuilder.Build(
-				httpStatuscode: HttpStatusCode.BadRequest,
-				entity: result.Errors);
+            //return httpActionResultBuilder.Build(
+            //	httpStatuscode: HttpStatusCode.BadRequest,
+            //	entity: result.Errors);
+            return BadRequest(result.Errors);
         }
 
         // GET: Pages/Edit/5

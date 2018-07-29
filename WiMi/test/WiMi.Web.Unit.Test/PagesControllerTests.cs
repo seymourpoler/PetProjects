@@ -1,8 +1,10 @@
-﻿using Moq;
+﻿using Microsoft.AspNetCore.Mvc;
+using Moq;
 using Shouldly;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Net;
-using System.Web.Http.Results;
 using WiMi.CrossCutting.Serializers;
 using WiMi.Domain;
 using WiMi.Domain.Pages.Create;
@@ -11,7 +13,7 @@ using Xunit;
 
 namespace WiMi.Web.Unit.Test
 {
-	public class PagesControllerTests
+    public class PagesControllerTests
     {
         Mock<IPageCreator> creator;
         HttpActionResultBuilder httpActionResultBuilder;
@@ -29,10 +31,10 @@ namespace WiMi.Web.Unit.Test
         [Fact]
         public void return_bad_request_when_request_is_null()
         {
-            var result = controller.Create(request: null) as ResponseMessageResult;
+            var result = controller.Create(request: null) as BadRequestObjectResult;
 
-            result.Response.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
-            result.Response.Content.ReadAsStringAsync().Result.ShouldContain(nameof(Error.ErrorCodes.RequestCanNotBeNull));
+            result.StatusCode.Value.ShouldBe((int)HttpStatusCode.BadRequest);
+            ((Error.ErrorCodes)result.Value).ShouldBe(Error.ErrorCodes.RequestCanNotBeNull);
         }
         
         [Fact]
@@ -44,11 +46,13 @@ namespace WiMi.Web.Unit.Test
 			creator
 				.Setup(x => x.Create(It.Is<PageCreationRequest>(y => y.Title == title)))
 				.Returns(executionResult);
-			
-			var result = controller.Create(new Models.PageCreationRequest{Title = title, Body = body}) as ResponseMessageResult;
+            var request = new Models.PageCreationRequest { Title = title, Body = body };
 
-			result.Response.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
-			result.Response.Content.ReadAsStringAsync().Result.ShouldContain(nameof(Error.ErrorCodes.Required));
+            var result = controller.Create(request) as BadRequestObjectResult;
+
+			result.StatusCode.Value.ShouldBe((int)HttpStatusCode.BadRequest);
+            ((ReadOnlyCollection<Error>)result.Value).First().FieldId.ShouldContain("Title");
+            ((ReadOnlyCollection<Error>)result.Value).First().ErrorCode.ShouldContain(nameof(Error.ErrorCodes.Required));
 		}
 
 		[Fact]
@@ -59,10 +63,11 @@ namespace WiMi.Web.Unit.Test
             creator
 				.Setup(x => x.Create(It.Is<PageCreationRequest>(y => y.Body == body)))
 				.Returns(new ServiceExecutionResult());
+            var request = new Models.PageCreationRequest { Title = title, Body = body };
 
-            var result = controller.Create(new Models.PageCreationRequest { Title = title, Body = body }) as ResponseMessageResult;
+            var result = controller.Create(request) as OkResult;
 
-			result.Response.StatusCode.ShouldBe(HttpStatusCode.OK);
+			result.StatusCode.ShouldBe((int)HttpStatusCode.OK);
         }
     }
 }
