@@ -1,6 +1,6 @@
-﻿public  class DataBaseConfiguration
+﻿public class DataBaseConfiguration
 {
-    public static string ConnectionString
+    public string ConnectionString
     {
 		get { return "Data Source=WiMi.sqlite;"; }
     }
