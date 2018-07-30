@@ -17,6 +17,11 @@ window.Peper = window.Perper|| {};
             control.innerHTML = '';
         };
 
+        self.showText = function (text) {
+            control.style.display = 'inline';
+            control.innerHTML = text;
+        };
+
         self.show = function(){
             control.style.display = 'inline';
             //control.style.visibility='visible';

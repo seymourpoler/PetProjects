@@ -62,7 +62,7 @@
         };
 
         self.showCreatedPageMessage = function(){
-            self._lblInformation.show('page saved');
+            self._lblInformation.showText('page saved');
         };
 
         self.redirectToPageBefore = function(){
