@@ -10,15 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\DataBase\WiMi.sqlite" Link="WiMi.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentMigrator" Version="3.1.3" />
     <PackageReference Include="FluentMigrator.Runner" Version="3.1.3" />
     <PackageReference Include="FluentMigrator.Runner.SQLite" Version="3.1.3" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="2.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\DataBase\WiMi.sqlite">
-      <Link>WiMi.sqlite</Link>
-    </None>
   </ItemGroup>
 </Project>

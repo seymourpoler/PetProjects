@@ -7,10 +7,9 @@
   <ItemGroup>
     <Compile Include="..\..\DataBase\DataBaseConfiguration.cs" Link="DataBaseConfiguration.cs" />
   </ItemGroup>
+
   <ItemGroup>
-    <None Include="..\DataBase\WiMi.sqlite">
-      <Link>WiMi.sqlite</Link>
-    </None>
+    <None Include="..\..\DataBase\WiMi.sqlite" Link="WiMi.sqlite" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.108" />

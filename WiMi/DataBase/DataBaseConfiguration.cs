@@ -2,6 +2,6 @@
 {
     public string ConnectionString
     {
-		get { return "Data Source=WiMi.sqlite;"; }
+		get { return @"Data Source=..\..\DataBase\WiMi.sqlite;"; }
     }
 }
