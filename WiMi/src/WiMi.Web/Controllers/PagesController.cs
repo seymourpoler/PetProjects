@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using WiMi.Domain;
 using WiMi.Domain.Pages.Create;
 
@@ -39,6 +40,12 @@ namespace WiMi.Web.Controllers
                 return Ok();
 			}
             return BadRequest(result.Errors);
+        }
+
+        [HttpGet]
+        public IActionResult Find()
+        {
+            throw new NotImplementedException();
         }
 
         // GET: Pages/Edit/5

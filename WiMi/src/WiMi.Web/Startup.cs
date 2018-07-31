@@ -48,8 +48,13 @@ namespace WiMi.Web
             {
                 routes.MapRoute(
                     name: "page index",
-                    template: "pages",
+                    template: "pages/index",
                     defaults: new { controller = "Pages", action = "Index" });
+
+                routes.MapRoute(
+                    name: "page index",
+                    template: "api/pages",
+                    defaults: new { controller = "Pages", action = "Find" });
 
                 routes.MapRoute(
                     name: "page new",
