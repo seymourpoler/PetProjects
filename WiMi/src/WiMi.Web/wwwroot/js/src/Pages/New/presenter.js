@@ -1,5 +1,5 @@
 ﻿(function (WiMi) {
-    function IndexPresenter(view, client) {
+    function Presenter(view, client) {
         var self = this;
         view.subscribeToCreationPageRequested(creationPageRequestedHandler);
         view.subscribeToClosingPageRequested(closingPageRequestedHandler);
@@ -29,7 +29,7 @@
         }
     }
 
-    function IndexView() {
+    function View() {
         var self = this;
         var creationPageRequestedHandler = function () { };
         var closingPageRequestedHandler = function(){};
@@ -70,7 +70,7 @@
         };
     }
 
-    function IndexClient(http) {
+    function Client(http) {
         var self = this;
 
         self.save = function (request, successHandler, errorHandler) {
@@ -78,14 +78,14 @@
         };
     }
 
-    function createIndexPresenter() {
-        return new WiMi.Pages.Index.IndexPresenter(
-            WiMi.Pages.Index.createIndexView(),
-            WiMi.Pages.Index.createIndexClient());
+    function createPresenter() {
+        return new WiMi.Pages.New.Presenter(
+            WiMi.Pages.New.createView(),
+            WiMi.Pages.New.createClient());
     }
 
-    function createIndexView() {
-        var view = new WiMi.Pages.Index.IndexView();
+    function createView() {
+        var view = new WiMi.Pages.New.View();
         view._txtTitle = new Peper.InputText('txtTitle');
         view._txtBody = new Peper.InputText('txtBody');
         view._btnCreate = new Peper.Button('btnCreate');
@@ -95,15 +95,15 @@
         return view;
     }
 
-    function createIndexClient() {
-        return new WiMi.Pages.Index.IndexClient(new WiMi.Http());
+    function createClient() {
+        return new WiMi.Pages.New.Client(new WiMi.Http());
     }
     
-    WiMi.namespace("Pages.Index");
-    WiMi.Pages.Index.IndexPresenter = IndexPresenter;
-    WiMi.Pages.Index.createIndexPresenter = createIndexPresenter;
-    WiMi.Pages.Index.IndexView = IndexView;
-    WiMi.Pages.Index.createIndexView = createIndexView;
-    WiMi.Pages.Index.IndexClient = IndexClient;
-    WiMi.Pages.Index.createIndexClient = createIndexClient;
+    WiMi.namespace("Pages.New");
+    WiMi.Pages.New.Presenter = Presenter;
+    WiMi.Pages.New.createPresenter = createPresenter;
+    WiMi.Pages.New.View = View;
+    WiMi.Pages.New.createView = createView;
+    WiMi.Pages.New.Client = Client;
+    WiMi.Pages.New.createClient = createClient;
 })(WiMi || {})

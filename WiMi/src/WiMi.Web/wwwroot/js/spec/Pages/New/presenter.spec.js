@@ -1,10 +1,10 @@
-﻿describe('Index Presenter', function () {
+﻿describe('Presenter', function () {
     var presenter, view, client;
 
     beforeEach(function () {
-        view = WiMi.Pages.Index.createIndexView();
+        view = WiMi.Pages.New.createView();
         WiMi.spyAllMethodsOf(view);
-        client = WiMi.Pages.Index.createIndexClient();
+        client = WiMi.Pages.New.createClient();
         WiMi.spyAllMethodsOf(client);
     });
 
@@ -25,9 +25,9 @@
             client.save.and.callFake(function (request, successHandler, errorHandler) {
                 expect(request.title).toBe(title);
                 expect(request.body).toBe(body);
-                errorHandler({ statusCode: WiMi.httpStatusCode.internalServerError, errors: [] })
+                errorHandler({ status: WiMi.httpStatusCode.internalServerError, errors: [] })
             });
-            presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
+            presenter = new WiMi.Pages.New.Presenter(view, client);
 
             creationPageRequestedHandler();
 
@@ -43,9 +43,9 @@
             client.save.and.callFake(function (request, successHandler, errorHandler) {
                 expect(request.title).toBe(title);
                 expect(request.body).toBe(body);
-                errorHandler({ statusCode: WiMi.httpStatusCode.badRequest, errors: errors })
+                errorHandler({ status: WiMi.httpStatusCode.badRequest, errors: errors })
             });
-            presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
+            presenter = new WiMi.Pages.New.Presenter(view, client);
 
             creationPageRequestedHandler();
 
@@ -62,7 +62,7 @@
                 expect(request.body).toBe(body);
                 successHandler();
             });
-            presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
+            presenter = new WiMi.Pages.New.Presenter(view, client);
 
             creationPageRequestedHandler();
 
@@ -80,7 +80,7 @@
         });
         
         it('redirects to page before', function(){
-            presenter = new WiMi.Pages.Index.IndexPresenter(view, client);
+            presenter = new WiMi.Pages.New.Presenter(view, client);
 
             closingPageRequestedHandler();
 

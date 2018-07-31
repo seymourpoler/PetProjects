@@ -15,8 +15,8 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         files: [
             'wwwroot/lib/*.js',
-            'wwwroot/js/src/Pages/*.js',
-            'wwwroot/js/spec/Pages/*.spec.js'
+            'wwwroot/js/src/Pages/**/*.js',
+            'wwwroot/js/spec/Pages/**/*.spec.js'
         ],
 
         // list of files to exclude
