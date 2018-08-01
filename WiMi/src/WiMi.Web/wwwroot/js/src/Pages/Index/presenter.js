@@ -1,18 +1,29 @@
 ﻿(function (WiMi) {
     function Presenter(view, client) {
+        var self = this;
+        client.find(successHandler, errorHandler);
+
+        function successHandler(pages) {
+            view.showPages(pages);
+        }
+        function errorHandler() {
+            throw 'not implemented';
+        }
     }
 
-    function View(view, client) {
-    }
+    function View() {
+        var self = this;
 
-    function Client(view, client) {
+        self.showPages = function (pages) {
+            throw 'not implemented';
+        };
     }
 
 
     function Client(http) {
         var self = this;
 
-        self.save = function (successHandler, errorHandler) {
+        self.find = function (successHandler, errorHandler) {
             http.get('/api/pages', successHandler, errorHandler);
         };
     }
