@@ -1,0 +1,33 @@
+<Project>
+	<PropertyGroup Label="SDK Versions">
+		<NetCoreTargetVersion>netcoreapp2.1</NetCoreTargetVersion> 
+	</PropertyGroup>
+
+	<PropertyGroup Label="Package Versions">  
+		<MicrosoftAspNetCoreAllPackageVersion>2.0.0</MicrosoftAspNetCoreAllPackageVersion>     
+		<MicrosoftAspNetCoreSpaServicesExtensionsPackageVersion>2.0.0-rc1-final</MicrosoftAspNetCoreSpaServicesExtensionsPackageVersion>    
+		<MicrosoftVisualStudioWebCodeGenerationDesignPackageVersion>2.0.3</MicrosoftVisualStudioWebCodeGenerationDesignPackageVersion>
+		<SwashbuckleAspNetCorePackageVersion>3.0.0</SwashbuckleAspNetCorePackageVersion>
+		<SwashbuckleAspNetCoreSwaggerUIPackageVersion>3.0.0</SwashbuckleAspNetCoreSwaggerUIPackageVersion>
+		<MicrosoftEntityFrameworkCoreSqlServerPackageVersion>2.1.1</MicrosoftEntityFrameworkCoreSqlServerPackageVersion>
+		<MicrosoftExtensionsConfigurationPackageVersion>2.1.1</MicrosoftExtensionsConfigurationPackageVersion>
+		<MicrosoftExtensionsConfigurationJsonPackageVersion>2.1.1</MicrosoftExtensionsConfigurationJsonPackageVersion>
+		<SystemDataCommonPackageVersion>4.3.0</SystemDataCommonPackageVersion>
+		<SystemDataSqlClientPackageVersion>4.5.1</SystemDataSqlClientPackageVersion>
+		<MicrosoftAzureDocumentDBCorePackageVersion>1.9.1</MicrosoftAzureDocumentDBCorePackageVersion>
+		<MicrosoftExtensionsConfigurationPackageVersion>2.1.1</MicrosoftExtensionsConfigurationPackageVersion>
+		<MicrosoftExtensionsConfigurationJsonPackageVersion>2.1.1</MicrosoftExtensionsConfigurationJsonPackageVersion>
+		<NewtonsoftJsonPackageVersion>11.0.2</NewtonsoftJsonPackageVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Test Package Versions">
+		<MoqPackageVersion>4.9.0</MoqPackageVersion>
+		<ShouldlyPackageVersion>3.0.0</ShouldlyPackageVersion>
+		<xunitPackageVersion>2.4.0</xunitPackageVersion>
+		<xunitrunnervisualstudioPackageVersion>2.4.0</xunitrunnervisualstudioPackageVersion>
+	</PropertyGroup>
+
+  <PropertyGroup Label="CLI Tools Versions">
+    <MicrosoftVisualStudioWebCodeGenerationToolsPackageVersion>2.0.1</MicrosoftVisualStudioWebCodeGenerationToolsPackageVersion>
+  </PropertyGroup>
+</Project>
