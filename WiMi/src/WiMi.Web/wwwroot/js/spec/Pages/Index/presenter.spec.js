@@ -17,4 +17,23 @@
 
         expect(view.showPages).toHaveBeenCalledWith(pages);
     });
+
+    describe('when edit page is requested', function () {
+        var pageEditionRequestedHandler = function () { };
+
+        beforeEach(function () {
+            view.subscribeToEditionPageRequested.and.callFake(function (handler) {
+                pageEditionRequestedHandler = handler;
+            });
+        });
+       
+        it('redirect to page edition', function () {
+            const pageId = 'page-id';
+            presenter = new WiMi.Pages.Index.Presenter(view, client);
+
+            pageEditionRequestedHandler(pageId);
+
+            expect(view.redirecToEditionPage).toHaveBeenCalledWith(pageId);
+        });
+    });
 });

@@ -1,18 +1,35 @@
 ﻿(function (WiMi) {
     function Presenter(view, client) {
         var self = this;
-        client.find(successHandler, errorHandler);
-
-        function successHandler(pages) {
-            view.showPages(pages);
+        view.subscribeToEditionPageRequested(editionPageRequestedHandler);
+        findPages();
+        function editionPageRequestedHandler(pageId){
+            view.redirecToEditionPage(pageId);
         }
-        function errorHandler() {
-            throw 'not implemented';
+
+        function findPages() {
+            client.find(successHandler, errorHandler);
+
+            function successHandler(pages) {
+                view.showPages(pages);
+            }
+            function errorHandler() {
+                throw 'not implemented';
+            }
         }
     }
 
     function View() {
         var self = this;
+        var editionPageRequestedHandler = function () { };
+
+        self.subscribeToEditionPageRequested = function (handler) {
+            editionPageRequestedHandler = handler;
+        };
+
+        self.redirecToEditionPage = function (pageId) {
+            throw 'not implemented';
+        };
 
         self.showPages = function (pages) {
             throw 'not implemented';
