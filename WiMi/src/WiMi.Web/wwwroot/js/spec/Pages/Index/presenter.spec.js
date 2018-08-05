@@ -27,7 +27,7 @@
             });
         });
        
-        it('redirect to page edition', function () {
+        it('redirects to page edition', function () {
             const pageId = 'page-id';
             presenter = new WiMi.Pages.Index.Presenter(view, client);
 
