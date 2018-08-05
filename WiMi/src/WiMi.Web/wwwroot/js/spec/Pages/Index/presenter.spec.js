@@ -33,7 +33,24 @@
 
             pageEditionRequestedHandler(pageId);
 
-            expect(view.redirecToEditionPage).toHaveBeenCalledWith(pageId);
+            expect(view.redirectToEditionPage).toHaveBeenCalledWith(pageId);
+        });
+    });
+
+    describe('when creation new page is requested', function () {
+        var creationNewPageRequestedHandler = function () { };
+
+        beforeEach(function () {
+            view.subscribeToCreationNewPageRequested.and.callFake(function (handler) {
+                creationNewPageRequestedHandler = handler;
+            });
+        });
+        it('redirects to page creation new', function () {
+            presenter = new WiMi.Pages.Index.Presenter(view, client);
+
+            creationNewPageRequestedHandler();
+
+            expect(view.redirectToCreationNewPage).toHaveBeenCalled();
         });
     });
 });

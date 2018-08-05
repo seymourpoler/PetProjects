@@ -2,9 +2,13 @@
     function Presenter(view, client) {
         var self = this;
         view.subscribeToEditionPageRequested(editionPageRequestedHandler);
+        view.subscribeToCreationNewPageRequested(creationNewPageRequestedHandler);
         findPages();
         function editionPageRequestedHandler(pageId){
-            view.redirecToEditionPage(pageId);
+            view.redirectToEditionPage(pageId);
+        }
+        function creationNewPageRequestedHandler() {
+            view.redirectToCreationNewPage();
         }
 
         function findPages() {
@@ -27,7 +31,15 @@
             editionPageRequestedHandler = handler;
         };
 
-        self.redirecToEditionPage = function (pageId) {
+        self.subscribeToCreationNewPageRequested = function (handler) {
+            creationNewPageRequestedHandler = handler;  
+        };
+
+        self.redirectToEditionPage = function (pageId) {
+            throw 'not implemented';
+        };
+
+        self.redirectToCreationNewPage = function () {
             throw 'not implemented';
         };
 
