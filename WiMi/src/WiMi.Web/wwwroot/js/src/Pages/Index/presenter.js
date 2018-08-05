@@ -32,7 +32,8 @@
         };
 
         self.subscribeToCreationNewPageRequested = function (handler) {
-            creationNewPageRequestedHandler = handler;  
+            creationNewPageRequestedHandler = handler;
+            view._btnNew.on('click', creationNewPageRequestedHandler);
         };
 
         self.redirectToEditionPage = function (pageId) {
@@ -65,7 +66,7 @@
 
     function createView() {
         var view = new WiMi.Pages.Index.View();
-        
+        view._btnNew = new Peper.Button('btnNew');
         return view;
     }
 
