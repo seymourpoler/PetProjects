@@ -26,6 +26,12 @@ namespace WiMi.Web.Controllers
             return View();
         }
 
+        // GET: Pages/Edit/5
+        public IActionResult Edit(int id)
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult Create([FromBody]Models.PageCreationRequest request)
         {
@@ -41,10 +47,15 @@ namespace WiMi.Web.Controllers
             return BadRequest(result.Errors);
         }
 
-        // GET: Pages/Edit/5
-        public IActionResult Edit(int id)
+        [HttpGet]
+        public IActionResult Find()
         {
-            return View();
+            var result = pageCreator.Create(new PageCreationRequest(title: request.Title, body: request.Body));
+            if (result.IsOk)
+            {
+                return Ok();
+            }
+            return BadRequest(result.Errors);
         }
     }
 }
