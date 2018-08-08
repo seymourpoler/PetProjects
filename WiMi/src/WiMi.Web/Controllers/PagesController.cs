@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using WiMi.Domain;
 using WiMi.Domain.Pages.Create;
 
@@ -49,6 +50,15 @@ namespace WiMi.Web.Controllers
 
         [HttpGet]
         public IActionResult Find()
+<<<<<<< HEAD
+=======
+        {
+            throw new NotImplementedException();
+        }
+
+        // GET: Pages/Edit/5
+        public IActionResult Edit(int id)
+>>>>>>> 9cca9fd40531ad0c81c79343c7d8444c72db0e56
         {
             var result = pageCreator.Create(new PageCreationRequest(title: request.Title, body: request.Body));
             if (result.IsOk)
