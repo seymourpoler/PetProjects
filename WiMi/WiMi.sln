@@ -27,6 +27,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Domain.Unit.Test", "te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Web.Unit.Test", "test\WiMi.Web.Unit.Test\WiMi.Web.Unit.Test.csproj", "{E0D8E439-A472-4A2C-B2B4-2165AD13BC89}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{AC1A5FCA-DF4D-4B2A-A38D-37193483B8AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF02CF25-7ED6-4E28-B775-8C42367B80C9}"
+	ProjectSection(SolutionItems) = preProject
+		dependencies.props = dependencies.props
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
