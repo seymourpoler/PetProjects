@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Net.Http;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WiMi.CrossCutting.Serializers;
 using WiMi.Domain.Pages;
 using WiMi.Domain.Pages.Create;
+using WiMi.Domain.Pages.Find;
 using WiMi.Repositories.SQLite;
 
 namespace WiMi.Web
@@ -23,6 +25,7 @@ namespace WiMi.Web
         {
             services.AddTransient<DataBaseConfiguration>();
 			services.AddTransient<IPageRepository, PageRepository>();
+			services.AddTransient<IPageFinder, PageFinder>();
             services.AddTransient<IPageCreator, PageCreator>();
             services.AddTransient<ISerializer, JsonSerializer>();
 
@@ -52,13 +55,9 @@ namespace WiMi.Web
                     defaults: new { controller = "Pages", action = "Index" });
 
                 routes.MapRoute(
-<<<<<<< HEAD
-                    name: "pagefinder",
-=======
-                    name: "page index",
->>>>>>> 9cca9fd40531ad0c81c79343c7d8444c72db0e56
-                    template: "api/pages",
-                    defaults: new { controller = "Pages", action = "Find" });
+					name: "pagefinder",
+					template: "api/pages",
+					defaults: new { controller = "FindPages", action = "Find", httpMethod = new HttpMethod("GET") });
 
                 routes.MapRoute(
                     name: "page new",
@@ -68,7 +67,7 @@ namespace WiMi.Web
                 routes.MapRoute(
                     name: "pagecreator",
                     template: "api/pages",
-                    defaults: new { controller = "Pages", action = "Create" });
+					defaults: new { controller = "CreatePage", action = "Create", httpMethod = new HttpMethod("POST") });
 
                 routes.MapRoute(
                     name: "default",

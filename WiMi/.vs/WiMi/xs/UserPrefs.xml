@@ -1,20 +1,30 @@
-﻿<Properties StartupConfiguration="{4DDA09B2-5C0E-4A54-A2C0-9F434F4CB1AB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WiMi.Web.Unit.Test/PagesControllerTests.cs">
+﻿<Properties StartupConfiguration="{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/WiMi.Web/Startup.cs">
     <Files>
-      <File FileName="WiMi.Migrations.SQLite/Program.cs" Line="24" Column="75" />
-      <File FileName="WiMi.Migrations.SQLite/Migrations/201807261444147_CreatePagesTable.cs" Line="1" Column="1" />
-      <File FileName="DataBase/DataBaseConfiguration.cs" Line="5" Column="51" />
-      <File FileName="WiMi.Web/Controllers/PagesController.cs" Line="5" Column="1" />
-      <File FileName="WiMi.Web/Startup.cs" Line="26" Column="36" />
-      <File FileName="WiMi.Domain/Pages/Page.cs" Line="3" Column="28" />
-      <File FileName="WiMi.Domain/Pages/Create/PageCreationRequest.cs" Line="1" Column="35" />
-      <File FileName="WiMi.Domain/Pages/Create/PageCreator.cs" Line="7" Column="1" />
-      <File FileName="WiMi.Domain/Pages/IPageRepository.cs" Line="1" Column="1" />
-      <File FileName="WiMi.Domain/Error.cs" Line="15" Column="35" />
-      <File FileName="WiMi.Domain.Unit.Test/PageCreatorTests.cs" Line="14" Column="10" />
-      <File FileName="WiMi.Domain.Unit.Test/Pages/PageCreatorTests.cs" Line="14" Column="10" />
-      <File FileName="WiMi.Web.Unit.Test/PagesControllerTests.cs" Line="9" Column="28" />
+      <File FileName="src/WiMi.Web/Controllers/Pages/CreatePageController.cs" Line="27" Column="10" />
+      <File FileName="test/WiMi.Web.Unit.Test/CreatePageControllerTests.cs" Line="31" Column="70" />
+      <File FileName="src/WiMi.Web/Startup.cs" Line="59" Column="96" />
+      <File FileName="src/WiMi.Web/Controllers/Pages/FindPagesController.cs" Line="1" Column="22" />
+      <File FileName="test/WiMi.Web.Unit.Test/FindPagesControllerTests.cs" Line="14" Column="33" />
+      <File FileName="dependencies.props" Line="14" Column="75" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="WiMi" expanded="True" selected="True">
+            <Node name="test" expanded="True">
+              <Node name="WiMi.Domain.Unit.Test" expanded="True">
+                <Node name="WiMi" expanded="True">
+                  <Node name="Domain" expanded="True">
+                    <Node name="Unit" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -25,4 +35,5 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.WiMi.Web PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.src.WiMi.Migrations.SQLite PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

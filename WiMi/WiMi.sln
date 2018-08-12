@@ -13,19 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F833394B-096
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BF2FC097-39C7-4B26-B84A-A4BC648F969E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.CrossCutting", "src\WiMi.CrossCutting\WiMi.CrossCutting.csproj", "{1D86B447-9A0F-4AC0-B83A-3BACB13B89F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.CrossCutting", "src\WiMi.CrossCutting\WiMi.CrossCutting.csproj", "{1D86B447-9A0F-4AC0-B83A-3BACB13B89F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Domain", "src\WiMi.Domain\WiMi.Domain.csproj", "{7662E824-5B7E-4A6F-92D1-DAEB2D19C37C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain", "src\WiMi.Domain\WiMi.Domain.csproj", "{7662E824-5B7E-4A6F-92D1-DAEB2D19C37C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Migrations.SQLite", "src\WiMi.Migrations.SQLite\WiMi.Migrations.SQLite.csproj", "{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Migrations.SQLite", "src\WiMi.Migrations.SQLite\WiMi.Migrations.SQLite.csproj", "{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Repositories.SQLite", "src\WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj", "{5DA2B5FF-05F2-4A17-B105-35C1650C2F13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Repositories.SQLite", "src\WiMi.Repositories.SQLite\WiMi.Repositories.SQLite.csproj", "{5DA2B5FF-05F2-4A17-B105-35C1650C2F13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Web", "src\WiMi.Web\WiMi.Web.csproj", "{CD95EB3E-89E7-4013-B248-B90436C58B7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Web", "src\WiMi.Web\WiMi.Web.csproj", "{CD95EB3E-89E7-4013-B248-B90436C58B7C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Domain.Unit.Test", "test\WiMi.Domain.Unit.Test\WiMi.Domain.Unit.Test.csproj", "{1A2DD6FE-F6DA-4EBC-A5B2-6306F6329D9B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Domain.Unit.Test", "test\WiMi.Domain.Unit.Test\WiMi.Domain.Unit.Test.csproj", "{1A2DD6FE-F6DA-4EBC-A5B2-6306F6329D9B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiMi.Web.Unit.Test", "test\WiMi.Web.Unit.Test\WiMi.Web.Unit.Test.csproj", "{E0D8E439-A472-4A2C-B2B4-2165AD13BC89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiMi.Web.Unit.Test", "test\WiMi.Web.Unit.Test\WiMi.Web.Unit.Test.csproj", "{E0D8E439-A472-4A2C-B2B4-2165AD13BC89}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{AC1A5FCA-DF4D-4B2A-A38D-37193483B8AA}"
 EndProject
