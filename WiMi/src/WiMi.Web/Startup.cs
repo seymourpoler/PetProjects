@@ -52,7 +52,7 @@ namespace WiMi.Web
                 routes.MapRoute(
                     name: "page index",
                     template: "pages/index",
-                    defaults: new { controller = "Pages", action = "Index" });
+                    defaults: new { controller = "FindPages", action = "Index" });
 
                 routes.MapRoute(
 					name: "pagefinder",
@@ -62,7 +62,7 @@ namespace WiMi.Web
                 routes.MapRoute(
                     name: "page new",
                     template: "pages/new",
-                    defaults: new { controller = "Pages", action = "New" });
+                    defaults: new { controller = "CreatePage", action = "New" });
 
                 routes.MapRoute(
                     name: "pagecreator",
