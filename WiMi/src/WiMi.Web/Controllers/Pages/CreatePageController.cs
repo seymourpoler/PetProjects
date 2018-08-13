@@ -17,7 +17,7 @@ namespace WiMi.Web.Controllers.Pages
         // GET: Pages/New
         public IActionResult New()
         {
-            return View("/views/Pages/New.cshtml");
+			return View("~/Views/Pages/New.cshtml");
         }
 
         [HttpPost]
