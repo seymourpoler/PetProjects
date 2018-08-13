@@ -12,10 +12,9 @@ namespace WiMi.Web.Controllers.Pages
 			this.pageFinder = pageFinder;
 		}
 
-		// GET: Pages
         public IActionResult Index()
         {
-            return View();
+			return View("~/Views/Pages/Index.cshtml");
         }
 
 		[HttpGet]

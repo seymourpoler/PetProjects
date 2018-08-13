@@ -4,9 +4,9 @@ namespace WiMi.Domain.Pages.Create
 {
     public class PageCreator : IPageCreator
     {
-		readonly IPageRepository repository;
+		readonly ISavePageRepository repository;
 
-		public PageCreator(IPageRepository repository)
+		public PageCreator(ISavePageRepository repository)
 		{
 			this.repository = repository;
 		}

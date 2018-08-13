@@ -4,14 +4,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WiMi.CrossCutting.Serializers;
-using WiMi.Domain.Pages;
 using WiMi.Domain.Pages.Create;
 using WiMi.Domain.Pages.Find;
 using WiMi.Repositories.SQLite;
 
 namespace WiMi.Web
 {
-    public class Startup
+	public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -24,7 +23,8 @@ namespace WiMi.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<DataBaseConfiguration>();
-			services.AddTransient<IPageRepository, PageRepository>();
+			services.AddTransient<IFindPageRepository, FindPageRepository>();
+			services.AddTransient<ISavePageRepository, SavePageRepository>();
 			services.AddTransient<IPageFinder, PageFinder>();
             services.AddTransient<IPageCreator, PageCreator>();
             services.AddTransient<ISerializer, JsonSerializer>();

@@ -2,7 +2,7 @@
 
 namespace WiMi.Domain.Pages.Find
 {
-    public interface IFindRepository
+    public interface IFindPageRepository
     {
         IReadOnlyCollection<PageFindingResponse> Find();
     }

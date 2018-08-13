@@ -14,7 +14,6 @@ namespace WiMi.Web.Controllers.Pages
             this.pageCreator = pageCreator;
         }
 
-        // GET: Pages/New
         public IActionResult New()
         {
 			return View("~/Views/Pages/New.cshtml");

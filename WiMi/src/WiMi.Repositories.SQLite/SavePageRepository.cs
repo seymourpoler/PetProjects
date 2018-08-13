@@ -1,13 +1,14 @@
 ﻿using System.Data.SQLite;
 using WiMi.Domain.Pages;
+using WiMi.Domain.Pages.Create;
 
 namespace WiMi.Repositories.SQLite
 {
-    public class PageRepository : IPageRepository
+    public class SavePageRepository : ISavePageRepository
 	{
         readonly DataBaseConfiguration configuration;
 
-        public PageRepository(DataBaseConfiguration dataBaseConfiguration)
+        public SavePageRepository(DataBaseConfiguration dataBaseConfiguration)
         {
             configuration = dataBaseConfiguration;
         }
