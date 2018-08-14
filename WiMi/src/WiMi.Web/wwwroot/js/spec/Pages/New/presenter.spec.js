@@ -1,4 +1,4 @@
-﻿describe('Presenter', function () {
+﻿describe('New Presenter', function () {
     var presenter, view, client;
 
     beforeEach(function () {
