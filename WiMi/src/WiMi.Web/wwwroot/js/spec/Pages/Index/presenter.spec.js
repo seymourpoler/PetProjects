@@ -1,4 +1,4 @@
-﻿describe('Presenter', function () {
+﻿describe('Index Presenter', function () {
     var presenter, view, client;
 
     beforeEach(function () {
@@ -8,15 +8,28 @@
         WiMi.spyAllMethodsOf(client);
     });
 
-    it('show all pages', function () {
-        var pages = [];
-        client.find.and.callFake(function (successHandler, errorHandler) {
-            successHandler(pages);
-        });
-        presenter = new WiMi.Pages.Index.Presenter(view, client);
+    describe('when show all pages is requested', function () {
+        it('shows error if there is an error', function () {
+            client.find.and.callFake(function (successHandler, errorHandler) {
+                errorHandler();
+            });
+            presenter = new WiMi.Pages.Index.Presenter(view, client);
 
-        expect(view.showPages).toHaveBeenCalledWith(pages);
+            expect(view.showError).toHaveBeenCalledWith();
+        });
+
+        it('show all pages', function () {
+            var pages = [];
+            client.find.and.callFake(function (successHandler, errorHandler) {
+                successHandler(pages);
+            });
+            presenter = new WiMi.Pages.Index.Presenter(view, client);
+
+            expect(view.showPages).toHaveBeenCalledWith(pages);
+        });
     });
+
+    
 
     describe('when edit page is requested', function () {
         var pageEditionRequestedHandler = function () { };
@@ -34,23 +47,6 @@
             pageEditionRequestedHandler(pageId);
 
             expect(view.redirectToEditionPage).toHaveBeenCalledWith(pageId);
-        });
-    });
-
-    describe('when creation new page is requested', function () {
-        var creationNewPageRequestedHandler = function () { };
-
-        beforeEach(function () {
-            view.subscribeToCreationNewPageRequested.and.callFake(function (handler) {
-                creationNewPageRequestedHandler = handler;
-            });
-        });
-        it('redirects to page creation new', function () {
-            presenter = new WiMi.Pages.Index.Presenter(view, client);
-
-            creationNewPageRequestedHandler();
-
-            expect(view.redirectToCreationNewPage).toHaveBeenCalled();
         });
     });
 });

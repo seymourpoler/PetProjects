@@ -17,8 +17,8 @@
             function successHandler(pages) {
                 view.showPages(pages);
             }
-            function errorHandler() {
-                throw 'not implemented';
+            function errorHandler(error) {
+                view.showError();
             }
         }
     }
@@ -47,8 +47,11 @@
         self.showPages = function (pages) {
             throw 'not implemented';
         };
-    }
 
+        self.showError = function () {
+            throw 'not implemented';
+        };
+    }
 
     function Client(http) {
         var self = this;
@@ -67,6 +70,7 @@
     function createView() {
         var view = new WiMi.Pages.Index.View();
         view._btnNew = new Peper.Button('btnNew');
+        view._lblError = new Peper.Label('lblError');
         return view;
     }
 
