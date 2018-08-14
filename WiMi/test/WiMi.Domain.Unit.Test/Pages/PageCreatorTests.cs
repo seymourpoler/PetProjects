@@ -10,12 +10,12 @@ namespace WiMi.Domain.Unit.Test.Pages
 {
     public class PageCreatorTests
     {
-		Mock<IPageRepository> repository;
+		Mock<ISavePageRepository> repository;
         IPageCreator creator;
 
         public PageCreatorTests()
         {
-			repository = new Mock<IPageRepository>();
+			repository = new Mock<ISavePageRepository>();
 			creator = new PageCreator(repository: repository.Object);
         }
 
