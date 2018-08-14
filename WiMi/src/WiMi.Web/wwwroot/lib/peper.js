@@ -201,6 +201,30 @@ window.Peper = window.Perper|| {};
         };
     };
 
+    Peper.List = function (domId) {
+        var self = this;
+        var control = document.getElementById(id);
+
+        self.clear = function () {
+            control.innerHTML = "";
+        };
+
+        self.addItem = function (item) {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(item.name));
+            li.setAttribute("id", item.id);
+            control.appendChild(li);
+        };
+
+        self.addHtmlItem = function (htmlItem) {
+            list.append(htmlItem);
+        };
+
+        self.removeItem = function (itemId) {
+            list.find(itemId).remove();
+        };
+    };
+
     Peper.Redirector = function(){
         var self = this;
 
