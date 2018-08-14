@@ -4,9 +4,9 @@ namespace WiMi.Domain.Pages.Find
 {
     public class PageFinder : IPageFinder
     {
-        readonly IFindRepository repository;
+		readonly IFindPageRepository repository;
 
-        public PageFinder(IFindRepository repository)
+		public PageFinder(IFindPageRepository repository)
         {
             this.repository = repository;
         }

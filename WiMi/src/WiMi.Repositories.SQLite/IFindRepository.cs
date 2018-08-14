@@ -4,7 +4,7 @@ using WiMi.Domain.Pages.Find;
 
 namespace WiMi.Repositories.SQLite
 {
-    public class  FindRepository: IFindRepository
+    public class  FindPageRepository: IFindPageRepository
     {
         public IReadOnlyCollection<PageFindingResponse> Find()
         {

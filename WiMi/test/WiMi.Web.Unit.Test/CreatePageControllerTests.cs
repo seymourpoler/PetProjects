@@ -7,20 +7,22 @@ using System.Linq;
 using System.Net;
 using WiMi.Domain;
 using WiMi.Domain.Pages.Create;
-using WiMi.Web.Controllers;
+using WiMi.Web.Controllers.Pages;
 using Xunit;
 
 namespace WiMi.Web.Unit.Test
 {
-    public class PagesControllerTests
+	public class CreatePageControllerTests
     {
         Mock<IPageCreator> creator;
-        PagesController controller;
 
-        public PagesControllerTests()
+		CreatePageController controller;
+
+        public CreatePageControllerTests()
         {
             creator = new Mock<IPageCreator>();
-            controller = new PagesController(pageCreator: creator.Object);
+			controller = new CreatePageController(
+				pageCreator: creator.Object);
         }
 
         [Fact]
