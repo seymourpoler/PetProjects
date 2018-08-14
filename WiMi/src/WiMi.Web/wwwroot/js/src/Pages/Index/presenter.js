@@ -33,7 +33,7 @@
 
         self.subscribeToCreationNewPageRequested = function (handler) {
             creationNewPageRequestedHandler = handler;
-            view._btnNew.on('click', creationNewPageRequestedHandler);
+            self._btnNew.on('click', creationNewPageRequestedHandler);
         };
 
         self.redirectToEditionPage = function (pageId) {
