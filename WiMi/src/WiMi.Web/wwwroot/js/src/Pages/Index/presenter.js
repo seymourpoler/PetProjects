@@ -37,11 +37,12 @@
         };
 
         self.redirectToEditionPage = function (pageId) {
-            throw 'not implemented';
+            throw 'not implementing';
         };
 
         self.redirectToCreationNewPage = function () {
-            throw 'not implemented';
+            self._redirector.redirect('/pages/new');
+            //window.location.href = '/pages/new';
         };
 
         self.showPages = function (pages) {
@@ -49,7 +50,7 @@
         };
 
         self.showError = function () {
-            throw 'not implemented';
+            self._lblError.showText('there is an error');
         };
     }
 
@@ -71,6 +72,7 @@
         var view = new WiMi.Pages.Index.View();
         view._btnNew = new Peper.Button('btnNew');
         view._lblError = new Peper.Label('lblError');
+        view._redirector = new Peper.Redirector();
         return view;
     }
 
