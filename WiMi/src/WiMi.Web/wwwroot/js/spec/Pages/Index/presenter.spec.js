@@ -29,8 +29,6 @@
         });
     });
 
-    
-
     describe('when edit page is requested', function () {
         var pageEditionRequestedHandler = function () { };
 
