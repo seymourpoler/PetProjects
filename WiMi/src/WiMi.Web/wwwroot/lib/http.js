@@ -29,7 +29,6 @@
                 errorHandler(xmlHttpRequest);
                 return;
             }
-            //xmlHttpRequest.open('POST', url, true);
             xmlHttpRequest.open('POST', url);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
             xmlHttpRequest.send(JSON.stringify(request));
