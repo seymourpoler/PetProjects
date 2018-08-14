@@ -72,6 +72,7 @@
         var view = new WiMi.Pages.Index.View();
         view._btnNew = new Peper.Button('btnNew');
         view._lblError = new Peper.Label('lblError');
+        view._lstPage = new Peper.List('lstPage');
         view._redirector = new Peper.Redirector();
         return view;
     }
