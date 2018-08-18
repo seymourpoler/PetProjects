@@ -203,7 +203,7 @@ window.Peper = window.Perper|| {};
 
     Peper.List = function (domId) {
         var self = this;
-        var control = document.getElementById(id);
+        var control = document.getElementById(domId);
 
         self.clear = function () {
             control.innerHTML = "";
