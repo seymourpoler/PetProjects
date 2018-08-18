@@ -8,8 +8,10 @@
             const title = view.getTitle();
             const body = view.getBody();
             const request = { title: title, body: body };
+            view.showSpinner();
             client.save(request, successHandler, errorHandler);
             function errorHandler(response) {
+                view.hideSpinner();
                 if (response.status === WiMi.httpStatusCode.internalServerError) {
                     view.showInternalServerError();
                     return;
@@ -20,6 +22,7 @@
                 }
             }
             function successHandler() {
+                view.hideSpinner();
                 view.showCreatedPageMessage();
             }
         }
@@ -67,6 +70,14 @@
 
         self.redirectToPageBefore = function(){
             window.history.back();
+        };
+
+        self.showSpinner = function(){
+            throw 'not implemented';
+        };
+
+        self.hideSpinner = function(){
+            throw 'not implemented';
         };
     }
 

@@ -23,6 +23,7 @@
             view.getTitle.and.returnValue(title);
             view.getBody.and.returnValue(body);
             client.save.and.callFake(function (request, successHandler, errorHandler) {
+                expect(view.showSpinner).toHaveBeenCalled();
                 expect(request.title).toBe(title);
                 expect(request.body).toBe(body);
                 errorHandler({ status: WiMi.httpStatusCode.internalServerError, errors: [] })
@@ -32,6 +33,7 @@
             creationPageRequestedHandler();
 
             expect(view.showInternalServerError).toHaveBeenCalled();
+            expect(view.hideSpinner).toHaveBeenCalled();
         });   
 
         it('shows an error if there are errors', function () {
@@ -41,6 +43,7 @@
             view.getTitle.and.returnValue(title);
             view.getBody.and.returnValue(body);
             client.save.and.callFake(function (request, successHandler, errorHandler) {
+                expect(view.showSpinner).toHaveBeenCalled();  
                 expect(request.title).toBe(title);
                 expect(request.body).toBe(body);
                 errorHandler({ status: WiMi.httpStatusCode.badRequest, errors: errors })
@@ -50,14 +53,16 @@
             creationPageRequestedHandler();
 
             expect(view.showErrors).toHaveBeenCalledWith(errors);
+            expect(view.hideSpinner).toHaveBeenCalled();
         });  
         
-        it('shows  message if page is created', function () {
+        it('shows message if page is created', function () {
             const title = 'title';
             const body = 'body';
             view.getTitle.and.returnValue(title);
             view.getBody.and.returnValue(body);
             client.save.and.callFake(function (request, successHandler, errorHandler) {
+                expect(view.showSpinner).toHaveBeenCalled();
                 expect(request.title).toBe(title);
                 expect(request.body).toBe(body);
                 successHandler();
@@ -67,6 +72,7 @@
             creationPageRequestedHandler();
 
             expect(view.showCreatedPageMessage).toHaveBeenCalled();
+            expect(view.hideSpinner).toHaveBeenCalled();
         });
     });
 

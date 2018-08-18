@@ -1,13 +1,8 @@
 ﻿<Properties StartupConfiguration="{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/WiMi.Repositories.SQLite/FindRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/WiMi.Web/wwwroot/js/src/Pages/New/presenter.js">
     <Files>
-      <File FileName="src/WiMi.Domain/Pages/Create/PageCreator.cs" Line="9" Column="27" />
-      <File FileName="src/WiMi.Web/Controllers/Pages/CreatePageController.cs" Line="1" Column="1" />
-      <File FileName="src/WiMi.Web/wwwroot/lib/peper.js" Line="206" Column="52" />
-      <File FileName="src/WiMi.Web/Controllers/Pages/FindPagesController.cs" Line="1" Column="1" />
-      <File FileName="src/WiMi.Web/Startup.cs" Line="1" Column="1" />
-      <File FileName="src/WiMi.Domain/Pages/Find/PageFinder.cs" Line="7" Column="31" />
-      <File FileName="src/WiMi.Repositories.SQLite/FindRepository.cs" Line="8" Column="37" />
+      <File FileName="src/WiMi.Web/wwwroot/js/src/Pages/New/presenter.js" Line="25" Column="17" />
+      <File FileName="src/WiMi.Web/wwwroot/js/spec/Pages/New/presenter.spec.js" Line="56" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

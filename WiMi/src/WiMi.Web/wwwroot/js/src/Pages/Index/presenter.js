@@ -12,12 +12,15 @@
         }
 
         function findPages() {
+            view.showSpinner();
             client.find(successHandler, errorHandler);
 
             function successHandler(pages) {
+                view.hideSpinner();
                 view.showPages(pages);
             }
             function errorHandler(error) {
+                view.hideSpinner();
                 view.showError();
             }
         }
@@ -51,6 +54,14 @@
 
         self.showError = function () {
             self._lblError.showText('there is an error');
+        };
+
+        self.showSpinner = function(){
+            throw 'not implemented';
+        };
+
+        self.hideSpinner = function(){
+            throw 'not implemented';
         };
     }
 
