@@ -3,14 +3,14 @@
         var self = this;
         view.subscribeToEditionPageRequested(editionPageRequestedHandler);
         view.subscribeToCreationNewPageRequested(creationNewPageRequestedHandler);
-        findPages();
-        function editionPageRequestedHandler(pageId){
+        function editionPageRequestedHandler(pageId) {
             view.redirectToEditionPage(pageId);
         }
         function creationNewPageRequestedHandler() {
             view.redirectToCreationNewPage();
         }
 
+        findPages();
         function findPages() {
             view.showSpinner();
             client.find(successHandler, errorHandler);
@@ -40,7 +40,7 @@
         };
 
         self.redirectToEditionPage = function (pageId) {
-            throw 'not implementing';
+            self._redirector.redirect('/pages/new/' + pageId);
         };
 
         self.redirectToCreationNewPage = function () {
@@ -49,19 +49,21 @@
         };
 
         self.showPages = function (pages) {
-            throw 'not implemented';
+            for (let index = 0; index < pages.length; index++) {
+                view._lstPage.add({ id: pages[index].id, value: pages[idnex].title });
+            }
         };
 
         self.showError = function () {
             self._lblError.showText('there is an error');
         };
 
-        self.showSpinner = function(){
-            throw 'not implemented';
+        self.showSpinner = function () {
+            self._spinner.show();
         };
 
-        self.hideSpinner = function(){
-            throw 'not implemented';
+        self.hideSpinner = function () {
+            self._spinner.hide();
         };
     }
 
@@ -85,6 +87,7 @@
         view._lblError = new Peper.Label('lblError');
         view._lstPage = new Peper.List('lstPage');
         view._redirector = new Peper.Redirector();
+        view._spinner = new Peper.Panel('spinner');
         return view;
     }
 
@@ -100,4 +103,4 @@
     WiMi.Pages.Index.Client = Client;
     WiMi.Pages.Index.createClient = createClient;
 
-})(WiMi || {})
+})(WiMi || {});
