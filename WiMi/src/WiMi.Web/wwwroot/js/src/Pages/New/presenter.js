@@ -65,7 +65,7 @@
         };
 
         self.showCreatedPageMessage = function(){
-            self._lblInformation.showText('page saved');
+            self._lblInformation.showText('page created');
         };
 
         self.redirectToPageBefore = function(){
@@ -73,11 +73,11 @@
         };
 
         self.showSpinner = function(){
-            throw 'not implemented';
+            self._spinner.show();
         };
 
         self.hideSpinner = function(){
-            throw 'not implemented';
+            self._spinner.hide();
         };
     }
 
@@ -103,6 +103,7 @@
         view._btnClose = new Peper.Button('btnClose');
         view._lblError = new Peper.Label('lblError');
         view._lblInformation = new Peper.Label('lblInformation');
+        view._spinner = new Peper.Panel('spinner');
         return view;
     }
 

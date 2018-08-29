@@ -8,7 +8,7 @@
 
         self.get = function (url, successHandler, errorHandler) {
             xmlHttpRequest.onreadystatechange = function () {
-                xmlHttpRequestHandler('GET', xmlHttpRequest, successHandler, errorHandler);
+                xmlHttpRequestHandler('GET', url ,xmlHttpRequest, successHandler, errorHandler);
             }
             xmlHttpRequest.open('GET', url, true);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
@@ -17,7 +17,7 @@
 
         self.post = function (url, request, successHandler, errorHandler) {
             xmlHttpRequest.onreadystatechange = function () {
-                xmlHttpRequestHandler('POST', xmlHttpRequest, successHandler, errorHandler);
+                xmlHttpRequestHandler('POST', url, xmlHttpRequest, successHandler, errorHandler);
             }
             xmlHttpRequest.open('POST', url);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
@@ -26,7 +26,7 @@
 
         self.put = function (url, request, successHandler, errorHandler) {
             xmlHttpRequest.onreadystatechange = function () {
-                xmlHttpRequestHandler('PUT', xmlHttpRequest, successHandler, errorHandler);
+                xmlHttpRequestHandler('PUT', url, xmlHttpRequest, successHandler, errorHandler);
             }
             xmlHttpRequest.open('PUT', url, true);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
@@ -35,23 +35,32 @@
 
         self.delete = function (url, successHandler, errorHandler) {
             xmlHttpRequest.onreadystatechange = function () {
-                xmlHttpRequestHandler('DELETE', xmlHttpRequest, successHandler, errorHandler);
+                xmlHttpRequestHandler('DELETE', url, xmlHttpRequest, successHandler, errorHandler);
             }
             xmlHttpRequest.open('DELETE', url, true);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
             xmlHttpRequest.send();
         };
 
-        function xmlHttpRequestHandler(httpVerb, xmlHttpRequest, successHandler, errorHandler) {
+        function xmlHttpRequestHandler(httpVerb, url, xmlHttpRequest, successHandler, errorHandler) {
             if (isOk(xmlHttpRequest)) {
-                successHandler(JSON.parse(xmlHttpRequest.response));
+                handleResponse(xmlHttpRequest.response, successHandler);
                 return;
             }
             if (isAnError(xmlHttpRequest)) {
-                errorHandler(JSON.parse(xmlHttpRequest.response));
+                handleResponse(xmlHttpRequest.response, errorHandler);
                 return;
             }
-            console.log('http ' + httpVerb +': ' + url + ' with unkown response: ', xmlHttpRequest);
+            console.log('http ' + httpVerb + ': ' + url + ' with unkown response: ', xmlHttpRequest);
+
+            function handleResponse(response, handler) {
+                if ( response === '') {
+                    handler(response);
+                    return;
+                }
+                const responseParsed = JSON.parse(response);
+                handler(responseParsed);
+            }
         }
 
         function isOk(response) {

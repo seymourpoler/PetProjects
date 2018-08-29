@@ -45,7 +45,6 @@
 
         self.redirectToCreationNewPage = function () {
             self._redirector.redirect('/pages/new');
-            //window.location.href = '/pages/new';
         };
 
         self.showPages = function (pages) {
