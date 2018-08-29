@@ -49,8 +49,9 @@
         };
 
         self.showPages = function (pages) {
+            self._lstPage.clear();
             for (let index = 0; index < pages.length; index++) {
-                view._lstPage.add({ id: pages[index].id, value: pages[idnex].title });
+                self._lstPage.addItem({ id: pages[index].id, name: pages[index].title });
             }
         };
 
