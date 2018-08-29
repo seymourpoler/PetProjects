@@ -8,15 +8,7 @@
 
         self.get = function (url, successHandler, errorHandler) {
             xmlHttpRequest.onreadystatechange = function () {
-                if (isOk(xmlHttpRequest)) {
-                    successHandler(JSON.parse(xmlHttpRequest.response));
-                    return;
-                }
-                if (isAnError(xmlHttpRequest)) {
-                    errorHandler(JSON.parse(xmlHttpRequest.response));
-                    return;
-                }
-                console.log('http GET: ' + url + ' with unkown response: '+ xmlHttpRequest);
+                xmlHttpRequestHandler('GET', xmlHttpRequest, successHandler, errorHandler);
             }
             xmlHttpRequest.open('GET', url, true);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
@@ -25,15 +17,7 @@
 
         self.post = function (url, request, successHandler, errorHandler) {
             xmlHttpRequest.onreadystatechange = function () {
-                if (isOk(xmlHttpRequest)) {
-                    successHandler(JSON.parse(xmlHttpRequest.response));
-                    return;
-                }
-                if (isAnError(xmlHttpRequest)) {
-                    errorHandler(JSON.parse(xmlHttpRequest.response));
-                    return;
-                }
-                console.log('http POST: ' + url + ' with unkown response: ' + xmlHttpRequest);
+                xmlHttpRequestHandler('POST', xmlHttpRequest, successHandler, errorHandler);
             }
             xmlHttpRequest.open('POST', url);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
@@ -42,15 +26,7 @@
 
         self.put = function (url, request, successHandler, errorHandler) {
             xmlHttpRequest.onreadystatechange = function () {
-                if (isOk(xmlHttpRequest)) {
-                    successHandler(JSON.parse(xmlHttpRequest.response));
-                    return;
-                }
-                if (isAnError(xmlHttpRequest)) {
-                    errorHandler(JSON.parse(xmlHttpRequest.response));
-                    return;
-                }
-                console.log('http PUT: ' + url + ' with unkown response: ' + xmlHttpRequest);
+                xmlHttpRequestHandler('PUT', xmlHttpRequest, successHandler, errorHandler);
             }
             xmlHttpRequest.open('PUT', url, true);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
@@ -59,20 +35,24 @@
 
         self.delete = function (url, successHandler, errorHandler) {
             xmlHttpRequest.onreadystatechange = function () {
-                if (isOk(xmlHttpRequest)) {
-                    successHandler(JSON.parse(xmlHttpRequest.response));
-                    return;
-                }
-                if (isAnError(xmlHttpRequest)) {
-                    errorHandler(JSON.parse(xmlHttpRequest.response));
-                    return;
-                }
-                console.log('http DELETE: ' + url + ' with unkown response: ' + xmlHttpRequest);
+                xmlHttpRequestHandler('DELETE', xmlHttpRequest, successHandler, errorHandler);
             }
             xmlHttpRequest.open('DELETE', url, true);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
             xmlHttpRequest.send();
         };
+
+        function xmlHttpRequestHandler(httpVerb, xmlHttpRequest, successHandler, errorHandler) {
+            if (isOk(xmlHttpRequest)) {
+                successHandler(JSON.parse(xmlHttpRequest.response));
+                return;
+            }
+            if (isAnError(xmlHttpRequest)) {
+                errorHandler(JSON.parse(xmlHttpRequest.response));
+                return;
+            }
+            console.log('http ' + httpVerb +': ' + url + ' with unkown response: ', xmlHttpRequest);
+        }
 
         function isOk(response) {
             const ready = 4;
