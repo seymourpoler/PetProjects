@@ -1,8 +1,27 @@
-﻿
+﻿@page
+@model dynamic
+
 @{
     ViewData["Title"] = "Edit";
 }
 
 <h2>Edit</h2>
+<input type="text" id="txtTitle" value="@Model.Title" />
+<textarea id="txtBody" rows="5" cols="5">@Model.Body</textarea>
+<button id="btnSave">Save</button>
+<button id="btnClose">Close</button>
+<button id="btnDelete">Delete</button>
+
+<label id="lblError"></label>
+<label id="lblInformation"></label>
+
 <div id="spinner" style="display:none"><img src="~/images/spinner.gif" /></div>
+
+<script src="~/lib/WiMi.js"></script>
+<script src="~/lib/http.js"></script>
+<script src="~/lib/peper.js"></script>
+<script src="~/js/src/Pages/Edit/presenter.js"></script>
+<script language="javascript">
+    WiMi.Pages.Edit.createPresenter(@Model.Id);
+</script>
 
