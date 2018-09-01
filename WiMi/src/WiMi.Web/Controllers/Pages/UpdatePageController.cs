@@ -1,12 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using WiMi.Domain.Pages.Find;
 
 namespace WiMi.Web.Controllers.Pages
 {
     public class UpdatePageController : Controller
     {
-        public IActionResult Edit()
+        readonly IPageFinder pageFinder;
+
+        public UpdatePageController(IPageFinder pageFinder)
         {
-            return View("~/Views/Pages/Edit.cshtml");
+            this.pageFinder = pageFinder;
+        }
+
+        public IActionResult Edit(Guid id)
+        {
+            var page = pageFinder.FindBy(id);
+            return View("~/Views/Pages/Edit.cshtml", page);
         }
     }
 }

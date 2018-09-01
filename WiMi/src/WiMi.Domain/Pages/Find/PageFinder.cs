@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WiMi.Domain.Pages.Find
 {
@@ -14,6 +15,11 @@ namespace WiMi.Domain.Pages.Find
         public IReadOnlyCollection<PageFindingResponse> Find()
         {
             return repository.Find();
+        }
+
+        public Page FindBy(Guid id)
+        {
+            return repository.FindBy(id);
         }
     }
 }
