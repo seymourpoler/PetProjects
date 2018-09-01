@@ -19,7 +19,7 @@
                 view.hideSpinner();
                 view.showPages(pages);
             }
-            function errorHandler(error) {
+            function errorHandler() {
                 view.hideSpinner();
                 view.showError();
             }
@@ -40,7 +40,7 @@
         };
 
         self.redirectToEditionPage = function (pageId) {
-            self._redirector.redirect('/pages/new/' + pageId);
+            self._redirector.redirect('/pages/' + pageId);
         };
 
         self.redirectToCreationNewPage = function () {
