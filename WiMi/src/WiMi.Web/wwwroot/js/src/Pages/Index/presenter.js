@@ -40,7 +40,7 @@
         };
 
         self.redirectToEditionPage = function (pageId) {
-            self._redirector.redirect('/pages/' + pageId);
+            self._redirector.redirect('/pages/edit/' + pageId);
         };
 
         self.redirectToCreationNewPage = function () {

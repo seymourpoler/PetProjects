@@ -1,6 +1,7 @@
 ﻿using System.Net.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WiMi.CrossCutting.Serializers;
@@ -49,6 +50,11 @@ namespace WiMi.Web
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "page update",
+                    template: "pages/edit/{id}",
+                    defaults: new { controller = "UpdatePage", action = "Edit" });
+
                 routes.MapRoute(
                     name: "page index",
                     template: "pages/index",
