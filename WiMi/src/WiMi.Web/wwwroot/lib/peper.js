@@ -213,6 +213,9 @@ window.Peper = window.Perper|| {};
             var li = document.createElement("li");
             li.appendChild(document.createTextNode(item.name));
             li.setAttribute("id", item.id);
+            if (item.onClick) {
+                li.onclick = item.onClick;
+            }
             control.appendChild(li);
         };
 
