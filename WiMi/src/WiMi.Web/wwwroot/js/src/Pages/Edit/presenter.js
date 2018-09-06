@@ -4,16 +4,60 @@
         var self = this;
 
         console.log(id);
+
+        view.subscribeToDeletingPageRequested(deletingPageRequestedHandler);
+        function deletingPageRequestedHandler() {
+            view.showSpinner();
+            client.delete(id, successHandler, errorHandler);
+            
+
+            function successHandler() {
+                throw 'not implemented';
+            }
+            function errorHandler(error) {
+                view.hideSpinner();
+                if (error.status === WiMi.httpStatusCode.internalServerError) {
+                    view.showInternalServerError();
+                    return;
+                }
+                throw 'not implemented';
+            }
+        }
     }
+
     function View() {
         var self = this;
+
+        self.subscribeToDeletingPageRequested = function (handler) {
+            throw 'not implemented';
+        };
+
+        self.showSpinner = function () {
+            throw 'not implemented';
+        };
+
+        self.hideSpinner = function () {
+            throw 'not implemented';
+        };
+
+        self.showInternalServerError = function () {
+            throw 'not implemented';
+        };
     }
 
     function Client(http) {
         var self = this;
+
+        self.delete = function (id, successHandler, errorHandler) {
+            throw 'not implemented';
+        };
     }
 
-    function createPresenter() {
+    function createPresenter(id) {
+        return new WiMi.Pages.Edit.Presenter(
+            id,
+            WiMi.Pages.Edit.createView(),
+            WiMi.Pages.Edit.createClient());
     }
 
     function createView() {
