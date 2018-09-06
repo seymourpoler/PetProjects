@@ -1,7 +1,6 @@
 ﻿using System.Net.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WiMi.CrossCutting.Serializers;
@@ -11,7 +10,7 @@ using WiMi.Repositories.SQLite;
 
 namespace WiMi.Web
 {
-	public class Startup
+    public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -50,6 +49,11 @@ namespace WiMi.Web
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "page delete",
+                    template: "api/pages/edit/{id}",
+                    defaults: new { controller = "DeletePage", action = "Delete", httpMethod = new HttpMethod("DELETE") });
+
                 routes.MapRoute(
                     name: "page update",
                     template: "pages/edit/{id}",
