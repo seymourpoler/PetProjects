@@ -9,15 +9,19 @@
         function deletingPageRequestedHandler() {
             view.showSpinner();
             client.delete(id, successHandler, errorHandler);
-            
-
+  
             function successHandler() {
                 throw 'not implemented';
             }
-            function errorHandler(error) {
+
+            function errorHandler(response) {
                 view.hideSpinner();
-                if (error.status === WiMi.httpStatusCode.internalServerError) {
+                if (response.status === WiMi.httpStatusCode.internalServerError) {
                     view.showInternalServerError();
+                    return;
+                }
+                if (response.status === WiMi.httpStatusCode.badRequest) {
+                    view.showErrors(response.errors);
                     return;
                 }
                 throw 'not implemented';
@@ -41,6 +45,10 @@
         };
 
         self.showInternalServerError = function () {
+            throw 'not implemented';
+        };
+
+        self.showErrors = function (errors) {
             throw 'not implemented';
         };
     }

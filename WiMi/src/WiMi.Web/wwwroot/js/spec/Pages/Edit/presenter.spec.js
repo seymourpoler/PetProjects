@@ -17,6 +17,7 @@
                 deletingPageRequestedHandler = handler;
             });
         });
+
         it('shows an error message if there is an internal server error', function () {
             client.delete.and.callFake(function (id, successHandler, errorHandler) {
                 expect(view.showSpinner).toHaveBeenCalled();
@@ -27,6 +28,21 @@
             deletingPageRequestedHandler();
 
             expect(view.showInternalServerError).toHaveBeenCalled();
+            expect(view.hideSpinner).toHaveBeenCalled();
+
+        });
+
+        it('shows an error if there are errors', function () {
+            const errors = [{ fieldId: 'General', errorCode: 'NotFound' }];
+            client.delete.and.callFake(function (id, successHandler, errorHandler) {
+                expect(view.showSpinner).toHaveBeenCalled();
+                errorHandler({ status: WiMi.httpStatusCode.badRequest, errors: errors });
+            });
+            presenter = new WiMi.Pages.Edit.Presenter(id, view, client);
+
+            deletingPageRequestedHandler();
+
+            expect(view.showErrors).toHaveBeenCalledWith(errors);
             expect(view.hideSpinner).toHaveBeenCalled();
 
         });
