@@ -54,7 +54,7 @@
         };
 
         self.redirectToIndexPage = function () {
-            self._redirector.redirect('/pages/index);
+            self._redirector.redirect('/pages/index');
         };
     }
 
