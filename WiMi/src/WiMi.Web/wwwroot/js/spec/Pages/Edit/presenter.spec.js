@@ -1,4 +1,4 @@
-﻿describe('edit Presenter', function () {
+﻿describe('Edit Presenter', function () {
     var presenter, view, client;
 
     beforeEach(function () {
@@ -45,6 +45,19 @@
             expect(view.showErrors).toHaveBeenCalledWith(errors);
             expect(view.hideSpinner).toHaveBeenCalled();
 
+        });
+
+        it('redirects to index if is deleted', function () {
+            client.delete.and.callFake(function (id, successHandler, errorHandler) {
+                expect(view.showSpinner).toHaveBeenCalled();
+                successHandler();
+            });
+            presenter = new WiMi.Pages.Edit.Presenter(id, view, client);
+
+            deletingPageRequestedHandler();
+
+            expect(view.hideSpinner).toHaveBeenCalled();
+            expect(view.redirectToIndexPage).toHaveBeenCalled();
         });
     });
 });

@@ -11,7 +11,8 @@
             client.delete(id, successHandler, errorHandler);
   
             function successHandler() {
-                throw 'not implemented';
+                view.hideSpinner();
+                view.redirectToIndexPage();
             }
 
             function errorHandler(response) {
@@ -49,6 +50,10 @@
         };
 
         self.showErrors = function (errors) {
+            throw 'not implemented';
+        };
+
+        self.redirectToIndexPage = function () {
             throw 'not implemented';
         };
     }
