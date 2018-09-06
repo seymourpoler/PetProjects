@@ -54,7 +54,7 @@
         };
 
         self.redirectToIndexPage = function () {
-            throw 'not implemented';
+            self._redirector.redirect('/pages/index);
         };
     }
 
