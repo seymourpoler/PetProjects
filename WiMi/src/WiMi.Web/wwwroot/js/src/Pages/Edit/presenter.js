@@ -34,7 +34,7 @@
         var self = this;
 
         self.subscribeToDeletingPageRequested = function (handler) {
-            throw 'not implemented';
+            self._btnDelete.on('click', handler);
         };
 
         self.showSpinner = function () {
@@ -62,7 +62,7 @@
         var self = this;
 
         self.delete = function (id, successHandler, errorHandler) {
-            throw 'not implemented';
+            http.delete('/api/pages/' + id, successHandler, errorHandler);
         };
     }
 
