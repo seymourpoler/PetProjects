@@ -15,8 +15,20 @@ namespace WiMi.Web.Controllers.Pages
 
         public IActionResult Edit(Guid id)
         {
+            var viewModel = FindPageViewModelBy(id);
+            return View("~/Views/Pages/Edit.cshtml", viewModel);
+        }
+
+        Models.UpdatePageViewModel FindPageViewModelBy(Guid id)
+        {
             var page = pageFinder.FindBy(id);
-            return View("~/Views/Pages/Edit.cshtml", page);
+            var result = new Models.UpdatePageViewModel
+            {
+                Id = page.Id.ToString(),
+                Title = page.Title,
+                Body = page.Body
+            };
+            return result;
         }
     }
 }
