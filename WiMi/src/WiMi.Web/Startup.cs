@@ -4,8 +4,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WiMi.CrossCutting.Serializers;
+using WiMi.Domain.Pages;
 using WiMi.Domain.Pages.Create;
 using WiMi.Domain.Pages.Find;
+using WiMi.Domain.Pages.Remove;
 using WiMi.Repositories.SQLite;
 
 namespace WiMi.Web
@@ -23,9 +25,12 @@ namespace WiMi.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<DataBaseConfiguration>();
-			services.AddTransient<IFindPageRepository, FindPageRepository>();
+            services.AddTransient<IRemovePageRepository, RemovePageRepository>();
+            services.AddTransient<IExistPageRepository, ExistPageRepository>();
+            services.AddTransient<IFindPageRepository, FindPageRepository>();
 			services.AddTransient<ISavePageRepository, SavePageRepository>();
-			services.AddTransient<IPageFinder, PageFinder>();
+            services.AddTransient<IPageRemover, PageRemover>();
+            services.AddTransient<IPageFinder, PageFinder>();
             services.AddTransient<IPageCreator, PageCreator>();
             services.AddTransient<ISerializer, JsonSerializer>();
 
@@ -51,7 +56,7 @@ namespace WiMi.Web
             {
                 routes.MapRoute(
                     name: "page delete",
-                    template: "api/pages/edit/{id}",
+                    template: "api/pages/{id}",
                     defaults: new { controller = "DeletePage", action = "Delete", httpMethod = new HttpMethod("DELETE") });
 
                 routes.MapRoute(
