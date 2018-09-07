@@ -32,6 +32,27 @@
         function closingPageRequestedHandler() {
             view.redirectToIndexPage();
         }
+        view.subscribeToUpdatingPageRequested(updatingPageRequestedHandler);
+        function updatingPageRequestedHandler() {
+            view.showSpinner();
+            const request = {
+                title: view.getTitle(),
+                body: view.getBody()
+            };
+            client.update(request, successHandler, errorHandler);
+            function successHandler() {
+                throw 'not implemented';
+            }
+
+            function errorHandler(response) {
+                view.hideSpinner();
+                if (response.status === WiMi.httpStatusCode.internalServerError) {
+                    view.showInternalServerError();
+                    return;
+                }
+                throw 'not implemented';
+            }
+        }
     }
 
     function View() {
@@ -45,12 +66,24 @@
             self._btnClose.on('click', handler);
         };
 
+        self.subscribeToUpdatingPageRequested = function (handler) {
+            self._btnSave.on('click', handler);
+        };
+
         self.showSpinner = function () {
             self._spinner.show();
         };
 
         self.hideSpinner = function () {
             self._spinner.hide();
+        };
+
+        self.getTitle = function () {
+            throw 'not implemented';
+        };
+
+        self.getBody = function () {
+            throw 'not implemented';
         };
 
         self.showInternalServerError = function () {
@@ -71,6 +104,10 @@
 
         self.delete = function (id, successHandler, errorHandler) {
             http.delete('/api/pages/' + id, successHandler, errorHandler);
+        };
+
+        self.update = function (request, successHandler, errorHandler) {
+            http.put('/api/pages', request, successHandler, errorHandler);
         };
     }
 

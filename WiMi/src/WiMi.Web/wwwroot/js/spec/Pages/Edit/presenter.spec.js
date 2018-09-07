@@ -8,7 +8,7 @@
         WiMi.spyAllMethodsOf(client);
     });
 
-    describe('when closing is requested', function () {
+    describe('when page closing is requested', function () {
         let closingPageRequestedHandler = function () { };
         it('redirects to index', function () {
             view.subscribeToClosingPageRequested.and.callFake(function (handler) {
@@ -71,6 +71,31 @@
 
             expect(view.hideSpinner).toHaveBeenCalled();
             expect(view.redirectToIndexPage).toHaveBeenCalled();
+        });
+    });
+
+    describe('when page updating is requested', function () {
+        let updatingPageRequestedHandler = function () { };
+
+        beforeEach(function () {
+            view.subscribeToUpdatingPageRequested.and.callFake(function (handler) {
+                updatingPageRequestedHandler = handler;
+            });
+        });
+
+        it('shows an error message if there is an internal server error', function () {
+            const request = {};
+            client.update.and.callFake(function (request, successHandler, errorHandler) {
+                expect(view.showSpinner).toHaveBeenCalled();
+                errorHandler({ status: WiMi.httpStatusCode.internalServerError, errors: [] })
+            });
+            presenter = new WiMi.Pages.Edit.Presenter(id, view, client);
+
+            updatingPageRequestedHandler();
+
+            expect(view.showInternalServerError).toHaveBeenCalled();
+            expect(view.hideSpinner).toHaveBeenCalled();
+
         });
     });
 });
