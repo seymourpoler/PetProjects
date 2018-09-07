@@ -12,12 +12,16 @@ namespace WiMi.Domain.Unit.Test.Pages
     public class PageRemoverTests
     {
         Mock<IExistPageRepository> existRepository;
+        Mock<IRemovePageRepository> removeRepository;
         IPageRemover remover;
 
         public PageRemoverTests()
         {
             existRepository = new Mock<IExistPageRepository>();
-            remover = new PageRemover(existRepository.Object);
+            removeRepository = new Mock<IRemovePageRepository>();
+            remover = new PageRemover(
+                existRepository.Object, 
+                removeRepository.Object);
         }
 
         [Fact]
@@ -32,6 +36,21 @@ namespace WiMi.Domain.Unit.Test.Pages
 
             result.IsOk.ShouldBeFalse();
             result.Errors.First().ErrorCode.ShouldBe(nameof(Error.ErrorCodes.NotFound));
+        }
+
+        [Fact]
+        public async Task remove_page()
+        {
+            var id = Guid.NewGuid();
+            existRepository
+                .Setup(x => x.Exist(id))
+                .Returns(true);
+
+            var result = remover.Remove(id);
+
+            result.IsOk.ShouldBeTrue();
+            removeRepository
+                .Verify(x => x.Remove(id));
         }
     }
 }

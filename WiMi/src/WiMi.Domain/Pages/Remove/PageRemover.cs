@@ -5,11 +5,14 @@ namespace WiMi.Domain.Pages.Remove
     public class PageRemover : IPageRemover
     {
         readonly IExistPageRepository existPageRepository;
+        readonly IRemovePageRepository removePageRepository;
 
         public PageRemover(
-            IExistPageRepository existPageRepository)
+            IExistPageRepository existPageRepository, 
+            IRemovePageRepository removePageRepository)
         {
             this.existPageRepository = existPageRepository;
+            this.removePageRepository = removePageRepository;
         }
 
         public ServiceExecutionResult Remove(Guid id)
@@ -19,7 +22,8 @@ namespace WiMi.Domain.Pages.Remove
                 return new ServiceExecutionResult(
                     new Error(Error.ErrorCodes.NotFound));
             }
-            throw new NotImplementedException();
+            removePageRepository.Remove(id);
+            return new ServiceExecutionResult();
         }
     }
 }
