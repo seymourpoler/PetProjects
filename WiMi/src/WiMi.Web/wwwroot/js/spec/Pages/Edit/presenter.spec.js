@@ -1,6 +1,6 @@
 ﻿describe('Edit Presenter', function () {
-    var presenter, view, client;
-
+    let presenter, view, client;
+    const id = 'page-id';
     beforeEach(function () {
         view = WiMi.Pages.Edit.createView();
         WiMi.spyAllMethodsOf(view);
@@ -8,8 +8,21 @@
         WiMi.spyAllMethodsOf(client);
     });
 
+    describe('when closing is requested', function () {
+        let closingPageRequestedHandler = function () { };
+        it('redirects to index', function () {
+            view.subscribeToClosingPageRequested.and.callFake(function (handler) {
+                closingPageRequestedHandler = handler;
+            });
+            presenter = new WiMi.Pages.Edit.Presenter(id, view, client);
+
+            closingPageRequestedHandler();
+
+            expect(view.redirectToIndexPage).toHaveBeenCalled();
+        });
+    });
+
     describe('when page deleting is requested', function () {
-        const id = 'page-id';
         let deletingPageRequestedHandler = function () { };
 
         beforeEach(function () {

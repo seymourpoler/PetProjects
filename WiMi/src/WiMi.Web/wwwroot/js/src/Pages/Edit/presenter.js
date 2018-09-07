@@ -28,6 +28,10 @@
                 throw 'not implemented';
             }
         }
+        view.subscribeToClosingPageRequested(closingPageRequestedHandler);
+        function closingPageRequestedHandler() {
+            view.redirectToIndexPage();
+        }
     }
 
     function View() {
@@ -35,6 +39,10 @@
 
         self.subscribeToDeletingPageRequested = function (handler) {
             self._btnDelete.on('click', handler);
+        };
+
+        self.subscribeToClosingPageRequested = function (handler) {
+            self._btnClose.on('click', handler);
         };
 
         self.showSpinner = function () {
