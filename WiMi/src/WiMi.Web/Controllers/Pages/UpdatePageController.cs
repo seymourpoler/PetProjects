@@ -5,7 +5,6 @@ using System.Collections.ObjectModel;
 using WiMi.Domain;
 using WiMi.Domain.Pages.Find;
 using WiMi.Domain.Pages.Update;
-using WiMi.Web.Models;
 
 namespace WiMi.Web.Controllers.Pages
 {
@@ -46,7 +45,15 @@ namespace WiMi.Web.Controllers.Pages
             {
                 return BadRequest(new ReadOnlyCollection<Error>(new List<Error> { new Error(Error.ErrorCodes.RequestCanNotBeNull) }));
             }
-            throw new NotImplementedException();
+            var result = pageUpdater.Update(new PageUpdatingRequest(
+                id: request.Id,
+                title: request.Title,
+                body: request.Body));
+            if(result.IsOk)
+            {
+                throw new NotImplementedException();
+            }
+            return BadRequest(result.Errors);
         }
     }
 }

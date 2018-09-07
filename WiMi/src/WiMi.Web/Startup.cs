@@ -65,6 +65,11 @@ namespace WiMi.Web
                     defaults: new { controller = "UpdatePage", action = "Edit" });
 
                 routes.MapRoute(
+                    name: "pageUpdater",
+                    template: "api/pages",
+                    defaults: new { controller = "UpdatePage", action = "Update", httpMethod = new HttpMethod("PUT") });
+
+                routes.MapRoute(
                     name: "page index",
                     template: "pages/index",
                     defaults: new { controller = "FindPages", action = "Index" });
