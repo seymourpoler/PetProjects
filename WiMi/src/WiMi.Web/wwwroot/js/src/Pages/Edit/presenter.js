@@ -38,11 +38,11 @@
         };
 
         self.showSpinner = function () {
-            throw 'not implemented';
+            self._spinner.show();
         };
 
         self.hideSpinner = function () {
-            throw 'not implemented';
+            self._spinner.hide();
         };
 
         self.showInternalServerError = function () {
