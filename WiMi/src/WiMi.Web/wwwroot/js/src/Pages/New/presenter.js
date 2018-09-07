@@ -47,7 +47,6 @@
             self._btnClose.on('click', closingPageRequestedHandler);
         };
 
-
         self.getTitle = function () {
             return self._txtTitle.getText();
         };
@@ -57,11 +56,11 @@
         };
 
         self.showInternalServerError = function () {
-            self._lblError.show();
+            self._lblError.showText('internal server error');
         };
 
         self.showErrors = function (errors) {
-            self._lblError.show();
+            self._lblError.showText(errors);
         };
 
         self.showCreatedPageMessage = function(){
