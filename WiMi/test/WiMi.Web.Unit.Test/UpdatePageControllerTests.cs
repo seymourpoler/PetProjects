@@ -42,7 +42,7 @@ namespace WiMi.Web.Unit.Test
         [Fact]
         public async Task return_bad_request_when_there_are_errors()
         {
-            Guid id = Guid.NewGuid();
+            var id = Guid.NewGuid();
             updater
                 .Setup(x => x.Update(It.Is<PageUpdatingRequest>(y => y.Id == id)))
                 .Returns(new ServiceExecutionResult(new Error(Error.ErrorCodes.NotFound)));
@@ -52,6 +52,19 @@ namespace WiMi.Web.Unit.Test
             result.StatusCode.Value.ShouldBe((int)HttpStatusCode.BadRequest);
             ((ReadOnlyCollection<Error>)result.Value).First().FieldId.ShouldContain(Error.GeneralFieldIdError);
             ((ReadOnlyCollection<Error>)result.Value).First().ErrorCode.ShouldContain(nameof(Error.ErrorCodes.NotFound));
+        }
+
+        [Fact]
+        public async Task return_ok_when_is_upated()
+        {
+            var id = Guid.NewGuid();
+            updater
+                .Setup(x => x.Update(It.Is<PageUpdatingRequest>(y => y.Id == id)))
+                .Returns(new ServiceExecutionResult());
+
+            var result = controller.Update(new Models.PageUpdatingRequest { Id = id }) as OkResult;
+
+            result.StatusCode.ShouldBe((int)HttpStatusCode.OK);
         }
     }
 }

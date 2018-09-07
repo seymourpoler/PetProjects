@@ -51,7 +51,7 @@ namespace WiMi.Web.Controllers.Pages
                 body: request.Body));
             if(result.IsOk)
             {
-                throw new NotImplementedException();
+                return Ok();
             }
             return BadRequest(result.Errors);
         }
