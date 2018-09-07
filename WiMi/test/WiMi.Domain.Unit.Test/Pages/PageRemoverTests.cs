@@ -32,7 +32,6 @@ namespace WiMi.Domain.Unit.Test.Pages
 
             result.IsOk.ShouldBeFalse();
             result.Errors.First().ErrorCode.ShouldBe(nameof(Error.ErrorCodes.NotFound));
-
         }
     }
 }
