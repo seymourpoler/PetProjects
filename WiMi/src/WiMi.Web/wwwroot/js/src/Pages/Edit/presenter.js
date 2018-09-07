@@ -3,8 +3,6 @@
     function Presenter(id, view, client) {
         var self = this;
 
-        console.log(id);
-
         view.subscribeToDeletingPageRequested(deletingPageRequestedHandler);
         function deletingPageRequestedHandler() {
             view.showSpinner();
@@ -42,7 +40,8 @@
             };
             client.update(request, successHandler, errorHandler);
             function successHandler() {
-                throw 'not implemented';
+                view.hideSpinner();
+                view.showUpdatedPageMessage();
             }
 
             function errorHandler(response) {
@@ -84,19 +83,23 @@
         };
 
         self.getTitle = function () {
-            throw 'not implemented';
+            self._txtTitle.getText();
         };
 
         self.getBody = function () {
-            throw 'not implemented';
+            self._txtBody.getText();
         };
 
         self.showInternalServerError = function () {
-            throw 'not implemented';
+            self._lblError.showText('internal server error');
         };
 
         self.showErrors = function (errors) {
-            throw 'not implemented';
+            self._lblError.showText(errors);
+        };
+
+        self.showUpdatedPageMessage = function () {
+            self._lblInformation.setText('page updated');
         };
 
         self.redirectToIndexPage = function () {

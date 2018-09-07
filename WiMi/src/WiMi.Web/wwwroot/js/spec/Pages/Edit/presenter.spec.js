@@ -113,5 +113,19 @@
             expect(view.showErrors).toHaveBeenCalledWith(errors);
             expect(view.hideSpinner).toHaveBeenCalled();
         });
+
+        it('shows information if page is updated', function () {
+            const request = {};
+            client.update.and.callFake(function (request, successHandler, errorHandler) {
+                expect(view.showSpinner).toHaveBeenCalled();
+                successHandler();
+            });
+            presenter = new WiMi.Pages.Edit.Presenter(id, view, client);
+
+            updatingPageRequestedHandler();
+
+            expect(view.showUpdatedPageMessage).toHaveBeenCalledWith();
+            expect(view.hideSpinner).toHaveBeenCalled();
+        });
     });
 });
