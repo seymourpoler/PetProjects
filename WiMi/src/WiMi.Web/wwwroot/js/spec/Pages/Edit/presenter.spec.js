@@ -115,8 +115,13 @@
         });
 
         it('shows information if page is updated', function () {
-            const request = {};
+            const body = 'body';
+            const title = 'title';
+            const request = {id: id, body: body, title: title };
+            view.getBody.and.returnValue(body);
             client.update.and.callFake(function (request, successHandler, errorHandler) {
+                expect(request.id).toBe(id);
+                expect(request.body).toBe(body);
                 expect(view.showSpinner).toHaveBeenCalled();
                 successHandler();
             });
