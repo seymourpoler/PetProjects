@@ -36,6 +36,7 @@
         function updatingPageRequestedHandler() {
             view.showSpinner();
             const request = {
+                id: id,
                 title: view.getTitle(),
                 body: view.getBody()
             };
@@ -48,6 +49,10 @@
                 view.hideSpinner();
                 if (response.status === WiMi.httpStatusCode.internalServerError) {
                     view.showInternalServerError();
+                    return;
+                }
+                if (response.status === WiMi.httpStatusCode.badRequest) {
+                    view.showErrors(response.errors);
                     return;
                 }
                 throw 'not implemented';

@@ -1,6 +1,7 @@
 ﻿describe('Edit Presenter', function () {
     let presenter, view, client;
     const id = 'page-id';
+
     beforeEach(function () {
         view = WiMi.Pages.Edit.createView();
         WiMi.spyAllMethodsOf(view);
@@ -96,6 +97,21 @@
             expect(view.showInternalServerError).toHaveBeenCalled();
             expect(view.hideSpinner).toHaveBeenCalled();
 
+        });
+
+        it('shows an error if there are errors', function () {
+            const request = {};
+            const errors = [{ fieldId: 'General', errorCode: 'NotFound' }];
+            client.update.and.callFake(function (request, successHandler, errorHandler) {
+                expect(view.showSpinner).toHaveBeenCalled();
+                errorHandler({ status: WiMi.httpStatusCode.badRequest, errors: errors });
+            });
+            presenter = new WiMi.Pages.Edit.Presenter(id, view, client);
+
+            updatingPageRequestedHandler();
+
+            expect(view.showErrors).toHaveBeenCalledWith(errors);
+            expect(view.hideSpinner).toHaveBeenCalled();
         });
     });
 });
