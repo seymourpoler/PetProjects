@@ -19,7 +19,7 @@ namespace WiMi.Web.Controllers.Pages
             var result = remover.Remove(id);
             if (result.IsOk)
             {
-                throw new NotImplementedException();
+                return Ok();
             }
             return BadRequest(result.Errors);
         }

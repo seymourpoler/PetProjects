@@ -38,5 +38,18 @@ namespace WiMi.Web.Unit.Test
             ((ReadOnlyCollection<Error>)result.Value).First().FieldId.ShouldBe(Error.GeneralFieldIdError);
             ((ReadOnlyCollection<Error>)result.Value).First().ErrorCode.ShouldBe(nameof(Error.ErrorCodes.NotFound));
         }
+
+        [Fact]
+        public async Task return_ok_when_page_is_removed()
+        {
+            var pageId = Guid.NewGuid();
+            remover
+                .Setup(x => x.Remove(pageId))
+                .Returns(new ServiceExecutionResult());
+
+            var result = controller.Delete(pageId) as OkResult;
+
+            result.StatusCode.ShouldBe((int)HttpStatusCode.OK);
+        }
     }
 }
