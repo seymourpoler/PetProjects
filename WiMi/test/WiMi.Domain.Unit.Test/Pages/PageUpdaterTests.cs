@@ -69,6 +69,7 @@ namespace WiMi.Domain.Unit.Test.Pages
                     y.Id == id &&
                     y.Body == bodyUpdated)));
         }
+
         static Page BuildPage(Guid id)
         {
             return new Page(new Page.PersistenceState(
