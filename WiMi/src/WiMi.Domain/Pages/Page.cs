@@ -5,8 +5,8 @@ namespace WiMi.Domain.Pages
     public class Page
     {
         public Guid Id { get; }
-		public string Title { get; }
-		public string Body { get; }
+		public string Title { get; set; }
+		public string Body { get; set; }
 		public DateTime CreationDate { get; }
 
 		public Page(string title, string body)
