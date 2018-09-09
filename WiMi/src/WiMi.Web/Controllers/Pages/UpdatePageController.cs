@@ -40,7 +40,8 @@ namespace WiMi.Web.Controllers.Pages
         }
 
         [HttpPut]
-        public IActionResult Update(Models.PageUpdatingRequest request)
+        public IActionResult Update(
+            [FromBody]Models.PageUpdatingRequest request)
         {
             if(request is null)
             {
