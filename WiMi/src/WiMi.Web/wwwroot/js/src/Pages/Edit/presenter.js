@@ -83,11 +83,11 @@
         };
 
         self.getTitle = function () {
-            self._txtTitle.getText();
+            return self._txtTitle.getText();
         };
 
         self.getBody = function () {
-            self._txtBody.getText();
+            return self._txtBody.getText();
         };
 
         self.showInternalServerError = function () {
@@ -115,7 +115,7 @@
         };
 
         self.update = function (request, successHandler, errorHandler) {
-            http.put('/api/pages', request, successHandler, errorHandler);
+            http.put('/api/pages/update', request, successHandler, errorHandler);
         };
     }
 

@@ -58,7 +58,7 @@ namespace WiMi.Web
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "page delete",
+                    name: "pageRemover",
                     template: "api/pages/{id}",
                     defaults: new { controller = "DeletePage", action = "Delete", httpMethod = new HttpMethod("DELETE") });
 
@@ -69,7 +69,7 @@ namespace WiMi.Web
 
                 routes.MapRoute(
                     name: "pageUpdater",
-                    template: "api/pages",
+                    template: "api/pages/update",
                     defaults: new { controller = "UpdatePage", action = "Update", httpMethod = new HttpMethod("PUT") });
 
                 routes.MapRoute(
@@ -78,7 +78,7 @@ namespace WiMi.Web
                     defaults: new { controller = "FindPages", action = "Index" });
 
                 routes.MapRoute(
-					name: "pagefinder",
+					name: "pageFinder",
 					template: "api/pages",
 					defaults: new { controller = "FindPages", action = "Find", httpMethod = new HttpMethod("GET") });
 
@@ -88,7 +88,7 @@ namespace WiMi.Web
                     defaults: new { controller = "CreatePage", action = "New" });
 
                 routes.MapRoute(
-                    name: "pagecreator",
+                    name: "pageCreator",
                     template: "api/pages",
 					defaults: new { controller = "CreatePage", action = "Create", httpMethod = new HttpMethod("POST") });
 
