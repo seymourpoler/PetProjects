@@ -20,7 +20,8 @@ namespace WiMi.Web.Controllers.Pages
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody]Models.PageCreationRequest request)
+        public IActionResult Create(
+            [FromBody]Models.PageCreationRequest request)
         {
             if (request is null)
             {
