@@ -19,7 +19,7 @@
             xmlHttpRequest.onreadystatechange = function () {
                 xmlHttpRequestHandler('POST', url, xmlHttpRequest, successHandler, errorHandler);
             }
-            xmlHttpRequest.open('POST', url);
+            xmlHttpRequest.open('POST', url, true);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
             xmlHttpRequest.send(JSON.stringify(request));
         };
@@ -28,7 +28,7 @@
             xmlHttpRequest.onreadystatechange = function () {
                 xmlHttpRequestHandler('PUT', url, xmlHttpRequest, successHandler, errorHandler);
             }
-            xmlHttpRequest.open('PUT', url, true);
+            xmlHttpRequest.open('PUT', url);
             xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
             xmlHttpRequest.send(JSON.stringify(request));
         };
@@ -54,7 +54,7 @@
             console.log('http ' + httpVerb + ': ' + url + ' with unkown response: ', xmlHttpRequest);
 
             function handleResponse(response, handler) {
-                if ( response === '') {
+                if (response === '') {
                     handler(response);
                     return;
                 }
@@ -79,4 +79,5 @@
         }
     }
     WiMi.Http = Http;
+
 })(WiMi || {})
