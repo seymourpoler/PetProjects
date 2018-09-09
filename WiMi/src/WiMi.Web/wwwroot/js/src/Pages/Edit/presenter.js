@@ -115,7 +115,7 @@
         };
 
         self.update = function (request, successHandler, errorHandler) {
-            http.put('/api/pages/update', request, successHandler, errorHandler);
+            http.put('/api/pages', request, successHandler, errorHandler);
         };
     }
 
