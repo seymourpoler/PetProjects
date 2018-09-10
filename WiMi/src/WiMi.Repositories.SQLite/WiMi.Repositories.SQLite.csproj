@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="SqlExecutor.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Include="..\..\DataBase\DataBaseConfiguration.cs" Link="DataBaseConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>

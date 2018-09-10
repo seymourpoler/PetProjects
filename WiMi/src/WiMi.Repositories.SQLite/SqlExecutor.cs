@@ -1,79 +1,93 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Data.SQLite;
 
-namespace React.Asp.Net.Core.Repository.SqlServer
+namespace WiMi.Repositories.SQLite
 {
+    public interface ISqlExecutor
+    {
+        void ExecuteNonQuery(string sql);
+        int ExecuteScalar(string sql);
+        T ExecuteSingleReader<T>(string sql, Func<SQLiteDataReader, T> mapper) where T : class;
+        IReadOnlyCollection<T> ExecuteReader<T>(string sql, Func<SQLiteDataReader, T> mapper) where T : class;
+    }
+
     public class SqlExecutor : ISqlExecutor
     {
-        readonly RepositoryConfiguration _configuration;
+        readonly DataBaseConfiguration configuration;
 
-        public SqlExecutor(RepositoryConfiguration configuration)
+        public SqlExecutor(DataBaseConfiguration dataBaseConfiguration)
         {
-            _configuration = configuration;
+            configuration = dataBaseConfiguration;
         }
 
         public void ExecuteNonQuery(string sql)
         {
-            using (var connection = new SqlConnection(_configuration.ConnectionString))
+            using (var connection = new SQLiteConnection(configuration.ConnectionString))
             {
-                using (var command = new SqlCommand(sql, connection))
+                connection.Open();
+                using (var command = new SQLiteCommand(commandText: sql, connection: connection))
                 {
-                    connection.Open();
                     command.ExecuteNonQuery();
-                    connection.Close();
                 }
+                connection.Close();
             }
         }
 
         public int ExecuteScalar(string sql)
         {
-            using (var connection = new SqlConnection(_configuration.ConnectionString))
+            var result = 0;
+            using (var connection = new SQLiteConnection(configuration.ConnectionString))
             {
-                using (var command = new SqlCommand(sql, connection))
+                connection.Open();
+                using (var command = new SQLiteCommand(commandText: sql, connection: connection))
                 {
-                    connection.Open();
-                    var result = (int)command.ExecuteScalar();
-                    connection.Close();
-                    return result;
+                    var executionResult = command.ExecuteScalar();
+                    result = Convert.ToInt32(executionResult);
                 }
+                connection.Close();
             }
+            return result;
         }
 
-        public T ExecuteSingleReader<T>(string sql, Func<SqlDataReader, T> mapper) where T : class
+        public T ExecuteSingleReader<T>(string sql, Func<SQLiteDataReader, T> mapper) where T : class
         {
-            using (var connection = new SqlConnection(_configuration.ConnectionString))
+            T result;
+            using (var connection = new SQLiteConnection(configuration.ConnectionString))
             {
-                using (var command = new SqlCommand(sql, connection))
+                connection.Open();
+                using (var command = new SQLiteCommand(commandText: sql, connection: connection))
                 {
-                    connection.Open();
-                    var reader = command.ExecuteReader();
-                    if (!reader.Read()) { return null; }
-                    var resut = mapper(reader);
-                    connection.Close();
-                    return resut;
+                    using (var reader = command.ExecuteReader())
+                    {
+                        reader.Read();
+                        result = mapper(reader);
+                    }
                 }
+                connection.Close();
             }
+            return result;
         }
 
-        public IEnumerable<T> ExecuteReader<T>(string sql, Func<SqlDataReader, T> mapper) where T : class
+        public IReadOnlyCollection<T> ExecuteReader<T>(string sql, Func<SQLiteDataReader, T> mapper) where T : class
         {
             var result = new List<T>();
-            using (var connection = new SqlConnection(_configuration.ConnectionString))
+            using (var connection = new SQLiteConnection(configuration.ConnectionString))
             {
-                using (var command = new SqlCommand(sql, connection))
+                connection.Open();
+                using (var command = new SQLiteCommand(commandText: sql, connection: connection))
                 {
-                    connection.Open();
-                    var reader = command.ExecuteReader();
-                    while (reader.Read())
+                    using (var reader = command.ExecuteReader())
                     {
-                        result.Add(item: mapper(reader));
+                        while (reader.Read())
+                        {
+                            result.Add(mapper(reader));
+                        }
                     }
-                    connection.Close();
-                    return result;
                 }
+                connection.Close();
             }
+            return result.AsReadOnly();
         }
     }
 }
