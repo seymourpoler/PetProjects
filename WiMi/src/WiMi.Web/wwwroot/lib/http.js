@@ -4,43 +4,36 @@
         const contentTypeJson = 'application/json;charset=UTF-8';
 
         var self = this;
-        var xmlHttpRequest = new XMLHttpRequest();
 
         self.get = function (url, successHandler, errorHandler) {
-            xmlHttpRequest.onreadystatechange = function () {
-                xmlHttpRequestHandler('GET', url ,xmlHttpRequest, successHandler, errorHandler);
-            }
-            xmlHttpRequest.open('GET', url, true);
-            xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
+            var xmlHttpRequest = buildXmlHttpRequest('GET', url, successHandler, errorHandler);
             xmlHttpRequest.send();
         };
 
         self.post = function (url, request, successHandler, errorHandler) {
-            xmlHttpRequest.onreadystatechange = function () {
-                xmlHttpRequestHandler('POST', url, xmlHttpRequest, successHandler, errorHandler);
-            }
-            xmlHttpRequest.open('POST', url, true);
-            xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
+            var xmlHttpRequest = buildXmlHttpRequest('POST', url, successHandler, errorHandler);
             xmlHttpRequest.send(JSON.stringify(request));
         };
 
         self.put = function (url, request, successHandler, errorHandler) {
-            xmlHttpRequest.onreadystatechange = function () {
-                xmlHttpRequestHandler('PUT', url, xmlHttpRequest, successHandler, errorHandler);
-            }
-            xmlHttpRequest.open('PUT', url);
-            xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
+            var xmlHttpRequest = buildXmlHttpRequest('PUT', url, successHandler, errorHandler);
             xmlHttpRequest.send(JSON.stringify(request));
         };
 
         self.delete = function (url, successHandler, errorHandler) {
-            xmlHttpRequest.onreadystatechange = function () {
-                xmlHttpRequestHandler('DELETE', url, xmlHttpRequest, successHandler, errorHandler);
-            }
-            xmlHttpRequest.open('DELETE', url, true);
-            xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
+            var xmlHttpRequest = buildXmlHttpRequest('DELETE', url, successHandler, errorHandler);
             xmlHttpRequest.send();
         };
+
+        function buildXmlHttpRequest(httpVerb, url, successHandler, errorHandler) {
+            var xmlHttpRequest = new XMLHttpRequest();
+            xmlHttpRequest.onreadystatechange = function () {
+                xmlHttpRequestHandler(httpVerb, url, xmlHttpRequest, successHandler, errorHandler);
+            }
+            xmlHttpRequest.open(httpVerb, url, true);
+            xmlHttpRequest.setRequestHeader(contentTypeHeader, contentTypeJson);
+            return xmlHttpRequest;
+        }
 
         function xmlHttpRequestHandler(httpVerb, url, xmlHttpRequest, successHandler, errorHandler) {
             if (isOk(xmlHttpRequest)) {
