@@ -2,8 +2,8 @@ window.Peper = window.Perper|| {};
 (function (Peper) {
 
     Peper.Label = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+        let self = this;
+        let control = document.getElementById(id);
 
         self.setText = function(text){
             control.innerHTML = text;
@@ -34,8 +34,8 @@ window.Peper = window.Perper|| {};
     };
 
     Peper.InputText = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+        let self = this;
+        let control = document.getElementById(id);
 
         self.setText = function(text){
             control.value = text;
@@ -61,8 +61,8 @@ window.Peper = window.Perper|| {};
     };
 
     Peper.Button = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+        let self = this;
+        let control = document.getElementById(id);
 
         self.setText = function(text){
             control.value = text;
@@ -92,8 +92,8 @@ window.Peper = window.Perper|| {};
     };
 
     Peper.Select = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+        let self = this;
+        let control = document.getElementById(id);
 
         self.show = function(){
             control.style.display = 'inline';
@@ -157,8 +157,8 @@ window.Peper = window.Perper|| {};
     };
 
     Peper.InputRadio = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+        let self = this;
+        let control = document.getElementById(id);
 
         self.show = function(){
             control.style.display = 'inline';
@@ -172,8 +172,8 @@ window.Peper = window.Perper|| {};
     };
 
     Peper.Checkbox = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+        let self = this;
+        let control = document.getElementById(id);
 
         self.show = function(){
             control.style.display = 'inline';
@@ -187,8 +187,8 @@ window.Peper = window.Perper|| {};
     };
 
     Peper.Panel = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+        let self = this;
+        let control = document.getElementById(id);
 
         self.show = function(){
             control.style.display = 'inline';
@@ -202,15 +202,15 @@ window.Peper = window.Perper|| {};
     };
 
     Peper.List = function (domId) {
-        var self = this;
-        var control = document.getElementById(domId);
+        let self = this;
+        let control = document.getElementById(domId);
 
         self.clear = function () {
             control.innerHTML = "";
         };
 
         self.addItem = function (item) {
-            var li = document.createElement("li");
+            let li = document.createElement("li");
             li.appendChild(document.createTextNode(item.name));
             li.setAttribute("id", item.id);
             if (item.onClick) {
@@ -229,7 +229,7 @@ window.Peper = window.Perper|| {};
     };
 
     Peper.Redirector = function(){
-        var self = this;
+        let self = this;
 
         self.redirect = function(url){
             window.location = url;
