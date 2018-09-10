@@ -3,30 +3,30 @@
         const contentTypeHeader = 'Content-Type';
         const contentTypeJson = 'application/json;charset=UTF-8';
 
-        var self = this;
+        let self = this;
 
         self.get = function (url, successHandler, errorHandler) {
-            var xmlHttpRequest = buildXmlHttpRequest('GET', url, successHandler, errorHandler);
+            let xmlHttpRequest = buildXmlHttpRequest('GET', url, successHandler, errorHandler);
             xmlHttpRequest.send();
         };
 
         self.post = function (url, request, successHandler, errorHandler) {
-            var xmlHttpRequest = buildXmlHttpRequest('POST', url, successHandler, errorHandler);
+            let xmlHttpRequest = buildXmlHttpRequest('POST', url, successHandler, errorHandler);
             xmlHttpRequest.send(JSON.stringify(request));
         };
 
         self.put = function (url, request, successHandler, errorHandler) {
-            var xmlHttpRequest = buildXmlHttpRequest('PUT', url, successHandler, errorHandler);
+            let xmlHttpRequest = buildXmlHttpRequest('PUT', url, successHandler, errorHandler);
             xmlHttpRequest.send(JSON.stringify(request));
         };
 
         self.delete = function (url, successHandler, errorHandler) {
-            var xmlHttpRequest = buildXmlHttpRequest('DELETE', url, successHandler, errorHandler);
+            let xmlHttpRequest = buildXmlHttpRequest('DELETE', url, successHandler, errorHandler);
             xmlHttpRequest.send();
         };
 
         function buildXmlHttpRequest(httpVerb, url, successHandler, errorHandler) {
-            var xmlHttpRequest = new XMLHttpRequest();
+            let xmlHttpRequest = new XMLHttpRequest();
             xmlHttpRequest.onreadystatechange = function () {
                 xmlHttpRequestHandler(httpVerb, url, xmlHttpRequest, successHandler, errorHandler);
             }
@@ -66,7 +66,7 @@
         function isAnError(response) {
             const internalServerErrorTypeNumber = 5;
             const requestErrorTypeNumber = 4;
-            var divisionResult = response.status / 100;
+            let divisionResult = response.status / 100;
             return divisionResult == internalServerErrorTypeNumber ||
                 divisionResult == requestErrorTypeNumber;
         }
