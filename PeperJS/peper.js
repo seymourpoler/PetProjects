@@ -1,8 +1,9 @@
-(function(peper){
+window.Peper = window.Perper|| {};
+(function (Peper) {
 
-    peper.Label = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+    Peper.Label = function(id){
+        let self = this;
+        let control = document.getElementById(id);
 
         self.setText = function(text){
             control.innerHTML = text;
@@ -16,6 +17,11 @@
             control.innerHTML = '';
         };
 
+        self.showText = function (text) {
+            control.style.display = 'inline';
+            control.innerHTML = text;
+        };
+
         self.show = function(){
             control.style.display = 'inline';
             //control.style.visibility='visible';
@@ -27,9 +33,9 @@
         };
     };
 
-    peper.InputText = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+    Peper.InputText = function(id){
+        let self = this;
+        let control = document.getElementById(id);
 
         self.setText = function(text){
             control.value = text;
@@ -54,9 +60,9 @@
         };
     };
 
-    peper.Button = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+    Peper.Button = function(id){
+        let self = this;
+        let control = document.getElementById(id);
 
         self.setText = function(text){
             control.value = text;
@@ -79,11 +85,15 @@
             control.style.display = 'none';
             //control.style.visibility='hidden';
         };
+
+        self.on = function (event, handler) {
+            control.addEventListener(event, handler);
+        };
     };
 
-    peper.Select = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+    Peper.Select = function(id){
+        let self = this;
+        let control = document.getElementById(id);
 
         self.show = function(){
             control.style.display = 'inline';
@@ -146,9 +156,9 @@
         };
     };
 
-    peper.InputRadio = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+    Peper.InputRadio = function(id){
+        let self = this;
+        let control = document.getElementById(id);
 
         self.show = function(){
             control.style.display = 'inline';
@@ -161,9 +171,9 @@
         };
     };
 
-    peper.Checkbox = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+    Peper.Checkbox = function(id){
+        let self = this;
+        let control = document.getElementById(id);
 
         self.show = function(){
             control.style.display = 'inline';
@@ -176,9 +186,9 @@
         };
     };
 
-    peper.Panel = function(id){
-        var self = this;
-        var control = document.getElementById(id);
+    Peper.Panel = function(id){
+        let self = this;
+        let control = document.getElementById(id);
 
         self.show = function(){
             control.style.display = 'inline';
@@ -191,12 +201,39 @@
         };
     };
 
-    peper.Redirector = function(){
-        var self = this;
+    Peper.List = function (domId) {
+        let self = this;
+        let control = document.getElementById(domId);
+
+        self.clear = function () {
+            control.innerHTML = "";
+        };
+
+        self.addItem = function (item) {
+            let li = document.createElement("li");
+            li.appendChild(document.createTextNode(item.name));
+            li.setAttribute("id", item.id);
+            if (item.onClick) {
+                li.onclick = item.onClick;
+            }
+            control.appendChild(li);
+        };
+
+        self.addHtmlItem = function (htmlItem) {
+            list.append(htmlItem);
+        };
+
+        self.removeItem = function (itemId) {
+            list.find(itemId).remove();
+        };
+    };
+
+    Peper.Redirector = function(){
+        let self = this;
 
         self.redirect = function(url){
             window.location = url;
         };
     };
 
-})(window.peper || {})
+})(window.Peper || {})
