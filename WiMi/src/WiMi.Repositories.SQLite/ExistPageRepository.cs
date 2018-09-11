@@ -1,34 +1,24 @@
 ﻿using System;
-using System.Data.SQLite;
 using WiMi.Domain.Pages;
 
 namespace WiMi.Repositories.SQLite
 {
     public class ExistPageRepository : IExistPageRepository
     {
-        readonly DataBaseConfiguration configuration;
+        readonly ISqlExecutor sqlExecutor;
 
-        public ExistPageRepository(
-            DataBaseConfiguration configuration)
+        public ExistPageRepository(ISqlExecutor sqlExecutor)
         {
-            this.configuration = configuration;
+            this.sqlExecutor = sqlExecutor;
         }
 
         public bool Exist(Guid id)
         {
             const int oneElement = 1; 
             var result = false;
-            using (var connection = new SQLiteConnection(configuration.ConnectionString))
-            {
-                connection.Open();
-                var sql = $"SELECT COUNT(*) FROM Pages WHERE Id = '{id.ToString()}'";
-                using (var command = new SQLiteCommand(commandText: sql, connection: connection))
-                {
-                    var executionResult = command.ExecuteScalar();
-                    result = Convert.ToInt32(executionResult) == oneElement; 
-                }
-                connection.Close();
-            }
+            var sql = $"SELECT COUNT(*) FROM Pages WHERE Id = '{id.ToString()}'";
+            var executionResult = sqlExecutor.ExecuteScalar(sql);
+            result = Convert.ToInt32(executionResult) == oneElement;
             return result;
         }
     }

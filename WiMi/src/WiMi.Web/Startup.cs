@@ -26,6 +26,7 @@ namespace WiMi.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<DataBaseConfiguration>();
+            services.AddTransient<ISqlExecutor, SqlExecutor>();
             services.AddTransient<IRemovePageRepository, RemovePageRepository>();
             services.AddTransient<IUpdatePageRepository, UpdatePageRepository>();
             services.AddTransient<IExistPageRepository, ExistPageRepository>();

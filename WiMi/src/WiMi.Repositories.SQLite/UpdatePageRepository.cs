@@ -1,30 +1,21 @@
-﻿using System.Data.SQLite;
-using WiMi.Domain.Pages;
+﻿using WiMi.Domain.Pages;
 using WiMi.Domain.Pages.Update;
 
 namespace WiMi.Repositories.SQLite
 {
     public class UpdatePageRepository : IUpdatePageRepository
     {
-        readonly DataBaseConfiguration configuration;
+        readonly ISqlExecutor sqlExecutor;
 
-        public UpdatePageRepository(DataBaseConfiguration configuration)
+        public UpdatePageRepository(ISqlExecutor sqlExecutor)
         {
-            this.configuration = configuration;
+            this.sqlExecutor = sqlExecutor;
         }
 
         public void Update(Page page)
         {
-            using (var connection = new SQLiteConnection(configuration.ConnectionString))
-            {
-                connection.Open();
-                var sql = $"UPDATE Pages SET Title = '{page.Title}', Body = '{page.Body}' WHERE Id = '{page.Id.ToString()}'";
-                using (var command = new SQLiteCommand(commandText: sql, connection: connection))
-                {
-                    command.ExecuteNonQuery();
-                }
-                connection.Close();
-            }
+            var sql = $"UPDATE Pages SET Title = '{page.Title}', Body = '{page.Body}' WHERE Id = '{page.Id.ToString()}'";
+            sqlExecutor.ExecuteNonQuery(sql);
         }
     }
 }
