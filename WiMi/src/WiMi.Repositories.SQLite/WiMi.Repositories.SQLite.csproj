@@ -8,7 +8,7 @@
     <Compile Include="..\..\DataBase\DataBaseConfiguration.cs" Link="DataBaseConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.108" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="$(SystemDataSQLiteCoreVersion)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WiMi.Domain\WiMi.Domain.csproj" />
