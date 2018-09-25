@@ -1,0 +1,12 @@
+﻿import { REMOVE_TODO_ITEM, ADD_TODO_ITEM } from './Actions.Types';
+import { removeTodo, addTodo } from './Actions';
+
+describe('when remove todo is requested', () => {
+    it('removes todo item', () => {
+        const id = 1;
+        let result = removeTodo(id);
+
+        expect(result.type).toBe(REMOVE_TODO_ITEM);
+        expect(result.payload).toBe(id);
+    });
+});
