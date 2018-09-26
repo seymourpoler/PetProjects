@@ -34,6 +34,4 @@ class ListTodos extends Component {
     }
 }
 
-
-const List = connect(mapStateToProps)(ListTodos);
-export default List;
+export default connect(mapStateToProps)(ListTodos);

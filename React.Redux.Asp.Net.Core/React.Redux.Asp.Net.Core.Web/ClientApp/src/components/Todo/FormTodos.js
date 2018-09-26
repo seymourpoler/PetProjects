@@ -1,15 +1,15 @@
 ﻿import React, { Component } from 'react';
 
-import Create from './CreateTodo';
-import List from './ListTodos';
+import CreateTodo from './CreateTodo';
+import ListTodos from './ListTodos';
 
 export default class FormTodos extends Component {
     render() {
         return (
             <div>
-                <Create/>
+                <CreateTodo/>
                 <br />
-                <List />
+                <ListTodos />
             </div>
         );
     }
