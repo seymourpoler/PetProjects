@@ -32,10 +32,6 @@ class CreateTodo extends Component {
     }
 }
 
-//const mapStateToProps = (state) => {
-//    return state;
-//};
-
 const mapDispatchToProps = dispatch => {
     return {
         add: todo => {
@@ -43,9 +39,6 @@ const mapDispatchToProps = dispatch => {
         }
     };
 };
-
-//export default connect(mapStateToProps, mapDispatchToProps)(CreateTodo);
-
 
 const Create = connect(null, mapDispatchToProps)(CreateTodo);
 export default Create;
