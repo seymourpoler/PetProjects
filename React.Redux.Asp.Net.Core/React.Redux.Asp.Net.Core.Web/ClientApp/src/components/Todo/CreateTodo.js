@@ -14,11 +14,6 @@ class CreateTodo extends Component {
                 title: title,
                 description: description
             }));
-        //this.props.add({
-        //    id: Math.random().toString(),
-        //    title: title,
-        //    description: description
-        //});
     };
 
     render() {
@@ -32,13 +27,4 @@ class CreateTodo extends Component {
     }
 }
 
-//const mapDispatchToProps = dispatch => {
-//    return {
-//        add: todo => {
-//            dispatch(addTodo(todo));
-//        }
-//    };
-//};
-
-//const Create = connect(null, mapDispatchToProps)(CreateTodo);
 export default connect()(CreateTodo);

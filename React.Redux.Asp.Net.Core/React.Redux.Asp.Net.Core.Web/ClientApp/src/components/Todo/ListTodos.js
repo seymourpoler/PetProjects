@@ -20,7 +20,6 @@ class ListTodos extends Component {
     render() {
         let result = 'List TODOS';
         if (this.props.todos && Array.isArray(this.props.todos)) {
-            //result = (<p>{this.props.count}</p>);
             result = this.props.todos.map((todo, index) => {
                 return (<a key={index} id={todo.id} onClick={this.removeTodoItem}> {todo.title} </a>);
             });
