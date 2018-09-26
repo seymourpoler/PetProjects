@@ -8,17 +8,17 @@ class CreateTodo extends Component {
         event.preventDefault();
         const title = document.getElementById('txtTitle').value;
         const description = document.getElementById('txtDescription').value;
-        //this.props.dispatch(addTodo(
-        //    {
-        //        id: Math.random().toString(),
-        //        title: title,
-        //        description: description
-        //    }));
-        this.props.add({
-            id: Math.random().toString(),
-            title: title,
-            description: description
-        });
+        this.props.dispatch(addTodo(
+            {
+                id: Math.random().toString(),
+                title: title,
+                description: description
+            }));
+        //this.props.add({
+        //    id: Math.random().toString(),
+        //    title: title,
+        //    description: description
+        //});
     };
 
     render() {
@@ -32,13 +32,13 @@ class CreateTodo extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        add: todo => {
-            dispatch(addTodo(todo));
-        }
-    };
-};
+//const mapDispatchToProps = dispatch => {
+//    return {
+//        add: todo => {
+//            dispatch(addTodo(todo));
+//        }
+//    };
+//};
 
-const Create = connect(null, mapDispatchToProps)(CreateTodo);
-export default Create;
+//const Create = connect(null, mapDispatchToProps)(CreateTodo);
+export default connect()(CreateTodo);
