@@ -2,7 +2,7 @@
 import { ADD_TODO_ITEM } from './Actions.Types';
 
 describe('when todo items reducing is requested', () => {
-    it('add new todo item', () => {
+    it('adds new todo item', () => {
         const item = { id: 1, title: 'title', description: 'description' };
         const action = { type: ADD_TODO_ITEM, payload: item };
         const state = { todos: [] };
