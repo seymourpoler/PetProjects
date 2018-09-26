@@ -5,7 +5,6 @@ export default function reducer(state, action) {
     state = state || initialState;
     switch (action.type) {
         case ADD_TODO_ITEM:
-            //[...state, action.payload]
             const added = {
                 ...state,
                 todos: state.todos.concat(action.payload)
@@ -13,7 +12,6 @@ export default function reducer(state, action) {
             return added;
 
         case REMOVE_TODO_ITEM:
-            //state.filter(todo => { return todo.id !== action.payload });
             const removed = {
                 ...state,
                 todos: state.todos.filter(todo => { return todo.id !== action.payload })
