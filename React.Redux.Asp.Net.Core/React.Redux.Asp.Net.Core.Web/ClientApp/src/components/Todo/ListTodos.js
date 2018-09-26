@@ -2,13 +2,6 @@
 import { connect } from 'react-redux';
 import { removeTodo } from './Actions';
 
-const mapStateToProps = state => {
-    return {
-        todos: state.todoReducer.todos,
-        count: state.counter
-    };
-};
-
 class ListTodos extends Component {
     
     removeTodoItem = (event) => {
@@ -32,5 +25,12 @@ class ListTodos extends Component {
             );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        todos: state.todoReducer.todos,
+        count: state.counter
+    };
+};
 
 export default connect(mapStateToProps)(ListTodos);
