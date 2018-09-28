@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Spinner from '../Spinner';
 
 class List extends Component {
 
@@ -8,6 +9,8 @@ class List extends Component {
     };
 
     render() {
+        <Spinner show={this.props.showSpinner} />
+
         let result = 'No resuts';
         if (this.props.articles && Array.isArray(this.props.articles)) {
             result = this.props.articles.map((article, index) => {
