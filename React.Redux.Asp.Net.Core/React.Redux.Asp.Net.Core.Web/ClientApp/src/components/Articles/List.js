@@ -29,6 +29,7 @@ class List extends Component {
 const mapStateToProps = state => {
     return {
         articles: state.ArticleReducer.articles,
+        showSpinner: state.ArticleReducer.showSpinner
     };
 };
 
