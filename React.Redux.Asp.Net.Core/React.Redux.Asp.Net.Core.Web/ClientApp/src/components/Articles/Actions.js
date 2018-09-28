@@ -1,4 +1,4 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER } from './Actions.types';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR } from './Actions.types';
 import Service from './Service';
 
 export const showSpinner = () => {
@@ -14,9 +14,9 @@ export const hideSpinner = () => {
 };
 
 export const findArticles = () => {
-    let articles = Service.find();
-    return {
-        type: LIST_ARTICLES,
-        payload: id
-    };
+    const result = Service.find();
+    if (result.status === 500) {
+        return { type: INTERNAL_SERVER_ERROR };
+    }
+    throw 'not implemented';
 };

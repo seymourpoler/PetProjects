@@ -1,5 +1,5 @@
 ﻿export default class Service {
-    find() {
+    find(errorHandler, successHandler) {
         throw 'not implemented';
     }
 
