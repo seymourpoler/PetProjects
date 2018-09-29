@@ -35,6 +35,7 @@ describe('Articles', () => {
             let result = findArticles();
 
             expect(result.type).toBe(BAD_REQUEST);
+            expect(result.errors).not.toBeNull();
         });
     });
 });
