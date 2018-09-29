@@ -1,6 +1,7 @@
 ﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR } from './Actions.types';
 import { showSpinner, hideSpinner, findArticles } from './Actions';
 import Service from './Service';
+import HttpStatusCode from '../../HttpStatusCode';
 
 describe('Articles', () => {
     it('shows spinner', () => {
@@ -16,10 +17,9 @@ describe('Articles', () => {
     });
 
     describe('when finding articles is requested', () => {
-        it('shows error if there is an internal server error', () => {
+        it('shows error message if there is an internal server error', () => {
             Service.find = () => {
-                // TODO: extract class
-                return { status: 500 };
+                return { statusCode: HttpStatusCode.InternalServerError };
             };
 
             let result = findArticles();
