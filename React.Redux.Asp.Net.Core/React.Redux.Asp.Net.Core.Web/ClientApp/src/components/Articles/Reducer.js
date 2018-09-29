@@ -7,6 +7,10 @@ export default function reducer(state, action) {
     state = state || initialState;
     switch (action.type) {
         case SHOW_SPINNER:
+            return {
+                ...state,
+                showSpinner: true
+            };
         case HIDE_SPINNER:
         case INTERNAL_SERVER_ERROR:
             throw 'not implemented';

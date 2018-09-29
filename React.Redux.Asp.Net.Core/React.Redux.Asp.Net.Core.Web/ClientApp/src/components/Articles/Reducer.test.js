@@ -1,4 +1,5 @@
-﻿import reducer from './Reducer';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST, SHOW_ARTICLES } from './Actions.types';
+import reducer from './Reducer';
 import HttpStatusCode from '../../HttpStatusCode';
 
 describe('Reducer', () => {
@@ -9,8 +10,9 @@ describe('Reducer', () => {
         expect(result.statusCode).toBe(HttpStatusCode.Ok);
     });
 
-    xit('returns state for showing spinner', () => {
-        const result = reducer({});
-        
+    it('returns state for showing spinner', () => {
+        const result = reducer({}, { type: SHOW_SPINNER });
+
+        expect(result.showSpinner).toBeTruthy();
     });
 });
