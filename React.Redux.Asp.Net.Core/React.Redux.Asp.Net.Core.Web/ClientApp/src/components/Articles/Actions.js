@@ -1,4 +1,4 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR } from './Actions.types';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST } from './Actions.types';
 import Service from './Service';
 import HttpStatusCode from '../../HttpStatusCode';
 
@@ -15,9 +15,13 @@ export const hideSpinner = () => {
 };
 
 export const findArticles = () => {
-    let result = Service.find();
+    const result = Service.find();
     if (result.statusCode === HttpStatusCode.InternalServerError) {
         return { type: INTERNAL_SERVER_ERROR };
     }
+    if (result.statusCode === HttpStatusCode.BadRequest) {
+        return { type: BAD_REQUEST, errors: result.errors };
+    }
+
     throw 'not implemented';
 };
