@@ -28,4 +28,12 @@ describe('Reducer', () => {
         expect(result.showSpinner).toBeFalsy();
         expect(result.statusCode).toBe(INTERNAL_SERVER_ERROR );
     });
+
+    it('returns state for bad request', () => {
+        const result = reducer({}, { type: BAD_REQUEST, errors: [{ fieldId: 'title', errorCode: 'Required' }, { fieldId: 'subTitle', errorCode: 'Required' }] });
+
+        expect(result.showSpinner).toBeFalsy();
+        expect(result.statusCode).toBe(BAD_REQUEST);
+        expect(result.errors).not.toBeNull();
+    });
 });

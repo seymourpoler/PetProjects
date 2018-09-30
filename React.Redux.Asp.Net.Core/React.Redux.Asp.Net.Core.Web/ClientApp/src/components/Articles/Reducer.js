@@ -22,6 +22,12 @@ export default function reducer(state, action) {
                 showSpinner: false,
                 statusCode: INTERNAL_SERVER_ERROR
             };
+        case BAD_REQUEST:
+            return {
+                ...state,
+                statusCode: BAD_REQUEST,
+                errors: action.errors
+            };
         
         default:
             return state;
