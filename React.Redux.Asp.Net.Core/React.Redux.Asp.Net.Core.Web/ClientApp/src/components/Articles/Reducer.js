@@ -1,4 +1,4 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST, SHOW_ARTICLES } from './Actions.types';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from './Actions.types';
 import HttpStatusCode from '../../HttpStatusCode';
 
 const initialState = { statusCode: HttpStatusCode.Ok, articles: [] };
@@ -28,7 +28,12 @@ export default function reducer(state, action) {
                 statusCode: BAD_REQUEST,
                 errors: action.errors
             };
-        
+        case OK:
+            return {
+                ...state,
+                statusCode: OK,
+                articles: action.articles
+            };
         default:
             return state;
     }

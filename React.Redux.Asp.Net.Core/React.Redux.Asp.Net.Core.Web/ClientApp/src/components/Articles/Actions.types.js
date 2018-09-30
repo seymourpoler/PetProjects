@@ -2,4 +2,4 @@
 export const HIDE_SPINNER = 'HIDE_SPINNER';
 export const INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR';
 export const BAD_REQUEST = 'BAD_REQUEST';
-export const SHOW_ARTICLES = 'SHOW_ARTICLES';
+export const OK = 'OK';

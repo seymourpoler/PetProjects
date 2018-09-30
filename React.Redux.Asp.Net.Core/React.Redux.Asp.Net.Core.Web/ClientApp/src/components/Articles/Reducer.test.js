@@ -1,4 +1,4 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST, SHOW_ARTICLES } from './Actions.types';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from './Actions.types';
 import reducer from './Reducer';
 import HttpStatusCode from '../../HttpStatusCode';
 
@@ -35,5 +35,13 @@ describe('Reducer', () => {
         expect(result.showSpinner).toBeFalsy();
         expect(result.statusCode).toBe(BAD_REQUEST);
         expect(result.errors).not.toBeNull();
+    });
+
+    it('returns state for showing articles', () => {
+        const result = reducer({}, { type: OK, articles: [{ id: 1, title: 'title-article', description:'description-article' }] });
+
+        expect(result.showSpinner).toBeFalsy();
+        expect(result.statusCode).toBe(OK);
+        expect(result.articles).not.toBeNull();
     });
 });

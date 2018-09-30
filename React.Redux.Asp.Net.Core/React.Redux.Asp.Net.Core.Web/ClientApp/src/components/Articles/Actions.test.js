@@ -1,4 +1,4 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST, SHOW_ARTICLES } from './Actions.types';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from './Actions.types';
 import { showSpinner, hideSpinner, findArticles } from './Actions';
 import Service from './Service';
 import HttpStatusCode from '../../HttpStatusCode';
@@ -45,7 +45,7 @@ describe('Articles', () => {
 
             let result = findArticles();
 
-            expect(result.type).toBe(SHOW_ARTICLES);
+            expect(result.type).toBe(OK);
             expect(result.articles).not.toBeNull();
         });
     });
