@@ -15,4 +15,17 @@ describe('Reducer', () => {
 
         expect(result.showSpinner).toBeTruthy();
     });
+
+    it('returns state for hidding spinner', () => {
+        const result = reducer({}, { type: HIDE_SPINNER });
+
+        expect(result.showSpinner).toBeFalsy();
+    });
+
+    it('returns state for internal server error', () => {
+        const result = reducer({}, { type: INTERNAL_SERVER_ERROR });
+
+        expect(result.showSpinner).toBeFalsy();
+        expect(result.statusCode).toBe(INTERNAL_SERVER_ERROR );
+    });
 });

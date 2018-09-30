@@ -12,8 +12,16 @@ export default function reducer(state, action) {
                 showSpinner: true
             };
         case HIDE_SPINNER:
+            return {
+                ...state,
+                showSpinner: false
+            };
         case INTERNAL_SERVER_ERROR:
-            throw 'not implemented';
+            return {
+                ...state,
+                showSpinner: false,
+                statusCode: INTERNAL_SERVER_ERROR
+            };
         
         default:
             return state;
