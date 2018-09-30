@@ -1,6 +1,7 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from './Actions.types';
+﻿import { SHOW_SPINNER, HIDE_SPINNER } from './Actions.types';
 import reducer from './Reducer';
 import HttpStatusCode from '../../HttpStatusCode';
+import { INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from '../../HttpStatusCode.types';
 
 describe('Reducer', () => {
     it('initializes state if is undefined', () => {
