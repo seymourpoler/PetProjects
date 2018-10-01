@@ -1,11 +1,23 @@
 ﻿import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Spinner from '../Spinner';
+import Service from './Service';
+import { showSpinner } from './Actions';
 
 class List extends Component {
 
+    constructor() {
+        this.loadArticles();
+    }
+
     removeItem = (event) => {
         throw 'not implemented';
+    };
+
+    loadArticles = () => {
+        this.props.dispatch(showSpinner());
+        this.props.dispatch(Service.find());
+        this.props.dispatch(hideSpinner());
     };
 
     render() {
