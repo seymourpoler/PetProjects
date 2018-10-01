@@ -1,5 +1,5 @@
 ﻿import Service from './Service';
-import { INTERNAL_SERVER_ERROR, BAD_REQUEST } from '../../HttpStatusCode.types';
+import { INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from '../../HttpStatusCode.types';
 
 describe('Service', () => {
     let service;
@@ -31,5 +31,20 @@ describe('Service', () => {
 
         expect(result.type).toBe(BAD_REQUEST);
         expect(result.errors).toBe(errors);
+    });
+
+    it('returns articles', async () => {
+        const articles = [{ id: 1, title: 'title-one' }, { id: 2, title: 'title-two' }];
+        window.fetch = jest.fn().mockImplementation(() => ({
+            status: OK,
+            json: () => new Promise((resolve, reject) => {
+                resolve(articles);
+            })
+        }));
+
+        const result = await service.find();
+
+        expect(result.type).toBe(OK);
+        expect(result.errors).toBe(articles);
     });
 });

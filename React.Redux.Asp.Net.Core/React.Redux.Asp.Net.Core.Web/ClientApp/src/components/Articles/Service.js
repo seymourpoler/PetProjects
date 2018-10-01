@@ -1,4 +1,4 @@
-﻿import { INTERNAL_SERVER_ERROR, BAD_REQUEST } from '../../HttpStatusCode.types';
+﻿import { INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from '../../HttpStatusCode.types';
 
 export default class Service {
     async find () {
@@ -18,7 +18,11 @@ export default class Service {
                 errors: errors
             };
         }
-        throw 'not implemented';
+        var articles = await response.json();
+        return {
+            type: OK,
+            errors: articles
+        };
     }
 
     save (article) {
