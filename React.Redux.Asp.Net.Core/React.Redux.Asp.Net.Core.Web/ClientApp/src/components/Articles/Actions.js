@@ -18,11 +18,11 @@ export const hideSpinner = () => {
 export const findArticles = () => {
     const result = Service.find();
     if (result.statusCode === HttpStatusCode.InternalServerError) {
-        return { type: INTERNAL_SERVER_ERROR };
+        return { type: INTERNAL_SERVER_ERROR, articles: [], errors: [] };
     }
     if (result.statusCode === HttpStatusCode.BadRequest) {
-        return { type: BAD_REQUEST, errors: result.errors };
+        return { type: BAD_REQUEST, articles: [], errors: result.errors };
     }
 
-    return { type: OK, articles: result.articles };
+    return { type: OK, articles: result.articles, errors: [] };
 };
