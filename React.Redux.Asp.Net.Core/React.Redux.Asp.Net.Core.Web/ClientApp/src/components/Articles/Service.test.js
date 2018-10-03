@@ -45,6 +45,6 @@ describe('Service', () => {
         const result = await service.find();
 
         expect(result.type).toBe(OK);
-        expect(result.errors).toBe(articles);
+        expect(result.articles).toBe(articles);
     });
 });

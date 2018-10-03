@@ -20,7 +20,6 @@ export default function reducer(state, action) {
         case INTERNAL_SERVER_ERROR:
             return {
                 ...state,
-                showSpinner: false,
                 statusCode: INTERNAL_SERVER_ERROR
             };
         case BAD_REQUEST:

@@ -1,3 +1,3 @@
-﻿export const INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR';
-export const BAD_REQUEST = 'BAD_REQUEST';
-export const OK = 'OK';
+﻿export const INTERNAL_SERVER_ERROR = 500;
+export const BAD_REQUEST = 400;
+export const OK = 200;

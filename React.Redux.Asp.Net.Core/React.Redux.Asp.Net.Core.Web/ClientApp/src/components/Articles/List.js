@@ -2,11 +2,13 @@
 import { connect } from 'react-redux';
 import Spinner from '../Spinner';
 import Service from './Service';
-import { showSpinner } from './Actions';
+import { showSpinner, hideSpinner } from './Actions';
 
 class List extends Component {
 
-    constructor() {
+    constructor(props) {
+        super(props);
+        this.service = new Service();
         this.loadArticles();
     }
 
@@ -14,24 +16,24 @@ class List extends Component {
         throw 'not implemented';
     };
 
-    loadArticles = () => {
+    loadArticles = async () => {
         this.props.dispatch(showSpinner());
-        this.props.dispatch(Service.find());
+        const articles = await this.service.find();
+        this.props.dispatch(articles);
         this.props.dispatch(hideSpinner());
     };
 
     render() {
-        <Spinner show={this.props.showSpinner} />
-
         let result = 'No resuts';
         if (this.props.articles && Array.isArray(this.props.articles)) {
             result = this.props.articles.map((article, index) => {
-                return <a key={index} id={article.id} onClick={this.removeItem}> {article.title} </a>;
-            });
-        }
+                return (<a key={index} id={article.id} onClick={this.removeItem}> {article.title} </a>);
+        });
+    }
 
-        return (
+    return (
             <div>
+                <Spinner show={this.props.showSpinner} />
                 { result }
             </div>
         );
@@ -40,9 +42,10 @@ class List extends Component {
 
 const mapStateToProps = state => {
     return {
-        articles: state.ArticleReducer.articles,
-        showSpinner: state.ArticleReducer.statusCode,
-        errors: state.ArticleReducer.errors
+        articles: state.articleReducer.articles,
+        statusCode: state.articleReducer.statusCode,
+        showSpinner: state.articleReducer.showSpinner,
+        errors: state.articleReducer.errors
     };
 };
 

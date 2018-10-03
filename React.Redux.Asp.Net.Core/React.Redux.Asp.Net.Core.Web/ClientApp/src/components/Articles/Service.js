@@ -1,7 +1,13 @@
 ﻿import { INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from '../../HttpStatusCode.types';
 
 export default class Service {
-    async find () {
+    async find() {
+        //const response = await fetch('/api/articles');
+        //const articles = await response.json();
+        //return {
+        //        type: OK,
+        //        articles: articles
+        //    };
         const response = await fetch('/api/articles', {
             method: 'GET',
             headers: {
@@ -18,11 +24,15 @@ export default class Service {
                 errors: errors
             };
         }
-        var articles = await response.json();
-        return {
-            type: OK,
-            errors: articles
-        };
+        if (response.status === OK) {
+            var articles = await response.json();
+            return {
+                type: OK,
+                articles: articles
+            };
+        }
+        console.log('find articles response: ', response);
+        return { type: '' };
     }
 
     save (article) {
