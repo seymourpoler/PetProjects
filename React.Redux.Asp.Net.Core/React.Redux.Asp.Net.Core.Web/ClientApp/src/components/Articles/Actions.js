@@ -15,8 +15,9 @@ export const hideSpinner = () => {
     };
 };
 
-export const findArticles = () => {
-    const result = Service.find();
+export const findArticles = async () => {
+    let service = new Service();
+    const result = await service.find();
     if (result.statusCode === HttpStatusCode.InternalServerError) {
         return { type: INTERNAL_SERVER_ERROR, articles: [], errors: [] };
     }

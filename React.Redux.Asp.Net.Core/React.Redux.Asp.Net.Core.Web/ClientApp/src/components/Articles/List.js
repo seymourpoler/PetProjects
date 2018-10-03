@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import Spinner from '../Spinner';
 import Service from './Service';
-import { showSpinner, hideSpinner } from './Actions';
+import { showSpinner, hideSpinner, findArticles } from './Actions';
 import { OK, INTERNAL_SERVER_ERROR, BAD_REQUEST } from '../../HttpStatusCode.types';
 
 class List extends Component {
@@ -14,13 +14,18 @@ class List extends Component {
     }
 
     removeItem = (event) => {
+        //const id = event.target.id;
+        //this.props.dispatch(showSpinner());
+        //const result = this.service.delete(id);
+        //this.props.dispatch(result);
+        //this.props.dispatch(hideSpinner());
         throw 'not implemented';
     };
 
     loadArticles = async () => {
         this.props.dispatch(showSpinner());
-        const articles = await this.service.find();
-        this.props.dispatch(articles);
+        const result = await findArticles();
+        this.props.dispatch(result);
         this.props.dispatch(hideSpinner());
     };
 

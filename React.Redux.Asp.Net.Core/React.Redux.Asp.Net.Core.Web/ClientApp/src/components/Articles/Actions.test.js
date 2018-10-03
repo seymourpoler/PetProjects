@@ -18,36 +18,39 @@ describe('Articles', () => {
     });
 
     describe('when finding articles is requested', () => {
-        it('shows error message if there is an internal server error', () => {
+        it('shows error message if there is an internal server error', async () => {
             Service.find = () => {
                 return { statusCode: HttpStatusCode.InternalServerError };
             };
 
-            let result = findArticles();
+            let result = await findArticles();
 
             expect(result.type).toBe(INTERNAL_SERVER_ERROR);
         });
 
-        it('shows error messages if there is errors', () => {
+        it('shows error messages if there is errors', async () => {
             Service.find = () => {
                 return { statusCode: HttpStatusCode.BadRequest, errors: [{fieldId: 'titles', errorCode: 'Required'}] };
             };
 
-            let result = findArticles();
+            let result = await findArticles();
 
             expect(result.type).toBe(BAD_REQUEST);
             expect(result.errors).not.toBeNull();
         });
 
-        it('shows articles', () => {
+        it('shows articles', async () => {
             Service.find = () => {
                 return { statusCode: HttpStatusCode.Ok, articles: [{ id:1, title: 'title-article', description: 'description-article' }] };
             };
 
-            let result = findArticles();
+            let result = await findArticles();
 
             expect(result.type).toBe(OK);
             expect(result.articles).not.toBeNull();
         });
+    });
+
+    describe('when deleting article is requested', () => {
     });
 });
