@@ -1,15 +1,14 @@
 ﻿import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Spinner from '../Spinner';
-import Service from './Service';
-import { showSpinner, hideSpinner, findArticles } from './Actions';
+import { Factory } from './Actions';
 import { OK, INTERNAL_SERVER_ERROR, BAD_REQUEST } from '../../HttpStatusCode.types';
 
 class List extends Component {
 
     constructor(props) {
         super(props);
-        this.service = new Service();
+        this.action = Factory();
         this.loadArticles();
     }
 
@@ -23,10 +22,10 @@ class List extends Component {
     };
 
     loadArticles = async () => {
-        this.props.dispatch(showSpinner());
-        const result = await findArticles();
+        this.props.dispatch(this.action.showSpinner());
+        const result = await this.action.findArticles();
         this.props.dispatch(result);
-        this.props.dispatch(hideSpinner());
+        this.props.dispatch(this.action.hideSpinner());
     };
 
     render() {
