@@ -2,12 +2,6 @@
 
 export default class Service {
     async find() {
-        //const response = await fetch('/api/articles');
-        //const articles = await response.json();
-        //return {
-        //        type: OK,
-        //        articles: articles
-        //    };
         const response = await fetch('/api/articles', {
             method: 'GET',
             headers: {
