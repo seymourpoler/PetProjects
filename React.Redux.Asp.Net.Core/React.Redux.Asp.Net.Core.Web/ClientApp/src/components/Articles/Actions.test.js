@@ -74,7 +74,7 @@ describe('Articles', () => {
             const errors = [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }];
             service.delete = async function (id) {
                 expect(id).toBe(articleId);
-                return { statusCode: HttpStatusCode.INTERNAL_SERVER_ERROR };
+                return { statusCode: HttpStatusCode.InternalServerError };
             };
             let actions = new Actions(service);
 
@@ -84,17 +84,17 @@ describe('Articles', () => {
             expect(result.errors[0].errorCode).toBe(errors[0].errorCode);
         });
 
-        xit('returns error if article is not found', async () => {
+        it('returns errors if there are errors', async () => {
             const articleId = 'article-id';
             service.delete = async function (id) {
                 expect(id).toBe(articleId);
-                return { statusCode: HttpStatusCode.BAD_REQUEST, errors: [{ fieldId:'General', errorCode: 'NotFound' }] };
+                return { statusCode: HttpStatusCode.BadRequest, errors: [{ fieldId: Errors.General, errorCode: Errors.NotFound }] };
             };
             let actions = new Actions(service);
 
-            let result = await actions.deleteArticles(articleId);
+            let result = await actions.deleteArticle(articleId);
 
-            expect(result.statusCode).toBe(BAD_REQUEST);
+            expect(result.type).toBe(SHOW_ERRORS);
             expect(result.errors).not.toBeNull();
         });
     });

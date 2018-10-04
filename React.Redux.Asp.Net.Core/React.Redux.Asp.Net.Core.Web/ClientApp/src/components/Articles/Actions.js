@@ -34,7 +34,10 @@ export class Actions {
 
     async deleteArticle(id) {
         const result = await this.service.delete(id);
-        if (result.statusCode === HttpStatusCode.INTERNAL_SERVER_ERROR) {
+        if (result.statusCode === HttpStatusCode.InternalServerError) {
+            return { type: SHOW_ERRORS, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
+        }
+        if (result.statusCode === HttpStatusCode.BadRequest) {
             return { type: SHOW_ERRORS, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
 
