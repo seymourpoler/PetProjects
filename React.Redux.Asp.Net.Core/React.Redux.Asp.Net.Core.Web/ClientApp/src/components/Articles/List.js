@@ -8,24 +8,24 @@ class List extends Component {
 
     constructor(props) {
         super(props);
-        this.action = Factory();
+        this.actions = Factory();
         this.loadArticles();
     }
 
     removeItem = (event) => {
-        //const id = event.target.id;
-        //this.props.dispatch(showSpinner());
-        //const result = this.service.delete(id);
-        //this.props.dispatch(result);
-        //this.props.dispatch(hideSpinner());
-        throw 'not implemented';
+        const id = event.target.id;
+        this.props.dispatch(this.actions.showSpinner());
+        const result = this.actions.deleteArticle(id);
+        this.props.dispatch(result);
+        this.props.dispatch(hideSpinner());
+        this.loadArticles();
     };
 
     loadArticles = async () => {
-        this.props.dispatch(this.action.showSpinner());
-        const result = await this.action.findArticles();
+        this.props.dispatch(this.actions.showSpinner());
+        const result = await this.actions.findArticles();
         this.props.dispatch(result);
-        this.props.dispatch(this.action.hideSpinner());
+        this.props.dispatch(this.actions.hideSpinner());
     };
 
     render() {

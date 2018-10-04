@@ -1,15 +1,21 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER } from './Actions.types';
-import { Action } from './Actions';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, SHOW_ERRORS } from './Actions.types';
+import { Actions } from './Actions';
 import Service from './Service';
 import HttpStatusCode from '../../HttpStatusCode';
-import { INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from '../../HttpStatusCode.types';
+import Errors from '../../Errors.type';
 
 describe('Articles', () => {
+    let service;
+
+    beforeEach(() => {
+        service = new Service();
+    });
+
     describe('when showing spinner is requested', () => {
         it('shows spinner', () => {
-            let action = new Action(null);
+            let actions = new Actions(null);
 
-            const result = action.showSpinner();
+            const result = actions.showSpinner();
 
             expect(result.type).toBe(SHOW_SPINNER);
         });
@@ -17,57 +23,79 @@ describe('Articles', () => {
 
     describe('when hidding spinner is requested', () => {
         it('hides spinner', () => {
-            let action = new Action(null);
+            let actions = new Actions(null);
 
-            const result = action.hideSpinner();
+            const result = actions.hideSpinner();
 
             expect(result.type).toBe(HIDE_SPINNER);
         });
     });
 
     describe('when finding articles is requested', () => {
-        let service;
-
-        beforeEach(() => {
-            service = new Service();
-        });
-
-        it('shows error message if there is an internal server error', async () => {
+        it('returns error message if there is an internal server error', async () => {
             service.find = async function() {
                 return { statusCode: HttpStatusCode.InternalServerError };
             };
-            let action = new Action(service);
+            let actions = new Actions(service);
 
-            let result = await action.findArticles();
+            let result = await actions.findArticles();
 
-            expect(result.type).toBe(INTERNAL_SERVER_ERROR);
+            expect(result.type).toBe(HttpStatusCode.InternalServerError);
         });
 
-        it('shows error messages if there is errors', async () => {
+        it('returns error messages if there is errors', async () => {
             service.find = async function () {
                 return { statusCode: HttpStatusCode.BadRequest, errors: [{ fieldId: 'titles', errorCode: 'Required' }] };
             };
-            let action = new Action(service);
+            let actions = new Actions(service);
 
-            let result = await action.findArticles();
+            let result = await actions.findArticles();
 
-            expect(result.type).toBe(BAD_REQUEST);
+            expect(result.type).toBe(HttpStatusCode.BadRequest);
             expect(result.errors).not.toBeNull();
         });
 
-        it('shows articles', async () => {
+        it('returns articles', async () => {
             service.find = async function () {
                 return { statusCode: HttpStatusCode.Ok, articles: [{ id: 1, title: 'title-article', description: 'description-article' }] };
             };
-            let action = new Action(service);
+            let actions = new Actions(service);
 
-            let result = await action.findArticles();
+            let result = await actions.findArticles();
 
-            expect(result.type).toBe(OK);
+            expect(result.type).toBe(HttpStatusCode.Ok);
             expect(result.articles).not.toBeNull();
         });
     });
 
-    xdescribe('when deleting article is requested', () => {
+    describe('when deleting article is requested', () => {
+        it('returns error if there is an internal server error', async () => {
+            const articleId = 'article-id';
+            const errors = [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }];
+            service.delete = async function (id) {
+                expect(id).toBe(articleId);
+                return { statusCode: HttpStatusCode.INTERNAL_SERVER_ERROR };
+            };
+            let actions = new Actions(service);
+
+            let result = await actions.deleteArticle(articleId);
+
+            expect(result.type).toBe(SHOW_ERRORS);
+            expect(result.errors[0].errorCode).toBe(errors[0].errorCode);
+        });
+
+        xit('returns error if article is not found', async () => {
+            const articleId = 'article-id';
+            service.delete = async function (id) {
+                expect(id).toBe(articleId);
+                return { statusCode: HttpStatusCode.BAD_REQUEST, errors: [{ fieldId:'General', errorCode: 'NotFound' }] };
+            };
+            let actions = new Actions(service);
+
+            let result = await actions.deleteArticles(articleId);
+
+            expect(result.statusCode).toBe(BAD_REQUEST);
+            expect(result.errors).not.toBeNull();
+        });
     });
 });
