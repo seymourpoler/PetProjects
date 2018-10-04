@@ -1,6 +1,5 @@
 ﻿import { SHOW_SPINNER, HIDE_SPINNER } from './Actions.types';
 import HttpStatusCode from '../../HttpStatusCode';
-import { INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from '../../HttpStatusCode.types';
 
 const initialState = { statusCode: HttpStatusCode.Ok, articles: [] };
 
@@ -17,23 +16,24 @@ export default function reducer(state, action) {
                 ...state,
                 showSpinner: false
             };
-        case INTERNAL_SERVER_ERROR:
+        case HttpStatusCode.InternalServerError:
             return {
                 ...state,
-                statusCode: INTERNAL_SERVER_ERROR
+                statusCode: HttpStatusCode.InternalServerError
             };
-        case BAD_REQUEST:
+        case HttpStatusCode.BadRequest:
             return {
                 ...state,
-                statusCode: BAD_REQUEST,
+                statusCode: HttpStatusCode.BadRequest,
                 errors: action.errors
             };
-        case OK:
+        case HttpStatusCode.Ok:
             return {
                 ...state,
-                statusCode: OK,
+                statusCode: HttpStatusCode.Ok,
                 articles: action.articles
             };
+
         default:
             return state;
     }

@@ -1,4 +1,4 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, SHOW_ERRORS } from './Actions.types';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, SHOW_ERRORS, SHOW_ARTICLES } from './Actions.types';
 import Service from './Service';
 import HttpStatusCode from '../../HttpStatusCode';
 import Errors from '../../Errors.type';
@@ -40,8 +40,7 @@ export class Actions {
         if (result.statusCode === HttpStatusCode.BadRequest) {
             return { type: SHOW_ERRORS, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
-
-        throw 'not implemented';
+        return { type: SHOW_ARTICLES };
     }
 }
 

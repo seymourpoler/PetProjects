@@ -1,4 +1,4 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, SHOW_ERRORS } from './Actions.types';
+﻿import { SHOW_SPINNER, HIDE_SPINNER, SHOW_ERRORS, SHOW_ARTICLES } from './Actions.types';
 import { Actions } from './Actions';
 import Service from './Service';
 import HttpStatusCode from '../../HttpStatusCode';
@@ -96,6 +96,19 @@ describe('Articles', () => {
 
             expect(result.type).toBe(SHOW_ERRORS);
             expect(result.errors).not.toBeNull();
+        });
+
+        it('deletes an article', async () => {
+            const articleId = 'article-id';
+            service.delete = async function (id) {
+                expect(id).toBe(articleId);
+                return { statusCode: HttpStatusCode.Ok };
+            };
+            let actions = new Actions(service);
+
+            let result = await actions.deleteArticle(articleId);
+
+            expect(result.type).toBe(SHOW_ARTICLES);
         });
     });
 });
