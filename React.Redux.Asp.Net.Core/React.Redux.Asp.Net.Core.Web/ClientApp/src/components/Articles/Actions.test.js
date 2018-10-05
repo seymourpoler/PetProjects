@@ -11,9 +11,7 @@ describe('Articles', () => {
 
     beforeEach(() => {
         service = new Service();
-        dispatcher = {
-            dispatch: function () { }
-        };
+        dispatcher = {};
         dispatcher.dispatch = jest.fn();
         actions = new Actions(dispatcher, service); 
     });
@@ -60,7 +58,7 @@ describe('Articles', () => {
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowErrors, articles:[], errors: errors });
         });
 
-        xit('returns articles', async () => {
+        it('returns articles', async () => {
             const articles = [{ id: 1, title: 'title-article', description: 'description-article' }];
             service.find = async function () {
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
