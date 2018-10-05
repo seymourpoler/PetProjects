@@ -49,14 +49,22 @@ export class Actions {
     }
 
     async deleteArticle(id) {
+        this.showSpinner();
         const result = await this.service.delete(id);
+        this.hideSpinner();
         if (result.statusCode === HttpStatusCode.InternalServerError) {
-            return { type: ActionTypes.ShowErrors, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
+            return this.dispatcher.dispatch({
+                type: ActionTypes.ShowErrors,
+                errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }]
+            });
         }
         if (result.statusCode === HttpStatusCode.BadRequest) {
-            return { type: ActionTypes.ShowErrors, articles: [], errors: [{ fieldId: Errors.General, errorCode: result.errors }] };
+            return this.dispatcher.dispatch({
+                type: ActionTypes.ShowErrors,
+                errors: result.errors
+            });
         }
-        return { type: ActionTypes.ShowArticles };
+        return { type: ActionTypes.DeleteArticle };
     }
 }
 
