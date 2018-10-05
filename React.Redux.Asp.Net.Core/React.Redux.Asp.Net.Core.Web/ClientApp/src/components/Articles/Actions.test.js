@@ -103,17 +103,17 @@ describe('Articles', () => {
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowErrors, errors: errors });
         });
 
-        xit('deletes an article', async () => {
+        it('dispatchs deleting an article', async () => {
             const articleId = 'article-id';
             service.delete = async function (id) {
                 expect(id).toBe(articleId);
+                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
                 return { statusCode: HttpStatusCode.Ok };
             };
-            let actions = new Actions(service);
 
-            let result = await actions.deleteArticle(articleId);
+            await actions.deleteArticle(articleId);
 
-            expect(result.type).toBe(SHOW_ARTICLES);
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.DeleteArticle, errors: [] });
         });
     });
 });
