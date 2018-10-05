@@ -24,13 +24,28 @@ export class Actions {
         this.hideSpinner();
 
         if (result.statusCode === HttpStatusCode.InternalServerError) {
-            return { type: ActionTypes.ShowErrors, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
-        }
-        if (result.statusCode === HttpStatusCode.BadRequest) {
-            return { type: ActionTypes.ShowErrors, articles: [], errors: result.errors };
+            this.dispatcher.dispatch({
+                type: ActionTypes.ShowErrors,
+                articles: [],
+                errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }]
+            });
+            return;
         }
 
-        return { type: ActionTypes.ShowArticles, articles: result.articles, errors: [] };
+        if (result.statusCode === HttpStatusCode.BadRequest) {
+            this.dispatcher.dispatch({
+                type: ActionTypes.ShowErrors,
+                articles: [],
+                errors: result.errors
+            });
+            return;
+        }
+
+        this.dispatcher.dispatch({
+            type: ActionTypes.ShowArticles,
+            articles: result.articles,
+            errors: []
+        });
     }
 
     async deleteArticle(id) {

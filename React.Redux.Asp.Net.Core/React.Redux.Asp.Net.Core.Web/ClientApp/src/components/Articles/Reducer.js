@@ -25,7 +25,8 @@ export default function reducer(state, action) {
             return {
                 ...state,
                 type: action.type,
-                articles: action.articles
+                articles: action.articles,
+                errors: []
             };
 
         default:

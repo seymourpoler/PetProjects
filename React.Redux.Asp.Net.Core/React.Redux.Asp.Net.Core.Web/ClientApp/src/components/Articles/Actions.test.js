@@ -41,11 +41,10 @@ describe('Articles', () => {
                 return { statusCode: HttpStatusCode.InternalServerError };
             };
 
-            let result = await actions.findArticles();
+            await actions.findArticles();
 
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
-            expect(result.type).toBe(ActionTypes.ShowErrors);
-            expect(result.errors).toEqual([{ fieldId: Errors.General, errorCode: Errors.InternalServerError }]);
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowErrors, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] });
         });
 
         it('returns error messages if there is errors', async () => {
@@ -55,11 +54,10 @@ describe('Articles', () => {
                 return { statusCode: HttpStatusCode.BadRequest, errors: errors };
             };
 
-            let result = await actions.findArticles();
+            await actions.findArticles();
 
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
-            expect(result.type).toBe(ActionTypes.ShowErrors);
-            expect(result.errors).toEqual(errors);
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowErrors, articles:[], errors: errors });
         });
 
         xit('returns articles', async () => {
@@ -69,11 +67,10 @@ describe('Articles', () => {
                 return { statusCode: HttpStatusCode.Ok, articles: articles };
             };
 
-            let result = await actions.findArticles();
+            await actions.findArticles();
 
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
-            expect(result.type).toBe(ActionTypes.ShowArticles);
-            expect(result.articles).toEqual(articles);
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowArticles, articles: articles, errors:[] });
         });
     });
 
