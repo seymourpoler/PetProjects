@@ -1,4 +1,4 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, SHOW_ERRORS, SHOW_ARTICLES } from './Actions.types';
+﻿import ActionTypes from './Actions.types';
 import { Actions } from './Actions';
 import Service from './Service';
 import HttpStatusCode from '../../HttpStatusCode';
@@ -6,69 +6,78 @@ import Errors from '../../Errors.type';
 
 describe('Articles', () => {
     let service;
+    let dispatcher;
+    let actions;
 
     beforeEach(() => {
         service = new Service();
+        dispatcher = {
+            dispatch: function () { }
+        };
+        dispatcher.dispatch = jest.fn();
+        actions = new Actions(dispatcher, service); 
     });
 
     describe('when showing spinner is requested', () => {
         it('shows spinner', () => {
-            let actions = new Actions(null);
+            actions.showSpinner();
 
-            const result = actions.showSpinner();
-
-            expect(result.type).toBe(SHOW_SPINNER);
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
         });
     });
 
     describe('when hidding spinner is requested', () => {
         it('hides spinner', () => {
-            let actions = new Actions(null);
+            actions.hideSpinner();
 
-            const result = actions.hideSpinner();
-
-            expect(result.type).toBe(HIDE_SPINNER);
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
         });
     });
 
     describe('when finding articles is requested', () => {
         it('returns error message if there is an internal server error', async () => {
-            service.find = async function() {
+            service.find = async function () {
+                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
                 return { statusCode: HttpStatusCode.InternalServerError };
             };
-            let actions = new Actions(service);
 
             let result = await actions.findArticles();
 
-            expect(result.type).toBe(HttpStatusCode.InternalServerError);
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
+            expect(result.type).toBe(ActionTypes.ShowErrors);
+            expect(result.errors).toEqual([{ fieldId: Errors.General, errorCode: Errors.InternalServerError }]);
         });
 
         it('returns error messages if there is errors', async () => {
+            const errors = [{ fieldId: 'titles', errorCode: 'Required' }];
             service.find = async function () {
-                return { statusCode: HttpStatusCode.BadRequest, errors: [{ fieldId: 'titles', errorCode: 'Required' }] };
+                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
+                return { statusCode: HttpStatusCode.BadRequest, errors: errors };
             };
-            let actions = new Actions(service);
 
             let result = await actions.findArticles();
 
-            expect(result.type).toBe(HttpStatusCode.BadRequest);
-            expect(result.errors).not.toBeNull();
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
+            expect(result.type).toBe(ActionTypes.ShowErrors);
+            expect(result.errors).toEqual(errors);
         });
 
-        it('returns articles', async () => {
+        xit('returns articles', async () => {
+            const articles = [{ id: 1, title: 'title-article', description: 'description-article' }];
             service.find = async function () {
-                return { statusCode: HttpStatusCode.Ok, articles: [{ id: 1, title: 'title-article', description: 'description-article' }] };
+                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
+                return { statusCode: HttpStatusCode.Ok, articles: articles };
             };
-            let actions = new Actions(service);
 
             let result = await actions.findArticles();
 
-            expect(result.type).toBe(HttpStatusCode.Ok);
-            expect(result.articles).not.toBeNull();
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
+            expect(result.type).toBe(ActionTypes.ShowArticles);
+            expect(result.articles).toEqual(articles);
         });
     });
 
-    describe('when deleting article is requested', () => {
+    xdescribe('when deleting article is requested', () => {
         it('returns error if there is an internal server error', async () => {
             const articleId = 'article-id';
             const errors = [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }];

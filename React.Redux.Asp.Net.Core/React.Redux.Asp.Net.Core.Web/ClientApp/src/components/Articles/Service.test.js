@@ -1,5 +1,5 @@
 ﻿import Service from './Service';
-import { INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from '../../HttpStatusCode.types';
+import HttpStatusCode from '../../HttpStatusCode';
 
 describe('Service', () => {
     let service;
@@ -10,18 +10,18 @@ describe('Service', () => {
 
     it('returns internal server error if there is internal server error', async () => {
         window.fetch = jest.fn().mockImplementation(() => ({
-            status: INTERNAL_SERVER_ERROR,
+            status: HttpStatusCode.InternalServerError
         }));
 
         const result = await service.find();
 
-        expect(result.type).toBe(INTERNAL_SERVER_ERROR);
+        expect(result.type).toBe(HttpStatusCode.InternalServerError);
     });
 
     it('returns bad request if there errors', async () => {
         const errors = [{ fieldId: 'title', errorCode: 'Required' }, { fieldId: 'subTitle', errorCode: 'Required' }];
         window.fetch = jest.fn().mockImplementation(() => ({
-            status: BAD_REQUEST,
+            status: HttpStatusCode.BadRequest,
             json: () => new Promise((resolve, reject) => {
                 resolve(errors);
             })
@@ -29,14 +29,14 @@ describe('Service', () => {
 
         const result = await service.find();
 
-        expect(result.type).toBe(BAD_REQUEST);
+        expect(result.type).toBe(HttpStatusCode.BadRequest);
         expect(result.errors).toBe(errors);
     });
 
     it('returns articles', async () => {
         const articles = [{ id: 1, title: 'title-one' }, { id: 2, title: 'title-two' }];
         window.fetch = jest.fn().mockImplementation(() => ({
-            status: OK,
+            status: HttpStatusCode.Ok,
             json: () => new Promise((resolve, reject) => {
                 resolve(articles);
             })
@@ -44,7 +44,7 @@ describe('Service', () => {
 
         const result = await service.find();
 
-        expect(result.type).toBe(OK);
+        expect(result.type).toBe(HttpStatusCode.Ok);
         expect(result.articles).toBe(articles);
     });
 });

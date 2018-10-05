@@ -3,4 +3,5 @@
     BadRequest: 400,
     InternalServerError: 500
 };
-export default HttpStatusCode; 
+
+export default HttpStatusCode;

@@ -1,4 +1,4 @@
-﻿import { INTERNAL_SERVER_ERROR, BAD_REQUEST, OK } from '../../HttpStatusCode.types';
+﻿import HttpStatusCode from '../../HttpStatusCode';
 
 export default class Service {
     async find() {
@@ -8,20 +8,20 @@ export default class Service {
                 'Content-Type': 'application/json'
             }
         });
-        if (response.status === INTERNAL_SERVER_ERROR) {
-            return { type: INTERNAL_SERVER_ERROR };
+        if (response.status === HttpStatusCode.InternalServerError) {
+            return { type: HttpStatusCode.InternalServerError };
         }
-        if (response.status === BAD_REQUEST) {
+        if (response.status === HttpStatusCode.BadRequest) {
             var errors = await response.json();
             return {
-                type: BAD_REQUEST,
+                type: HttpStatusCode.BadRequest,
                 errors: errors
             };
         }
-        if (response.status === OK) {
+        if (response.status === HttpStatusCode.Ok) {
             var articles = await response.json();
             return {
-                type: OK,
+                type: HttpStatusCode.Ok,
                 articles: articles
             };
         }

@@ -1,36 +1,31 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER } from './Actions.types';
+﻿import ActionTypes from './Actions.types';
 import HttpStatusCode from '../../HttpStatusCode';
 
-const initialState = { statusCode: HttpStatusCode.Ok, articles: [] };
+const initialState = { type: ActionTypes.ShowArticles, articles: [] };
 
 export default function reducer(state, action) {
     state = state || initialState;
     switch (action.type) {
-        case SHOW_SPINNER:
+        case ActionTypes.ShowSpinner:
             return {
                 ...state,
                 showSpinner: true
             };
-        case HIDE_SPINNER:
+        case ActionTypes.HideSpinner:
             return {
                 ...state,
                 showSpinner: false
             };
-        case HttpStatusCode.InternalServerError:
+        case ActionTypes.ShowErrors:
             return {
                 ...state,
-                statusCode: HttpStatusCode.InternalServerError
-            };
-        case HttpStatusCode.BadRequest:
-            return {
-                ...state,
-                statusCode: HttpStatusCode.BadRequest,
+                type: action.type,
                 errors: action.errors
             };
-        case HttpStatusCode.Ok:
+        case ActionTypes.ShowArticles:
             return {
                 ...state,
-                statusCode: HttpStatusCode.Ok,
+                type: action.type,
                 articles: action.articles
             };
 

@@ -1,49 +1,50 @@
-﻿import { SHOW_SPINNER, HIDE_SPINNER, SHOW_ERRORS, SHOW_ARTICLES } from './Actions.types';
+﻿import ActionTypes from './Actions.types';
 import Service from './Service';
 import HttpStatusCode from '../../HttpStatusCode';
 import Errors from '../../Errors.type';
 
 export class Actions {
-    constructor(service) {
+
+    constructor(dispatcher, service) {
+        this.dispatcher = dispatcher;
         this.service = service;
     }
 
     showSpinner() {
-        return {
-            type: SHOW_SPINNER
-        };
+        this.dispatcher.dispatch({ type: ActionTypes.ShowSpinner });
     }
 
     hideSpinner() {
-        return {
-            type: HIDE_SPINNER
-        };
+        this.dispatcher.dispatch({ type: ActionTypes.HideSpinner });
     }
 
     async findArticles() {
+        this.showSpinner();
         const result = await this.service.find();
+        this.hideSpinner();
+
         if (result.statusCode === HttpStatusCode.InternalServerError) {
-            return { type: HttpStatusCode.InternalServerError, articles: [], errors: [] };
+            return { type: ActionTypes.ShowErrors, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (result.statusCode === HttpStatusCode.BadRequest) {
-            return { type: HttpStatusCode.BadRequest, articles: [], errors: result.errors };
+            return { type: ActionTypes.ShowErrors, articles: [], errors: result.errors };
         }
 
-        return { type: HttpStatusCode.Ok, articles: result.articles, errors: [] };
+        return { type: ActionTypes.ShowArticles, articles: result.articles, errors: [] };
     }
 
     async deleteArticle(id) {
         const result = await this.service.delete(id);
         if (result.statusCode === HttpStatusCode.InternalServerError) {
-            return { type: SHOW_ERRORS, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
+            return { type: ActionTypes.ShowErrors, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (result.statusCode === HttpStatusCode.BadRequest) {
             return { type: SHOW_ERRORS, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
-        return { type: SHOW_ARTICLES };
+        return { type: ActionTypes.ShowArticles };
     }
 }
 
-export const Factory = () => {
-    return new Actions(new Service());
+export const Factory = (dispatcher) => {
+    return new Actions(dispatcher, new Service());
 };
