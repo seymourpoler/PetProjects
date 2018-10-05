@@ -1,7 +1,6 @@
 ﻿import ActionTypes from './Actions.types';
-import HttpStatusCode from '../../HttpStatusCode';
 
-const initialState = { type: ActionTypes.ShowArticles, articles: [] };
+const initialState = { showSpinner: false, type: ActionTypes.ShowArticles, articles: [], errors: [] };
 
 export default function reducer(state, action) {
     state = state || initialState;

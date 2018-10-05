@@ -39,12 +39,12 @@ export class Actions {
             return { type: ActionTypes.ShowErrors, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (result.statusCode === HttpStatusCode.BadRequest) {
-            return { type: SHOW_ERRORS, articles: [], errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
+            return { type: ActionTypes.ShowErrors, articles: [], errors: [{ fieldId: Errors.General, errorCode: result.errors }] };
         }
         return { type: ActionTypes.ShowArticles };
     }
 }
 
-export const Factory = (dispatcher) => {
-    return new Actions(dispatcher, new Service());
+export const Factory = (dispatch) => {
+    return new Actions({ dispatch }, new Service());
 };
