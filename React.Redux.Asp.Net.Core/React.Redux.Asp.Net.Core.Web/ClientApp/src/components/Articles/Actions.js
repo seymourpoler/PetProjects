@@ -62,10 +62,7 @@ export class Actions {
                 errors: result.errors
             });
         }
-        this.dispatcher.dispatch({
-            type: ActionTypes.DeleteArticle,
-            errors: []
-        });
+        this.findArticles();
     }
 }
 

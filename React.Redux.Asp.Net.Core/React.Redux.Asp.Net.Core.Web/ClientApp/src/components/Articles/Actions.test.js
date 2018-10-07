@@ -110,10 +110,15 @@ describe('Articles', () => {
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
                 return { statusCode: HttpStatusCode.Ok };
             };
+            const articles = [{ id: 1, title: 'title-article', description: 'description-article' }];
+            service.find = async function () {
+                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
+                return { statusCode: HttpStatusCode.Ok, articles: articles };
+            };
 
             await actions.deleteArticle(articleId);
 
-            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.DeleteArticle, errors: [] });
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowArticles, articles: articles, errors: [] });
         });
     });
 });

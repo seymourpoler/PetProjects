@@ -14,11 +14,7 @@ class List extends Component {
 
     removeItem = (event) => {
         const id = event.target.id;
-        this.actions.showSpinner();
-        const result = this.actions.deleteArticle(id);
-        this.props.dispatch(result);
-        this.actions.hideSpinner();
-        this.actions.findArticles();
+        this.actions.deleteArticle(id);
     };
 
     render() {
