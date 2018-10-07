@@ -44,6 +44,7 @@ export class Actions {
             articles: result.articles,
             errors: []
         });
+        
     }
 
     async deleteArticle(id) {
@@ -62,7 +63,14 @@ export class Actions {
                 errors: result.errors
             });
         }
-        this.findArticles();
+        if (result.statusCode === HttpStatusCode.Ok) {
+            return this.dispatcher.dispatch({
+                type: ActionTypes.ShowArticles,
+                articles: result.articles,
+                errors: []
+            });
+        }
+        console.log('unkown statusCode from deleteArticle with id: ' + id, result);
     }
 }
 

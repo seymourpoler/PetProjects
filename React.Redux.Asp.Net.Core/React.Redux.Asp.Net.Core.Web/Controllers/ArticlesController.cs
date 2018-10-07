@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace React.Redux.Asp.Net.Core.Web.Controllers
@@ -50,8 +51,10 @@ namespace React.Redux.Asp.Net.Core.Web.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(Guid id)
         {
+            articles = articles.Where(x => x.Id != id).ToList();
+            return Ok(articles);
         }
     }
 }

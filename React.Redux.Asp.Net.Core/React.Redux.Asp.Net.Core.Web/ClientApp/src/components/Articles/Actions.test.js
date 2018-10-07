@@ -103,21 +103,18 @@ describe('Articles', () => {
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowErrors, errors: errors });
         });
 
-        it('dispatchs deleting an article', async () => {
+        it('dispatchs new list of articles', async () => {
             const articleId = 'article-id';
+            const articles = [{ id: 1, title: 'title-article', description: 'description-article' }];
             service.delete = async function (id) {
                 expect(id).toBe(articleId);
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
-                return { statusCode: HttpStatusCode.Ok };
-            };
-            const articles = [{ id: 1, title: 'title-article', description: 'description-article' }];
-            service.find = async function () {
-                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
-                return { statusCode: HttpStatusCode.Ok, articles: articles };
+                return { statusCode: HttpStatusCode.Ok, articles: articles};
             };
 
             await actions.deleteArticle(articleId);
 
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowArticles, articles: articles, errors: [] });
         });
     });
