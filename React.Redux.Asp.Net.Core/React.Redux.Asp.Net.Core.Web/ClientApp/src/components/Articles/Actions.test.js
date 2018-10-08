@@ -148,5 +148,19 @@ describe('Articles', () => {
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowErrors, errors: errors });
         });
+
+        it('dispatchs new list of articles', async () => {
+            const articles = [{ id: 1, title: 'title-article', description: 'description-article' }];
+            service.add = async function (article) {
+                expect(article.title).toBe(title);
+                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
+                return { type: HttpStatusCode.Ok, articles: articles };
+            };
+
+            await actions.addArticle({title});
+
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowArticles, articles: articles, errors: [] });
+        });
     });
 });
