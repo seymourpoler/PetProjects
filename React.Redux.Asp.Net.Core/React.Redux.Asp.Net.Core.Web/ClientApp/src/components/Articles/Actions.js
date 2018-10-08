@@ -39,7 +39,7 @@ export class Actions {
             });
         }
         if (result.type === HttpStatusCode.Ok) {
-            this.dispatcher.dispatch({
+            return this.dispatcher.dispatch({
                 type: ActionTypes.ShowArticles,
                 articles: result.articles,
                 errors: []
@@ -72,6 +72,34 @@ export class Actions {
             });
         }
         console.log('unkown type from deleteArticle with id: ' + id, result);
+    }
+
+    async addArticle(article) {
+        this.showSpinner();
+        const result = await this.service.add(article);
+        this.hideSpinner();
+        
+        if (result.type === HttpStatusCode.InternalServerError) {
+            return this.dispatcher.dispatch({
+                type: ActionTypes.ShowErrors,
+                errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }]
+            });
+        }
+        if (result.type === HttpStatusCode.BadRequest) {
+            return this.dispatcher.dispatch({
+                type: ActionTypes.ShowErrors,
+                errors: result.errors
+            });
+        }
+        if (result.type === HttpStatusCode.Ok) {
+            return this.dispatcher.dispatch({
+                type: ActionTypes.ShowArticles,
+                articles: result.articles,
+                errors: []
+            });
+        }
+        console.log('unkown type from deleteArticle with id: ' + id, result);
+        throw 'not implemented';
     }
 }
 

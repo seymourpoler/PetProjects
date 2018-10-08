@@ -36,7 +36,7 @@ describe('Articles', () => {
         it('dispatchs shwowing error message if there is an internal server error', async () => {
             service.find = async function () {
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
-                return { statusCode: HttpStatusCode.InternalServerError };
+                return { type: HttpStatusCode.InternalServerError };
             };
 
             await actions.findArticles();
@@ -49,7 +49,7 @@ describe('Articles', () => {
             const errors = [{ fieldId: 'titles', errorCode: 'Required' }];
             service.find = async function () {
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
-                return { statusCode: HttpStatusCode.BadRequest, errors: errors };
+                return { type: HttpStatusCode.BadRequest, errors: errors };
             };
 
             await actions.findArticles();
@@ -62,13 +62,13 @@ describe('Articles', () => {
             const articles = [{ id: 1, title: 'title-article', description: 'description-article' }];
             service.find = async function () {
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
-                return { statusCode: HttpStatusCode.Ok, articles: articles };
+                return { type: HttpStatusCode.Ok, articles: articles };
             };
 
             await actions.findArticles();
 
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
-            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowArticles, articles: articles, errors:[] });
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowArticles, articles: articles, errors: [] });
         });
     });
 
@@ -79,7 +79,7 @@ describe('Articles', () => {
             service.delete = async function (id) {
                 expect(id).toBe(articleId);
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
-                return { statusCode: HttpStatusCode.InternalServerError };
+                return { type: HttpStatusCode.InternalServerError };
             };
 
             await actions.deleteArticle(articleId);
@@ -94,7 +94,7 @@ describe('Articles', () => {
             service.delete = async function (id) {
                 expect(id).toBe(articleId);
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
-                return { statusCode: HttpStatusCode.BadRequest, errors: errors };
+                return { type: HttpStatusCode.BadRequest, errors: errors };
             };
 
             await actions.deleteArticle(articleId);
@@ -109,13 +109,30 @@ describe('Articles', () => {
             service.delete = async function (id) {
                 expect(id).toBe(articleId);
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
-                return { statusCode: HttpStatusCode.Ok, articles: articles};
+                return { type: HttpStatusCode.Ok, articles: articles};
             };
 
             await actions.deleteArticle(articleId);
 
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
             expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowArticles, articles: articles, errors: [] });
+        });
+    });
+
+    describe('when adding new article is requested', () => {
+        it('dispatchs showing error if there is an internal server error', async () => {
+            const title = 'article-title';
+            const errors = [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }];
+            service.add = async function (article) {
+                expect(article.title).toBe(title);
+                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
+                return { type: HttpStatusCode.InternalServerError };
+            };
+
+            await actions.addArticle({title});
+
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowErrors, errors: errors });
         });
     });
 });
