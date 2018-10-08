@@ -120,13 +120,27 @@ describe('Articles', () => {
     });
 
     describe('when adding new article is requested', () => {
+        const title = 'article-title';
         it('dispatchs showing error if there is an internal server error', async () => {
-            const title = 'article-title';
             const errors = [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }];
             service.add = async function (article) {
                 expect(article.title).toBe(title);
                 expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
                 return { type: HttpStatusCode.InternalServerError };
+            };
+
+            await actions.addArticle({title});
+
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.HideSpinner });
+            expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowErrors, errors: errors });
+        });
+
+        it('dispatchs showing errors if there are errors', async () => {
+            const errors = [{ fieldId: Errors.General, errorCode: Errors.NotFound }];
+            service.add = async function (article) {
+                expect(article.title).toBe(title);
+                expect(dispatcher.dispatch).toHaveBeenCalledWith({ type: ActionTypes.ShowSpinner });
+                return { type: HttpStatusCode.BadRequest, errors: errors };
             };
 
             await actions.addArticle({title});
