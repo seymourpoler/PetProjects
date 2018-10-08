@@ -34,7 +34,17 @@ export default class Service {
         return { type: '' };
     }
 
-    save (article) {
+    async add(article) {
+        const response = await fetch(this.url, {
+            method: 'POST',
+            body: JSON.stringify(article),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        if (response.status === HttpStatusCode.InternalServerError) {
+            return { type: HttpStatusCode.InternalServerError };
+        }
         throw 'not implemented';
     }
 

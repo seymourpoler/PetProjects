@@ -51,7 +51,7 @@ describe('Service', () => {
         });
     });
 
-    describe('when deleting article id requested', async () => {
+    describe('when deleting article is requested', async () => {
         const id = 'article-id';
         it('returns internal server error if there is internal server error', async () => {
             window.fetch = jest.fn().mockImplementation(() => ({
@@ -91,6 +91,19 @@ describe('Service', () => {
 
             expect(result.type).toBe(HttpStatusCode.Ok);
             expect(result.articles).toBe(articles);
+        });
+    });
+
+    describe('when adding article is requested', () => {
+        const article = { title: 'title' };
+        it('returns internal server error if there is internal server error', async () => {
+            window.fetch = jest.fn().mockImplementation(() => ({
+                status: HttpStatusCode.InternalServerError
+            }));
+
+            const result = await service.add(article);
+
+            expect(result.type).toBe(HttpStatusCode.InternalServerError);
         });
     });
 });
