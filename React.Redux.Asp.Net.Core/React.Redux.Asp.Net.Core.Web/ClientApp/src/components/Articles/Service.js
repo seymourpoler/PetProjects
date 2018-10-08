@@ -45,6 +45,13 @@ export default class Service {
         if (response.status === HttpStatusCode.InternalServerError) {
             return { type: HttpStatusCode.InternalServerError };
         }
+        if (response.status === HttpStatusCode.BadRequest) {
+            var errors = await response.json();
+            return {
+                type: HttpStatusCode.BadRequest,
+                errors: errors
+            };
+        }
         throw 'not implemented';
     }
 

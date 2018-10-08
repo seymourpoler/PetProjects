@@ -105,5 +105,20 @@ describe('Service', () => {
 
             expect(result.type).toBe(HttpStatusCode.InternalServerError);
         });
+
+        it('returns bad request if there errors', async () => {
+            const errors = [{ fieldId: 'title', errorCode: 'Required' }, { fieldId: 'subTitle', errorCode: 'Required' }];
+            window.fetch = jest.fn().mockImplementation(() => ({
+                status: HttpStatusCode.BadRequest,
+                json: () => new Promise((resolve, reject) => {
+                    resolve(errors);
+                })
+            }));
+
+            const result = await service.add(article);
+
+            expect(result.type).toBe(HttpStatusCode.BadRequest);
+            expect(result.errors).toBe(errors);
+        });
     });
 });
