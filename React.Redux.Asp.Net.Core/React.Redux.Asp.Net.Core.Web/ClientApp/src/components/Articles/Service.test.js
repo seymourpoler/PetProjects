@@ -120,5 +120,20 @@ describe('Service', () => {
             expect(result.type).toBe(HttpStatusCode.BadRequest);
             expect(result.errors).toBe(errors);
         });
+
+        it('returns articles', async () => {
+            const articles = [{ id: 1, title: 'title-one' }, { id: 2, title: 'title-two' }];
+            window.fetch = jest.fn().mockImplementation(() => ({
+                status: HttpStatusCode.Ok,
+                json: () => new Promise((resolve, reject) => {
+                    resolve(articles);
+                })
+            }));
+
+            const result = await service.add(article);
+
+            expect(result.type).toBe(HttpStatusCode.Ok);
+            expect(result.articles).toBe(articles);
+        });
     });
 });

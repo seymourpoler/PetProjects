@@ -34,6 +34,7 @@ export default class Service {
         return { type: '' };
     }
 
+    //TODO: remove duplication
     async add(article) {
         const response = await fetch(this.url, {
             method: 'POST',
@@ -52,7 +53,15 @@ export default class Service {
                 errors: errors
             };
         }
-        throw 'not implemented';
+        if (response.status === HttpStatusCode.Ok) {
+            var articles = await response.json();
+            return {
+                type: HttpStatusCode.Ok,
+                articles: articles
+            };
+        }
+        console.log('adding articles response: ', response);
+        return { type: '' };
     }
 
     //TODO: remove duplication
