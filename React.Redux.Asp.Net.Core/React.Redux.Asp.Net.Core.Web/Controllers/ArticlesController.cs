@@ -14,9 +14,9 @@ namespace React.Redux.Asp.Net.Core.Web.Controllers
         {
             articles = new List<Article>
             {
-                new Article{Id = Guid.NewGuid(), Title="title one"},
-                new Article{Id = Guid.NewGuid(), Title="title two"},
-                new Article{Id = Guid.NewGuid(), Title="title three"},
+                new Article{Id = new Guid("4AAF5620-6826-486D-86DC-041F20D44901"), Title="title one"},
+                new Article{Id = new Guid("4AAF5620-6826-486D-86DC-041F20D44902"), Title="title two"},
+                new Article{Id = new Guid("4AAF5620-6826-486D-86DC-041F20D44903"), Title="title three"},
             };
         }
         // GET: api/Articles

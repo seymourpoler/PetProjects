@@ -4,7 +4,8 @@ export default class Service {
     constructor() {
         this.url = '/api/articles/';
     }
-    
+
+    //TODO: remove duplication
     async find() {
         const response = await fetch(this.url, {
             method: 'GET',
@@ -37,6 +38,7 @@ export default class Service {
         throw 'not implemented';
     }
 
+    //TODO: remove duplication
     async delete (id) {
         const response = await fetch(this.url + id, {
             method: 'DELETE',

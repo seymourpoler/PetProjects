@@ -3,6 +3,7 @@ import HttpStatusCode from '../../HttpStatusCode';
 
 describe('Service', () => {
     let service;
+
     beforeEach(() => {
         service = new Service();
     });
@@ -53,7 +54,6 @@ describe('Service', () => {
     describe('when deleting article id requested', async () => {
         const id = 'article-id';
         it('returns internal server error if there is internal server error', async () => {
-            
             window.fetch = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.InternalServerError
             }));

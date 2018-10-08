@@ -23,7 +23,7 @@ export class Actions {
         const result = await this.service.find();
         this.hideSpinner();
 
-        if (result.statusCode === HttpStatusCode.InternalServerError) {
+        if (result.type === HttpStatusCode.InternalServerError) {
             return this.dispatcher.dispatch({
                 type: ActionTypes.ShowErrors,
                 articles: [],
@@ -31,46 +31,47 @@ export class Actions {
             });
         }
 
-        if (result.statusCode === HttpStatusCode.BadRequest) {
+        if (result.type === HttpStatusCode.BadRequest) {
             return this.dispatcher.dispatch({
                 type: ActionTypes.ShowErrors,
                 articles: [],
                 errors: result.errors
             });
         }
-
-        this.dispatcher.dispatch({
-            type: ActionTypes.ShowArticles,
-            articles: result.articles,
-            errors: []
-        });
-        
+        if (result.type === HttpStatusCode.Ok) {
+            this.dispatcher.dispatch({
+                type: ActionTypes.ShowArticles,
+                articles: result.articles,
+                errors: []
+                });
+        }
+        console.log('unkown type from find articles ', result);
     }
 
     async deleteArticle(id) {
         this.showSpinner();
         const result = await this.service.delete(id);
         this.hideSpinner();
-        if (result.statusCode === HttpStatusCode.InternalServerError) {
+        if (result.type === HttpStatusCode.InternalServerError) {
             return this.dispatcher.dispatch({
                 type: ActionTypes.ShowErrors,
                 errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }]
             });
         }
-        if (result.statusCode === HttpStatusCode.BadRequest) {
+        if (result.type === HttpStatusCode.BadRequest) {
             return this.dispatcher.dispatch({
                 type: ActionTypes.ShowErrors,
                 errors: result.errors
             });
         }
-        if (result.statusCode === HttpStatusCode.Ok) {
+        if (result.type === HttpStatusCode.Ok) {
             return this.dispatcher.dispatch({
                 type: ActionTypes.ShowArticles,
                 articles: result.articles,
                 errors: []
             });
         }
-        console.log('unkown statusCode from deleteArticle with id: ' + id, result);
+        console.log('unkown type from deleteArticle with id: ' + id, result);
     }
 }
 
