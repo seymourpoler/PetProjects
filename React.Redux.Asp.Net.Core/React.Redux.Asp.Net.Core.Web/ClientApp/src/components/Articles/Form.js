@@ -2,8 +2,8 @@
 import List from './List';
 import Add from './Add';
 
-
 export default class Form extends Component {
+
     render() {
         return (
             <div>

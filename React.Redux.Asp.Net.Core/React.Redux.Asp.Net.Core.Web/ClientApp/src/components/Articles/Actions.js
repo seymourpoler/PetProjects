@@ -1,7 +1,5 @@
 ﻿import ActionTypes from './Actions.types';
 import Service from './Service';
-import HttpStatusCode from '../../HttpStatusCode';
-import Errors from '../../Errors.type';
 
 export class Actions {
 

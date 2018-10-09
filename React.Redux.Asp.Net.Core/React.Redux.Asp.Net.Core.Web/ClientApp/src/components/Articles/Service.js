@@ -2,6 +2,7 @@
 import Errors from '../../Errors.type';
 
 export default class Service {
+
     constructor() {
         this.url = '/api/articles/';
     }
@@ -18,14 +19,14 @@ export default class Service {
             return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (response.status === HttpStatusCode.BadRequest) {
-            var errors = await response.json();
+            const errors = await response.json();
             return {
                 isOk: false,
                 errors: errors
             };
         }
         if (response.status === HttpStatusCode.Ok) {
-            var articles = await response.json();
+            const articles = await response.json();
             return {
                 isOk: true,
                 articles: articles
@@ -48,14 +49,14 @@ export default class Service {
             return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (response.status === HttpStatusCode.BadRequest) {
-            var errors = await response.json();
+            const errors = await response.json();
             return {
                 isOk: false,
                 errors: errors
             };
         }
         if (response.status === HttpStatusCode.Ok) {
-            var articles = await response.json();
+            const articles = await response.json();
             return {
                 isOk: true,
                 articles: articles
@@ -77,11 +78,11 @@ export default class Service {
             return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (response.status === HttpStatusCode.BadRequest) {
-            var errors = await response.json();
+            const errors = await response.json();
             return { isOk: false,  errors: errors };
         }
         if (response.status === HttpStatusCode.Ok) {
-            var articles = await response.json();
+            const articles = await response.json();
             return {
                 isOk: true,
                 articles: articles
