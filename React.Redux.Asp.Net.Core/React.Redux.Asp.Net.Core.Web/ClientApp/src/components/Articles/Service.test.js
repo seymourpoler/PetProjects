@@ -17,7 +17,7 @@ describe('Service', () => {
 
             const result = await service.find();
 
-            expect(result.type).toBe(HttpStatusCode.InternalServerError);
+            expect(result.isOk).toBeFalsy();
         });
 
         it('returns bad request if there errors', async () => {
@@ -31,7 +31,7 @@ describe('Service', () => {
 
             const result = await service.find();
 
-            expect(result.type).toBe(HttpStatusCode.BadRequest);
+            expect(result.isOk).toBeFalsy();
             expect(result.errors).toBe(errors);
         });
 
@@ -46,7 +46,7 @@ describe('Service', () => {
 
             const result = await service.find();
 
-            expect(result.type).toBe(HttpStatusCode.Ok);
+            expect(result.isOk).toBeTruthy();
             expect(result.articles).toBe(articles);
         });
     });
@@ -60,7 +60,7 @@ describe('Service', () => {
 
             const result = await service.delete(id);
 
-            expect(result.type).toBe(HttpStatusCode.InternalServerError);
+            expect(result.isOk).toBeFalsy();
         });
 
         it('returns bad request if there errors', async () => {
@@ -74,7 +74,7 @@ describe('Service', () => {
 
             const result = await service.delete(id);
 
-            expect(result.type).toBe(HttpStatusCode.BadRequest);
+            expect(result.isOk).toBeFalsy();
             expect(result.errors).toBe(errors);
         });
 
@@ -89,7 +89,7 @@ describe('Service', () => {
 
             const result = await service.delete(id);
 
-            expect(result.type).toBe(HttpStatusCode.Ok);
+            expect(result.isOk).toBeTruthy();
             expect(result.articles).toBe(articles);
         });
     });
@@ -103,7 +103,7 @@ describe('Service', () => {
 
             const result = await service.add(article);
 
-            expect(result.type).toBe(HttpStatusCode.InternalServerError);
+            expect(result.isOk).toBeFalsy();
         });
 
         it('returns bad request if there errors', async () => {
@@ -117,7 +117,7 @@ describe('Service', () => {
 
             const result = await service.add(article);
 
-            expect(result.type).toBe(HttpStatusCode.BadRequest);
+            expect(result.isOk).toBeFalsy();
             expect(result.errors).toBe(errors);
         });
 
@@ -132,7 +132,7 @@ describe('Service', () => {
 
             const result = await service.add(article);
 
-            expect(result.type).toBe(HttpStatusCode.Ok);
+            expect(result.isOk).toBeTruthy();
             expect(result.articles).toBe(articles);
         });
     });

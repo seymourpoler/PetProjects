@@ -1,4 +1,5 @@
 ﻿import HttpStatusCode from '../../HttpStatusCode';
+import Errors from '../../Errors.type';
 
 export default class Service {
     constructor() {
@@ -14,19 +15,19 @@ export default class Service {
             }
         });
         if (response.status === HttpStatusCode.InternalServerError) {
-            return { type: HttpStatusCode.InternalServerError };
+            return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (response.status === HttpStatusCode.BadRequest) {
             var errors = await response.json();
             return {
-                type: HttpStatusCode.BadRequest,
+                isOk: false,
                 errors: errors
             };
         }
         if (response.status === HttpStatusCode.Ok) {
             var articles = await response.json();
             return {
-                type: HttpStatusCode.Ok,
+                isOk: true,
                 articles: articles
             };
         }
@@ -44,19 +45,19 @@ export default class Service {
             }
         });
         if (response.status === HttpStatusCode.InternalServerError) {
-            return { type: HttpStatusCode.InternalServerError };
+            return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (response.status === HttpStatusCode.BadRequest) {
             var errors = await response.json();
             return {
-                type: HttpStatusCode.BadRequest,
+                isOk: false,
                 errors: errors
             };
         }
         if (response.status === HttpStatusCode.Ok) {
             var articles = await response.json();
             return {
-                type: HttpStatusCode.Ok,
+                isOk: true,
                 articles: articles
             };
         }
@@ -73,19 +74,16 @@ export default class Service {
             }
         });
         if (response.status === HttpStatusCode.InternalServerError) {
-            return { type: HttpStatusCode.InternalServerError };
+            return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (response.status === HttpStatusCode.BadRequest) {
             var errors = await response.json();
-            return {
-                type: HttpStatusCode.BadRequest,
-                errors: errors
-            };
+            return { isOk: false,  errors: errors };
         }
         if (response.status === HttpStatusCode.Ok) {
             var articles = await response.json();
             return {
-                type: HttpStatusCode.Ok,
+                isOk: true,
                 articles: articles
             };
         }
