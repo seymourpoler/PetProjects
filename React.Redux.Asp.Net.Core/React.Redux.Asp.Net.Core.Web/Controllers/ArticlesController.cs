@@ -35,12 +35,13 @@ namespace React.Redux.Asp.Net.Core.Web.Controllers
 
         // POST: api/Articles
         [HttpPost]
-        public void Post([FromBody] string title)
+        public IActionResult Post([FromBody] ArticleAddingRequest request)
         {
             articles.Add(new Article {
                 Id = Guid.NewGuid(),
-                Title = title
+                Title = request.Title
             });
+            return Ok(articles);
         }
 
         // PUT: api/Articles/5

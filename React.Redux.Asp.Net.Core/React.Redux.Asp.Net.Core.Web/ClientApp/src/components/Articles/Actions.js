@@ -98,8 +98,7 @@ export class Actions {
                 errors: []
             });
         }
-        console.log('unkown type from deleteArticle with id: ' + id, result);
-        throw 'not implemented';
+        console.log('unkown type from addArticle: ', result);
     }
 }
 

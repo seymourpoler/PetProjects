@@ -1,5 +1,7 @@
 ﻿import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Factory } from './Actions';
+import ActionTypes from './Actions.types';
 
 class Add extends Component {
 
@@ -14,11 +16,19 @@ class Add extends Component {
     };
 
     render() {
+        let result = '';
+        if (this.props.type === ActionTypes.ShowErrors && this.props.errors && Array.isArray(this.props.errors)) {
+            result = this.props.errors.map((error, index) => {
+                return (<p key={index}> {error.fieldId} : {error.errorCode} </p>);
+            });
+        }
+        
         return (
             <div>
                 <p>title:
                     <input type='text' id='txtTitle' />
-                    <button id='btnAdd' onClick='this.addTitle' />
+                    <button id='btnAdd' onClick={this.addTitle}>Add</button>
+                    <label>{ result }</label>
                 </p>
             </div>
             );
