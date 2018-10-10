@@ -2,10 +2,7 @@
 import Errors from '../../Errors.type';
 
 export default class Service {
-
-    constructor() {
-        this.url = '/api/articles/';
-    }
+    url = '/api/articles/';
 
     //TODO: remove duplication
     async find() {
