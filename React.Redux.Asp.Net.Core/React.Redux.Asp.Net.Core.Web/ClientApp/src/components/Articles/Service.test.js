@@ -1,17 +1,19 @@
 ﻿import Service from './Service';
 import HttpStatusCode from '../../HttpStatusCode';
+import Http from '../../http';
 
 describe('Service', () => {
     let service;
-
+    let http;
     beforeEach(() => {
-        service = new Service();
+        http = new Http();
+        service = new Service(http);
     });
 
     describe('when finding articles is requested', () => {
 
         it('returns internal server error if there is internal server error', async () => {
-            window.fetch = jest.fn().mockImplementation(() => ({
+            http.get = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.InternalServerError
             }));
 
@@ -22,7 +24,7 @@ describe('Service', () => {
 
         it('returns bad request if there errors', async () => {
             const errors = [{ fieldId: 'title', errorCode: 'Required' }, { fieldId: 'subTitle', errorCode: 'Required' }];
-            window.fetch = jest.fn().mockImplementation(() => ({
+            http.get = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.BadRequest,
                 json: () => new Promise((resolve, reject) => {
                     resolve(errors);
@@ -37,7 +39,7 @@ describe('Service', () => {
 
         it('returns articles', async () => {
             const articles = [{ id: 1, title: 'title-one' }, { id: 2, title: 'title-two' }];
-            window.fetch = jest.fn().mockImplementation(() => ({
+            http.get = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.Ok,
                 json: () => new Promise((resolve, reject) => {
                     resolve(articles);
@@ -54,7 +56,7 @@ describe('Service', () => {
     describe('when deleting article is requested', async () => {
         const id = 'article-id';
         it('returns internal server error if there is internal server error', async () => {
-            window.fetch = jest.fn().mockImplementation(() => ({
+            http.delete = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.InternalServerError
             }));
 
@@ -65,7 +67,7 @@ describe('Service', () => {
 
         it('returns bad request if there errors', async () => {
             const errors = [{ fieldId: 'title', errorCode: 'Required' }, { fieldId: 'subTitle', errorCode: 'Required' }];
-            window.fetch = jest.fn().mockImplementation(() =>({
+            http.delete = jest.fn().mockImplementation(() =>({
                 status: HttpStatusCode.BadRequest,
                 json: () => new Promise((resolve, reject) => {
                     resolve(errors);
@@ -80,7 +82,7 @@ describe('Service', () => {
 
         it('returns articles', async () => {
             const articles = [{ id: 1, title: 'title-one' }, { id: 2, title: 'title-two' }];
-            window.fetch = jest.fn().mockImplementation(() => ({
+            http.delete = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.Ok,
                 json: () => new Promise((resolve, reject) => {
                     resolve(articles);
@@ -97,7 +99,7 @@ describe('Service', () => {
     describe('when adding article is requested', () => {
         const article = { title: 'title' };
         it('returns internal server error if there is internal server error', async () => {
-            window.fetch = jest.fn().mockImplementation(() => ({
+            http.post = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.InternalServerError
             }));
 
@@ -108,7 +110,7 @@ describe('Service', () => {
 
         it('returns bad request if there errors', async () => {
             const errors = [{ fieldId: 'title', errorCode: 'Required' }, { fieldId: 'subTitle', errorCode: 'Required' }];
-            window.fetch = jest.fn().mockImplementation(() => ({
+            http.post = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.BadRequest,
                 json: () => new Promise((resolve, reject) => {
                     resolve(errors);
@@ -123,7 +125,7 @@ describe('Service', () => {
 
         it('returns articles', async () => {
             const articles = [{ id: 1, title: 'title-one' }, { id: 2, title: 'title-two' }];
-            window.fetch = jest.fn().mockImplementation(() => ({
+            http.post = jest.fn().mockImplementation(() => ({
                 status: HttpStatusCode.Ok,
                 json: () => new Promise((resolve, reject) => {
                     resolve(articles);
