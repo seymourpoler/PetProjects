@@ -2,6 +2,7 @@
 import { connect } from 'react-redux';
 import { Factory } from './Actions';
 import ActionTypes from './Actions.types';
+import Spinner from '../Spinner';
 
 class Add extends Component {
 
@@ -25,6 +26,7 @@ class Add extends Component {
         
         return (
             <div>
+                <Spinner show={this.props.showSpinner} />
                 <p>title:
                     <input type='text' id='txtTitle' />
                     <button id='btnAdd' onClick={this.addTitle}>Add</button>
