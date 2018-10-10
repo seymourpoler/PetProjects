@@ -1,5 +1,6 @@
 ﻿import ActionTypes from './Actions.types';
 import Service from './Service';
+import Http from '../../Http';
 
 export class Actions {
 
@@ -76,5 +77,5 @@ export class Actions {
 }
 
 export const Factory = (dispatch) => {
-    return new Actions({ dispatch }, new Service());
+    return new Actions({ dispatch }, new Service(new Http()));
 };

@@ -3,15 +3,15 @@ import Errors from '../../Errors.type';
 
 export default class Service {
     url = '/api/articles/';
+    http;
+
+    constructor(http) {
+        this.http = http;
+    }
 
     //TODO: remove duplication
     async find() {
-        const response = await fetch(this.url, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        const response = await this.http.get(this.url);
         if (response.status === HttpStatusCode.InternalServerError) {
             return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
@@ -35,13 +35,7 @@ export default class Service {
 
     //TODO: remove duplication
     async add(article) {
-        const response = await fetch(this.url, {
-            method: 'POST',
-            body: JSON.stringify(article),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        const response = await this.http.post(this.url, article);
         if (response.status === HttpStatusCode.InternalServerError) {
             return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
@@ -64,13 +58,8 @@ export default class Service {
     }
 
     //TODO: remove duplication
-    async delete (id) {
-        const response = await fetch(this.url + id, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+    async delete(id) {
+        const response = await this.http.delete(this.url + id);
         if (response.status === HttpStatusCode.InternalServerError) {
             return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
