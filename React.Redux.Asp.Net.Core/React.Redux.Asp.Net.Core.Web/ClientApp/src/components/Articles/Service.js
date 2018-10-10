@@ -9,63 +9,31 @@ export default class Service {
         this.http = http;
     }
 
-    //TODO: remove duplication
     async find() {
         const response = await this.http.get(this.url);
-        if (response.status === HttpStatusCode.InternalServerError) {
-            return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
-        }
-        if (response.status === HttpStatusCode.BadRequest) {
-            const errors = await response.json();
-            return {
-                isOk: false,
-                errors: errors
-            };
-        }
-        if (response.status === HttpStatusCode.Ok) {
-            const articles = await response.json();
-            return {
-                isOk: true,
-                articles: articles
-            };
-        }
-        console.log('find articles response: ', response);
-        return { type: '' };
+        const result = await this.handleResponse(response);
+        return result;
     }
 
-    //TODO: remove duplication
     async add(article) {
         const response = await this.http.post(this.url, article);
-        if (response.status === HttpStatusCode.InternalServerError) {
-            return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
-        }
-        if (response.status === HttpStatusCode.BadRequest) {
-            const errors = await response.json();
-            return {
-                isOk: false,
-                errors: errors
-            };
-        }
-        if (response.status === HttpStatusCode.Ok) {
-            const articles = await response.json();
-            return {
-                isOk: true,
-                articles: articles
-            };
-        }
-        console.log('adding articles response: ', response);
-        return { type: '' };
+        const result = await this.handleResponse(response);
+        return result;
     }
 
-    //TODO: remove duplication
     async delete(id) {
         const response = await this.http.delete(this.url + id);
+        const result = await this.handleResponse(response);
+        return result;
+    }
+
+    async handleResponse(response) {
         if (response.status === HttpStatusCode.InternalServerError) {
             return { isOk: false, errors: [{ fieldId: Errors.General, errorCode: Errors.InternalServerError }] };
         }
         if (response.status === HttpStatusCode.BadRequest) {
             const errors = await response.json();
-            return { isOk: false,  errors: errors };
+            return { isOk: false, errors: errors };
         }
         if (response.status === HttpStatusCode.Ok) {
             const articles = await response.json();
@@ -74,7 +42,7 @@ export default class Service {
                 articles: articles
             };
         }
-        console.log('find articles response: ', response);
-        return { type: '' };
+        console.log('unknown status response: ', response);
+        return { isOk: false };
     }
 }
