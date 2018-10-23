@@ -32,7 +32,7 @@ describe('Mini Event Emitter', function(){
 		expect(anotherEventWasThrown).toBeTruthy();
 	});
 	
-	it('unsubscribes an event', function(){
+	it('unsubscribes all handlers for an event', function(){
 		let eventWasThrown = false;
 		const theEvent = 'THE_EVENT';
 		eventEmiter.subscribe(theEvent, function(){
