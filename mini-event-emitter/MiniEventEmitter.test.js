@@ -1,7 +1,11 @@
 let MiniEventEmitter = require('./MiniEventEmitter');
 
 describe('Mini Event Emitter', function(){
-	let eventEmiter = new MiniEventEmitter();
+	let eventEmiter;
+	
+	beforeEach(function() {
+			eventEmiter = new MiniEventEmitter();
+	});
 	
 	it('handles an event', function(){
 		let eventWasThrown = false;
