@@ -1,0 +1,6 @@
+{
+	"name": "mini-event-emitter",
+	"version": "0.0.1",
+	"description": "mini event emitter",
+	"main": "minieventemitter.js"
+}
