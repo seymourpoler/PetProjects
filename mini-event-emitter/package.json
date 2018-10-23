@@ -2,5 +2,14 @@
 	"name": "mini-event-emitter",
 	"version": "0.0.1",
 	"description": "mini event emitter",
-	"main": "minieventemitter.js"
+	"main": "MiniEventEmitter.js",
+	"scripts": {
+		"test": "jest --verbose  --notify  --watchAll=false",
+		"test:watch": "jest --verbose --notify --watchAll"
+	},
+	"author": "seymourpoler@gmail.com",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^23.6.0"
+	}
 }
