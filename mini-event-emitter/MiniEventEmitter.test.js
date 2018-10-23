@@ -31,4 +31,20 @@ describe('Mini Event Emitter', function(){
 		expect(eventWasThrown).toBeTruthy();
 		expect(anotherEventWasThrown).toBeTruthy();
 	});
+	
+	it('unsubscribes an event', function(){
+		let eventWasThrown = false;
+		const theEvent = 'THE_EVENT';
+		eventEmiter.subscribe(theEvent, function(){
+			eventWasThrown = true;
+		});
+		eventEmiter.emit(theEvent);		
+		expect(eventWasThrown).toBeTruthy();
+		
+		eventEmiter.unSubscribe(theEvent);
+		eventWasThrown = false;
+		eventEmiter.emit(theEvent);
+		
+		expect(eventWasThrown).toBeFalsy();
+	});
 });

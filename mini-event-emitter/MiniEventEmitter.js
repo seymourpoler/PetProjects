@@ -13,14 +13,14 @@ function MiniEventEmitter (){
 	self.emit = function(event){
 		const handlers = events[event];
 		if(handlers){
-			handlers.foreach(handler => {
+			handlers.forEach(handler => {
 				handler();
 			});
 		}
 	};
 	
-	self.unSubscribe = function(){
-		throw 'not implemented';
+	self.unSubscribe = function(event){
+		events[event] = [];
 	};
 }
 
