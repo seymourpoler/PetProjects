@@ -84,4 +84,15 @@ describe('Mini Event Emitter', function(){
 		
 		expect(eventWasThrown).toBeFalsy();
 	});
+	
+	it('mixins into another object', function(){
+		let foo = {afunction: function(){}};
+		
+		let bar = eventEmiter.mixin(foo);
+		
+		expect(bar.afunction).not.toBeNull();
+		expect(bar.emit).not.toBeNull();
+		expect(bar.unSubscribe).not.toBeNull();
+		expect(bar.subscribe).not.toBeNull();
+	});
 });

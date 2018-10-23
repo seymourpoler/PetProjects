@@ -26,6 +26,23 @@ function MiniEventEmitter (){
 		}
 		events[event] = events[event].filter(aHandler => aHandler.toString() !== handler.toString())
 	};
+	
+	self.mixin = function(objectRequest){
+		let result = Object.assign({}, objectRequest);
+		var properties	= ['subscribe', 'emit', 'unSubscribe'];
+		properties.forEach(property => {
+			result[property] = self[property];
+		});
+		
+		// for(var i = 0; i < props.length; i ++){
+		// if( typeof destObject === 'function' ){
+			// destObject.prototype[props[i]]	= MicroEvent.prototype[props[i]];
+		// }else{
+			// destObject[props[i]] = MicroEvent.prototype[props[i]];
+		// }
+	
+		return result;
+	};
 }
 
 
