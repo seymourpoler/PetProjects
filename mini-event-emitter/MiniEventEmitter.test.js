@@ -86,11 +86,13 @@ describe('Mini Event Emitter', function(){
 	});
 	
 	it('mixins into another object', function(){
-		let foo = {afunction: function(){}};
+		const defaultValue = 5;
+		let foo = {afunction: function(){ return defaultValue;}};
 		
 		let bar = eventEmiter.mixin(foo);
 		
 		expect(bar.afunction).not.toBeNull();
+		expect(bar.afunction()).toEqual(defaultValue);
 		expect(bar.emit).not.toBeNull();
 		expect(bar.unSubscribe).not.toBeNull();
 		expect(bar.subscribe).not.toBeNull();
