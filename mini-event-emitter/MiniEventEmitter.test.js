@@ -14,4 +14,21 @@ describe('Mini Event Emitter', function(){
 		
 		expect(eventWasThrown).toBeTruthy();
 	});
+	
+	it('subscribes multiple handlers for the same event', function(){
+		let eventWasThrown = false;
+		let anotherEventWasThrown = false;
+		const theEvent = 'THE_EVENT';
+		eventEmiter.subscribe(theEvent, function(){
+			eventWasThrown = true;
+		});
+		eventEmiter.subscribe(theEvent, function(){
+			anotherEventWasThrown = true;
+		});
+		
+		eventEmiter.emit(theEvent);
+		
+		expect(eventWasThrown).toBeTruthy();
+		expect(anotherEventWasThrown).toBeTruthy();
+	});
 });

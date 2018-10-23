@@ -1,17 +1,22 @@
 function MiniEventEmitter (){
 	let self = this;
-	let eventAndHandlers = [];
+	let events = [];
 	
 	self.subscribe = function(event, handler){
-		eventAndHandlers.push({event: event, handler: handler});
+		if(!events[event]){
+			events[event] = []
+		}
+		
+		events[event].push(handler);
 	};
 	
 	self.emit = function(event){
-		eventAndHandlers.forEach(function(eventHandler){
-			if(eventHandler.event === event){
-				eventHandler.handler();
-			}
-		});
+		const handlers = events[event];
+		if(handlers){
+			handlers.foreach(handler => {
+				handler();
+			});
+		}
 	};
 	
 	self.unSubscribe = function(){
