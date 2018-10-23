@@ -13,7 +13,7 @@ function MiniEventEmitter (){
 		const handlers = events[event];
 		if(handlers){
 			handlers.forEach(handler => {
-				handler(arguments.shift());
+				handler(arguments.slice(1));
 			});
 		}
 	};
