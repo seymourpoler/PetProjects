@@ -5,6 +5,7 @@
 	"main": "MiniEventEmitter.js",
 	"scripts": {
 		"test": "jest --verbose  --notify  --watchAll=false",
+		"test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
 		"test:watch": "jest --verbose --notify --watchAll"
 	},
 	"author": "seymourpoler@gmail.com",

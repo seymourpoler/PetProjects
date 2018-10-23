@@ -6,7 +6,6 @@ function MiniEventEmitter (){
 		if(!events[event]){
 			events[event] = []
 		}
-		
 		events[event].push(handler);
 	};
 	
@@ -14,13 +13,17 @@ function MiniEventEmitter (){
 		const handlers = events[event];
 		if(handlers){
 			handlers.forEach(handler => {
-				handler();
+				handler(arguments.shift());
 			});
 		}
 	};
 	
-	self.unSubscribe = function(event){
-		events[event] = [];
+	self.unSubscribe = function(event, handler){
+		if(!handler){
+			events[event] = [];
+			return;
+		}
+		events[event] = events[event].filter(aHandler => aHandler.toString() !== handler.toString())
 	};
 }
 
