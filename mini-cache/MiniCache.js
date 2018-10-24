@@ -29,4 +29,6 @@ function MiniCache(){
     }
 }
 
-module.exports = MiniCache;
+if( module && module.exports){
+	module.exports	= MiniCache;
+}
