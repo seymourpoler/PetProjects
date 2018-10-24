@@ -56,4 +56,12 @@ describe('MiniCache', function(){
 
         expect(result).toEqual(undefined);
     });
+
+    it('return false if does not contain key', function(){
+        miniCache.set('key', 'value');
+
+        const result = miniCache.contains('another-key');
+
+        expect(result).toBeFalsy();
+    });
 });
