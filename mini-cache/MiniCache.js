@@ -10,6 +10,18 @@ function MiniCache(){
         values[key] = value;
     };
 
+    self.contains = function(key){
+        if(isUndefinedOrStringEmpty(key)){
+            return false;
+        }
+        const value = values[key];
+        return !isUndefinedOrStringEmpty(value);
+    };
+
+    function isUndefinedOrStringEmpty(element){
+        return element === undefined || element === '' ;
+    }
+
     self.get = function(key){
         if(key === undefined){
             return '';
@@ -17,18 +29,11 @@ function MiniCache(){
         return values[key];
     };
 
-    self.contains = function(key){
-        if(key === undefined){
-            return false;
-        }
-        values[key];
+    self.remove = function(key){
+        delete values[key];
     };
-
-    function isUndefinedOrStringEmpty(element){
-        return element === undefined || element === '' ;
-    }
 }
 
-if( module && module.exports){
+if(module && module.exports){
 	module.exports	= MiniCache;
 }

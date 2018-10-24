@@ -22,9 +22,7 @@ describe('MiniCache', function(){
         const value = 'value';
         miniCache.set(key, value);
 
-        const result = miniCache.contains(key);
-
-        expect(result).toBeFalsy();
+        expect(miniCache.contains(key)).toBeFalsy();
     });
 
     it('do not set key if is string empty', function(){
@@ -32,9 +30,7 @@ describe('MiniCache', function(){
         const value = 'value';
         miniCache.set(key, value);
 
-        const result = miniCache.contains(key);
-
-        expect(result).toBeFalsy();
+        expect(miniCache.contains(key)).toBeFalsy();
     });
 
     it('do not set value if is undefined', function(){
@@ -42,9 +38,7 @@ describe('MiniCache', function(){
         const value = undefined;
         miniCache.set(key, value);
 
-        const result = miniCache.contains(key);
-
-        expect(result).toEqual(undefined);
+        expect(miniCache.contains(key)).toBeFalsy();
     });
 
     it('do not set value if is string empty', function(){
@@ -52,9 +46,7 @@ describe('MiniCache', function(){
         const value = '';
         miniCache.set(key, value);
 
-        const result = miniCache.contains(key);
-
-        expect(result).toEqual(undefined);
+        expect(miniCache.contains(key)).toBeFalsy();
     });
 
     it('return false if does not contain key', function(){
@@ -65,5 +57,16 @@ describe('MiniCache', function(){
         const result = miniCache.contains('another-key');
 
         expect(result).toBeFalsy();
+    });
+
+    it('removes item', function(){
+        const key = 'key';
+        const value = 'value';
+        miniCache.set(key, value);
+        expect(miniCache.contains(key)).toBeTruthy();
+        
+        miniCache.remove(key);
+
+        expect(miniCache.contains(key)).toBeFalsy();
     });
 });
