@@ -27,9 +27,29 @@ describe('MiniCache', function(){
         expect(result).toBeFalsy();
     });
 
+    it('do not save key if is string empty', function(){
+        const key = '';
+        const value = 'value';
+        miniCache.set(key, value);
+
+        const result = miniCache.contains(key);
+
+        expect(result).toBeFalsy();
+    });
+
     it('do not save value if is undefined', function(){
         const key = 'key';
         const value = undefined;
+        miniCache.set(key, value);
+
+        const result = miniCache.contains(key);
+
+        expect(result).toEqual(undefined);
+    });
+
+    it('do not save value if is string empty', function(){
+        const key = 'key';
+        const value = '';
         miniCache.set(key, value);
 
         const result = miniCache.contains(key);
