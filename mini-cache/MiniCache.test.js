@@ -16,4 +16,14 @@ describe('MiniCache', function(){
 
         expect(result).toEqual(value);
     });
+
+    it('do not save key if is undefined', function(){
+        const key = undefined;
+        const value = 'value';
+        miniCache.set(key, value);
+
+        const result = miniCache.contains(key);
+
+        expect(result).toBeFalsy();
+    });
 });
