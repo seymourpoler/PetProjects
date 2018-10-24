@@ -3,7 +3,11 @@ function MiniCache(){
     let values = {};
 
     self.set = function(key, value){
-        if(key === undefined || value == undefined){return;}
+        if(key === undefined || 
+            key === '' || 
+            value == undefined){
+            return;
+        }
         values[key] = value;
     };
 
