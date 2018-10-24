@@ -3,10 +3,8 @@ function MiniCache(){
     let values = {};
 
     self.set = function(key, value){
-        if(key === undefined || 
-            key === '' || 
-            value == undefined ||
-            value == ''){
+        if(isUndefinedOrStringEmpty(key) ||
+        isUndefinedOrStringEmpty(value)){
             return;
         }
         values[key] = value;
@@ -25,6 +23,10 @@ function MiniCache(){
         }
         values[key];
     };
+
+    function isUndefinedOrStringEmpty(element){
+        return element === undefined || element === '' ;
+    }
 }
 
 module.exports = MiniCache;
