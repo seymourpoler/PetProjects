@@ -58,7 +58,9 @@ describe('MiniCache', function(){
     });
 
     it('return false if does not contain key', function(){
-        miniCache.set('key', 'value');
+        const key = 'key';
+        const value = 'value';
+        miniCache.set(key, value);
 
         const result = miniCache.contains('another-key');
 
