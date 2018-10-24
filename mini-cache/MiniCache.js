@@ -3,12 +3,14 @@ function MiniCache(){
     let values = {};
 
     self.set = function(key, value){
-        if(key === undefined){return;}
+        if(key === undefined || value == undefined){return;}
         values[key] = value;
     };
 
     self.get = function(key){
-        if(key === undefined){return '';}
+        if(key === undefined){
+            return '';
+        }
         return values[key];
     };
 
@@ -16,7 +18,7 @@ function MiniCache(){
         if(key === undefined){
             return false;
         }
-        throw 'not implemented';
+        values[key];
     };
 }
 
