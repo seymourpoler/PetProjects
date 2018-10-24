@@ -5,7 +5,8 @@ function MiniCache(){
     self.set = function(key, value){
         if(key === undefined || 
             key === '' || 
-            value == undefined){
+            value == undefined ||
+            value == ''){
             return;
         }
         values[key] = value;
