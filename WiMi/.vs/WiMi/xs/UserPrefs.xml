@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{D4D1E1AA-1D64-4DC6-BBAE-F602374668D9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/WiMi.Web/wwwroot/js/src/Pages/New/presenter.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/WiMi.Web/wwwroot/js/spec/Pages/New/presenter.spec.js">
     <Files>
       <File FileName="src/WiMi.Web/wwwroot/js/src/Pages/New/presenter.js" Line="25" Column="17" />
-      <File FileName="src/WiMi.Web/wwwroot/js/spec/Pages/New/presenter.spec.js" Line="56" Column="36" />
+      <File FileName="src/WiMi.Web/wwwroot/js/spec/Pages/New/presenter.spec.js" Line="25" Column="88" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
