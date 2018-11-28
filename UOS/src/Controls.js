@@ -79,17 +79,6 @@ function Span(){
 }
 Span.prototype = new Control();
 
-function Label(){
-	this.tag = 'label';
-	this.text = '';
-}
-
-Label.prototype = new  Control();
-Label.prototype.render = function(){
-	var result = Control.prototype.render.call(this);
-	return result.replace("></", ">" + this.text + "</");
-}
-
 function TextBox(){
 	this.tag = 'input';
 	this.type = 'text';
