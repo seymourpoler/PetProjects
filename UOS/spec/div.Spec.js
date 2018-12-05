@@ -1,11 +1,11 @@
 describe('Div control', function(){
-    var div = null;
-
-    beforeEach(function() {
-         div = new Div();
-    });
-    
     it("Simple div render", function(){
+        let div = new Div();
         expect(div.render()).toEqual('<div></div>');
+    });
+
+    it("div render with id", function(){
+        let div = new Div({id: 'div-id'});
+        expect(div.render()).toEqual("<div id='div-id'></div>");
     });
 });
