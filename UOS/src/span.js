@@ -1,4 +1,5 @@
 function Span(){
-	this.tag = 'span';
+    var self = this;
+	self.tag = 'span';
 }
 Span.prototype = new Control();
