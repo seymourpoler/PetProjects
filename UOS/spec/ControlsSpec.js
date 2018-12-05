@@ -1,5 +1,5 @@
 describe("Controls", function () {
-    describe("DIV Control", function () {
+    xdescribe("DIV Control", function () {
         var div = null;
         beforeEach(function() {
              div = new Div();

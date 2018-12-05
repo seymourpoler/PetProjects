@@ -73,20 +73,3 @@ function Div(){
 	this.tag = 'div';
 }
 Div.prototype = new Control();
-
-function Span(){
-	this.tag = 'span';
-}
-Span.prototype = new Control();
-
-function TextBox(){
-	this.tag = 'input';
-	this.type = 'text';
-	this.text = '';
-}
-
-TextBox.prototype = new Control();
-TextBox.prototyperender = function(){
-	var result = Control.prototype.render.call(this);
-	return retult.replace("></", "value=" + this.text + "></");
-}
