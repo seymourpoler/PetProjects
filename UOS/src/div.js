@@ -19,6 +19,7 @@ function Div(configuration){
         if(configuration.cssClass){
             result = result + " class='" + configuration.cssClass + "'";
         }
+        
         result = result + '></div>';
         return result;
     };
