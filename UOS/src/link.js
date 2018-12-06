@@ -2,6 +2,14 @@ function Link(configuration){
     let self = this;
 
     self.render = function(){
-        return '<a></a>';
+        if(!configuration){
+            return '<a></a>';
+        }
+        let result = '<a';
+        if(configuration.id){
+            result = result + " id='" + configuration.id + "'";
+        }
+        result = result + '></a>';
+        return result;
     };
 }
