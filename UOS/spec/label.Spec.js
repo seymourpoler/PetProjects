@@ -1,11 +1,9 @@
 describe('Label', function(){
-    var control = null;
-    
-    beforeEach(function() {
-            control = new Label();
-    });
-    
     it("Simple label render", function(){
-        expect(control.render()).toEqual('<label></label>');
+        var label = new UOS.Label();
+
+        const result = label.render();
+
+        expect(result).toEqual('<label></label>');
     });
 });

@@ -1,12 +1,8 @@
-function Label(){
+UOS.Label = function Label(){
     var self = this;
-
-	self.tag = 'label';
-    self.text = '';
     
     self.render = function(){
-        var result = Control.prototype.render.call(this);
-	return result.replace("></", ">" + this.text + "</");s
+        return '<label></label>';
     };
 }
-Label.prototype = new  Control();
+
