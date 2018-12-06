@@ -1,4 +1,4 @@
-UOS.Span = function Span(){
+UOS.Span = function Span(configuration){
     var self = this;
 
     self.render = function(){
@@ -20,7 +20,7 @@ UOS.Span = function Span(){
             result = result + " class='" + configuration.cssClass + "'";
         }
         
-        result = result + '></div>';
+        result = result + '></span>';
         return result;
     };
 }
