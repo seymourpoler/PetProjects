@@ -1,4 +1,4 @@
-function Div(configuration){
+UOS.Div = function Div(configuration){
     let self = this;
 
     self.render = function(){
