@@ -9,7 +9,9 @@ function Div(configuration){
         if(configuration.id){
             result = result + " id='" + configuration.id + "'";
         }
-
+        if(configuration.name){
+            result = result + " name='" + configuration.name + "'";
+        }
         if(configuration.style){
             result = result + " style='" + configuration.style + "'";
         }

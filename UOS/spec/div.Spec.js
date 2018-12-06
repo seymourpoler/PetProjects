@@ -15,6 +15,14 @@ describe('Div control', function(){
         expect(result).toEqual("<div id='div-id'></div>");
     });
 
+    it("div render with name", function(){
+        let div = new Div({name: 'div-name'});
+
+        const result = div.render();
+
+        expect(result).toEqual("<div name='div-name'></div>");
+    });
+
     it("div render with id and style", function(){
         let div = new Div({id: 'div-id', style: 'style'});
 
