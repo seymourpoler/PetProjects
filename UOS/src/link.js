@@ -1,4 +1,4 @@
-function Link(configuration){
+UOS.Link = function Link(configuration){
     let self = this;
 
     self.render = function(){

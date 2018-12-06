@@ -1,5 +1,26 @@
-function Span(){
+UOS.Span = function Span(){
     var self = this;
-	self.tag = 'span';
+
+    self.render = function(){
+        if(!configuration){
+            return '<span></span>';
+        }
+        let result = '<span';
+        if(configuration.id){
+            result = result + " id='" + configuration.id + "'";
+        }
+        if(configuration.name){
+            result = result + " name='" + configuration.name + "'";
+        }
+        if(configuration.style){
+            result = result + " style='" + configuration.style + "'";
+        }
+
+        if(configuration.cssClass){
+            result = result + " class='" + configuration.cssClass + "'";
+        }
+        
+        result = result + '></div>';
+        return result;
+    };
 }
-Span.prototype = new Control();

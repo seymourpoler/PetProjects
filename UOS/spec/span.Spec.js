@@ -1,7 +1,7 @@
 describe("Span Control", function () {
     var span = null;
     beforeEach(function() {
-         span = new Span();
+         span = new UOS.Span();
     });
     
     it("Simple span render", function(){
@@ -41,7 +41,7 @@ describe("Span Control", function () {
     xit("span remove css class with a text box", function(){
         span.id = 'spanId';
         span.cssClass = 'classOne classTwo classThree classFour';
-        var textBox = new TextBox();
+        var textBox = new UOS.TextBox();
         textBox.cssClass = 'classOne classFour';
         textBox.disabled = true;
         textBox.visible = false;
