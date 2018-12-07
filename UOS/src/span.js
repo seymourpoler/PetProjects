@@ -1,11 +1,13 @@
 (function(UOS){
     UOS.Span = function Span(configuration){
         var self = this;
+        //TODO: extract explanatory method
+        var _cssClass = configuration && configuration.cssClass? configuration.cssClass : ''; 
     
         self.removeCssClass = function(cssClass){
-            throw 'not implemented';
+            _cssClass = _cssClass.replace(cssClass, '');
         };
-    
+        
         self.render = function(){
             if(!configuration){
                 return '<span></span>';
@@ -21,8 +23,8 @@
                 result = result + " style='" + configuration.style + "'";
             }
     
-            if(configuration.cssClass){
-                result = result + " class='" + configuration.cssClass + "'";
+            if(_cssClass){
+                result = result + " class='" + _cssClass + "'";
             }
             
             result = result + '></span>';
