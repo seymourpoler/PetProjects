@@ -1,6 +1,10 @@
 UOS.Span = function Span(configuration){
     var self = this;
 
+    self.removeCssClass = function(cssClass){
+        throw 'not implemented';
+    };
+
     self.render = function(){
         if(!configuration){
             return '<span></span>';

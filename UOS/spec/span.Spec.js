@@ -16,11 +16,11 @@ describe("Span Control", function () {
     });
 
     it("span render with id style & class", function(){
-        span = new UOS.Span({id: 'spannpsa', style: 'style', cssClass: 'class'});
-        span.id = 'spanid';
-        span.style = 'style';
-        span.cssClass = 'class';
-        expect(span.render()).toEqual("<span id='spanid' class='class' style='style'></span>");
+        span = new UOS.Span({id: 'span-id', style: 'style', cssClass: 'class'});
+        
+        const result = span.render();
+        
+        expect(span.render()).toEqual("<span id='span-id' style='style' class='class'></span>");
     });
 
     it("span enabled", function(){
@@ -29,10 +29,12 @@ describe("Span Control", function () {
     });
 
     it("span remove css class", function(){
-        span.id = 'spanId';
-        span.cssClass = 'classOne classTwo classThree classFour';
+        span = new UOS.Span({id: 'span-id', cssClass: 'classOne classTwo classThree classFour'});
         span.removeCssClass('classTwo');
-        expect(span.render()).toEqual("<span id='spanId' class='classOne classThree classFour'></span>");
+        
+        const result = span.render();
+        
+        expect(result).toEqual("<span id='spanId' class='classOne classThree classFour'></span>");
     });
 
     it("span with not visible style", function(){
