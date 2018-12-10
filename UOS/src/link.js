@@ -14,4 +14,4 @@
             return result;
         };
     }
-})(UOS || {});
+})(UOS);

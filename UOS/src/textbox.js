@@ -9,4 +9,4 @@
             return "<input type='text'/>";
         };
     }
-})(UOS || {});
+})(UOS);

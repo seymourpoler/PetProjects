@@ -6,4 +6,4 @@
             return '<label></label>';
         };
     }
-})(UOS || {});
+})(UOS);
