@@ -40,6 +40,16 @@ describe("Span Control", function () {
 		
         expect(result).toEqual("<span id='span-id' disabled></span>");
     });
+	
+	it("span enable", function(){
+		span = new UOS.Span({id: 'span-id'});
+		span.disable();
+		span.enable();
+		
+		const result = span.render();
+		
+        expect(result).toEqual("<span id='span-id'></span>");
+    });
 
     xit("hides", function(){
         span = new UOS.Span({id: 'span-id'});

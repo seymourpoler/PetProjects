@@ -13,6 +13,10 @@
 			isDisabled = true;
 		};
 		
+		self.enable = function(){
+			isDisabled = false;
+		};
+		
         self.render = function(){
             if(!configuration){
                 return '<span></span>';
