@@ -69,10 +69,14 @@ describe("Span Control", function () {
         expect(result).toEqual("<span id='span-id' style='display:block;'></span>");
     });
 
-    xit("span with not visible style", function(){
-        span.disabled = false;
-        span.visible = false;
-        expect(span.render()).toEqual("<span style='visibility:hidden;'></span>");
+    it("span with not visible style", function(){
+		span = new UOS.Span({id: 'span-id'});
+		span.enable();
+        span.hide();
+
+		const result = span.render();
+		
+        expect(result).toEqual("<span id='span-id' style='display:none;'></span>");
     });
 
     xit("span remove css class with a text box", function(){
