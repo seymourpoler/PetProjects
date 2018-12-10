@@ -1,12 +1,4 @@
-describe("Control", function () {
-	it("Simple div render", function(){
-		let control = new UOS.Control({tag:'div'});
-		
-		const result = control.render({tag:'div'});
-		
-		expect(result).toEqual('<div></div>');
-	});
-		
+describe("Controls", function () {
     describe("DIV Control", function () {
         var div = null;
 		
@@ -14,7 +6,13 @@ describe("Control", function () {
              div = new Control();
         });
 		
-        
+        it("Simple div render", function(){
+			let control = new UOS.Control({tag:'div'});
+			
+			const result = control.render();
+			
+            expect(result).toEqual('<div></div>');
+        });
 		
         xit("div render with id", function(){
             div.id = 'divid';

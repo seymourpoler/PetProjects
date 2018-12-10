@@ -1,3 +1,13 @@
+(function(UOS){
+	UOS.Control = function Control(configuration){
+		var self = this;
+		
+		self.render = function(){
+			return '<' + configuration.tag + '></' + configuration.tag + '>';
+		};
+	}
+})(UOS);
+
 function Control(){
 	this.id = '';
 	this.tag = '';
