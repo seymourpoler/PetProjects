@@ -29,7 +29,7 @@ describe("Span Control", function () {
         
         const result = span.render();
         
-        expect(result).toContain("class='classOne classThree classFour'");
+        expect(result).not.toContain("classTwo'");
     });
 
     xit("span enabled", function(){
