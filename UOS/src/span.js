@@ -3,11 +3,16 @@
         var self = this;
         //TODO: extract explanatory method
         var _cssClass = configuration && configuration.cssClass? configuration.cssClass : ''; 
+		let isDisabled = false;
     
         self.removeCssClass = function(cssClass){
             _cssClass = _cssClass.replace(cssClass, '');
         };
         
+		self.disable = function(){
+			isDisabled = true;
+		};
+		
         self.render = function(){
             if(!configuration){
                 return '<span></span>';
@@ -22,7 +27,9 @@
             if(configuration.style){
                 result = result + " style='" + configuration.style + "'";
             }
-    
+			if(isDisabled){
+				result = result + ' disabled';
+			}
             if(_cssClass){
                 result = result + " class='" + _cssClass + "'";
             }

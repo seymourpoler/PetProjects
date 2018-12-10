@@ -32,9 +32,13 @@ describe("Span Control", function () {
         expect(result).not.toContain("classTwo'");
     });
 
-    xit("span enabled", function(){
-        span.disabled = false;
-        expect(span.render()).toEqual("<span></span>");
+    it("span disabled", function(){
+		span = new UOS.Span({id: 'span-id'});
+		span.disable();
+		
+		const result = span.render();
+		
+        expect(result).toEqual("<span id='span-id' disabled></span>");
     });
 
     xit("hides", function(){
