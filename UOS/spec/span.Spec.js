@@ -53,12 +53,20 @@ describe("Span Control", function () {
 
     it("hides", function(){
         span = new UOS.Span({id: 'span-id'});
-        
         span.hide();
         
         const result =  span.render();
 
         expect(span.render()).toEqual("<span id='span-id' style='display:none;'></span>");
+    });
+	
+	it("shows", function(){
+        span = new UOS.Span({id: 'span-id'});
+        span.show();
+        
+        const result =  span.render();
+
+        expect(result).toEqual("<span id='span-id' style='display:block;'></span>");
     });
 
     xit("span with not visible style", function(){

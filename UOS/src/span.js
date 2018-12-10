@@ -22,6 +22,10 @@
 			_style = _style + 'display:none;';
 		};
 		
+		self.show = function(){
+			_style = _style + 'display:block;';
+		};
+		
         self.render = function(){
             if(!configuration){
                 return '<span></span>';
