@@ -19,4 +19,10 @@ describe('Control Renderer', function(){
 
 		expect(result).toBe('<label></label>');
 	});
+
+	it('renders id control', function(){
+		const result = controlRenderer.render({tag: 'label', id:'control-id'});
+
+		expect(result).toBe("<label id='control-id'></label>");
+	});
 });

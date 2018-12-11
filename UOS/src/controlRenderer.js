@@ -8,6 +8,8 @@
 		self.configurationErrorMessage = configurationErrorMessage;
 		self.tagConfigurationErrorMessage = tagConfigurationErrorMessage;
 
+		let result = '';
+
 		self.render = function(configuration){
 			if(!configuration){
 				throw new Error(configurationErrorMessage);
@@ -15,7 +17,12 @@
 			if(!configuration.tag){
 				throw new Error(tagConfigurationErrorMessage);
 			}
-			return '<' + configuration.tag + '></' + configuration.tag + '>';
+			result = '<' + configuration.tag;
+			if(configuration.id){
+				result = result + " id='" + configuration.id + "'";
+			}
+			result = result + '></' + configuration.tag + '>';
+			return result;
 		}
 	};
 
