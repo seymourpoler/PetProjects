@@ -1,5 +1,5 @@
 (function(UOS){
-    UOS.Label = function Label(controlRenderer, configuration){
+    function Label(controlRenderer, configuration){
         var self = this;
         
         self.render = function(){
@@ -19,6 +19,6 @@
 
     UOS.namespace('Controls');
     UOS.Controls.createLabel = createLabel;
-    UOS.Controls.label = Label;
+    UOS.Controls.Label = Label;
 
 })(UOS);
