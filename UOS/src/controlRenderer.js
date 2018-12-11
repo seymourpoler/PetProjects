@@ -45,10 +45,11 @@
 	};
 
 	function createControlRenderer(){
-		return new UOS.ControlRenderer();
+		return new UOS.Controls.ControlRenderer();
 	}
 
-	UOS.createControlRenderer = createControlRenderer;
-	UOS.ControlRenderer = ControlRenderer;
+	UOS.namespace('Controls');
+	UOS.Controls.createControlRenderer = createControlRenderer;
+	UOS.Controls.ControlRenderer = ControlRenderer;
 
 })(UOS)

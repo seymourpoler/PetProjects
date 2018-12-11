@@ -1,28 +1,24 @@
 (function(UOS){
-    UOS.Div = function Div(configuration){
+    function Div(controlRenderer, configuration){
         let self = this;
     
         self.render = function(){
             if(!configuration){
                 return '<div></div>';
             }
-            let result = '<div';
-            if(configuration.id){
-                result = result + " id='" + configuration.id + "'";
-            }
-            if(configuration.name){
-                result = result + " name='" + configuration.name + "'";
-            }
-            if(configuration.style){
-                result = result + " style='" + configuration.style + "'";
-            }
-    
-            if(configuration.cssClass){
-                result = result + " class='" + configuration.cssClass + "'";
-            }
-            
-            result = result + '></div>';
+            const result = controlRenderer.render({...configuration, tag: 'div'});
             return result;
         };
     }
+
+    function createDiv(configuration){
+        return new UOS.Controls.Div(
+            UOS.Controls.createControlRenderer(),
+            configuration);
+    }
+
+    UOS.namespace('Controls');
+    UOS.Controls.Div = Div;
+    UOS.Controls.createDiv = createDiv;
+
 })(UOS);

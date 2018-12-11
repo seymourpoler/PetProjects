@@ -1,5 +1,5 @@
 (function(UOS){
-    UOS.Link = function Link(controlRenderer, configuration){
+    function Link(controlRenderer, configuration){
         let self = this;
     
         self.render = function(){
@@ -11,11 +11,13 @@
         };
     }
     function createLink(configuration){
-        return new UOS.Link(
-            UOS.createControlRenderer(),
+        return new UOS.Controls.Link(
+            UOS.Controls.createControlRenderer(),
             configuration);
     }
+
     UOS.namespace('Controls');
+    UOS.Controls.Link = Link;
     UOS.Controls.createLink = createLink;
-    
+
 })(UOS);

@@ -2,7 +2,7 @@ describe('Control Renderer', function(){
 	var controlRenderer;
 
 	beforeEach(function(){
-		controlRenderer = new UOS.ControlRenderer();
+		controlRenderer = UOS.Controls.createControlRenderer();
 	});
 
 	it('throws an error if there is a error in configuration', function(){
