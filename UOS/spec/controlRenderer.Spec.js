@@ -26,6 +26,12 @@ describe('Control Renderer', function(){
 		expect(result).toBe("<label id='control-id'></label>");
 	});
 
+	it('renders control with name', function(){
+		const result = controlRenderer.render({tag: 'label', name:'control-name'});
+
+		expect(result).toBe("<label name='control-name'></label>");
+	});
+
 	it('renders control with css class', function(){
 		const result = controlRenderer.render({tag:'div', cssClass:'css-class'});
 

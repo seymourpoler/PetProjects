@@ -18,18 +18,27 @@
 				throw new Error(tagConfigurationErrorMessage);
 			}
 			result = '<' + configuration.tag;
+
 			if(configuration.id){
 				result = result + " id='" + configuration.id + "'";
 			}
+
+			if(configuration.name){
+				result = result + " name='" + configuration.name + "'";
+			}
+
 			if(configuration.cssClass){
 				result = result + " class='" + configuration.cssClass + "'";
 			}
+
 			if(configuration.style){
 				result = result + " style='" + configuration.style + "'";
 			}
+			
 			if(configuration.disabled){
 				result = result + " disabled";
 			}
+
 			result = result + '></' + configuration.tag + '>';
 			return result;
 		}
