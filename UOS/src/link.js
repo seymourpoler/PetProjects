@@ -1,17 +1,19 @@
 (function(UOS){
-    UOS.Link = function Link(configuration){
+    UOS.Link = function Link(controlRenderer, configuration){
         let self = this;
     
         self.render = function(){
             if(!configuration){
                 return '<a></a>';
             }
-            let result = '<a';
-            if(configuration.id){
-                result = result + " id='" + configuration.id + "'";
-            }
-            result = result + '></a>';
+            const result = controlRenderer.render({...configuration, tag: 'a'});
             return result;
         };
     }
+    function createLink(configuration){
+        return new UOS.Link(
+            UOS.createControlRenderer(),
+            configuration);
+    }
+    UOS.createLink = createLink;
 })(UOS);

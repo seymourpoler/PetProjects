@@ -44,6 +44,11 @@
 		}
 	};
 
+	function createControlRenderer(){
+		return new UOS.ControlRenderer();
+	}
+
+	UOS.createControlRenderer = createControlRenderer;
 	UOS.ControlRenderer = ControlRenderer;
 
 })(UOS)
