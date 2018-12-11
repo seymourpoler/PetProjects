@@ -24,6 +24,9 @@
 			if(configuration.cssClass){
 				result = result + " class='" + configuration.cssClass + "'";
 			}
+			if(configuration.style){
+				result = result + " style='" + configuration.style + "'";
+			}
 			result = result + '></' + configuration.tag + '>';
 			return result;
 		}

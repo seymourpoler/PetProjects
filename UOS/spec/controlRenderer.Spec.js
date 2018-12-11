@@ -31,4 +31,10 @@ describe('Control Renderer', function(){
 
 		expect(result).toBe("<div class='css-class'></div>");
 	});
+
+	it('renders control with style', function(){
+		const result = controlRenderer.render({tag:'a', style:'color:red;'});
+
+		expect(result).toBe("<a style='color:red;'></a>");
+	});
 });
