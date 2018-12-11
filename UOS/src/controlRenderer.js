@@ -27,6 +27,9 @@
 			if(configuration.style){
 				result = result + " style='" + configuration.style + "'";
 			}
+			if(configuration.disabled){
+				result = result + " disabled";
+			}
 			result = result + '></' + configuration.tag + '>';
 			return result;
 		}

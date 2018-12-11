@@ -37,4 +37,10 @@ describe('Control Renderer', function(){
 
 		expect(result).toBe("<a style='color:red;'></a>");
 	});
+
+	it('renders disabled control', function(){
+		const result = controlRenderer.render({tag:'a', disabled: true});
+
+		expect(result).toBe("<a disabled></a>");
+	});
 });
