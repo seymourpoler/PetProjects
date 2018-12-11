@@ -1,6 +1,6 @@
 describe('Link Control', function(){
     it("Simple link render", function(){
-        let link = new UOS.Link();
+        let link = new UOS.Controls.createLink();
 
         const result = link.render();
 
@@ -8,7 +8,7 @@ describe('Link Control', function(){
     });
 
     it("link render with id", function(){
-        let link = new UOS.createLink({id: 'link-id'});
+        let link = new UOS.Controls.createLink({id: 'link-id'});
 
         const result = link.render();
 

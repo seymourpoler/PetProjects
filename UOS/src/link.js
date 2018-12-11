@@ -15,5 +15,7 @@
             UOS.createControlRenderer(),
             configuration);
     }
-    UOS.createLink = createLink;
+    UOS.namespace('Controls');
+    UOS.Controls.createLink = createLink;
+    
 })(UOS);
