@@ -1,16 +1,25 @@
 (function(UOS){
-	UOS.ControlRenderer = function ControlRenderer(){
-		const errorMessage = 'There is no configuration';
-		function render(configuration){
+	function ControlRenderer(){
+		var self = this;
+
+		const configurationErrorMessage = 'There is no configuration';
+		const tagConfigurationErrorMessage = 'There is no tag property in configuration parameter';
+
+		self.configurationErrorMessage = configurationErrorMessage;
+		self.tagConfigurationErrorMessage = tagConfigurationErrorMessage;
+
+		self.render = function(configuration){
 			if(!configuration){
-				throw new Error(errorMessage);
+				throw new Error(configurationErrorMessage);
 			}
+			if(!configuration.tag){
+				throw new Error(tagConfigurationErrorMessage);
+			}
+			
 			throw 'not implemented';
 		}
-		
-		return {
-			render: render
-			errorMessage: errorMessage
-		}
 	};
+
+	UOS.ControlRenderer = ControlRenderer;
+
 })(UOS)
