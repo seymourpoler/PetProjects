@@ -15,8 +15,7 @@
 			if(!configuration.tag){
 				throw new Error(tagConfigurationErrorMessage);
 			}
-			
-			throw 'not implemented';
+			return '<' + configuration.tag + '></' + configuration.tag + '>';
 		}
 	};
 

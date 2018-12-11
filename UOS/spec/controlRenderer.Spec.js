@@ -13,4 +13,10 @@ describe('Control Renderer', function(){
 		const configuration = {};
 		expect(function(){ controlRenderer.render(configuration);}).toThrow(new Error(controlRenderer.tagConfigurationErrorMessage));
 	});
+
+	it('renders simple control', function(){
+		const result = controlRenderer.render({tag: 'label'});
+
+		expect(result).toBe('<label></label>');
+	});
 });
