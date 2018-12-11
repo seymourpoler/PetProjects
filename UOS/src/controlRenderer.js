@@ -21,6 +21,9 @@
 			if(configuration.id){
 				result = result + " id='" + configuration.id + "'";
 			}
+			if(configuration.cssClass){
+				result = result + " class='" + configuration.cssClass + "'";
+			}
 			result = result + '></' + configuration.tag + '>';
 			return result;
 		}

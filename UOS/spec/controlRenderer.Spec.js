@@ -20,9 +20,15 @@ describe('Control Renderer', function(){
 		expect(result).toBe('<label></label>');
 	});
 
-	it('renders id control', function(){
+	it('renders control with identifier', function(){
 		const result = controlRenderer.render({tag: 'label', id:'control-id'});
 
 		expect(result).toBe("<label id='control-id'></label>");
+	});
+
+	it('renders control with css class', function(){
+		const result = controlRenderer.render({tag:'div', cssClass:'css-class'});
+
+		expect(result).toBe("<div class='css-class'></div>");
 	});
 });
