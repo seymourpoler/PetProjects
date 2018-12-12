@@ -1,4 +1,5 @@
 (function(UOS){
+	
     function TextBox(configuration){
         var self = this;
 		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
