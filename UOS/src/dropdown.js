@@ -1,5 +1,5 @@
 (function(UOS){
-	function Dropdown(controlRenderer, configuration){
+	function DropDown(controlRenderer, configuration){
 		let self = this;
 		
 		self.render = function(){
@@ -12,7 +12,7 @@
 	}
 	
 	function createDropDown(configuration){
-		return new Dropdown(
+		return new DropDown(
 			UOS.Controls.createControlRenderer(),
 			configuration);
 	}
