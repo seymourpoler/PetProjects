@@ -47,4 +47,14 @@ describe('Button', function(){
 		
 		expect(result).toBe('<button disabled></button>');
 	});
+	
+	it('renders enabled button', function(){
+		let button = UOS.Controls.createButton({name:'btn-save'});
+		button.disable();
+		button.enable();
+		
+		const result = button.render();
+		
+		expect(result).toBe("<button name='btn-save'></button>");
+	});
 });
