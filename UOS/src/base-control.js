@@ -1,4 +1,5 @@
 (function(UOS){
+	
 	function BaseControl(){
 		let self = this;
 		let isDisabled = false;

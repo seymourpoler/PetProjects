@@ -1,4 +1,5 @@
 (function(UOS){
+	
 	function ControlRenderer(){
 		var self = this;
 

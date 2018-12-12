@@ -1,4 +1,5 @@
 describe('TextBox Control', function(){
+	
     it("Simple textbox render", function(){
         let textbox = new UOS.Controls.createTextBox();
 
@@ -14,4 +15,5 @@ describe('TextBox Control', function(){
 
         expect(result).toEqual("<input id='textbox-id' type='text'></input>");
     });
+	
 });

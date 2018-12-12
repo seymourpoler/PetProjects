@@ -1,20 +1,17 @@
 (function(UOS){
-    function Div(controlRenderer, configuration){
+	
+    function Div(configuration){
         let self = this;
-    
+		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
+		
         self.render = function(){
-            if(!configuration){
-                return '<div></div>';
-            }
-            const result = controlRenderer.render({...configuration, tag: 'div'});
-            return result;
+            const result = self.renderControl({...configuration, tag: 'div'});
+			return result;
         };
     }
 
     function createDiv(configuration){
-        return new Div(
-            UOS.Controls.createControlRenderer(),
-            configuration);
+        return new Div(configuration);
     }
 
     UOS.namespace('Controls');
