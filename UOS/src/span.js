@@ -1,5 +1,5 @@
 (function(UOS){
-    UOS.Span = function Span(configuration){
+    function Span(controlRenderer, configuration){
         var self = this;
         //TODO: extract explanatory method
         var _cssClass = configuration && configuration.cssClass? configuration.cssClass : ''; 
@@ -30,25 +30,18 @@
             if(!configuration){
                 return '<span></span>';
             }
-            let result = '<span';
-            if(configuration.id){
-                result = result + " id='" + configuration.id + "'";
-            }
-            if(configuration.name){
-                result = result + " name='" + configuration.name + "'";
-            }
-            if(_style){
-                result = result + " style='" + _style + "'";
-            }
-			if(isDisabled){
-				result = result + ' disabled';
-			}
-            if(_cssClass){
-                result = result + " class='" + _cssClass + "'";
-            }
-            
-            result = result + '></span>';
-            return result;
+			const result = controlRenderer.render({...configuration, tag:'span', style: _style, css: _cssClass, disabled: isDisabled});
+			return result;
         };
     }
+	
+	function createSpan(configuration){
+		return new Span(
+			UOS.Controls.createControlRenderer(),
+			configuration);
+	}
+	
+	UOS.namespace('Controls');
+	UOS.Controls.createSpan = createSpan;
+	
 })(UOS);

@@ -1,30 +1,26 @@
 describe("Span Control", function () {
-    var span = null;
-    beforeEach(function() {
-         span = new UOS.Span();
-    });
     
     it("Simple span render", function(){
-        span = new UOS.Span();
+        let span = UOS.Controls.createSpan();
 
         expect(span.render()).toEqual('<span></span>');
     });
 
     it("span render with id", function(){
-        span = new UOS.Span({id: 'spannpsa'});
+        let span = UOS.Controls.createSpan({id: 'spannpsa'});
         expect(span.render()).toEqual("<span id='spannpsa'></span>");
     });
 
     it("span render with id style & class", function(){
-        span = new UOS.Span({id: 'span-id', style: 'style', cssClass: 'class'});
+        let span = UOS.Controls.createSpan({id: 'span-id', style: 'style', cssClass: 'class'});
         
         const result = span.render();
         
-        expect(span.render()).toEqual("<span id='span-id' style='style' class='class'></span>");
+        expect(span.render()).toEqual("<span id='span-id' class='class' style='style'></span>");
     });
 
     it("span remove css class", function(){
-        span = new UOS.Span({cssClass: 'classOne classTwo classThree classFour'});
+        let span = UOS.Controls.createSpan({cssClass: 'classOne classTwo classThree classFour'});
         span.removeCssClass('classTwo');
         
         const result = span.render();
@@ -33,7 +29,7 @@ describe("Span Control", function () {
     });
 
     it("span disabled", function(){
-		span = new UOS.Span({id: 'span-id'});
+		let span = UOS.Controls.createSpan({id: 'span-id'});
 		span.disable();
 		
 		const result = span.render();
@@ -42,7 +38,7 @@ describe("Span Control", function () {
     });
 	
 	it("span enable", function(){
-		span = new UOS.Span({id: 'span-id'});
+		let span = UOS.Controls.createSpan({id: 'span-id'});
 		span.disable();
 		span.enable();
 		
@@ -52,7 +48,7 @@ describe("Span Control", function () {
     });
 
     it("hides", function(){
-        span = new UOS.Span({id: 'span-id'});
+        let span = UOS.Controls.createSpan({id: 'span-id'});
         span.hide();
         
         const result =  span.render();
@@ -61,7 +57,7 @@ describe("Span Control", function () {
     });
 	
 	it("shows", function(){
-        span = new UOS.Span({id: 'span-id'});
+        let span = UOS.Controls.createSpan({id: 'span-id'});
         span.show();
         
         const result =  span.render();
@@ -70,7 +66,7 @@ describe("Span Control", function () {
     });
 
     it("span with not visible style", function(){
-		span = new UOS.Span({id: 'span-id'});
+		let span = UOS.Controls.createSpan({id: 'span-id'});
 		span.enable();
         span.hide();
 
