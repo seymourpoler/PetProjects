@@ -6,4 +6,21 @@ describe('Button', function(){
 		
 		expect(result).toBe('<button></button>');
 	});
+	
+	it('renders button with identifier', function(){
+		let button = UOS.Controls.createButton({id:'btn-id'});
+		
+		const result = button.render();
+		
+		expect(result).toBe("<button id='btn-id'></button>");
+	});
+	
+	it('renders disabled button', function(){
+		let button = UOS.Controls.createButton();
+		button.disable();
+		
+		const result = button.render();
+		
+		expect(result).toBe('<button disabled></button>');
+	});
 });

@@ -12,7 +12,18 @@
 		};
 		
 		self.renderControl = function(configuration){
-			return '<' + configuration.tag + '></' + configuration.tag + '>';
+			let result = '<' + configuration.tag;
+			
+			if(configuration.id){
+				result = result + " id='" + configuration.id + "'";
+			}
+			
+			if(isDisabled){
+				result = result + " disabled";
+			}
+
+			result = result + '></' + configuration.tag + '>';
+			return result;
 		};
 	}
 	
