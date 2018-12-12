@@ -6,6 +6,8 @@
 		const configurationErrorMessage = 'There is no configuration';
 		self.configurationErrorMessage = configurationErrorMessage;
 		
+		const tagConfigurationErrorMessage = 'There is no tag property in configuration parameter';
+		self.tagConfigurationErrorMessage = tagConfigurationErrorMessage;
 		
 		self.disable = function(){
 			isDisabled = true;
@@ -18,6 +20,10 @@
 		self.renderControl = function(configuration){
 			if(!configuration){
 				throw new Error(configurationErrorMessage);
+			}
+			
+			if(!configuration.tag){
+				throw new Error(tagConfigurationErrorMessage);
 			}
 			
 			let result = '<' + configuration.tag;
