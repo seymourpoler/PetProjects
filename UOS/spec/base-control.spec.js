@@ -2,7 +2,7 @@ describe('BaseControl', function(){
 	var baseControl;
 
 	beforeEach(function(){
-		baseControl = UOS.Controls.BaseControl();
+		baseControl = new UOS.Controls.BaseControl();
 	});
 	
 	it('throws an error if there is a error in configuration', function(){
