@@ -18,6 +18,10 @@
 				result = result + " id='" + configuration.id + "'";
 			}
 			
+			if(configuration.name){
+				result = result + " name='" + configuration.name + "'";
+			}
+			
 			if(isDisabled){
 				result = result + " disabled";
 			}
