@@ -1,4 +1,5 @@
 (function(UOS){
+	
 	function Button(configuration){
 		let self = this;	
 		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
