@@ -11,6 +11,7 @@
 				return "<input type='text'/>";
 			}
             const result = controlRenderer.render({...configuration, tag: 'input', type:'text'});
+			return result;
         };
     }
 	
@@ -23,6 +24,5 @@
 	UOS.namespace("Controls");
 	UOS.Controls.TextBox = TextBox;
 	UOS.Controls.createTextBox = createTextBox;
-	
 	
 })(UOS);

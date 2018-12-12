@@ -6,4 +6,12 @@ describe('TextBox Control', function(){
 
         expect(result).toEqual("<input type='text'/>");
     });
+	
+	it("renders textbox with id", function(){
+        let textbox = new UOS.Controls.createTextBox({id: 'textbox-id'});
+
+        const result = textbox.render();
+
+        expect(result).toEqual("<input id='textbox-id' type='text'></input>");
+    });
 });
