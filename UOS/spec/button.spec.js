@@ -23,6 +23,22 @@ describe('Button', function(){
 		expect(result).toBe("<button name='btn-name'></button>");
 	});
 	
+	it('renders button with css class', function(){
+		let button = UOS.Controls.createButton({cssClass:'css-class'});
+		
+		const result = button.render();
+		
+		expect(result).toBe("<button class='css-class'></button>");
+	});
+	
+	it('renders button with style', function(){
+		let button = UOS.Controls.createButton({style:'a-style'});
+		
+		const result = button.render();
+		
+		expect(result).toBe("<button style='a-style'></button>");
+	});
+	
 	it('renders disabled button', function(){
 		let button = UOS.Controls.createButton();
 		button.disable();

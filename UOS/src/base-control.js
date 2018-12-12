@@ -22,6 +22,14 @@
 				result = result + " name='" + configuration.name + "'";
 			}
 			
+			if(configuration.cssClass){
+				result = result + " class='" + configuration.cssClass + "'";
+			}
+			
+			if(configuration.style){
+				result = result + " style='" + configuration.style + "'";
+			}
+			
 			if(isDisabled){
 				result = result + " disabled";
 			}
