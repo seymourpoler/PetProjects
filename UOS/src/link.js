@@ -11,13 +11,12 @@
         };
     }
     function createLink(configuration){
-        return new UOS.Controls.Link(
+        return new Link(
             UOS.Controls.createControlRenderer(),
             configuration);
     }
 
     UOS.namespace('Controls');
-    UOS.Controls.Link = Link;
     UOS.Controls.createLink = createLink;
 
 })(UOS);

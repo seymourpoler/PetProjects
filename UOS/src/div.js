@@ -12,13 +12,12 @@
     }
 
     function createDiv(configuration){
-        return new UOS.Controls.Div(
+        return new Div(
             UOS.Controls.createControlRenderer(),
             configuration);
     }
 
     UOS.namespace('Controls');
-    UOS.Controls.Div = Div;
     UOS.Controls.createDiv = createDiv;
 
 })(UOS);

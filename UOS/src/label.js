@@ -12,13 +12,12 @@
     }
 
     function createLabel(configuration){
-        return new UOS.Controls.Label(
+        return new Label(
             UOS.Controls.createControlRenderer(),
             configuration);
     }
 
     UOS.namespace('Controls');
     UOS.Controls.createLabel = createLabel;
-    UOS.Controls.Label = Label;
 
 })(UOS);

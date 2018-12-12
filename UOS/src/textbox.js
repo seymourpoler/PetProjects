@@ -16,13 +16,12 @@
     }
 	
 	function createTextBox(configuration){
-		return new UOS.Controls.TextBox(
+		return new TextBox(
 			UOS.Controls.createControlRenderer(),
 			configuration);
 	}
 	
 	UOS.namespace("Controls");
-	UOS.Controls.TextBox = TextBox;
 	UOS.Controls.createTextBox = createTextBox;
 	
 })(UOS);
