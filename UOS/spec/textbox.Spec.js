@@ -1,6 +1,6 @@
 describe('TextBox Control', function(){
     it("Simple textbox render", function(){
-        let textbox = new UOS.TextBox();
+        let textbox = new UOS.Controls.createTextBox();
 
         const result = textbox.render();
 

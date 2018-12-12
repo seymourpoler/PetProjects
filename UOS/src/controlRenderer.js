@@ -26,7 +26,11 @@
 			if(configuration.name){
 				result = result + " name='" + configuration.name + "'";
 			}
-
+			
+			if(configuration.type){
+				result = result + " type='" + configuration.type + "'";
+			}
+			
 			if(configuration.cssClass){
 				result = result + " class='" + configuration.cssClass + "'";
 			}
