@@ -4,7 +4,7 @@ describe('TextBox Control', function(){
 
         const result = textbox.render();
 
-        expect(result).toEqual("<input type='text'/>");
+        expect(result).toEqual("<input type='text'></input>");
     });
 	
 	it("renders textbox with id", function(){

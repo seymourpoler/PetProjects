@@ -44,6 +44,10 @@
 				result = result + " style='" + configuration.style + "'";
 			}
 			
+			if(configuration.type){
+				result = result + " type='" + configuration.type + "'";
+			}
+			
 			if(isDisabled){
 				result = result + " disabled";
 			}

@@ -1,24 +1,16 @@
 (function(UOS){
-    function TextBox(controlRenderer, configuration){
+    function TextBox(configuration){
         var self = this;
-		
-        this.tag = 'input';
-        this.type = 'text';
-        this.text = '';
-        
+		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
+		       
         self.render = function(){
-			if(!configuration){
-				return "<input type='text'/>";
-			}
-            const result = controlRenderer.render({...configuration, tag: 'input', type:'text'});
+			const result = self.renderControl({...configuration, tag: 'input', type:'text'});
 			return result;
         };
     }
 	
 	function createTextBox(configuration){
-		return new TextBox(
-			UOS.Controls.createControlRenderer(),
-			configuration);
+		return new TextBox(configuration);
 	}
 	
 	UOS.namespace("Controls");
