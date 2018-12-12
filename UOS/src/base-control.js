@@ -3,6 +3,10 @@
 		let self = this;
 		let isDisabled = false;
 		
+		const configurationErrorMessage = 'There is no configuration';
+		self.configurationErrorMessage = configurationErrorMessage;
+		
+		
 		self.disable = function(){
 			isDisabled = true;
 		};
@@ -12,6 +16,10 @@
 		};
 		
 		self.renderControl = function(configuration){
+			if(!configuration){
+				throw new Error(configurationErrorMessage);
+			}
+			
 			let result = '<' + configuration.tag;
 			
 			if(configuration.id){
