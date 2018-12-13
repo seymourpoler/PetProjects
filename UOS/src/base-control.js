@@ -1,8 +1,10 @@
 (function(UOS){
 	
-	function BaseControl(){
+	function BaseControl(configuration){
 		let self = this;
 		let isDisabled = false;
+        let _cssClass = configuration && configuration.cssClass? configuration.cssClass : ''; 
+		let _style =  configuration && configuration.style? configuration.style: '';
 		
 		const configurationErrorMessage = 'There is no configuration';
 		self.configurationErrorMessage = configurationErrorMessage;
@@ -18,7 +20,27 @@
 			isDisabled = false;
 		};
 		
-		self.renderControl = function(configuration){
+		self.removeCssClass = function(cssClass){
+            _cssClass = _cssClass.replace(cssClass, '');
+		};
+
+		self.addCssClass = function(cssClass){
+            _cssClass = _cssClass + ' ' + cssClass;
+		};
+
+		self.addStyle = function(style){
+            _style = _style + style;
+		};
+		
+		self.hide = function(){
+			_style = _style + 'display:none;';
+		};
+		
+		self.show = function(){
+			_style = _style + 'display:block;';
+		};
+
+		self.renderControl = function(){
 			if(!configuration){
 				throw new Error(configurationErrorMessage);
 			}
@@ -26,7 +48,7 @@
 			if(!configuration.tag){
 				throw new Error(tagConfigurationErrorMessage);
 			}
-			
+
 			let result = '<' + configuration.tag;
 			
 			if(configuration.id){
@@ -37,12 +59,12 @@
 				result = result + " name='" + configuration.name + "'";
 			}
 			
-			if(configuration.cssClass){
-				result = result + " class='" + configuration.cssClass + "'";
+			if(!!_cssClass){
+				result = result + " class='" + _cssClass + "'";
 			}
 			
-			if(configuration.style){
-				result = result + " style='" + configuration.style + "'";
+			if(!!_style){
+				result = result + " style='" + _style + "'";
 			}
 			
 			if(configuration.type){

@@ -1,11 +1,11 @@
 (function(UOS){
     
     function Label(configuration){
-        let self = this;
-		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
+        var self = this;
+		UOS.Controls.BaseControl.call(self, {...configuration, tag: 'label'});
         
         self.render = function(){
-            const result = self.renderControl({...configuration, tag: 'label'});
+            const result = self.renderControl();
 			return result;
         };
     }

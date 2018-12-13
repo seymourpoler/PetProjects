@@ -3,11 +3,14 @@ describe("Span Control", function () {
     it("Simple span render", function(){
         let span = UOS.Controls.createSpan();
 
-        expect(span.render()).toEqual('<span></span>');
+        let result = span.render();
+
+        expect(result).toEqual('<span></span>');
     });
 
     it("span render with id", function(){
         let span = UOS.Controls.createSpan({id: 'spannpsa'});
+
         expect(span.render()).toEqual("<span id='spannpsa'></span>");
     });
 

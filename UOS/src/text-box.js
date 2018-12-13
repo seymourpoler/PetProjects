@@ -2,10 +2,10 @@
 	
     function TextBox(configuration){
         var self = this;
-		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
+		UOS.Controls.BaseControl.call(self, {...configuration, tag: 'input', type:'text'});
 		       
         self.render = function(){
-			const result = self.renderControl({...configuration, tag: 'input', type:'text'});
+			const result = self.renderControl();
 			return result;
         };
     }

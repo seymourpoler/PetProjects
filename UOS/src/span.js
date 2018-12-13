@@ -1,44 +1,16 @@
 (function(UOS){
-    function Span(controlRenderer, configuration){
-        var self = this;
-        //TODO: extract explanatory method
-        var _cssClass = configuration && configuration.cssClass? configuration.cssClass : ''; 
-		let _style = configuration && configuration.style? configuration.style : '';
-		let isDisabled = false;
-    
-        self.removeCssClass = function(cssClass){
-            _cssClass = _cssClass.replace(cssClass, '');
-        };
-        
-		self.disable = function(){
-			isDisabled = true;
-		};
-		
-		self.enable = function(){
-			isDisabled = false;
-		};
-		
-		self.hide = function(){
-			_style = _style + 'display:none;';
-		};
-		
-		self.show = function(){
-			_style = _style + 'display:block;';
-		};
-		
+    function Span(configuration){
+        let self = this;
+		UOS.Controls.BaseControl.call(self, {...configuration, tag: 'span'});
+
         self.render = function(){
-            if(!configuration){
-                return '<span></span>';
-            }
-			const result = controlRenderer.render({...configuration, tag:'span', style: _style, css: _cssClass, disabled: isDisabled});
+            const result = self.renderControl();
 			return result;
         };
     }
 	
 	function createSpan(configuration){
-		return new Span(
-			UOS.Controls.createControlRenderer(),
-			configuration);
+		return new Span(configuration);
 	}
 	
 	UOS.namespace('Controls');
