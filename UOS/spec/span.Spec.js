@@ -31,6 +31,15 @@ describe("Span Control", function () {
         expect(result).not.toContain("classTwo'");
     });
 
+    it("span remove css class", function(){
+        let span = UOS.Controls.createSpan({cssClass: 'classOne classTwo classThree'});
+        span.addCssClass('classFour');
+        
+        const result = span.render();
+        
+        expect(result).toContain("classFour'");
+    });
+
     it("span disabled", function(){
 		let span = UOS.Controls.createSpan({id: 'span-id'});
 		span.disable();
