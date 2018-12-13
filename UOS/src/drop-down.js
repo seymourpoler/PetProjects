@@ -1,20 +1,16 @@
 (function(UOS){
-	function DropDown(controlRenderer, configuration){
+	function DropDown(configuration){
 		let self = this;
+		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
 		
 		self.render = function(){
-			if(!configuration){
-                return '<select></select>';
-            }
-			
-			throw 'not implemented';
+			const result = self.renderControl({...configuration, tag: 'select'});
+			return result;
 		};
 	}
 	
 	function createDropDown(configuration){
-		return new DropDown(
-			UOS.Controls.createControlRenderer(),
-			configuration);
+		return new DropDown(configuration);
 	}
 	
 	UOS.namespace('Controls');
