@@ -1,19 +1,15 @@
 (function(UOS){
-    function Link(controlRenderer, configuration){
+    function Link(configuration){
         let self = this;
+		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
     
         self.render = function(){
-            if(!configuration){
-                return '<a></a>';
-            }
-            const result = controlRenderer.render({...configuration, tag: 'a'});
-            return result;
+            const result = self.renderControl({...configuration, tag: 'a'});
+			return result;
         };
     }
     function createLink(configuration){
-        return new Link(
-            UOS.Controls.createControlRenderer(),
-            configuration);
+        return new Link(configuration);
     }
 
     UOS.namespace('Controls');
