@@ -49,4 +49,5 @@ describe('Control Renderer', function(){
 
 		expect(result).toBe("<a disabled></a>");
 	});
+	
 });

@@ -1,4 +1,5 @@
 describe('Button', function(){
+
 	it('renders simple button', function(){
 		let button = UOS.Controls.createButton();
 		
@@ -57,4 +58,5 @@ describe('Button', function(){
 		
 		expect(result).toBe("<button name='btn-save'></button>");
 	});
+	
 });

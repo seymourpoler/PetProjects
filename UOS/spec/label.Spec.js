@@ -1,4 +1,5 @@
 describe('Label', function(){
+
     it("Simple label render", function(){
         var label = UOS.Controls.createLabel();
 
@@ -22,4 +23,5 @@ describe('Label', function(){
 
         expect(result).toEqual("<label id='label-id' style='color:black'></label>");
     });
+    
 });

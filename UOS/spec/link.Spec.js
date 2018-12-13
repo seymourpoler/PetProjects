@@ -1,4 +1,5 @@
 describe('Link Control', function(){
+
     it("Simple link render", function(){
         let link = new UOS.Controls.createLink();
 
@@ -14,4 +15,5 @@ describe('Link Control', function(){
 
         expect(result).toEqual("<a id='link-id'></a>");
     });
+
 });

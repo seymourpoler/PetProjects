@@ -85,4 +85,5 @@ describe("Span Control", function () {
         span.addControl(textBox);
         expect(span.render()).toEqual("<span id='spanId' class='classOne classTwo classThree classFour'><input type='text' class='classOne classFour' style='visibility:hidden;' disabled='disabled'></input></span>");
     });
+    
 });

@@ -1,4 +1,5 @@
 describe('Div control', function(){
+
     it("Simple div render", function(){
         let div = UOS.Controls.createDiv();
 
@@ -39,4 +40,5 @@ describe('Div control', function(){
         
         expect(result).toEqual("<div class='"  + cssClass + "'></div>");
     });
+
 });

@@ -1,4 +1,5 @@
 describe('Drop down', function(){
+
 	it('renders simple drop down', function(){
 		let dropdown = UOS.Controls.createDropDown();
 		
@@ -6,4 +7,5 @@ describe('Drop down', function(){
 		
 		expect(result).toBe('<select></select>');
 	});
+	
 });
