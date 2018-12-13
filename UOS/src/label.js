@@ -1,20 +1,17 @@
 (function(UOS){
-    function Label(controlRenderer, configuration){
-        var self = this;
+    
+    function Label(configuration){
+        let self = this;
+		UOS.Controls.BaseControl.apply(self, Array.prototype.slice.call(arguments));
         
         self.render = function(){
-            if(!configuration){
-                return '<label></label>';
-            }
-            const result = controlRenderer.render({...configuration, tag: 'label'});
-            return result;
+            const result = self.renderControl({...configuration, tag: 'label'});
+			return result;
         };
     }
 
     function createLabel(configuration){
-        return new Label(
-            UOS.Controls.createControlRenderer(),
-            configuration);
+        return new Label(configuration);
     }
 
     UOS.namespace('Controls');
