@@ -12,7 +12,14 @@ module.exports = function(config) {
         'src/link.js',
         'src/drop-down.js',
         'src/button.js',
-        'spec/*.js',
+        'spec/control-renderer.spec.js',
+        'spec/label.spec.js',
+        'spec/span.spec.js',
+        'spec/text-box.spec.js',
+        'spec/div.spec.js',
+        'spec/link.spec.js',
+        'spec/drop-down.spec.js',
+        'spec/button.spec.js'
       ],
       exclude: [
       ],

@@ -6,7 +6,7 @@ describe('BaseControl', function(){
 	});
 	
 	it('throws an error if there is a error in configuration', function(){
-		expect(function(){ controlRenderer.renderControl();}).toThrow(new Error(baseControl.configurationErrorMessage));
+		expect(function(){ baseControl.renderControl();}).toThrow(new Error(baseControl.configurationErrorMessage));
 	});
 	
 	it('throws an error if there is no tag field in configuration', function(){
