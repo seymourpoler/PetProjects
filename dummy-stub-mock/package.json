@@ -1,0 +1,23 @@
+{
+  "name": "dummy-stub-mock",
+  "version": "0.0.1",
+  "description": "simple description about dummy, stub and mock",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "keywords": [
+    "stub",
+    "dummy",
+    "mock"
+  ],
+  "author": "seymourpoler",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.3.1",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.3",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1"
+  }
+}
