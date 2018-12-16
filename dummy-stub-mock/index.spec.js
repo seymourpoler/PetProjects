@@ -16,4 +16,27 @@ describe('dummy, stub and mock', function(){
 		const result = sut.getValue();
 
 	});
+
+	it('shows a mock', function(){
+		const valueCollaborator = 17;
+		const mockCollaborator = new MockCollaborator();
+		const sut = new Sut(mockCollaborator);
+
+		sut.collaborator_needed_method();
+
+		expect(mockCollaborator.verify('doSomeThingVeryImportant')).toBeTruthy();
+	});
+
+	function MockCollaborator(value){
+		let self = this;
+		let calls = [];
+
+		self.doSomeThingVeryImportant = function(){
+			calls.push('doSomeThingVeryImportant');
+		};
+
+		self.verify = function(call){
+			return calls.includes(call);
+		}; 
+	}
 });
