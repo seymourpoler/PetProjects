@@ -9,8 +9,8 @@ describe('dummy, stub and mock', function(){
 	});
 
 	it('shows a stub', function(){
-		const clientValue = 24;
-		const aStub = { getValue: function(){return clientValue;} };
+		const collaboratorValue = 24;
+		const aStub = { getValue: function(){return collaboratorValue;} };
 		const sut = new Sut(aStub);
 
 		const result = sut.getValue();
