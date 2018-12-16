@@ -1,17 +1,17 @@
 describe('dummy, stub and mock', function(){
 
 	it('shows a dummy', function(){
-		const aDummy = {};
+		const aDummyCollaborator = {};
 
-		const sut = new Sut(aDummy);
+		const sut = new Sut(aDummyCollaborator);
 		
 		expect(sut instanceof Sut).toBeTruthy();
 	});
 
 	it('shows a stub', function(){
 		const collaboratorValue = 24;
-		const aStub = { getValue: function(){return collaboratorValue;} };
-		const sut = new Sut(aStub);
+		const astubCollaborator = { getValue: function(){return collaboratorValue;} };
+		const sut = new Sut(astubCollaborator);
 
 		const result = sut.getValue();
 
