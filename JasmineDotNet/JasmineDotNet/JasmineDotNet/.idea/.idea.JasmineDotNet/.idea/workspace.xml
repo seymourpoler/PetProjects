@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805113cd-b086-4d05-83ec-ea1cc35685f2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.JasmineDotNet/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JasmineDotNet/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.JasmineDotNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JasmineDotNet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/CheckShould.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/CheckShould.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineDotNet.Unit.Test.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineDotNet.Unit.Test.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/packages.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JasmineDotNet/Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JasmineDotNet/Check.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JasmineDotNet/Jasmine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JasmineDotNet/Jasmine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +27,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Jasmine.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Jasmine.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JasmineDotNet/Jasmine.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
@@ -48,16 +41,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JasmineShould.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JasmineShould.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="78" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="78" />
+            <state relative-caret-position="266">
+              <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
               <folding>
-                <marker date="1551023039982" expanded="true" signature="6:42" ph="..." />
-                <marker date="1551023039982" expanded="true" signature="77:427" ph="{...}" />
-                <marker date="1551023039982" expanded="true" signature="110:425" ph="{...}" />
-                <marker date="1551023039982" expanded="true" signature="212:419" ph="{...}" />
+                <marker date="1551023199891" expanded="true" signature="6:42" ph="..." />
+                <marker date="1551023199891" expanded="true" signature="77:755" ph="{...}" />
+                <marker date="1551023199891" expanded="true" signature="110:753" ph="{...}" />
+                <marker date="1551023199891" expanded="true" signature="212:419" ph="{...}" />
+                <marker date="1551023199891" expanded="true" signature="532:747" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -186,12 +180,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551020568083</updated>
-      <workItem from="1551020570750" duration="2454000" />
+      <workItem from="1551020570750" duration="2689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2454000" />
+    <option name="totallyTimeSpent" value="2689000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -278,6 +272,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+          <folding>
+            <marker date="1551023199891" expanded="true" signature="6:42" ph="..." />
+            <marker date="1551023199891" expanded="true" signature="77:755" ph="{...}" />
+            <marker date="1551023199891" expanded="true" signature="110:753" ph="{...}" />
+            <marker date="1551023199891" expanded="true" signature="212:419" ph="{...}" />
+            <marker date="1551023199891" expanded="true" signature="532:747" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JasmineDotNet/Jasmine.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -286,19 +294,6 @@
             <marker date="1551022026067" expanded="true" signature="38:286" ph="{...}" />
             <marker date="1551022026067" expanded="true" signature="65:284" ph="{...}" />
             <marker date="1551022026067" expanded="true" signature="137:278" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="78" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="78" />
-          <folding>
-            <marker date="1551023039982" expanded="true" signature="6:42" ph="..." />
-            <marker date="1551023039982" expanded="true" signature="77:427" ph="{...}" />
-            <marker date="1551023039982" expanded="true" signature="110:425" ph="{...}" />
-            <marker date="1551023039982" expanded="true" signature="212:419" ph="{...}" />
           </folding>
         </state>
       </provider>
