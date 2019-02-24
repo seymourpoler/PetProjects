@@ -14,12 +14,15 @@
         <e p="obj" t="ExcludeRecursive" />
       </e>
       <e p="JasmineDotNet.Unit.Test" t="IncludeRecursive">
+        <e p="CheckShould.cs" t="Include" />
         <e p="JasmineDotNet.Unit.Test.csproj" t="IncludeRecursive" />
+        <e p="JasmineShould.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="JasmineDotNet.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

@@ -6,7 +6,8 @@ namespace JasmineDotNet
     {
         public void Describe(string testSuiteName, Action action)
         {
-            
+            Check.IsNull<ArgumentNullException>(testSuiteName);
+            Check.IsNull<ArgumentNullException>(action);
         }
     }
 }
