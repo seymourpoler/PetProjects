@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasmineDotNet", "JasmineDotNet\JasmineDotNet.csproj", "{66705084-8C43-4D35-B86C-6EC706969665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasmineDotNet.Unit.Test", "JasmineDotNet.Unit.Test\JasmineDotNet.Unit.Test.csproj", "{261310B9-CCAC-44F1-8AEA-F0DC6C3038FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66705084-8C43-4D35-B86C-6EC706969665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66705084-8C43-4D35-B86C-6EC706969665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66705084-8C43-4D35-B86C-6EC706969665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66705084-8C43-4D35-B86C-6EC706969665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261310B9-CCAC-44F1-8AEA-F0DC6C3038FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261310B9-CCAC-44F1-8AEA-F0DC6C3038FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261310B9-CCAC-44F1-8AEA-F0DC6C3038FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261310B9-CCAC-44F1-8AEA-F0DC6C3038FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
