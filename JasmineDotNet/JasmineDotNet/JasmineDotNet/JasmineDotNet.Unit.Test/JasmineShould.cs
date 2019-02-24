@@ -14,7 +14,6 @@ namespace JasmineDotNet.Unit.Test
             Action action = () => new Jasmine().Describe(null,testSuite);
 
             action.ShouldThrow<ArgumentNullException>();
-
         }
     }
 }
