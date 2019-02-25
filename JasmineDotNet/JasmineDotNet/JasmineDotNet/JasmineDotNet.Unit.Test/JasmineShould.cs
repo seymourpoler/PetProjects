@@ -25,5 +25,13 @@ namespace JasmineDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentNullException>();
         }
+        
+        [Fact]
+        public void throw_argument_null_exception_when_test_suite_is_null()
+        {
+            Action action = () => new Jasmine().Describe("test suite name", null);
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
     }
 }

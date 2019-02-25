@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805113cd-b086-4d05-83ec-ea1cc35685f2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/JasmineDotNet/Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JasmineDotNet/Check.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,45 +30,46 @@
       <file leaf-file-name="Jasmine.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JasmineDotNet/Jasmine.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="152">
+              <caret line="8" column="89" selection-start-line="8" selection-start-column="89" selection-end-line="8" selection-end-column="89" />
               <folding>
-                <marker date="1551022026067" expanded="true" signature="38:286" ph="{...}" />
-                <marker date="1551022026067" expanded="true" signature="65:284" ph="{...}" />
-                <marker date="1551022026067" expanded="true" signature="137:278" ph="{...}" />
+                <marker date="1551120304736" expanded="true" signature="38:315" ph="{...}" />
+                <marker date="1551120304736" expanded="true" signature="65:313" ph="{...}" />
+                <marker date="1551120304736" expanded="true" signature="137:307" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JasmineShould.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JasmineShould.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="530">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
-                <marker date="1551023352559" expanded="false" signature="6:42" ph="..." />
-                <marker date="1551023352559" expanded="true" signature="77:751" ph="{...}" />
-                <marker date="1551023352559" expanded="true" signature="110:749" ph="{...}" />
-                <marker date="1551023352559" expanded="true" signature="212:419" ph="{...}" />
-                <marker date="1551023352559" expanded="true" signature="528:743" ph="{...}" />
+                <marker date="1551120415108" expanded="false" signature="6:42" ph="..." />
+                <marker date="1551120415108" expanded="true" signature="77:1012" ph="{...}" />
+                <marker date="1551120415108" expanded="true" signature="110:1010" ph="{...}" />
+                <marker date="1551120415108" expanded="true" signature="212:419" ph="{...}" />
+                <marker date="1551120415108" expanded="true" signature="528:743" ph="{...}" />
+                <marker date="1551120415108" expanded="true" signature="843:1004" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Check.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Check.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JasmineDotNet/Check.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="285">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding>
-                <marker date="1551120197034" expanded="true" signature="38:572" ph="{...}" />
-                <marker date="1551120197034" expanded="true" signature="70:570" ph="{...}" />
-                <marker date="1551120197034" expanded="true" signature="139:314" ph="{...}" />
-                <marker date="1551120197034" expanded="true" signature="183:291" ph="{...}" />
-                <marker date="1551120197034" expanded="true" signature="387:564" ph="{...}" />
-                <marker date="1551120197034" expanded="true" signature="433:541" ph="{...}" />
+                <marker date="1551120224111" expanded="true" signature="38:572" ph="{...}" />
+                <marker date="1551120224111" expanded="true" signature="70:570" ph="{...}" />
+                <marker date="1551120224111" expanded="true" signature="139:314" ph="{...}" />
+                <marker date="1551120224111" expanded="true" signature="183:291" ph="{...}" />
+                <marker date="1551120224111" expanded="true" signature="387:564" ph="{...}" />
+                <marker date="1551120224111" expanded="true" signature="433:541" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -77,11 +78,14 @@
       <file leaf-file-name="CheckShould.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/CheckShould.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            <state relative-caret-position="214">
+              <caret line="19" column="101" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
               <folding>
-                <marker date="1551022991107" expanded="true" signature="6:42" ph="..." />
-                <marker date="1551022991107" expanded="true" signature="108:365" ph="{...}" />
+                <marker date="1551120318595" expanded="false" signature="6:42" ph="..." />
+                <marker date="1551120318595" expanded="true" signature="77:662" ph="{...}" />
+                <marker date="1551120318595" expanded="true" signature="108:660" ph="{...}" />
+                <marker date="1551120318595" expanded="true" signature="204:359" ph="{...}" />
+                <marker date="1551120318595" expanded="true" signature="472:654" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -102,10 +106,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/JasmineDotNet.Unit.Test/Tests.cs" />
+        <option value="$PROJECT_DIR$/JasmineDotNet/Check.cs" />
         <option value="$PROJECT_DIR$/JasmineDotNet/Jasmine.cs" />
         <option value="$PROJECT_DIR$/JasmineDotNet.Unit.Test/CheckShould.cs" />
         <option value="$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs" />
-        <option value="$PROJECT_DIR$/JasmineDotNet/Check.cs" />
       </list>
     </option>
   </component>
@@ -172,12 +176,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551020568083</updated>
       <workItem from="1551020570750" duration="2689000" />
-      <workItem from="1551120061879" duration="135000" />
+      <workItem from="1551120061879" duration="356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2824000" />
+    <option name="totallyTimeSpent" value="3045000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -198,11 +202,11 @@
       <window_info anchor="bottom" id="Unit Tests" order="7" weight="0.32935917" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32935917" />
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.32935917" />
       <window_info auto_hide="true" content_ui="combo" id="Project" order="0" type="SLIDING" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32935917" />
       <window_info anchor="right" id="Database" order="3" weight="0.32954547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -230,9 +234,9 @@
         <state relative-caret-position="76">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="24" />
           <folding>
-            <marker date="1551022026067" expanded="true" signature="38:286" ph="{...}" />
-            <marker date="1551022026067" expanded="true" signature="65:284" ph="{...}" />
-            <marker date="1551022026067" expanded="true" signature="137:278" ph="{...}" />
+            <marker date="1551120304736" expanded="true" signature="38:315" ph="{...}" />
+            <marker date="1551120304736" expanded="true" signature="65:313" ph="{...}" />
+            <marker date="1551120304736" expanded="true" signature="137:307" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -242,11 +246,12 @@
         <state relative-caret-position="437">
           <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
           <folding>
-            <marker date="1551023352559" expanded="false" signature="6:42" ph="..." />
-            <marker date="1551023352559" expanded="true" signature="77:751" ph="{...}" />
-            <marker date="1551023352559" expanded="true" signature="110:749" ph="{...}" />
-            <marker date="1551023352559" expanded="true" signature="212:419" ph="{...}" />
-            <marker date="1551023352559" expanded="true" signature="528:743" ph="{...}" />
+            <marker date="1551120415108" expanded="false" signature="6:42" ph="..." />
+            <marker date="1551120415108" expanded="true" signature="77:1012" ph="{...}" />
+            <marker date="1551120415108" expanded="true" signature="110:1010" ph="{...}" />
+            <marker date="1551120415108" expanded="true" signature="212:419" ph="{...}" />
+            <marker date="1551120415108" expanded="true" signature="528:743" ph="{...}" />
+            <marker date="1551120415108" expanded="true" signature="843:1004" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -256,12 +261,12 @@
         <state relative-caret-position="209">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <marker date="1551120197034" expanded="true" signature="38:572" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="70:570" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="139:314" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="183:291" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="387:564" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="433:541" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="38:572" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="70:570" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="139:314" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="183:291" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="387:564" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="433:541" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -271,62 +276,69 @@
         <state relative-caret-position="247">
           <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
-            <marker date="1551022991107" expanded="true" signature="6:42" ph="..." />
-            <marker date="1551022991107" expanded="true" signature="108:365" ph="{...}" />
+            <marker date="1551120318595" expanded="false" signature="6:42" ph="..." />
+            <marker date="1551120318595" expanded="true" signature="77:662" ph="{...}" />
+            <marker date="1551120318595" expanded="true" signature="108:660" ph="{...}" />
+            <marker date="1551120318595" expanded="true" signature="204:359" ph="{...}" />
+            <marker date="1551120318595" expanded="true" signature="472:654" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JasmineDotNet/Class1.cs" />
     <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/Tests.cs" />
-    <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/CheckShould.cs">
+    <entry file="file://$PROJECT_DIR$/JasmineDotNet/Check.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="285">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding>
-            <marker date="1551022991107" expanded="true" signature="6:42" ph="..." />
-            <marker date="1551022991107" expanded="true" signature="108:365" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="38:572" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="70:570" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="139:314" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="183:291" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="387:564" ph="{...}" />
+            <marker date="1551120224111" expanded="true" signature="433:541" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JasmineDotNet/Jasmine.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="152">
+          <caret line="8" column="89" selection-start-line="8" selection-start-column="89" selection-end-line="8" selection-end-column="89" />
           <folding>
-            <marker date="1551022026067" expanded="true" signature="38:286" ph="{...}" />
-            <marker date="1551022026067" expanded="true" signature="65:284" ph="{...}" />
-            <marker date="1551022026067" expanded="true" signature="137:278" ph="{...}" />
+            <marker date="1551120304736" expanded="true" signature="38:315" ph="{...}" />
+            <marker date="1551120304736" expanded="true" signature="65:313" ph="{...}" />
+            <marker date="1551120304736" expanded="true" signature="137:307" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/CheckShould.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="19" column="101" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
+          <folding>
+            <marker date="1551120318595" expanded="false" signature="6:42" ph="..." />
+            <marker date="1551120318595" expanded="true" signature="77:662" ph="{...}" />
+            <marker date="1551120318595" expanded="true" signature="108:660" ph="{...}" />
+            <marker date="1551120318595" expanded="true" signature="204:359" ph="{...}" />
+            <marker date="1551120318595" expanded="true" signature="472:654" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JasmineDotNet.Unit.Test/JasmineShould.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="530">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
-            <marker date="1551023352559" expanded="false" signature="6:42" ph="..." />
-            <marker date="1551023352559" expanded="true" signature="77:751" ph="{...}" />
-            <marker date="1551023352559" expanded="true" signature="110:749" ph="{...}" />
-            <marker date="1551023352559" expanded="true" signature="212:419" ph="{...}" />
-            <marker date="1551023352559" expanded="true" signature="528:743" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JasmineDotNet/Check.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-          <folding>
-            <marker date="1551120197034" expanded="true" signature="38:572" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="70:570" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="139:314" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="183:291" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="387:564" ph="{...}" />
-            <marker date="1551120197034" expanded="true" signature="433:541" ph="{...}" />
+            <marker date="1551120415108" expanded="false" signature="6:42" ph="..." />
+            <marker date="1551120415108" expanded="true" signature="77:1012" ph="{...}" />
+            <marker date="1551120415108" expanded="true" signature="110:1010" ph="{...}" />
+            <marker date="1551120415108" expanded="true" signature="212:419" ph="{...}" />
+            <marker date="1551120415108" expanded="true" signature="528:743" ph="{...}" />
+            <marker date="1551120415108" expanded="true" signature="843:1004" ph="{...}" />
           </folding>
         </state>
       </provider>
