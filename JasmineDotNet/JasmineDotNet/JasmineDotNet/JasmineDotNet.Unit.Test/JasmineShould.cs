@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 using Xunit;
 using Shouldly;
 
@@ -30,6 +32,18 @@ namespace JasmineDotNet.Unit.Test
         public void throw_argument_null_exception_when_test_suite_is_null()
         {
             Action action = () => new Jasmine().Describe("test suite name", null);
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+
+        [Fact]
+        public void throw_argument_null_exception_when_before_all_method_is_null()
+        {
+            var jasmine = new Jasmine();
+            Action action = () =>
+            {
+                jasmine.Describe("test suite name", () => { jasmine.BeforeAll(null); });
+            };
 
             action.ShouldThrow<ArgumentNullException>();
         }
