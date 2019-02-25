@@ -84,12 +84,28 @@ namespace JasmineDotNet.Unit.Test
             
             Action action = () =>
             {
-                jasmine.Describe("", () =>
+                jasmine.Describe("test suite name", () =>
                 {
                     jasmine.It(null, () =>
                     {
                         var wasFired = true;
                     });
+                });
+            };
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+        
+        [Fact]
+        public void throw_argumen_null_exception_when_test_is_null()
+        {
+            var jasmine = new Jasmine();
+            
+            Action action = () =>
+            {
+                jasmine.Describe("test suite name", () =>
+                {
+                    jasmine.It("test", null);
                 });
             };
 
