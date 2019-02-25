@@ -6,7 +6,7 @@ namespace JasmineDotNet
     {
         public static void IsNull<TException>(object anObject)
         {
-            if (anObject is null)
+            if (anObject.IsNull())
             {
                 throw  (Exception)Activator.CreateInstance(typeof(TException));
             }
