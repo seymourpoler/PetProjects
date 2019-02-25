@@ -25,11 +25,11 @@ namespace JasmineDotNet
             beforeAll = action;
         }
 
-        public void It(string testName, Action tests)
+        public void It(string testName, Action test)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testName));
             
-            throw new NotImplementedException();
+            test.Invoke();
         }
     }
 }

@@ -14,6 +14,16 @@ namespace JasmineDotNet.Unit.Test
             
             result.ShouldBeTrue();
         }
+
+        [Fact]
+        public void return_true_when_is_null()
+        {
+            User user = null;
+
+            var result = user.IsNull();
+
+            result.ShouldBeTrue();
+        }
         
         class User{}
     }
