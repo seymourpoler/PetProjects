@@ -6,7 +6,7 @@ namespace JasmineDotNet
     {
         public void Describe(string testSuiteName, Action action)
         {
-            Check.IsNull<ArgumentNullException>(testSuiteName);
+            Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testSuiteName));
             Check.IsNull<ArgumentNullException>(action);
         }
     }

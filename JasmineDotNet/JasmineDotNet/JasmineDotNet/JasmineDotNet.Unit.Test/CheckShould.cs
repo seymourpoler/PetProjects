@@ -13,5 +13,13 @@ namespace JasmineDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentNullException>();
         }
+        
+        [Fact]
+        public void throws_argument_null_exception_when_argument_satisfy_the_condition()
+        {
+            Action action = () => Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(""));
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
     }
 }
