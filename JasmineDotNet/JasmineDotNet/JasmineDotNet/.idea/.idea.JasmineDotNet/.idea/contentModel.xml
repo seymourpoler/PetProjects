@@ -7,6 +7,7 @@
         <e p="Check.cs" t="Include" />
         <e p="Jasmine.cs" t="Include" />
         <e p="JasmineDotNet.csproj" t="IncludeRecursive" />
+        <e p="ObjectExtensions.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
@@ -17,6 +18,7 @@
         <e p="CheckShould.cs" t="Include" />
         <e p="JasmineDotNet.Unit.Test.csproj" t="IncludeRecursive" />
         <e p="JasmineShould.cs" t="Include" />
+        <e p="ObjectExtensionsShould.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>

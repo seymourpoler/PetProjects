@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="CheckShould.cs" />
     <Compile Include="JasmineShould.cs" />
+    <Compile Include="ObjectExtensionsShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
