@@ -27,7 +27,7 @@ namespace JasmineDotNet
 
         public void It(string testName, Action tests)
         {
-            Check.IsNull<ArgumentNullException>(testName);
+            Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testName));
             
             throw new NotImplementedException();
         }
