@@ -111,5 +111,19 @@ namespace JasmineDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentNullException>();
         }
+        
+        [Fact]
+        public void execute_a_test()
+        {
+            var testWasRun = false;
+            var jasmine = new Jasmine();
+            
+            jasmine.Describe("test suite name", () =>
+            {
+                jasmine.It("test", () => { testWasRun = true; });
+            });
+
+            testWasRun.ShouldBeTrue();
+        }
     }
 }
