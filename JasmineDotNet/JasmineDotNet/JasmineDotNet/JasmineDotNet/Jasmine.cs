@@ -6,6 +6,7 @@ namespace JasmineDotNet
     {
         private Action beforeAll;
         private Action beforeEach;
+        private Action afterEach;
         
         public void Describe(string testSuiteName, Action action)
         {
@@ -36,8 +37,8 @@ namespace JasmineDotNet
         public void AfterEach(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
-            
-            throw new NotImplementedException();
+
+            afterEach = action;
         }
         
         public void It(string testName, Action test)
@@ -51,6 +52,11 @@ namespace JasmineDotNet
             }
             
             test.Invoke();
+            
+            if (afterEach.IsNotNull())
+            {
+                afterEach.Invoke();
+            }
         }
     }
 }
