@@ -156,5 +156,19 @@ namespace JasmineDotNet.Unit.Test
 
             numberOfRunTests.ShouldBe(numberOfTests);
         }
+        
+        [Fact]
+        public void throw_null_argument_exception_when_after_each_is_null()
+        {
+            var jasmine = new Jasmine();
+            
+            Action action = () => jasmine.Describe("test suite name", () =>
+            {
+                jasmine.AfterEach(null);
+            });
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+        
     }
 }

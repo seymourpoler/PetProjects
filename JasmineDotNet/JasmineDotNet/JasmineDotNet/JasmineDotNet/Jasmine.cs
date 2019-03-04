@@ -32,6 +32,13 @@ namespace JasmineDotNet
 
             beforeEach = action;
         }
+
+        public void AfterEach(Action action)
+        {
+            Check.IsNull<ArgumentNullException>(action);
+            
+            throw new NotImplementedException();
+        }
         
         public void It(string testName, Action test)
         {
