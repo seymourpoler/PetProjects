@@ -5,6 +5,7 @@ namespace JasmineDotNet
     public class Jasmine
     {
         private Action beforeAll;
+        private Action beforeEach;
         
         public void Describe(string testSuiteName, Action action)
         {
@@ -25,16 +26,22 @@ namespace JasmineDotNet
             beforeAll = action;
         }
 
-        public void BeforeEach(Action beforeEach)
+        public void BeforeEach(Action action)
         {
-            Check.IsNull<ArgumentNullException>(beforeEach);
-            throw new NotImplementedException();
+            Check.IsNull<ArgumentNullException>(action);
+
+            beforeEach = action;
         }
         
         public void It(string testName, Action test)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testName));
             Check.IsNull<ArgumentNullException>(test);
+
+            if (beforeEach.IsNotNull())
+            {
+                beforeEach.Invoke();
+            }
             
             test.Invoke();
         }
