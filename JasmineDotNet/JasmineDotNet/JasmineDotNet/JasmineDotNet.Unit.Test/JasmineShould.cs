@@ -143,7 +143,7 @@ namespace JasmineDotNet.Unit.Test
         [Fact]
         public void execute_before_each_test()
         {
-            const int numberOfTests = 2;
+            const int totalNumberOfTests = 2;
             var numberOfRunTests = 0;
             var jasmine = new Jasmine();
             
@@ -154,7 +154,7 @@ namespace JasmineDotNet.Unit.Test
                 jasmine.It("test", () => { var @false = false; });
             });
 
-            numberOfRunTests.ShouldBe(numberOfTests);
+            numberOfRunTests.ShouldBe(totalNumberOfTests);
         }
         
         [Fact]
@@ -173,7 +173,7 @@ namespace JasmineDotNet.Unit.Test
         [Fact]
         public void execute_after_each_test()
         {
-            const int numberOfTests = 2;
+            const int totalNumberOfTests = 2;
             var numberOfRunTests = 0;
             var jasmine = new Jasmine();
             
@@ -184,7 +184,7 @@ namespace JasmineDotNet.Unit.Test
                 jasmine.It("test", () => { var @false = false; });
             });
 
-            numberOfRunTests.ShouldBe(numberOfTests);
+            numberOfRunTests.ShouldBe(totalNumberOfTests);
         }
         
     }
