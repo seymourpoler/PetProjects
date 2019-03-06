@@ -115,19 +115,29 @@ namespace JasmineDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentNullException>();
         }
-        
+
         [Fact]
         public void execute_a_test()
         {
             var testWasRun = false;
             var jasmine = new Jasmine();
-            
-            jasmine.Describe("test suite name", () =>
-            {
-                jasmine.It("test", () => { testWasRun = true; });
-            });
+
+            jasmine.Describe("test suite name", () => { jasmine.It("test", () => { testWasRun = true; }); });
 
             testWasRun.ShouldBeTrue();
+        }
+        
+        [Fact]
+        public void throw_argument_null_exception_when_after_all_method_is_null()
+        {
+            var jasmine = new Jasmine();
+            
+            Action action = () =>
+            {
+                jasmine.Describe("test suite name", () => { jasmine.AfterAll(null); });
+            };
+
+            action.ShouldThrow<ArgumentNullException>();
         }
     }
 }

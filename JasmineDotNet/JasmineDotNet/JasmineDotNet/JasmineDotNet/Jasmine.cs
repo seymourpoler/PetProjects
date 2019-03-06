@@ -27,6 +27,13 @@ namespace JasmineDotNet
             beforeAll = action;
         }
 
+        public void AfterAll(Action action)
+        {
+            Check.IsNull<ArgumentNullException>(action);
+            
+            throw new NotImplementedException();
+        }
+
         public void It(string testName, Action test)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testName));
