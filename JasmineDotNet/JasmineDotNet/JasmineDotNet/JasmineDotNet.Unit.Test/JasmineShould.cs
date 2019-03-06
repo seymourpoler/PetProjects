@@ -47,13 +47,17 @@ namespace JasmineDotNet.Unit.Test
             action.ShouldThrow<ArgumentNullException>();
         }
         
-        //[Fact]
+        [Fact]
         public void execute_before_all_method_before_all_tests()
         {
             var beforeAllWasFired = false;
             var jasmine = new Jasmine();
             
-            jasmine.Describe("test suite name", () => { jasmine.BeforeAll(() => { beforeAllWasFired = true; }); });
+            jasmine.Describe("test suite name", () =>
+            {
+                jasmine.BeforeAll(() => { beforeAllWasFired = true; });
+                jasmine.It("a simple test", () => { var wasFired = true; });
+            });
 
             beforeAllWasFired.ShouldBeTrue();
         }
@@ -78,7 +82,7 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
-        public void throw_argumen_null_exception_when_test_name_is_string_empty()
+        public void throw_argument_null_exception_when_test_name_is_string_empty()
         {
             var jasmine = new Jasmine();
             
@@ -97,7 +101,7 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
-        public void throw_argumen_null_exception_when_test_is_null()
+        public void throw_argument_null_exception_when_test_is_null()
         {
             var jasmine = new Jasmine();
             

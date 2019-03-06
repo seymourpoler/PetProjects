@@ -5,16 +5,18 @@ namespace JasmineDotNet
     public class Jasmine
     {
         private Action beforeAll;
+        private bool isExecutedBeForeAll;
+
+        public Jasmine()
+        {
+            isExecutedBeForeAll = false;
+        }
         
         public void Describe(string testSuiteName, Action action)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testSuiteName));
             Check.IsNull<ArgumentNullException>(action);
 
-            if (beforeAll.IsNotNull())
-            {
-                beforeAll.Invoke();
-            }
             action.Invoke();
         }
 
@@ -29,6 +31,12 @@ namespace JasmineDotNet
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testName));
             Check.IsNull<ArgumentNullException>(test);
+            
+            if (beforeAll.IsNotNull() && !isExecutedBeForeAll)
+            {
+                isExecutedBeForeAll = true;
+                beforeAll.Invoke();
+            }
             
             test.Invoke();
         }
