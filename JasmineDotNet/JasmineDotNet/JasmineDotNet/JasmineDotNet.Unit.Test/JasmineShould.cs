@@ -215,6 +215,5 @@ namespace JasmineDotNet.Unit.Test
 
             numberOfRunTests.ShouldBe(totalNumberOfTests);
         }
-        
     }
 }
