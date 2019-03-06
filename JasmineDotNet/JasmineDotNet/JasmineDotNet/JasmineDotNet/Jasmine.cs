@@ -6,10 +6,13 @@ namespace JasmineDotNet
     {
         private Action beforeAll;
         private bool isExecutedBeForeAll;
+        private Action afterAll;
+        private bool isExecutedAfterAll;
 
         public Jasmine()
         {
             isExecutedBeForeAll = false;
+            isExecutedAfterAll = false;
         }
         
         public void Describe(string testSuiteName, Action action)
@@ -30,8 +33,7 @@ namespace JasmineDotNet
         public void AfterAll(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
-            
-            throw new NotImplementedException();
+            afterAll = action;
         }
 
         public void It(string testName, Action test)
@@ -46,6 +48,12 @@ namespace JasmineDotNet
             }
             
             test.Invoke();
+
+            if (afterAll.IsNotNull() && !isExecutedAfterAll)
+            {
+                isExecutedAfterAll = true;
+                afterAll.Invoke();
+            }
         }
     }
 }

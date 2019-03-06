@@ -139,5 +139,20 @@ namespace JasmineDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentNullException>();
         }
+        
+        [Fact]
+        public void execute_after_all_method_before_all_tests()
+        {
+            var wasExecutedAfterAll = false;
+            var jasmine = new Jasmine();
+            
+            jasmine.Describe("test suite name", () =>
+            {
+                jasmine.AfterAll(() => { wasExecutedAfterAll = true; });
+                jasmine.It("a simple test", () => { var wasFired = true; });
+            });
+
+            wasExecutedAfterAll.ShouldBeTrue();
+        }
     }
 }
