@@ -154,5 +154,67 @@ namespace JasmineDotNet.Unit.Test
 
             wasExecutedAfterAll.ShouldBeTrue();
         }
+
+        [Fact]
+        public void throw_null_argument_exception_when_before_each_is_null()
+        {
+            var jasmine = new Jasmine();
+            
+            Action action = () => jasmine.Describe("test suite name", () =>
+            {
+                jasmine.BeforeEach(null);
+                jasmine.It("test", () => {  });
+            });
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+        
+        [Fact]
+        public void execute_before_each_test()
+        {
+            const int totalNumberOfTests = 2;
+            var numberOfRunTests = 0;
+            var jasmine = new Jasmine();
+            
+            jasmine.Describe("test suite name", () =>
+            {
+                jasmine.BeforeEach(() => { numberOfRunTests++; });
+                jasmine.It("test", () => { var @true = true; });
+                jasmine.It("test", () => { var @false = false; });
+            });
+
+            numberOfRunTests.ShouldBe(totalNumberOfTests);
+        }
+        
+        [Fact]
+        public void throw_null_argument_exception_when_after_each_is_null()
+        {
+            var jasmine = new Jasmine();
+            
+            Action action = () => jasmine.Describe("test suite name", () =>
+            {
+                jasmine.AfterEach(null);
+            });
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+        
+        [Fact]
+        public void execute_after_each_test()
+        {
+            const int totalNumberOfTests = 2;
+            var numberOfRunTests = 0;
+            var jasmine = new Jasmine();
+            
+            jasmine.Describe("test suite name", () =>
+            {
+                jasmine.AfterEach(() => { numberOfRunTests++; });
+                jasmine.It("test", () => { var @true = true; });
+                jasmine.It("test", () => { var @false = false; });
+            });
+
+            numberOfRunTests.ShouldBe(totalNumberOfTests);
+        }
+        
     }
 }
