@@ -60,7 +60,6 @@ namespace JasmineDotNet
 
             afterEach = action;
         }
-        
 
         public void It(string testName, Action test)
         {
