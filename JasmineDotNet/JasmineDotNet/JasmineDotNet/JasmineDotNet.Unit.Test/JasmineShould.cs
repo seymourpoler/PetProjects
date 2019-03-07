@@ -224,5 +224,18 @@ namespace JasmineDotNet.Unit.Test
 
             wasExecutedAfterAll.ShouldBeTrue();
         }
+
+        [Fact]
+        public void do_not_execute_when_is_xdecribe()
+        {
+            var wasExecuted = false;
+            var jasmine = new Jasmine();
+            jasmine.XDescribe("test suite name", () =>
+            {
+                jasmine.It("a simple test", () => { wasExecuted = true;});
+            });
+            
+            wasExecuted.ShouldBeFalse();
+        }
     }
 }

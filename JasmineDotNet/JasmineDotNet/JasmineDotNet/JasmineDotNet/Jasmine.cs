@@ -16,18 +16,23 @@ namespace JasmineDotNet
         {
             isExecutedBeForeAll = false;
         }
-        
+
         public void Describe(string testSuiteName, Action action)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testSuiteName));
             Check.IsNull<ArgumentNullException>(action);
 
             action.Invoke();
-            
+
             if (afterAll.IsNotNull())
             {
                 afterAll.Invoke();
             }
+        }
+
+        public void XDescribe(string testSuiteName, Action action)
+        {
+            
         }
 
         public void BeforeAll(Action action)
