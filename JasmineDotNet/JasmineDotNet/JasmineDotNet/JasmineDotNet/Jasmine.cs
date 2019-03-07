@@ -32,7 +32,6 @@ namespace JasmineDotNet
 
         public void XDescribe(string testSuiteName, Action action)
         {
-            
         }
 
         public void BeforeAll(Action action)
@@ -85,6 +84,10 @@ namespace JasmineDotNet
             {
                 afterEach.Invoke();
             }
+        }
+
+        public void XIt(string testName, Action test)
+        {
         }
     }
 }

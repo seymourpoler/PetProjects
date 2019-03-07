@@ -237,5 +237,18 @@ namespace JasmineDotNet.Unit.Test
             
             wasExecuted.ShouldBeFalse();
         }
+        
+        [Fact]
+        public void do_not_execute_when_is_xit()
+        {
+            var wasExecuted = false;
+            var jasmine = new Jasmine();
+            jasmine.Describe("test suite name", () =>
+            {
+                jasmine.XIt("a simple test", () => { wasExecuted = true;});
+            });
+            
+            wasExecuted.ShouldBeFalse();
+        }
     }
 }
