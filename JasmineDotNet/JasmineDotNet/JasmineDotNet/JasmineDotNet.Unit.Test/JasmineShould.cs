@@ -51,15 +51,52 @@ namespace JasmineDotNet.Unit.Test
         public void execute_before_all_method_before_all_tests()
         {
             var beforeAllWasFired = false;
+            var numberOfExecutions = 0;                
             var jasmine = new Jasmine();
             
             jasmine.Describe("test suite name", () =>
             {
-                jasmine.BeforeAll(() => { beforeAllWasFired = true; });
+                jasmine.BeforeAll(() => { 
+                    beforeAllWasFired = true;
+                    numberOfExecutions++;
+                });
                 jasmine.It("a simple test", () => { var wasFired = true; });
             });
 
             beforeAllWasFired.ShouldBeTrue();
+            numberOfExecutions.ShouldBe(1);
+        }
+        
+        [Fact]
+        public void throw_null_argument_exception_when_before_each_is_null()
+        {
+            var jasmine = new Jasmine();
+            
+            Action action = () => jasmine.Describe("test suite name", () =>
+            {
+                jasmine.BeforeEach(null);
+                jasmine.It("test", () => {  });
+            });
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+        
+        [Fact]
+        public void execute_before_each_test()
+        {
+            const int totalNumberOfTests = 2;
+            var numberOfExecutedTests = 0;
+            var jasmine = new Jasmine();
+            
+            jasmine.Describe("test suite name", () =>
+            {
+                jasmine.BeforeEach(() => { numberOfExecutedTests++; });
+                jasmine.It("test", () => { var @true = true; });
+                numberOfExecutedTests.ShouldBe(1);
+                jasmine.It("test", () => { var @false = false; });
+            });
+
+            numberOfExecutedTests.ShouldBe(totalNumberOfTests);
         }
 
         [Fact]
@@ -128,65 +165,6 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
-        public void throw_argument_null_exception_when_after_all_method_is_null()
-        {
-            var jasmine = new Jasmine();
-            
-            Action action = () =>
-            {
-                jasmine.Describe("test suite name", () => { jasmine.AfterAll(null); });
-            };
-
-            action.ShouldThrow<ArgumentNullException>();
-        }
-        
-        [Fact]
-        public void execute_after_all_method_before_all_tests()
-        {
-            var wasExecutedAfterAll = false;
-            var jasmine = new Jasmine();
-            
-            jasmine.Describe("test suite name", () =>
-            {
-                jasmine.AfterAll(() => { wasExecutedAfterAll = true; });
-                jasmine.It("a simple test", () => { var wasFired = true; });
-            });
-
-            wasExecutedAfterAll.ShouldBeTrue();
-        }
-
-        [Fact]
-        public void throw_null_argument_exception_when_before_each_is_null()
-        {
-            var jasmine = new Jasmine();
-            
-            Action action = () => jasmine.Describe("test suite name", () =>
-            {
-                jasmine.BeforeEach(null);
-                jasmine.It("test", () => {  });
-            });
-
-            action.ShouldThrow<ArgumentNullException>();
-        }
-        
-        [Fact]
-        public void execute_before_each_test()
-        {
-            const int totalNumberOfTests = 2;
-            var numberOfRunTests = 0;
-            var jasmine = new Jasmine();
-            
-            jasmine.Describe("test suite name", () =>
-            {
-                jasmine.BeforeEach(() => { numberOfRunTests++; });
-                jasmine.It("test", () => { var @true = true; });
-                jasmine.It("test", () => { var @false = false; });
-            });
-
-            numberOfRunTests.ShouldBe(totalNumberOfTests);
-        }
-        
-        [Fact]
         public void throw_null_argument_exception_when_after_each_is_null()
         {
             var jasmine = new Jasmine();
@@ -203,17 +181,48 @@ namespace JasmineDotNet.Unit.Test
         public void execute_after_each_test()
         {
             const int totalNumberOfTests = 2;
-            var numberOfRunTests = 0;
+            var numberOfExecutedTests = 0;
             var jasmine = new Jasmine();
             
             jasmine.Describe("test suite name", () =>
             {
-                jasmine.AfterEach(() => { numberOfRunTests++; });
+                jasmine.AfterEach(() => { numberOfExecutedTests++; });
                 jasmine.It("test", () => { var @true = true; });
+                numberOfExecutedTests.ShouldBe(1);
                 jasmine.It("test", () => { var @false = false; });
             });
 
-            numberOfRunTests.ShouldBe(totalNumberOfTests);
+            numberOfExecutedTests.ShouldBe(totalNumberOfTests);
+        }
+        
+        [Fact]
+        public void throw_argument_null_exception_when_after_all_method_is_null()
+        {
+            var jasmine = new Jasmine();
+            
+            Action action = () =>
+            {
+                jasmine.Describe("test suite name", () => { jasmine.AfterAll(null); });
+            };
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+        
+        [Fact]
+        public void execute_after_all_method_afeter_all_tests()
+        {
+            var wasExecutedAfterAll = false;
+            var jasmine = new Jasmine();
+            
+            jasmine.Describe("test suite name", () =>
+            {
+                jasmine.AfterAll(() => { wasExecutedAfterAll = true; });
+                jasmine.It("a simple test", () => { });
+                wasExecutedAfterAll.ShouldBeFalse();
+                jasmine.It("a simple test", () => {  });
+            });
+
+            wasExecutedAfterAll.ShouldBeTrue();
         }
     }
 }
