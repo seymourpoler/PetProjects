@@ -6,6 +6,9 @@
       <e p="JasmineDotNet\JasmineDotNet" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Check.cs" t="Include" />
+        <e p="Expect.cs" t="Include" />
+        <e p="ExpectException.cs" t="Include" />
+        <e p="Functions.cs" t="Include" />
         <e p="Jasmine.cs" t="Include" />
         <e p="JasmineDotNet.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
@@ -17,6 +20,7 @@
       <e p="JasmineDotNet\JasmineDotNet.Unit.Test" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="CheckShould.cs" t="Include" />
+        <e p="ExpectShould.cs" t="Include" />
         <e p="JasmineDotNet.Unit.Test.csproj" t="IncludeRecursive" />
         <e p="JasmineShould.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
