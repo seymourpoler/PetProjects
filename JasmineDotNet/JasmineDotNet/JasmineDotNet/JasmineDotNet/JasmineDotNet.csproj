@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Check.cs" />
+    <Compile Include="Context.cs" />
     <Compile Include="Expect.cs" />
     <Compile Include="ExpectException.cs" />
     <Compile Include="Functions.cs" />
