@@ -9,6 +9,13 @@ namespace JasmineDotNet
         private List<Context> contexts;
         public IReadOnlyCollection<Context> Contexts { get { return contexts.AsReadOnly(); } }
         private Action action;
+        private List<Test> tests;
+        public IReadOnlyCollection<Test> Tests { get { return tests.AsReadOnly(); } }
+
+        public static Context CreateEmpty()
+        {
+            return new Context(String.Empty, () => { });
+        }
 
         public Context(string name, Action action)
         {
@@ -20,6 +27,11 @@ namespace JasmineDotNet
         public void AddContext(Context context)
         {
             contexts.Add(context);
+        }
+
+        public void AddTest(Test test)
+        {
+            tests.Add(test);
         }
     }
 }

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckShould.cs" />
+    <Compile Include="ContextFinder_should.cs" />
     <Compile Include="ExpectShould.cs" />
     <Compile Include="JasmineShould.cs" />
     <Compile Include="ObjectExtensionsShould.cs" />

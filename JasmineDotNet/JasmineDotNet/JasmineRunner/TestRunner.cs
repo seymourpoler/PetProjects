@@ -2,6 +2,9 @@
 {
     public class TestRunner
     {
-        public void Run();
+        public void Run()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
