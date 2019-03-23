@@ -8,19 +8,17 @@ namespace JasmineDotNet
         public string Name { get; }
         private List<Context> contexts;
         public IReadOnlyCollection<Context> Contexts { get { return contexts.AsReadOnly(); } }
-        private Action action;
         private List<Test> tests;
         public IReadOnlyCollection<Test> Tests { get { return tests.AsReadOnly(); } }
 
         public static Context CreateEmpty()
         {
-            return new Context(String.Empty, () => { });
+            return new Context(String.Empty);
         }
 
-        public Context(string name, Action action)
+        public Context(string name)
         {
             Name = name;
-            this.action = action;
             contexts = new List<Context>();
             tests = new List<Test>();
         }

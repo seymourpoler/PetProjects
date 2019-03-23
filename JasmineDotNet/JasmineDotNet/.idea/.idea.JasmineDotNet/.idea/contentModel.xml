@@ -14,6 +14,8 @@
         <e p="Functions.cs" t="Include" />
         <e p="Jasmine.cs" t="Include" />
         <e p="JasmineDotNet.csproj" t="IncludeRecursive" />
+        <e p="MethodContext.cs" t="Include" />
+        <e p="MethodFinder.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="ObjectExtensions.cs" t="Include" />
         <e p="Properties" t="Include">

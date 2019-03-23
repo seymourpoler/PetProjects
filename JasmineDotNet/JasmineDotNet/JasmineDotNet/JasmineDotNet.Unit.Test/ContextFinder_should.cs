@@ -13,8 +13,7 @@ namespace JasmineDotNet.Unit.Test
 
             var result = finder.Find(null);
 
-            result.Contexts.ShouldBeEmpty();
-            result.Tests.ShouldBeEmpty();
+            result.ShouldBeEmpty();
         }
 
         [Fact]
@@ -24,8 +23,7 @@ namespace JasmineDotNet.Unit.Test
 
             var result = finder.Find(typeof(ClassWithNoMethods));
 
-            result.Contexts.ShouldBeEmpty();
-            result.Tests.ShouldBeEmpty();
+            result.ShouldBeEmpty();
         }
 
         [Fact]
@@ -35,8 +33,8 @@ namespace JasmineDotNet.Unit.Test
 
             var result = finder.Find(typeof(ClassWithOneMethod));
 
-            result.Contexts.First().Name.ShouldBe("a_test");
-            result.Tests.ShouldBeEmpty();
+            result.First().Contexts.First().Name.ShouldBe("a_test");
+            result.First().Tests.ShouldBeEmpty();
         }
 
         class ClassWithNoMethods { }
@@ -45,7 +43,6 @@ namespace JasmineDotNet.Unit.Test
         {
             public void a_test()
             {
-                
             }
         }
     }
