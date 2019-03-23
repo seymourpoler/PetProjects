@@ -22,6 +22,7 @@ namespace JasmineDotNet
             Name = name;
             this.action = action;
             contexts = new List<Context>();
+            tests = new List<Test>();
         }
 
         public void AddContext(Context context)

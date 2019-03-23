@@ -1,17 +1,19 @@
 ﻿using System;
+using System.Reflection;
 
 namespace JasmineDotNet
 {
     public class ContextFinder
     {
-        public Context Find(Type type)
+        public Context Find(MethodInfo method)
         {
-            if (type.IsNull())
+            if (method.IsNull())
             {
                 return Context.CreateEmpty();
             }
-
-            throw new System.NotImplementedException();
+            
+            return new Context(method.Name, method.GetMethsodBody());
+            
         }
     }
 }

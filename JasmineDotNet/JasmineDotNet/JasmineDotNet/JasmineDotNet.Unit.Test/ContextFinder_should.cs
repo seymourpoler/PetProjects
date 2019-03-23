@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System.Linq;
+using Xunit;
 using Shouldly;
 
 namespace JasmineDotNet.Unit.Test
@@ -27,6 +28,25 @@ namespace JasmineDotNet.Unit.Test
             result.Tests.ShouldBeEmpty();
         }
 
+        [Fact]
+        public void return_context_when_there_is_one_method()
+        {
+            var finder = new ContextFinder();
+
+            var result = finder.Find(typeof(ClassWithOneMethod));
+
+            result.Contexts.First().Name.ShouldBe("a_test");
+            result.Tests.ShouldBeEmpty();
+        }
+
         class ClassWithNoMethods { }
+
+        class ClassWithOneMethod
+        {
+            public void a_test()
+            {
+                
+            }
+        }
     }
 }
