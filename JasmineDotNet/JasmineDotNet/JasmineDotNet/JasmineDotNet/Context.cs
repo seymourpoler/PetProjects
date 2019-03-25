@@ -1,22 +1,36 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace JasmineDotNet
 {
     public class Context
     {
         public string Name { get; }
-        private List<Context> _contexts;
-        public IReadOnlyCollection<Context> Contexts { get { return _contexts.AsReadOnly(); } }
-        private List<Test> _tests;
-        public IReadOnlyCollection<Test> Tests { get { return _tests.AsReadOnly(); } }
-
-        public Context(string name)
+        private List<Context> contexts;
+        public IReadOnlyCollection<Context> Contexts { get { return contexts.AsReadOnly(); } }
+        private List<Test> tests;
+        public IReadOnlyCollection<Test> Tests { get { return tests.AsReadOnly(); } }
+        
+        public static Context CreateEmpty()
         {
-            _contexts = new List<Context>();
-            _tests = new List<Test>();
-            Name = name;
+            return new Context(String.Empty);
         }
         
+        public Context(string name)
+        {
+            Name = name;
+            contexts = new List<Context>();
+            tests = new List<Test>();
+        }
         
+        public void AddContext(Context context)
+        {
+            contexts.Add(context);
+        }
+        
+        public void AddTest(Test test)
+        {
+            tests.Add(test);
+        }
     }
 }

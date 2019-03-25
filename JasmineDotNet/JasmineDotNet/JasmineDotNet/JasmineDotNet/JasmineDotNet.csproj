@@ -40,10 +40,13 @@
   <ItemGroup>
     <Compile Include="Check.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="ContextFinder.cs" />
     <Compile Include="Expect.cs" />
     <Compile Include="ExpectException.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="Jasmine.cs" />
+    <Compile Include="MethodContext.cs" />
+    <Compile Include="MethodFinder.cs" />
     <Compile Include="ObjectExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test.cs" />
