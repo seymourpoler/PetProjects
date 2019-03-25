@@ -4,89 +4,50 @@ namespace JasmineDotNet
 {
     public class Jasmine
     {
-        private Action beforeAll;
-        private bool isExecutedBeForeAll;
-        
-        private Action afterAll;
-
-        private Action beforeEach;
-        private Action afterEach;
-
-        public Jasmine()
-        {
-            isExecutedBeForeAll = false;
-        }
-
-        public void Describe(string testSuiteName, Action action)
+        public void describe(string testSuiteName, Action action)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testSuiteName));
             Check.IsNull<ArgumentNullException>(action);
-
-            action.Invoke();
-
-            if (afterAll.IsNotNull())
-            {
-                afterAll.Invoke();
-            }
         }
 
-        public void XDescribe(string testSuiteName, Action action)
+        public void xdescribe(string testSuiteName, Action action)
         {
+            testSuiteName = testSuiteName;
         }
 
-        public void BeforeAll(Action action)
+        public void beforeAll(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
-
-            beforeAll = action;
         }
 
-        public void AfterAll(Action action)
+        public void afterAll(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
-            afterAll = action;
         }
 
-        public void BeforeEach(Action action)
+        public void beforeEach(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
-
-            beforeEach = action;
         }
 
-        public void AfterEach(Action action)
+        public void afterEach(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
-
-            afterEach = action;
         }
 
-        public void It(string testName, Action test)
+        public void it(string testName, Action test)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testName));
             Check.IsNull<ArgumentNullException>(test);
-
-            if (beforeAll.IsNotNull() && !isExecutedBeForeAll)
-            {
-                isExecutedBeForeAll = true;
-                beforeAll.Invoke();
-            }
-            
-            if (beforeEach.IsNotNull())
-            {
-                beforeEach.Invoke();
-            }
-            
-            test.Invoke();
-            
-            if (afterEach.IsNotNull())
-            {
-                afterEach.Invoke();
-            }
         }
 
-        public void XIt(string testName, Action test)
+        public void xit(string testName, Action test)
         {
+        }
+
+        public Expect<T> expect<T>(T value)
+        {
+            return new Expect<T>(value);
         }
     }
 }

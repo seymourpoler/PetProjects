@@ -4,13 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{261310B9-CCAC-44F1-8AEA-F0DC6C3038FA}</ProjectGuid>
-    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{DCB98CE7-5516-4378-8160-11FFD4522296}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JasmineDotNet.Unit.Test</RootNamespace>
-    <AssemblyName>JasmineDotNet.Unit.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <RootNamespace>JasmineRunner.Unit.Test</RootNamespace>
+    <AssemblyName>JasmineRunner.Unit.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,42 +32,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Shouldly, Version=3.0.2.0, Culture=neutral, PublicKeyToken=6042cbcb05cbc941">
-      <HintPath>..\packages\Shouldly.3.0.2\lib\net451\Shouldly.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
-      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
-      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
-    </Reference>
     <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
-      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
-      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <HintPath>..\JasmineDotNet\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckShould.cs" />
-    <Compile Include="ExpectShould.cs" />
-    <Compile Include="ObjectExtensionsShould.cs" />
+    <Compile Include="ContextBuilder_should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JasmineDotNet\JasmineDotNet.csproj">
+    <ProjectReference Include="..\JasmineDotNet\JasmineDotNet\JasmineDotNet.csproj">
       <Project>{66705084-8c43-4d35-b86c-6ec706969665}</Project>
       <Name>JasmineDotNet</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\JasmineRunner\JasmineRunner.csproj">
+      <Project>{5b6166b2-571f-4682-bc0e-6c69f136da8c}</Project>
+      <Name>JasmineRunner</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

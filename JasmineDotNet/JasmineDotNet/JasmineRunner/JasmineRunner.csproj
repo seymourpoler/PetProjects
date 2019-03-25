@@ -38,9 +38,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MethodFinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestRunner.cs" />
+    <Compile Include="SpecFinder.cs" />
+    <Compile Include="SpecRunner.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JasmineDotNet\JasmineDotNet\JasmineDotNet.csproj">
+      <Project>{66705084-8c43-4d35-b86c-6ec706969665}</Project>
+      <Name>JasmineDotNet</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
