@@ -7,7 +7,17 @@ namespace JasmineDotNet
 {
     public class MethodFinder
     {
-        public IReadOnlyCollection<MethodInfo> Find(Type type)
+        public IReadOnlyCollection<Context> Find(Type type)
+        {
+            var result = new List<Context>();
+            foreach (var method in FindMethods(type))
+            {
+                result.Add(new MethodContext(method));
+            }
+            return result.AsReadOnly();            
+        }
+        
+        IReadOnlyCollection<MethodInfo> FindMethods(Type type)
         {
             const int noParameters = 0;
             var result = type

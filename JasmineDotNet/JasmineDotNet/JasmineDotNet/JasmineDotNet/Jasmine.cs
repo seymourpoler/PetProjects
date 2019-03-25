@@ -35,10 +35,12 @@ namespace JasmineDotNet
             Check.IsNull<ArgumentNullException>(action);
         }
 
-        public void it(string testName, Action test)
+        public void it(string testName, Action action)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testName));
-            Check.IsNull<ArgumentNullException>(test);
+            Check.IsNull<ArgumentNullException>(action);
+            
+            Context.AddTest(new Test(testName, action));
         }
 
         public void xit(string testName, Action test)
@@ -49,5 +51,7 @@ namespace JasmineDotNet
         {
             return new Expect<T>(value);
         }
+
+        internal Context Context;
     }
 }

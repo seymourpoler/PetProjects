@@ -12,5 +12,12 @@ namespace JasmineDotNet
         {
             this.method = method;
         }
+
+        public override void Build(Jasmine instance)
+        {
+            base.Build(instance);
+
+            method.Invoke(instance, null);
+        }
     }
 }

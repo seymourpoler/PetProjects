@@ -1,25 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
+using JasmineDotNet.Extensions;
 
 namespace JasmineDotNet
 {
     public class ContextFinder
     {
-        public IReadOnlyCollection<Context> Find(Type type)
+        private readonly ClassFinder classFinder;
+        public ContextFinder(ClassFinder  classFinder)
+        {
+            this.classFinder = classFinder;
+        }
+
+        public Context Find(Type type)
         {
             if (type.IsNull())
             {
-                return new[]{ Context.CreateEmpty()};
+                return Context.CreateEmpty();
             }
 
-            var result = new List<Context>();
-            foreach (var method in type.GetMethods())
-            {
-                result.Add(new MethodContext(method));
-            }
+            var context = classFinder.Find(type);
+            var instance = type.CreateInstanceAs<Jasmine>();
+            context.Build(instance);
 
-            return result;
+            return context;
         }
     }
 }

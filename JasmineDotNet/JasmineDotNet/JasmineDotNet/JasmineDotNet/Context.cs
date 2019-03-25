@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace JasmineDotNet
@@ -32,5 +32,17 @@ namespace JasmineDotNet
         {
             tests.Add(test);
         }
+
+        public virtual void Build(Jasmine instance)
+        {
+            instance.Context = this;
+            BuiltInstance = instance;
+            foreach (var context in contexts)
+            {
+                context.Build(instance);
+            }
+        }
+
+        public Jasmine BuiltInstance { get; set; }
     }
 }

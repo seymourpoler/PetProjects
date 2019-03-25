@@ -7,9 +7,11 @@ using JasmineDotNet;
 
 namespace JasmineRunner
 {
-    public class SpecFinder
+    public class TypeFinder
     {
         public IReadOnlyCollection<Type> find(string filePath)
+        {
+            public IReadOnlyCollection<Type> find(string filePath)
         {
             var assemblyPath = Path.GetFullPath(filePath);
             var assemblyName = Path.GetFileNameWithoutExtension(filePath);
@@ -71,6 +73,7 @@ namespace JasmineRunner
             while (baseClasses.Count > 0) yield return baseClasses.Pop();
 
             yield return type;
+        }
         }
     }
 }
