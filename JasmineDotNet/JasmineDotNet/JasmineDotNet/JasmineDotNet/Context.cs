@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace JasmineDotNet
 {
@@ -7,9 +9,9 @@ namespace JasmineDotNet
     {
         public string Name { get; }
         private List<Context> contexts;
-        public IReadOnlyCollection<Context> Contexts { get { return contexts.AsReadOnly(); } }
+        public ReadOnlyCollection<Context> Contexts { get { return contexts.AsReadOnly(); } }
         private List<Test> tests;
-        public IReadOnlyCollection<Test> Tests { get { return tests.AsReadOnly(); } }
+        public ReadOnlyCollection<Test> Tests { get { return tests.AsReadOnly(); } }
         
         public static Context CreateEmpty()
         {
@@ -37,9 +39,9 @@ namespace JasmineDotNet
         {
             instance.Context = this;
             BuiltInstance = instance;
-            foreach (var context in contexts)
+            for(var position = 0; position < contexts.Count; position++)
             {
-                context.Build(instance);
+                contexts[position].Build(instance);
             }
         }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Reflection;
 
 namespace JasmineDotNet
@@ -16,8 +17,11 @@ namespace JasmineDotNet
         public override void Build(Jasmine instance)
         {
             base.Build(instance);
-
             method.Invoke(instance, null);
+            for (var position = 0; position < Contexts.Count(); position++)
+            {
+                Contexts[position].Build(instance);
+            }
         }
     }
 }

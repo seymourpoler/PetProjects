@@ -30,7 +30,8 @@ namespace JasmineDotNet.Unit.Test
             result.Contexts.ShouldBeEmpty();
             result.Tests.ShouldBeEmpty();
         }
-
+        class ClassWithNoMethods: Jasmine { }
+        
         [Fact]
         public void return_context_when_there_is_one_method()
         {
@@ -41,6 +42,7 @@ namespace JasmineDotNet.Unit.Test
             result.Contexts.First().Name.ShouldBe("a_test_method");
             result.Contexts.First().Tests.ShouldBeEmpty();
         }
+        class ClassWithOneMethod : Jasmine { public void a_test_method(){} }
         
         [Fact]
         public void return_context_when_there_is_one_method_and_one_test()
@@ -51,21 +53,6 @@ namespace JasmineDotNet.Unit.Test
             result.Contexts.First().Name.ShouldBe("a_test_method");
             result.Contexts.First().Tests.First().Name.ShouldBe("a test");
         }
-        
-        [Fact]
-        public void return_context_when_there_is_one_method_describe_and_one_test()
-        {
-            var result = finder.Find(typeof(ClassWithOneMethodOneDescrineAndOneTest));
-
-            result.Name.ShouldBe(nameof(ClassWithOneMethodOneDescrineAndOneTest));
-            result.Contexts.First().Name.ShouldBe("a_test_method");
-            result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
-        }
-
-        class ClassWithNoMethods: Jasmine { }
-
-        class ClassWithOneMethod : Jasmine { public void a_test_method(){} }
-        
         class ClassWithOneMethodAndOneTest : Jasmine
         {
             public void a_test_method()
@@ -74,7 +61,17 @@ namespace JasmineDotNet.Unit.Test
             }
         }
         
-        class ClassWithOneMethodOneDescrineAndOneTest : Jasmine
+        [Fact]
+        public void return_context_when_there_is_one_method_describe_and_one_test()
+        {
+            var result = finder.Find(typeof(ClassWithOneMethodOneDescribeAndOneTest));
+
+            result.Name.ShouldBe(nameof(ClassWithOneMethodOneDescribeAndOneTest));
+            result.Contexts.First().Name.ShouldBe("a_test_method");
+            result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
+            result.Contexts.First().Contexts.First().Tests.First().Name.ShouldBe("a test");
+        }
+        class ClassWithOneMethodOneDescribeAndOneTest : Jasmine
         {
             public void a_test_method()
             {
