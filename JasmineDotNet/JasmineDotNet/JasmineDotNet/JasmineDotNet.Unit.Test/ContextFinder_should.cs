@@ -105,21 +105,12 @@ namespace JasmineDotNet.Unit.Test
             {
                 describe("a describe", () =>
                 {
-                    it("a test", () =>
-                    {
-                        var test = "a test";
-                    });
+                    it("a test", () => { var test = "a test"; });
                 });
 
-                it("first test", () =>
-                {
-                    var test = "a test";
-                });
+                it("first test", () => { var test = "a test"; });
                 
-                it("second test", () =>
-                {
-                    var test = "za test";
-                });
+                it("second test", () => { var test = "za test"; });
             }
         }
     }
