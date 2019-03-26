@@ -59,6 +59,7 @@
     <Compile Include="CheckShould.cs" />
     <Compile Include="ContextFinder_should.cs" />
     <Compile Include="ExpectShould.cs" />
+    <Compile Include="Extensions\ReadOnlyCollectionExtensions_should.cs" />
     <Compile Include="ObjectExtensionsShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

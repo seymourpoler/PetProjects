@@ -14,6 +14,7 @@
         <e p="Expect.cs" t="Include" />
         <e p="ExpectException.cs" t="Include" />
         <e p="Extensions" t="Include">
+          <e p="ReadOnlyCollectionExtensions.cs" t="Include" />
           <e p="TypeExtensions.cs" t="Include" />
         </e>
         <e p="Functions.cs" t="Include" />
@@ -34,6 +35,9 @@
         <e p="CheckShould.cs" t="Include" />
         <e p="ContextFinder_should.cs" t="Include" />
         <e p="ExpectShould.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="ReadOnlyCollectionExtensions_should.cs" t="Include" />
+        </e>
         <e p="JasmineDotNet.Unit.Test.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="ObjectExtensionsShould.cs" t="Include" />

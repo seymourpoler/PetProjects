@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using JasmineDotNet.Extensions;
 using Xunit;
 using Shouldly;
 
@@ -71,13 +72,53 @@ namespace JasmineDotNet.Unit.Test
             result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
             result.Contexts.First().Contexts.First().Tests.First().Name.ShouldBe("a test");
         }
+
         class ClassWithOneMethodOneDescribeAndOneTest : Jasmine
         {
             public void a_test_method()
             {
                 describe("a describe", () =>
                 {
-                    it("a test", () =>{ var test = "a test"; }); 
+                    it("a test", () =>
+                    {
+                        var test = "a test";
+                    });
+                });
+            }
+        }
+        
+        [Fact]
+        public void return_context_when_there_is_one_method_with_two_test_and_describe_with_one_test()
+        {
+            var result = finder.Find(typeof(ClassWithOneMethodWithTestsAndOneDescribeAndOneTest));
+
+            result.Name.ShouldBe(nameof(ClassWithOneMethodWithTestsAndOneDescribeAndOneTest));
+            result.Contexts.First().Name.ShouldBe("a_test_method");
+            result.Contexts.First().Tests.First().Name.ShouldBe("first test");
+            result.Contexts.First().Tests.Second().Name.ShouldBe("second test");
+            result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
+            
+        }
+        class ClassWithOneMethodWithTestsAndOneDescribeAndOneTest : Jasmine
+        {
+            public void a_test_method()
+            {
+                describe("a describe", () =>
+                {
+                    it("a test", () =>
+                    {
+                        var test = "a test";
+                    });
+                });
+
+                it("first test", () =>
+                {
+                    var test = "a test";
+                });
+                
+                it("second test", () =>
+                {
+                    var test = "za test";
                 });
             }
         }

@@ -46,6 +46,7 @@
     <Compile Include="DescribeContext.cs" />
     <Compile Include="Expect.cs" />
     <Compile Include="ExpectException.cs" />
+    <Compile Include="Extensions\ReadOnlyCollectionExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="Jasmine.cs" />
