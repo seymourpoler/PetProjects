@@ -51,6 +51,16 @@ namespace JasmineDotNet.Unit.Test
             result.Contexts.First().Name.ShouldBe("a_test_method");
             result.Contexts.First().Tests.First().Name.ShouldBe("a test");
         }
+        
+        [Fact]
+        public void return_context_when_there_is_one_method_describe_and_one_test()
+        {
+            var result = finder.Find(typeof(ClassWithOneMethodOneDescrineAndOneTest));
+
+            result.Name.ShouldBe(nameof(ClassWithOneMethodOneDescrineAndOneTest));
+            result.Contexts.First().Name.ShouldBe("a_test_method");
+            result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
+        }
 
         class ClassWithNoMethods: Jasmine { }
 
@@ -64,6 +74,17 @@ namespace JasmineDotNet.Unit.Test
             public void a_test_method()
             {
                 it("a test", () =>{ var test = "a test"; });
+            }
+        }
+        
+        class ClassWithOneMethodOneDescrineAndOneTest : Jasmine
+        {
+            public void a_test_method()
+            {
+                describe("a describe", () =>
+                {
+                    it("a test", () =>{ var test = "a test"; }); 
+                });
             }
         }
     }

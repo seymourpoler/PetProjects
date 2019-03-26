@@ -8,6 +8,8 @@ namespace JasmineDotNet
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testSuiteName));
             Check.IsNull<ArgumentNullException>(action);
+            
+            Context.AddContext(new DescribeContext(testSuiteName, action));
         }
 
         public void xdescribe(string testSuiteName, Action action)

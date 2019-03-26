@@ -43,6 +43,7 @@
     <Compile Include="ClassFinder.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="ContextFinder.cs" />
+    <Compile Include="DescribeContext.cs" />
     <Compile Include="Expect.cs" />
     <Compile Include="ExpectException.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />

@@ -10,6 +10,7 @@
         <e p="ClassFinder.cs" t="Include" />
         <e p="Context.cs" t="Include" />
         <e p="ContextFinder.cs" t="Include" />
+        <e p="DescribeContext.cs" t="Include" />
         <e p="Expect.cs" t="Include" />
         <e p="ExpectException.cs" t="Include" />
         <e p="Extensions" t="Include">

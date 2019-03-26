@@ -21,7 +21,7 @@ namespace JasmineDotNet
         {
             const int noParameters = 0;
             var result = type
-                .GetMethods(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.DeclaredOnly    )
+                .GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.DeclaredOnly )
                 .Where(x => x.ReturnType == typeof(void))
                 .Where(x => x.GetParameters().Length == noParameters)
                 .OrderBy((x => x.Name))
