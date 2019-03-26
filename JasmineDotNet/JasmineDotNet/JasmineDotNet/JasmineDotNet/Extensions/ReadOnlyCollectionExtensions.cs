@@ -8,11 +8,13 @@ namespace JasmineDotNet.Extensions
         public static T Second<T>(this ReadOnlyCollection<T> collection)
         {
             const int minimumNumberOfElements = 2;
+            const int secondPosition = 1;
             if (collection.Count < minimumNumberOfElements)
             {
                 throw  new ArgumentOutOfRangeException();
             }
-            throw new NotImplementedException();
+
+            return collection[secondPosition];
         }
     }
 }

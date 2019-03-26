@@ -17,5 +17,16 @@ namespace JasmineDotNet.Unit.Test.Extensions
 
             action.ShouldThrow<ArgumentOutOfRangeException>();
         }
+        
+        [Fact]
+        public void return_second_element()
+        {
+            const string secondElement = "0";
+            var collection = new List<string> {"h", secondElement, "la"}.AsReadOnly();
+
+            var result = collection.Second();
+
+            result.ShouldBe(secondElement);
+        }
     }
 }
