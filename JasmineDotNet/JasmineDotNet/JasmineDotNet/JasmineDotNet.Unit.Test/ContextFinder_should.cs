@@ -64,10 +64,7 @@ namespace JasmineDotNet.Unit.Test
 
         class ClassWithNoMethods: Jasmine { }
 
-        class ClassWithOneMethod : Jasmine
-        {
-            public void a_test_method(){}
-        }
+        class ClassWithOneMethod : Jasmine { public void a_test_method(){} }
         
         class ClassWithOneMethodAndOneTest : Jasmine
         {
