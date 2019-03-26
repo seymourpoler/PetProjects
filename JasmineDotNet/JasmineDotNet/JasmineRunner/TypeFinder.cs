@@ -11,8 +11,6 @@ namespace JasmineRunner
     {
         public IReadOnlyCollection<Type> find(string filePath)
         {
-            public IReadOnlyCollection<Type> find(string filePath)
-        {
             var assemblyPath = Path.GetFullPath(filePath);
             var assemblyName = Path.GetFileNameWithoutExtension(filePath);
             var assembly = Assembly.Load(new AssemblyName(assemblyName));
@@ -73,7 +71,6 @@ namespace JasmineRunner
             while (baseClasses.Count > 0) yield return baseClasses.Pop();
 
             yield return type;
-        }
         }
     }
 }

@@ -26,7 +26,9 @@ namespace JasmineDotNet.Unit.Test
         {
             var result = finder.Find(typeof(ClassWithNoMethods));
 
-            result.Name.ShouldBeEmpty();
+            result.Name.ShouldBe(nameof(ClassWithNoMethods));
+            result.Contexts.ShouldBeEmpty();
+            result.Tests.ShouldBeEmpty();
         }
 
         [Fact]
@@ -34,8 +36,10 @@ namespace JasmineDotNet.Unit.Test
         {
             var result = finder.Find(typeof(ClassWithOneMethod));
 
-            result.Contexts.First().Name.ShouldBe("a_test");
+            result.Name.ShouldBe(nameof(ClassWithOneMethod));
             result.Tests.ShouldBeEmpty();
+            result.Contexts.First().Name.ShouldBe("a_test_method");
+            result.Contexts.First().Tests.ShouldBeEmpty();
         }
         
         [Fact]
@@ -43,22 +47,21 @@ namespace JasmineDotNet.Unit.Test
         {
             var result = finder.Find(typeof(ClassWithOneMethodAndOneTest));
 
-            result.Name.ShouldBe("a_test");
-            result.Tests.First().Name.ShouldBe("a test");
+            result.Name.ShouldBe(nameof(ClassWithOneMethodAndOneTest));
+            result.Contexts.First().Name.ShouldBe("a_test_method");
+            result.Contexts.First().Tests.First().Name.ShouldBe("a test");
         }
 
-        class ClassWithNoMethods { }
+        class ClassWithNoMethods: Jasmine { }
 
-        class ClassWithOneMethod
+        class ClassWithOneMethod : Jasmine
         {
-            public void a_test()
-            {
-            }
+            public void a_test_method(){}
         }
         
         class ClassWithOneMethodAndOneTest : Jasmine
         {
-            public void a_test()
+            public void a_test_method()
             {
                 it("a test", () =>{ var test = "a test"; });
             }
