@@ -4,7 +4,9 @@ namespace JasmineDotNet
 {
     public class SpecWritter
     {
-        private readonly IWritter writter;
+        readonly IWritter writter;
+        int totalNumberOfFailTests = 0;
+        int totalNumberOfSuccessTests = 0;
             
         public SpecWritter(IWritter writter)
         {
@@ -21,13 +23,15 @@ namespace JasmineDotNet
                 {
                     test.Run();
                     writter.WriteSucessTest(test.Name);
+                    totalNumberOfSuccessTests++;
                 }
                 catch (Exception e)
                 {
                     writter.WriteFailTest(test.Name);
                 }
-                
+
             }
+            writter.WriteNumberOfTest(success: totalNumberOfSuccessTests, fail: totalNumberOfFailTests);
         }
     }
 }
