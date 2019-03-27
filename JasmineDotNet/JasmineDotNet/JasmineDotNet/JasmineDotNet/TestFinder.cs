@@ -5,7 +5,7 @@ namespace JasmineDotNet
 {
     public class TestFinder
     {
-        public IReadOnlyCollection<Test> Find(MethodInfo method)
+        public IReadOnlyCollection<Test> Fin(MethodInfo method)
         {
             var result = new List<Test>();
             

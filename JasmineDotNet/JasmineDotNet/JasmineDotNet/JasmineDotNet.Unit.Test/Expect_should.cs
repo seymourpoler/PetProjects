@@ -1,7 +1,6 @@
 ﻿using System;
 using Shouldly;
 using Xunit;
-using static JasmineDotNet.Functions;
 
 namespace JasmineDotNet.Unit.Test
 {
@@ -10,7 +9,7 @@ namespace JasmineDotNet.Unit.Test
         [Fact]
         public void do_nothing_when_is_expected()
         {
-            Expect<string>(null).ToBeNull();
+            new Expect<string>(null).ToBeNull();
         }
         
         [Fact]
@@ -18,7 +17,7 @@ namespace JasmineDotNet.Unit.Test
         {
             Action action = () =>
             {
-                Expect<string>("hello world!").ToBeNull();
+                new Expect<string>("hello world!").ToBeNull();
             };
 
             action.ShouldThrow<ExpectException>();

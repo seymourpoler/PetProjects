@@ -2,7 +2,7 @@
 using Shouldly;
 using Xunit;
 
-namespace JasmineDotNet.Unit.Test
+namespace JasmineDotNet.Unit.Test.Extensions
 {
     public class ObjectExtensions_should
     {

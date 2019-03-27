@@ -13,7 +13,7 @@ namespace JasmineDotNet
 
         public Context Find(Type type)
         {
-            var result = new ClassContext(type.Name);
+            var result = new Context(type.Name);
             foreach (var methodContext in methodFinder.Find(type))
             {
                 result.AddContext(methodContext);
