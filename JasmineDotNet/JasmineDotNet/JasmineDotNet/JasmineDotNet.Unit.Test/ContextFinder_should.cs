@@ -115,7 +115,7 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
-        public void return_context_describe_with_another_descrine_insice()
+        public void return_context_describe_with_another_describe_inside()
         {
             var result = finder.Find(typeof(ClassWithDescribeWithAnotherDescribeInside));
 
