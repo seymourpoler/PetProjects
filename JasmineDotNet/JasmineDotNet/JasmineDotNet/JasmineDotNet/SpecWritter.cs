@@ -22,11 +22,11 @@ namespace JasmineDotNet
 
         void WriteInDepth(int depth, Context context)
         {
-            writter.WriteSuite(context.Name);
+            writter.WriteSuite(context.Name, depth);
             var nextLevelOfDepth = depth + 1;
             foreach (var aContext in context.Contexts)
             {
-                WriteInDepth(nextLevelOfDepth, aContext);                
+                WriteInDepth(depth: nextLevelOfDepth, context: aContext);                
             }
 
             foreach (var test in context.Tests)
@@ -34,12 +34,12 @@ namespace JasmineDotNet
                 try
                 {
                     test.Run();
-                    writter.WriteSucessTest(test.Name);
+                    writter.WriteSucessTest(text: test.Name, leftSeparation: nextLevelOfDepth);
                     totalNumberOfSuccessTests++;
                 }
                 catch (Exception e)
                 {
-                    writter.WriteFailTest(test.Name);
+                    writter.WriteFailTest(text: test.Name, errorMessage: e.Message, leftSeparation: nextLevelOfDepth);
                     totalNumberOfFailTests++;
                 }
             }

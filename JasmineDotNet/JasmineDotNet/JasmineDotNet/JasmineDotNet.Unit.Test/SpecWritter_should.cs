@@ -22,7 +22,7 @@ namespace JasmineDotNet.Unit.Test
             
             specWritter.Write(context);
 
-            writter.Verify(x => x.WriteSuite(testSuiteName));
+            writter.Verify(x => x.WriteSuite(testSuiteName, 0));
         }
         
         [Fact]
@@ -35,7 +35,7 @@ namespace JasmineDotNet.Unit.Test
             
             specWritter.Write(context);
 
-            writter.Verify(x => x.WriteSuite(secondLevelTestSuiteName));
+            writter.Verify(x => x.WriteSuite(secondLevelTestSuiteName, 1));
         }
         
         [Fact]
@@ -48,8 +48,8 @@ namespace JasmineDotNet.Unit.Test
             
             specWritter.Write(context);
 
-            writter.Verify(x => x.WriteSuite(testSuiteName));
-            writter.Verify(x => x.WriteSucessTest(testName));
+            writter.Verify(x => x.WriteSuite(testSuiteName, 0));
+            writter.Verify(x => x.WriteSucessTest(testName, 1));
         }
         
         [Fact]
@@ -62,8 +62,8 @@ namespace JasmineDotNet.Unit.Test
             
             specWritter.Write(context);
 
-            writter.Verify(x => x.WriteSuite(testSuiteName));
-            writter.Verify(x => x.WriteFailTest(testName));
+            writter.Verify(x => x.WriteSuite(testSuiteName, 0));
+            writter.Verify(x => x.WriteFailTest(testName, It.IsAny<string>(), 1));
         }
         
         [Fact]
@@ -105,6 +105,5 @@ namespace JasmineDotNet.Unit.Test
 
             writter.Verify(x => x.WriteNumberOfTest(1, 2));
         }
-        
     }
 }
