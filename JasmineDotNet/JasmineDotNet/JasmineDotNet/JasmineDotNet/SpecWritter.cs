@@ -1,4 +1,6 @@
-﻿namespace JasmineDotNet
+﻿using System;
+
+namespace JasmineDotNet
 {
     public class SpecWritter
     {
@@ -11,7 +13,12 @@
 
         public void Write(Context context)
         {
-            writter.Write(context.Name);
+            writter.WriteSuite(context.Name);
+
+            foreach (var test in context.Tests)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
