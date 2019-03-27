@@ -17,7 +17,16 @@ namespace JasmineDotNet
 
             foreach (var test in context.Tests)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    test.Run();
+                    writter.WriteSucessTest(test.Name);
+                }
+                catch (Exception e)
+                {
+                    writter.WriteFailTest(test.Name);
+                }
+                
             }
         }
     }

@@ -33,5 +33,21 @@ namespace JasmineDotNet.Unit.Test
             writter.Verify(x => x.WriteSuite(testSuiteName));
             writter.Verify(x => x.WriteSucessTest(testName));
         }
+        
+        [Fact]
+        public void write_one_fail_test()
+        {
+            const string testSuiteName = "one level test suite";
+            const string testName = "a success test";
+            var writter = new Mock<IWritter>(); 
+            var specWritter = new SpecWritter(writter.Object);
+            var context = new Context(testSuiteName);
+            context.AddTest(new JasmineDotNet.Test(testName, () => { new Expect<string>("another").ToBeNull(); }));
+            
+            specWritter.Write(context);
+
+            writter.Verify(x => x.WriteSuite(testSuiteName));
+            writter.Verify(x => x.WriteFailTest(testName));
+        }
     }
 }
