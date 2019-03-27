@@ -3,7 +3,7 @@ using Xunit;
 
 namespace JasmineDotNet.Unit.Test
 {
-    public class ObjectExtensionsShould
+    public class ObjectExtensions_should
     {
         [Fact]
         public void return_true_when_is_not_null()

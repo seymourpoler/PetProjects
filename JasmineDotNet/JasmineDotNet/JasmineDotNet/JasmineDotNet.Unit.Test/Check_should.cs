@@ -4,7 +4,7 @@ using Xunit;
 
 namespace JasmineDotNet.Unit.Test
 {
-    public class CheckShould
+    public class Check_should
     {
         [Fact]
         public void throws_argument_null_exception_when_argument_is_null()

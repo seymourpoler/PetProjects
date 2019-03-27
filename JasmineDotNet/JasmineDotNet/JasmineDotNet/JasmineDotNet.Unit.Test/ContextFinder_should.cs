@@ -136,7 +136,6 @@ namespace JasmineDotNet.Unit.Test
                     {
                         it("a test", () => { expect<string>("h").ToBeNull(); });    
                     });
-                    
                 });
             }
         }

@@ -56,11 +56,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckShould.cs" />
+    <Compile Include="Check_should.cs" />
     <Compile Include="ContextFinder_should.cs" />
-    <Compile Include="ExpectShould.cs" />
+    <Compile Include="Expect_should.cs" />
     <Compile Include="Extensions\ReadOnlyCollectionExtensions_should.cs" />
-    <Compile Include="ObjectExtensionsShould.cs" />
+    <Compile Include="ObjectExtensions_should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

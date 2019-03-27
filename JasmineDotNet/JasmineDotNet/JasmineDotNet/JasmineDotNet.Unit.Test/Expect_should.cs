@@ -5,7 +5,7 @@ using static JasmineDotNet.Functions;
 
 namespace JasmineDotNet.Unit.Test
 {
-    public class ExpectShould
+    public class Expect_should
     {
         [Fact]
         public void do_nothing_when_is_expected()
