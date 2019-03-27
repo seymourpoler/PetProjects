@@ -1,4 +1,6 @@
-﻿namespace JasmineDotNet
+﻿using JasmineDotNet.Extensions;
+
+namespace JasmineDotNet
 {
     public class Expect<T>
     {

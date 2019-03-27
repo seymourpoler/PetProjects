@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using JasmineDotNet;
+using JasmineDotNet.Extensions;
 
 namespace JasmineRunner
 {

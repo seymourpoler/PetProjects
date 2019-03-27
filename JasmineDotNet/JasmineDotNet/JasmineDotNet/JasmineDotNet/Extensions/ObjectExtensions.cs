@@ -1,4 +1,4 @@
-﻿namespace JasmineDotNet
+﻿namespace JasmineDotNet.Extensions
 {
     public static class ObjectExtensions
     {

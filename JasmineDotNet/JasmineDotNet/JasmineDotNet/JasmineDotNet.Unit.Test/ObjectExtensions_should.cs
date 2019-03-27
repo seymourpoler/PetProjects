@@ -1,4 +1,5 @@
-﻿using Shouldly;
+﻿using JasmineDotNet.Extensions;
+using Shouldly;
 using Xunit;
 
 namespace JasmineDotNet.Unit.Test
