@@ -64,5 +64,17 @@ namespace JasmineDotNet.Unit.Test
 
             writter.Verify(x => x.WriteNumberOfTest(2, 0));
         }
+        
+        [Fact]
+        public void write_total_number_of_fail_test()
+        {
+            var context = new Context("a suite test");
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expect<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expect<string>("f").ToBeNull(); }));
+            
+            specWritter.Write(context);
+
+            writter.Verify(x => x.WriteNumberOfTest(1, 1));
+        }
     }
 }

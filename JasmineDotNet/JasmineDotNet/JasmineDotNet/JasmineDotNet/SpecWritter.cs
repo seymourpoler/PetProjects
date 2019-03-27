@@ -28,6 +28,7 @@ namespace JasmineDotNet
                 catch (Exception e)
                 {
                     writter.WriteFailTest(test.Name);
+                    totalNumberOfFailTests++;
                 }
 
             }
