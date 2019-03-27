@@ -26,7 +26,7 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
-        public void write_two_levels_context()
+        public void write_two_levels_contexts()
         {
             const string firstLevelTestSuiteName = "first level test suite";
             const string secondLevelTestSuiteName = "second level test suite";
@@ -77,17 +77,34 @@ namespace JasmineDotNet.Unit.Test
 
             writter.Verify(x => x.WriteNumberOfTest(2, 0));
         }
-        
+
         [Fact]
         public void write_total_number_of_fail_test()
         {
             var context = new Context("a suite test");
             context.AddTest(new JasmineDotNet.Test("a test", () => { new Expect<string>(null).ToBeNull(); }));
             context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expect<string>("f").ToBeNull(); }));
-            
+
             specWritter.Write(context);
 
             writter.Verify(x => x.WriteNumberOfTest(1, 1));
         }
+        
+        [Fact]
+        public void write_total_number_of_test_in_different_levels_of_depths()
+        {
+            var context = new Context("a suite test");
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expect<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expect<string>("f").ToBeNull(); }));
+            
+            var anotherContext = new Context("another suite of tests");
+            anotherContext.AddTest(new JasmineDotNet.Test("another test", () => {new Expect<string>("null").ToBeNull();}));
+            context.AddContext(anotherContext);
+
+            specWritter.Write(context);
+
+            writter.Verify(x => x.WriteNumberOfTest(1, 2));
+        }
+        
     }
 }
