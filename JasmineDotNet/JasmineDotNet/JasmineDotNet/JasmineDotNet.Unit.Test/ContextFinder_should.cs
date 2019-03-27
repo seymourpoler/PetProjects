@@ -113,5 +113,32 @@ namespace JasmineDotNet.Unit.Test
                 it("second test", () => { var test = "za test"; });
             }
         }
+        
+        [Fact]
+        public void return_context_describe_with_another_descrine_insice()
+        {
+            var result = finder.Find(typeof(ClassWithDescribeWithAnotherDescribeInside));
+
+            result.Name.ShouldBe(nameof(ClassWithDescribeWithAnotherDescribeInside));
+            result.Contexts.First().Name.ShouldBe("a_test_method");
+            result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
+            result.Contexts.First().Contexts.First().Contexts.First().Name.ShouldBe("a describe inside");
+            result.Contexts.First().Contexts.First().Contexts.First().Tests.First().Name.ShouldBe("a test");
+
+        }
+        class ClassWithDescribeWithAnotherDescribeInside : Jasmine
+        {
+            public void a_test_method()
+            {
+                describe("a describe", () =>
+                {
+                    describe("a describe inside", () =>
+                    {
+                        it("a test", () => { expect<string>("h").ToBeNull(); });    
+                    });
+                    
+                });
+            }
+        }
     }
 }
