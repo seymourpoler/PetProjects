@@ -5,12 +5,19 @@ namespace JasmineDotNet.Unit.Test
 {
     public class SpecWritter_should
     {
+        Mock<IWritter> writter;
+        SpecWritter specWritter;
+        
+        public SpecWritter_should()
+        {
+            writter = new Mock<IWritter>();
+            specWritter = new SpecWritter(writter.Object);
+        }
+
         [Fact]
         public void write_one_level_context()
         {
             const string testSuiteName = "one level test suite";
-            var writter = new Mock<IWritter>(); 
-            var specWritter = new SpecWritter(writter.Object);
             var context = new Context(testSuiteName);
             
             specWritter.Write(context);
@@ -23,8 +30,6 @@ namespace JasmineDotNet.Unit.Test
         {
             const string testSuiteName = "one level test suite";
             const string testName = "a success test";
-            var writter = new Mock<IWritter>(); 
-            var specWritter = new SpecWritter(writter.Object);
             var context = new Context(testSuiteName);
             context.AddTest(new JasmineDotNet.Test(testName, () => { }));
             
@@ -39,8 +44,6 @@ namespace JasmineDotNet.Unit.Test
         {
             const string testSuiteName = "one level test suite";
             const string testName = "a success test";
-            var writter = new Mock<IWritter>(); 
-            var specWritter = new SpecWritter(writter.Object);
             var context = new Context(testSuiteName);
             context.AddTest(new JasmineDotNet.Test(testName, () => { new Expect<string>("another").ToBeNull(); }));
             
