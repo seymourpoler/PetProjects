@@ -26,6 +26,19 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
+        public void write_two_levels_context()
+        {
+            const string firstLevelTestSuiteName = "first level test suite";
+            const string secondLevelTestSuiteName = "second level test suite";
+            var context = new Context(firstLevelTestSuiteName);
+            context.AddContext(new Context(secondLevelTestSuiteName));
+            
+            specWritter.Write(context);
+
+            writter.Verify(x => x.WriteSuite(secondLevelTestSuiteName));
+        }
+        
+        [Fact]
         public void write_one_success_test()
         {
             const string testSuiteName = "one level test suite";
