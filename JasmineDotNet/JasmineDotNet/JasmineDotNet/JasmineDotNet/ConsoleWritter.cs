@@ -37,7 +37,7 @@ namespace JasmineDotNet
             Console.WriteLine(message);
         }
 
-        void WriteLeftSeparation(int separation)
+        static void WriteLeftSeparation(int separation)
         {
             for (var i = 0; i < separation; i++)
             {
