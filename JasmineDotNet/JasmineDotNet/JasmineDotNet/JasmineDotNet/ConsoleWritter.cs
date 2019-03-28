@@ -39,7 +39,7 @@ namespace JasmineDotNet
 
         void WriteLeftSeparation(int separation)
         {
-            for (int i = 0; i < separation; i++)
+            for (var i = 0; i < separation; i++)
             {
                 Console.Write(" ");
             }
