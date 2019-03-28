@@ -7,6 +7,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Check.cs" t="Include" />
         <e p="ClassFinder.cs" t="Include" />
+        <e p="ConsoleWritter.cs" t="Include" />
         <e p="Context.cs" t="Include" />
         <e p="ContextFinder.cs" t="Include" />
         <e p="DescribeContext.cs" t="Include" />
@@ -50,7 +51,6 @@
       <e p="JasmineRunner" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="JasmineRunner.csproj" t="IncludeRecursive" />
-        <e p="MethodFinder.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

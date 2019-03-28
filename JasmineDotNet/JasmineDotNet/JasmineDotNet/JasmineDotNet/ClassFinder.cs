@@ -18,9 +18,6 @@ namespace JasmineDotNet
             {
                 result.AddContext(methodContext);
             }
-            
-            
-            
             return result;
         }
     }
