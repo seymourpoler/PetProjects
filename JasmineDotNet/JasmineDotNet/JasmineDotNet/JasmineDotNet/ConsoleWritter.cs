@@ -25,8 +25,8 @@ namespace JasmineDotNet
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Red;
             WriteLeftSeparation(leftSeparation);
-            Console.Write(text);
-            Console.WriteLine(", errorMessage: " + errorMessage);
+            Console.WriteLine(text);
+            Console.WriteLine("errorMessage: " + errorMessage);
         }
 
         public void WriteNumberOfTest(int success, int fail)
