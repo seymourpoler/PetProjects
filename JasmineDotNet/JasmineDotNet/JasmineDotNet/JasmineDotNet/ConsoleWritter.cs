@@ -2,44 +2,66 @@
 
 namespace JasmineDotNet
 {
-    public class ConsoleWritter: IWritter
+    public class ConsoleWritter : IWritter
     {
         public void WriteSuite(string text, int leftSeparation = 0)
         {
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.White;
             WriteLeftSeparation(leftSeparation);
-            Console.WriteLine(text);
+            WriteWhite(text);
+            Console.WriteLine();
         }
 
         public void WriteSucessTest(string text, int leftSeparation = 0)
         {
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.Green;
             WriteLeftSeparation(leftSeparation);
-            Console.WriteLine(text);
+            WriteGreen(text);
+            Console.WriteLine();
         }
 
         public void WriteFailTest(string text, string errorMessage, int leftSeparation = 0)
         {
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.Red;
             WriteLeftSeparation(leftSeparation);
-            Console.WriteLine(text);
-            Console.WriteLine("errorMessage: " + errorMessage);
+            WriteRed(text);
+            Console.WriteLine();
+            WriteLeftSeparation(leftSeparation);
+            WriteRed("errorMessage: " + errorMessage);
+            Console.WriteLine();
         }
 
         public void WriteNumberOfTest(int success, int fail)
         {
-            Console.BackgroundColor = ConsoleColor.Black;
+            Console.WriteLine();
+            Console.WriteLine();
+            WriteWhite($"Total tests: {success + fail}");
+            WriteWhite(",");
+            WriteGreen($" success: {success}");
+            WriteWhite(",");
+            WriteRed($" fail: {fail}");
+            Console.WriteLine();
+        }
+
+        void WriteWhite(string message)
+        {
             Console.ForegroundColor = ConsoleColor.White;
-            var message = $"Total tests: { success + fail}, success: {success}, fail: {fail}";
-            Console.WriteLine(message);
+            Console.Write(message);
+        }
+        
+        void WriteGreen(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(message);
+        }
+        
+        void WriteRed(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(message);
         }
 
         static void WriteLeftSeparation(int separation)
         {
-            for (var i = 0; i < separation; i++)
+            var leftSeparation = separation * 2;
+            for (var i = 0; i < leftSeparation; i++)
             {
                 Console.Write(" ");
             }
