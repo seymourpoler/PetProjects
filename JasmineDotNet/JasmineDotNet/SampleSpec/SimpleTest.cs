@@ -36,7 +36,8 @@ namespace SampleSpec
             {
                 var value = 0;
                 beforeEach(() => { value++;});
-                it("the test with for each for each method", () => { expect(value).ToBe(1); }); 
+                it("the test with for each for each method", () => { expect(value).ToBe(1); });
+                it("another test with for each for each method", () => { expect(value).ToBe(2); });
             });
         }
     }
