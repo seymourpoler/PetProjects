@@ -4,6 +4,13 @@ namespace JasmineDotNet
 {
     public class Jasmine
     {
+        Action _beforeEach;
+
+        public Jasmine()
+        {
+            _beforeEach = () => { };
+        }
+
         public void describe(string testSuiteName, Action action)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(testSuiteName));
@@ -30,6 +37,7 @@ namespace JasmineDotNet
         public void beforeEach(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
+            _beforeEach = action;
         }
 
         public void afterEach(Action action)

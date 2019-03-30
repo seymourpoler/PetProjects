@@ -18,5 +18,13 @@ namespace JasmineDotNet
                 throw new ExpectException("Expected a null value is expected.");
             }
         }
+
+        public void ToBe(T expectd)
+        {
+            if (!value.Equals(expectd))
+            {
+                throw new ExpectException("not equal value is expected.");
+            }
+        }
     }
 }
