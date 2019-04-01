@@ -57,11 +57,21 @@ namespace JasmineDotNet.Unit.Test
             action.ShouldThrow<ExpectException>();
         }
         
-        
         [Fact]
         public void do_nothing_whe_is_false()
         {
             new Expect<bool>(false).ToBeFalse();
+        }
+        
+        [Fact]
+        public void throw_exception_when_is_not_false()
+        {
+            Action action = () =>
+            {
+                new Expect<bool>(true).ToBeFalse();
+            };
+
+            action.ShouldThrow<ExpectException>();
         }
     }
 }
