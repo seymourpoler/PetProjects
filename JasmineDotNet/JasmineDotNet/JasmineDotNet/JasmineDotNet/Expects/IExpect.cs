@@ -24,7 +24,7 @@
         */
 
         void ToBeNull();
-        void ToBe<T>(T expectd);
+        void ToBe<T>(T expected);
         void ToBeTrue();
         void ToBeFalse();
     }
