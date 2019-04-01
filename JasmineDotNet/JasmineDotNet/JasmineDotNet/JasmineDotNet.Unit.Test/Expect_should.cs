@@ -8,7 +8,7 @@ namespace JasmineDotNet.Unit.Test
     public class Expect_should
     {
         [Fact]
-        public void do_nothing_when_is_expected()
+        public void do_nothing_when_is_null()
         {
             new Expected<string>(null).ToBeNull();
         }
@@ -22,6 +22,12 @@ namespace JasmineDotNet.Unit.Test
             };
 
             action.ShouldThrow<ExpectException>();
+        }
+        
+        [Fact]
+        public void do_nothing_when_is_not_null()
+        {
+            new Expected<string>("text").Not.ToBeNull();
         }
 
         [Fact]
@@ -104,17 +110,17 @@ namespace JasmineDotNet.Unit.Test
         }
 
         [Fact]
+        public void do_nothing_when_is_not_to_be_false()
+        {
+            new Expected<bool>(false).Not.ToBeTrue();
+        }
+        
+        [Fact]
         public void throw_and_exception_when_is_not_to_be_true()
         {
             Action action = () => { new Expected<bool>(true).Not.ToBeTrue(); };
 
             action.ShouldThrow<ExpectException>();
-        }
-        
-        [Fact]
-        public void do_nothing_when_is_not_to_be_false()
-        {
-            new Expected<bool>(false).Not.ToBeTrue();
         }
     }
 }
