@@ -29,6 +29,17 @@ namespace JasmineDotNet.Unit.Test
         {
             new Expected<string>("text").Not.ToBeNull();
         }
+        
+        [Fact]
+        public void throw_exception_when_is_not_null()
+        {
+            Action action = () =>
+            {
+                new Expected<string>(null).Not.ToBeNull();
+            };
+
+            action.ShouldThrow<ExpectException>();
+        }
 
         [Fact]
         public void do_nothing_when_is_be()
