@@ -82,7 +82,7 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
-        public void throw_exception_when_is_true()
+        public void throw_exception_when_is_not_true()
         {
             Action action = () =>
             {
@@ -96,17 +96,6 @@ namespace JasmineDotNet.Unit.Test
         public void do_nothing_when_is_not_true()
         {
             new Expected<bool>(false).Not.ToBeTrue();
-        }
-        
-        [Fact]
-        public void throw_exception_when_is_not_true()
-        {
-            Action action = () =>
-            {
-                new Expected<bool>(true).Not.ToBeTrue();
-            };
-
-            action.ShouldThrow<ExpectException>();
         }
         
         [Fact]
@@ -138,7 +127,13 @@ namespace JasmineDotNet.Unit.Test
         }
 
         [Fact]
-        public void do_nothing_when_is_not_to_be_false()
+        public void do_nothing_whe_is_not_false()
+        {
+            new Expected<bool>(true).Not.ToBeFalse();
+        }
+        
+        [Fact]
+        public void do_nothing_when_is_not_false()
         {
             new Expected<bool>(false).Not.ToBeTrue();
         }
