@@ -19,7 +19,8 @@ namespace JasmineDotNet.Unit.Test
         {
             var result = finder.Find(null);
 
-            result.Name.ShouldBeEmpty();
+            result.Tests.ShouldBeEmpty();
+            result.Contexts.ShouldBeEmpty();
         }
 
         [Fact]

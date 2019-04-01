@@ -68,7 +68,7 @@ namespace JasmineDotNet
 
         public static Context CreateEmpty()
         {
-            return new Context(String.Empty);
+            return new Context("No suite of tests");
         }
 
         public Context(string name)
