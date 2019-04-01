@@ -62,6 +62,6 @@ namespace JasmineDotNet
             return new Expect<T>(value);
         }
 
-        internal Context Context;
+        internal Context Context { get; set; }
     }
 }
