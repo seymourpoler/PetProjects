@@ -38,6 +38,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DescribeWithTestAndAfterAll.cs" />
+    <Compile Include="DescribeWithTestAndAfterEach.cs" />
     <Compile Include="DescribeWithTestAndBeforeAll.cs" />
     <Compile Include="DescribeWithTestAndBeforerEach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -61,6 +61,8 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="SampleSpec" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="DescribeWithTestAndAfterAll.cs" t="Include" />
+        <e p="DescribeWithTestAndAfterEach.cs" t="Include" />
         <e p="DescribeWithTestAndBeforeAll.cs" t="Include" />
         <e p="DescribeWithTestAndBeforerEach.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />

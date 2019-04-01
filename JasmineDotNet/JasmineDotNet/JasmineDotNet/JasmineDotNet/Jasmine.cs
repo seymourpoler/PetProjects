@@ -20,23 +20,29 @@ namespace JasmineDotNet
         public void beforeAll(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
-            Context.AddBeforeAll(action);
+            
+            Context.BeforeAll  = action;
         }
 
         public void afterAll(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
+
+            Context.AfterAll = action;
         }
 
         public void beforeEach(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
-            Context.AddBeforeEach(action);
+            
+            Context.BeforeEach = action;
         }
 
         public void afterEach(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
+
+            Context.AfterEach = action;
         }
 
         public void it(string testName, Action action)

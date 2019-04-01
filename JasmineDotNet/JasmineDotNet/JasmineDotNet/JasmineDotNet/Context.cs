@@ -15,8 +15,10 @@ namespace JasmineDotNet
             get { return contexts.AsReadOnly(); }
         }
 
-        public Action BeforeEach { get; private set; }
-        public Action BeforeAll { get; private set; }
+        public Action BeforeEach { get; set; }
+        public Action BeforeAll { get; set; }
+        public Action AfterEach { get; set; }
+        public Action AfterAll { get; set; }
 
         private List<Test> tests;
         public ReadOnlyCollection<Test> Tests
@@ -46,16 +48,6 @@ namespace JasmineDotNet
         public void AddTest(Test test)
         {
             tests.Add(test);
-        }
-
-        public void AddBeforeEach(Action beforeEach)
-        {
-            BeforeEach = beforeEach;
-        }
-        
-        public void AddBeforeAll(Action beforeAll)
-        {
-            BeforeAll = beforeAll;
         }
 
         public virtual void Build(Jasmine instance)
