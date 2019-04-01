@@ -133,6 +133,15 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
+        public void throw_exception_whe_is_not_false()
+        {
+            Action action = () =>
+            {
+                new Expected<bool>(false).Not.ToBeFalse();
+            };
+        }
+        
+        [Fact]
         public void do_nothing_when_is_not_false()
         {
             new Expected<bool>(false).Not.ToBeTrue();
