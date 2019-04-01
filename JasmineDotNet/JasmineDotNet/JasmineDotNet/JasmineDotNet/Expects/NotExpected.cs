@@ -20,7 +20,7 @@ namespace JasmineDotNet.Expects
             }
         }
 
-        public void ToBe<T>(T expectd)
+        public void ToBe(T expectd)
         {
             if (value.Equals(expectd))
             {

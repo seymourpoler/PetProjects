@@ -25,13 +25,13 @@ namespace JasmineDotNet.Unit.Test
         }
 
         [Fact]
-        public void do_nothing_when_is_equals()
+        public void do_nothing_when_is_be()
         {
             new Expected<bool>(true).ToBe(true);
         }
         
         [Fact]
-        public void throw_an_expect_exception_when_is_not_equals()
+        public void throw_an_expect_exception_when_is_not_be()
         {
             Action action = () =>
             {
