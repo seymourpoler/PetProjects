@@ -48,6 +48,12 @@ namespace JasmineDotNet.Unit.Test
         }
         
         [Fact]
+        public void do_nothing_whe_is_not_true()
+        {
+            new Expected<bool>(false).Not.ToBeTrue();
+        }
+        
+        [Fact]
         public void throw_exception_when_is_false()
         {
             Action action = () =>
