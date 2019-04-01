@@ -59,6 +59,12 @@ namespace JasmineDotNet.Unit.Test
         }
 
         [Fact]
+        public void do_nothing_when_is_not_be()
+        {
+            new Expected<bool>(false).Not.ToBe(true);
+        }
+        
+        [Fact]
         public void do_nothing_when_is_true()
         {
             new Expected<bool>(true).ToBeTrue();
