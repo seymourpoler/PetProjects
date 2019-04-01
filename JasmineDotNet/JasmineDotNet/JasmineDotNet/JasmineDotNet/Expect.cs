@@ -35,5 +35,13 @@ namespace JasmineDotNet
                 throw new ExpectException("true value is expected.");
             }
         }
+
+        public void ToBeFalse()
+        {
+            if (Convert.ToBoolean(value))
+            {
+                throw new ExpectException("false value is expected.");
+            }
+        }
     }
 }
