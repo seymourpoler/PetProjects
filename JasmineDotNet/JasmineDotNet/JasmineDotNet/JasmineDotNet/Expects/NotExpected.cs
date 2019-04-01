@@ -1,28 +1,28 @@
 ﻿using System;
 using JasmineDotNet.Extensions;
 
-namespace JasmineDotNet
+namespace JasmineDotNet.Expects
 {
-    public class Expect<T>
+    public class NotExpected<T>
     {
-        private readonly T value;
-        
-        public Expect(T value)
+        readonly T value;
+
+        public NotExpected(T value)
         {
             this.value = value;
         }
 
         public void ToBeNull()
         {
-            if (value.IsNotNull())
+            if (value.IsNull())
             {
                 throw new ExpectException("Expected a null value is expected.");
             }
         }
 
-        public void ToBe(T expectd)
+        public void ToBe<T>(T expectd)
         {
-            if (!value.Equals(expectd))
+            if (value.Equals(expectd))
             {
                 throw new ExpectException("not equal value is expected.");
             }
@@ -30,7 +30,7 @@ namespace JasmineDotNet
 
         public void ToBeTrue()
         {
-            if (!Convert.ToBoolean(value))
+            if (Convert.ToBoolean(value))
             {
                 throw new ExpectException("true value is expected.");
             }
@@ -38,7 +38,7 @@ namespace JasmineDotNet
 
         public void ToBeFalse()
         {
-            if (Convert.ToBoolean(value))
+            if (!Convert.ToBoolean(value))
             {
                 throw new ExpectException("false value is expected.");
             }

@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using JasmineDotNet.Expects;
+using Xunit;
 using Moq;
 
 namespace JasmineDotNet.Unit.Test
@@ -58,7 +59,7 @@ namespace JasmineDotNet.Unit.Test
             const string testSuiteName = "one level test suite";
             const string testName = "a success test";
             var context = new Context(testSuiteName);
-            context.AddTest(new JasmineDotNet.Test(testName, () => { new Expect<string>("another").ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test(testName, () => { new Expected<string>("another").ToBeNull(); }));
             
             specWritter.Write(context);
 
@@ -70,8 +71,8 @@ namespace JasmineDotNet.Unit.Test
         public void write_total_number_of_success_test()
         {
             var context = new Context("a suite test");
-            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expect<string>(null).ToBeNull(); }));
-            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expect<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expected<string>(null).ToBeNull(); }));
             
             specWritter.Write(context);
 
@@ -82,8 +83,8 @@ namespace JasmineDotNet.Unit.Test
         public void write_total_number_of_fail_test()
         {
             var context = new Context("a suite test");
-            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expect<string>(null).ToBeNull(); }));
-            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expect<string>("f").ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expected<string>("f").ToBeNull(); }));
 
             specWritter.Write(context);
 
@@ -94,11 +95,11 @@ namespace JasmineDotNet.Unit.Test
         public void write_total_number_of_test_in_different_levels_of_depths()
         {
             var context = new Context("a suite test");
-            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expect<string>(null).ToBeNull(); }));
-            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expect<string>("f").ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expected<string>("f").ToBeNull(); }));
             
             var anotherContext = new Context("another suite of tests");
-            anotherContext.AddTest(new JasmineDotNet.Test("another test", () => {new Expect<string>("null").ToBeNull();}));
+            anotherContext.AddTest(new JasmineDotNet.Test("another test", () => {new Expected<string>("null").ToBeNull();}));
             context.AddContext(anotherContext);
 
             specWritter.Write(context);

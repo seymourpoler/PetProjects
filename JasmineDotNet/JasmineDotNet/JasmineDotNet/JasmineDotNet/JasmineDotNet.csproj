@@ -44,8 +44,10 @@
     <Compile Include="Context.cs" />
     <Compile Include="ContextFinder.cs" />
     <Compile Include="DescribeContext.cs" />
-    <Compile Include="Expect.cs" />
     <Compile Include="ExpectException.cs" />
+    <Compile Include="Expects\Expected.cs" />
+    <Compile Include="Expects\IExpect.cs" />
+    <Compile Include="Expects\NotExpected.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\ReadOnlyCollectionExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />

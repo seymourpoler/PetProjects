@@ -1,4 +1,5 @@
 ﻿using System;
+using JasmineDotNet.Expects;
 
 namespace JasmineDotNet
 {
@@ -43,9 +44,9 @@ namespace JasmineDotNet
         {
         }
 
-        public Expect<T> expect<T>(T value)
+        public Expected<T> expect<T>(T value)
         {
-            return new Expect<T>(value);
+            return new Expected<T>(value);
         }
 
         internal Context Context { get; set; }

@@ -1,4 +1,5 @@
 ﻿using System;
+using JasmineDotNet.Expects;
 using Shouldly;
 using Xunit;
 
@@ -9,7 +10,7 @@ namespace JasmineDotNet.Unit.Test
         [Fact]
         public void do_nothing_when_is_expected()
         {
-            new Expect<string>(null).ToBeNull();
+            new Expected<string>(null).ToBeNull();
         }
         
         [Fact]
@@ -17,7 +18,7 @@ namespace JasmineDotNet.Unit.Test
         {
             Action action = () =>
             {
-                new Expect<string>("hello world!").ToBeNull();
+                new Expected<string>("hello world!").ToBeNull();
             };
 
             action.ShouldThrow<ExpectException>();
@@ -26,7 +27,7 @@ namespace JasmineDotNet.Unit.Test
         [Fact]
         public void do_nothing_when_is_equals()
         {
-            new Expect<bool>(true).ToBe(true);
+            new Expected<bool>(true).ToBe(true);
         }
         
         [Fact]
@@ -34,7 +35,7 @@ namespace JasmineDotNet.Unit.Test
         {
             Action action = () =>
             {
-                new Expect<bool>(true).ToBe(false);
+                new Expected<bool>(true).ToBe(false);
             };
 
             action.ShouldThrow<ExpectException>();
@@ -43,7 +44,7 @@ namespace JasmineDotNet.Unit.Test
         [Fact]
         public void do_nothing_whe_is_true()
         {
-            new Expect<bool>(true).ToBeTrue();
+            new Expected<bool>(true).ToBeTrue();
         }
         
         [Fact]
@@ -51,7 +52,7 @@ namespace JasmineDotNet.Unit.Test
         {
             Action action = () =>
             {
-                new Expect<bool>(false).ToBeTrue();  
+                new Expected<bool>(false).ToBeTrue();  
             };
 
             action.ShouldThrow<ExpectException>();
@@ -60,7 +61,7 @@ namespace JasmineDotNet.Unit.Test
         [Fact]
         public void do_nothing_whe_is_false()
         {
-            new Expect<bool>(false).ToBeFalse();
+            new Expected<bool>(false).ToBeFalse();
         }
         
         [Fact]
@@ -68,8 +69,16 @@ namespace JasmineDotNet.Unit.Test
         {
             Action action = () =>
             {
-                new Expect<bool>(true).ToBeFalse();
+                new Expected<bool>(true).ToBeFalse();
             };
+
+            action.ShouldThrow<ExpectException>();
+        }
+
+        [Fact]
+        public void Throw_and_exception_when_is_not_to_be_true()
+        {
+            Action action = () => { new Expected<bool>(true).Not.ToBeTrue(); };
 
             action.ShouldThrow<ExpectException>();
         }
