@@ -71,6 +71,7 @@ namespace JasmineDotNet.Expects
                 {
                     return;
                 }
+                throw  new ExpectException("exception is expected");
             }
         }
     }

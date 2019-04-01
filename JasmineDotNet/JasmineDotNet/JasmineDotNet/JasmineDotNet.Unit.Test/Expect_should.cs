@@ -157,9 +157,20 @@ namespace JasmineDotNet.Unit.Test
         }
 
         [Fact]
-        public void do_nothing_when_throw()
+        public void do_nothing_when_there_is_a_thrown_exception()
         {
-            new Expected<Exception>(() => { throw new System.NotSupportedException(); }).ToThrow<Exception>();
+            new Expected<Exception>(() => { throw new NotSupportedException(); }).ToThrow<Exception>();
+        }
+        
+        [Fact]
+        public void throw_exception_when_there_is_no_thrown_exception()
+        {
+            Action action = () =>
+            {
+                new Expected<Exception>(() => { }).ToThrow<Exception>();
+            };
+
+            action.ShouldThrow<ExpectException>();
         }
     }
 }
