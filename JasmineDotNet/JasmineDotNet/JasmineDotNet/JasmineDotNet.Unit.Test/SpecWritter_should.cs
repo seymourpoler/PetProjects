@@ -71,8 +71,8 @@ namespace JasmineDotNet.Unit.Test
         public void write_total_number_of_success_test()
         {
             var context = new Context("a suite test");
-            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(null).ToBeNull(); }));
-            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expected<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(value:null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expected<string>(value:null).ToBeNull(); }));
             
             specWritter.Write(context);
 
@@ -83,7 +83,7 @@ namespace JasmineDotNet.Unit.Test
         public void write_total_number_of_fail_test()
         {
             var context = new Context("a suite test");
-            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(value:null).ToBeNull(); }));
             context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expected<string>("f").ToBeNull(); }));
 
             specWritter.Write(context);
@@ -95,7 +95,7 @@ namespace JasmineDotNet.Unit.Test
         public void write_total_number_of_test_in_different_levels_of_depths()
         {
             var context = new Context("a suite test");
-            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(value:null).ToBeNull(); }));
             context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expected<string>("f").ToBeNull(); }));
             
             var anotherContext = new Context("another suite of tests");

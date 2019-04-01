@@ -27,5 +27,6 @@
         void ToBe<T>(T expected);
         void ToBeTrue();
         void ToBeFalse();
+        void ToThrow<T>();
     }
 }

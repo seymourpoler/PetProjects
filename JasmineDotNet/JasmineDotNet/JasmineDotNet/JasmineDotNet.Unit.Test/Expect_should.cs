@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using JasmineDotNet.Expects;
 using Shouldly;
 using Xunit;
@@ -10,7 +11,7 @@ namespace JasmineDotNet.Unit.Test
         [Fact]
         public void do_nothing_when_is_null()
         {
-            new Expected<string>(null).ToBeNull();
+            new Expected<string>(value:null).ToBeNull();
         }
         
         [Fact]
@@ -35,7 +36,7 @@ namespace JasmineDotNet.Unit.Test
         {
             Action action = () =>
             {
-                new Expected<string>(null).Not.ToBeNull();
+                new Expected<string>(value:null).Not.ToBeNull();
             };
 
             action.ShouldThrow<ExpectException>();
@@ -153,6 +154,12 @@ namespace JasmineDotNet.Unit.Test
             Action action = () => { new Expected<bool>(true).Not.ToBeTrue(); };
 
             action.ShouldThrow<ExpectException>();
+        }
+
+        [Fact]
+        public void do_nothing_when_throw()
+        {
+            new Expected<Exception>(() => { throw new System.NotSupportedException(); }).ToThrow<Exception>();
         }
     }
 }
