@@ -37,6 +37,8 @@ namespace JasmineDotNet
             contexts = new List<Context>();
             BeforeEach = () => { };
             BeforeAll = () => { };
+            AfterEach = () => { };
+            AfterAll = () => { };
             tests = new List<Test>();
         }
 

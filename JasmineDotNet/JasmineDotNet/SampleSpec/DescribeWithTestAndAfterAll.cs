@@ -8,7 +8,7 @@ namespace SampleSpec
         {
             describe("the describe of a success test with after all method", () =>
             {
-                beforeAll(() => { expect(true).ToBe(true);});
+                afterAll(() => { expect(true).ToBe(true);});
                 it("a test", () => {expect(false).ToBe(true);});
             });
         }
@@ -17,7 +17,7 @@ namespace SampleSpec
         {          
             describe("the describe of a fail test with after all method", () =>
             {
-                beforeAll(() => { expect(true).ToBe(true); });
+                afterAll(() => { expect(true).ToBe(true); });
                 it("a test", () => {expect(true).ToBe(true);});
             });
         }

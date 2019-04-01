@@ -38,6 +38,7 @@ namespace JasmineDotNet
                     test.Run();
                     writter.WriteSucessTest(text: test.Name, leftSeparation: nextLevelOfDepth);
                     totalNumberOfSuccessTests++;
+                    context.AfterEach.Invoke();
                 }
                 catch (Exception e)
                 {
@@ -45,6 +46,7 @@ namespace JasmineDotNet
                     totalNumberOfFailTests++;
                 }
             }
+            context.AfterAll.Invoke();
         }
     }
 }
