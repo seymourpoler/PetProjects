@@ -104,7 +104,7 @@ namespace JasmineDotNet.Unit.Test
         }
 
         [Fact]
-        public void Throw_and_exception_when_is_not_to_be_true()
+        public void throw_and_exception_when_is_not_to_be_true()
         {
             Action action = () => { new Expected<bool>(true).Not.ToBeTrue(); };
 
