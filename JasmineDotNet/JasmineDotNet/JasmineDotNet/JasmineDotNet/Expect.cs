@@ -1,4 +1,5 @@
-﻿using JasmineDotNet.Extensions;
+﻿using System;
+using JasmineDotNet.Extensions;
 
 namespace JasmineDotNet
 {
@@ -24,6 +25,14 @@ namespace JasmineDotNet
             if (!value.Equals(expectd))
             {
                 throw new ExpectException("not equal value is expected.");
+            }
+        }
+
+        public void ToBeTrue()
+        {
+            if (!Convert.ToBoolean(value))
+            {
+                throw new ExpectException("true value is expected.");
             }
         }
     }
