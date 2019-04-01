@@ -10,24 +10,14 @@ namespace SampleSpec
             {
                 var beforeAllWasThrough = false;
                 beforeAll(() => { beforeAllWasThrough = true;});
-
-                var value = 0;
-                beforeEach(() => { value++;});
-                it("the test with for each for each method", () => { expect(value).ToBe(1); });
-                it("another test with for each for each method", () => { expect(value).ToBe(2); });
-                it("before all has to be throguthn", () => {expect(beforeAllWasThrough).ToBe(true);});
+                it("a test", () => {expect(beforeAllWasThrough).ToBe(true);});
             });
             
             describe("the describe of a fail test with for each method", () =>
             {
                 var beforeAllWasThrough = false;
                 beforeAll(() => { beforeAllWasThrough = true;});
-
-                var value = 0;
-                beforeEach(() => { value++;});
-                it("the test with for each for each method", () => { expect(true).ToBe(false); });
-                it("another test with for each for each method", () => { expect(value).ToBe(2); });
-                it("before all has to be throguthn", () => {expect(beforeAllWasThrough).ToBe(true);});
+                it("a test", () => {expect(true).ToBe(false);});
             });
         }
     }

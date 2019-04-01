@@ -29,6 +29,7 @@ namespace JasmineDotNet
                 WriteInDepth(depth: nextLevelOfDepth, context: aContext);                
             }
 
+            context.BeforeAll.Invoke();
             foreach (var test in context.Tests)
             {
                 try

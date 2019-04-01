@@ -16,6 +16,7 @@ namespace JasmineDotNet
         }
 
         public Action BeforeEach { get; private set; }
+        public Action BeforeAll { get; private set; }
 
         private List<Test> tests;
         public ReadOnlyCollection<Test> Tests
@@ -33,6 +34,7 @@ namespace JasmineDotNet
             Name = name;
             contexts = new List<Context>();
             BeforeEach = () => { };
+            BeforeAll = () => { };
             tests = new List<Test>();
         }
 
@@ -49,6 +51,11 @@ namespace JasmineDotNet
         public void AddBeforeEach(Action beforeEach)
         {
             BeforeEach = beforeEach;
+        }
+        
+        public void AddBeforeAll(Action beforeAll)
+        {
+            BeforeAll = beforeAll;
         }
 
         public virtual void Build(Jasmine instance)

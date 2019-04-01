@@ -20,6 +20,7 @@ namespace JasmineDotNet
         public void beforeAll(Action action)
         {
             Check.IsNull<ArgumentNullException>(action);
+            Context.AddBeforeAll(action);
         }
 
         public void afterAll(Action action)
