@@ -8,6 +8,7 @@ namespace JasmineDotNet
     public class Context
     {
         public string Name { get; }
+        public Jasmine BuiltInstance { get; set; }
         
         private List<Context> contexts;
         public ReadOnlyCollection<Context> Contexts
@@ -15,10 +16,49 @@ namespace JasmineDotNet
             get { return contexts.AsReadOnly(); }
         }
 
-        public Action BeforeEach { get; set; }
-        public Action BeforeAll { get; set; }
-        public Action AfterEach { get; set; }
-        public Action AfterAll { get; set; }
+        Action beforeEach;
+        public Action BeforeEach
+        {
+            get { return beforeEach; }
+            set
+            {
+                Check.IsNull<ArgumentException>(value);
+                beforeEach = value;
+            } 
+        }
+
+        private Action beforeAll;
+        public Action BeforeAll
+        {
+            get { return beforeAll; }
+            set
+            {
+                Check.IsNull<ArgumentNullException>(value);
+                beforeAll = value;
+            } 
+        }
+
+        Action afterEach;
+        public Action AfterEach
+        {
+            get { return afterEach; }
+            set
+            {
+                Check.IsNull<ArgumentNullException>(value);
+                afterEach = value;
+            }
+        }
+
+        Action afterAll;
+        public Action AfterAll
+        {
+            get { return afterAll; }
+            set
+            {
+                Check.IsNull<ArgumentNullException>(value);
+                afterAll = value;
+            }
+        }
 
         private List<Test> tests;
         public ReadOnlyCollection<Test> Tests
@@ -33,12 +73,14 @@ namespace JasmineDotNet
 
         public Context(string name)
         {
+            Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(name));
+            
             Name = name;
             contexts = new List<Context>();
-            BeforeEach = () => { };
-            BeforeAll = () => { };
-            AfterEach = () => { };
-            AfterAll = () => { };
+            beforeEach = () => { };
+            beforeAll = () => { };
+            afterEach = () => { };
+            afterAll = () => { };
             tests = new List<Test>();
         }
 
@@ -55,13 +97,10 @@ namespace JasmineDotNet
         public virtual void Build(Jasmine instance)
         {
             instance.Context = this;
-            BuiltInstance = instance;
             for (var position = 0; position < contexts.Count; position++)
             {
                 contexts[position].Build(instance);
             }
         }
-
-        public Jasmine BuiltInstance { get; set; }
     }
 }

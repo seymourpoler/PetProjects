@@ -9,6 +9,7 @@ namespace JasmineDotNet
         public DescribeContext(string testSuiteName, Action action)
             : base(testSuiteName)
         {
+            Check.IsNull<ArgumentNullException>(action);
             this.action = action;
         }
         

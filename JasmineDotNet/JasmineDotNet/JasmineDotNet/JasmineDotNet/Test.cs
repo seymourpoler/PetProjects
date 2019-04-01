@@ -9,6 +9,9 @@ namespace JasmineDotNet
 
         public Test(string name, Action action)
         {
+            Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(name));
+            Check.IsNull<ArgumentNullException>(action);
+            
             Name = name;
             this.action = action;
         }
