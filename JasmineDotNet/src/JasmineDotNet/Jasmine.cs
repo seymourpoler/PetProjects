@@ -5,14 +5,15 @@ namespace JasmineDotNet
 {
     public class Jasmine
     {
-        public void describe(string testSuiteName, Action action)
+        public void describe(string testSpecificationName, Action action)
         {          
-            Specification.AddContext(new DescribeSpecification(testSuiteName, action));
+            Specification.AddContext(new DescribeSpecification(testSpecificationName, action));
         }
 
-        public void xdescribe(string testSuiteName, Action action)
+        public void xdescribe(string testSpecificationName, Action action)
         {
-            testSuiteName = testSuiteName;
+            testSpecificationName = testSpecificationName;
+            throw  new System.NotImplementedException();
         }
 
         public void beforeAll(Action action)
@@ -42,6 +43,7 @@ namespace JasmineDotNet
 
         public void xit(string testName, Action test)
         {
+            throw  new System.NotImplementedException();
         }
 
         public Expected<T> expect<T>(T value)
