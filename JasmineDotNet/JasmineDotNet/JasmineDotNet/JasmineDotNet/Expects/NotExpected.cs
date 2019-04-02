@@ -6,10 +6,12 @@ namespace JasmineDotNet.Expects
     public class NotExpected<T>
     {
         readonly T value;
+        readonly Action action;
 
-        public NotExpected(T value)
+        public NotExpected(T value, Action action)
         {
             this.value = value;
+            this.action = action;
         }
 
         public void ToBeNull()
@@ -42,6 +44,23 @@ namespace JasmineDotNet.Expects
             {
                 throw new ExpectException("false value is expected.");
             }
+        }
+
+        public void ToThrow<TException>()
+        {
+            try
+            {
+                action.Invoke();
+            }
+            catch (Exception exception)
+            {
+                if (exception.GetType() == typeof(TException))
+                {
+                    throw new ExpectException("exception is expected");
+                }
+            }
+
+            
         }
     }
 }

@@ -173,6 +173,10 @@ namespace JasmineDotNet.Unit.Test
             action.ShouldThrow<ExpectException>();
         }
         
-        
+        [Fact]
+        public void do_nothing_when_not_thrown_an_exception()
+        {
+            new Expected<Exception>(() => {  }).Not.ToThrow<Exception>();
+        }
     }
 }

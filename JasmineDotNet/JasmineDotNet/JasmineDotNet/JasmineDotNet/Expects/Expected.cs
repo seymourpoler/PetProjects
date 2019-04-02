@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 using JasmineDotNet.Extensions;
 
 namespace JasmineDotNet.Expects
@@ -23,7 +24,7 @@ namespace JasmineDotNet.Expects
         {
             get
             {
-                return new NotExpected<T>(value);
+                return new NotExpected<T>(value: value, action: action);
             }
         }
         
