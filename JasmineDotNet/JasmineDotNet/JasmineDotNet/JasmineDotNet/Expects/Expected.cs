@@ -89,5 +89,14 @@ namespace JasmineDotNet.Expects
             }
             throw new ExpectException($"{value} is greater than {number} is expected");
         }
+
+        public void ToBeLessThan(int number)
+        {
+            if (Convert.ToInt32(value) < number)
+            {
+                return;
+            }
+            throw new ExpectException($"{value} is less than {number} is expected");
+        }
     }
 }
