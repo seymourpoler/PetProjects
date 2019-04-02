@@ -75,6 +75,7 @@ namespace JasmineDotNet.Expects
             {
                 return;
             }
+            throw new ExpectException($"{value} is greater than {number} is expected");
         }
     }
 }
