@@ -263,5 +263,16 @@ namespace JasmineDotNet.Unit.Test
         {
             new Expected<int>(2).ToBeLessThan(7);
         }
+        
+        [Fact]
+        public void throw_exception_when_is_not_less_than()
+        {
+            Action action = () =>
+            {
+                new Expected<int>(2).ToBeLessThan(2);
+            };
+
+            action.ShouldThrow<ExpectException>();
+        }
     }
 }
