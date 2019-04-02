@@ -60,5 +60,13 @@ namespace JasmineDotNet.Expects
                 }
             }
         }
+        
+        public void ToContain(string text)
+        {
+            if (Convert.ToString(value).Contains(text))
+            {
+                throw new ExpectException($"contains {text} in {value} is expected");
+            }
+        }
     }
 }

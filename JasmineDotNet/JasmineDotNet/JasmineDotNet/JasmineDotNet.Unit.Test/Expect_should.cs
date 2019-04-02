@@ -206,5 +206,11 @@ namespace JasmineDotNet.Unit.Test
 
             action.ShouldThrow<ExpectException>();
         }
+        
+        [Fact]
+        public void do_nothing_when_not_contains()
+        {
+            new Expected<string>("a simple text").Not.ToContain("another");
+        }
     }
 }
