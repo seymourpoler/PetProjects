@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.Contracts;
 using JasmineDotNet.Extensions;
 
 namespace JasmineDotNet.Expects
