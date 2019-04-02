@@ -68,5 +68,13 @@ namespace JasmineDotNet.Expects
                 throw new ExpectException($"contains {text} in {value} is expected");
             }
         }
+
+        public void ToBeGreaterThan(int number)
+        {
+            if (Convert.ToInt32(value) <= number)
+            {
+                return;
+            }
+        }
     }
 }
