@@ -7,7 +7,7 @@ namespace JasmineDotNet.Expects
     {
         readonly T value;
         readonly Action action;
-        
+
         public Expected(T value)
         {
             this.value = value;
@@ -18,15 +18,12 @@ namespace JasmineDotNet.Expects
         {
             this.action = action;
         }
-        
+
         public NotExpected<T> Not
         {
-            get
-            {
-                return new NotExpected<T>(value: value, action: action);
-            }
+            get { return new NotExpected<T>(value: value, action: action); }
         }
-        
+
         public void ToBeNull()
         {
             if (value.IsNotNull())
@@ -72,7 +69,13 @@ namespace JasmineDotNet.Expects
                     return;
                 }
             }
-            throw  new ExpectException("exception is expected");
+
+            throw new ExpectException("exception is expected");
+        }
+
+        public void ToContain(string text)
+        {
+            Convert.ToString(value).Contains(text);
         }
     }
 }

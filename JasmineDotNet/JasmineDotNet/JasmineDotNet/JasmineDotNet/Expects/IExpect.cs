@@ -28,5 +28,6 @@
         void ToBeTrue();
         void ToBeFalse();
         void ToThrow<T>();
+        void ToContain(string value);
     }
 }
