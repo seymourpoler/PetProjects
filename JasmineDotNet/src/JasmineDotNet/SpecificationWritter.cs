@@ -41,6 +41,7 @@ namespace JasmineDotNet
                 {
                     if (test.IsIgnored)
                     {
+                        writter.WriteIgnoredTest(text: test.Name, leftSeparation: nextLevelOfDepth);
                         totalNumberOfIgnoredTests++;
                     }
                     else 
