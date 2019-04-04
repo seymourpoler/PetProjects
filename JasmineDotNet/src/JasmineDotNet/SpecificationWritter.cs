@@ -7,7 +7,8 @@ namespace JasmineDotNet
         readonly IWritter writter;
         int totalNumberOfFailTests = 0;
         int totalNumberOfSuccessTests = 0;
-            
+        int totalNumberOfIgnoredTests = 0;
+
         public SpecificationWritter(IWritter writter)
         {
             this.writter = writter;
@@ -17,16 +18,20 @@ namespace JasmineDotNet
         {
             const int firstLevelOfDepth = 0;
             WriteInDepth(depth: firstLevelOfDepth, specification: specification);
-            writter.WriteNumberOfTest(success: totalNumberOfSuccessTests, fail: totalNumberOfFailTests);
+            writter.WriteNumberOfTest(
+                success: totalNumberOfSuccessTests,
+                ignored: totalNumberOfIgnoredTests,
+                fail: totalNumberOfFailTests);
         }
 
+        //TDOO: refactor extract method
         void WriteInDepth(int depth, Specification specification)
         {
             writter.WriteSuite(specification.Name, depth);
             var nextLevelOfDepth = depth + 1;
             foreach (var aContext in specification.Contexts)
             {
-                WriteInDepth(depth: nextLevelOfDepth, specification: aContext);                
+                WriteInDepth(depth: nextLevelOfDepth, specification: aContext);
             }
 
             specification.BeforeAll.Invoke();
@@ -34,11 +39,18 @@ namespace JasmineDotNet
             {
                 try
                 {
-                    specification.BeforeEach.Invoke();
-                    test.Run();
-                    writter.WriteSucessTest(text: test.Name, leftSeparation: nextLevelOfDepth);
-                    totalNumberOfSuccessTests++;
-                    specification.AfterEach.Invoke();
+                    if (test.IsIgnored)
+                    {
+                        totalNumberOfIgnoredTests++;
+                    }
+                    else 
+                    {
+                        specification.BeforeEach.Invoke();
+                        test.Run();
+                        writter.WriteSucessTest(text: test.Name, leftSeparation: nextLevelOfDepth);
+                        totalNumberOfSuccessTests++;
+                        specification.AfterEach.Invoke();
+                    }
                 }
                 catch (Exception e)
                 {
@@ -46,6 +58,7 @@ namespace JasmineDotNet
                     totalNumberOfFailTests++;
                 }
             }
+
             specification.AfterAll.Invoke();
         }
     }

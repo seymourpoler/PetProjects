@@ -76,7 +76,19 @@ namespace JasmineDotNet.Unit.Test
             
             _specificationWritter.Write(context);
 
-            writter.Verify(x => x.WriteNumberOfTest(2, 0));
+            writter.Verify(x => x.WriteNumberOfTest(2, 0, 0));
+        }
+        
+        [Fact]
+        public void write_total_number_of_ignored_test()
+        {
+            var context = new Specification("a suite test");
+            context.AddTest(new JasmineDotNet.Test("a test", () => { new Expected<string>(value:null).ToBeNull(); }));
+            context.AddTest(new JasmineDotNet.Test("anoter test", () => { new Expected<string>("f").ToBeNull(); }, true));
+
+            _specificationWritter.Write(context);
+
+            writter.Verify(x => x.WriteNumberOfTest(1, 1, 0));
         }
 
         [Fact]
@@ -88,7 +100,7 @@ namespace JasmineDotNet.Unit.Test
 
             _specificationWritter.Write(context);
 
-            writter.Verify(x => x.WriteNumberOfTest(1, 1));
+            writter.Verify(x => x.WriteNumberOfTest(1, 0, 1));
         }
         
         [Fact]
@@ -104,7 +116,7 @@ namespace JasmineDotNet.Unit.Test
 
             _specificationWritter.Write(context);
 
-            writter.Verify(x => x.WriteNumberOfTest(1, 2));
+            writter.Verify(x => x.WriteNumberOfTest(1, 0, 2));
         }
     }
 }

@@ -38,6 +38,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DescribeWithIgoredTest.cs" />
     <Compile Include="DescribeWithTestAndAfterAll.cs" />
     <Compile Include="DescribeWithTestAndAfterEach.cs" />
     <Compile Include="DescribeWithTestAndBeforeAll.cs" />

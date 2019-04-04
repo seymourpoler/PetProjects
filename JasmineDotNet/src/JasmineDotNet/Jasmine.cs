@@ -38,12 +38,12 @@ namespace JasmineDotNet
 
         public void it(string testName, Action action)
         {
-            Specification.AddTest(new Test(testName, action));
+            Specification.AddTest(new Test(name: testName, action: action));
         }
 
-        public void xit(string testName, Action test)
+        public void xit(string testName, Action action)
         {
-            throw  new System.NotImplementedException();
+            Specification.AddTest(new Test(name: testName, action:action, isIgnored: true));
         }
 
         public Expected<T> expect<T>(T value)

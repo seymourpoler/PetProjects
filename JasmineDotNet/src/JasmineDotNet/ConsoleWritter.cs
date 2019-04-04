@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.SqlServer.Server;
 
 namespace JasmineDotNet
 {
@@ -18,6 +19,13 @@ namespace JasmineDotNet
             Console.WriteLine();
         }
 
+        public void WriteIgnoredTest(string text, int leftSeparation = 0)
+        {
+            WriteLeftSeparation(leftSeparation);
+            WriteYellow(text);
+            Console.WriteLine();
+        }
+
         public void WriteFailTest(string text, string errorMessage, int leftSeparation = 0)
         {
             WriteLeftSeparation(leftSeparation);
@@ -28,13 +36,15 @@ namespace JasmineDotNet
             Console.WriteLine();
         }
 
-        public void WriteNumberOfTest(int success, int fail)
+        public void WriteNumberOfTest(int success, int ignored, int fail)
         {
             Console.WriteLine();
             Console.WriteLine();
             WriteWhite($"Total tests: {success + fail}");
             WriteWhite(",");
             WriteGreen($" success: {success}");
+            WriteWhite(",");
+            WriteGreen($" ignored: {ignored}");
             WriteWhite(",");
             WriteRed($" fail: {fail}");
             Console.WriteLine();
@@ -45,13 +55,19 @@ namespace JasmineDotNet
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(message);
         }
-        
+
         void WriteGreen(string message)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(message);
         }
-        
+
+        void WriteYellow(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(message);
+        }
+
         void WriteRed(string message)
         {
             Console.ForegroundColor = ConsoleColor.Red;
