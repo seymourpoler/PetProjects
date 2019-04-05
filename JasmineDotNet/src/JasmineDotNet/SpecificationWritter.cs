@@ -34,9 +34,9 @@ namespace JasmineDotNet
             }
             writter.WriteSuite(text: specification.Name, leftSeparation: depth);
             var nextLevelOfDepth = depth + 1;
-            foreach (var aContext in specification.Specifications)
+            foreach (var aSpecification in specification.Specifications)
             {
-                WriteInDepth(depth: nextLevelOfDepth, specification: aContext);
+                WriteInDepth(depth: nextLevelOfDepth, specification: aSpecification);
             }
 
             specification.BeforeAll.Invoke();
@@ -58,7 +58,7 @@ namespace JasmineDotNet
             }
             foreach (var test in specification.Tests)
             {
-                writter.WriteIgnored(text: test.Name, leftSeparation: depth);
+                writter.WriteIgnored(text: test.Name, leftSeparation: nextLevelOfDepth);
                 totalNumberOfIgnoredTests++;
             }
         }
