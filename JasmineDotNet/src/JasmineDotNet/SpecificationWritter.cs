@@ -34,7 +34,7 @@ namespace JasmineDotNet
             }
             writter.WriteSuite(text: specification.Name, leftSeparation: depth);
             var nextLevelOfDepth = depth + 1;
-            foreach (var aContext in specification.Contexts)
+            foreach (var aContext in specification.Specifications)
             {
                 WriteInDepth(depth: nextLevelOfDepth, specification: aContext);
             }
@@ -52,7 +52,7 @@ namespace JasmineDotNet
         {
             writter.WriteIgnored(text: specification.Name, leftSeparation: depth);
             var nextLevelOfDepth = depth + 1;
-            foreach (var aContext in specification.Contexts)
+            foreach (var aContext in specification.Specifications)
             {
                 WriteIgnored(specification: aContext, depth: nextLevelOfDepth);
             }

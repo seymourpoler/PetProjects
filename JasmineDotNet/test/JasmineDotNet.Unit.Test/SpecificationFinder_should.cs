@@ -20,7 +20,7 @@ namespace JasmineDotNet.Unit.Test
             var result = finder.Find(null);
 
             result.Tests.ShouldBeEmpty();
-            result.Contexts.ShouldBeEmpty();
+            result.Specifications.ShouldBeEmpty();
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace JasmineDotNet.Unit.Test
             var result = finder.Find(typeof(ClassWithNoMethods));
 
             result.Name.ShouldBe(nameof(ClassWithNoMethods));
-            result.Contexts.ShouldBeEmpty();
+            result.Specifications.ShouldBeEmpty();
             result.Tests.ShouldBeEmpty();
         }
         class ClassWithNoMethods: Jasmine { }
@@ -41,8 +41,8 @@ namespace JasmineDotNet.Unit.Test
 
             result.Name.ShouldBe(nameof(ClassWithOneMethod));
             result.Tests.ShouldBeEmpty();
-            result.Contexts.First().Name.ShouldBe("a_test_method");
-            result.Contexts.First().Tests.ShouldBeEmpty();
+            result.Specifications.First().Name.ShouldBe("a_test_method");
+            result.Specifications.First().Tests.ShouldBeEmpty();
         }
         class ClassWithOneMethod : Jasmine { public void a_test_method(){} }
         
@@ -52,8 +52,8 @@ namespace JasmineDotNet.Unit.Test
             var result = finder.Find(typeof(ClassWithOneMethodAndOneTest));
 
             result.Name.ShouldBe(nameof(ClassWithOneMethodAndOneTest));
-            result.Contexts.First().Name.ShouldBe("a_test_method");
-            result.Contexts.First().Tests.First().Name.ShouldBe("a test");
+            result.Specifications.First().Name.ShouldBe("a_test_method");
+            result.Specifications.First().Tests.First().Name.ShouldBe("a test");
         }
         class ClassWithOneMethodAndOneTest : Jasmine
         {
@@ -69,9 +69,9 @@ namespace JasmineDotNet.Unit.Test
             var result = finder.Find(typeof(ClassWithOneMethodOneDescribeAndOneTest));
 
             result.Name.ShouldBe(nameof(ClassWithOneMethodOneDescribeAndOneTest));
-            result.Contexts.First().Name.ShouldBe("a_test_method");
-            result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
-            result.Contexts.First().Contexts.First().Tests.First().Name.ShouldBe("a test");
+            result.Specifications.First().Name.ShouldBe("a_test_method");
+            result.Specifications.First().Specifications.First().Name.ShouldBe("a describe");
+            result.Specifications.First().Specifications.First().Tests.First().Name.ShouldBe("a test");
         }
 
         class ClassWithOneMethodOneDescribeAndOneTest : Jasmine
@@ -94,10 +94,10 @@ namespace JasmineDotNet.Unit.Test
             var result = finder.Find(typeof(ClassWithOneMethodWithTestsAndOneDescribeAndOneTest));
 
             result.Name.ShouldBe(nameof(ClassWithOneMethodWithTestsAndOneDescribeAndOneTest));
-            result.Contexts.First().Name.ShouldBe("a_test_method");
-            result.Contexts.First().Tests.First().Name.ShouldBe("first test");
-            result.Contexts.First().Tests.Second().Name.ShouldBe("second test");
-            result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
+            result.Specifications.First().Name.ShouldBe("a_test_method");
+            result.Specifications.First().Tests.First().Name.ShouldBe("first test");
+            result.Specifications.First().Tests.Second().Name.ShouldBe("second test");
+            result.Specifications.First().Specifications.First().Name.ShouldBe("a describe");
             
         }
         class ClassWithOneMethodWithTestsAndOneDescribeAndOneTest : Jasmine
@@ -121,10 +121,10 @@ namespace JasmineDotNet.Unit.Test
             var result = finder.Find(typeof(ClassWithDescribeWithAnotherDescribeInside));
 
             result.Name.ShouldBe(nameof(ClassWithDescribeWithAnotherDescribeInside));
-            result.Contexts.First().Name.ShouldBe("a_test_method");
-            result.Contexts.First().Contexts.First().Name.ShouldBe("a describe");
-            result.Contexts.First().Contexts.First().Contexts.First().Name.ShouldBe("a describe inside");
-            result.Contexts.First().Contexts.First().Contexts.First().Tests.First().Name.ShouldBe("a test");
+            result.Specifications.First().Name.ShouldBe("a_test_method");
+            result.Specifications.First().Specifications.First().Name.ShouldBe("a describe");
+            result.Specifications.First().Specifications.First().Specifications.First().Name.ShouldBe("a describe inside");
+            result.Specifications.First().Specifications.First().Specifications.First().Tests.First().Name.ShouldBe("a test");
 
         }
         class ClassWithDescribeWithAnotherDescribeInside : Jasmine

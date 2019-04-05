@@ -17,9 +17,9 @@ namespace JasmineDotNet
         {
             base.Build(instance);
             method.Invoke(instance, null);
-            for (var position = 0; position < Contexts.Count(); position++)
+            for (var position = 0; position < Specifications.Count(); position++)
             {
-                Contexts[position].Build(instance);
+                Specifications[position].Build(instance);
             }
         }
     }

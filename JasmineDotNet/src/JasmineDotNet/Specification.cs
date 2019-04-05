@@ -10,7 +10,7 @@ namespace JasmineDotNet
         public string Name { get; }
         public bool IsIgnored { get; }
         private List<Specification> specifications;
-        public ReadOnlyCollection<Specification> Contexts
+        public ReadOnlyCollection<Specification> Specifications
         {
             get { return specifications.AsReadOnly(); }
         }

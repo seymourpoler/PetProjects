@@ -8,17 +8,17 @@ namespace JasmineRunner
         {
             var path = args[0];
             var typeFinder = new TypeFinder();
-            var contextFinder = new SpecificationFinder(new ClassFinder(new MethodFinder()));
-            var specWritter = new SpecificationWritter(new ConsoleWritter());
+            var specificationFinder = new SpecificationFinder(new ClassFinder(new MethodFinder()));
+            var specificationWritter = new SpecificationWritter(new ConsoleWritter());
             
             var types = typeFinder.find(path);
-            var context = new Specification(path);
+            var specification = new Specification(path);
             foreach (var type in types)
             {
-                var currentContext = contextFinder.Find(type);
-                context.AddContext(currentContext);
+                var currentSpecification = specificationFinder.Find(type);
+                specification.AddContext(currentSpecification);
             }
-            specWritter.Write(context);
+            specificationWritter.Write(specification);
         }
     }
 }
