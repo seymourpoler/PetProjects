@@ -40,7 +40,7 @@ namespace JasmineDotNet
         {
             Console.WriteLine();
             Console.WriteLine();
-            WriteWhite($"Total tests: {success + fail}");
+            WriteWhite($"Total tests: {success + ignored + fail}");
             WriteGreen($" success: {success}");
             WriteYellow($" ignored: {ignored}");
             WriteRed($" fail: {fail}");
