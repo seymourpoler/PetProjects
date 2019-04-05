@@ -8,8 +8,7 @@ namespace JasmineDotNet
     public class Specification
     {
         public string Name { get; }
-        public Jasmine BuiltInstance { get; set; }
-        
+       
         private List<Specification> specifications;
         public ReadOnlyCollection<Specification> Contexts
         {
