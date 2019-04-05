@@ -24,7 +24,6 @@ namespace JasmineDotNet
                 fail: totalNumberOfFailTests);
         }
 
-        //TDOO: refactor extract method
         void WriteInDepth(int depth, Specification specification)
         {
             writter.WriteSuite(specification.Name, depth);
@@ -37,30 +36,35 @@ namespace JasmineDotNet
             specification.BeforeAll.Invoke();
             foreach (var test in specification.Tests)
             {
-                try
-                {
-                    if (test.IsIgnored)
-                    {
-                        writter.WriteIgnoredTest(text: test.Name, leftSeparation: nextLevelOfDepth);
-                        totalNumberOfIgnoredTests++;
-                    }
-                    else 
-                    {
-                        specification.BeforeEach.Invoke();
-                        test.Run();
-                        writter.WriteSucessTest(text: test.Name, leftSeparation: nextLevelOfDepth);
-                        totalNumberOfSuccessTests++;
-                        specification.AfterEach.Invoke();
-                    }
-                }
-                catch (Exception e)
-                {
-                    writter.WriteFailTest(text: test.Name, errorMessage: e.Message, leftSeparation: nextLevelOfDepth);
-                    totalNumberOfFailTests++;
-                }
+                Run(specification, test, nextLevelOfDepth);
             }
 
             specification.AfterAll.Invoke();
+        }
+
+        void Run(Specification specification, Test test, int levelOfDepth)
+        {
+            try
+            {
+                if (test.IsIgnored)
+                {
+                    writter.WriteIgnoredTest(text: test.Name, leftSeparation: levelOfDepth);
+                    totalNumberOfIgnoredTests++;
+                }
+                else
+                {
+                    specification.BeforeEach.Invoke();
+                    test.Run();
+                    writter.WriteSucessTest(text: test.Name, leftSeparation: levelOfDepth);
+                    totalNumberOfSuccessTests++;
+                    specification.AfterEach.Invoke();
+                }
+            }
+            catch (Exception e)
+            {
+                writter.WriteFailTest(text: test.Name, errorMessage: e.Message, leftSeparation: levelOfDepth);
+                totalNumberOfFailTests++;
+            }
         }
     }
 }
