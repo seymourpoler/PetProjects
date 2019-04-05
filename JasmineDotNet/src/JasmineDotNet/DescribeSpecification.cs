@@ -6,8 +6,8 @@ namespace JasmineDotNet
     {
         private readonly Action action;
         
-        public DescribeSpecification(string testSuiteName, Action action)
-            : base(testSuiteName)
+        public DescribeSpecification(string testSuiteName, Action action, bool isIgnored=false)
+            : base(name: testSuiteName, isIgnored: isIgnored)
         {
             Check.IsNull<ArgumentNullException>(action);
             this.action = action;

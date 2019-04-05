@@ -26,7 +26,7 @@ namespace JasmineDotNet
 
         void WriteInDepth(int depth, Specification specification)
         {
-            writter.WriteSuite(specification.Name, depth);
+            WriteSuite(specification: specification, depth: depth);
             var nextLevelOfDepth = depth + 1;
             foreach (var aContext in specification.Contexts)
             {
@@ -36,17 +36,27 @@ namespace JasmineDotNet
             specification.BeforeAll.Invoke();
             foreach (var test in specification.Tests)
             {
-                Run(specification, test, nextLevelOfDepth);
+                WriteTest(specification, test, nextLevelOfDepth);
             }
 
             specification.AfterAll.Invoke();
         }
 
-        void Run(Specification specification, Test test, int levelOfDepth)
+        void WriteSuite(Specification specification, int depth)
+        {
+            if (specification.IsIgnored)
+            {
+                writter.WriteIgnoredTest(text: specification.Name, leftSeparation: depth);
+                return;
+            }
+            writter.WriteSuite(text: specification.Name, leftSeparation: depth);
+        }
+        
+        void WriteTest(Specification specification, Test test, int levelOfDepth)
         {
             try
             {
-                if (test.IsIgnored)
+                if (test.IsIgnored || specification.IsIgnored)
                 {
                     writter.WriteIgnoredTest(text: test.Name, leftSeparation: levelOfDepth);
                     totalNumberOfIgnoredTests++;

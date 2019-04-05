@@ -12,8 +12,7 @@ namespace JasmineDotNet
 
         public void xdescribe(string testSpecificationName, Action action)
         {
-            testSpecificationName = testSpecificationName;
-            throw  new System.NotImplementedException();
+            Specification.AddContext(new DescribeSpecification(testSuiteName: testSpecificationName, action: action, isIgnored: true));
         }
 
         public void beforeAll(Action action)

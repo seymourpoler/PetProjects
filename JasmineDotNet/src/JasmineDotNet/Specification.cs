@@ -8,7 +8,7 @@ namespace JasmineDotNet
     public class Specification
     {
         public string Name { get; }
-       
+        public bool IsIgnored { get; }
         private List<Specification> specifications;
         public ReadOnlyCollection<Specification> Contexts
         {
@@ -70,11 +70,12 @@ namespace JasmineDotNet
             return new Specification("No soecification of tests");
         }
 
-        public Specification(string name)
+        public Specification(string name, bool isIgnored=false)
         {
             Check.If<ArgumentNullException>(() => String.IsNullOrWhiteSpace(name));
             
             Name = name;
+            IsIgnored = isIgnored;
             specifications = new List<Specification>();
             beforeEach = () => { };
             beforeAll = () => { };
