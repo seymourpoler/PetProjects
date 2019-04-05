@@ -24,8 +24,14 @@ namespace JasmineDotNet
                 fail: totalNumberOfFailTests);
         }
 
+        //TODO: refactor too long method
         void WriteInDepth(int depth, Specification specification)
         {
+            if (specification.IsIgnored)
+            {
+                WriteIgnored(specification: specification, depth: depth);
+                return;
+            }
             WriteSuite(specification: specification, depth: depth);
             var nextLevelOfDepth = depth + 1;
             foreach (var aContext in specification.Contexts)
@@ -42,6 +48,21 @@ namespace JasmineDotNet
             specification.AfterAll.Invoke();
         }
 
+        void WriteIgnored(Specification specification, int depth)
+        {
+            writter.WriteIgnoredTest(text: specification.Name, leftSeparation: depth);
+            var nextLevelOfDepth = depth + 1;
+            foreach (var aContext in specification.Contexts)
+            {
+                WriteIgnored(specification: aContext, depth: nextLevelOfDepth);
+            }
+            foreach (var test in specification.Tests)
+            {
+                writter.WriteIgnoredTest(text: test.Name, leftSeparation: depth);
+                totalNumberOfIgnoredTests++;
+            }
+        }
+        
         void WriteSuite(Specification specification, int depth)
         {
             if (specification.IsIgnored)

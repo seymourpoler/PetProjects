@@ -27,5 +27,16 @@ namespace SampleSpec
                 xit("ignored test", () => { throw new System.Exception(); });
             });
         }
+        
+        public void method_with_ignored_describe_and_another_describe_and_a_test()
+        {
+            xdescribe("a describe with ignore test", () =>
+            {
+                describe("another describe", () =>
+                {
+                    it("ignored test", () => { throw new System.Exception(); }); 
+                });
+            });
+        }
     }
 }
