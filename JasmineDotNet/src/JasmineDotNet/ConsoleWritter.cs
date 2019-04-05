@@ -19,7 +19,7 @@ namespace JasmineDotNet
             Console.WriteLine();
         }
 
-        public void WriteIgnoredTest(string text, int leftSeparation = 0)
+        public void WriteIgnored(string text, int leftSeparation = 0)
         {
             WriteLeftSeparation(leftSeparation);
             WriteYellow(text);
