@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using JasmineDotNet.Expects;
 using Shouldly;
 using Xunit;
