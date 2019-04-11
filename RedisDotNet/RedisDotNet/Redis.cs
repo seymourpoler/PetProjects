@@ -7,7 +7,7 @@ namespace RedisDotNet
         readonly  string _host;
         readonly int _port;
         
-        public Redis(string host, int port)
+        public Redis(string host="localhost", int port=6379)
         {
             _host = host;
             _port = port;
