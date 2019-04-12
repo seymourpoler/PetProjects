@@ -2,7 +2,7 @@
 
 namespace RedisDotNet
 {
-    public class Redis : IDisposable
+    public class Redis : IDisposable, IRedis
     {
         readonly  string _host;
         readonly int _port;
@@ -17,6 +17,12 @@ namespace RedisDotNet
         {
             GC.SuppressFinalize (this);
             throw  new NotImplementedException();
+        }
+
+        public void Set<T>(string key, T value)
+        {
+            Check.IsNull<ArgumentNullException>(key);
+            Check.IsNull<ArgumentNullException>(value);
         }
     }
 }

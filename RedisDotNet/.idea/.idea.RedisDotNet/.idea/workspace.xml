@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="958657bf-5d57-42cf-b365-6253e7d737f0" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Check_should.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedisDotNet/IRedis.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedisDotNet/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedisDotNet/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RedisDotNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedisDotNet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedisDotNet/RedisFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisDotNet.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RedisDotNet.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisDotNet/Redis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisDotNet/Redis.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,16 +18,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Redis.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Redis.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="456">
+              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
               <folding>
-                <marker date="1555002069070" expanded="true" signature="36:432" ph="{...}" />
-                <marker date="1555002069070" expanded="true" signature="75:430" ph="{...}" />
-                <marker date="1555002069070" expanded="true" signature="211:283" ph="{...}" />
-                <marker date="1555002069070" expanded="true" signature="314:424" ph="{...}" />
+                <marker date="1555050885775" expanded="true" signature="36:619" ph="{...}" />
+                <marker date="1555050885775" expanded="true" signature="83:617" ph="{...}" />
+                <marker date="1555050885775" expanded="true" signature="219:291" ph="{...}" />
+                <marker date="1555050885775" expanded="true" signature="322:432" ph="{...}" />
+                <marker date="1555050885775" expanded="true" signature="481:611" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRedis.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RedisDotNet/IRedis.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+              <folding>
+                <marker date="1555050839499" expanded="true" signature="21:107" ph="{...}" />
+                <marker date="1555050839499" expanded="true" signature="51:105" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Check.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RedisDotNet/Check.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+              <folding>
+                <marker date="1555051168272" expanded="true" signature="36:320" ph="{...}" />
+                <marker date="1555051168272" expanded="true" signature="68:318" ph="{...}" />
+                <marker date="1555051168272" expanded="true" signature="137:312" ph="{...}" />
+                <marker date="1555051168272" expanded="true" signature="181:289" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Check_should.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Check_should.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
+              <folding>
+                <marker date="1555051205693" expanded="true" signature="6:42" ph="..." />
+                <marker date="1555051205693" expanded="true" signature="75:348" ph="{...}" />
+                <marker date="1555051205693" expanded="true" signature="107:346" ph="{...}" />
+                <marker date="1555051205693" expanded="true" signature="180:340" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -36,13 +84,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Check_should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedisDotNet/Check.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedisDotNet/IRedis.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/RedisDotNet/Class1.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/RedisFactory.cs" />
+        <option value="$PROJECT_DIR$/RedisDotNet/IRedis.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/Redis.cs" />
+        <option value="$PROJECT_DIR$/RedisDotNet.Unit.Test/Class1.cs" />
+        <option value="$PROJECT_DIR$/RedisDotNet/Check.cs" />
+        <option value="$PROJECT_DIR$/RedisDotNet.Unit.Test/Check_should.cs" />
       </list>
     </option>
   </component>
@@ -73,12 +128,17 @@
           <expand>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="RedisDotNet (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="RedisDotNet (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="RedisDotNet (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="RedisDotNet (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="RedisDotNet" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="RedisDotNet (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="RedisDotNet.Unit.Test" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -104,6 +164,25 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.Default" />
+    </list>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -115,12 +194,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555001320001</updated>
       <workItem from="1555001322375" duration="426000" />
-      <workItem from="1555001964650" duration="710000" />
+      <workItem from="1555001964650" duration="1355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1136000" />
+    <option name="totallyTimeSpent" value="1781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -133,18 +212,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" weight="0.32937685" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
+      <window_info active="true" anchor="bottom" id="NuGet" order="7" visible="true" weight="0.32937685" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32937685" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -156,7 +235,6 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32937685" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -180,10 +258,11 @@
         <state relative-caret-position="399">
           <caret line="21" column="58" lean-forward="true" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
           <folding>
-            <marker date="1555002069070" expanded="true" signature="36:432" ph="{...}" />
-            <marker date="1555002069070" expanded="true" signature="75:430" ph="{...}" />
-            <marker date="1555002069070" expanded="true" signature="211:283" ph="{...}" />
-            <marker date="1555002069070" expanded="true" signature="314:424" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="36:619" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="83:617" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="219:291" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="322:432" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="481:611" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -198,13 +277,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="456">
+          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
           <folding>
-            <marker date="1555002069070" expanded="true" signature="36:432" ph="{...}" />
-            <marker date="1555002069070" expanded="true" signature="75:430" ph="{...}" />
-            <marker date="1555002069070" expanded="true" signature="211:283" ph="{...}" />
-            <marker date="1555002069070" expanded="true" signature="314:424" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="36:619" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="83:617" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="219:291" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="322:432" ph="{...}" />
+            <marker date="1555050885775" expanded="true" signature="481:611" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet/IRedis.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding>
+            <marker date="1555050839499" expanded="true" signature="21:107" ph="{...}" />
+            <marker date="1555050839499" expanded="true" signature="51:105" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet/Check.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+          <folding>
+            <marker date="1555051168272" expanded="true" signature="36:320" ph="{...}" />
+            <marker date="1555051168272" expanded="true" signature="68:318" ph="{...}" />
+            <marker date="1555051168272" expanded="true" signature="137:312" ph="{...}" />
+            <marker date="1555051168272" expanded="true" signature="181:289" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Check_should.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
+          <folding>
+            <marker date="1555051205693" expanded="true" signature="6:42" ph="..." />
+            <marker date="1555051205693" expanded="true" signature="75:348" ph="{...}" />
+            <marker date="1555051205693" expanded="true" signature="107:346" ph="{...}" />
+            <marker date="1555051205693" expanded="true" signature="180:340" ph="{...}" />
           </folding>
         </state>
       </provider>
