@@ -13,5 +13,13 @@ namespace RedisDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentNullException>();
         }
+        
+        [Fact]
+        public void do_nothing_when_is_not_null()
+        {
+            Action action = () => { Check.IsNull<ArgumentNullException>("as"); };
+
+            action.ShouldNotThrow();
+        }
     }
 }
