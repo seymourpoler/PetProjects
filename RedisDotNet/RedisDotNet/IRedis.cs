@@ -2,6 +2,6 @@
 {
     public interface IRedis
     {
-        void Set<T>(string key, T value);
+        void Set(string key, string value);
     }
 }
