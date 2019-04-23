@@ -24,6 +24,9 @@ namespace RedisDotNet
 
         public void Set(string key, string value)
         {
+            Check.IsNull<ArgumentNullException>(key);
+            Check.IsNull<ArgumentNullException>(value);
+            
             Set(key: key, value: Encoding.UTF8.GetBytes(value));
         }
 
