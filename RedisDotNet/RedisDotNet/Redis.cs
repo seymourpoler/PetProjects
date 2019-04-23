@@ -56,5 +56,10 @@ namespace RedisDotNet
             
             return Encoding.UTF8.GetBytes(result.ToString());
         }
+
+        public void FlushAll()
+        {
+            throw  new NotImplementedException();
+        }
     }
 }

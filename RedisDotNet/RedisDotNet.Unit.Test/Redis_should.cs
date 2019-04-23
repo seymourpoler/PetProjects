@@ -16,5 +16,16 @@ namespace RedisDotNet.Unit.Test
         {
             redis.Set("foo", "bar");
         }
+        
+        [Fact]
+        public void clean_all_keys()
+        {
+            redis.Set("keyOne", "bar");
+            redis.Set("keyTwo", "bar");
+            redis.Set("keyThree", "bar");
+            redis.Set("keyFour", "bar");
+            
+            redis.FlushAll();
+        }
     }
 }
