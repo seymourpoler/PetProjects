@@ -9,8 +9,8 @@ namespace RedisDotNet
         readonly int _port;
 
         public Redis(
-            string host="localhost", 
-            int port=6379)
+            string host = "localhost", 
+            int port = 6379)
         {
             _host = host;
             _port = port;
@@ -34,8 +34,8 @@ namespace RedisDotNet
                     data: Encoding.UTF8.GetBytes(value));
                 
                 socket.Send(Encoding.UTF8.GetBytes(dataToBeSent));
-                socket.Send(Encoding.UTF8.GetBytes(key));
-                socket.Send(new byte[] {(byte) '\r', (byte) '\n'});
+                socket.Send(Encoding.UTF8.GetBytes(value));
+                socket.Send(new[] {(byte) '\r', (byte) '\n'});
             }
         }
 

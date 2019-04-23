@@ -8,7 +8,9 @@ namespace RedisDotNet
         {
             var result = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             result.NoDelay = true;
+            result.SendTimeout = -1;
             result.Connect(host: host, port: port);
+            
             return result;
         }
     }
