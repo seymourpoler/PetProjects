@@ -27,10 +27,10 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void clean_all_keys()
         {
-            redis.Set("keyOne", "bar");
-            redis.Set("keyTwo", "bar");
-            redis.Set("keyThree", "bar");
-            redis.Set("keyFour", "bar");
+            redis.Set("keyOne", "valueOne");
+            redis.Set("keyTwo", "valueTwo");
+            redis.Set("keyThree", "valueThree");
+            redis.Set("keyFour", "valueFour");
 
             redis.FlushAll();
 

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="958657bf-5d57-42cf-b365-6253e7d737f0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/RedisDotNet/RedisFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RedisDotNet/SocketSender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedisDotNet/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedisDotNet/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedisDotNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedisDotNet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedisDotNet.Unit.Test/RedisDotNet.Unit.Test.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RedisDotNet.Unit.Test/RedisDotNet.Unit.Test.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedisDotNet/Redis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisDotNet/Redis.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +16,7 @@
       <file leaf-file-name="Redis.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
+            <state relative-caret-position="152">
               <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding>
                 <marker date="1556038589854" expanded="true" signature="6:32" ph="..." />
@@ -39,55 +33,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisFactory.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RedisDotNet/RedisFactory.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-              <folding>
-                <marker date="1556038600033" expanded="true" signature="21:351" ph="{...}" />
-                <marker date="1556038600033" expanded="true" signature="60:349" ph="{...}" />
-                <marker date="1556038600033" expanded="true" signature="173:343" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Encoding.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3416F7F4-F4EC-454A-B354-95DE7423B688/7f/3798a678/Encoding.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="411" column="6" selection-start-line="411" selection-start-column="6" selection-end-line="411" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketFactory.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RedisDotNet/SocketFactory.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-              <folding>
-                <marker date="1556024675341" expanded="true" signature="48:447" ph="{...}" />
-                <marker date="1556024675341" expanded="true" signature="88:445" ph="{...}" />
-                <marker date="1556024675341" expanded="true" signature="153:439" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Redis_should.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Redis_should.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="388">
+              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
               <folding>
-                <marker date="1556037792370" expanded="true" signature="6:23" ph="..." />
-                <marker date="1556037792370" expanded="true" signature="56:968" ph="{...}" />
-                <marker date="1556037792370" expanded="true" signature="88:966" ph="{...}" />
-                <marker date="1556037792370" expanded="true" signature="189:315" ph="{...}" />
-                <marker date="1556037792370" expanded="true" signature="372:561" ph="{...}" />
-                <marker date="1556037792370" expanded="true" signature="622:960" ph="{...}" />
+                <marker date="1556038739525" expanded="true" signature="6:23" ph="..." />
+                <marker date="1556038739525" expanded="true" signature="56:991" ph="{...}" />
+                <marker date="1556038739525" expanded="true" signature="88:989" ph="{...}" />
+                <marker date="1556038739525" expanded="true" signature="189:315" ph="{...}" />
+                <marker date="1556038739525" expanded="true" signature="372:561" ph="{...}" />
+                <marker date="1556038739525" expanded="true" signature="622:983" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -125,10 +82,10 @@
         <option value="$PROJECT_DIR$/RedisDotNet/SocketFactory.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/IRedis.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/ISocketSender.cs" />
-        <option value="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/SocketSender.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/Redis.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/RedisFactory.cs" />
+        <option value="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" />
       </list>
     </option>
   </component>
@@ -229,12 +186,12 @@
       <workItem from="1555335829718" duration="6350000" />
       <workItem from="1555593744941" duration="1884000" />
       <workItem from="1555661374279" duration="1704000" />
-      <workItem from="1555938092281" duration="12550000" />
+      <workItem from="1555938092281" duration="12687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24885000" />
+    <option name="totallyTimeSpent" value="25022000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -252,13 +209,13 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" order="7" weight="0.32838774" />
+      <window_info active="true" anchor="bottom" id="Unit Tests" order="7" visible="true" weight="0.32838774" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.32838774" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32843137" />
       <window_info anchor="right" id="Database" order="3" />
@@ -283,34 +240,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs</url>
-          <line>29</line>
-          <properties documentPath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" initialLine="22">
-            <startOffsets>
-              <startOffset value="645" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="672" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs</url>
-          <line>20</line>
-          <properties documentPath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" initialLine="20">
-            <startOffsets>
-              <startOffset value="395" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="419" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
   </component>
@@ -338,12 +267,12 @@
         <state relative-caret-position="304">
           <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding>
-            <marker date="1556037792370" expanded="true" signature="6:23" ph="..." />
-            <marker date="1556037792370" expanded="true" signature="56:968" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="88:966" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="189:315" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="372:561" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="622:960" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="6:23" ph="..." />
+            <marker date="1556038739525" expanded="true" signature="56:991" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="88:989" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="189:315" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="372:561" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="622:983" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -392,12 +321,12 @@
         <state relative-caret-position="342">
           <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding>
-            <marker date="1556037792370" expanded="true" signature="6:23" ph="..." />
-            <marker date="1556037792370" expanded="true" signature="56:968" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="88:966" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="189:315" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="372:561" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="622:960" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="6:23" ph="..." />
+            <marker date="1556038739525" expanded="true" signature="56:991" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="88:989" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="189:315" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="372:561" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="622:983" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -447,12 +376,12 @@
         <state relative-caret-position="323">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
-            <marker date="1556037792370" expanded="true" signature="6:23" ph="..." />
-            <marker date="1556037792370" expanded="true" signature="56:968" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="88:966" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="189:315" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="372:561" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="622:960" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="6:23" ph="..." />
+            <marker date="1556038739525" expanded="true" signature="56:991" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="88:989" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="189:315" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="372:561" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="622:983" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -576,25 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3416F7F4-F4EC-454A-B354-95DE7423B688/7f/3798a678/Encoding.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="411" column="6" selection-start-line="411" selection-start-column="6" selection-end-line="411" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RedisDotNet/SocketFactory.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding>
-            <marker date="1556024675341" expanded="true" signature="48:447" ph="{...}" />
-            <marker date="1556024675341" expanded="true" signature="88:445" ph="{...}" />
-            <marker date="1556024675341" expanded="true" signature="153:439" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/26/f42fb47c/TestInvoker`1.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -678,21 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <marker date="1556037792370" expanded="true" signature="6:23" ph="..." />
-            <marker date="1556037792370" expanded="true" signature="56:968" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="88:966" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="189:315" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="372:561" ph="{...}" />
-            <marker date="1556037792370" expanded="true" signature="622:960" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RedisDotNet/SocketSender.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
@@ -706,24 +601,6 @@
             <marker date="1556038564957" expanded="true" signature="578:666" ph="{...}" />
             <marker date="1556038564957" expanded="true" signature="724:888" ph="{...}" />
             <marker date="1556038564957" expanded="true" signature="814:878" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <marker date="1556038589854" expanded="true" signature="6:32" ph="..." />
-            <marker date="1556038589854" expanded="true" signature="55:1817" ph="{...}" />
-            <marker date="1556038589854" expanded="true" signature="102:1815" ph="{...}" />
-            <marker date="1556038589854" expanded="true" signature="212:274" ph="{...}" />
-            <marker date="1556038589854" expanded="false" signature="305:415" ph="{...}" />
-            <marker date="1556038589854" expanded="false" signature="466:674" ph="{...}" />
-            <marker date="1556038589854" expanded="true" signature="725:1107" ph="{...}" />
-            <marker date="1556038589854" expanded="true" signature="1184:1585" ph="{...}" />
-            <marker date="1556038589854" expanded="true" signature="1617:1809" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -747,6 +624,58 @@
             <marker date="1556038600033" expanded="true" signature="21:351" ph="{...}" />
             <marker date="1556038600033" expanded="true" signature="60:349" ph="{...}" />
             <marker date="1556038600033" expanded="true" signature="173:343" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3416F7F4-F4EC-454A-B354-95DE7423B688/7f/3798a678/Encoding.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="411" column="6" selection-start-line="411" selection-start-column="6" selection-end-line="411" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet/SocketFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <marker date="1556024675341" expanded="true" signature="48:447" ph="{...}" />
+            <marker date="1556024675341" expanded="true" signature="88:445" ph="{...}" />
+            <marker date="1556024675341" expanded="true" signature="153:439" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <marker date="1556038589854" expanded="true" signature="6:32" ph="..." />
+            <marker date="1556038589854" expanded="true" signature="55:1817" ph="{...}" />
+            <marker date="1556038589854" expanded="true" signature="102:1815" ph="{...}" />
+            <marker date="1556038589854" expanded="true" signature="212:274" ph="{...}" />
+            <marker date="1556038589854" expanded="false" signature="305:415" ph="{...}" />
+            <marker date="1556038589854" expanded="false" signature="466:674" ph="{...}" />
+            <marker date="1556038589854" expanded="true" signature="725:1107" ph="{...}" />
+            <marker date="1556038589854" expanded="true" signature="1184:1585" ph="{...}" />
+            <marker date="1556038589854" expanded="true" signature="1617:1809" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <marker date="1556038739525" expanded="true" signature="6:23" ph="..." />
+            <marker date="1556038739525" expanded="true" signature="56:991" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="88:989" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="189:315" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="372:561" ph="{...}" />
+            <marker date="1556038739525" expanded="true" signature="622:983" ph="{...}" />
           </folding>
         </state>
       </provider>
