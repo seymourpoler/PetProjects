@@ -14,7 +14,7 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void set_value()
         {
-            redis.Set("1", "value");
+            redis.Set("foo", "bar");
         }
     }
 }
