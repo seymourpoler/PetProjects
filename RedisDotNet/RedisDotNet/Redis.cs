@@ -30,7 +30,7 @@ namespace RedisDotNet
             using (var socket = SocketFactory.Create(host: _host, port: _port))
             {
                 var dataToBeSent = BuildDataToBeSent(
-                    keys: key, 
+                    key: key, 
                     values: Encoding.UTF8.GetBytes(value));
                 
                 socket.Send(Encoding.UTF8.GetBytes(dataToBeSent));
@@ -38,16 +38,14 @@ namespace RedisDotNet
                 socket.Send(new[] {(byte) '\r', (byte) '\n'});
             }
         }
-
-        static string BuildDataToBeSent(byte [] values,  params object [] keys)
+        
+        static string BuildDataToBeSent(string key, byte [] values)
         {
-            string resp = "*" + (1 + keys.Length + 1).ToString () + "\r\n";
+            var resp = "*3\r\n";
             resp += "$3\r\nSET\r\n";
-            foreach (object arg in keys) {
-                string argStr = arg.ToString ();
-                int argStrLength = Encoding.UTF8.GetByteCount(argStr);
-                resp += "$" + argStrLength + "\r\n" + argStr + "\r\n";
-            }
+            
+            resp += "$" + Encoding.UTF8.GetByteCount(key) + "\r\n" + key + "\r\n";
+            
             resp +=	"$" + values.Length + "\r\n";
             return resp;
         }
