@@ -24,30 +24,34 @@ namespace RedisDotNet
 
         public void Set(string key, string value)
         {
+            Set(key: key, value: Encoding.UTF8.GetBytes(value));
+        }
+
+        public void Set(string key, byte[] value)
+        {
             Check.IsNull<ArgumentNullException>(key);
             Check.IsNull<ArgumentNullException>(value);
-
+            
             using (var socket = SocketFactory.Create(host: _host, port: _port))
             {
-                var dataToBeSent = BuildDataToBeSent(
-                    key: key, 
-                    values: Encoding.UTF8.GetBytes(value));
+                var dataToBeSent = BuildDataToBeSent(key: key, values: value);
                 
-                socket.Send(Encoding.UTF8.GetBytes(dataToBeSent));
-                socket.Send(Encoding.UTF8.GetBytes(value));
+                socket.Send(dataToBeSent);
+                socket.Send(value);
                 socket.Send(new[] {(byte) '\r', (byte) '\n'});
             }
         }
         
-        static string BuildDataToBeSent(string key, byte [] values)
+        static byte[] BuildDataToBeSent(string key, byte [] values)
         {
-            var resp = "*3\r\n";
-            resp += "$3\r\nSET\r\n";
+            var result = new StringBuilder();
+            result.Append("*3\r\n");
+            result.Append("$3\r\nSET\r\n");
+            result.Append("$").Append(Encoding.UTF8.GetByteCount(key)).Append("\r\n");
+            result.Append(key).Append("\r\n");
+            result.Append("$").Append(values.Length).Append("\r\n");
             
-            resp += "$" + Encoding.UTF8.GetByteCount(key) + "\r\n" + key + "\r\n";
-            
-            resp +=	"$" + values.Length + "\r\n";
-            return resp;
+            return Encoding.UTF8.GetBytes(result.ToString());
         }
     }
 }
