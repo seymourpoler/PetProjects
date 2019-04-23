@@ -5,15 +5,11 @@ namespace RedisDotNet
 {
     public class Redis : IDisposable, IRedis
     {
-        readonly  string _host;
-        readonly int _port;
-
-        public Redis(
-            string host = "localhost", 
-            int port = 6379)
+        readonly ISocketSender _socketSender;
+        
+        public Redis(ISocketSender socketSender)
         {
-            _host = host;
-            _port = port;
+            _socketSender = socketSender;
         }
 
         public void Dispose()
@@ -35,17 +31,14 @@ namespace RedisDotNet
             Check.IsNull<ArgumentNullException>(key);
             Check.IsNull<ArgumentNullException>(value);
             
-            using (var socket = SocketFactory.Create(host: _host, port: _port))
-            {
-                var dataToBeSent = BuildDataToBeSent(key: key, values: value);
-                
-                socket.Send(dataToBeSent);
-                socket.Send(value);
-                socket.Send(new[] {(byte) '\r', (byte) '\n'});
-            }
+            var dataToBeSent = BuildDataToBeSent(key: key, values: value);
+            
+            _socketSender.Send(dataToBeSent);
+            _socketSender.Send(value);
+            _socketSender.Send(new[] {(byte) '\r', (byte) '\n'});
         }
         
-        static byte[] BuildDataToBeSent(string key, byte [] values)
+        static string BuildDataToBeSent(string key, byte [] values)
         {
             var result = new StringBuilder();
             result.Append("*3\r\n");
@@ -54,17 +47,14 @@ namespace RedisDotNet
             result.Append(key).Append("\r\n");
             result.Append("$").Append(values.Length).Append("\r\n");
             
-            return Encoding.UTF8.GetBytes(result.ToString());
+            return result.ToString();
         }
 
         public void FlushAll()
         {
-            using (var socket = SocketFactory.Create(host: _host, port: _port))
-            {
-                var dataToBeSent = new StringBuilder("*1\r\n");
-                dataToBeSent.Append("$8\r\nFLUSHALL\r\n");
-                socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
-            }
+            var dataToBeSent = new StringBuilder("*1\r\n");
+            dataToBeSent.Append("$8\r\nFLUSHALL\r\n");
+            _socketSender.Send(dataToBeSent.ToString());
         }
     }
 }

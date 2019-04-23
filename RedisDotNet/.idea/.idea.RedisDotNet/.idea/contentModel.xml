@@ -23,7 +23,9 @@
         </e>
         <e p="Redis.cs" t="Include" />
         <e p="RedisDotNet.csproj" t="IncludeRecursive" />
+        <e p="RedisFactory.cs" t="Include" />
         <e p="SocketFactory.cs" t="Include" />
+        <e p="SocketSender.cs" t="Include" />
       </e>
       <e p="RedisDotNet.sln" t="IncludeFlat" />
       <e p="RedisDotNet.Unit.Test" t="IncludeRecursive">
