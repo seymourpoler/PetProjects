@@ -59,7 +59,12 @@ namespace RedisDotNet
 
         public void FlushAll()
         {
-            throw  new NotImplementedException();
+            using (var socket = SocketFactory.Create(host: _host, port: _port))
+            {
+                var dataToBeSent = new StringBuilder("*1\r\n");
+                dataToBeSent.Append("$8\r\nFLUSHALL\r\n");
+                socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
+            }
         }
     }
 }

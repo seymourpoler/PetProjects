@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="958657bf-5d57-42cf-b365-6253e7d737f0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedisDotNet/IRedis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisDotNet/IRedis.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RedisDotNet/Redis.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedisDotNet/Redis.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,22 +13,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Redis.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Redis.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+            <state relative-caret-position="796">
+              <caret line="65" column="77" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
               <folding>
-                <marker date="1556027975811" expanded="true" signature="6:32" ph="..." />
-                <marker date="1556027975811" expanded="true" signature="55:1884" ph="{...}" />
-                <marker date="1556027975811" expanded="true" signature="102:1882" ph="{...}" />
-                <marker date="1556027975811" expanded="true" signature="260:332" ph="{...}" />
-                <marker date="1556027975811" expanded="false" signature="363:473" ph="{...}" />
-                <marker date="1556027975811" expanded="false" signature="524:732" ph="{...}" />
-                <marker date="1556027975811" expanded="false" signature="783:1272" ph="{...}" />
-                <marker date="1556027975811" expanded="true" signature="996:1262" ph="{...}" />
-                <marker date="1556027975811" expanded="false" signature="1349:1774" ph="{...}" />
-                <marker date="1556027975811" expanded="true" signature="1806:1876" ph="{...}" />
+                <marker date="1556036504284" expanded="true" signature="6:32" ph="..." />
+                <marker date="1556036504284" expanded="true" signature="55:2143" ph="{...}" />
+                <marker date="1556036504284" expanded="true" signature="102:2141" ph="{...}" />
+                <marker date="1556036504284" expanded="true" signature="260:332" ph="{...}" />
+                <marker date="1556036504284" expanded="false" signature="363:473" ph="{...}" />
+                <marker date="1556036504284" expanded="false" signature="524:732" ph="{...}" />
+                <marker date="1556036504284" expanded="true" signature="783:1272" ph="{...}" />
+                <marker date="1556036504284" expanded="true" signature="996:1262" ph="{...}" />
+                <marker date="1556036504284" expanded="true" signature="1349:1774" ph="{...}" />
+                <marker date="1556036504284" expanded="true" signature="1806:2135" ph="{...}" />
+                <marker date="1556036504284" expanded="true" signature="1896:2125" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Redis_should.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Redis_should.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="513">
+              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
               <folding>
                 <marker date="1556028032302" expanded="true" signature="45:589" ph="{...}" />
                 <marker date="1556028032302" expanded="true" signature="77:587" ph="{...}" />
@@ -143,8 +142,8 @@
         <option value="$PROJECT_DIR$/RedisDotNet/RedisFactory.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/SocketFactory.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet/IRedis.cs" />
-        <option value="$PROJECT_DIR$/RedisDotNet/Redis.cs" />
         <option value="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" />
+        <option value="$PROJECT_DIR$/RedisDotNet/Redis.cs" />
       </list>
     </option>
   </component>
@@ -240,12 +239,12 @@
       <workItem from="1555335829718" duration="6350000" />
       <workItem from="1555593744941" duration="1884000" />
       <workItem from="1555661374279" duration="1704000" />
-      <workItem from="1555938092281" duration="9260000" />
+      <workItem from="1555938092281" duration="10490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21595000" />
+    <option name="totallyTimeSpent" value="22825000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -269,7 +268,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.32843137" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32843137" />
       <window_info anchor="right" id="Database" order="3" />
@@ -297,18 +296,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs</url>
-          <line>16</line>
-          <properties documentPath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" initialLine="16">
+          <line>22</line>
+          <properties documentPath="$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs" initialLine="22">
             <startOffsets>
-              <startOffset value="260" />
+              <startOffset value="378" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="284" />
+              <endOffset value="405" />
             </endOffsets>
           </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -317,16 +317,17 @@
         <state relative-caret-position="855">
           <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
           <folding>
-            <marker date="1556027975811" expanded="true" signature="6:32" ph="..." />
-            <marker date="1556027975811" expanded="true" signature="55:1884" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="102:1882" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="260:332" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="363:473" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="524:732" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="783:1272" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="996:1262" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="1349:1774" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="1806:1876" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="6:32" ph="..." />
+            <marker date="1556036504284" expanded="true" signature="55:2143" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="102:2141" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="260:332" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="363:473" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="524:732" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="783:1272" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="996:1262" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1349:1774" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1806:2135" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1896:2125" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -371,16 +372,17 @@
         <state relative-caret-position="760">
           <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
           <folding>
-            <marker date="1556027975811" expanded="true" signature="6:32" ph="..." />
-            <marker date="1556027975811" expanded="true" signature="55:1884" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="102:1882" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="260:332" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="363:473" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="524:732" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="783:1272" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="996:1262" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="1349:1774" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="1806:1876" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="6:32" ph="..." />
+            <marker date="1556036504284" expanded="true" signature="55:2143" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="102:2141" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="260:332" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="363:473" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="524:732" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="783:1272" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="996:1262" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1349:1774" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1806:2135" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1896:2125" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -425,16 +427,17 @@
         <state relative-caret-position="551">
           <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
           <folding>
-            <marker date="1556027975811" expanded="true" signature="6:32" ph="..." />
-            <marker date="1556027975811" expanded="true" signature="55:1884" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="102:1882" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="260:332" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="363:473" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="524:732" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="783:1272" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="996:1262" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="1349:1774" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="1806:1876" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="6:32" ph="..." />
+            <marker date="1556036504284" expanded="true" signature="55:2143" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="102:2141" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="260:332" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="363:473" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="524:732" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="783:1272" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="996:1262" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1349:1774" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1806:2135" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1896:2125" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -496,16 +499,17 @@
         <state relative-caret-position="456">
           <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
           <folding>
-            <marker date="1556027975811" expanded="true" signature="6:32" ph="..." />
-            <marker date="1556027975811" expanded="true" signature="55:1884" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="102:1882" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="260:332" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="363:473" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="524:732" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="783:1272" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="996:1262" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="1349:1774" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="1806:1876" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="6:32" ph="..." />
+            <marker date="1556036504284" expanded="true" signature="55:2143" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="102:2141" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="260:332" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="363:473" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="524:732" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="783:1272" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="996:1262" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1349:1774" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1806:2135" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1896:2125" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -544,16 +548,17 @@
         <state relative-caret-position="399">
           <caret line="21" column="58" lean-forward="true" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
           <folding>
-            <marker date="1556027975811" expanded="true" signature="6:32" ph="..." />
-            <marker date="1556027975811" expanded="true" signature="55:1884" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="102:1882" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="260:332" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="363:473" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="524:732" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="783:1272" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="996:1262" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="1349:1774" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="1806:1876" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="6:32" ph="..." />
+            <marker date="1556036504284" expanded="true" signature="55:2143" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="102:2141" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="260:332" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="363:473" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="524:732" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="783:1272" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="996:1262" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1349:1774" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1806:2135" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1896:2125" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -602,10 +607,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Check_should.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <marker date="1555336449385" expanded="false" signature="6:42" ph="..." />
+            <marker date="1555336449385" expanded="true" signature="75:562" ph="{...}" />
+            <marker date="1555336449385" expanded="true" signature="107:560" ph="{...}" />
+            <marker date="1555336449385" expanded="true" signature="180:340" ph="{...}" />
+            <marker date="1555336449385" expanded="true" signature="414:554" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/377B61B6-13EA-444F-826F-377D9474FFCA/26/f42fb47c/TestInvoker`1.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
+        <state relative-caret-position="103">
+          <caret line="255" column="72" lean-forward="true" selection-start-line="255" selection-start-column="11" selection-end-line="256" selection-end-column="14" />
           <folding>
             <marker date="1555421928179" expanded="true" signature="0:361" ph="/* Decompiled with JetBrains decompiler ... */" />
             <marker date="1555421928179" expanded="false" signature="369:523" ph="..." />
@@ -664,20 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Check_should.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="47" />
-          <folding>
-            <marker date="1555336449385" expanded="false" signature="6:42" ph="..." />
-            <marker date="1555336449385" expanded="true" signature="75:562" ph="{...}" />
-            <marker date="1555336449385" expanded="true" signature="107:560" ph="{...}" />
-            <marker date="1555336449385" expanded="true" signature="180:340" ph="{...}" />
-            <marker date="1555336449385" expanded="true" signature="414:554" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RedisDotNet/IRedis.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -689,35 +694,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-          <folding>
-            <marker date="1556027975811" expanded="true" signature="6:32" ph="..." />
-            <marker date="1556027975811" expanded="true" signature="55:1884" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="102:1882" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="260:332" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="363:473" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="524:732" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="783:1272" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="996:1262" ph="{...}" />
-            <marker date="1556027975811" expanded="false" signature="1349:1774" ph="{...}" />
-            <marker date="1556027975811" expanded="true" signature="1806:1876" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RedisDotNet.Unit.Test/Redis_should.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        <state relative-caret-position="513">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding>
             <marker date="1556028032302" expanded="true" signature="45:589" ph="{...}" />
             <marker date="1556028032302" expanded="true" signature="77:587" ph="{...}" />
             <marker date="1556028032302" expanded="true" signature="136:189" ph="{...}" />
             <marker date="1556028032302" expanded="true" signature="237:294" ph="{...}" />
             <marker date="1556028032302" expanded="true" signature="355:581" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisDotNet/Redis.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="796">
+          <caret line="65" column="77" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
+          <folding>
+            <marker date="1556036504284" expanded="true" signature="6:32" ph="..." />
+            <marker date="1556036504284" expanded="true" signature="55:2143" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="102:2141" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="260:332" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="363:473" ph="{...}" />
+            <marker date="1556036504284" expanded="false" signature="524:732" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="783:1272" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="996:1262" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1349:1774" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1806:2135" ph="{...}" />
+            <marker date="1556036504284" expanded="true" signature="1896:2125" ph="{...}" />
           </folding>
         </state>
       </provider>
