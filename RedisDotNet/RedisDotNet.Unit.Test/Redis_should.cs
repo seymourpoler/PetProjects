@@ -27,11 +27,6 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void clean_all_keys()
         {
-            redis.Set("keyOne", "valueOne");
-            redis.Set("keyTwo", "valueTwo");
-            redis.Set("keyThree", "valueThree");
-            redis.Set("keyFour", "valueFour");
-
             redis.FlushAll();
 
             socketSender
