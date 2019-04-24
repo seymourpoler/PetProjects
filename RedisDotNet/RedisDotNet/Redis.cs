@@ -56,5 +56,13 @@ namespace RedisDotNet
             dataToBeSent.Append("$8\r\nFLUSHALL\r\n");
             _socketSender.Send(dataToBeSent.ToString());
         }
+
+        public void Remove(string key)
+        {
+            var dataToBeSent = new StringBuilder("*1\r\n");
+            dataToBeSent.Append("$3\r\nDEL\r\n");
+            dataToBeSent.Append(key);
+            _socketSender.Send(dataToBeSent.ToString());
+        }
     }
 }
