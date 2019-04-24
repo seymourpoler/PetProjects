@@ -27,6 +27,18 @@
         <e p="SocketFactory.cs" t="Include" />
         <e p="SocketSender.cs" t="Include" />
       </e>
+      <e p="RedisDotNet.Integration.Test" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="RedisDotNet.Integration.Test.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Redis_should.cs" t="Include" />
+        <e p="RedisDotNet.Integration.Test.csproj" t="IncludeRecursive" />
+      </e>
       <e p="RedisDotNet.sln" t="IncludeFlat" />
       <e p="RedisDotNet.Unit.Test" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

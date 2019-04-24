@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisDotNet", "RedisDotNet\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisDotNet.Unit.Test", "RedisDotNet.Unit.Test\RedisDotNet.Unit.Test.csproj", "{204CBBCA-A4EE-4DC0-8FA8-D71CA9949B23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisDotNet.Integration.Test", "RedisDotNet.Integration.Test\RedisDotNet.Integration.Test.csproj", "{61F02B05-6090-45B8-AA5F-F753C138CAFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{204CBBCA-A4EE-4DC0-8FA8-D71CA9949B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{204CBBCA-A4EE-4DC0-8FA8-D71CA9949B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{204CBBCA-A4EE-4DC0-8FA8-D71CA9949B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F02B05-6090-45B8-AA5F-F753C138CAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F02B05-6090-45B8-AA5F-F753C138CAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F02B05-6090-45B8-AA5F-F753C138CAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F02B05-6090-45B8-AA5F-F753C138CAFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
