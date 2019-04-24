@@ -41,11 +41,18 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void remove_a_key()
         {
-            const string key = "a-key";
-            redis.Remove(key);
+            redis.Remove("a-key");
             
             socketSender
                 .Verify(x => x.Send(It.Is<string>(y => y.Contains("*1\r\n$3\r\nDEL\r\na-key"))));
+        }
+
+        [Fact]
+        public void contains_a_key()
+        {
+            redis.ContainsKey("key");
+            socketSender
+                .Verify(x => x.Send(It.Is<string>(y => y.Contains("*1\r\n$6\r\nEXISTS\r\nkey"))));
         }
     }
 }

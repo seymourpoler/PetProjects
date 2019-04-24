@@ -64,5 +64,13 @@ namespace RedisDotNet
             dataToBeSent.Append(key);
             _socketSender.Send(dataToBeSent.ToString());
         }
+
+        public void ContainsKey(string key)
+        {
+            var dataToBeSent = new StringBuilder("*1\r\n");
+            dataToBeSent.Append("$6\r\nEXISTS\r\n");
+            dataToBeSent.Append(key);
+            _socketSender.Send(dataToBeSent.ToString());
+        }
     }
 }
