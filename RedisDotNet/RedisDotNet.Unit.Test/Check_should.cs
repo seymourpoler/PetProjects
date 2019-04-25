@@ -25,7 +25,7 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void throw_argument_exception_when_collection_is_null()
         {
-            Action action = () => { Check.IsNullOrEmpty<ArgumentException>(null); };
+            Action action = () => { Check.IsNullOrEmpty<string, ArgumentException>(null); };
 
             action.ShouldThrow<ArgumentException>();
         }
@@ -33,7 +33,7 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void throw_argument_exception_when_collection_is_empty()
         {
-            Action action = () => { Check.IsNullOrEmpty<ArgumentException>(new string[]{}); };
+            Action action = () => { Check.IsNullOrEmpty<string, ArgumentException>(new string[]{}); };
 
             action.ShouldThrow<ArgumentException>();
         }
@@ -41,7 +41,7 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void do_nothing_when_collection_has_elements()
         {
-            Action action = () => { Check.IsNullOrEmpty<ArgumentException>(new []{"je", "os"}); };
+            Action action = () => { Check.IsNullOrEmpty<string, ArgumentException>(new []{"je", "os"}); };
 
             action.ShouldNotThrow();
         }
