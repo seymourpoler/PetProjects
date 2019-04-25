@@ -49,7 +49,15 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void throw_argument_exception_when_value_is_null()
         {
-            Action action = () => { Check.IsNullOrEmpty<ArgumentException>(null); };
+            Action action = () => { Check.IsNullOrWhiteSpace<ArgumentException>(null); };
+
+            action.ShouldThrow<ArgumentException>();
+        }
+        
+        [Fact]
+        public void throw_argument_exception_when_value_is_string_empty()
+        {
+            Action action = () => { Check.IsNullOrWhiteSpace<ArgumentException>(String.Empty); };
 
             action.ShouldThrow<ArgumentException>();
         }
