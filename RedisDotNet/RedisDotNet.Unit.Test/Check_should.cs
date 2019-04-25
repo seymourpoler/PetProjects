@@ -29,5 +29,13 @@ namespace RedisDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentException>();
         }
+        
+        [Fact]
+        public void throw_argument_exception_when_collection_is_empty()
+        {
+            Action action = () => { Check.IsNullOrEmpty<ArgumentException>(new string[]{}); };
+
+            action.ShouldThrow<ArgumentException>();
+        }
     }
 }
