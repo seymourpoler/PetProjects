@@ -37,5 +37,13 @@ namespace RedisDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentException>();
         }
+
+        [Fact]
+        public void do_nothing_when_collection_has_elements()
+        {
+            Action action = () => { Check.IsNullOrEmpty<ArgumentException>(new []{"je", "os"}); };
+
+            action.ShouldNotThrow();
+        }
     }
 }
