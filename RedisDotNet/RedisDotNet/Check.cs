@@ -27,7 +27,6 @@ namespace RedisDotNet
             {
                 throw  (Exception)Activator.CreateInstance(typeof(TException));
             }
-            throw new NotImplementedException();
         }
     }
 }

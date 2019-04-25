@@ -69,5 +69,13 @@ namespace RedisDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentException>();
         }
+        
+        [Fact]
+        public void do_nothing_when_has_value()
+        {
+            Action action = () => { Check.IsNullOrWhiteSpace<ArgumentException>("  than"); };
+
+            action.ShouldNotThrow();
+        }
     }
 }
