@@ -31,11 +31,13 @@ namespace RedisDotNet
             Check.IsNull<ArgumentNullException>(key);
             Check.IsNull<ArgumentNullException>(value);
             
-            var dataToBeSent = BuildDataToBeSent(key: key, values: value);
-            
-            _socketSender.Send(dataToBeSent);
-            _socketSender.Send(value);
-            _socketSender.Send(new[] {(byte) '\r', (byte) '\n'});
+            using (var socket = SocketFactory.Create(host: "localhost", port:6379))
+            {
+                var dataToBeSent = BuildDataToBeSent(key: key, values: value);
+                socket.Send(Encoding.UTF8.GetBytes(dataToBeSent));
+                socket.Send(value);
+                socket.Send(new[] {(byte) '\r', (byte) '\n'});
+            }
         }
         
         static string BuildDataToBeSent(string key, byte [] values)

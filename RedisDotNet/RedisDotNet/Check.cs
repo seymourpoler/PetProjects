@@ -12,5 +12,14 @@ namespace RedisDotNet
             }
             
         }
+        
+        public static void IsNullOrEmpty<TException>(object[] collection)
+        {
+            const int noElements = 0;
+            if (collection is null || collection.Length == noElements)
+            {
+                throw  (Exception)Activator.CreateInstance(typeof(TException));
+            }
+        }
     }
 }

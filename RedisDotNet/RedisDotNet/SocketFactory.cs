@@ -6,12 +6,12 @@ namespace RedisDotNet
     {
         public static Socket Create(string host, int port)
         {
-            var result = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            result.NoDelay = true;
-            result.SendTimeout = -1;
-            result.Connect(host: host, port: port);
+            var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            socket.NoDelay = true;
+            socket.SendTimeout = -1;
+            socket.Connect(host: host, port: port);
             
-            return result;
+            return socket;
         }
     }
 }
