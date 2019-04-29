@@ -5,13 +5,18 @@ namespace RedisDotNet.Unit.Test
 {
     public class Redis_should
     {
-        Mock<ISocketSender> socketSender;
+        Mock<ConnectedSocketFactory> socketFactory;
+        Mock<ConnectedSocket> socket;
         IRedis redis;
 
         public Redis_should()
         {
-            socketSender = new Mock<ISocketSender>();
-            redis = new Redis(socketSender.Object);
+            socket = new Mock<ConnectedSocket>();
+            socketFactory = new Mock<ConnectedSocketFactory>();
+            socketFactory
+                .Setup(x => x.Create())
+                .Returns(socket.Object);
+            redis = new Redis(socketFactory.Object);
         }
 
         
@@ -20,7 +25,7 @@ namespace RedisDotNet.Unit.Test
         {
             redis.Set("foo", "bar");
             
-            socketSender
+            socket
                 .Verify(x => x.Send(It.Is<string>(y => y.Contains("*3\r\n$3\r\nSET\r\n")) ));
         }
         
@@ -29,7 +34,7 @@ namespace RedisDotNet.Unit.Test
         {
             redis.FlushAll();
 
-            socketSender
+            socket
                 .Verify(x => x.Send(It.Is<string>(y => y.Contains("*1\r\n$8\r\nFLUSHALL\r\n"))));
         }
 
@@ -38,7 +43,7 @@ namespace RedisDotNet.Unit.Test
         {
             redis.Remove("a-key");
             
-            socketSender
+            socket
                 .Verify(x => x.Send(It.Is<string>(y => y.Contains("*1\r\n$3\r\nDEL\r\na-key"))));
         }
 
@@ -46,7 +51,8 @@ namespace RedisDotNet.Unit.Test
         public void contains_a_key()
         {
             redis.ContainsKey("key");
-            socketSender
+            
+            socket
                 .Verify(x => x.Send(It.Is<string>(y => y.Contains("*1\r\n$6\r\nEXISTS\r\nkey"))));
         }
     }

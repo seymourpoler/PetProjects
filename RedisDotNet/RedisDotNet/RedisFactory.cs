@@ -6,8 +6,8 @@
             string host = "localhost", 
             int port = 6379)
         {
-            var sockectSender = new SocketSender(host: host, port: port);
-            var redis = new Redis(sockectSender);
+
+            var redis = new Redis(new ConnectedSocketFactory(host: host, port: port));
             return redis;
         }
     }

@@ -13,6 +13,8 @@
       <e p="RedisDotNet" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Check.cs" t="Include" />
+        <e p="ConnectedSocket.cs" t="Include" />
+        <e p="ConnectedSocketFactory.cs" t="Include" />
         <e p="IRedis.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -24,8 +26,6 @@
         <e p="Redis.cs" t="Include" />
         <e p="RedisDotNet.csproj" t="IncludeRecursive" />
         <e p="RedisFactory.cs" t="Include" />
-        <e p="SocketFactory.cs" t="Include" />
-        <e p="SocketSender.cs" t="Include" />
       </e>
       <e p="RedisDotNet.Integration.Test" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

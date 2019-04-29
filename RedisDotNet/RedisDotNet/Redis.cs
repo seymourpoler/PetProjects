@@ -3,13 +3,13 @@ using System.Text;
 
 namespace RedisDotNet
 {
-    public class Redis : IDisposable, IRedis
+    public class Redis : IRedis, IDisposable
     {
-        readonly ISocketSender _socketSender;
+        readonly ConnectedSocketFactory _connectedSocketFactory;
         
-        public Redis(ISocketSender socketSender)
+        public Redis(ConnectedSocketFactory connectedSocketFactory)
         {
-            _socketSender = socketSender;
+            _connectedSocketFactory = connectedSocketFactory;
         }
 
         public void Dispose()
@@ -28,7 +28,7 @@ namespace RedisDotNet
             Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
             Check.IsNullOrEmpty<byte, ArgumentNullException>(value);
             
-            using (var socket = SocketFactory.Create(host: "localhost", port:6379))
+            using (var socket = _connectedSocketFactory.Create())
             {
                 var dataToBeSent = BuildDataToBeSent(key: key, values: value);
                 socket.Send(Encoding.UTF8.GetBytes(dataToBeSent));
@@ -51,25 +51,34 @@ namespace RedisDotNet
 
         public void FlushAll()
         {
-            var dataToBeSent = new StringBuilder("*1\r\n");
-            dataToBeSent.Append("$8\r\nFLUSHALL\r\n");
-            _socketSender.Send(dataToBeSent.ToString());
+            using (var socket = _connectedSocketFactory.Create())
+            {
+                var dataToBeSent = new StringBuilder("*1\r\n");
+                dataToBeSent.Append("$8\r\nFLUSHALL\r\n");
+                socket.Send(dataToBeSent.ToString());
+            }
         }
 
         public void Remove(string key)
         {
-            var dataToBeSent = new StringBuilder("*1\r\n");
-            dataToBeSent.Append("$3\r\nDEL\r\n");
-            dataToBeSent.Append(key);
-            _socketSender.Send(dataToBeSent.ToString());
+            using (var socket = _connectedSocketFactory.Create())
+            {
+                var dataToBeSent = new StringBuilder("*1\r\n");
+                dataToBeSent.Append("$3\r\nDEL\r\n");
+                dataToBeSent.Append(key);
+                socket.Send(dataToBeSent.ToString());   
+            }
         }
 
         public void ContainsKey(string key)
         {
-            var dataToBeSent = new StringBuilder("*1\r\n");
-            dataToBeSent.Append("$6\r\nEXISTS\r\n");
-            dataToBeSent.Append(key);
-            _socketSender.Send(dataToBeSent.ToString());
+            using (var socket = _connectedSocketFactory.Create())
+            {
+                var dataToBeSent = new StringBuilder("*1\r\n");
+                dataToBeSent.Append("$6\r\nEXISTS\r\n");
+                dataToBeSent.Append(key);
+                socket.Send(dataToBeSent.ToString());   
+            }
         }
     }
 }
