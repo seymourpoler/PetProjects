@@ -31,7 +31,7 @@ namespace RedisDotNet
             using (var socket = _connectedSocketFactory.Create())
             {
                 var dataToBeSent = BuildDataToBeSent(key: key, values: value);
-                socket.Send(Encoding.UTF8.GetBytes(dataToBeSent));
+                socket.Send(dataToBeSent);
                 socket.Send(value);
                 socket.Send(new[] {(byte) '\r', (byte) '\n'});
             }

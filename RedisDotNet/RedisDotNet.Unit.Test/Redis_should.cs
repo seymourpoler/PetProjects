@@ -18,7 +18,6 @@ namespace RedisDotNet.Unit.Test
                 .Returns(socket.Object);
             redis = new Redis(socketFactory.Object);
         }
-
         
         [Fact]
         public void set_value()
@@ -26,7 +25,7 @@ namespace RedisDotNet.Unit.Test
             redis.Set("foo", "bar");
             
             socket
-                .Verify(x => x.Send(It.Is<string>(y => y.Contains("*3\r\n$3\r\nSET\r\n")) ));
+                .Verify(x => x.Send(It.Is<string>(y => y.Contains("*3\r\n$3\r\nSET\r\n$3\r\nfoo\r\n$3\r\n")) ));
         }
         
         [Fact]

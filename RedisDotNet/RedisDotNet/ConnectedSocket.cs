@@ -8,6 +8,11 @@ namespace RedisDotNet
     {
         readonly Socket _socket;
 
+        //For tests
+        public ConnectedSocket()
+        {
+            
+        }
         public ConnectedSocket(string host, int port)
         {
             _socket =  new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
