@@ -6,7 +6,7 @@ namespace RedisDotNet
     public class Redis : IRedis, IDisposable
     {
         readonly ConnectedSocketFactory _connectedSocketFactory;
-        
+
         public Redis(ConnectedSocketFactory connectedSocketFactory)
         {
             _connectedSocketFactory = connectedSocketFactory;
@@ -19,7 +19,7 @@ namespace RedisDotNet
         }
 
         public void Set(string key, string value)
-        {           
+        {
             Set(key: key, value: Encoding.UTF8.GetBytes(value));
         }
 
@@ -27,7 +27,7 @@ namespace RedisDotNet
         {
             Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
             Check.IsNullOrEmpty<byte, ArgumentNullException>(value);
-            
+
             using (var socket = _connectedSocketFactory.Create())
             {
                 var dataToBeSent = BuildDataToBeSent(key: key, values: value);
@@ -36,7 +36,7 @@ namespace RedisDotNet
                 socket.Send(new[] {(byte) '\r', (byte) '\n'});
             }
         }
-        
+
         static string BuildDataToBeSent(string key, byte [] values)
         {
             var result = new StringBuilder();
@@ -45,7 +45,7 @@ namespace RedisDotNet
             result.Append("$").Append(Encoding.UTF8.GetByteCount(key)).Append("\r\n");
             result.Append(key).Append("\r\n");
             result.Append("$").Append(values.Length).Append("\r\n");
-            
+
             return result.ToString();
         }
 
@@ -70,7 +70,7 @@ namespace RedisDotNet
                 dataToBeSent.Append("\r\n");
                 dataToBeSent.Append(key);
                 dataToBeSent.Append("\r\n");
-                socket.Send(dataToBeSent.ToString());   
+                socket.Send(dataToBeSent.ToString());
             }
         }
 
@@ -81,7 +81,7 @@ namespace RedisDotNet
                 var dataToBeSent = new StringBuilder("*1\r\n");
                 dataToBeSent.Append("$6\r\nEXISTS\r\n");
                 dataToBeSent.Append(key);
-                socket.Send(dataToBeSent.ToString());   
+                socket.Send(dataToBeSent.ToString());
             }
         }
     }
