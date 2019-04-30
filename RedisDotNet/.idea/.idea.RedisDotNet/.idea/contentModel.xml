@@ -26,6 +26,7 @@
         </e>
         <e p="Redis.cs" t="Include" />
         <e p="RedisDotNet.csproj" t="IncludeRecursive" />
+        <e p="RedisException.cs" t="Include" />
         <e p="RedisFactory.cs" t="Include" />
       </e>
       <e p="RedisDotNet.Integration.Test" t="IncludeRecursive">
