@@ -63,9 +63,13 @@ namespace RedisDotNet
         {
             using (var socket = _connectedSocketFactory.Create())
             {
-                var dataToBeSent = new StringBuilder("*1\r\n");
+                var dataToBeSent = new StringBuilder("*2\r\n");
                 dataToBeSent.Append("$3\r\nDEL\r\n");
+                dataToBeSent.Append("$");
+                dataToBeSent.Append(key.Length);
+                dataToBeSent.Append("\r\n");
                 dataToBeSent.Append(key);
+                dataToBeSent.Append("\r\n");
                 socket.Send(dataToBeSent.ToString());   
             }
         }

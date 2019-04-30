@@ -40,10 +40,10 @@ namespace RedisDotNet.Unit.Test
         [Fact]
         public void remove_a_key()
         {
-            redis.Remove("a-key");
+            redis.Remove("foo");
             
             socket
-                .Verify(x => x.Send(It.Is<string>(y => y.Contains("*1\r\n$3\r\nDEL\r\na-key"))));
+                .Verify(x => x.Send(It.Is<string>(y => y.Contains("*2\r\n$3\r\nDEL\r\n$3\r\nfoo\r\n"))));
         }
 
         [Fact]

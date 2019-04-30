@@ -16,5 +16,13 @@ namespace RedisDotNet.Integration.Test
         {
             redis.Set("foo", "bar");
         }
+
+        [Fact]
+        public void remove_key()
+        {
+            const string key = "foo";
+            redis.Set(key, "bar");
+            redis.Remove(key);
+        }
     }
 }
