@@ -24,5 +24,13 @@ namespace RedisDotNet.Integration.Test
             redis.Set(key, "bar");
             redis.Remove(key);
         }
+
+        [Fact]
+        public void flush_all()
+        {
+            redis.Set("oneKey", "oneValue");
+            redis.Set("twoKey", "twoValue");
+            redis.FlushAll();
+        }
     }
 }
