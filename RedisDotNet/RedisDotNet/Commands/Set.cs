@@ -14,9 +14,11 @@ namespace RedisDotNet.Commands
             _socket.Send(bytes);
             _socket.Send(value);
             _socket.Send(new[] {(byte) '\r', (byte) '\n'});
-            if (_buffer.ReadByte() == fail)
+            
+            var currentReadByteResult = _buffer.ReadByte(); 
+            if (currentReadByteResult == fail)
             {
-                throw new RedisException("not set key value");
+                throw new RedisException("not set key");
             }
 
             var line = ReadLine();
