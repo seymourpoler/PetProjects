@@ -6,11 +6,13 @@ namespace RedisDotNet
 {
     public class Redis : IRedis, IDisposable
     {
-        readonly ConnectedSocketFactory _connectedSocketFactory;
-
-        public Redis(ConnectedSocketFactory connectedSocketFactory)
+        string _host;
+        int _port;
+        
+        public Redis(string host = "localhost", int port = 6379)
         {
-            _connectedSocketFactory = connectedSocketFactory;
+            _host = host;
+            _port = port;
         }
 
         public void Dispose()
@@ -28,7 +30,7 @@ namespace RedisDotNet
             Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
             Check.IsNullOrEmpty<byte, ArgumentNullException>(value);
 
-            using (var command = new Set(host: "localhost", port: 6379))
+            using (var command = new Set(host: _host, port: _port))
             {
                 command.Execute(key, value);
             }
@@ -36,7 +38,7 @@ namespace RedisDotNet
 
         public void FlushAll()
         {
-            using (var command = new FlushAll(host: "localhost", port: 6379))
+            using (var command = new FlushAll(host: _host, port: _port))
             {
                 command.Execute();
             }
@@ -46,7 +48,7 @@ namespace RedisDotNet
         {
             Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
             
-            using (var command = new Remove(host: "localhost", port: 6379))
+            using (var command = new Remove(host: _host, port: _port))
             {
                 command.Execute(key);
             }
@@ -56,7 +58,7 @@ namespace RedisDotNet
         {
             Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
             
-            using (var command = new ContainsKey(host: "localhost", port: 6379))
+            using (var command = new ContainsKey(host: _host, port: _port))
             {
                var result =  command.Execute(key);
                return result;
