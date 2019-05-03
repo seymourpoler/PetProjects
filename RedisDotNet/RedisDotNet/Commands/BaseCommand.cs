@@ -25,17 +25,17 @@ namespace RedisDotNet.Commands
 
         protected string ReadLine ()
         {
-            StringBuilder sb = new StringBuilder ();
-            int c;
+            StringBuilder result = new StringBuilder ();
+            int currentReadByte;
 		
-            while ((c = _buffer.ReadByte ()) != -1){
-                if (c == '\r')
+            while ((currentReadByte = _buffer.ReadByte ()) != -1){
+                if (currentReadByte == '\r')
                     continue;
-                if (c == '\n')
+                if (currentReadByte == '\n')
                     break;
-                sb.Append ((char) c);
+                result.Append ((char) currentReadByte);
             }
-            return sb.ToString ();
+            return result.ToString ();
         }
         
         public void Dispose()

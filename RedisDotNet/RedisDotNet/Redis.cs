@@ -15,11 +15,6 @@ namespace RedisDotNet
             _port = port;
         }
 
-        public void Dispose()
-        {
-            GC.SuppressFinalize (this);
-        }
-
         public void Set(string key, string value)
         {
             Set(key: key, value: Encoding.UTF8.GetBytes(value));
@@ -63,6 +58,11 @@ namespace RedisDotNet
                var result =  command.Execute(key);
                return result;
             }
+        }
+        
+        public void Dispose()
+        {
+            GC.SuppressFinalize (this);
         }
     }
 }

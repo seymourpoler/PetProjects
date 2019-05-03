@@ -1,15 +1,16 @@
-﻿using Shouldly;
+﻿using System;
+using Shouldly;
 using Xunit;
 
 namespace RedisDotNet.Integration.Test
 {
-    public class Redis_should
+    public class Redis_should : IDisposable
     {
         IRedis redis;
 
         public Redis_should()
         {
-            redis = RedisFactory.Create();
+            redis = new Redis();
         }
 
         [Fact]
@@ -50,6 +51,11 @@ namespace RedisDotNet.Integration.Test
             var result = redis.ContainsKey("missing-Key");
 
             result.ShouldBeFalse();
+        }
+
+        public void Dispose()
+        {
+            redis.FlushAll();
         }
     }
 }
