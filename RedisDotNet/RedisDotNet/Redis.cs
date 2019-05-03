@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using RedisDotNet.Commands;
 
 namespace RedisDotNet
 {
@@ -27,25 +28,10 @@ namespace RedisDotNet
             Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
             Check.IsNullOrEmpty<byte, ArgumentNullException>(value);
 
-            using (var socket = _connectedSocketFactory.Create())
+            using (var command = new Set(host: "localhost", port: 6379))
             {
-                var dataToBeSent = BuildDataToBeSent(key: key, values: value);
-                socket.Send(dataToBeSent);
-                socket.Send(value);
-                socket.Send(new[] {(byte) '\r', (byte) '\n'});
+                command.Execute(key, value);
             }
-        }
-
-        static string BuildDataToBeSent(string key, byte [] values)
-        {
-            var result = new StringBuilder();
-            result.Append("*3\r\n");
-            result.Append("$3\r\nSET\r\n");
-            result.Append("$").Append(Encoding.UTF8.GetByteCount(key)).Append("\r\n");
-            result.Append(key).Append("\r\n");
-            result.Append("$").Append(values.Length).Append("\r\n");
-
-            return result.ToString();
         }
 
         public void FlushAll()
@@ -60,20 +46,13 @@ namespace RedisDotNet
 
         public void Remove(string key)
         {
-            using (var socket = _connectedSocketFactory.Create())
+            using (var command = new Remove(host: "localhost", port: 6379))
             {
-                var dataToBeSent = new StringBuilder("*2\r\n");
-                dataToBeSent.Append("$3\r\nDEL\r\n");
-                dataToBeSent.Append("$");
-                dataToBeSent.Append(key.Length);
-                dataToBeSent.Append("\r\n");
-                dataToBeSent.Append(key);
-                dataToBeSent.Append("\r\n");
-                socket.Send(dataToBeSent.ToString());
+                command.Execute(key);
             }
         }
 
-        public void ContainsKey(string key)
+        public bool ContainsKey(string key)
         {
             using (var socket = _connectedSocketFactory.Create())
             {
@@ -84,7 +63,10 @@ namespace RedisDotNet
                 dataToBeSent.Append("\r\n");
                 dataToBeSent.Append(key);
                 dataToBeSent.Append("\r\n");
-                socket.Send(dataToBeSent.ToString());
+                var result = socket.Send(dataToBeSent.ToString());
+                const int success = 1;
+                return success == result;
+
             }
         }
     }

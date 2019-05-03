@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using Shouldly;
+using Xunit;
 
 namespace RedisDotNet.Integration.Test
 {
@@ -31,6 +32,16 @@ namespace RedisDotNet.Integration.Test
             redis.Set("oneKey", "oneValue");
             redis.Set("twoKey", "twoValue");
             redis.FlushAll();
+        }
+
+        [Fact]
+        public void contains_key()
+        {
+            redis.Set("oneKey", "oneValue");
+
+            var result = redis.ContainsKey("oneKey");
+
+            result.ShouldBeTrue();
         }
     }
 }

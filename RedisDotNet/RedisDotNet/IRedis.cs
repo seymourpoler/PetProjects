@@ -6,6 +6,6 @@
         void Set(string key, byte[] value);
         void FlushAll();
         void Remove(string key);
-        void ContainsKey(string key);
+        bool ContainsKey(string key);
     }
 }

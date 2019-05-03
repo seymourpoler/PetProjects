@@ -16,6 +16,7 @@ namespace RedisDotNet
         {
             
         }
+        
         public ConnectedSocket(string host, int port)
         {
             _socket =  new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -26,13 +27,14 @@ namespace RedisDotNet
             _buffer = new BufferedStream (stream: new NetworkStream (_socket), bufferSize: bufferSize);
         }
 
-        public virtual void Send(string value)
+        public virtual int Send(string value)
         {
             var bytes = Encoding.UTF8.GetBytes(value);
-            Send(bytes);
+            var result =  Send(bytes);
+            return result;
         }
         
-        public virtual void Send(byte[] values)
+        public virtual int Send(byte[] values)
         {
             _socket.Send(values);
             
@@ -45,7 +47,8 @@ namespace RedisDotNet
             
             var stringBuilder = new StringBuilder ();
             int c;
-            while ((c = _buffer.ReadByte ()) != error){
+            while ((c = _buffer.ReadByte ()) != error)
+            {
                 if (c == '\r')
                     continue;
                 if (c == '\n')
@@ -56,13 +59,15 @@ namespace RedisDotNet
             var line = stringBuilder.ToString();
             if (line.First() == '-')
             {
-                var message = line;
-                if (line.StartsWith("ERR "))
-                {
-                    message = line.Substring(4);
-                }
-                throw new RedisException(message);
+                throw new RedisException("error to he completed");
             }
+            
+            if (c == ':'){
+                int i;
+                if (int.TryParse (line, out i))
+                    return i;
+            }
+            throw new RedisException(("Unknown reply on integer request: " + c + line));
         }
 
         public void Dispose()
