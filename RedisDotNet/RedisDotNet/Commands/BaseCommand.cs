@@ -40,16 +40,16 @@ namespace RedisDotNet.Commands
         
         public void Dispose()
         {
-            if (_socket != null)
-            {
-                _socket.Close();
-                _socket.Dispose();
-            }
-
             if (_buffer != null)
             {
                 _buffer.Close();
                 _buffer.Dispose();
+            }
+            
+            if (_socket != null)
+            {
+                _socket.Close();
+                _socket.Dispose();
             }
         }
     }
