@@ -17,7 +17,8 @@ namespace RedisDotNet.Commands
             dataToBeSent.Append("\r\n");
             dataToBeSent.Append(key);
             dataToBeSent.Append("\r\n");
-            _socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
+            var bytes = Encoding.UTF8.GetBytes(dataToBeSent.ToString());
+            _socket.Send(bytes);
             
             var c = _buffer.ReadByte ();
             throw new NotImplementedException();

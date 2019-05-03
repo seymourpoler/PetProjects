@@ -7,14 +7,23 @@ namespace RedisDotNet.Commands
         public Set(string host, int port)
             : base(host: host, port: port) { }
 
-        public bool Execute(string key, byte[] value)
+        public void Execute(string key, byte[] value)
         {
             var dataToBeSent = BuildDataToBeSent(key: key, values:value);
-            _socket.Send(Encoding.UTF8.GetBytes(dataToBeSent));
+            var bytes = Encoding.UTF8.GetBytes(dataToBeSent);
+            _socket.Send(bytes);
             _socket.Send(value);
             _socket.Send(new[] {(byte) '\r', (byte) '\n'});
-            var result = _buffer.ReadByte();
-            return true;
+            if (_buffer.ReadByte() == fail)
+            {
+                throw new RedisException("not set key value");
+            }
+
+            var line = ReadLine();
+            if (line != success)
+            {
+                throw new RedisException(line.StartsWith ("ERR ") ? line.Substring (4) : line);
+            }
         }
         
         static string BuildDataToBeSent(string key, byte [] values)
@@ -25,7 +34,7 @@ namespace RedisDotNet.Commands
             result.Append("$").Append(Encoding.UTF8.GetByteCount(key)).Append("\r\n");
             result.Append(key).Append("\r\n");
             result.Append("$").Append(values.Length).Append("\r\n");
-
+            
             return result.ToString();
         }
     }

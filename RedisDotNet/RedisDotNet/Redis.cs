@@ -36,16 +36,16 @@ namespace RedisDotNet
 
         public void FlushAll()
         {
-            using (var socket = _connectedSocketFactory.Create())
+            using (var command = new FlushAll(host: "localhost", port: 6379))
             {
-                var dataToBeSent = new StringBuilder("*1\r\n");
-                dataToBeSent.Append("$8\r\nFLUSHALL\r\n");
-                socket.Send(dataToBeSent.ToString());
+                command.Execute();
             }
         }
 
         public void Remove(string key)
         {
+            Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
+            
             using (var command = new Remove(host: "localhost", port: 6379))
             {
                 command.Execute(key);
@@ -54,19 +54,12 @@ namespace RedisDotNet
 
         public bool ContainsKey(string key)
         {
-            using (var socket = _connectedSocketFactory.Create())
+            Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
+            
+            using (var command = new ContainsKey(host: "localhost", port: 6379))
             {
-                var dataToBeSent = new StringBuilder("*2\r\n");
-                dataToBeSent.Append("$6\r\nEXISTS\r\n");
-                dataToBeSent.Append("$");
-                dataToBeSent.Append(key.Length);
-                dataToBeSent.Append("\r\n");
-                dataToBeSent.Append(key);
-                dataToBeSent.Append("\r\n");
-                var result = socket.Send(dataToBeSent.ToString());
-                const int success = 1;
-                return success == result;
-
+               var result =  command.Execute(key);
+               return result;
             }
         }
     }
