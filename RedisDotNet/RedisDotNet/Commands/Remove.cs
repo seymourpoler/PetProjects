@@ -3,7 +3,7 @@ using System.Text;
 
 namespace RedisDotNet.Commands
 {
-    public class Remove : BaseCommand, IDisposable
+    public class Remove : BaseCommand
     {
         public Remove(string host, int port) 
             : base(host: host, port: port) { }
@@ -19,23 +19,8 @@ namespace RedisDotNet.Commands
             dataToBeSent.Append("\r\n");
             _socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
             
-            int c = _buffer.ReadByte ();
+            var c = _buffer.ReadByte ();
             throw new NotImplementedException();
-        }
-        
-        public void Dispose()
-        {
-            if (_socket != null)
-            {
-                _socket.Close();
-                _socket.Dispose();
-            }
-
-            if (_buffer != null)
-            {
-                _buffer.Close();
-                _buffer.Dispose();
-            }
         }
     }
 }
