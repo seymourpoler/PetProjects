@@ -59,7 +59,6 @@
             </e>
           </e>
         </e>
-        <e p="Redis_should.cs" t="Include" />
         <e p="RedisDotNet.Unit.Test.csproj" t="IncludeRecursive" />
       </e>
     </e>

@@ -1,3 +1,4 @@
+using System;
 using System.Text;
 
 namespace RedisDotNet.Commands
@@ -16,9 +17,22 @@ namespace RedisDotNet.Commands
             dataToBeSent.Append("\r\n");
             dataToBeSent.Append(key);
             dataToBeSent.Append("\r\n");
-            var result = _socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
-            const int success = 1;
-            return success == result;
+            _socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
+            
+            
+            var currentReadByteResult = _buffer.ReadByte(); 
+            if (currentReadByteResult == fail)
+            {
+                throw new RedisException("not contains key");
+            }
+
+            const string success = "1";
+            var line = ReadLine();
+            if (line != success)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

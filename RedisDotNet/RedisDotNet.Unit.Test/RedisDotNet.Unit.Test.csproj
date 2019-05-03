@@ -12,4 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RedisDotNet\RedisDotNet.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Redis_should.cs" />
+  </ItemGroup>
 </Project>

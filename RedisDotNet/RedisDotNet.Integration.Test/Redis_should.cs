@@ -35,13 +35,21 @@ namespace RedisDotNet.Integration.Test
         }
 
         [Fact]
-        public void contains_key()
+        public void return_true_when_contains_key()
         {
             redis.Set("oneKey", "oneValue");
 
             var result = redis.ContainsKey("oneKey");
 
             result.ShouldBeTrue();
+        }
+        
+        [Fact]
+        public void return_false_when_contains_key()
+        {
+            var result = redis.ContainsKey("missing-Key");
+
+            result.ShouldBeFalse();
         }
     }
 }
