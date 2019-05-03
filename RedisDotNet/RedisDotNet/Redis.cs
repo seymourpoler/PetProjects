@@ -15,7 +15,6 @@ namespace RedisDotNet
         public void Dispose()
         {
             GC.SuppressFinalize (this);
-            throw  new NotImplementedException();
         }
 
         public void Set(string key, string value)
@@ -78,9 +77,13 @@ namespace RedisDotNet
         {
             using (var socket = _connectedSocketFactory.Create())
             {
-                var dataToBeSent = new StringBuilder("*1\r\n");
+                var dataToBeSent = new StringBuilder("*2\r\n");
                 dataToBeSent.Append("$6\r\nEXISTS\r\n");
+                dataToBeSent.Append("$");
+                dataToBeSent.Append(key.Length);
+                dataToBeSent.Append("\r\n");
                 dataToBeSent.Append(key);
+                dataToBeSent.Append("\r\n");
                 socket.Send(dataToBeSent.ToString());
             }
         }

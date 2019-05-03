@@ -45,5 +45,14 @@ namespace RedisDotNet.Unit.Test
             socket
                 .Verify(x => x.Send(It.Is<string>(y => y.Contains("*2\r\n$3\r\nDEL\r\n$3\r\nfoo\r\n"))));
         }
+
+        [Fact]
+        public void contains_key()
+        {
+            redis.ContainsKey("foo");
+            
+            socket
+                .Verify(x => x.Send(It.Is<string>(y => y.Contains("*2\r\n$6\r\nEXISTS\r\n$3\r\nfoo\r\n"))));
+        }
     }
 }
