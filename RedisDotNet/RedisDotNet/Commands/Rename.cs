@@ -1,14 +1,11 @@
-using System;
 using System.Text;
 
 namespace RedisDotNet.Commands
 {
     public class Rename : BaseCommand
     {
-        public Rename(string host, int port) : base(host, port)
-        {
-            const string command = "RENAME";
-        }
+        public Rename(string host, int port) 
+            : base(host, port) { }
 
         public void Execute(string oldKey, string newKey)
         {
