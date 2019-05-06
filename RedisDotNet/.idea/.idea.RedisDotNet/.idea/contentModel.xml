@@ -19,6 +19,7 @@
           <e p="ContainsKey.cs" t="Include" />
           <e p="FlushAll.cs" t="Include" />
           <e p="Remove.cs" t="Include" />
+          <e p="Rename.cs" t="Include" />
           <e p="Set.cs" t="Include" />
         </e>
         <e p="IRedis.cs" t="Include" />

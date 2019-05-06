@@ -59,6 +59,17 @@ namespace RedisDotNet
                return result;
             }
         }
+
+        public void Rename(string oldKey, string newKey)
+        {
+            Check.IsNullOrWhiteSpace<ArgumentNullException>(oldKey);
+            Check.IsNullOrWhiteSpace<ArgumentNullException>(newKey);
+            
+            using (var command = new Rename(host: _host, port: _port))
+            {
+                command.Execute(oldKey: oldKey, newKey: newKey);
+            }
+        }
         
         public void Dispose()
         {
