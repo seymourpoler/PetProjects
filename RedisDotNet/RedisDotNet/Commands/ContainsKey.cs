@@ -1,4 +1,3 @@
-using System;
 using System.Text;
 
 namespace RedisDotNet.Commands
@@ -18,7 +17,6 @@ namespace RedisDotNet.Commands
             dataToBeSent.Append(key);
             dataToBeSent.Append("\r\n");
             _socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
-            
             
             var currentReadByteResult = _buffer.ReadByte(); 
             if (currentReadByteResult == fail)
