@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-public class translatorListenerShould {
+public class TranslatorListenerShould {
     @Test public void
     notifiesAuctionClosedWhenCloseMessageReceived() {
 
