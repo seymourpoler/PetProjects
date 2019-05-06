@@ -8,5 +8,6 @@
         void Remove(string key);
         bool ContainsKey(string key);
         void Rename(string oldKey, string newKey);
+        string Get(string key);
     }
 }

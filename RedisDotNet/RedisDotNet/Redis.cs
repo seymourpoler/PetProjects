@@ -70,7 +70,12 @@ namespace RedisDotNet
                 command.Execute(oldKey: oldKey, newKey: newKey);
             }
         }
-        
+
+        public string Get(string key)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Dispose()
         {
             GC.SuppressFinalize (this);

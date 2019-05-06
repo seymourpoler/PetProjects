@@ -59,7 +59,16 @@ namespace RedisDotNet.Integration.Test
             redis.Set("foo", "bar");
             redis.Rename("foo", "fhoo");
         }
-        
+
+        [Fact]
+        public void get()
+        {
+            redis.Set("foo", "bar");
+            
+            var result = redis.Get("foo");
+            
+            result.ShouldBe("bar");
+        }
         
         public void Dispose()
         {
