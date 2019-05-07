@@ -73,7 +73,13 @@ namespace RedisDotNet
 
         public string Get(string key)
         {
-            throw new NotImplementedException();
+            Check.IsNullOrWhiteSpace<ArgumentNullException>(key);
+            
+            using (var command = new Get(host: _host, port: _port))
+            {
+                var result = command.Execute(key);
+                return result;
+            }
         }
 
         public void Dispose()
