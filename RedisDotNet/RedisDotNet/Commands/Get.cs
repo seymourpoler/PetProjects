@@ -19,6 +19,7 @@ namespace RedisDotNet.Commands
             var bytes = Encoding.UTF8.GetBytes(dataToBeSent.ToString());
             _socket.Send(bytes);
             
+            //TODO: refactor
             var  line = ReadLine ();
             if (String.IsNullOrWhiteSpace(line))
                 throw new RedisException("Zero length respose");
