@@ -7,12 +7,18 @@ namespace RedisDotNet.Commands
         public Set(string host, int port)
             : base(host: host, port: port) { }
 
-        public void Execute(string key, byte[] value)
+        public void Execute(string key, byte[] values)
         {
-            var dataToBeSent = BuildDataToBeSent(key: key, values:value);
-            var bytes = Encoding.UTF8.GetBytes(dataToBeSent);
+            var dataToBeSent = new StringBuilder();
+            dataToBeSent.Append("*3\r\n");
+            dataToBeSent.Append("$3\r\nSET\r\n");
+            dataToBeSent.Append("$").Append(Encoding.UTF8.GetByteCount(key)).Append("\r\n");
+            dataToBeSent.Append(key).Append("\r\n");
+            dataToBeSent.Append("$").Append(values.Length).Append("\r\n");
+            
+            var bytes = Encoding.UTF8.GetBytes(dataToBeSent.ToString());
             _socket.Send(bytes);
-            _socket.Send(value);
+            _socket.Send(values);
             _socket.Send(new[] {(byte) '\r', (byte) '\n'});
             
             var currentReadByteResult = _buffer.ReadByte(); 
@@ -26,18 +32,6 @@ namespace RedisDotNet.Commands
             {
                 throw new RedisException(line.StartsWith ("ERR ") ? line.Substring (4) : line);
             }
-        }
-        
-        static string BuildDataToBeSent(string key, byte [] values)
-        {
-            var result = new StringBuilder();
-            result.Append("*3\r\n");
-            result.Append("$3\r\nSET\r\n");
-            result.Append("$").Append(Encoding.UTF8.GetByteCount(key)).Append("\r\n");
-            result.Append(key).Append("\r\n");
-            result.Append("$").Append(values.Length).Append("\r\n");
-            
-            return result.ToString();
         }
     }
 }

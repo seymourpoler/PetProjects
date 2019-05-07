@@ -11,13 +11,10 @@ namespace RedisDotNet.Commands
         {
             var dataToBeSent = new StringBuilder("*2\r\n");
             dataToBeSent.Append("$6\r\nEXISTS\r\n");
-            dataToBeSent.Append("$");
-            dataToBeSent.Append(key.Length);
-            dataToBeSent.Append("\r\n");
-            dataToBeSent.Append(key);
-            dataToBeSent.Append("\r\n");
-            _socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
+            dataToBeSent.Append("$").Append(key.Length).Append("\r\n");
+            dataToBeSent.Append(key).Append("\r\n");
             
+            _socket.Send(Encoding.UTF8.GetBytes(dataToBeSent.ToString()));
             var currentReadByteResult = _buffer.ReadByte(); 
             if (currentReadByteResult == fail)
             {

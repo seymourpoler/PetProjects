@@ -11,11 +11,9 @@ namespace RedisDotNet.Commands
         {
             var dataToBeSent = new StringBuilder("*2\r\n");
             dataToBeSent.Append("$3\r\nDEL\r\n");
-            dataToBeSent.Append("$");
-            dataToBeSent.Append(key.Length);
-            dataToBeSent.Append("\r\n");
-            dataToBeSent.Append(key);
-            dataToBeSent.Append("\r\n");
+            dataToBeSent.Append("$").Append(key.Length).Append("\r\n");
+            dataToBeSent.Append(key).Append("\r\n");
+            
             var bytes = Encoding.UTF8.GetBytes(dataToBeSent.ToString());
             _socket.Send(bytes);
 
