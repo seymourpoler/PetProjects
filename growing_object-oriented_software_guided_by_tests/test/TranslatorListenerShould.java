@@ -1,30 +1,29 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-
+import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 public class TranslatorListenerShould {
 
-    @Mock
     Translator translator;
     Message message;
     Listener listener;
 
-
-    @BeforeEach
-    public void setUp(){
+    @BeforeEach public void
+    setUp(){
         message = new Message();
-        translator = new Translator();
+        translator = mock(Translator.class);
         listener = new Listener(translator);
     }
 
-    @Test
-    public void
+    @Test public void
     notifiesAuctionClosedWhenCloseMessageReceived() {
-        message.setBody("SQLVersion: 1.1; Event: CLOSE");
+        message.setBody(listener.MESSAGE_BODY);
 
         listener.auctionClosed();
 
-        translator.processMessage(listener.UNUSED_CHAT, message);
+        verify(translator).processMessage(eq(listener.UNUSED_CHAT), any(Message.class));
     }
 }
