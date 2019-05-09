@@ -27,7 +27,8 @@ namespace RedisDotNet
             Check.If<ArgumentException>(() => expireInSeconds < 0);
             using (var command = new Expire(host: _host, port: _port))
             {
-                command.Execute(key, expireInSeconds);
+                const int perSecond = 1000;
+                command.Execute(key, expireInSeconds * perSecond);
             }
         }
 
