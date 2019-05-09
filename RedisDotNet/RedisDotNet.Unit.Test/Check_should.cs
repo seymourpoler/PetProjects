@@ -85,5 +85,13 @@ namespace RedisDotNet.Unit.Test
 
             action.ShouldThrow<ArgumentException>();
         }
+        
+        [Fact]
+        public void do_nothing_argument_exception_when_condition_is_false()
+        {
+            Action action = () => { Check.If<ArgumentException>(() => 2 != 2); };
+
+            action.ShouldNotThrow();
+        }
     }
 }
