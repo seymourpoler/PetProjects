@@ -17,6 +17,7 @@
         <e p="Commands" t="Include">
           <e p="BaseCommand.cs" t="Include" />
           <e p="ContainsKey.cs" t="Include" />
+          <e p="Expire.cs" t="Include" />
           <e p="FlushAll.cs" t="Include" />
           <e p="Get.cs" t="Include" />
           <e p="Remove.cs" t="Include" />

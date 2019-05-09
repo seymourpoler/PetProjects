@@ -77,5 +77,13 @@ namespace RedisDotNet.Unit.Test
 
             action.ShouldNotThrow();
         }
+
+        [Fact]
+        public void throw_argument_exception_when_condition_is_true()
+        {
+            Action action = () => { Check.If<ArgumentException>(() => 2 == 2); };
+
+            action.ShouldThrow<ArgumentException>();
+        }
     }
 }

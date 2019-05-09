@@ -19,6 +19,17 @@ namespace RedisDotNet
         {
             Set(key: key, value: Encoding.UTF8.GetBytes(value));
         }
+        
+        public void Set(string key, string value, int expireInSeconds)
+        {
+            Set(key: key, value: Encoding.UTF8.GetBytes(value));
+
+            Check.If<ArgumentException>(() => expireInSeconds < 0);
+            using (var command = new Expire(host: _host, port: _port))
+            {
+                command.Execute(key, expireInSeconds);
+            }
+        }
 
         public void Set(string key, byte[] value)
         {

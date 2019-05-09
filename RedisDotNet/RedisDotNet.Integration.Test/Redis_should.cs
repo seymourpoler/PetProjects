@@ -69,6 +69,12 @@ namespace RedisDotNet.Integration.Test
             
             result.ShouldBe("bar");
         }
+
+        [Fact]
+        public void expireInSeconds()
+        {
+            redis.Set(key:"foo", value:"bar", expireInSeconds: 30);
+        }
         
         public void Dispose()
         {
