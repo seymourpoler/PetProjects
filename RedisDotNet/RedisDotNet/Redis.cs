@@ -28,7 +28,7 @@ namespace RedisDotNet
             using (var command = new Expire(host: _host, port: _port))
             {
                 const int perSecond = 1000;
-                command.Execute(key, expireInSeconds * perSecond);
+                command.Execute(key: key, timeInSeconds: expireInSeconds * perSecond);
             }
         }
 
