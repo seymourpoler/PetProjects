@@ -15,11 +15,10 @@ namespace RedisDotNet.Commands
             dataToBeSent.Append("$").Append(Encoding.UTF8.GetByteCount(key)).Append("\r\n");
             dataToBeSent.Append(key).Append("\r\n");
             dataToBeSent.Append("$").Append(values.Length).Append("\r\n");
+            dataToBeSent.Append(values).Append("\r\n");
             
             var bytes = Encoding.UTF8.GetBytes(dataToBeSent.ToString());
             _socket.Send(bytes);
-            _socket.Send(values);
-            _socket.Send(new[] {(byte) '\r', (byte) '\n'});
             
             var currentReadByteResult = _buffer.ReadByte(); 
             if (currentReadByteResult == fail)
