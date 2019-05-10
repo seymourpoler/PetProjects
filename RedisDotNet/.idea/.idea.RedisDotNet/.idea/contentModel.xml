@@ -23,6 +23,7 @@
           <e p="Rename.cs" t="Include" />
           <e p="Set.cs" t="Include" />
         </e>
+        <e p="ConnectedSocket.cs" t="Include" />
         <e p="IRedis.cs" t="Include" />
         <e p="Redis.cs" t="Include" />
         <e p="RedisDotNet.csproj" t="IncludeRecursive" />
