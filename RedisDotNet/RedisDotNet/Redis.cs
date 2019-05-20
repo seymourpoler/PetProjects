@@ -6,8 +6,8 @@ namespace RedisDotNet
 {
     public class Redis : IRedis, IDisposable
     {
-        string _host;
-        int _port;
+        readonly string _host;
+        readonly int _port;
         
         public Redis(string host = "localhost", int port = 6379)
         {
