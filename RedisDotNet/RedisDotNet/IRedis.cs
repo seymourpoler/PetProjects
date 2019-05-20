@@ -4,7 +4,7 @@
     {
         void Set(string key, string value);
         void Set(string key, string value, int expireInSeconds);
-        void Set(string key, byte[] value);
+        //void Set(string key, byte[] value);
         void FlushAll();
         void Remove(string key);
         bool ContainsKey(string key);

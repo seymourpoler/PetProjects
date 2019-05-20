@@ -23,7 +23,7 @@ namespace RedisDotNet.Commands
             var currentReadByteResult = _buffer.ReadByte(); 
             if (currentReadByteResult == fail)
             {
-                throw new RedisException("not set key");
+                throw new RedisException("key not set");
             }
 
             var line = ReadLine();
