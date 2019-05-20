@@ -19,6 +19,7 @@ namespace RedisDotNet.Commands
             
             var bytes = Encoding.UTF8.GetBytes(dataToBeSent.ToString());
             _socket.Send(bytes);
+            
             var currentReadByteResult = _buffer.ReadByte(); 
             if (currentReadByteResult == fail)
             {

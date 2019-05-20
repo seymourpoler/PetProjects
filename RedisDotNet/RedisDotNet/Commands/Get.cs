@@ -24,7 +24,7 @@ namespace RedisDotNet.Commands
             if (String.IsNullOrWhiteSpace(line))
                 throw new RedisException("Zero length respose");
 		
-            char firstCharacter = line.First();
+            var firstCharacter = line.First();
             if (firstCharacter == '-')
                 throw new RedisException(line.StartsWith ("-ERR ") ? line.Substring (5) : line.Substring (1));
 
