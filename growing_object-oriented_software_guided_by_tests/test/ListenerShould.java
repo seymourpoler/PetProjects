@@ -5,7 +5,7 @@ import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-public class TranslatorListenerShould {
+public class ListenerShould {
 
     Translator translator;
     Message message;
