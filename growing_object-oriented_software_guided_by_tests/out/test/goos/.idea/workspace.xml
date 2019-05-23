@@ -33,37 +33,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Listener.java">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Translator.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#161#162#0" expanded="true" />
                 <element signature="e#212#213#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-16">
               <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/FakeAuctionServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -92,16 +80,9 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/XMPPMessageSender.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-16">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AuctionSniperDriver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -127,13 +108,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
               <caret column="12" selection-start-column="12" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -153,7 +128,6 @@
         <option value="$PROJECT_DIR$/test/translatorListenerShould.java" />
         <option value="$PROJECT_DIR$/src/Message.java" />
         <option value="$PROJECT_DIR$/test/TranslatorListenerShould.java" />
-        <option value="$PROJECT_DIR$/src/Listener.java" />
         <option value="$PROJECT_DIR$/src/Translator.java" />
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/src/ApplicationRunner/ApplicationRunner.java" />
@@ -201,6 +175,10 @@
             <path>
               <item name="goos" type="b2602c69:ProjectViewProjectNode" />
               <item name="growing_object-oriented_software_guided_by_tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="growing_object-oriented_software_guided_by_tests" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -215,7 +193,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/mockito-all-1.9.5.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -326,6 +304,9 @@
     <history-entry file="AuctionSniperEndToEndTest_sniperJoinsAuctionUntilAuctionCloses - 2019.05.23 at 18h 16m 13s.xml">
       <configuration name="AuctionSniperEndToEndTest.sniperJoinsAuctionUntilAuctionCloses" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TranslatorListenerShould_notifiesAuctionClosedWhenCloseMessageReceived - 2019.05.07 at 15h 39m 46s.xml">
+      <configuration name="TranslatorListenerShould.notifiesAuctionClosedWhenCloseMessageReceived" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,10 +377,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
             <element signature="e#161#162#0" expanded="true" />
             <element signature="e#212#213#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -472,7 +451,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ApplicationRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="255">
           <folding>
             <element signature="e#883#884#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
