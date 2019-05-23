@@ -1,11 +1,10 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class ApplicationRunner {
 
     private static final String XMPP_HOSTNAME = "xmpp_server_host_name";
     private static final String SNIPER_ID = "sniper";
     private static final String SNIPER_PASSWORD = "password";
     private static final String STATUS_JOINING = "joining";
+    private static final String STATUS_LOST = "lost";
 
     private AuctionSniperDriver driver;
     private XMPPMessageSender messageSender;
@@ -21,10 +20,10 @@ public class ApplicationRunner {
     }
 
     public void showsSniperHasLostAuction(){
-        throw new NotImplementedException();
+        driver.showsSniperStatus(STATUS_LOST);
     }
 
     public void stop(){
-        throw new NotImplementedException();
+        driver.dispose();
     }
 }

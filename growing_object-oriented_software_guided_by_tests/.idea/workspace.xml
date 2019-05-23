@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5071b7-c1f3-409d-8291-ad2acadc3c17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AuctionSniperDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IAuctionServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/XMPPMessageSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/FakeAuctionServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RedisDotNet/RedisDotNet/ConnectedSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../RedisDotNet/RedisDotNet/ConnectedSocket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/goos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/TranslatorListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/TranslatorListenerShould.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ListenerShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ListenerShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuctionSniperDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuctionSniperDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ListenerShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
+            <state relative-caret-position="357">
               <caret line="21" column="49" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -61,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="53" />
+            <state relative-caret-position="510">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/FakeAuctionServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
+            <state relative-caret-position="136">
               <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding>
                 <element signature="e#120#121#0" expanded="true" />
@@ -88,15 +79,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ApplicationRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="306">
+              <caret line="18" column="49" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="49" />
               <folding>
-                <element signature="e#829#830#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#961#962#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,11 +106,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AuctionSniperDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="153">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
               <folding>
                 <element signature="e#88#89#0" expanded="true" />
                 <element signature="e#112#113#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,12 +159,12 @@
         <option value="$PROJECT_DIR$/src/Translator.java" />
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/src/ApplicationRunner/ApplicationRunner.java" />
-        <option value="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" />
         <option value="$PROJECT_DIR$/src/XMPPMessageSender.java" />
         <option value="$PROJECT_DIR$/src/IAuctionServer.java" />
         <option value="$PROJECT_DIR$/test/FakeAuctionServer.java" />
         <option value="$PROJECT_DIR$/src/AuctionSniperDriver.java" />
         <option value="$PROJECT_DIR$/src/ApplicationRunner.java" />
+        <option value="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" />
       </list>
     </option>
   </component>
@@ -304,9 +298,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TranslatorListenerShould_notifiesAuctionClosedWhenCloseMessageReceived - 2019.05.07 at 15h 35m 05s.xml">
-      <configuration name="TranslatorListenerShould.notifiesAuctionClosedWhenCloseMessageReceived" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TranslatorListenerShould_notifiesAuctionClosedWhenCloseMessageReceived - 2019.05.07 at 15h 39m 41s.xml">
       <configuration name="TranslatorListenerShould.notifiesAuctionClosedWhenCloseMessageReceived" configurationId="JUnit" />
     </history-entry>
@@ -332,6 +323,9 @@
       <configuration name="AuctionSniperEndToEndTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="AuctionSniperEndToEndTest_sniperJoinsAuctionUntilAuctionCloses - 2019.05.23 at 18h 16m 13s.xml">
+      <configuration name="AuctionSniperEndToEndTest.sniperJoinsAuctionUntilAuctionCloses" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionSniperEndToEndTest_sniperJoinsAuctionUntilAuctionCloses - 2019.05.23 at 18h 56m 24s.xml">
       <configuration name="AuctionSniperEndToEndTest.sniperJoinsAuctionUntilAuctionCloses" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -411,16 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ListenerShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -444,7 +428,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/FakeAuctionServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
+        <state relative-caret-position="136">
           <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <element signature="e#120#121#0" expanded="true" />
@@ -455,10 +439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java">
+    <entry file="file://$PROJECT_DIR$/test/ListenerShould.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="53" />
+        <state relative-caret-position="357">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -467,23 +451,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AuctionSniperDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        <state relative-caret-position="153">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
           <folding>
             <element signature="e#88#89#0" expanded="true" />
             <element signature="e#112#113#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ApplicationRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="306">
+          <caret line="18" column="49" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="49" />
           <folding>
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

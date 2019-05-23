@@ -28,5 +28,4 @@ public class AuctionSniperEndToEndTest {
         auction.stop();
         application.stop();
     }
-
 }
