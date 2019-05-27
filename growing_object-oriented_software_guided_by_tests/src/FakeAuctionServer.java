@@ -8,10 +8,12 @@ public class FakeAuctionServer implements IAuctionServer {
     private final XMPPConnection connection;
     private final String _item;
     private Chat currentChat;
+    private final MessageListener messageListener;
 
     FakeAuctionServer(String item){
         _item = item;
         connection = new XMPPConnection(XMPP_HOSTNAME);
+        messageListener = new SingleMessageListener();
     }
 
     public String getItemId(){
@@ -20,16 +22,26 @@ public class FakeAuctionServer implements IAuctionServer {
 
     public void startSellingItem(){
         connection.connect();
-        connection.login(format(ITEM_ID_AS_LOGIN, _item), AUCTION_PASSWORD, AUCTION_RESOURCE);
+        connection.login(ITEM_ID_AS_LOGIN, AUCTION_PASSWORD, AUCTION_RESOURCE);
+
+        connection.getChatManager().addCharListener(
+            new ChatManagerListener(){
+                public void chatCreated(Chat chat, boolean createdLocally) {
+                    currentChat = chat;
+                    chat.addMessageListener(messageListener);
+                }});
 
     }
 
     public void hasReceivedJoinRequestedFromSniper(){
+        messageListener.receivesAMessage();
     }
 
     public void announceClosed(){
+        messageListener.sendMessage(new Message());
     }
 
     public void stop(){
+        connection.disconnect();
     }
 }
