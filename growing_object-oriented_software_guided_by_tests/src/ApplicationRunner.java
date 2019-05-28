@@ -1,5 +1,8 @@
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 public class ApplicationRunner {
 
+    public static final String SNIPER_XMPP_ID = "sniper_xmpp_id";
     private static final String XMPP_HOSTNAME = "xmpp_server_host_name";
     private static final String SNIPER_ID = "sniper";
     private static final String SNIPER_PASSWORD = "password";
@@ -25,5 +28,9 @@ public class ApplicationRunner {
 
     public void stop(){
         driver.dispose();
+    }
+
+    public void hasShownSniperIsBidding() {
+        throw new NotImplementedException();
     }
 }

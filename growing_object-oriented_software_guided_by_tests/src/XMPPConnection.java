@@ -2,10 +2,10 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class XMPPConnection {
 
-    private final String connectionString;
+    private final String hostName;
 
-    public XMPPConnection(String connectionString){
-        this.connectionString = connectionString;
+    public XMPPConnection(String hostName){
+        this.hostName = hostName;
     }
 
     public void connect(){}

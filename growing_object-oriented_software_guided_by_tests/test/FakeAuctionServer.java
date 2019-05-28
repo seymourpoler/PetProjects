@@ -1,3 +1,5 @@
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 public class FakeAuctionServer implements IAuctionServer {
 
     public static final String ITEM_ID_AS_LOGIN = "auction-%s";
@@ -43,5 +45,13 @@ public class FakeAuctionServer implements IAuctionServer {
 
     public void stop(){
         connection.disconnect();
+    }
+
+    public void reportPrice(int price, int anotherPrice, String bidder) {
+        throw new NotImplementedException();
+    }
+
+    public void hasReceivedBid(int price, String SniperXmppId) {
+        throw new NotImplementedException();
     }
 }
