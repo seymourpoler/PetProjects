@@ -12,6 +12,7 @@ public class Main {
     public static final String AUCTION_ID_FORMAT = ITEM_ID_AS_LOGIN + "@%s/" + AUCTION_RESOURCE;
 
     public static void main(String[] args) throws Exception{
+        UI ui = new UI();
         XMPPConnection connection = connectTo(args[ARG_HOSTNAME],
             args[ARG_USERNAME],
             args[ARG_PASSWORD]);
@@ -19,8 +20,8 @@ public class Main {
         Chat chat = connection.getChatManager().createChat(
                 auctionId(args[ARG_ITEM_ID], connection),
                 new SingleMessageListener() {
-                    public void processMessage(Chat chat, Message message) {
-                        throw new NotImplementedException();
+                    public void processMessage(Chat aChat, Message aMessage) {
+                        ui.showStatus("status-lost");
                     }
                 });
         chat.sendMessage(new Message());
