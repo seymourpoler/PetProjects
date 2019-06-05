@@ -19,4 +19,8 @@ public class XMPPConnection {
     public void disconnect() {
         throw new NotImplementedException();
     }
+
+    public String getServiceName(){
+        throw new NotImplementedException();
+    }
 }

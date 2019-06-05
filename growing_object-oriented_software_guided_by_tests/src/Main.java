@@ -7,21 +7,34 @@ public class Main {
     private static final int ARG_PASSWORD = 2;
     private static final int ARG_ITEM_ID = 3;
 
-    public static void main(String[] args){
-        XMPPConnection connection = new XMPPConnection(args[ARG_HOSTNAME]);
-        connection.connect();
-        connection.login(
+    public static final String AUCTION_RESOURCE = "Auction";
+    public static final String ITEM_ID_AS_LOGIN = "auction-%s";
+    public static final String AUCTION_ID_FORMAT = ITEM_ID_AS_LOGIN + "@%s/" + AUCTION_RESOURCE;
+
+    public static void main(String[] args) throws Exception{
+        XMPPConnection connection = connectTo(args[ARG_HOSTNAME],
             args[ARG_USERNAME],
-            args[ARG_PASSWORD],
-            args[ARG_ITEM_ID]);
+            args[ARG_PASSWORD]);
 
         Chat chat = connection.getChatManager().createChat(
-                args[ARG_ITEM_ID],
-                new SingleMessageListener(){
-                    public void processMessage(Chat aChat, Message message){
+                auctionId(args[ARG_ITEM_ID], connection),
+                new SingleMessageListener() {
+                    public void processMessage(Chat chat, Message message) {
                         throw new NotImplementedException();
                     }
                 });
         chat.sendMessage(new Message());
+    }
+
+    private static XMPPConnection connectTo(String hostName, String userName, String password) throws XMPPException  {
+        XMPPConnection connection = new XMPPConnection(hostName);
+        connection.connect();
+        connection.login(userName, password, AUCTION_RESOURCE);
+
+        return connection;
+    }
+
+    private static String auctionId(String itemId, XMPPConnection connection){
+        return String.format(AUCTION_ID_FORMAT, itemId, connection.getServiceName());
     }
 }
