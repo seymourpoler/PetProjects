@@ -1,4 +1,4 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import static java.lang.String.format;
 
 public class FakeAuctionServer implements IAuctionServer {
 
@@ -26,7 +26,7 @@ public class FakeAuctionServer implements IAuctionServer {
         connection.connect();
         connection.login(ITEM_ID_AS_LOGIN, AUCTION_PASSWORD, AUCTION_RESOURCE);
 
-        connection.getChatManager().addCharListener(
+        connection.getChatManager().addChatListener(
             new ChatManagerListener(){
                 public void chatCreated(Chat chat, boolean createdLocally) {
                     currentChat = chat;
@@ -47,11 +47,13 @@ public class FakeAuctionServer implements IAuctionServer {
         connection.disconnect();
     }
 
-    public void reportPrice(int price, int anotherPrice, String bidder) {
-        throw new NotImplementedException();
+    public void reportPrice(int price, int increment, String bidder) {
+        String message = format("SOLVersion: 1.1; Event: PRICE; CurrentPrice: %d; Increment: %d; Bidder: %s;", price, increment, bidder);
+        currentChat.sendMessage(message);
     }
 
-    public void hasReceivedBid(int price, String SniperXmppId) {
-        throw new NotImplementedException();
+    public void hasReceivedBid(int bid, String SniperXmppId){
+        String message = format("SOLVersion: 1.1; Command: BID; Price: %d;", bid);
+        messageListener.receivesAMessage(message);
     }
 }

@@ -17,6 +17,10 @@ public class SingleMessageListener implements MessageListener {
         throw new NotImplementedException();
     }
 
+    public void receivesAMessage(String message) {
+        throw new NotImplementedException();
+    }
+
     public void sendMessage(Message message) {
 
     }

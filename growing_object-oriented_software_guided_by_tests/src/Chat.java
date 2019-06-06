@@ -9,4 +9,8 @@ public class Chat {
     public void sendMessage(Message message){
         throw new NotImplementedException();
     }
+
+    public void sendMessage(String message){
+        throw  new NotImplementedException();
+    }
 }

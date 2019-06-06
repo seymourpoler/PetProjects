@@ -2,7 +2,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class ChatManager {
 
-    public void addCharListener(ChatManagerListener chatManagerListener){
+    public void addChatListener(ChatManagerListener chatManagerListener){
         throw new NotImplementedException();
     }
 
