@@ -1,4 +1,7 @@
+import org.hamcrest.Matcher;
+
 import static java.lang.String.format;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class FakeAuctionServer implements IAuctionServer {
 
@@ -35,8 +38,8 @@ public class FakeAuctionServer implements IAuctionServer {
 
     }
 
-    public void hasReceivedJoinRequestedFromSniper(){
-        messageListener.receivesAMessage();
+    public void hasReceivedJoinRequestedFromSniper(String sniperXmppId){
+        messageListener.receivesAMessage(sniperXmppId);
     }
 
     public void announceClosed(){
@@ -52,8 +55,16 @@ public class FakeAuctionServer implements IAuctionServer {
         currentChat.sendMessage(message);
     }
 
-    public void hasReceivedBid(int bid, String SniperXmppId){
+    public void hasReceivedBid(int bid, String sniperXmppId) throws RuntimeException{
+        if(currentChat.getParticipant() != sniperXmppId){
+            throw new RuntimeException();
+        }
         String message = format("SOLVersion: 1.1; Command: BID; Price: %d;", bid);
         messageListener.receivesAMessage(message);
+    }
+
+    private void receivesAMessageMatching(String sniperId, Matcher<? super String> messageMatcher) {
+        //messageListener.receivesAMessage(messageMatcher);
+        //assert(currentChat.getParticipant(), equalTo(sniperId));
     }
 }

@@ -1,5 +1,3 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class Main {
 
     private static final int ARG_HOSTNAME = 0;
@@ -11,8 +9,11 @@ public class Main {
     public static final String ITEM_ID_AS_LOGIN = "auction-%s";
     public static final String AUCTION_ID_FORMAT = ITEM_ID_AS_LOGIN + "@%s/" + AUCTION_RESOURCE;
 
+    public static final String JOIN_COMMAND_FORMAT = "join-command-format";
+
     public static void main(String[] args) throws Exception{
         UI ui = new UI();
+        ui.addWindowListener()
         XMPPConnection connection = connectTo(args[ARG_HOSTNAME],
             args[ARG_USERNAME],
             args[ARG_PASSWORD]);
@@ -24,7 +25,7 @@ public class Main {
                         ui.showStatus("status-lost");
                     }
                 });
-        chat.sendMessage(new Message());
+        chat.sendMessage(JOIN_COMMAND_FORMAT);
     }
 
     private static XMPPConnection connectTo(String hostName, String userName, String password) throws XMPPException  {

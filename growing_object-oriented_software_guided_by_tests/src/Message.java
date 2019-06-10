@@ -4,4 +4,7 @@ public class Message {
     public void setBody(String value) {
         _body = value;
     }
+    public String getBody() {
+        return _body ;
+    }
 }

@@ -8,6 +8,7 @@ public class ApplicationRunner {
     private static final String SNIPER_PASSWORD = "password";
     private static final String STATUS_JOINING = "joining";
     private static final String STATUS_LOST = "lost";
+    private static final String STATUS_BIDDING = "bidding";
 
     private AuctionSniperDriver driver;
     private XMPPMessageSender messageSender;
@@ -31,6 +32,6 @@ public class ApplicationRunner {
     }
 
     public void hasShownSniperIsBidding() {
-        throw new NotImplementedException();
+        driver.showsSniperStatus(STATUS_BIDDING);
     }
 }

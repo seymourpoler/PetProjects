@@ -1,5 +1,8 @@
+import org.hamcrest.Matcher;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 public class SingleMessageListener implements MessageListener {
     private ArrayBlockingQueue<Message> messages;
@@ -22,6 +25,15 @@ public class SingleMessageListener implements MessageListener {
     }
 
     public void sendMessage(Message message) {
+        throw new NotImplementedException();
+    }
 
+    public void receivesAMessage(Matcher<? super String> messageMatcher)
+            throws InterruptedException
+    {
+        final Message message = messages.poll(5, TimeUnit.SECONDS);
+        //assert("Message", message, is(notNullValue());
+        //assert(message, is(notNullValue());
+        //assert(message.getBody(), is(messageMatcher));
     }
 }

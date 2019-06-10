@@ -13,4 +13,8 @@ public class Chat {
     public void sendMessage(String message){
         throw  new NotImplementedException();
     }
+
+    public String getParticipant(){
+        throw new NotImplementedException();
+    }
 }
