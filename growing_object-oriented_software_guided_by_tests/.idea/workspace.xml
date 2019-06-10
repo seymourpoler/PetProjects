@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5071b7-c1f3-409d-8291-ad2acadc3c17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/goos/Chat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/Chat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/goos/ChatManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/ChatManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/goos/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/goos/ApplicationRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/ApplicationRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/goos/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/goos/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/goos/SingleMessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/SingleMessageListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/goos/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/UI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/goos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/goos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/Chat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/FakeAuctionServer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/FakeAuctionServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/Translator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/TranslatorListenerShould.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/goos/AuctionSniperEndToEndTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/goos/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/goos/UI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleMessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/FakeAuctionServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/FakeAuctionServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +30,27 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/FakeAuctionServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -47,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -105,8 +117,8 @@
         <option value="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" />
         <option value="$PROJECT_DIR$/test/FakeAuctionServer.java" />
         <option value="$PROJECT_DIR$/src/ApplicationRunner.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/UI.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -446,16 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/FakeAuctionServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SingleMessageListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -500,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -517,6 +512,30 @@
             <element signature="e#221#222#0" expanded="true" />
             <element signature="e#271#272#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/FakeAuctionServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
         </state>
       </provider>
     </entry>

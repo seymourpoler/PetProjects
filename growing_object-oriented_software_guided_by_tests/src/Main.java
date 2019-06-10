@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception{
         UI ui = new UI();
-        ui.addWindowListener()
+        ui.addWindowListener();
         XMPPConnection connection = connectTo(args[ARG_HOSTNAME],
             args[ARG_USERNAME],
             args[ARG_PASSWORD]);
