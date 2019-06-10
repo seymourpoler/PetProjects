@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5071b7-c1f3-409d-8291-ad2acadc3c17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/goos/ApplicationRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/ApplicationRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/goos/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/goos/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/goos/SingleMessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/SingleMessageListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/goos/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/goos/UI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/goos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/AuctionSniperEndToEndTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/goos/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/goos/UI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            <state relative-caret-position="102">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -119,6 +109,7 @@
         <option value="$PROJECT_DIR$/src/ApplicationRunner.java" />
         <option value="$PROJECT_DIR$/src/UI.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java" />
       </list>
     </option>
   </component>
@@ -534,8 +525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
