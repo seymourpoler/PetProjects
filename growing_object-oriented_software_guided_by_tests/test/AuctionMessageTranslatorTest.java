@@ -4,6 +4,6 @@ public class AuctionMessageTranslatorTest {
     @Test
     public void notifiesAuctionClosedWhenCloseMessageReceived()
     {
-        
+
     }
 }
