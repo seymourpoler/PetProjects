@@ -1,7 +1,7 @@
 import org.hamcrest.Matcher;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import static java.lang.String.format;
-import static org.hamcrest.CoreMatchers.equalTo;
 
 public class FakeAuctionServer implements IAuctionServer {
 
@@ -23,6 +23,10 @@ public class FakeAuctionServer implements IAuctionServer {
 
     public String getItemId(){
         return _item;
+    }
+
+    public void hasReceivedJoinRequestedFromSniper() {
+        throw  new NotImplementedException();
     }
 
     public void startSellingItem(){

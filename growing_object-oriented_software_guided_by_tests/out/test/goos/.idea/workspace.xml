@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d5071b7-c1f3-409d-8291-ad2acadc3c17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="03bc3fb1-9bca-4e8c-a78d-8a133f84b2e9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="goos" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AuctionMessageTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="442">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI.java">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="-351">
+              <caret line="547" selection-start-line="547" selection-end-line="547" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <element signature="e#131#132#0" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
-                <element signature="e#271#272#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,11 +81,14 @@
         <option value="$PROJECT_DIR$/src/Chat.java" />
         <option value="$PROJECT_DIR$/src/Message.java" />
         <option value="$PROJECT_DIR$/src/SingleMessageListener.java" />
-        <option value="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" />
-        <option value="$PROJECT_DIR$/test/FakeAuctionServer.java" />
         <option value="$PROJECT_DIR$/src/ApplicationRunner.java" />
         <option value="$PROJECT_DIR$/src/UI.java" />
+        <option value="$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java" />
+        <option value="$PROJECT_DIR$/test/FakeAuctionServer.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/AuctionEventListener.java" />
+        <option value="$PROJECT_DIR$/src/AuctionMessageTranslator.java" />
+        <option value="$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java" />
       </list>
     </option>
   </component>
@@ -98,10 +99,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="170" />
+    <option name="y" value="93" />
+    <option name="width" value="1026" />
+    <option name="height" value="558" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -121,17 +122,12 @@
               <item name="growing_object-oriented_software_guided_by_tests" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="goos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="growing_object-oriented_software_guided_by_tests" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -141,7 +137,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
@@ -163,11 +159,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AuctionSniperEndToEndTest">
+  <component name="RunManager" selected="JUnit.AuctionMessageTranslatorTest.notifiesBidDetailsWhenCurrentPriceMessageReceived">
     <configuration name="All in goos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goos" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuctionMessageTranslatorTest.notifiesAuctionClosedWhenCloseMessageReceived" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goos" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AuctionMessageTranslatorTest" />
+      <option name="METHOD_NAME" value="notifiesAuctionClosedWhenCloseMessageReceived" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuctionMessageTranslatorTest.notifiesBidDetailsWhenCurrentPriceMessageReceived" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goos" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AuctionMessageTranslatorTest" />
+      <option name="METHOD_NAME" value="notifiesBidDetailsWhenCurrentPriceMessageReceived" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,25 +193,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AuctionSniperEndToEndTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ListenerShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="goos" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ListenerShould" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ListenerShould.notifiesAuctionClosedWhenCloseMessageReceived" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="goos" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ListenerShould" />
-      <option name="METHOD_NAME" value="notifiesAuctionClosedWhenCloseMessageReceived" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,10 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuctionMessageTranslatorTest.notifiesBidDetailsWhenCurrentPriceMessageReceived" />
+        <item itemvalue="JUnit.AuctionMessageTranslatorTest.notifiesAuctionClosedWhenCloseMessageReceived" />
         <item itemvalue="JUnit.AuctionSniperEndToEndTest" />
         <item itemvalue="JUnit.TranslatorListenerShould" />
         <item itemvalue="JUnit.All in goos" />
-        <item itemvalue="JUnit.ListenerShould" />
       </list>
     </recent_temporary>
   </component>
@@ -235,27 +233,17 @@
       <option name="presentableId" value="Default" />
       <updated>1557151769234</updated>
     </task>
+    <task id="LOCAL-00001" summary="adding AuctionEventListener">
+      <created>1560190007249</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560190007249</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ListenerShould - 2019.05.21 at 18h 19m 34s.xml">
-      <configuration name="ListenerShould" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuctionSniperEndToEndTest - 2019.05.23 at 15h 42m 37s.xml">
-      <configuration name="AuctionSniperEndToEndTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuctionSniperEndToEndTest - 2019.05.23 at 18h 16m 02s.xml">
-      <configuration name="AuctionSniperEndToEndTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuctionSniperEndToEndTest_sniperJoinsAuctionUntilAuctionCloses - 2019.05.23 at 18h 16m 13s.xml">
-      <configuration name="AuctionSniperEndToEndTest.sniperJoinsAuctionUntilAuctionCloses" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuctionSniperEndToEndTest_sniperJoinsAuctionUntilAuctionCloses - 2019.05.23 at 18h 56m 24s.xml">
-      <configuration name="AuctionSniperEndToEndTest.sniperJoinsAuctionUntilAuctionCloses" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_goos - 2019.05.20 at 19h 45m 35s.xml">
-      <configuration name="All in goos" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TranslatorListenerShould - 2019.05.27 at 18h 28m 22s.xml">
       <configuration name="TranslatorListenerShould" configurationId="JUnit" />
     </history-entry>
@@ -267,6 +255,24 @@
     </history-entry>
     <history-entry file="AuctionSniperEndToEndTest - 2019.06.05 at 18h 23m 38s.xml">
       <configuration name="AuctionSniperEndToEndTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionMessageTranslatorTest_notifiesAuctionClosedWhenCloseMessageReceived - 2019.06.10 at 20h 08m 49s.xml">
+      <configuration name="AuctionMessageTranslatorTest.notifiesAuctionClosedWhenCloseMessageReceived" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionMessageTranslatorTest_notifiesAuctionClosedWhenCloseMessageReceived - 2019.06.10 at 20h 10m 09s.xml">
+      <configuration name="AuctionMessageTranslatorTest.notifiesAuctionClosedWhenCloseMessageReceived" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionMessageTranslatorTest_notifiesAuctionClosedWhenCloseMessageReceived - 2019.06.10 at 20h 14m 57s.xml">
+      <configuration name="AuctionMessageTranslatorTest.notifiesAuctionClosedWhenCloseMessageReceived" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionMessageTranslatorTest_notifiesAuctionClosedWhenCloseMessageReceived - 2019.06.10 at 20h 15m 42s.xml">
+      <configuration name="AuctionMessageTranslatorTest.notifiesAuctionClosedWhenCloseMessageReceived" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionMessageTranslatorTest_notifiesBidDetailsWhenCurrentPriceMessageReceived - 2019.06.10 at 20h 25m 31s.xml">
+      <configuration name="AuctionMessageTranslatorTest.notifiesBidDetailsWhenCurrentPriceMessageReceived" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionMessageTranslatorTest_notifiesBidDetailsWhenCurrentPriceMessageReceived - 2019.06.10 at 20h 25m 40s.xml">
+      <configuration name="AuctionMessageTranslatorTest.notifiesBidDetailsWhenCurrentPriceMessageReceived" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -288,28 +294,32 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Learn" order="5" weight="0.32954547" />
-      <window_info id="Structure" order="6" sideWeight="0.50080514" side_tool="true" weight="0.1621212" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49919486" visible="true" weight="0.2531983" />
+      <window_info id="Structure" order="6" sideWeight="0.50358" side_tool="true" weight="0.2530303" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49642006" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3281412" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3268921" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32917964" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917964" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32917964" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32606438" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32502595" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.32995737" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32954547" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding AuctionEventListener" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding AuctionEventListener" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -427,30 +437,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/FakeAuctionServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SingleMessageListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -494,10 +484,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/FakeAuctionServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="33" column="79" lean-forward="true" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/AuctionSniperEndToEndTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AuctionEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#926#1128#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AuctionMessageTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="547" selection-start-line="547" selection-end-line="547" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/AuctionMessageTranslatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

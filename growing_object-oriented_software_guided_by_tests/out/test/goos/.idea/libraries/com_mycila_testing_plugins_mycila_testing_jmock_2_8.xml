@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="com.mycila.testing.plugins:mycila-testing-jmock:2.8" type="repository">
+    <properties maven-id="com.mycila.testing.plugins:mycila-testing-jmock:2.8" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mycila/testing/plugins/mycila-testing-jmock/2.8/mycila-testing-jmock-2.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/mycila/testing/mycila-testing-api/2.8/mycila-testing-api-2.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/mycila/mycila-plugin/1.10/mycila-plugin-1.10.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/mycila/mycila-log/2.12/mycila-log-2.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jmock/jmock/2.5.1/jmock-2.5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-library/1.1/hamcrest-library-1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jmock/jmock-legacy/2.5.1/jmock-legacy-2.5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/1.1/objenesis-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
