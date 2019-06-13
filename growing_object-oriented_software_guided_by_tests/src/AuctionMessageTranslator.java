@@ -1,8 +1,41 @@
-import java.util.HashMap;
+import org.hamcrest.Matcher;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public class AuctionMessageTranslator {
+import java.util.HashMap;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.TimeUnit;
+
+public class AuctionMessageTranslator implements MessageListener{
 
     private AuctionEventListener listener;
+
+    private ArrayBlockingQueue<Message> messages;
+
+    public AuctionMessageTranslator(){
+        messages = new ArrayBlockingQueue<Message>(1);
+    }
+
+    public void receivesAMessage() {
+        //assertThat("Message", messages.poll(5, SECONDS), is(notNullValue()));
+        throw new NotImplementedException();
+    }
+
+    public void receivesAMessage(String message) {
+        throw new NotImplementedException();
+    }
+
+    public void sendMessage(Message message) {
+        throw new NotImplementedException();
+    }
+
+    public void receivesAMessage(Matcher<? super String> messageMatcher)
+            throws InterruptedException
+    {
+        final Message message = messages.poll(5, TimeUnit.SECONDS);
+        //assert("Message", message, is(notNullValue());
+        //assert(message, is(notNullValue());
+        //assert(message.getBody(), is(messageMatcher));
+    }
 
     public AuctionMessageTranslator(AuctionEventListener listener){
         this.listener = listener;

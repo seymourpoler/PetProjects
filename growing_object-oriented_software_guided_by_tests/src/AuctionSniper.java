@@ -1,6 +1,4 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
-public class AuctionSniper {
+public class AuctionSniper implements  AuctionEventListener{
 
     private Auction auction;
     private SniperListener sniperListener;

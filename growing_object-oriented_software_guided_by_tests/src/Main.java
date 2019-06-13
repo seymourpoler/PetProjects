@@ -25,6 +25,9 @@ public class Main {
                         ui.showStatus("status-lost");
                     }
                 });
+        SingleAuction auction = new SingleAuction(chat);
+        AuctionMessageTranslator translator = new AuctionMessageTranslator(new AuctionSniper(auction, new SingleSniperListener()));
+        chat.addMessageListener(translator);
         chat.sendMessage(JOIN_COMMAND_FORMAT);
     }
 
