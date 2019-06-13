@@ -20,13 +20,12 @@ public class Main {
 
         Chat chat = connection.getChatManager().createChat(
                 auctionId(args[ARG_ITEM_ID], connection),
-                new SingleMessageListener() {
+                new AuctionMessageTranslator() {
                     public void processMessage(Chat aChat, Message aMessage) {
                         ui.showStatus("status-lost");
                     }
                 });
-        SingleAuction auction = new SingleAuction(chat);
-        AuctionMessageTranslator translator = new AuctionMessageTranslator(new AuctionSniper(auction, new SingleSniperListener()));
+        AuctionMessageTranslator translator = new AuctionMessageTranslator(new AuctionSniper(new SingleAuction(chat), new SingleSniperListener()));
         chat.addMessageListener(translator);
         chat.sendMessage(JOIN_COMMAND_FORMAT);
     }
