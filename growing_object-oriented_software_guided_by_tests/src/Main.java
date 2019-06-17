@@ -26,7 +26,8 @@ public class Main {
                     }
                 });
         Auction auction = new XMPPAuction(chat);
-        AuctionMessageTranslator translator = new AuctionMessageTranslator(new AuctionSniper(auction, new SingleSniperListener()));
+        AuctionSniper auctionSniper = new AuctionSniper(auction, new SniperStateDisplayer(ui));
+        AuctionMessageTranslator translator = new AuctionMessageTranslator(auctionSniper);
         auction.join();
         chat.addMessageListener(translator);
         chat.sendMessage(JOIN_COMMAND_FORMAT);
