@@ -1,5 +1,4 @@
 public class AuctionSniper implements  AuctionEventListener{
-
     private Auction auction;
     private SniperListener sniperListener;
 

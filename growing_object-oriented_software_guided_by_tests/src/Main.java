@@ -25,12 +25,14 @@ public class Main {
                         ui.showStatus("status-lost");
                     }
                 });
-        AuctionMessageTranslator translator = new AuctionMessageTranslator(new AuctionSniper(new SingleAuction(chat), new SingleSniperListener()));
+        Auction auction = new XMPPAuction(chat);
+        AuctionMessageTranslator translator = new AuctionMessageTranslator(new AuctionSniper(auction, new SingleSniperListener()));
+        auction.join();
         chat.addMessageListener(translator);
         chat.sendMessage(JOIN_COMMAND_FORMAT);
     }
 
-    private static XMPPConnection connectTo(String hostName, String userName, String password) throws XMPPException  {
+    private static XMPPConnection connectTo(String hostName, String userName, String password) {
         XMPPConnection connection = new XMPPConnection(hostName);
         connection.connect();
         connection.login(userName, password, AUCTION_RESOURCE);
