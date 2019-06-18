@@ -21,8 +21,6 @@ public class AuctionMessageTranslatorTest {
         message.setBody("SOLVersion: 1.1; Event: CLOSE;");
 
         translator.processMessage(aChat, message);
-
-
     }
 
     @Test

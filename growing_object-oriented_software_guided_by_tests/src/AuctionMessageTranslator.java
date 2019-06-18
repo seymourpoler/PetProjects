@@ -42,13 +42,12 @@ public class AuctionMessageTranslator implements MessageListener{
     }
 
     public void processMessage(Chat aChat, Message aMessage){
-        HashMap<String, String> event = unpackEventFrom(aMessage);
-        String type = event.get("Event");
-        if ("CLOSE".equals(type)) {
+        AuctionEvent event = AuctionEvent.from(aMessage.getBody());
+        String eventType = event.type();
+        if ("CLOSE".equals(eventType)) {
             listener.auctionClosed();
-        } else if ("PRICE".equals(type)) {
-            listener.currentPrice(Integer.parseInt(event.get("CurrentPrice")),
-                    Integer.parseInt(event.get("Increment")));
+        } else if ("PRICE".equals(eventType)) {
+            listener.currentPrice(event.currentPrice(), event.increment());
         }
     }
 
