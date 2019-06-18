@@ -13,10 +13,11 @@ public class AuctionSniperTest {
 
     @Test
     public void reportsLostWhenAuctionCloses(){
-            context.checking(new Expectations() {{
-                one(sniperListener).sniperLost();
-            }});
-            sniper.auctionClosed();
+        context.checking(new Expectations() {{
+            one(sniperListener).sniperLost();
+        }});
+
+        sniper.auctionClosed();
     }
 
     @Test
@@ -36,6 +37,7 @@ public class AuctionSniperTest {
         context.checking(new Expectations() {{
             atLeast(1).of(sniperListener).sniperWinning();
         }});
+
         sniper.currentPrice(123, 45, PriceSource.FromSniper);
     }
 }
