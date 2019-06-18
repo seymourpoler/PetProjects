@@ -21,6 +21,18 @@ public class AuctionEvent {
         }
         return result;
     }
+
+    public PriceSource isFrom(String sniperId){
+        if(sniperId.equals(bidder())){
+            return PriceSource.FromSniper;
+        }
+        return PriceSource.FromOtherSniper;
+    }
+
+    private String bidder() {
+        return get("Bidder");
+    }
+
     private int getInt(String fieldName) {
         return Integer.parseInt(get(fieldName));
     }

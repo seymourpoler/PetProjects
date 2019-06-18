@@ -3,9 +3,10 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 public class XMPPConnection {
 
     private final String hostName;
+    private String login;
 
     public XMPPConnection(String hostName){
-        this.hostName = hostName;
+    this.hostName = hostName;
     }
 
     public void connect(){}
@@ -22,5 +23,9 @@ public class XMPPConnection {
 
     public String getServiceName(){
         throw new NotImplementedException();
+    }
+
+    public String getUser(){
+        return login;
     }
 }

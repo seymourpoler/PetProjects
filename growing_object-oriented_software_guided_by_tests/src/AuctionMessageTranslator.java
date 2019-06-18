@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class AuctionMessageTranslator implements MessageListener{
 
     private AuctionEventListener listener;
+    private String sniperId;
 
     private ArrayBlockingQueue<Message> messages;
 
@@ -37,7 +38,8 @@ public class AuctionMessageTranslator implements MessageListener{
         //assert(message.getBody(), is(messageMatcher));
     }
 
-    public AuctionMessageTranslator(AuctionEventListener listener){
+    public AuctionMessageTranslator(String sniperId, AuctionEventListener listener){
+        this.sniperId = sniperId;
         this.listener = listener;
     }
 
@@ -47,7 +49,7 @@ public class AuctionMessageTranslator implements MessageListener{
         if ("CLOSE".equals(eventType)) {
             listener.auctionClosed();
         } else if ("PRICE".equals(eventType)) {
-            listener.currentPrice(event.currentPrice(), event.increment());
+            listener.currentPrice(event.currentPrice(), event.increment(), event.isFrom(sniperId));
         }
     }
 

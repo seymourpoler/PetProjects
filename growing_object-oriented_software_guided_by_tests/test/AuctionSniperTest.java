@@ -28,6 +28,14 @@ public class AuctionSniperTest {
             atLeast(1).of(sniperListener).sniperBidding();
         }});
 
-        sniper.currentPrice(price, increment);
+        sniper.currentPrice(price, increment, PriceSource.FromSniper);
+    }
+
+    @Test
+    public void reportsIsWinningWhenCurrentPriceComesFromSniper() {
+        context.checking(new Expectations() {{
+            atLeast(1).of(sniperListener).sniperWinning();
+        }});
+        sniper.currentPrice(123, 45, PriceSource.FromSniper);
     }
 }
