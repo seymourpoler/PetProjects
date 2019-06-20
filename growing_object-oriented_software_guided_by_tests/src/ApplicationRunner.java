@@ -35,11 +35,24 @@ public class ApplicationRunner {
         driver.showsSniperStatus(STATUS_BIDDING);
     }
 
+    public void hasShownSniperIsBidding(int lastPrice, int lastBid) {
+
+        driver.showsSniperStatus(STATUS_BIDDING);
+    }
+
     public void hasShownSniperIsWinning(){
         throw new NotImplementedException();
     }
 
+    public void hasShownSniperIsWinning(int winningBid){
+        throw new NotImplementedException();
+    }
+
     public void showsSniperHasWonAuction(){
+        throw new NotImplementedException();
+    }
+
+    public void showsSniperHasWonAuction(int lastPrice){
         throw new NotImplementedException();
     }
 }

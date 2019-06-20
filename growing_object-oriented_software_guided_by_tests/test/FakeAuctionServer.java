@@ -26,7 +26,13 @@ public class FakeAuctionServer implements IAuctionServer {
     }
 
     public void hasReceivedJoinRequestedFromSniper() {
-        throw  new NotImplementedException();
+
+        throw new NotImplementedException();
+    }
+
+    public void hasReceivedJoinRequestedFromSniper(String sniperId) {
+
+        throw new NotImplementedException();
     }
 
     public void startSellingItem(){
@@ -42,7 +48,7 @@ public class FakeAuctionServer implements IAuctionServer {
 
     }
 
-    public void hasReceivedJoinRequestedFromSniper(String sniperXmppId){
+    public void hasReceivedJoinRequestFrom(String sniperXmppId){
         messageListener.receivesAMessage(sniperXmppId);
     }
 
