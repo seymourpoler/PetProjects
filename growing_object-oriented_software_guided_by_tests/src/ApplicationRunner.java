@@ -9,6 +9,7 @@ public class ApplicationRunner {
     private static final String STATUS_JOINING = "joining";
     private static final String STATUS_LOST = "lost";
     private static final String STATUS_BIDDING = "bidding";
+    private static final String STATUS_WON = "won";
 
     private AuctionSniperDriver driver;
     private XMPPMessageSender messageSender;
@@ -29,7 +30,7 @@ public class ApplicationRunner {
         driver.showsSniperStatus(STATUS_LOST);
     }
 
-    public void stop(){
+    public void stop() {
         driver.dispose();
     }
 
@@ -51,10 +52,10 @@ public class ApplicationRunner {
     }
 
     public void showsSniperHasWonAuction(){
-        driver.showsSniperStatus(itemId, lastPrice, lastPrice, MainWindow.STATUS_WON);
+        throw new NotImplementedException();
     }
 
     public void showsSniperHasWonAuction(int lastPrice){
-        throw new NotImplementedException();
+        driver.showsSniperStatus(itemId, lastPrice, lastPrice, STATUS_WON);
     }
 }
