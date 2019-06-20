@@ -2,6 +2,7 @@ public class SniperStateDisplayer implements SniperListener {
     private UI ui;
 
     private final String STATUS_WINNIG = "winning";
+    private final String STATUS_WON = "won";
     private final String STATUS_LOST = "lost";
     private final String STATUS_BIDDING = "bidding";
 
@@ -19,5 +20,9 @@ public class SniperStateDisplayer implements SniperListener {
 
     public void sniperWinning(){
         ui.showStatus(STATUS_WINNIG);
+    }
+
+    public void sniperWon(){
+        ui.showStatus(STATUS_WON);
     }
 }
