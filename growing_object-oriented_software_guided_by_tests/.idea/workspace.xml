@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03bc3fb1-9bca-4e8c-a78d-8a133f84b2e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/AuctionSniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuctionSniper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SniperListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SniperListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SniperStateDisplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SniperStateDisplayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AuctionSniperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/AuctionSniperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SniperState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,14 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/AuctionSniperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="643">
+              <caret line="67" column="52" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SniperState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -104,6 +111,7 @@
         <option value="$PROJECT_DIR$/src/SniperStateDisplayer.java" />
         <option value="$PROJECT_DIR$/src/AuctionSniper.java" />
         <option value="$PROJECT_DIR$/test/AuctionSniperTest.java" />
+        <option value="$PROJECT_DIR$/src/SniperState.java" />
       </list>
     </option>
   </component>
@@ -267,9 +275,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AuctionSniperEndToEndTest - 2019.06.18 at 18h 51m 51s.xml">
-      <configuration name="AuctionSniperEndToEndTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AuctionSniperTest - 2019.06.18 at 18h 52m 32s.xml">
       <configuration name="AuctionSniperTest" configurationId="JUnit" />
     </history-entry>
@@ -297,6 +302,9 @@
     <history-entry file="AuctionSniperTest - 2019.06.20 at 18h 42m 45s.xml">
       <configuration name="AuctionSniperTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AuctionSniperTest - 2019.06.20 at 18h 43m 15s.xml">
+      <configuration name="AuctionSniperTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,7 +329,7 @@
       <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49642006" visible="true" weight="0.2553305" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2938733" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2938733" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -697,11 +705,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/AuctionSniperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="643">
+          <caret line="67" column="52" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SniperState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
