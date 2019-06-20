@@ -12,6 +12,7 @@ public class ApplicationRunner {
 
     private AuctionSniperDriver driver;
     private XMPPMessageSender messageSender;
+    private String itemId;
 
     public  ApplicationRunner(){
         driver = new AuctionSniperDriver();
@@ -21,6 +22,7 @@ public class ApplicationRunner {
     public void startBiddingIn(final IAuctionServer auction){
         messageSender.send(XMPP_HOSTNAME, SNIPER_ID, SNIPER_PASSWORD, auction.getItemId());
         driver.showsSniperStatus(STATUS_JOINING);
+        itemId = auction.getItemId();
     }
 
     public void showsSniperHasLostAuction(){
@@ -36,20 +38,20 @@ public class ApplicationRunner {
     }
 
     public void hasShownSniperIsBidding(int lastPrice, int lastBid) {
-
-        driver.showsSniperStatus(STATUS_BIDDING);
+        driver.showsSniperStatus(itemId, lastPrice, lastBid, STATUS_BIDDING);
     }
 
-    public void hasShownSniperIsWinning(){
+    public void hasShownSniperIsWinning() {
+
         throw new NotImplementedException();
     }
 
     public void hasShownSniperIsWinning(int winningBid){
-        throw new NotImplementedException();
+        driver.showsSniperStatus(itemId, winningBid, winningBid, STATUS_BIDDING);
     }
 
     public void showsSniperHasWonAuction(){
-        throw new NotImplementedException();
+        driver.showsSniperStatus(itemId, lastPrice, lastPrice, MainWindow.STATUS_WON);
     }
 
     public void showsSniperHasWonAuction(int lastPrice){
