@@ -1,8 +1,9 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+import org.jmock.Mockery;
+import org.junit.Test;
 
 @RunWith(JUnit4.class)
 public class AuctionSniperEndToEndTest {
