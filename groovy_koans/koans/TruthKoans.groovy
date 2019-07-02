@@ -28,7 +28,7 @@ class TruthKoans extends Koans {
 	// Objects
 	
 	void testNullForTruth() {
-		assertTruth __, null
+		assertTruth false, null
 	}
 
 	void testObjectReferencesForTruth() {
@@ -46,7 +46,7 @@ class TruthKoans extends Koans {
 	}
 	
 	void testNegativeNumberForTruth() {
-		assertTruth (false, NEGATIVE_NUMBER)
+		assertTruth (true, NEGATIVE_NUMBER)
 	}
 	
 	// Strings
@@ -56,25 +56,25 @@ class TruthKoans extends Koans {
 	}
 	
 	void testNonEmptyForTruth() {
-		assertTruth __, "Groovy is cool!!!"
+		assertTruth true, "Groovy is cool!!!"
 	}
 	
 	// Collections
 	
 	void testEmptyCollectionForTruth() {
-		assertTruth __, []
+		assertTruth false, []
 	}
 	
 	void testCollectionWithItemsForTruth() {
-		assertTruth __, [1,2,3] 
+		assertTruth true, [1,2,3] 
 	}
 	
 	void testIteratorOnEmptyCollectionForTruth() {
-		assertTruth __, [].iterator()
+		assertTruth false, [].iterator()
 	}
 	
 	void testIteratorOnNonEmptyForTruth() {
-		assertTruth __, [1,2,3].iterator()
+		assertTruth true, [1,2,3].iterator()
 	}
 	
 	// Maps
@@ -84,17 +84,17 @@ class TruthKoans extends Koans {
 	}
 	
 	void testPopulatedMapForTruth() {
-		assertTruth __, ['one':1]
+		assertTruth true, ['one':1]
 	}
 	
 	// Matchers
 	
 	void testUnMatchingMatcherForTruth() {
-		assertTruth __, 'Hello Groovy' =~ /World/
+		assertTruth false, 'Hello Groovy' =~ /World/
 	}
 	
 	void testMatchingMatcherForTruth() {
-		assertTruth __, 'Hello World' =~ /World/
+		assertTruth true, 'Hello World' =~ /World/
 	}
 	
 	// Implementing your own Groovy Truth
