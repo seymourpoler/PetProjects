@@ -105,12 +105,12 @@ class DateKoans extends Koans {
 	
 	void testDateFieldAccessLikeGetter() {
 		def date = new Date(year: 101, month: SEPTEMBER, date: 11, hours:0, minutes: 0, seconds: 0)
-		assert __ == date.year
-		assert __ == date.month
-		assert __ == date.date
-		assert __ == date.hours
-		assert __ == date.minutes
-		assert __ == date.seconds
+		assert 101 == date.year
+		assert 8 == date.month
+		assert 11 == date.date
+		assert 0 == date.hours
+		assert 0 == date.minutes
+		assert 0 == date.seconds
 	}
 	
 	void testDateStringGetters() {
