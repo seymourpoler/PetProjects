@@ -38,9 +38,9 @@ class StringKoans extends Koans {
 	
 	void testInterpolatedStringType() {
 		def answer = "c"
-		assertEquals __, "ab${answer}".class.name
-		assertEquals __, 'ab${answer}'.class.name
-		assertEquals __, /ab${answer}/.class.name
+		assertEquals "org.codehaus.groovy.runtime.GStringImpl", "ab${answer}".class.name
+		assertEquals "java.lang.String", 'ab${answer}'.class.name
+		assertEquals "org.codehaus.groovy.runtime.GStringImpl", /ab${answer}/.class.name
 	}
 	
 	void testMultiLineString() {
@@ -97,8 +97,8 @@ class StringKoans extends Koans {
 	void testAppendingStringBuilder() {
 		def myStrBldr = new StringBuilder("ab")
 		myStrBldr.append "cd"
-		assert __ == myStrBldr.toString()
+		assert "abcd" == myStrBldr.toString()
 		myStrBldr << "ef"
-		assert __ == myStrBldr.toString()
+		assert "abcdef" == myStrBldr.toString()
 	}
 }
