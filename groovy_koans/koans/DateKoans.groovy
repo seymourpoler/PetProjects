@@ -126,35 +126,35 @@ class DateKoans extends Koans {
 		def date = new Date(year: 101, month: SEPTEMBER, date: 11, hours:0, minutes: 0, seconds: 0)
 		def datePlusOne = date + 1
 		def dateMinusOne = date - 1
-		assert __ == datePlusOne.year
-		assert __ == datePlusOne.month
-		assert __ == datePlusOne.date
-		assert __ == datePlusOne.hours
-		assert __ == datePlusOne.minutes
-		assert __ == datePlusOne.seconds
+		assert 101 == datePlusOne.year
+		assert 8 == datePlusOne.month
+		assert 12 == datePlusOne.date
+		assert 0 == datePlusOne.hours
+		assert 0 == datePlusOne.minutes
+		assert 0 == datePlusOne.seconds
 		
-		assert __ == dateMinusOne.year
-		assert __ == dateMinusOne.month
-		assert __ == dateMinusOne.date
-		assert __ == dateMinusOne.hours
-		assert __ == dateMinusOne.minutes
-		assert __ == dateMinusOne.seconds
+		assert 101 == dateMinusOne.year
+		assert 8 == dateMinusOne.month
+		assert 10 == dateMinusOne.date
+		assert 0 == dateMinusOne.hours
+		assert 0 == dateMinusOne.minutes
+		assert 0 == dateMinusOne.seconds
 		
 		def dateIncrement = ++date
-		assert __ == dateIncrement.year
-		assert __ == dateIncrement.month
-		assert __ == dateIncrement.date
-		assert __ == dateIncrement.hours
-		assert __ == dateIncrement.minutes
-		assert __ == dateIncrement.seconds
+		assert 101 == dateIncrement.year
+		assert 8 == dateIncrement.month
+		assert 12 == dateIncrement.date
+		assert 0 == dateIncrement.hours
+		assert 0 == dateIncrement.minutes
+		assert 0 == dateIncrement.seconds
 		
 		def dateDecrement = --date
-		assert __ == dateDecrement.year
-		assert __ == dateDecrement.month
-		assert __ == dateDecrement.date
-		assert __ == dateDecrement.hours
-		assert __ == dateDecrement.minutes
-		assert __ == dateDecrement.seconds
+		assert 101 == dateDecrement.year
+		assert 8 == dateDecrement.month
+		assert 11 == dateDecrement.date
+		assert 0 == dateDecrement.hours
+		assert 0 == dateDecrement.minutes
+		assert 0 == dateDecrement.seconds
 	}
 	
 	// Compare Dates
