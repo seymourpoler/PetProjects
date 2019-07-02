@@ -93,8 +93,8 @@ ${myStr2}"""
 	
 	void testSubScriptingStringBuilder() {
 		def myStrBldr = new StringBuilder("abcd")
-		assert __ == myStrBldr[1..3]
-		assert __ == myStrBldr.toString()
+		assert "bcd" == myStrBldr[1..3]
+		assert "abcd" == myStrBldr.toString()
 	}
 	
 	void testAppendingStringBuilder() {
