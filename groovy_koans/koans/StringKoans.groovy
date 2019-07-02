@@ -65,9 +65,9 @@ ${myStr2}"""
 	
 	void testStringMutable() {
 		def myString = "abc"
-		assertEquals __, myString
-		assertEquals __, myString.reverse()
-		assertEquals __, myString
+		assertEquals "abc", myString
+		assertEquals "cba", myString.reverse()
+		assertEquals "abc", myString
 	}
 	
 	void testStringBuilderMutable(){
