@@ -31,9 +31,9 @@ class StringKoans extends Koans {
 
 	void testStringInterpolation() {
 		def answer = "c"
-		assertEquals __, "ab${answer}"
-		assertEquals __, 'ab${answer}'
-		assertEquals __, /ab${answer}/
+		assertEquals "abc", "ab${answer}"
+		assertEquals 'ab${answer}', 'ab${answer}'
+		assertEquals "abc", /ab${answer}/
 	}
 	
 	void testInterpolatedStringType() {
