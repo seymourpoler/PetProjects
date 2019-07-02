@@ -26,7 +26,7 @@ class StringKoans extends Koans {
 	}
 
 	void testMultiLineStringType() {
-		assertEquals __, """A Triple Quote String""".class.name
+		assertEquals "java.lang.String", """A Triple Quote String""".class.name
 	}
 
 	void testStringInterpolation() {
