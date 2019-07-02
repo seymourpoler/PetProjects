@@ -14,7 +14,7 @@ class StringKoans extends Koans {
 	
 	
 	void testDoubleQuoteStringType() {
-		assertEquals __, "Any ole String".class.name
+		assertEquals "java.lang.String", "Any ole String".class.name
 	}
 	
 	void testSingleQuoteStringType() {
