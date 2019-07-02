@@ -1,5 +1,3 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.util.*;
 
 public class SnipersTableModel {
@@ -14,6 +12,6 @@ public class SnipersTableModel {
     }
 
     public int getColumnCount(){
-        throw new NotImplementedException();
+        return Column.values().length;
     }
 }
