@@ -123,7 +123,7 @@ class DateKoans extends Koans {
 	
 	// Date Math
 	void testDateMath() {
-		def date = new Date(year: 101, month: SEPTEMBER, date: 11, hours:0, minutes: 0, seconds: 0)
+		def date = new Date(year: 101, month: SEPTEMBER, date: 11, hours: 0, minutes: 0, seconds: 0)
 		def datePlusOne = date + 1
 		def dateMinusOne = date - 1
 		assert 101 == datePlusOne.year
