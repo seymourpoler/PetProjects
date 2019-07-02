@@ -22,7 +22,7 @@ class StringKoans extends Koans {
 	}
 	
 	void testSlashyQuoteStringType() {
-		assertEquals __, /A Slashy String/.class.name
+		assertEquals "java.lang.String", /A Slashy String/.class.name
 	}
 
 	void testMultiLineStringType() {
@@ -76,15 +76,15 @@ class StringKoans extends Koans {
 	}
 	
 	void testSubScriptingStrings() {
-		assert 'abcdefg'[ 3 ] == __
-		assert 'abcdefg'.getAt( 3 ) == __ //equivalent method name
-		assert 'abcdefg'.charAt( 3 ) == __ //alternative method name
-		assert 'abcdefg'[ 3..5 ] == __
-		assert 'abcdefg'.getAt( 3..5 ) == __
-		assert 'abcdefg'[ 1, 3, 5, 6 ] == __
-		assert 'abcdefg'[ 1, 3..5 ] == __
-		assert 'abcdefg'[-5..-2] == __
-		assert 'abcdefg'.getAt( [ 1, 3..5 ] ) == __
+		assert 'abcdefg'[ 3 ] == "d"
+		assert 'abcdefg'.getAt( 3 ) == "d" //equivalent method name
+		assert 'abcdefg'.charAt( 3 ) == "d" //alternative method name
+		assert 'abcdefg'[ 3..5 ] == "def"
+		assert 'abcdefg'.getAt( 3..5 ) == "def"
+		assert 'abcdefg'[ 1, 3, 5, 6 ] == "bdfg"
+		assert 'abcdefg'[ 1, 3..5 ] == "bdef"
+		assert 'abcdefg'[-5..-2] == "cdef"
+		assert 'abcdefg'.getAt( [ 1, 3..5 ] ) == "bdef"
 	}
 	
 	
