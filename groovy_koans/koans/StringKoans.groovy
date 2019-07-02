@@ -56,9 +56,9 @@ class StringKoans extends Koans {
 	void testStringConcatenation() {
 		def myStr1 = "ab"
 		def myStr2 = "cd"
-		assertEquals __, myStr1 + " " + myStr2
-		assertEquals __, (myStr1 << " " << myStr2).toString() // leftShift returns a StringBuffer
-		assertEquals __, myStr1.plus(" ").plus(myStr2)
+		assertEquals "ab cd", myStr1 + " " + myStr2
+		assertEquals "ab cd", (myStr1 << " " << myStr2).toString() // leftShift returns a StringBuffer
+		assertEquals "ab cd", myStr1.plus(" ").plus(myStr2)
 	}
 	
 	void testStringMutable() {
