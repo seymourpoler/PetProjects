@@ -72,9 +72,9 @@ ${myStr2}"""
 	
 	void testStringBuilderMutable(){
 		def myStrBldr = new StringBuilder("abc")
-		assertEquals __, myStrBldr.toString()
-		assertEquals __, myStrBldr.reverse().toString()
-		assertEquals __, myStrBldr.toString()
+		assertEquals "abc", myStrBldr.toString()
+		assertEquals "cba", myStrBldr.reverse().toString()
+		assertEquals "cba", myStrBldr.toString()
 	}
 	
 	
