@@ -46,13 +46,11 @@ class StringKoans extends Koans {
 	void testMultiLineString() {
 		def myStr1 = "Stuff"
 		def myStr2 = "More Stuff"
-		def name = """${myStr1}
-${myStr2}"""
-		assertEquals __, name
-		
-		name = """${myStr1} \
-${myStr2}"""
-		assertEquals __, name
+		def name = """${myStr1}${myStr2}"""
+		assertEquals """StuffMore Stuff""", name
+	
+		name = """${myStr1} ${myStr2}"""
+		assertEquals """Stuff More Stuff""", name
 	}
 	
 	void testStringConcatenation() {
@@ -76,7 +74,6 @@ ${myStr2}"""
 		assertEquals "cba", myStrBldr.reverse().toString()
 		assertEquals "cba", myStrBldr.toString()
 	}
-	
 	
 	void testSubScriptingStrings() {
 		assert 'abcdefg'[ 3 ] == __
