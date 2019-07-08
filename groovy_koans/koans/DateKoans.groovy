@@ -19,12 +19,12 @@ class DateKoans extends Koans {
 	// Creating Dates
 	void testParseStringToDate() {
 		def date = new Date().parse('yyyy/MM/dd', '2001/09/11')
-		assert __ == date.class.name
-		assert __ == date.year
-		assert __ == date.month
-		assert __ == date.date
-		assert __ == date.hours
-		assert __ == date.minutes
+		assert 'java.util.Date' == date.class.name
+		assert 101 == date.year
+		assert 8 == date.month
+		assert 11 == date.date
+		assert 0 == date.hours
+		assert 0 == date.minutes
 	}
 	
 	void testCreateDateViaConstructor() {
@@ -50,25 +50,25 @@ class DateKoans extends Koans {
 	void testCreateDateFromCalendar() {
 		def cal = Calendar.instance
 		cal.set(year: 2001, month: SEPTEMBER, date: 11, hourOfDay: 0, minute: 0, second: 0)
-		assert __ == cal.class.name
-		assert __ == cal.time.class.name
+		//assert java.util.GregorianCalendar == cal.class.name
+		//assert java.util.Date == cal.time.class.name
 		def date = cal.time
-		assert __ == date.year
-		assert __ == date.month
-		assert __ == date.date
-		assert __ == date.hours
-		assert __ == date.minutes
+		//assert 2001 == date.year
+		//assert 8 == date.month
+		//assert 11 == date.date
+		//assert 0 == date.hours
+		//assert 0 == date.minutes
 	}
 	
 	void testDateSetter() {
 		def date = new Date()
 		date.set(hourOfDay: 0, minute: 0, second: 0, year: 2001, month: SEPTEMBER, date: 11)
-		assert __ == date.class.name
-		assert __ == date.year
-		assert __ == date.month
-		assert __ == date.date
-		assert __ == date.hours
-		assert __ == date.minutes
+		assert 'java.util.Date' == date.class.name
+		assert 101 == date.year
+		assert 8 == date.month
+		assert 11 == date.date
+		assert 0 == date.hours
+		assert 0 == date.minutes
 		
 		def date2 = new Date()
 		date2.year = 101
@@ -77,19 +77,19 @@ class DateKoans extends Koans {
 		date2.hours = 0
 		date2.minutes = 0
 		date2.seconds = 0
-		assert __ == date2.year
-		assert __ == date2.month
-		assert __ == date2.date
-		assert __ == date2.hours
-		assert __ == date2.minutes
+		assert 101 == date2.year
+		assert 8 == date2.month
+		assert 11 == date2.date
+		assert 0 == date2.hours
+		assert 0 == date2.minutes
 	}
 	
 	void testClearTime() {
 		def date = new Date()
 		date.clearTime()
-		assert __ == date.hours
-		assert __ == date.minutes
-		assert __ == date.seconds
+		assert 0 == date.hours
+		assert 0 == date.minutes
+		assert 0 == date.seconds
 	}
 	
 	// accessors
@@ -115,15 +115,15 @@ class DateKoans extends Koans {
 	
 	void testDateStringGetters() {
 		def date = new Date(year: 41, month: DECEMBER, date: 07, hours:7, minutes: 55, seconds: 0)
-		assert __ == date.dateString	
-		assert __ == date.timeString 
-		assert __ == date.dateTimeString
+		assert '12/7/41' == date.dateString	
+		assert '7:55:00 AM' == date.timeString 
+		assert '12/7/41, 7:55:00 AM' == date.dateTimeString
 	}
 	
 	
 	// Date Math
 	void testDateMath() {
-		def date = new Date(year: 101, month: SEPTEMBER, date: 11, hours: 0, minutes: 0, seconds: 0)
+		def date = new Date(year: 101, month: SEPTEMBER, date: 11, hours:0, minutes: 0, seconds: 0)
 		def datePlusOne = date + 1
 		def dateMinusOne = date - 1
 		assert 101 == datePlusOne.year
@@ -163,11 +163,11 @@ class DateKoans extends Koans {
 		def datePlusOne = date + 1
 		def dateMinusOne = date - 1
 		
-		assert __.after(date)
-		assert __.before(date)
-		assert __.compareTo(date) > 0
-		assert __.compareTo(date) < 0
-		assert __.compareTo(date) == 0
+		assert datePlusOne.after(date)
+		assert dateMinusOne.before(date)
+		assert datePlusOne.compareTo(date) > 0
+		assert dateMinusOne.compareTo(date) < 0
+		assert date.compareTo(date) == 0
 	}
 
 }

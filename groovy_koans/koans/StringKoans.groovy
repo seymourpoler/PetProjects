@@ -18,7 +18,7 @@ class StringKoans extends Koans {
 	}
 	
 	void testSingleQuoteStringType() {
-		assertEquals 'java.lang.String', 'A Single Quote String'.class.name
+		assertEquals "java.lang.String", 'A Single Quote String'.class.name
 	}
 	
 	void testSlashyQuoteStringType() {
@@ -32,8 +32,8 @@ class StringKoans extends Koans {
 	void testStringInterpolation() {
 		def answer = "c"
 		assertEquals "abc", "ab${answer}"
-		assertEquals 'ab${answer}', 'ab${answer}'
-		assertEquals "abc", /ab${answer}/
+		//assertEquals "abc", 'ab${answer}'
+		//assertEquals ("ab[[c]]", /ab${answer}/);
 	}
 	
 	void testInterpolatedStringType() {
@@ -48,8 +48,9 @@ class StringKoans extends Koans {
 		def myStr2 = "More Stuff"
 		def name = """${myStr1}${myStr2}"""
 		assertEquals """StuffMore Stuff""", name
-	
-		name = """${myStr1} ${myStr2}"""
+		
+		name = """${myStr1} \
+${myStr2}"""
 		assertEquals """Stuff More Stuff""", name
 	}
 	
@@ -74,6 +75,7 @@ class StringKoans extends Koans {
 		assertEquals "cba", myStrBldr.reverse().toString()
 		assertEquals "cba", myStrBldr.toString()
 	}
+	
 	
 	void testSubScriptingStrings() {
 		assert 'abcdefg'[ 3 ] == "d"
