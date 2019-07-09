@@ -23,8 +23,8 @@ class RangesKoans extends Koans {
 	void testRangeAccessors() {
 		def range = 1..5
 	
-		assert range.get(2) == __
-		assert range[2] == __
+		assert range.get(2) == 3
+		assert range[2] == 3
 	}
 	
 	void testRangeBounds() {
