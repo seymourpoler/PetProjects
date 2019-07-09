@@ -37,8 +37,8 @@ class RangesKoans extends Koans {
 	void testNonInclusiveRange() {
 		def range = 1..<5
 	
-		assert range.from == __
-		assert range.to == __
+		assert range.from == 1
+		assert range.to == 4
 	}
 	
 	void testRangesCanBeCharactersToo() {
