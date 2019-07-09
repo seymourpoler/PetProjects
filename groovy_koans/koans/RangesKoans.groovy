@@ -11,7 +11,7 @@ class RangesKoans extends Koans {
 	void testRangeIsAlsoList() {
 		def range = 1..5
 	
-		assert __ instanceof List
+		assert [1..5] instanceof List
 	}
 	
 	void testRangeSize() {
