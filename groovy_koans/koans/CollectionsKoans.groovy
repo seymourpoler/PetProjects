@@ -99,7 +99,7 @@ class CollectionsKoans extends Koans {
 	void testFlatteningLists() {
 		def list = [['a',['b','b']], ['c','d'], 'e'];
 		
-		assert [__] == list.flatten()
+		assert ['a', 'b', 'b', 'c', 'd', 'e'] == list.flatten()
 	}
 
 	
