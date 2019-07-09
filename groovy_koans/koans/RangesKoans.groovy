@@ -17,7 +17,7 @@ class RangesKoans extends Koans {
 	void testRangeSize() {
 		def range = 1..5
 	
-		assert __ == range.size()
+		assert 5 == range.size()
 	}
 	
 	void testRangeAccessors() {
