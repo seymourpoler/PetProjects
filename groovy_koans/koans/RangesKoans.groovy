@@ -49,5 +49,4 @@ class RangesKoans extends Koans {
 		assert range[5] == 'f'
 		assert range.to == 'z'
 	}
-
 }
