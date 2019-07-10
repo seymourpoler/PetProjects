@@ -23,7 +23,7 @@ class CollectionsKoans extends Koans {
 	}
 	
 	void testCollectionType() {
-		assert __ == [].class
+		assert 'java.util.ArrayList' == [].class.name
 	}
 	
 	void testInitializingCollection() {
