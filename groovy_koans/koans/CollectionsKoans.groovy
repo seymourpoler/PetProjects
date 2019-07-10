@@ -123,9 +123,9 @@ class CollectionsKoans extends Koans {
 	void testSlicingCollection() {
 		def list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
 		
-		assert [__] == list[1..3], "range slicing"
-		assert [__] == list[0,2,4], "index slicing"	
-		assert [__] == list[0,2,4,5..8], "combination of index and range slicing"
+		assert ['b', 'c', 'd'] == list[1..3], "range slicing"
+		assert ['a', 'c', 'e'] == list[0,2,4], "index slicing"	
+		assert ['a', 'c', 'e', 'f', 'g', 'h', 'i'] == list[0,2,4,5..8], "combination of index and range slicing"
 	}
 	
 	void testEachClosure() {
