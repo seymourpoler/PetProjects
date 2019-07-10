@@ -133,7 +133,7 @@ class CollectionsKoans extends Koans {
 		
 		['a', 'b', 'c'].each{ items += "Item: $it \n" }
 
-		assert __ == items
+		assert 'Item: a \nItem: b \nItem: c \n' == items
 	}
 	
 	void testEachIndexClosure() {
