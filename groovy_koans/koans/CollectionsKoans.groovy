@@ -15,7 +15,7 @@ class CollectionsKoans extends Koans {
 	
 	void testCreateCollection() {
 		def list = []
-		assert __ == list.size
+		assert 0 == list.size
 	}
 
 	void testCollectionInterface() {
@@ -66,10 +66,10 @@ class CollectionsKoans extends Koans {
 		def list = ['a','b','c'];
 		
 		list.add(1,'d')
-		assert [__] == list, "add with index"
+		assert ['a', 'd', 'b', 'c'] == list, "add with index"
 		
 		list.addAll(2, ['e','f'])
-		assert [__] == list, "add all with index"
+		assert ['a','d', 'e','f', 'b', 'c'] == list, "add all with index"
 	}
 	
 	void testUpdatingCollections() {
@@ -86,14 +86,14 @@ class CollectionsKoans extends Koans {
 		def list = ['a']
 		
 		list << 'g' << 'h'
-		assert [__] == list
+		assert ['a', 'g', 'h'] == list
 	}
 	
 	void testAppendingLists() {
 		def list = ['a']
 		
 		list << ['i','j']
-		assert [__] == list
+		assert ['a', ['i', 'j']] == list
 	}
 
 	void testFlatteningLists() {
