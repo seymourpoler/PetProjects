@@ -28,7 +28,7 @@ class CollectionsKoans extends Koans {
 	
 	void testInitializingCollection() {
 		def list = ['a', 1, 'a', 'a', 2.5, 2.5f, 2.5d, 'hello', 7g, null, 9 as byte, ];
-		assert __ == list.size, "collections hold multiple types, duplicates and can contain an extra comma"
+		assert 11 == list.size, "collections hold multiple types, duplicates and can contain an extra comma"
 	}
 	
 	void testCollectionTruth() {
