@@ -32,8 +32,8 @@ class CollectionsKoans extends Koans {
 	}
 	
 	void testCollectionTruth() {
-		assertTruth __ ,[]
-		assertTruth __, ['a']
+		assertTruth false,[]
+		assertTruth true, ['a']
 	}
 
 	void testAccessingCollections() {
