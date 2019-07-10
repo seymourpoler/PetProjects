@@ -2,6 +2,6 @@
 
 while true; do 
     printf "\033c" #clear screen
-    groovy Allkoans.groovy
+    groovy AllKoans.groovy
     sleep 5;
 done
