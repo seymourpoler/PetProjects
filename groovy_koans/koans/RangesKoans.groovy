@@ -5,49 +5,48 @@ class RangesKoans extends Koans {
 	void testRange() {
 		def range = 1..5
 	
-		assert __ instanceof Range
+		assert 1..5 instanceof Range
 	}
 	
 	void testRangeIsAlsoList() {
 		def range = 1..5
 	
-		assert __ instanceof List
+		assert [1..5] instanceof List
 	}
 	
 	void testRangeSize() {
 		def range = 1..5
 	
-		assert __ == range.size()
+		assert 5 == range.size()
 	}
 	
 	void testRangeAccessors() {
 		def range = 1..5
 	
-		assert range.get(2) == __
-		assert range[2] == __
+		assert range.get(2) == 3
+		assert range[2] == 3
 	}
 	
 	void testRangeBounds() {
 		def range = 1..5
 	
-		assert range.from == __
-		assert range.to == __
+		assert range.from == 1
+		assert range.to == 5
 	}
 	
 	void testNonInclusiveRange() {
 		def range = 1..<5
 	
-		assert range.from == __
-		assert range.to == __
+		assert range.from == 1
+		assert range.to == 4
 	}
 	
 	void testRangesCanBeCharactersToo() {
 		def range = 'a'..'z'
 	
 		assert range instanceof Range
-		assert range.from == __
-		assert range[5] == __
-		assert range.to == __
+		assert range.from == 'a'
+		assert range[5] == 'f'
+		assert range.to == 'z'
 	}
-
 }

@@ -39,12 +39,12 @@ class CollectionsKoans extends Koans {
 	void testAccessingCollections() {
 		def list = ['a', 'b', 'c', 'd', 'e'];
 		
-		assert __ == list.get(2), 'get method'
-		assert __ == list[3], 'index access'
-		assert __ == list.first(), 'first method'
-		assert __ == list.last(), 'last method'
-		assert __ == list.head(), 'head method'
-		assert __ == list.tail(), 'tail method'
+		assert 'c' == list.get(2), 'get method'
+		assert 'd' == list[3], 'index access'
+		assert 'a' == list.first(), 'first method'
+		assert 'e' == list.last(), 'last method'
+		assert 'a' == list.head(), 'head method'
+		assert ['b', 'c', 'd', 'e'] == list.tail(), 'tail method'
 	}
 	
 	void testAppendingCollections() {
@@ -99,7 +99,7 @@ class CollectionsKoans extends Koans {
 	void testFlatteningLists() {
 		def list = [['a',['b','b']], ['c','d'], 'e'];
 		
-		assert [__] == list.flatten()
+		assert ['a', 'b', 'b', 'c', 'd', 'e'] == list.flatten()
 	}
 
 	
