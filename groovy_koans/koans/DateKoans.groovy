@@ -54,10 +54,10 @@ class DateKoans extends Koans {
 		assert 'java.util.Date' == cal.time.class.name
 		def date = cal.time
 		assert 101 == date.year
-		//assert 8 == date.month
-		//assert 11 == date.date
-		//assert 0 == date.hours
-		//assert 0 == date.minutes
+		assert 8 == date.month
+		assert 11 == date.date
+		assert 0 == date.hours
+		assert 0 == date.minutes
 	}
 	
 	void testDateSetter() {
