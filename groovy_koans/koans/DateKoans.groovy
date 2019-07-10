@@ -30,30 +30,30 @@ class DateKoans extends Koans {
 	void testCreateDateViaConstructor() {
 		// Java Constructor
 		def date = new Date(101,8,11)
-		assert __ == date.class.name
-		assert __ == date.year
-		assert __ == date.month
-		assert __ == date.date
-		assert __ == date.hours
-		assert __ == date.minutes
+		assert 'java.util.Date' == date.class.name
+		assert 101 == date.year
+		assert 8 == date.month
+		assert 11 == date.date
+		assert 0 == date.hours
+		assert 0 == date.minutes
 		
 		// Groovy Named Parameters
 		def date2 = new Date(year: 101, month: SEPTEMBER, date: 11, hours:0, minutes: 0, seconds: 0)
-		assert __ == date2.class.name
-		assert __ == date2.year
-		assert __ == date2.month
-		assert __ == date2.date
-		assert __ == date2.hours
-		assert __ == date2.minutes
+		assert 'java.util.Date' == date2.class.name
+		assert 101 == date2.year
+		assert 8 == date2.month
+		assert 11 == date2.date
+		assert 0 == date2.hours
+		assert 0 == date2.minutes
 	}
 	
 	void testCreateDateFromCalendar() {
 		def cal = Calendar.instance
 		cal.set(year: 2001, month: SEPTEMBER, date: 11, hourOfDay: 0, minute: 0, second: 0)
-		//assert java.util.GregorianCalendar == cal.class.name
-		//assert java.util.Date == cal.time.class.name
+		assert 'java.util.GregorianCalendar' == cal.class.name
+		assert 'java.util.Date' == cal.time.class.name
 		def date = cal.time
-		//assert 2001 == date.year
+		assert 101 == date.year
 		//assert 8 == date.month
 		//assert 11 == date.date
 		//assert 0 == date.hours
