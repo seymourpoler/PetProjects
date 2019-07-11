@@ -79,7 +79,7 @@ class CollectionsKoans extends Koans {
 		assert ['e','b','c'] == list, 'subscript index update'
 		
 		assert 'c' == list.set(2, 'f'), 'element replacement'
-		assert [__] == list
+		assert ['e','b', 'f'] == list
 	}
 		
 	void testChaninedAppending() {
