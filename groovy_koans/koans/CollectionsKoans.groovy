@@ -107,10 +107,10 @@ class CollectionsKoans extends Koans {
 		int beyondBounds = 5
 		def list = ['a', 'b','c'];
 		
-		assert __ == list[beyondBounds], "accessing element beyond current size"
+		assert null == list[beyondBounds], "accessing element beyond current size"
 		
 		list[beyondBounds] = 'j'
-		assert [__] == list, "setting element beyond current size"
+		assert ['a', 'b', 'c', null, null, 'j'] == list, "setting element beyond current size"
 	}
 
 	void testNegativeIndices() {
