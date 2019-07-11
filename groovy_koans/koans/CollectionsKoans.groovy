@@ -54,12 +54,12 @@ class CollectionsKoans extends Koans {
 		list.addAll(['c','d'])
 		list.push('e')
 		list << 'f'
-		assert [__] == list, "add, push and << operator"
+		assert ['a', 'b', 'c', 'd', 'e', 'f'] == list, "add, push and << operator"
 		
-		assert [__] == list + 'g', "+ operator"
+		assert ['a', 'b', 'c', 'd', 'e', 'f', 'g'] == list + 'g', "+ operator"
 		
 		list += 'h'
-		assert [__] == list, "+= operator"
+		assert ['a', 'b', 'c', 'd', 'e', 'f', 'h'] == list, "+= operator"
 	}
 
 	void testInsertIntoCollections() {
