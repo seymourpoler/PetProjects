@@ -116,8 +116,8 @@ class CollectionsKoans extends Koans {
 	void testNegativeIndices() {
 		def list = ['a', 'b', 'c', 'd', 'e'];
 		
-		assert __ == list[-1], "-1 indices"
-		assert __ == list[-2], "-2 indices"
+		assert 'e' == list[-1], "-1 indices"
+		assert 'd' == list[-2], "-2 indices"
 	}
 	
 	void testSlicingCollection() {
