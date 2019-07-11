@@ -16,7 +16,7 @@ class OperatorOverloadingKoans extends Koans  {
 	void testPlusOperator() {
 		holder.value = 1
 		holder + 1
-		assertEquals __, holder.value
+		assertEquals 2, holder.value
 	}
 	
 	void testMinusOperator() {
@@ -28,7 +28,7 @@ class OperatorOverloadingKoans extends Koans  {
 	void testMultiplyOperator() {
 		holder.value = 2
 		holder * 3
-		assertEquals __, holder.value
+		assertEquals 6, holder.value
 	}
 	
 	void testPowerOperator() {
@@ -76,7 +76,7 @@ class OperatorOverloadingKoans extends Koans  {
 	void testNextOperatorPostfix() {
 		holder.value = 1
 		holder++
-		assertEquals __, holder
+		assertEquals 2, holder
 	}
 	
 	void testPreviousOperatorPrefix() {
@@ -156,7 +156,7 @@ class OperatorOverloadingKoans extends Koans  {
 	void testGreaterThanEqualToOperator() {
 		holder.value = 1
 		def holder2 = new Holder(value:1)
-		assertEquals __, holder >= holder2
+		assertEquals true, holder >= holder2
 	}
 	
 	void testLessThanOperator() {
