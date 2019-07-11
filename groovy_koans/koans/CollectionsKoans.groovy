@@ -141,7 +141,7 @@ class CollectionsKoans extends Koans {
 	
 		['a', 'b', 'c'].eachWithIndex{ it, i -> items += "$i: $it\n" }
 		
-		assert __ == items
+		assert '0: a\n1: b\n2: c\n' == items
 	}
 	
 }
