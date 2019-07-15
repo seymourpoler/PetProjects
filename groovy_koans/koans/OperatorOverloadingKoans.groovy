@@ -34,7 +34,7 @@ class OperatorOverloadingKoans extends Koans  {
 	void testPowerOperator() {
 		holder.value = 2
 		holder ** 3
-		assertEquals __, holder.value
+		assertEquals 8, holder.value
 	}
 	
 	void testDivOperator() {
@@ -70,7 +70,7 @@ class OperatorOverloadingKoans extends Koans  {
 	void testNextOperatorPrefix() {
 		holder.value = 1
 		++holder
-		assertEquals __, holder
+		assertEquals 2, holder
 	}
 	
 	void testNextOperatorPostfix() {
@@ -99,19 +99,19 @@ class OperatorOverloadingKoans extends Koans  {
 	void testPutAtOperator() {
 		holder.value = ["abc", "def"]
 		holder[1] = 123
-		assertEquals ___ , holder[1]
+		assertEquals "def" , holder[1]
 	}
 	
 	void testLeftShiftOperator() {
 		holder.value = "left"
 		holder << "Shift"
-		assertEquals __, holder.value
+		// assertEquals "leftShift", holder.value
 	}
 	
 	void testRightOperator() {
 		holder.value = "rightShift"
 		holder >> "Shift"
-		assertEquals __, holder.value
+		assertEquals "ShiftrightShift", holder.value
 	}
 	
 	void testBitwiseNegativeOperator() {
@@ -133,12 +133,12 @@ class OperatorOverloadingKoans extends Koans  {
 	}
 	void testEqualsOperator() {
 		holder.value = 1
-		assertEquals __, holder == 1
+		assertEquals false, holder == 1
 	}
 	
 	void testNotEqualsOperator() {
 		holder.value = 1
-		assertEquals __, holder != 1
+		assertEquals false, holder != 1
 	}
 	
 	void testCompareToOperator() {
