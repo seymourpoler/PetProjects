@@ -22,7 +22,7 @@ class OperatorOverloadingKoans extends Koans  {
 	void testMinusOperator() {
 		holder.value = 1
 		holder - 1
-		assertEquals __, holder.value
+		assertEquals 0, holder.value
 	}
 	
 	void testMultiplyOperator() {
@@ -40,31 +40,31 @@ class OperatorOverloadingKoans extends Koans  {
 	void testDivOperator() {
 		holder.value = 6
 		holder / 3
-		assertEquals __, holder.value
+		assertEquals 2, holder.value
 	}
 	
 	void testModOperator() {
 		holder.value = 5
 		holder % 2
-		assertEquals __, holder.value
+		assertEquals 1, holder.value
 	}
 	
 	void testOrOperator() {
 		holder.value = false
 		holder | true
-		assertEquals __, holder.value
+		assertEquals true, holder.value
 	}
 	
 	void testAndOperator() {
 		holder.value = false
 		holder & true
-		assertEquals __, holder.value
+		assertEquals false, holder.value
 	}
 	
 	void testXorOperator() {
 		holder.value = 1
 		holder ^ 1
-		assertEquals __, holder.value
+		assertEquals 0, holder.value
 	}
 	
 	void testNextOperatorPrefix() {
@@ -82,54 +82,54 @@ class OperatorOverloadingKoans extends Koans  {
 	void testPreviousOperatorPrefix() {
 		holder.value = 1
 		--holder
-		assertEquals __, holder
+		assertEquals 0, holder
 	}
 	
 	void testPreviousOperatorPostfix() {
 		holder.value = 1
 		holder--
-		assertEquals __, holder
+		assertEquals 0, holder
 	}
 	
 	void testGetAtOperator() {
 		holder.value = ["no","yes"]
-		assertEquals __, holder[1]
+		assertEquals "yes", holder[1]
 	}
 	
 	void testPutAtOperator() {
 		holder.value = ["abc", "def"]
 		holder[1] = 123
-		assertEquals "def" , holder[1]
+		assertEquals 123 , holder[1]
 	}
 	
 	void testLeftShiftOperator() {
 		holder.value = "left"
 		holder << "Shift"
-		// assertEquals "leftShift", holder.value
+		//assertEquals 'leftShift', holder.value
 	}
 	
 	void testRightOperator() {
 		holder.value = "rightShift"
 		holder >> "Shift"
-		assertEquals "ShiftrightShift", holder.value
+		assertEquals "right", holder.value
 	}
 	
 	void testBitwiseNegativeOperator() {
 		holder.value = 1
 		~holder
-		assertEquals __, holder.value
+		assertEquals 2, holder.value
 	}
 	
 	void testPositiveOperator() {
 		holder.value = -1
 		(+holder)
-		assertEquals __, holder.value
+		assertEquals 1, holder.value
 	}
 	
 	void testNegativeOperator() {
 		holder.value = 1
 		-holder
-		assertEquals __, holder.value
+		assertEquals "-1", holder.value.toString()	
 	}
 	void testEqualsOperator() {
 		holder.value = 1
@@ -138,19 +138,19 @@ class OperatorOverloadingKoans extends Koans  {
 	
 	void testNotEqualsOperator() {
 		holder.value = 1
-		assertEquals false, holder != 1
+		assertEquals true, holder != 1
 	}
 	
 	void testCompareToOperator() {
 		holder.value = 1
 		def holder2 = new Holder(value:1)
-		assertEquals __, holder <=> holder2
+		assertEquals 0, holder <=> holder2
 	}
 	
 	void testGreaterThanOperator() {
 		holder.value = 2
 		def holder2 = new Holder(value:1)
-		assertEquals __, holder > holder2
+		assertEquals true, holder > holder2
 	}
 	
 	void testGreaterThanEqualToOperator() {
@@ -162,13 +162,13 @@ class OperatorOverloadingKoans extends Koans  {
 	void testLessThanOperator() {
 		holder.value = 2
 		def holder2 = new Holder(value:1)
-		assertEquals __, holder < holder2
+		assertEquals false, holder < holder2
 	}
 
 	void testLessThanEqualToOperator() {
 		holder.value = 1
 		def holder2 = new Holder(value:1)
-		assertEquals __, holder <= holder2
+		assertEquals true, holder <= holder2
 	}
 }
 
