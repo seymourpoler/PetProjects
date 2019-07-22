@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719246c6-ecf6-447f-a7d0-a74e9967a3fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/grails-app/domain/tekdays/TekEvent.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/tekdays/TekEvent.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/tekdays/TekEventSpec.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/tekdays/TekEventSpec.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -51,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/tekdays/TekEvent.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -61,11 +62,14 @@
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/tekdays/TekEventSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="180">
+              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+              <folding>
+                <element signature="e#17#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,6 +96,7 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/grails-app/domain/tekdays/TekEvent.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/tekdays/TekEventSpec.groovy" />
       </list>
     </option>
   </component>
@@ -173,7 +178,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TekEventSpec.test something">
+  <component name="RunManager" selected="Gradle.TekEventSpec">
+    <configuration name="TekEventSpec" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tekdays.TekEventSpec&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="TekEventSpec.test something" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -205,6 +230,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TekEventSpec" />
         <item itemvalue="Gradle.TekEventSpec.test something" />
       </list>
     </recent_temporary>
@@ -219,7 +245,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563815527486</updated>
-      <workItem from="1563815529551" duration="2698000" />
+      <workItem from="1563815529551" duration="3486000" />
     </task>
     <servers />
   </component>
@@ -227,9 +253,12 @@
     <history-entry file="TekEventSpec_test_something - 2019.07.22 at 20h 06m 43s.xml">
       <configuration name="TekEventSpec.test something" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="TekEventSpec - 2019.07.22 at 20h 23m 35s.xml">
+      <configuration name="TekEventSpec" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2698000" />
+    <option name="totallyTimeSpent" value="3486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="704" extended-state="0" />
@@ -255,7 +284,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32871974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32871974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -582,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/tekdays/TekEventSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/tekdays/TekEvent.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -596,6 +618,16 @@
         </state>
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/tekdays/TekEventSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+          <folding>
+            <element signature="e#17#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
