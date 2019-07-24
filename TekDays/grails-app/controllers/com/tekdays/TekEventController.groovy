@@ -2,5 +2,7 @@ package com.tekdays
 
 class TekEventController {
 
-    def index() { }
+    def index() {
+    	
+    }
 }
