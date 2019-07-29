@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-HUD8DF9" name="com.tekdays.TekEventSpec" skipped="0" tests="1" time="3.216" timestamp="2019-07-23T15:56:30">
-  <properties />
-  <testcase classname="com.tekdays.TekEventSpec" name="test toString" time="3.046" />
-  <system-out><![CDATA[--Output from test toString--
-]]></system-out>
-  <system-err><![CDATA[--Output from test toString--
-]]></system-err>
-</testsuite>
