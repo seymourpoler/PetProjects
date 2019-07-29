@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57b9e0fc-1083-43e0-bf71-73e98fee271f" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NotePad/Form1.cs">
+          <provider editor-type-id="WinFormsEditor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1564405273341" expanded="true" signature="46:178" ph="{...}" />
+                <marker date="1564405273341" expanded="true" signature="86:176" ph="{...}" />
+                <marker date="1564405273341" expanded="true" signature="115:170" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NotePad/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+              <folding>
+                <marker date="1564406112409" expanded="false" signature="6:124" ph="..." />
+                <marker date="1564406112409" expanded="true" signature="143:553" ph="{...}" />
+                <marker date="1564406112409" expanded="true" signature="170:551" ph="{...}" />
+                <marker date="1564406112409" expanded="true" signature="185:275" ph="/// The main entry point for the application. ... " />
+                <marker date="1564406112409" expanded="true" signature="322:545" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+              <folding>
+                <marker date="1564413574619" expanded="true" signature="6:41" ph="..." />
+                <marker date="1564413574619" expanded="true" signature="60:1552" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="111:1550" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="145:248" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="322:1505" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="395:510" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="583:802" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="688:766" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="846:1493" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="1078:1158" ph="{...}" />
+                <marker date="1564413574619" expanded="true" signature="1313:1395" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs">
+          <provider editor-type-id="WinFormsEditor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="43" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="43" />
+              <folding>
+                <marker date="1564405847377" expanded="true" signature="46:640" ph="{...}" />
+                <marker date="1564405847377" expanded="true" signature="99:638" ph="{...}" />
+                <marker date="1564405847377" expanded="true" signature="184:632" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
+              <folding>
+                <marker date="1564405625381" expanded="true" signature="47:1227" ph="{...}" />
+                <marker date="1564405625381" expanded="true" signature="86:1225" ph="{...}" />
+                <marker date="1564405625381" expanded="true" signature="101:177" ph="/// Required designer variable. ... " />
+                <marker date="1564405625381" expanded="true" signature="233:424" ph="/// Clean up any resources being used. ... " />
+                <marker date="1564405625381" expanded="true" signature="480:655" ph="{...}" />
+                <marker date="1564405625381" expanded="true" signature="541:607" ph="{...}" />
+                <marker date="1564405625381" expanded="true" signature="665:1219" ph="Windows Form Designer generated code" />
+                <marker date="1564405625381" expanded="true" signature="719:882" ph="/// Required method for Designer support - do not modify ... " />
+                <marker date="1564405625381" expanded="true" signature="925:1199" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-239">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding>
+                <marker date="1564404965150" expanded="true" signature="17:1193" ph="{...}" />
+                <marker date="1564404965150" expanded="true" signature="43:1191" ph="{...}" />
+                <marker date="1564404965150" expanded="true" signature="58:134" ph="/// Required designer variable. ... " />
+                <marker date="1564404965150" expanded="true" signature="212:403" ph="/// Clean up any resources being used. ... " />
+                <marker date="1564404965150" expanded="true" signature="459:634" ph="{...}" />
+                <marker date="1564404965150" expanded="true" signature="520:586" ph="{...}" />
+                <marker date="1564404965150" expanded="true" signature="644:1185" ph="Windows Form Designer generated code" />
+                <marker date="1564404965150" expanded="true" signature="698:861" ph="/// Required method for Designer support - do not modify ... " />
+                <marker date="1564404965150" expanded="true" signature="904:1165" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/Form1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/04/95c5b2ce/Keys.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/Program.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/NotePad/Form1.cs" />
+        <option value="$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" />
+        <option value="$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" />
+        <option value="$PROJECT_DIR$/NotePad/Program.cs" />
+        <option value="$PROJECT_DIR$/NotePad/XMLNotePad.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="15" />
+    <option name="y" value="30" />
+    <option name="width" value="1890" />
+    <option name="height" value="960" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Form1.cs" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NotePadCloneNoMenu.cs" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/NotePad/bin/Debug/NotePad.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NotePad/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/NotePad/NotePad.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57b9e0fc-1083-43e0-bf71-73e98fee271f" name="Default Changelist" comment="" />
+      <created>1564404963583</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564404963583</updated>
+      <workItem from="1564404965810" duration="3316000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3316000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24271844" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Build" weight="0.32582322" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39688042" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Designer Toolbox" side_tool="true" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
+          <line>14</line>
+          <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="14">
+            <startOffsets>
+              <option value="336" />
+            </startOffsets>
+            <endOffsets>
+              <option value="395" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>lines</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-239">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <marker date="1564404965150" expanded="true" signature="17:1193" ph="{...}" />
+            <marker date="1564404965150" expanded="true" signature="43:1191" ph="{...}" />
+            <marker date="1564404965150" expanded="true" signature="58:134" ph="/// Required designer variable. ... " />
+            <marker date="1564404965150" expanded="true" signature="212:403" ph="/// Clean up any resources being used. ... " />
+            <marker date="1564404965150" expanded="true" signature="459:634" ph="{...}" />
+            <marker date="1564404965150" expanded="true" signature="520:586" ph="{...}" />
+            <marker date="1564404965150" expanded="true" signature="644:1185" ph="Windows Form Designer generated code" />
+            <marker date="1564404965150" expanded="true" signature="698:861" ph="/// Required method for Designer support - do not modify ... " />
+            <marker date="1564404965150" expanded="true" signature="904:1165" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
+          <folding>
+            <marker date="1564405625381" expanded="true" signature="47:1227" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="86:1225" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="101:177" ph="/// Required designer variable. ... " />
+            <marker date="1564405625381" expanded="true" signature="233:424" ph="/// Clean up any resources being used. ... " />
+            <marker date="1564405625381" expanded="true" signature="480:655" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="541:607" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="665:1219" ph="Windows Form Designer generated code" />
+            <marker date="1564405625381" expanded="true" signature="719:882" ph="/// Required method for Designer support - do not modify ... " />
+            <marker date="1564405625381" expanded="true" signature="925:1199" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/Form1.cs">
+      <provider editor-type-id="WinFormsEditor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1564405273341" expanded="true" signature="46:178" ph="{...}" />
+            <marker date="1564405273341" expanded="true" signature="86:176" ph="{...}" />
+            <marker date="1564405273341" expanded="true" signature="115:170" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs">
+      <provider editor-type-id="WinFormsEditor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="43" />
+          <folding>
+            <marker date="1564405847377" expanded="true" signature="46:640" ph="{...}" />
+            <marker date="1564405847377" expanded="true" signature="99:638" ph="{...}" />
+            <marker date="1564405847377" expanded="true" signature="184:632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding>
+            <marker date="1564406112409" expanded="false" signature="6:124" ph="..." />
+            <marker date="1564406112409" expanded="true" signature="143:553" ph="{...}" />
+            <marker date="1564406112409" expanded="true" signature="170:551" ph="{...}" />
+            <marker date="1564406112409" expanded="true" signature="185:275" ph="/// The main entry point for the application. ... " />
+            <marker date="1564406112409" expanded="true" signature="322:545" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/04/95c5b2ce/Keys.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <marker date="1564413574619" expanded="true" signature="6:41" ph="..." />
+            <marker date="1564413574619" expanded="true" signature="60:1552" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="111:1550" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="145:248" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="322:1505" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="395:510" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="583:802" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="688:766" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="846:1493" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="1078:1158" ph="{...}" />
+            <marker date="1564413574619" expanded="true" signature="1313:1395" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
