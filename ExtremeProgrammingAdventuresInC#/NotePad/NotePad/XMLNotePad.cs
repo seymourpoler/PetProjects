@@ -5,17 +5,19 @@ namespace NotePad
 {
     public class XMLNotePad : NotePadCloneNoMenu
     {
+        private TextModel model;
         public XMLNotePad()
         {
             Text = "XML Notepad";
             txtbox.KeyDown += XMLKeyDownHandler;
             txtbox.KeyPress += XMLKeyPressHandler;
+            model = new TextModel();
         }
         
         void XMLKeyDownHandler(object sender, KeyEventArgs kea) {
             if (kea.KeyCode == Keys.P && kea.Modifiers == Keys.Control)
             {
-                txtbox.Text += "controlP";        
+                model.IntertControlP();
                 kea.Handled = true;
             }
 

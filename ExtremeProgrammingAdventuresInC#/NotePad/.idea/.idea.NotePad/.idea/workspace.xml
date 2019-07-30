@@ -10,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
@@ -33,6 +33,22 @@
                 <marker date="1564493989245" expanded="true" signature="2316:2452" ph="{...}" />
                 <marker date="1564493989245" expanded="true" signature="2573:2706" ph="{...}" />
                 <marker date="1564493989245" expanded="true" signature="2632:2696" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NotePad/TextModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding>
+                <marker date="1564500163506" expanded="true" signature="32:554" ph="{...}" />
+                <marker date="1564500163506" expanded="true" signature="61:552" ph="{...}" />
+                <marker date="1564500163506" expanded="true" signature="129:222" ph="{...}" />
+                <marker date="1564500163506" expanded="true" signature="301:428" ph="{...}" />
+                <marker date="1564500163506" expanded="true" signature="474:543" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -85,6 +101,7 @@
     <setting file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/Form1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/TextModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/04/95c5b2ce/Keys.cs" root0="SKIP_HIGHLIGHTING" />
@@ -97,14 +114,15 @@
         <option value="$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" />
         <option value="$PROJECT_DIR$/NotePad/Program.cs" />
         <option value="$PROJECT_DIR$/NotePad/XMLNotePad.cs" />
+        <option value="$PROJECT_DIR$/NotePad/TextModel.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="30" />
-    <option name="width" value="1890" />
-    <option name="height" value="960" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1943" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -114,6 +132,20 @@
       <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
     </panes>
@@ -171,12 +203,12 @@
       <option name="presentableId" value="Default" />
       <updated>1564404963583</updated>
       <workItem from="1564404965810" duration="3316000" />
-      <workItem from="1564492960113" duration="1172000" />
+      <workItem from="1564492960113" duration="1845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4488000" />
+    <option name="totallyTimeSpent" value="5161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -191,7 +223,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24836601" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24836601" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -371,6 +403,20 @@
             <marker date="1564493989245" expanded="true" signature="2316:2452" ph="{...}" />
             <marker date="1564493989245" expanded="true" signature="2573:2706" ph="{...}" />
             <marker date="1564493989245" expanded="true" signature="2632:2696" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/TextModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <marker date="1564500163506" expanded="true" signature="32:554" ph="{...}" />
+            <marker date="1564500163506" expanded="true" signature="61:552" ph="{...}" />
+            <marker date="1564500163506" expanded="true" signature="129:222" ph="{...}" />
+            <marker date="1564500163506" expanded="true" signature="301:428" ph="{...}" />
+            <marker date="1564500163506" expanded="true" signature="474:543" ph="{...}" />
           </folding>
         </state>
       </provider>
