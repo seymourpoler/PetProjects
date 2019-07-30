@@ -13,26 +13,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="351">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
               <folding>
-                <marker date="1564493989245" expanded="true" signature="6:41" ph="..." />
-                <marker date="1564493989245" expanded="true" signature="60:2714" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="111:2712" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="145:299" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="373:2463" ph="{...}" />
-                <marker date="1564493989245" expanded="false" signature="446:561" ph="{...}" />
-                <marker date="1564493989245" expanded="false" signature="606:1399" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="897:979" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="1147:1231" ph="{...}" />
-                <marker date="1564493989245" expanded="false" signature="1484:1703" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="1589:1667" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="1818:2054" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="1923:2001" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="2127:2243" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="2316:2452" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="2573:2706" ph="{...}" />
-                <marker date="1564493989245" expanded="true" signature="2632:2696" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="6:41" ph="..." />
+                <marker date="1564501207601" expanded="true" signature="60:3045" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="111:3043" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="178:369" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="442:2794" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="621:725" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="770:1632" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="789:1586" ph="/* String[] lines = txtbox.Lines; ... */" />
+                <marker date="1564501207601" expanded="true" signature="1717:1936" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="1822:1900" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="2051:2287" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="2156:2234" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="2360:2476" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="2549:2685" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="2904:3037" ph="{...}" />
+                <marker date="1564501207601" expanded="true" signature="2963:3027" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -41,54 +40,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NotePad/TextModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="264">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
               <folding>
-                <marker date="1564500163506" expanded="true" signature="32:554" ph="{...}" />
-                <marker date="1564500163506" expanded="true" signature="61:552" ph="{...}" />
-                <marker date="1564500163506" expanded="true" signature="129:222" ph="{...}" />
-                <marker date="1564500163506" expanded="true" signature="301:428" ph="{...}" />
-                <marker date="1564500163506" expanded="true" signature="474:543" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
-              <folding>
-                <marker date="1564405625381" expanded="true" signature="47:1227" ph="{...}" />
-                <marker date="1564405625381" expanded="true" signature="86:1225" ph="{...}" />
-                <marker date="1564405625381" expanded="true" signature="101:177" ph="/// Required designer variable. ... " />
-                <marker date="1564405625381" expanded="true" signature="233:424" ph="/// Clean up any resources being used. ... " />
-                <marker date="1564405625381" expanded="true" signature="480:655" ph="{...}" />
-                <marker date="1564405625381" expanded="true" signature="541:607" ph="{...}" />
-                <marker date="1564405625381" expanded="true" signature="665:1219" ph="Windows Form Designer generated code" />
-                <marker date="1564405625381" expanded="true" signature="719:882" ph="/// Required method for Designer support - do not modify ... " />
-                <marker date="1564405625381" expanded="true" signature="925:1199" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding>
-                <marker date="1564404965150" expanded="true" signature="17:1193" ph="{...}" />
-                <marker date="1564404965150" expanded="true" signature="43:1191" ph="{...}" />
-                <marker date="1564404965150" expanded="true" signature="58:134" ph="/// Required designer variable. ... " />
-                <marker date="1564404965150" expanded="true" signature="212:403" ph="/// Clean up any resources being used. ... " />
-                <marker date="1564404965150" expanded="true" signature="459:634" ph="{...}" />
-                <marker date="1564404965150" expanded="true" signature="520:586" ph="{...}" />
-                <marker date="1564404965150" expanded="true" signature="644:1185" ph="Windows Form Designer generated code" />
-                <marker date="1564404965150" expanded="true" signature="698:861" ph="/// Required method for Designer support - do not modify ... " />
-                <marker date="1564404965150" expanded="true" signature="904:1165" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="6:66" ph="..." />
+                <marker date="1564501225526" expanded="true" signature="85:2069" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="114:2067" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="187:299" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="378:505" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="533:598" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="644:712" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="741:1316" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="905:973" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="1129:1199" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="1350:1776" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="1458:1737" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="1561:1624" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="1831:2061" ph="{...}" />
+                <marker date="1564501225526" expanded="true" signature="1918:2018" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -203,12 +172,12 @@
       <option name="presentableId" value="Default" />
       <updated>1564404963583</updated>
       <workItem from="1564404965810" duration="3316000" />
-      <workItem from="1564492960113" duration="1845000" />
+      <workItem from="1564492960113" duration="2905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5161000" />
+    <option name="totallyTimeSpent" value="6221000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -223,7 +192,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24836601" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24836601" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -259,32 +228,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
-          <line>15</line>
-          <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="14">
-            <startOffsets>
-              <option value="387" />
-            </startOffsets>
-            <endOffsets>
-              <option value="446" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
-          <line>79</line>
-          <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="52">
-            <startOffsets>
-              <option value="2596" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2632" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -303,42 +246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-144">
           <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
-          <folding>
-            <marker date="1564405625381" expanded="true" signature="47:1227" ph="{...}" />
-            <marker date="1564405625381" expanded="true" signature="86:1225" ph="{...}" />
-            <marker date="1564405625381" expanded="true" signature="101:177" ph="/// Required designer variable. ... " />
-            <marker date="1564405625381" expanded="true" signature="233:424" ph="/// Clean up any resources being used. ... " />
-            <marker date="1564405625381" expanded="true" signature="480:655" ph="{...}" />
-            <marker date="1564405625381" expanded="true" signature="541:607" ph="{...}" />
-            <marker date="1564405625381" expanded="true" signature="665:1219" ph="Windows Form Designer generated code" />
-            <marker date="1564405625381" expanded="true" signature="719:882" ph="/// Required method for Designer support - do not modify ... " />
-            <marker date="1564405625381" expanded="true" signature="925:1199" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <marker date="1564404965150" expanded="true" signature="17:1193" ph="{...}" />
-            <marker date="1564404965150" expanded="true" signature="43:1191" ph="{...}" />
-            <marker date="1564404965150" expanded="true" signature="58:134" ph="/// Required designer variable. ... " />
-            <marker date="1564404965150" expanded="true" signature="212:403" ph="/// Clean up any resources being used. ... " />
-            <marker date="1564404965150" expanded="true" signature="459:634" ph="{...}" />
-            <marker date="1564404965150" expanded="true" signature="520:586" ph="{...}" />
-            <marker date="1564404965150" expanded="true" signature="644:1185" ph="Windows Form Designer generated code" />
-            <marker date="1564404965150" expanded="true" signature="698:861" ph="/// Required method for Designer support - do not modify ... " />
-            <marker date="1564404965150" expanded="true" signature="904:1165" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -381,42 +288,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
+          <folding>
+            <marker date="1564405625381" expanded="true" signature="47:1227" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="86:1225" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="101:177" ph="/// Required designer variable. ... " />
+            <marker date="1564405625381" expanded="true" signature="233:424" ph="/// Clean up any resources being used. ... " />
+            <marker date="1564405625381" expanded="true" signature="480:655" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="541:607" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="665:1219" ph="Windows Form Designer generated code" />
+            <marker date="1564405625381" expanded="true" signature="719:882" ph="/// Required method for Designer support - do not modify ... " />
+            <marker date="1564405625381" expanded="true" signature="925:1199" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <marker date="1564404965150" expanded="true" signature="17:1193" ph="{...}" />
+            <marker date="1564404965150" expanded="true" signature="43:1191" ph="{...}" />
+            <marker date="1564404965150" expanded="true" signature="58:134" ph="/// Required designer variable. ... " />
+            <marker date="1564404965150" expanded="true" signature="212:403" ph="/// Clean up any resources being used. ... " />
+            <marker date="1564404965150" expanded="true" signature="459:634" ph="{...}" />
+            <marker date="1564404965150" expanded="true" signature="520:586" ph="{...}" />
+            <marker date="1564404965150" expanded="true" signature="644:1185" ph="Windows Form Designer generated code" />
+            <marker date="1564404965150" expanded="true" signature="698:861" ph="/// Required method for Designer support - do not modify ... " />
+            <marker date="1564404965150" expanded="true" signature="904:1165" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="351">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
           <folding>
-            <marker date="1564493989245" expanded="true" signature="6:41" ph="..." />
-            <marker date="1564493989245" expanded="true" signature="60:2714" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="111:2712" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="145:299" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="373:2463" ph="{...}" />
-            <marker date="1564493989245" expanded="false" signature="446:561" ph="{...}" />
-            <marker date="1564493989245" expanded="false" signature="606:1399" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="897:979" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="1147:1231" ph="{...}" />
-            <marker date="1564493989245" expanded="false" signature="1484:1703" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="1589:1667" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="1818:2054" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="1923:2001" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="2127:2243" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="2316:2452" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="2573:2706" ph="{...}" />
-            <marker date="1564493989245" expanded="true" signature="2632:2696" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="6:41" ph="..." />
+            <marker date="1564501207601" expanded="true" signature="60:3045" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="111:3043" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="178:369" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="442:2794" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="621:725" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="770:1632" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="789:1586" ph="/* String[] lines = txtbox.Lines; ... */" />
+            <marker date="1564501207601" expanded="true" signature="1717:1936" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="1822:1900" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="2051:2287" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="2156:2234" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="2360:2476" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="2549:2685" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="2904:3037" ph="{...}" />
+            <marker date="1564501207601" expanded="true" signature="2963:3027" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NotePad/TextModel.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="264">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
-            <marker date="1564500163506" expanded="true" signature="32:554" ph="{...}" />
-            <marker date="1564500163506" expanded="true" signature="61:552" ph="{...}" />
-            <marker date="1564500163506" expanded="true" signature="129:222" ph="{...}" />
-            <marker date="1564500163506" expanded="true" signature="301:428" ph="{...}" />
-            <marker date="1564500163506" expanded="true" signature="474:543" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="6:66" ph="..." />
+            <marker date="1564501225526" expanded="true" signature="85:2069" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="114:2067" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="187:299" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="378:505" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="533:598" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="644:712" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="741:1316" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="905:973" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="1129:1199" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="1350:1776" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="1458:1737" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="1561:1624" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="1831:2061" ph="{...}" />
+            <marker date="1564501225526" expanded="true" signature="1918:2018" ph="{...}" />
           </folding>
         </state>
       </provider>
