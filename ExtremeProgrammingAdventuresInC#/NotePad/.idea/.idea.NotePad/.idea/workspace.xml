@@ -9,69 +9,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NotePad/Form1.cs">
-          <provider editor-type-id="WinFormsEditor" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1564405273341" expanded="true" signature="46:178" ph="{...}" />
-                <marker date="1564405273341" expanded="true" signature="86:176" ph="{...}" />
-                <marker date="1564405273341" expanded="true" signature="115:170" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NotePad/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-              <folding>
-                <marker date="1564406112409" expanded="false" signature="6:124" ph="..." />
-                <marker date="1564406112409" expanded="true" signature="143:553" ph="{...}" />
-                <marker date="1564406112409" expanded="true" signature="170:551" ph="{...}" />
-                <marker date="1564406112409" expanded="true" signature="185:275" ph="/// The main entry point for the application. ... " />
-                <marker date="1564406112409" expanded="true" signature="322:545" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            <state relative-caret-position="168">
+              <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
               <folding>
-                <marker date="1564413574619" expanded="true" signature="6:41" ph="..." />
-                <marker date="1564413574619" expanded="true" signature="60:1552" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="111:1550" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="145:248" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="322:1505" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="395:510" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="583:802" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="688:766" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="846:1493" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="1078:1158" ph="{...}" />
-                <marker date="1564413574619" expanded="true" signature="1313:1395" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs">
-          <provider editor-type-id="WinFormsEditor" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="43" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="43" />
-              <folding>
-                <marker date="1564405847377" expanded="true" signature="46:640" ph="{...}" />
-                <marker date="1564405847377" expanded="true" signature="99:638" ph="{...}" />
-                <marker date="1564405847377" expanded="true" signature="184:632" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="6:41" ph="..." />
+                <marker date="1564493415913" expanded="true" signature="60:1807" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="111:1805" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="145:299" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="373:1556" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="446:561" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="634:853" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="739:817" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="897:1544" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="1129:1209" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="1364:1446" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="1666:1799" ph="{...}" />
+                <marker date="1564493415913" expanded="true" signature="1725:1789" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -80,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="770">
+              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
               <folding>
                 <marker date="1564405625381" expanded="true" signature="47:1227" ph="{...}" />
                 <marker date="1564405625381" expanded="true" signature="86:1225" ph="{...}" />
@@ -100,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-239">
+            <state relative-caret-position="44">
               <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               <folding>
                 <marker date="1564404965150" expanded="true" signature="17:1193" ph="{...}" />
@@ -120,14 +77,13 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/Form1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/04/95c5b2ce/Keys.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/04/95c5b2ce/Keys.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -151,37 +107,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Form1.cs" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NotePad" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NotePadCloneNoMenu.cs" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,11 +167,12 @@
       <option name="presentableId" value="Default" />
       <updated>1564404963583</updated>
       <workItem from="1564404965810" duration="3316000" />
+      <workItem from="1564492960113" duration="498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3316000" />
+    <option name="totallyTimeSpent" value="3814000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -255,30 +186,30 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24271844" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24836601" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Performance Profiler" />
-      <window_info anchor="bottom" id="Build" weight="0.32582322" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39688042" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3960217" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Designer Toolbox" side_tool="true" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.3254973" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Designer Toolbox" order="3" side_tool="true" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,16 +224,29 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
-          <line>14</line>
+          <line>15</line>
           <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="14">
             <startOffsets>
-              <option value="336" />
+              <option value="387" />
             </startOffsets>
             <endOffsets>
-              <option value="395" />
+              <option value="446" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
+          <line>52</line>
+          <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="52">
+            <startOffsets>
+              <option value="1689" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1725" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -318,9 +262,34 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/04/95c5b2ce/Keys.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
+          <folding>
+            <marker date="1564405625381" expanded="true" signature="47:1227" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="86:1225" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="101:177" ph="/// Required designer variable. ... " />
+            <marker date="1564405625381" expanded="true" signature="233:424" ph="/// Clean up any resources being used. ... " />
+            <marker date="1564405625381" expanded="true" signature="480:655" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="541:607" ph="{...}" />
+            <marker date="1564405625381" expanded="true" signature="665:1219" ph="Windows Form Designer generated code" />
+            <marker date="1564405625381" expanded="true" signature="719:882" ph="/// Required method for Designer support - do not modify ... " />
+            <marker date="1564405625381" expanded="true" signature="925:1199" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-239">
+        <state relative-caret-position="44">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding>
             <marker date="1564404965150" expanded="true" signature="17:1193" ph="{...}" />
@@ -336,26 +305,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs">
+    <entry file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="36" selection-end-column="12" />
+        <state relative-caret-position="88">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="43" />
           <folding>
-            <marker date="1564405625381" expanded="true" signature="47:1227" ph="{...}" />
-            <marker date="1564405625381" expanded="true" signature="86:1225" ph="{...}" />
-            <marker date="1564405625381" expanded="true" signature="101:177" ph="/// Required designer variable. ... " />
-            <marker date="1564405625381" expanded="true" signature="233:424" ph="/// Clean up any resources being used. ... " />
-            <marker date="1564405625381" expanded="true" signature="480:655" ph="{...}" />
-            <marker date="1564405625381" expanded="true" signature="541:607" ph="{...}" />
-            <marker date="1564405625381" expanded="true" signature="665:1219" ph="Windows Form Designer generated code" />
-            <marker date="1564405625381" expanded="true" signature="719:882" ph="/// Required method for Designer support - do not modify ... " />
-            <marker date="1564405625381" expanded="true" signature="925:1199" ph="{...}" />
+            <marker date="1564405847377" expanded="true" signature="46:640" ph="{...}" />
+            <marker date="1564405847377" expanded="true" signature="99:638" ph="{...}" />
+            <marker date="1564405847377" expanded="true" signature="184:632" ph="{...}" />
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="WinFormsEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/NotePad/Form1.cs">
-      <provider editor-type-id="WinFormsEditor" />
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -365,23 +328,11 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs">
       <provider editor-type-id="WinFormsEditor" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="43" />
-          <folding>
-            <marker date="1564405847377" expanded="true" signature="46:640" ph="{...}" />
-            <marker date="1564405847377" expanded="true" signature="99:638" ph="{...}" />
-            <marker date="1564405847377" expanded="true" signature="184:632" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NotePad/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
+        <state relative-caret-position="296">
           <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding>
             <marker date="1564406112409" expanded="false" signature="6:124" ph="..." />
@@ -393,29 +344,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/04/95c5b2ce/Keys.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state relative-caret-position="168">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
           <folding>
-            <marker date="1564413574619" expanded="true" signature="6:41" ph="..." />
-            <marker date="1564413574619" expanded="true" signature="60:1552" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="111:1550" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="145:248" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="322:1505" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="395:510" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="583:802" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="688:766" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="846:1493" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="1078:1158" ph="{...}" />
-            <marker date="1564413574619" expanded="true" signature="1313:1395" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="6:41" ph="..." />
+            <marker date="1564493415913" expanded="true" signature="60:1807" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="111:1805" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="145:299" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="373:1556" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="446:561" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="634:853" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="739:817" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="897:1544" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="1129:1209" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="1364:1446" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="1666:1799" ph="{...}" />
+            <marker date="1564493415913" expanded="true" signature="1725:1789" ph="{...}" />
           </folding>
         </state>
       </provider>

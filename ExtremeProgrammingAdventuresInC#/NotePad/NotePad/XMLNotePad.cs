@@ -9,6 +9,7 @@ namespace NotePad
         {
             Text = "XML Notepad";
             txtbox.KeyDown += XMLKeyDownHandler;
+            txtbox.KeyPress += XMLKeyPressHandler;
         }
         
         void XMLKeyDownHandler(object sender, KeyEventArgs kea) {
@@ -46,5 +47,13 @@ namespace NotePad
             }  
         }
         int CursorLine() { return 3; }
+
+        void XMLKeyPressHandler(object sender, KeyPressEventArgs kea)
+        {
+            if (kea.KeyChar == (int) Keys.Enter)
+            {
+                kea.Handled = true;
+            }
+        }
     }
 }
