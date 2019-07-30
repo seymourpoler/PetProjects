@@ -19,6 +19,27 @@ namespace NotePad
                 kea.Handled = true;
             }
 
+            if (kea.KeyCode == Keys.Enter) { 
+                String[] lines = txtbox.Lines;
+                Console.WriteLine("LineCount {0}", txtbox.Lines.Length); 
+                int cursorLine = CursorLine(); 
+                String[] newlines = new String[lines.Length+2]; 
+                for(int i = 0; i <= cursorLine; i++)  
+                { 
+                    newlines[i] = lines[i]; 
+                } 
+
+                newlines[cursorLine+1] = ""; 
+                newlines[cursorLine+2] = "<P></P>"; 
+                for (int i = cursorLine+1; i < lines.Length; i++) 
+                { 
+                    newlines[i+2] = lines[i]; 
+                } 
+                txtbox.Lines = newlines; 
+                kea.Handled = true; 
+                Console.WriteLine("LineCount {0}", txtbox.Lines.Length); 
+            }
+            
             if (kea.KeyCode == Keys.L && kea.Modifiers == Keys.Control)
             {
                 String[] lines = txtbox.Lines;
@@ -27,24 +48,30 @@ namespace NotePad
                     Console.WriteLine(s);
                 }   kea.Handled = true;
             }
-
-            if (kea.KeyCode == Keys.Enter)
+            
+            // debugging keys
+            if (kea.KeyCode == Keys.L && kea.Modifiers == Keys.Control)
             {
-                String[] lines = txtbox.Lines;  
-                int cursorLine = CursorLine();    
-                String[] newlines = new String[lines.Length+2];
-                for (int i = 0; i <= cursorLine; i++)
+                String[] lines = txtbox.Lines;
+                foreach (String s in lines)
                 {
-                    newlines[i] = lines[i];
-                }   newlines[cursorLine+1] = "";    
-                newlines[cursorLine+2] = "<P></P>";
-                for (int i = cursorLine + 1; i < lines.Length; i++)
-                {
-                    newlines[i+2] = lines[i];
+                    Console.WriteLine(s);
                 }   
-                txtbox.Lines = newlines;    
                 kea.Handled = true;
-            }  
+            }
+
+            if (kea.KeyCode == Keys.S && kea.Modifiers == Keys.Control)
+            {
+                txtbox.SelectionLength = 0;        
+                kea.Handled = true;
+            }
+
+            if (kea.KeyCode == Keys.Q && kea.Modifiers == Keys.Control)
+            {
+                Console.WriteLine("cursor: {0}", CursorLine());        
+                kea.Handled = true;
+            }
+
         }
         int CursorLine() { return 3; }
 
