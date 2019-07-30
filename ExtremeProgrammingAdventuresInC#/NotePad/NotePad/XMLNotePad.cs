@@ -74,6 +74,8 @@ namespace NotePad
                 kea.Handled = true;
             }
 
+            txtbox.Lines = model.Lines;
+            txtbox.SelectionStart = model.SelectionStart;
         }
         int CursorLine() { return 3; }
 
