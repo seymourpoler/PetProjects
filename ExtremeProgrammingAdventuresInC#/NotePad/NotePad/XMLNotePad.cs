@@ -17,7 +17,7 @@ namespace NotePad
         void XMLKeyDownHandler(object sender, KeyEventArgs kea)
         {
             model.Lines = txtbox.Lines;
-            model.SelectionStart = model.SelectionStart;
+            model.SelectionStart = txtbox.SelectionStart;
             if (kea.KeyCode == Keys.P && kea.Modifiers == Keys.Control)
             {
                 model.IntertControlP();
@@ -25,26 +25,6 @@ namespace NotePad
             }
 
             if (kea.KeyCode == Keys.Enter) { 
-                /*
-                String[] lines = txtbox.Lines;
-                Console.WriteLine("LineCount {0}", txtbox.Lines.Length); 
-                int cursorLine = CursorLine(); 
-                String[] newlines = new String[lines.Length+2]; 
-                for(int i = 0; i <= cursorLine; i++)  
-                { 
-                    newlines[i] = lines[i]; 
-                } 
-
-                newlines[cursorLine+1] = ""; 
-                newlines[cursorLine+2] = "<P></P>"; 
-                for (int i = cursorLine+1; i < lines.Length; i++) 
-                { 
-                    newlines[i+2] = lines[i]; 
-                } 
-                txtbox.Lines = newlines; 
-                kea.Handled = true; 
-                Console.WriteLine("LineCount {0}", txtbox.Lines.Length);
-                */ 
                 model.Enter();
             }
             
