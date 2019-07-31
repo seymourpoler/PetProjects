@@ -26,6 +26,7 @@ namespace NotePad
 
             if (kea.KeyCode == Keys.Enter) { 
                 model.Enter();
+                kea.Handled = true;
             }
             
             if (kea.KeyCode == Keys.L && kea.Modifiers == Keys.Control)
