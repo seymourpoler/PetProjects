@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NotePad/TextModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state relative-caret-position="-536">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding>
                 <marker date="1564501267258" expanded="true" signature="6:66" ph="..." />
                 <marker date="1564501267258" expanded="true" signature="85:1976" ph="{...}" />
@@ -171,12 +171,12 @@
       <option name="presentableId" value="Default" />
       <updated>1564404963583</updated>
       <workItem from="1564404965810" duration="3316000" />
-      <workItem from="1564492960113" duration="3430000" />
+      <workItem from="1564492960113" duration="5439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6746000" />
+    <option name="totallyTimeSpent" value="8755000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -189,7 +189,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24836601" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -434,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NotePad/TextModel.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state relative-caret-position="-536">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
             <marker date="1564501267258" expanded="true" signature="6:66" ph="..." />
             <marker date="1564501267258" expanded="true" signature="85:1976" ph="{...}" />

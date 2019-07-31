@@ -47,13 +47,13 @@ namespace NotePad
         {
             int length = 0;  
             int lineNr = 0;
-            foreach (String s in lines)
+            foreach (String line in lines)
             {
-                if (length <= selectionStart && selectionStart <= length + s.Length + 2)
+                if (length <= selectionStart && selectionStart <= length + line.Length + 2)
                 {
                     break;
                 }    
-                length += s.Length + Environment.NewLine.Length;    
+                length += line.Length + Environment.NewLine.Length;    
                 lineNr++;
             }  
             return lineNr;
