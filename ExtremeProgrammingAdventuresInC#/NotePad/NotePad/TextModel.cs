@@ -25,9 +25,9 @@ namespace NotePad
             lines[lines.Count-1] += "ControlP";
         }
 
-        public void Enter()
+        public void InsertParagraphTag()
         {
-            int cursorLine = CursorLine();  
+            int cursorLine = LineContainingCursor();  
             String[] newlines = new String[lines.Count+2];
             for (int i = 0; i <= cursorLine; i++)
             {
@@ -43,7 +43,7 @@ namespace NotePad
             selectionStart = NewSelectionStart(cursorLine + 2);
         }
 
-        private int CursorLine()
+        private int LineContainingCursor()
         {
             int length = 0;  
             int lineNr = 0;

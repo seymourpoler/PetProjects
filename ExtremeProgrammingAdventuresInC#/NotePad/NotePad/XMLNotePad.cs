@@ -25,7 +25,7 @@ namespace NotePad
             }
 
             if (kea.KeyCode == Keys.Enter) { 
-                model.Enter();
+                model.InsertParagraphTag();
                 kea.Handled = true;
             }
             
@@ -64,6 +64,7 @@ namespace NotePad
             txtbox.Lines = model.Lines;
             txtbox.SelectionStart = model.SelectionStart;
         }
+        
         int CursorLine() { return 3; }
 
         void XMLKeyPressHandler(object sender, KeyPressEventArgs kea)

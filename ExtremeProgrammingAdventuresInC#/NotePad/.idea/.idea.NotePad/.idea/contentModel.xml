@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\lrodriguez\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\lrodriguez\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_NotePad.-1075173093.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lrodriguez\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lrodriguez\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NotePad.-1075173093.00" t="ExcludeRecursive" />
     <e p="C:\Users\lrodriguez\Documents\code\GitHub\PetProjects\PetProjects\ExtremeProgrammingAdventuresInC#\NotePad" t="IncludeFlat">
       <e p="NotePad" t="IncludeRecursive">
         <e p="App.config" t="Include" />
@@ -13,6 +13,7 @@
         <e p="NotepadCloneNoMenu.cs" t="Include" />
         <e p="NotePadCloneNoMenu.Designer.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
@@ -22,6 +23,7 @@
           <e p="Settings.settings" t="Include" />
         </e>
         <e p="TextModel.cs" t="Include" />
+        <e p="TextModelTest.cs" t="Include" />
         <e p="XMLNotePad.cs" t="Include" />
       </e>
       <e p="NotePad.sln" t="IncludeFlat" />
