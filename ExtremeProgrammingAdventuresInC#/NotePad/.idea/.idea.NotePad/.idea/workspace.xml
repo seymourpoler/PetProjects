@@ -30,9 +30,9 @@
         <option value="$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" />
         <option value="$PROJECT_DIR$/NotePad/Program.cs" />
         <option value="$PROJECT_DIR$/NotePad/XMLNotePad.cs" />
-        <option value="$PROJECT_DIR$/NotePad/TextModel.cs" />
         <option value="$PROJECT_DIR$/NotePad/TxtModelTest.cs" />
         <option value="$PROJECT_DIR$/NotePad/TextModelTest.cs" />
+        <option value="$PROJECT_DIR$/NotePad/TextModel.cs" />
       </list>
     </option>
   </component>
@@ -62,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Project.Default">
+  <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/NotePad/bin/Debug/NotePad.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -92,7 +92,7 @@
       <workItem from="1564404965810" duration="3316000" />
       <workItem from="1564492960113" duration="6542000" />
       <workItem from="1567427716841" duration="3052000" />
-      <workItem from="1567615647800" duration="1299000" />
+      <workItem from="1567615647800" duration="3560000" />
     </task>
     <servers />
   </component>
@@ -103,46 +103,46 @@
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1225" height="187" key="GridCell.Tab.0.bottom" />
-    <state width="1225" height="187" key="GridCell.Tab.0.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.0.center" />
-    <state width="1225" height="187" key="GridCell.Tab.0.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.0.left" />
-    <state width="1225" height="187" key="GridCell.Tab.0.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.0.right" />
-    <state width="1225" height="187" key="GridCell.Tab.0.right/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.1.bottom" />
-    <state width="1225" height="187" key="GridCell.Tab.1.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.1.center" />
-    <state width="1225" height="187" key="GridCell.Tab.1.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.1.left" />
-    <state width="1225" height="187" key="GridCell.Tab.1.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.1.right" />
-    <state width="1225" height="187" key="GridCell.Tab.1.right/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.2.bottom" />
-    <state width="1225" height="187" key="GridCell.Tab.2.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.2.center" />
-    <state width="1225" height="187" key="GridCell.Tab.2.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.2.left" />
-    <state width="1225" height="187" key="GridCell.Tab.2.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.2.right" />
-    <state width="1225" height="187" key="GridCell.Tab.2.right/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.3.bottom" />
-    <state width="1225" height="187" key="GridCell.Tab.3.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.3.center" />
-    <state width="1225" height="187" key="GridCell.Tab.3.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.3.left" />
-    <state width="1225" height="187" key="GridCell.Tab.3.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.3.right" />
-    <state width="1225" height="187" key="GridCell.Tab.3.right/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.4.bottom" />
-    <state width="1225" height="187" key="GridCell.Tab.4.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.4.center" />
-    <state width="1225" height="187" key="GridCell.Tab.4.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.4.left" />
-    <state width="1225" height="187" key="GridCell.Tab.4.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1225" height="187" key="GridCell.Tab.4.right" />
-    <state width="1225" height="187" key="GridCell.Tab.4.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.0.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.0.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.0.center" />
+    <state width="1865" height="344" key="GridCell.Tab.0.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.0.left" />
+    <state width="1865" height="344" key="GridCell.Tab.0.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.0.right" />
+    <state width="1865" height="344" key="GridCell.Tab.0.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.1.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.1.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.1.center" />
+    <state width="1865" height="344" key="GridCell.Tab.1.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.1.left" />
+    <state width="1865" height="344" key="GridCell.Tab.1.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.1.right" />
+    <state width="1865" height="344" key="GridCell.Tab.1.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.2.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.2.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.2.center" />
+    <state width="1865" height="344" key="GridCell.Tab.2.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.2.left" />
+    <state width="1865" height="344" key="GridCell.Tab.2.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.2.right" />
+    <state width="1865" height="344" key="GridCell.Tab.2.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.3.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.3.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.3.center" />
+    <state width="1865" height="344" key="GridCell.Tab.3.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.3.left" />
+    <state width="1865" height="344" key="GridCell.Tab.3.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.3.right" />
+    <state width="1865" height="344" key="GridCell.Tab.3.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.4.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.4.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.4.center" />
+    <state width="1865" height="344" key="GridCell.Tab.4.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.4.left" />
+    <state width="1865" height="344" key="GridCell.Tab.4.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.4.right" />
+    <state width="1865" height="344" key="GridCell.Tab.4.right/1920.1080/1280.1024/1920.1080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

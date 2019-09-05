@@ -39,5 +39,26 @@ namespace NotePad
             Assert.AreEqual(3, model.Lines.Length);
             Assert.AreEqual(18, model.SelectionStart);
         }
+
+        [Test]
+        public void TestEmptyText()
+        {
+            model.Lines = new String[0];
+            
+            model.InsertParagraphTag();
+            
+            Assert.AreEqual(1, model.Lines.Length);
+            Assert.AreEqual(3, model.SelectionStart);
+        }
+
+        [Test]
+        public void InsertWithCursorAtLineStart()
+        {
+            model.Lines = new String[3] { "<P>one</P>", "", "<P>two</P>" };
+            model.SelectionStart = 14;
+            model.InsertParagraphTag();
+            Assert.AreEqual("<P>two</P>", model.Lines[2]);
+
+        }
     }
 }
