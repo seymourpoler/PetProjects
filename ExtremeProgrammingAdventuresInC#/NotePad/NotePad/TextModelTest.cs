@@ -20,5 +20,13 @@ namespace NotePad
 
             Assert.AreEqual(0, model.Lines.Length);
         }
+
+        [Test]
+        public void TestNoProcessing()
+        {
+            model.Lines = new string[3] {"hi", "there", "chet"};
+            
+            Assert.AreEqual(3, model.Lines.Length);
+        }
     }
 }
