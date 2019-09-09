@@ -39,22 +39,29 @@ namespace NotePad
                 return;
             }
 
-            int cursorLine = LineContainingCursor();
-            String[] newlines = new String[lines.Count + 2];
-            for (int i = 0; i <= cursorLine; i++)
-            {
-                newlines[i] = lines[i];
-            }
+            var newlines = new List<string>();
+            newlines.AddRange(LinesThroughCursor());
+            newlines.AddRange(NewParagraph());
+            newlines.AddRange(LinesAfterCursor());
+            selectionStart = NewSelectionStart(LineContainingCursor() + 2);
 
-            newlines[cursorLine + 1] = "";
-            newlines[cursorLine + 2] = "<P></P>";
-            for (int i = cursorLine + 1; i < lines.Count; i++)
-            {
-                newlines[i + 2] = lines[i];
-            }
-
-            lines = newlines.ToList();
-            selectionStart = NewSelectionStart(cursorLine + 2);
+//            
+//            int cursorLine = LineContainingCursor();
+//            String[] newlines = new String[lines.Count + 2];
+//            for (int i = 0; i <= cursorLine; i++)
+//            {
+//                newlines[i] = lines[i];
+//            }
+//
+//            newlines[cursorLine + 1] = "";
+//            newlines[cursorLine + 2] = "<P></P>";
+//            for (int i = cursorLine + 1; i < lines.Count; i++)
+//            {
+//                newlines[i + 2] = lines[i];
+//            }
+//
+//            lines = newlines.ToList();
+//            selectionStart = NewSelectionStart(cursorLine + 2);
         }
 
         private int LineContainingCursor()
@@ -84,6 +91,23 @@ namespace NotePad
             }
 
             return length + 3;
+        }
+        
+        public List<string> LinesThroughCursor() {  return lines.GetRange(0,LineContainingCursor()+1);}
+
+        public List<string> NewParagraph()
+        {
+            return new List<string>
+            {
+                "",
+                "<P></P>"
+            };
+        }
+
+        public List<string> LinesAfterCursor()
+        {
+            int cursorLine = LineContainingCursor();  
+            return lines.GetRange(cursorLine+1,lines.Count - cursorLine - 1);
         }
     }
 }
