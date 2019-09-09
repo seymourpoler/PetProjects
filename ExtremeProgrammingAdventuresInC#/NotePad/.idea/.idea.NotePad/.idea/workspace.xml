@@ -9,14 +9,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< HEAD
     <setting file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+=======
+    <setting file="file://$PROJECT_DIR$/NotePad/TextModelTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/04/95c5b2ce/Keys.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Commands/SetUpTearDownItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/00A78D6D-663C-4F46-9D5F-BC222D4BFE01/c1/8b397dad/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/TextModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> af0cef57160e1f2a443448ac54cabafbd628e47d
     <setting file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/Form1.cs" root0="FORCE_HIGHLIGHTING" />
+<<<<<<< HEAD
     <setting file="file://$PROJECT_DIR$/NotePad/TextModelTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NotePad/TextModel.cs" root0="FORCE_HIGHLIGHTING" />
+=======
+>>>>>>> af0cef57160e1f2a443448ac54cabafbd628e47d
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -25,13 +41,22 @@
         <option value="$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" />
         <option value="$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" />
         <option value="$PROJECT_DIR$/NotePad/Program.cs" />
-        <option value="$PROJECT_DIR$/NotePad/TextModel.cs" />
         <option value="$PROJECT_DIR$/NotePad/XMLNotePad.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/NotePad/TextModelTest.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1QbsOZNRq982JvsODvY14tLX6jh" />
+=======
+        <option value="$PROJECT_DIR$/NotePad/TxtModelTest.cs" />
+        <option value="$PROJECT_DIR$/NotePad/TextModelTest.cs" />
+        <option value="$PROJECT_DIR$/NotePad/TextModel.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QHVrunwg3IfMk5b2ETtHusBrzZ" />
+>>>>>>> af0cef57160e1f2a443448ac54cabafbd628e47d
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -85,14 +110,65 @@
       <option name="presentableId" value="Default" />
       <updated>1564404963583</updated>
       <workItem from="1564404965810" duration="3316000" />
+<<<<<<< HEAD
       <workItem from="1564492960113" duration="5439000" />
       <workItem from="1568050638337" duration="495000" />
       <workItem from="1568052057128" duration="357000" />
+=======
+      <workItem from="1564492960113" duration="6542000" />
+      <workItem from="1567427716841" duration="3052000" />
+      <workItem from="1567615647800" duration="3560000" />
+>>>>>>> af0cef57160e1f2a443448ac54cabafbd628e47d
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1865" height="344" key="GridCell.Tab.0.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.0.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.0.center" />
+    <state width="1865" height="344" key="GridCell.Tab.0.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.0.left" />
+    <state width="1865" height="344" key="GridCell.Tab.0.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.0.right" />
+    <state width="1865" height="344" key="GridCell.Tab.0.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.1.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.1.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.1.center" />
+    <state width="1865" height="344" key="GridCell.Tab.1.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.1.left" />
+    <state width="1865" height="344" key="GridCell.Tab.1.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.1.right" />
+    <state width="1865" height="344" key="GridCell.Tab.1.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.2.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.2.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.2.center" />
+    <state width="1865" height="344" key="GridCell.Tab.2.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.2.left" />
+    <state width="1865" height="344" key="GridCell.Tab.2.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.2.right" />
+    <state width="1865" height="344" key="GridCell.Tab.2.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.3.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.3.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.3.center" />
+    <state width="1865" height="344" key="GridCell.Tab.3.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.3.left" />
+    <state width="1865" height="344" key="GridCell.Tab.3.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.3.right" />
+    <state width="1865" height="344" key="GridCell.Tab.3.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.4.bottom" />
+    <state width="1865" height="344" key="GridCell.Tab.4.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.4.center" />
+    <state width="1865" height="344" key="GridCell.Tab.4.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.4.left" />
+    <state width="1865" height="344" key="GridCell.Tab.4.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="344" key="GridCell.Tab.4.right" />
+    <state width="1865" height="344" key="GridCell.Tab.4.right/1920.1080/1280.1024/1920.1080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -122,59 +198,59 @@
               <option value="790" />
             </startOffsets>
             <endOffsets>
-              <option value="804" />
+              <option value="817" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
-          <line>32</line>
+          <line>33</line>
           <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="52">
             <startOffsets>
-              <option value="934" />
+              <option value="983" />
             </startOffsets>
             <endOffsets>
-              <option value="964" />
+              <option value="1013" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
-          <line>42</line>
+          <line>43</line>
           <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="62">
             <startOffsets>
-              <option value="1268" />
+              <option value="1317" />
             </startOffsets>
             <endOffsets>
-              <option value="1298" />
+              <option value="1347" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
-          <line>52</line>
+          <line>53</line>
           <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="72">
             <startOffsets>
-              <option value="1577" />
+              <option value="1626" />
             </startOffsets>
             <endOffsets>
-              <option value="1604" />
+              <option value="1653" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/NotePad/XMLNotePad.cs</url>
-          <line>58</line>
+          <line>59</line>
           <properties documentPath="$PROJECT_DIR$/NotePad/XMLNotePad.cs" initialLine="78">
             <startOffsets>
-              <option value="1766" />
+              <option value="1815" />
             </startOffsets>
             <endOffsets>
-              <option value="1813" />
+              <option value="1862" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="14" />
