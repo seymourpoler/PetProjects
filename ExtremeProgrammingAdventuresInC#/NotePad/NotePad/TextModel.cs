@@ -7,7 +7,6 @@ namespace NotePad
     public class TextModel
     {
         private List<string> lines;
-
         public String[] Lines
         {
             get { return lines.ToArray(); }
@@ -15,7 +14,6 @@ namespace NotePad
         }
 
         private int selectionStart;
-
         public int SelectionStart
         {
             get { return selectionStart; }
