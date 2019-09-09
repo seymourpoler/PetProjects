@@ -58,7 +58,8 @@ namespace NotePad
             
             model.InsertParagraphTag();
             
-            Assert.AreEqual("<P>two</P>", model.Lines[2]);
+            Assert.AreEqual("", model.Lines[2]);
+            Assert.AreEqual("<P></P>", model.Lines[3]);
         }
     }
 }
