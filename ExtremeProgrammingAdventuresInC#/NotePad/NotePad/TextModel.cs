@@ -102,13 +102,6 @@ namespace NotePad
             return lineNr;
         }
 
-        
-        
-        private List<string> LinesThroughCursor()
-        {
-            return lines.GetRange(0,LineContainingCursor() + 1);
-        }
-
         private List<string> NewParagraph()
         {
             return new List<string>
@@ -116,12 +109,6 @@ namespace NotePad
                 "",
                 "<P></P>"
             };
-        }
-
-        private List<string> LinesAfterCursor()
-        {
-            int cursorLine = LineContainingCursor();  
-            return lines.GetRange(cursorLine+1,lines.Count - cursorLine - 1);
         }
     }
 }
