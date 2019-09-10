@@ -63,11 +63,13 @@ namespace NotePad
 //            lines = newlines.ToList();
 //            selectionStart = NewSelectionStart(cursorLine + 2);
 
-            var newLines = new List<string>();
-            newLines.AddRange(LinesThroughCursor());
-            newLines.AddRange(NewParagraph());
-            newLines.AddRange(LinesAfterCursor());
-            lines = newLines;
+//            var newLines = new List<string>();
+//            newLines.AddRange(LinesThroughCursor());
+//            newLines.AddRange(NewParagraph());
+//            newLines.AddRange(LinesAfterCursor());
+//            lines = newLines;
+
+            lines.InsertRange(LineContainingCursor()+1, NewParagraph());
             selectionStart = NewSelectionStart(LineContainingCursor() + 2);
         }
 
