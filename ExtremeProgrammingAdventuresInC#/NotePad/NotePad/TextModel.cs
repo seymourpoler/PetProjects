@@ -10,7 +10,7 @@ namespace NotePad
         public String[] Lines
         {
             get { return lines.ToArray(); }
-            set { lines = value.ToList(); }
+            set { lines.AddRange(value.ToList()); }
         }
 
         private int selectionStart;
@@ -32,18 +32,18 @@ namespace NotePad
 
         public void InsertParagraphTag()
         {
+            //
+            // On Enter, we change the TextModel lines to insert, after the line
+            // containing the cursor, a blank line, and a line with <P></P>. We set the
+            // new cursor location to be between the P tags: <P>|</P>.
+            //
+            // handle empty array special case (yucch)
             if (lines.Count == 0)
             {
                 lines.Add("<P></P>");
                 selectionStart = 3;
                 return;
             }
-
-            var newlines = new List<string>();
-            newlines.AddRange(LinesThroughCursor());
-            newlines.AddRange(NewParagraph());
-            newlines.AddRange(LinesAfterCursor());
-            selectionStart = NewSelectionStart(LineContainingCursor() + 2);
 
 //            
 //            int cursorLine = LineContainingCursor();
@@ -62,6 +62,24 @@ namespace NotePad
 //
 //            lines = newlines.ToList();
 //            selectionStart = NewSelectionStart(cursorLine + 2);
+
+            var newLines = new List<string>();
+            newLines.AddRange(LinesThroughCursor());
+            newLines.AddRange(NewParagraph());
+            newLines.AddRange(LinesAfterCursor());
+            lines = newLines;
+            selectionStart = NewSelectionStart(LineContainingCursor() + 2);
+        }
+
+        private int NewSelectionStart(int cursorLine)
+        {
+            int length = 0;
+            for (int i = 0; i < cursorLine; i++)
+            {
+                length += lines[i].Length + Environment.NewLine.Length;
+            }
+
+            return length + 3;
         }
 
         private int LineContainingCursor()
@@ -82,20 +100,14 @@ namespace NotePad
             return lineNr;
         }
 
-        private int NewSelectionStart(int cursorLine)
-        {
-            int length = 0;
-            for (int i = 0; i < cursorLine; i++)
-            {
-                length += lines[i].Length + Environment.NewLine.Length;
-            }
-
-            return length + 3;
-        }
         
-        public List<string> LinesThroughCursor() {  return lines.GetRange(0,LineContainingCursor()+1);}
+        
+        private List<string> LinesThroughCursor()
+        {
+            return lines.GetRange(0,LineContainingCursor() + 1);
+        }
 
-        public List<string> NewParagraph()
+        private List<string> NewParagraph()
         {
             return new List<string>
             {
@@ -104,7 +116,7 @@ namespace NotePad
             };
         }
 
-        public List<string> LinesAfterCursor()
+        private List<string> LinesAfterCursor()
         {
             int cursorLine = LineContainingCursor();  
             return lines.GetRange(cursorLine+1,lines.Count - cursorLine - 1);

@@ -33,6 +33,17 @@
     <setting file="file://$PROJECT_DIR$/NotePad/TextModel.cs" root0="FORCE_HIGHLIGHTING" />
 =======
 >>>>>>> af0cef57160e1f2a443448ac54cabafbd628e47d
+=======
+    <setting file="file://$PROJECT_DIR$/NotePad/NotepadCloneNoMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/XMLNotePad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/TextModelTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/Form1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/TextModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NotePad/NotePadCloneNoMenu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> Stashed changes
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -69,6 +80,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -117,58 +129,82 @@
 =======
       <workItem from="1564492960113" duration="6542000" />
       <workItem from="1567427716841" duration="3052000" />
+<<<<<<< Updated upstream
       <workItem from="1567615647800" duration="3560000" />
 >>>>>>> af0cef57160e1f2a443448ac54cabafbd628e47d
+=======
+      <workItem from="1567615647800" duration="5244000" />
+      <workItem from="1567749607445" duration="425000" />
+      <workItem from="1567750433285" duration="7000" />
+      <workItem from="1568035918757" duration="1307000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1865" height="344" key="GridCell.Tab.0.bottom" />
-    <state width="1865" height="344" key="GridCell.Tab.0.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.0.center" />
-    <state width="1865" height="344" key="GridCell.Tab.0.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.0.left" />
-    <state width="1865" height="344" key="GridCell.Tab.0.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.0.right" />
-    <state width="1865" height="344" key="GridCell.Tab.0.right/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.1.bottom" />
-    <state width="1865" height="344" key="GridCell.Tab.1.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.1.center" />
-    <state width="1865" height="344" key="GridCell.Tab.1.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.1.left" />
-    <state width="1865" height="344" key="GridCell.Tab.1.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.1.right" />
-    <state width="1865" height="344" key="GridCell.Tab.1.right/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.2.bottom" />
-    <state width="1865" height="344" key="GridCell.Tab.2.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.2.center" />
-    <state width="1865" height="344" key="GridCell.Tab.2.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.2.left" />
-    <state width="1865" height="344" key="GridCell.Tab.2.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.2.right" />
-    <state width="1865" height="344" key="GridCell.Tab.2.right/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.3.bottom" />
-    <state width="1865" height="344" key="GridCell.Tab.3.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.3.center" />
-    <state width="1865" height="344" key="GridCell.Tab.3.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.3.left" />
-    <state width="1865" height="344" key="GridCell.Tab.3.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.3.right" />
-    <state width="1865" height="344" key="GridCell.Tab.3.right/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.4.bottom" />
-    <state width="1865" height="344" key="GridCell.Tab.4.bottom/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.4.center" />
-    <state width="1865" height="344" key="GridCell.Tab.4.center/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.4.left" />
-    <state width="1865" height="344" key="GridCell.Tab.4.left/1920.1080/1280.1024/1920.1080" />
-    <state width="1865" height="344" key="GridCell.Tab.4.right" />
-    <state width="1865" height="344" key="GridCell.Tab.4.right/1920.1080/1280.1024/1920.1080" />
+    <state x="2438" y="233" key="#xdebugger.evaluate" />
+    <state x="2438" y="233" key="#xdebugger.evaluate/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.0.bottom" />
+    <state width="1865" height="190" key="GridCell.Tab.0.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.0.center" />
+    <state width="1865" height="190" key="GridCell.Tab.0.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.0.left" />
+    <state width="1865" height="190" key="GridCell.Tab.0.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.0.right" />
+    <state width="1865" height="190" key="GridCell.Tab.0.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.1.bottom" />
+    <state width="1865" height="190" key="GridCell.Tab.1.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.1.center" />
+    <state width="1865" height="190" key="GridCell.Tab.1.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.1.left" />
+    <state width="1865" height="190" key="GridCell.Tab.1.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.1.right" />
+    <state width="1865" height="190" key="GridCell.Tab.1.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.2.bottom" />
+    <state width="1865" height="190" key="GridCell.Tab.2.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.2.center" />
+    <state width="1865" height="190" key="GridCell.Tab.2.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.2.left" />
+    <state width="1865" height="190" key="GridCell.Tab.2.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.2.right" />
+    <state width="1865" height="190" key="GridCell.Tab.2.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.3.bottom" />
+    <state width="1865" height="190" key="GridCell.Tab.3.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.3.center" />
+    <state width="1865" height="190" key="GridCell.Tab.3.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.3.left" />
+    <state width="1865" height="190" key="GridCell.Tab.3.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.3.right" />
+    <state width="1865" height="190" key="GridCell.Tab.3.right/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.4.bottom" />
+    <state width="1865" height="190" key="GridCell.Tab.4.bottom/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.4.center" />
+    <state width="1865" height="190" key="GridCell.Tab.4.center/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.4.left" />
+    <state width="1865" height="190" key="GridCell.Tab.4.left/1920.1080/1280.1024/1920.1080" />
+    <state width="1865" height="190" key="GridCell.Tab.4.right" />
+    <state width="1865" height="190" key="GridCell.Tab.4.right/1920.1080/1280.1024/1920.1080" />
+    <state x="2336" y="76" key="SettingsEditor" />
+    <state x="2336" y="76" key="SettingsEditor/1920.1080/1280.1024/1920.1080" />
+    <state x="219" y="-1" width="840" height="1034" key="search.everywhere.popup" />
+    <state x="219" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080/1280.1024/1920.1080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -255,17 +291,33 @@
           </properties>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/NotePad/TextModelTest.cs</url>
+          <line>37</line>
+          <properties documentPath="$PROJECT_DIR$/NotePad/TextModelTest.cs" initialLine="37">
+            <startOffsets>
+              <option value="797" />
+            </startOffsets>
+            <endOffsets>
+              <option value="824" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/NotePad/TextModelTest.cs</url>
+          <line>60</line>
+          <properties documentPath="$PROJECT_DIR$/NotePad/TextModelTest.cs" initialLine="60">
+            <startOffsets>
+              <option value="1456" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1483" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>lines</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
   </component>
 </project>

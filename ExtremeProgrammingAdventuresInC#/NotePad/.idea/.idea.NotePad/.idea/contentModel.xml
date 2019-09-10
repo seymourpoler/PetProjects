@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\seymo\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\seymo\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NotePad.-1411376429.00" t="ExcludeRecursive" />
-    <e p="C:\Users\seymo\Documents\code\GitHub\PetProjects\PetProjects\ExtremeProgrammingAdventuresInC#\NotePad" t="IncludeFlat">
+    <e p="C:\Users\lrodriguez\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lrodriguez\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NotePad.-1075173093.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lrodriguez\Documents\code\GitHub\PetProjects\PetProjects\ExtremeProgrammingAdventuresInC#\NotePad" t="IncludeFlat">
       <e p="NotePad" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />

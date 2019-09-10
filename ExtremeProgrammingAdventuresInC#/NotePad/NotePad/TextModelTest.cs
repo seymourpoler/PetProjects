@@ -32,9 +32,9 @@ namespace NotePad
         {
             model.Lines = new String[0];
             
-            model.InsertParagraphTag();
+            model.InsertParagraphTag();  
             
-            Assert.AreEqual(1, model.Lines.Length);
+            Assert.AreEqual(1, model.Lines.Length);  
             Assert.AreEqual(3, model.SelectionStart);
         }
         
