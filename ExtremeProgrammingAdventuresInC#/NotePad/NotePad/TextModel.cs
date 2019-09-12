@@ -20,6 +20,8 @@ namespace NotePad
             set { selectionStart = value; }
         }
 
+        public string TestText { get; set; }
+
         public TextModel()
         {
             lines = new List<string>();
@@ -109,6 +111,11 @@ namespace NotePad
                 "",
                 "<P></P>"
             };
+        }
+
+        public void Enter()
+        {
+            throw new NotImplementedException();
         }
     }
 }
