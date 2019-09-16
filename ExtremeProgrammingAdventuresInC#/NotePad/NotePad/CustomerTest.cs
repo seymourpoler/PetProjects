@@ -27,7 +27,7 @@ namespace NotePad
         [Test]
         public void TestAllFiles()
         {
-            var testFiles = Directory.GetFiles(@".\data\f", "*.test");
+            var testFiles = Directory.GetFiles(@".\data\", "*.test");
             
             Assert.AreEqual(1, testFiles.Length);
             foreach (var testFile in testFiles)

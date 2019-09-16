@@ -9,7 +9,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="CustomerTest.cs" t="Include" />
         <e p="data" t="Include">
-          <e p="fileInput.txt" t="Include" />
+          <e p="fileInput.test" t="Include" />
         </e>
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
