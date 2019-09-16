@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using NUnit.Framework;
 
 namespace NotePad
@@ -25,6 +26,14 @@ namespace NotePad
             command = new InputCommand(reader);
             
             Assert.AreEqual(1, command.CleanLines().Length);
+        }
+
+        [Test]
+        public void OneDirtyLine()
+        {
+            command = new InputCommand(new StringReader("a|b\n*end"));
+            
+            Assert.AreEqual("ab", command.CleanLines().First());
         }
     }
 }
