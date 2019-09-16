@@ -11,7 +11,7 @@ namespace NotePad
         [Test]
         public void EmptyCommand()
         {
-            command = new InputCommand();
+            command = new InputCommand(new StringReader(string.Empty));
             
             Assert.AreEqual(0, command.CleanLines().Length);
         }
