@@ -13,6 +13,5 @@ namespace NotePad
             
             Assert.IsTrue(1 == 1);
         }
-        
     }
 }
