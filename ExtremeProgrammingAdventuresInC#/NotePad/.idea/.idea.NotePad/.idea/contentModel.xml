@@ -13,6 +13,8 @@
         </e>
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
+        <e p="InputCommand.cs" t="Include" />
+        <e p="InputCommandTest.cs" t="Include" />
         <e p="NotePad.csproj" t="IncludeRecursive" />
         <e p="NotepadCloneNoMenu.cs" t="Include" />
         <e p="NotePadCloneNoMenu.Designer.cs" t="Include" />

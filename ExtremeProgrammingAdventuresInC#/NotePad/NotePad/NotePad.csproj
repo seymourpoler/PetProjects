@@ -58,6 +58,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputCommand.cs" />
+    <Compile Include="InputCommandTest.cs" />
     <Compile Include="NotePadCloneNoMenu.cs">
       <SubType>Form</SubType>
     </Compile>
