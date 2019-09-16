@@ -6,12 +6,13 @@ namespace NotePad
     public class InputCommandTest
     {
         InputCommand command;
+        
         [Test]
         public void EmptyCommand()
         {
             command = new InputCommand();
             
-            Assert.IsTrue(1 == 1);
+            Assert.AreEqual(0, command.CleanLines().Length);
         }
     }
 }
