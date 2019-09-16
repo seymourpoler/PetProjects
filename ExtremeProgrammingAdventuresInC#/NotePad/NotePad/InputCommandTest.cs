@@ -1,3 +1,4 @@
+using System.IO;
 using NUnit.Framework;
 
 namespace NotePad
@@ -13,6 +14,17 @@ namespace NotePad
             command = new InputCommand();
             
             Assert.AreEqual(0, command.CleanLines().Length);
+        }
+
+        [Test]
+        public void OneLineCommand()
+        {
+            string oneLineString = @"one line*end";
+            var reader = new StringReader(oneLineString);
+            
+            command = new InputCommand(reader);
+            
+            Assert.AreEqual(1, command.CleanLines().Length);
         }
     }
 }
