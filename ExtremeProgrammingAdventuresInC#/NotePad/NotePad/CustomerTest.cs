@@ -116,11 +116,16 @@ namespace NotePad
             return answer;
         }
 
-        void CompareOutput(StringReader reader, String message)
+        void CompareOutput(StringReader reader, string message)
         {
             string expected = ExpectedOutput(reader);  
             
             Assert.AreEqual(message, expected, model.TestText);
+        }
+
+        void CompareOutput(StringReader reader)
+        {
+            CompareOutput(reader, String.Empty);
         }
 
         string ExpectedOutput(StringReader reader)
