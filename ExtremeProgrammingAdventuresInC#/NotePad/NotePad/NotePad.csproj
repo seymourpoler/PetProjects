@@ -95,6 +95,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\anotherInputFile.test" />
     <Content Include="data\fileInput.test">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
