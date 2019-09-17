@@ -17,7 +17,7 @@ namespace NotePad
 
         public string[] CleanLines()
         {
-            var line = _reader.ReadToEnd();
+            var line = _reader.ReadLine();
             while (!string.IsNullOrWhiteSpace(line)  && line != "*end")
             {
                 _lines.Add(line.TrimEnd());
