@@ -33,7 +33,7 @@ namespace NotePad
         {
             command = new InputCommand(new StringReader("a|b\n*end"));
             
-            Assert.AreEqual("a|b", command.CleanLines().First());
+            Assert.AreEqual("ab", command.CleanLines().First());
         }
     }
 }
