@@ -86,10 +86,13 @@ namespace NotePad
 
         void SetInput(StringReader reader)
         {
-            string[] input = ArrayToEnd(reader);
-            model.Lines = CleanLines(input);
-            model.Lines = input;
-            model.SelectionStart = CursorLocation(input);
+            var input = new InputCommand(reader);
+            model.Lines = input.CleanLines();
+            
+//            string[] input = ArrayToEnd(reader);
+//            model.Lines = CleanLines(input);
+//            model.Lines = input;
+//            model.SelectionStart = CursorLocation(input);
         }
 
         private int CursorLocation(string[] input)
