@@ -20,7 +20,7 @@ namespace NotePad
             using (var streamReader = File.OpenText(@".\data\fileInput.txt"))
             {
                 var contents = streamReader.ReadToEnd();
-                InterpretCommands(contents);
+                InterpretCommands(contents, "fileInput.txt");
             }
         }
 
@@ -41,20 +41,20 @@ namespace NotePad
             using(var stream = File.OpenText(fileName))
             {
                 var contents = stream.ReadToEnd();
-                InterpretCommands(contents);
+                InterpretCommands(contents, fileName);
             }
         }
 
 
-        [Test]
-        public void StringInput()
-        {
-            string commands = "*input\n some line\n *end\n *enter\n *display\n *output\n some line\n <P>|</P>";
+//        [Test]
+//        public void StringInput()
+//        {
+//            string commands = "*input\n some line\n *end\n *enter\n *display\n *output\n some line\n <P>|</P>";
+//
+//            InterpretCommands(commands);
+//        }
 
-            InterpretCommands(commands);
-        }
-
-        void InterpretCommands(string commands)
+        void InterpretCommands(string commands, string message)
         {
             var reader = new StringReader(commands);
             var line = reader.ReadLine();
