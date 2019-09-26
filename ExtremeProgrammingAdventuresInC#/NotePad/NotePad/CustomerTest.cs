@@ -123,7 +123,8 @@ namespace NotePad
             string line = reader.ReadLine();
             while (line != null && line != "*end")
             {
-                result += line;    result += System.Environment.NewLine;    
+                result += line;    
+                result += System.Environment.NewLine;    
                 line = reader.ReadLine();
             }  
             return result;
