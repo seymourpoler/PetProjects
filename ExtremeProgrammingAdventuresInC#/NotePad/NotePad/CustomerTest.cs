@@ -41,7 +41,7 @@ namespace NotePad
             using(var stream = File.OpenText(fileName))
             {
                 var contents = stream.ReadToEnd();
-                InterpretFileInput(contents);
+                InterpretCommands(contents);
             }
         }
 
