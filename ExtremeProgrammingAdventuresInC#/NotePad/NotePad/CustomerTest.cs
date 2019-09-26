@@ -100,20 +100,6 @@ namespace NotePad
             throw new NotImplementedException();
         }
 
-        string[] ArrayToEnd(StringReader reader)
-        {
-            ArrayList result = new ArrayList();  
-            string line = reader.ReadLine();
-            while (line != null && line != "*end")
-            {
-                result.Add(line.TrimEnd());
-                line = reader.ReadLine();
-            }  
-            string[] answer = new string[result.Count];  
-            result.CopyTo(answer);
-            return answer;
-        }
-
         void CompareOutput(StringReader reader, string message)
         {
             string expected = ExpectedOutput(reader);  
