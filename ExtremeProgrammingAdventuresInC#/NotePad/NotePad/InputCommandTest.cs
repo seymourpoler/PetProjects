@@ -12,7 +12,8 @@ namespace NotePad
         [Test]
         public void EmptyCommand()
         {
-            command = new InputCommand(new StringReader(string.Empty));
+            command = new InputCommand(new StringReader(string.
+                Empty));
             
             Assert.AreEqual(0, command.CleanLines().Length);
         }
@@ -20,12 +21,15 @@ namespace NotePad
         [Test]
         public void OneLineCommand()
         {
-            string oneLineString = @"one line*end";
+            string oneLineString =
+@"one line
+*end";
             var reader = new StringReader(oneLineString);
             
             command = new InputCommand(reader);
             
             Assert.AreEqual(1, command.CleanLines().Length);
+            Assert.AreEqual(10, command.SelectionStart());
         }
 
         [Test]
@@ -34,6 +38,7 @@ namespace NotePad
             command = new InputCommand(new StringReader("a|b\n*end"));
             
             Assert.AreEqual("ab", command.CleanLines().First());
+            Assert.AreEqual(1, command.SelectionStart());
         }
     }
 }
