@@ -18,17 +18,22 @@ namespace NotePad
 
         public string[] CleanLines()
         {
-            var line = _reader.ReadLine();
+            ReadLines(_reader);
+            var result = CleanTheLines();
+            return result;
+        }
+
+        void ReadLines(StringReader reader)
+        {
+            var line  = _reader.ReadLine();
             while (!string.IsNullOrWhiteSpace(line)  && line != "*end")
             {
                 _lines.Add(line.TrimEnd());
                 line = _reader.ReadLine();
             }
-
-            var result = CleanTheLines();
-            return result;
+            reader.Close();
         }
-
+        
         string[] CleanTheLines()
         {
             IList<string> result = new List<string>();
