@@ -39,13 +39,13 @@ namespace NotePad
             IList<string> result = new List<string>();
             foreach (var line in _lines)
             {
-                result.Add(CleanTheLine(line));
+                result.Add(CleanLine(line));
             }
 
             return result.ToArray();
         }
 
-        string CleanTheLine(string dirty)
+        string CleanLine(string dirty)
         {
             var result = dirty.Replace("|", "");
             return result;
