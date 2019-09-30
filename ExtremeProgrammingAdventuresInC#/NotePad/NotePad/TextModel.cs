@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace NotePad
 {
@@ -20,7 +21,21 @@ namespace NotePad
             set { selectionStart = value; }
         }
 
-        public string TestText { get; set; }
+        public string TestText
+        {
+            get
+            {
+                var b = new StringBuilder();
+                foreach (var s in lines)
+                {
+                    b.Append(s);
+                    b.Append((System.Environment.NewLine));
+                }
+
+                b.Insert(SelectionStart, "|");
+                return b.ToString();
+            } 
+        }
 
         public TextModel()
         {
