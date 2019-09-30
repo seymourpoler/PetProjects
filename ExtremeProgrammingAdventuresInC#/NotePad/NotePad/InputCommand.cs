@@ -19,8 +19,12 @@ namespace NotePad
         public string[] CleanLines()
         {
             ReadLines(_reader);
-            var result = CleanTheLines();
-            return result;
+            var result = new List<string>();
+            foreach (var line in _lines)
+            {
+                result.Add(CleanLine(line));
+            }
+            return result.ToArray();
         }
 
         void ReadLines(StringReader reader)
@@ -32,17 +36,6 @@ namespace NotePad
                 line = _reader.ReadLine();
             }
             reader.Close();
-        }
-        
-        string[] CleanTheLines()
-        {
-            IList<string> result = new List<string>();
-            foreach (var line in _lines)
-            {
-                result.Add(CleanLine(line));
-            }
-
-            return result.ToArray();
         }
 
         string CleanLine(string dirty)
