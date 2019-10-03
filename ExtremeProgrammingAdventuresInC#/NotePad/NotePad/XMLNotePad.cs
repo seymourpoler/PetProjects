@@ -33,16 +33,16 @@ namespace NotePad
                 Console.WriteLine("model");
                 kea.Handled = true;
             }
+
+            if (kea.KeyCode == Keys.S && kea.Modifiers == Keys.Control)
+            {
+                txtbox.SelectionLength = 0;        
+                kea.Handled = true;
+            }
             
             if (kea.KeyCode == Keys.P && kea.Modifiers == Keys.Control)
             {
                 model.IntertControlP();
-                kea.Handled = true;
-            }
-            
-            if (kea.KeyCode == Keys.S && kea.Modifiers == Keys.Control)
-            {
-                txtbox.SelectionLength = 0;        
                 kea.Handled = true;
             }
 
