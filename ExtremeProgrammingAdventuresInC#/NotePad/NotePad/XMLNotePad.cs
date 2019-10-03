@@ -22,13 +22,7 @@ namespace NotePad
                 model.Enter();
                 kea.Handled = true;
             }
-            
-            if (kea.KeyCode == Keys.P && kea.Modifiers == Keys.Control)
-            {
-                model.IntertControlP();
-                kea.Handled = true;
-            }
-            
+
             if (kea.KeyCode == Keys.L && kea.Modifiers == Keys.Control)
             {
                 String[] lines = txtbox.Lines;
@@ -36,6 +30,12 @@ namespace NotePad
                 {
                     Console.WriteLine(s);
                 }   kea.Handled = true;
+            }
+            
+            if (kea.KeyCode == Keys.P && kea.Modifiers == Keys.Control)
+            {
+                model.IntertControlP();
+                kea.Handled = true;
             }
             
             // debugging keys
