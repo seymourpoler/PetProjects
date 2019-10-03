@@ -16,7 +16,7 @@ namespace NotePad
         
         void XMLKeyDownHandler(object sender, KeyEventArgs kea)
         {
-            model.Lines = txtbox.Lines;
+            model.SetLines(txtbox.Lines);
             model.SelectionStart = txtbox.SelectionStart;
             if (kea.KeyCode == Keys.P && kea.Modifiers == Keys.Control)
             {

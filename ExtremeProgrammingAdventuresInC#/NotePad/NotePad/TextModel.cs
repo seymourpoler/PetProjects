@@ -132,5 +132,10 @@ namespace NotePad
         {
             throw new NotImplementedException();
         }
+
+        public void SetLines(string[] lines)
+        {
+            Lines = lines;
+        }
     }
 }
