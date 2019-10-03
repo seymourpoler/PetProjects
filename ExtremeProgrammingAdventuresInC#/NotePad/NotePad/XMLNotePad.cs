@@ -40,17 +40,6 @@ namespace NotePad
                 kea.Handled = true;
             }
             
-            // debugging keys
-            if (kea.KeyCode == Keys.L && kea.Modifiers == Keys.Control)
-            {
-                String[] lines = txtbox.Lines;
-                foreach (String s in lines)
-                {
-                    Console.WriteLine(s);
-                }   
-                kea.Handled = true;
-            }
-
             if (kea.KeyCode == Keys.S && kea.Modifiers == Keys.Control)
             {
                 txtbox.SelectionLength = 0;        
