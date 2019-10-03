@@ -29,7 +29,9 @@ namespace NotePad
                 foreach (String s in lines)
                 {
                     Console.WriteLine(s);
-                }   kea.Handled = true;
+                }
+                Console.WriteLine("model");
+                kea.Handled = true;
             }
             
             if (kea.KeyCode == Keys.P && kea.Modifiers == Keys.Control)
