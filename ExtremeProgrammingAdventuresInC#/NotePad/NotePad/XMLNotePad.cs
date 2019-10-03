@@ -52,13 +52,18 @@ namespace NotePad
                 kea.Handled = true;
             }
 
+            PutText();
+        }
+        
+        int CursorLine() { return 3; }
+
+        void PutText()
+        {
             txtbox.Lines = model.Lines;
             txtbox.SelectionStart = model.SelectionStart;
             txtbox.ScrollToCaret();
         }
         
-        int CursorLine() { return 3; }
-
         void XMLKeyPressHandler(object sender, KeyPressEventArgs kea)
         {
             if (kea.KeyChar == (int) Keys.Enter)
