@@ -18,14 +18,14 @@ namespace NotePad
         {
             model.SetLines(txtbox.Lines);
             model.SelectionStart = txtbox.SelectionStart;
+            if (kea.KeyCode == Keys.Enter) { 
+                model.InsertParagraphTag();
+                kea.Handled = true;
+            }
+            
             if (kea.KeyCode == Keys.P && kea.Modifiers == Keys.Control)
             {
                 model.IntertControlP();
-                kea.Handled = true;
-            }
-
-            if (kea.KeyCode == Keys.Enter) { 
-                model.InsertParagraphTag();
                 kea.Handled = true;
             }
             
