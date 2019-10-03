@@ -54,6 +54,7 @@ namespace NotePad
 
             txtbox.Lines = model.Lines;
             txtbox.SelectionStart = model.SelectionStart;
+            txtbox.ScrollToCaret();
         }
         
         int CursorLine() { return 3; }
