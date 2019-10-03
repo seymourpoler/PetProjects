@@ -47,6 +47,7 @@ namespace NotePad
             lines[lines.Count - 1] += "ControlP";
         }
 
+        //TODO: rename?
         public void InsertParagraphTag()
         {
             //
