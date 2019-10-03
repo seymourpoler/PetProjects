@@ -130,7 +130,7 @@ namespace NotePad
 
         public void Enter()
         {
-            throw new NotImplementedException();
+            InsertParagraphTag();
         }
 
         public void SetLines(string[] lines)

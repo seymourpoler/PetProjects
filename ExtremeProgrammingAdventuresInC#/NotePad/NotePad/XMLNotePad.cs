@@ -19,7 +19,7 @@ namespace NotePad
             model.SetLines(txtbox.Lines);
             model.SelectionStart = txtbox.SelectionStart;
             if (kea.KeyCode == Keys.Enter) { 
-                model.InsertParagraphTag();
+                model.Enter();
                 kea.Handled = true;
             }
             
