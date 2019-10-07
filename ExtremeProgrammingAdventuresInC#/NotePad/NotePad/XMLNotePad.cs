@@ -9,15 +9,15 @@ namespace NotePad
         public XMLNotePad()
         {
             Text = "XML Notepad";
-            txtbox.KeyDown += XMLKeyDownHandler;
-            txtbox.KeyPress += XMLKeyPressHandler;
+            textbox.KeyDown += XMLKeyDownHandler;
+            textbox.KeyPress += XMLKeyPressHandler;
             model = new TextModel();
         }
         
         void XMLKeyDownHandler(object sender, KeyEventArgs kea)
         {
-            model.SetLines(txtbox.Lines);
-            model.SelectionStart = txtbox.SelectionStart;
+            model.SetLines(textbox.Lines);
+            model.SelectionStart = textbox.SelectionStart;
             if (kea.KeyCode == Keys.Enter) { 
                 model.Enter();
                 kea.Handled = true;
@@ -25,7 +25,7 @@ namespace NotePad
 
             if (kea.KeyCode == Keys.L && kea.Modifiers == Keys.Control)
             {
-                String[] lines = txtbox.Lines;
+                String[] lines = textbox.Lines;
                 foreach (String s in lines)
                 {
                     Console.WriteLine(s);
@@ -36,7 +36,7 @@ namespace NotePad
 
             if (kea.KeyCode == Keys.S && kea.Modifiers == Keys.Control)
             {
-                txtbox.SelectionLength = 0;        
+                textbox.SelectionLength = 0;        
                 kea.Handled = true;
             }
             
@@ -52,16 +52,16 @@ namespace NotePad
                 kea.Handled = true;
             }
 
-            PutText();
+            PutText(textbox, model.Lines, model.SelectionStart);
         }
         
         int CursorLine() { return 3; }
 
-        void PutText()
+        public void PutText(ITestTextBox textBox, string[] lines, int selectinStart)
         {
-            txtbox.Lines = model.Lines;
-            txtbox.SelectionStart = model.SelectionStart;
-            txtbox.ScrollToCaret();
+            textBox.Lines = model.Lines;
+            textBox.SelectionStart = model.SelectionStart;
+            textBox.ScrollToCaret();
         }
         
         void XMLKeyPressHandler(object sender, KeyPressEventArgs kea)

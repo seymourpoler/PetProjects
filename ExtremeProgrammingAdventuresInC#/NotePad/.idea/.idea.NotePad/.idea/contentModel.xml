@@ -16,6 +16,7 @@
         <e p="Form1.Designer.cs" t="Include" />
         <e p="InputCommand.cs" t="Include" />
         <e p="InputCommandTest.cs" t="Include" />
+        <e p="ITestTextBox.cs" t="Include" />
         <e p="MockTextBox.cs" t="Include" />
         <e p="NotePad.csproj" t="IncludeRecursive" />
         <e p="NotepadCloneNoMenu.cs" t="Include" />
@@ -30,6 +31,7 @@
           <e p="Settings.Designer.cs" t="Include" />
           <e p="Settings.settings" t="Include" />
         </e>
+        <e p="TesteableTextBox.cs" t="Include" />
         <e p="TestScroll.cs" t="Include" />
         <e p="TextModel.cs" t="Include" />
         <e p="TextModelTest.cs" t="Include" />

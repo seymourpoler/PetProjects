@@ -50,42 +50,12 @@ namespace NotePad
         //TODO: rename?
         public void InsertParagraphTag()
         {
-            //
-            // On Enter, we change the TextModel lines to insert, after the line
-            // containing the cursor, a blank line, and a line with <P></P>. We set the
-            // new cursor location to be between the P tags: <P>|</P>.
-            //
-            // handle empty array special case (yucch)
             if (lines.Count == 0)
             {
                 lines.Add("<P></P>");
                 selectionStart = 3;
                 return;
             }
-
-//            
-//            int cursorLine = LineContainingCursor();
-//            String[] newlines = new String[lines.Count + 2];
-//            for (int i = 0; i <= cursorLine; i++)
-//            {
-//                newlines[i] = lines[i];
-//            }
-//
-//            newlines[cursorLine + 1] = "";
-//            newlines[cursorLine + 2] = "<P></P>";
-//            for (int i = cursorLine + 1; i < lines.Count; i++)
-//            {
-//                newlines[i + 2] = lines[i];
-//            }
-//
-//            lines = newlines.ToList();
-//            selectionStart = NewSelectionStart(cursorLine + 2);
-
-//            var newLines = new List<string>();
-//            newLines.AddRange(LinesThroughCursor());
-//            newLines.AddRange(NewParagraph());
-//            newLines.AddRange(LinesAfterCursor());
-//            lines = newLines;
 
             lines.InsertRange(LineContainingCursor()+1, NewParagraph());
             selectionStart = NewSelectionStart(LineContainingCursor() + 2);

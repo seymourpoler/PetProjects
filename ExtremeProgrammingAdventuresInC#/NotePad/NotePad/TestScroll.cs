@@ -14,13 +14,15 @@ namespace NotePad
         [Test]
         public void ScrollHappens()
         {
+            var selectionStart = 1;
+            var lines = new[] {"hello", "world"};
             var mock = new MockTextBox();
-//            var notepad = new XMLNotePad();
+            var notepad = new XMLNotePad();
             Assert.IsFalse(mock.Scrolled, "no scroll");
 
-//            notepad.PutText(mock, PowerLineStatus, selectionStart);
-//            
-//            Assert.IsTrue(mock.Scrolled, "scroll happens");
+            notepad.PutText(mock, lines, selectionStart);
+
+            Assert.IsTrue(mock.Scrolled, "scroll happens");
         }
     }
 }

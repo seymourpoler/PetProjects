@@ -2,8 +2,8 @@ namespace NotePad
 {
     public interface ITestTextBox
     {
-        string[] lines { get; set; }
-        int SelectgionStart { get; set; }
+        string[] Lines { get; set; }
+        int SelectionStart { get; set; }
         void ScrollToCaret();
     }
 }
