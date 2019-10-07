@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="InputCommand.cs" />
     <Compile Include="InputCommandTest.cs" />
+    <Compile Include="ITestTextBox.cs" />
     <Compile Include="MockTextBox.cs" />
     <Compile Include="NotePadCloneNoMenu.cs">
       <SubType>Form</SubType>
@@ -69,6 +70,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesteableTextBox.cs" />
     <Compile Include="TestScroll.cs" />
     <Compile Include="TextModel.cs" />
     <Compile Include="TextModelTest.cs" />
