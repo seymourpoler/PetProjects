@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="InputCommand.cs" />
     <Compile Include="InputCommandTest.cs" />
+    <Compile Include="MockTextBox.cs" />
     <Compile Include="NotePadCloneNoMenu.cs">
       <SubType>Form</SubType>
     </Compile>
