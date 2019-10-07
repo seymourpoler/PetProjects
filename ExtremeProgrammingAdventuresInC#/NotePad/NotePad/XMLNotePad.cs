@@ -57,10 +57,10 @@ namespace NotePad
         
         int CursorLine() { return 3; }
 
-        public void PutText(ITestTextBox textBox, string[] lines, int selectinStart)
+        public void PutText(ITestTextBox textBox, string[] lines, int selectionStart)
         {
-            textBox.Lines = model.Lines;
-            textBox.SelectionStart = model.SelectionStart;
+            textBox.Lines = lines;
+            textBox.SelectionStart = selectionStart;
             textBox.ScrollToCaret();
         }
         
