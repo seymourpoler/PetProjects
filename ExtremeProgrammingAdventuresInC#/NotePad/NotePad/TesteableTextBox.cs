@@ -4,6 +4,7 @@ namespace NotePad
     {
         public string[] Lines { get; set; }
         public int SelectionStart { get; set; }
+        
         public void ScrollToCaret()
         {
             throw new System.NotImplementedException();
