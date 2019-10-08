@@ -6,18 +6,16 @@ namespace NotePad
 {
     public class InputCommand
     {
-        private readonly StringReader _reader;
         private IList<string> _lines;
         
         public InputCommand(StringReader reader)
         {
-            _reader = reader;
             _lines = new List<string>();
+            ReadLines(reader);
         }
 
         public string[] CleanLines()
         {
-            ReadLines(_reader);
             var result = new List<string>();
             foreach (var line in _lines)
             {
@@ -28,11 +26,11 @@ namespace NotePad
 
         void ReadLines(StringReader reader)
         {
-            var line  = _reader.ReadLine();
+            var line  = reader.ReadLine();
             while (!string.IsNullOrWhiteSpace(line)  && line != "*end")
             {
                 _lines.Add(line.TrimEnd());
-                line = _reader.ReadLine();
+                line = reader.ReadLine();
             }
             reader.Close();
         }
