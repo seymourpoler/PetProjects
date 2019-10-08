@@ -19,17 +19,7 @@ namespace NotePad
         public void EmptyModel()
         {
             model.Enter();  
-            Assert.Equals("<P>|</P>\r\n", model.TestText);
-        }
-        
-        [Test]
-        public void FileInput()
-        {
-            using (var streamReader = File.OpenText(@".\data\fileInput.txt"))
-            {
-                var contents = streamReader.ReadToEnd();
-                InterpretCommands(contents, "fileInput.txt");
-            }
+            Assert.AreEqual("<P>|</P>\r\n", model.TestText);
         }
 
         [Test]
@@ -43,6 +33,16 @@ namespace NotePad
                 InterpretFileInput(testFile);
             }
         }
+        
+        [Test]
+        public void FileInput()
+        {
+            using (var streamReader = File.OpenText(@".\data\fileInput.txt"))
+            {
+                var contents = streamReader.ReadToEnd();
+                InterpretCommands(contents, "fileInput.txt");
+            }
+        }
 
         private void InterpretFileInput(string fileName)
         {
@@ -52,15 +52,6 @@ namespace NotePad
                 InterpretCommands(contents, fileName);
             }
         }
-
-
-//        [Test]
-//        public void StringInput()
-//        {
-//            string commands = "*input\n some line\n *end\n *enter\n *display\n *output\n some line\n <P>|</P>";
-//
-//            InterpretCommands(commands);
-//        }
 
         void InterpretCommands(string commands, string message)
         {
@@ -92,29 +83,13 @@ namespace NotePad
             }
         }
 
-        void SetInput(StringReader reader)
-        {
-            var input = new InputCommand(reader);
-            model.Lines = input.CleanLines();
-        }
-
-        private int CursorLocation(string[] input)
-        {
-            throw new NotImplementedException();
-        }
-
-        private string[] CleanLines(string[] input)
-        {
-            throw new NotImplementedException();
-        }
-
         void CompareOutput(StringReader reader, string message)
         {
             string expected = ExpectedOutput(reader);  
             
             Assert.AreEqual(message, expected, model.TestText);
         }
-
+        
         void CompareOutput(StringReader reader)
         {
             CompareOutput(reader, String.Empty);
@@ -136,6 +111,12 @@ namespace NotePad
                 line = reader.ReadLine();
             }  
             return result;
+        }
+        
+        void SetInput(StringReader reader)
+        {
+            var input = new InputCommand(reader);
+            model.Lines = input.CleanLines();
         }
     }
 }
