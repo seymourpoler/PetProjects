@@ -23,6 +23,7 @@ namespace NotePad
         }
 
         [Test]
+        [Ignore("not current directory")]
         public void TestAllFiles()
         {
             var testFiles = Directory.GetFiles(@".\data\", "*.test");
@@ -35,6 +36,7 @@ namespace NotePad
         }
         
         [Test]
+        [Ignore("not current directory")]
         public void FileInput()
         {
             using (var streamReader = File.OpenText(@".\data\fileInput.txt"))
