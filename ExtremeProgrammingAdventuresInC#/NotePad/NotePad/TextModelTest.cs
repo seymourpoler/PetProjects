@@ -20,13 +20,6 @@ namespace NotePad
         }
 
         [Test]
-        public void EmptyModel()
-        {
-            model.Enter();  
-            Assert.Equals("<P>|</P>\r\n", model.TestText);
-        }
-
-        [Test]
         public void TestNoProcessing()
         {
             model.Lines = new string[3] { "hi", "there", "chet"};  

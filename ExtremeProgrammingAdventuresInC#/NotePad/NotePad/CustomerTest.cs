@@ -8,12 +8,20 @@ namespace NotePad
     public class CustomerTest
     {
         TextModel model;
+        
         [SetUp]
         public void SetUp()
         {
             model = new TextModel();
         }
 
+        [Test]
+        public void EmptyModel()
+        {
+            model.Enter();  
+            Assert.Equals("<P>|</P>\r\n", model.TestText);
+        }
+        
         [Test]
         public void FileInput()
         {
