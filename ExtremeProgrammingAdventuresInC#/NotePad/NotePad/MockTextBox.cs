@@ -28,13 +28,6 @@ namespace NotePad
             set{}
         }
 
-        public void PutText(ITestTextBox textBox, string[] lines, int selectionStart)
-        {
-            textBox.Lines = lines;
-            textBox.SelectionStart = selectionStart;
-            textBox.ScrollToCaret();
-        }
-        
         public void ScrollToCaret()
         {
             scrolled = true;
