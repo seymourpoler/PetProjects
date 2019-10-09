@@ -19,7 +19,6 @@ namespace NotePad
         {
             get { return new string[0]; }
             set { }
-
         }
         
         public bool Scrolled
