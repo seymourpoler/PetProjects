@@ -17,6 +17,8 @@ namespace NotePad
         public void TestNoLines()
         {
             model.Lines = new string[0];
+            
+            Assert.AreEqual(0, model.Lines.Length);
         }
 
         [Test]
