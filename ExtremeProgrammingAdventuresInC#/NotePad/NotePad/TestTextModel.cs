@@ -64,6 +64,11 @@ namespace NotePad
             Assert.AreEqual("<P></P>", model.Lines[3]);
         }
 
+        [Test] public void TestLineContainingCursorDirectly() 
+        {      
+            // todo?
+        }
+        
         [Test]
         public void ControlTwo()
         {
