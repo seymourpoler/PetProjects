@@ -74,7 +74,7 @@
     <Compile Include="TestScroll.cs" />
     <Compile Include="TestTextBoxEvent.cs" />
     <Compile Include="TextModel.cs" />
-    <Compile Include="TextModelTest.cs" />
+    <Compile Include="TestTextModel.cs" />
     <Compile Include="XMLNotePad.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

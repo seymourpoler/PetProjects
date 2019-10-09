@@ -34,8 +34,8 @@
         <e p="TesteableTextBox.cs" t="Include" />
         <e p="TestScroll.cs" t="Include" />
         <e p="TestTextBoxEvent.cs" t="Include" />
+        <e p="TestTextModel.cs" t="Include" />
         <e p="TextModel.cs" t="Include" />
-        <e p="TextModelTest.cs" t="Include" />
         <e p="XMLNotePad.cs" t="Include" />
       </e>
       <e p="NotePad.sln" t="IncludeFlat" />

@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace NotePad
 {
-    public class TextModelTest
+    public class TestTextModel
     {
         private TextModel model;
 
