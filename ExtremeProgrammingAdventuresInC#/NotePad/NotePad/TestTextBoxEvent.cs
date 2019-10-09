@@ -26,6 +26,16 @@ namespace NotePad
             Assert.IsTrue(changed);
         }
         
+        //    [Test] public void HookForm () {
+        //       TestableTextBox text = new TestableTextBox();
+        //      text.TextChanged += new EventHandler(Text_Changed);
+        //      XMLNotepad xn = new XMLNotepad();
+        //      xn.textbox = text;
+        //      text.Text = "some text";
+        //      xn.PutText();
+        //      AssertEquals("hello", text.Lines[0]);
+        //      Assert("changed flag", changed);//    }
+        
         void Text_Changed(object source, EventArgs args)
         {
             changed = true;
