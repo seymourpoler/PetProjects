@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace NotePad
 {
@@ -118,7 +119,11 @@ namespace NotePad
 
         public void changeToH2()
         {
-            throw new NotImplementedException();
+            var oldLine = lines[LineContainingCursor()];    
+            var r = new Regex("<(?<prefix>.*)>(?<body>.*)</(?<suffix>.*)>");    
+            var m = r.Match(oldLine);    
+            var newLine = "<H2>" + m.Groups["body"] + "</H2>";    
+            lines[LineContainingCursor()] = newLine;
         }
     }
 }
