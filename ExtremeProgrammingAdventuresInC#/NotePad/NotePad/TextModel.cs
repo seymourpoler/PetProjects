@@ -108,5 +108,10 @@ namespace NotePad
         {
             Lines = lines;
         }
+
+        public void changeToH2()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

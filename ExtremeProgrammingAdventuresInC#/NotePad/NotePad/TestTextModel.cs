@@ -63,5 +63,15 @@ namespace NotePad
             Assert.AreEqual("", model.Lines[2]);
             Assert.AreEqual("<P></P>", model.Lines[3]);
         }
+
+        [Test]
+        public void ControlTwo()
+        {
+            model.SetLines(new[]{"<p>The Heading</p>"});
+
+            model.changeToH2();
+            
+            Assert.AreEqual("<H2>The Heading</H2>", model.Lines[0]);
+        }
     }
 }
