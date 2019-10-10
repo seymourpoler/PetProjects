@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using NUnit.Framework;
 
 namespace NotePad
@@ -77,6 +78,17 @@ namespace NotePad
             model.changeToH2();
             
             Assert.AreEqual("<H2>The Heading</H2>", model.Lines[0]);
+        }
+
+        [Test]
+        public void ControlS()
+        {
+            model.Lines = new string[] { };
+            
+            model.ControlS();
+            
+            Assert.AreEqual("<sec1><tittle></tittle>", model.Lines.First());
+            Assert.AreEqual("</sec1>", model.Lines[1]);
         }
     }
 }

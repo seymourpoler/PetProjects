@@ -81,6 +81,11 @@ namespace NotePad
                 {
                     SetInput(reader);
                 }
+
+                if (line == "controlS")
+                {
+                    model.ControlS();
+                }
                 line = reader.ReadLine();
             }
         }

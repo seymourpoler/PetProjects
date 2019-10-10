@@ -125,5 +125,10 @@ namespace NotePad
             var newLine = "<H2>" + m.Groups["body"] + "</H2>";    
             lines[LineContainingCursor()] = newLine;
         }
+
+        public void ControlS()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
