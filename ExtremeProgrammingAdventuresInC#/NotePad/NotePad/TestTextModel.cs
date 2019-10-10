@@ -87,8 +87,8 @@ namespace NotePad
             
             model.ControlS();
             
-            Assert.AreEqual("<sec1><tittle></tittle>", model.Lines.First());
-            Assert.AreEqual("</sec1>", model.Lines[1]);
+            Assert.AreEqual("<section1><tittle></tittle>", model.Lines.First());
+            Assert.AreEqual("</section1>", model.Lines[1]);
         }
     }
 }

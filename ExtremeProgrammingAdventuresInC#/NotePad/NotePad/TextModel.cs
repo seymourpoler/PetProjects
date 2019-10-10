@@ -121,7 +121,19 @@ namespace NotePad
 
         public void ControlS()
         {
-            throw new NotImplementedException();
+            InsertSectionTags();
+        }
+
+        private void InsertSectionTags()
+        {
+            if (lines.Count == 0)
+            {
+                lines.Add("<section1><tittle></tittle>");
+                lines.Add("</section1>");
+                SelectionStart = 14;
+                return;
+            }
+            throw  new System.NotImplementedException();
         }
     }
 }
