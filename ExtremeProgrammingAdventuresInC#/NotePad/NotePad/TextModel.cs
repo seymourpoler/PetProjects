@@ -48,15 +48,8 @@ namespace NotePad
             lines[lines.Count - 1] += "ControlP";
         }
 
-        //TODO: rename?
         public void InsertParagraphTag()
         {
-            // On Enter, we change the TextModel lines to insert, after the line
-            // containing the cursor, a blank line, and a line with <P></P>.
-            // We set the new cursor
-            // location to be between the P tags: <P>|</P>.
-            //
-            // handle empty array special case (yucch)
             if (lines.Count == 0)
             {
                 lines.Add("<P></P>");
