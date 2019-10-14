@@ -87,8 +87,8 @@ namespace NotePad
             
             model.ControlS();
             
-            Assert.AreEqual("<section1><tittle></tittle>", model.Lines.First());
-            Assert.AreEqual("</section1>", model.Lines[1]);
+            Assert.AreEqual("<sect1><tittle></tittle>", model.Lines.First());
+            Assert.AreEqual("</sect1>", model.Lines[1]);
         }
 
         [Test]
@@ -99,9 +99,8 @@ namespace NotePad
             
             model.AltS();
             
-            Assert.AreEqual("<sec1><tittle></tittle>", model.Lines.First());
-            Assert.AreEqual("</sec1>", model.Lines[1]);
-            Assert.AreEqual(23, model.SelectionStart);
+            Assert.AreEqual("<sect1><tittle></tittle>", model.Lines[1]);
+            Assert.AreEqual("</sect1>", model.Lines[2]);
         }
     }
 }

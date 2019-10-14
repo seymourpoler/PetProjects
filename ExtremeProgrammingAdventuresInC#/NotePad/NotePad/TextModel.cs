@@ -128,12 +128,32 @@ namespace NotePad
         {
             if (lines.Count == 0)
             {
-                lines.Add("<section1><tittle></tittle>");
-                lines.Add("</section1>");
+                lines.Add("<sect1><tittle></tittle>");
+                lines.Add("</sect1>");
                 SelectionStart = 14;
                 return;
             }
-            throw  new System.NotImplementedException();
+            lines.InsertRange(LineContainingCursor()+1, NewSection());
+            selectionStart = NewParaSelectionStart(LineContainingCursor() + 2);
+        }
+
+        private IEnumerable<string> NewSection()
+        {
+            var result = new List<string>();
+            result.Add("<sect1><tittle></tittle>");
+            result.Add("</sect1>");
+            return result;
+        }
+
+        private int NewParaSelectionStart(int cursorLine)
+        {
+            var length = 0;
+            for (var i = 0; i < cursorLine; i++)
+            {
+                length += lines[i].Length + Environment.NewLine.Length;
+            }
+
+            return length + "<p>".Length;
         }
 
         public void AltS()
