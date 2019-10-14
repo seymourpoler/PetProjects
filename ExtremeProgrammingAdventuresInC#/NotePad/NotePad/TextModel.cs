@@ -135,5 +135,10 @@ namespace NotePad
             }
             throw  new System.NotImplementedException();
         }
+
+        public void AltS()
+        {
+            InsertSectionTags();
+        }
     }
 }

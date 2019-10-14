@@ -32,6 +32,10 @@ namespace NotePad
                 kea.Handled = true;
             }
 
+            if (kea.KeyCode == Keys.S && kea.Alt)
+            {
+                model.AltS();
+            }
             PutText(textbox, model.Lines, model.SelectionStart);
         }
         

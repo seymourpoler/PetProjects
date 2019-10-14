@@ -90,5 +90,18 @@ namespace NotePad
             Assert.AreEqual("<section1><tittle></tittle>", model.Lines.First());
             Assert.AreEqual("</section1>", model.Lines[1]);
         }
+
+        [Test]
+        public void AltSWithText()
+        {
+            model.SetLines(new[]{"<p></p>"});
+            model.SelectionStart = 7;
+            
+            model.AltS();
+            
+            Assert.AreEqual("<sec1><tittle></tittle>", model.Lines.First());
+            Assert.AreEqual("</sec1>", model.Lines[1]);
+            Assert.AreEqual(23, model.SelectionStart);
+        }
     }
 }
