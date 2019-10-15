@@ -134,7 +134,7 @@ namespace NotePad
                 return;
             }
             lines.InsertRange(LineContainingCursor()+1, NewSection());
-            selectionStart = NewParaSelectionStart(LineContainingCursor() + 2);
+            selectionStart = NewSelectionStart(LineContainingCursor() + 1, "<sect1><title>");
         }
 
         private IEnumerable<string> NewSection()
@@ -145,17 +145,22 @@ namespace NotePad
             return result;
         }
 
-        private int NewParaSelectionStart(int cursorLine)
+        private int NewSelectionStart(int cursorLine, string tag)
+        {
+            var result = SumLineLengths(cursorLine) + tag.Length;
+            return result ;
+        }
+        
+        private int SumLineLengths(int cursorLine)
         {
             var length = 0;
             for (var i = 0; i < cursorLine; i++)
             {
                 length += lines[i].Length + Environment.NewLine.Length;
             }
-
-            return length + "<p>".Length;
+            return length;
         }
-
+        
         public void AltS()
         {
             InsertSectionTags();
