@@ -58,7 +58,6 @@ namespace NotePad
             }
 
             lines.InsertRange(LineContainingCursor()+1, NewParagraph());
-            // set cursor location
             selectionStart = NewSelectionStart(LineContainingCursor() + 2);
         }
 
