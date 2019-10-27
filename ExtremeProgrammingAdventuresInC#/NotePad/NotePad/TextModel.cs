@@ -107,7 +107,7 @@ namespace NotePad
 
         private void InsertSectionTags()
         {
-            IEnumerable<string> NewSection = new[] {"<sect1><tittle></tittle>", "</sect1>" };
+            IEnumerable<string> NewSection = new [] {"<sect1><tittle></tittle>", "</sect1>" };
             
             int cursorLine = LineContainingCursor();
             lines.InsertRange(cursorLine + 1, NewSection);
