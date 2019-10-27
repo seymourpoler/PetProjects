@@ -60,7 +60,8 @@ namespace NotePad
             int lineNr = 0;
             foreach (String line in lines)
             {
-                if (length <= selectionStart && selectionStart <= length + Environment.NewLine.Length)
+                if (length <= selectionStart && 
+                    selectionStart <= length + line.Length + Environment.NewLine.Length)
                 {
                     break;
                 }
@@ -90,7 +91,7 @@ namespace NotePad
             Lines = lines;
         }
 
-        public void changeToH2()
+        public void ChangeToH2()
         {
             var oldLine = lines[LineContainingCursor()];    
             var r = new Regex("<(?<prefix>.*)>(?<body>.*)</(?<suffix>.*)>");    

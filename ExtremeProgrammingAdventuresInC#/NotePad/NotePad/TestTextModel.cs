@@ -75,7 +75,7 @@ namespace NotePad
         {
             model.SetLines(new[]{"<p>The Heading</p>"});
 
-            model.changeToH2();
+            model.ChangeToH2();
             
             Assert.AreEqual("<H2>The Heading</H2>", model.Lines[0]);
         }
