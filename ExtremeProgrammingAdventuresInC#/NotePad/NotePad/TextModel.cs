@@ -43,27 +43,11 @@ namespace NotePad
             lines = new List<string>();
         }
 
-        public void IntertControlP()
-        {
-            lines[lines.Count - 1] += "ControlP";
-        }
-
         public void InsertParagraphTag()
         {
             var cursorLine = LineContainingCursor();
             lines.InsertRange(cursorLine + 1, NewParagraph());
             selectionStart = NewSelectionStart(cursorLine + 1, "<P>");
-        }
-
-        private int NewSelectionStart(int cursorLine)
-        {
-            int length = 0;
-            for (int i = 0; i < cursorLine; i++)
-            {
-                length += lines[i].Length + Environment.NewLine.Length;
-            }
-
-            return length + "<0>".Length;
         }
 
         private int LineContainingCursor()
@@ -138,7 +122,7 @@ namespace NotePad
         private int NewSelectionStart(int cursorLine, string tags)
         {
             var result = SumLineLengths(cursorLine) + tags.Length;
-            return result ;
+            return result;
         }
         
         private int SumLineLengths(int cursorLine)
