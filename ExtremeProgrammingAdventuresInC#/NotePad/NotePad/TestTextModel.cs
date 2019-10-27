@@ -49,8 +49,8 @@ namespace NotePad
             
             model.InsertParagraphTag();
             
-            Assert.AreEqual(3, model.Lines.Length);
-            Assert.AreEqual(18, model.SelectionStart);
+            Assert.AreEqual(2, model.Lines.Length);
+            Assert.AreEqual(16, model.SelectionStart);
         }
 
         [Test]
