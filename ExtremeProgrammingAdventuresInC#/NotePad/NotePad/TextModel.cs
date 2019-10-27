@@ -114,9 +114,11 @@ namespace NotePad
 
         private IEnumerable<string> NewSection()
         {
-            var result = new List<string>();
-            result.Add("<sect1><tittle></tittle>");
-            result.Add("</sect1>");
+            var result = new List<string>
+            {
+                "<sect1><tittle></tittle>",
+                "</sect1>"
+            };
             return result;
         }
 
