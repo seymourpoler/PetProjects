@@ -55,8 +55,6 @@ namespace NotePad
             }
 
             return charactersSoFar;
-            var result = charactersSoFar - Environment.NewLine.Length;
-            return result;
         }
     }
 }
