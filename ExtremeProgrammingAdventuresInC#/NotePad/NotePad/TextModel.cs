@@ -50,15 +50,9 @@ namespace NotePad
 
         public void InsertParagraphTag()
         {
-            if (lines.Count == 0)
-            {
-                lines.Add("<P></P>");
-                selectionStart = 3;
-                return;
-            }
-
-            lines.InsertRange(LineContainingCursor()+1, NewParagraph());
-            selectionStart = NewSelectionStart(LineContainingCursor() + 2);
+            var cursorLine = LineContainingCursor();
+            lines.InsertRange(cursorLine + 1, NewParagraph());
+            selectionStart = NewSelectionStart(cursorLine + 1, "<P>");
         }
 
         private int NewSelectionStart(int cursorLine)
@@ -74,11 +68,15 @@ namespace NotePad
 
         private int LineContainingCursor()
         {
+            if (lines.Count == 0)
+            {
+                return -1;
+            }
             int length = 0;
             int lineNr = 0;
             foreach (String line in lines)
             {
-                if (length <= selectionStart && selectionStart <= length + line.Length + 2)
+                if (length <= selectionStart && selectionStart <= length + Environment.NewLine.Length)
                 {
                     break;
                 }
@@ -94,7 +92,6 @@ namespace NotePad
         {
             return new List<string>
             {
-                "",
                 "<P></P>"
             };
         }
@@ -125,15 +122,9 @@ namespace NotePad
 
         private void InsertSectionTags()
         {
-            if (lines.Count == 0)
-            {
-                lines.Add("<sect1><tittle></tittle>");
-                lines.Add("</sect1>");
-                SelectionStart = 14;
-                return;
-            }
-            lines.InsertRange(LineContainingCursor()+1, NewSection());
-            selectionStart = NewSelectionStart(LineContainingCursor() + 1, "<sect1><title>");
+            int cursorLine = LineContainingCursor();
+            lines.InsertRange(cursorLine + 1, NewSection());
+            selectionStart = NewSelectionStart(cursorLine + 1, "<sect1><title>");
         }
 
         private IEnumerable<string> NewSection()
@@ -144,9 +135,9 @@ namespace NotePad
             return result;
         }
 
-        private int NewSelectionStart(int cursorLine, string tag)
+        private int NewSelectionStart(int cursorLine, string tags)
         {
-            var result = SumLineLengths(cursorLine) + tag.Length;
+            var result = SumLineLengths(cursorLine) + tags.Length;
             return result ;
         }
         
