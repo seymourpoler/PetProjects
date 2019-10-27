@@ -108,18 +108,21 @@ namespace NotePad
         private void InsertSectionTags()
         {
             int cursorLine = LineContainingCursor();
-            lines.InsertRange(cursorLine + 1, NewSection());
+            lines.InsertRange(cursorLine + 1, NewSection);
             selectionStart = NewSelectionStart(cursorLine + 1, "<sect1><title>");
         }
 
-        private IEnumerable<string> NewSection()
+        private IEnumerable<string> NewSection
         {
-            var result = new List<string>
+            get
             {
-                "<sect1><tittle></tittle>",
-                "</sect1>"
-            };
-            return result;
+                var result = new List<string>
+                {
+                    "<sect1><tittle></tittle>",
+                    "</sect1>"
+                };
+                return result;
+            }
         }
 
         private int NewSelectionStart(int cursorLine, string tags)
