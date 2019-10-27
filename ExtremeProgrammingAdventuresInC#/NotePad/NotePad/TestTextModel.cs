@@ -61,8 +61,7 @@ namespace NotePad
             
             model.InsertParagraphTag();
             
-            Assert.AreEqual("", model.Lines[2]);
-            Assert.AreEqual("<P></P>", model.Lines[3]);
+            Assert.AreEqual("<P></P>", model.Lines[2]);
         }
 
         [Test] public void TestLineContainingCursorDirectly() 
