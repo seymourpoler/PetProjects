@@ -11,6 +11,7 @@ namespace NotePad
         
         public XMLNotePad()
         {
+            model = new TextModel();
             Text = "XML Notepad";
             textbox = new TesteableTextBox();
             textbox.Parent = this;
@@ -21,7 +22,7 @@ namespace NotePad
             textbox.AcceptsTab = true;
             textbox.KeyDown += XMLKeyDownHandler;
             textbox.KeyPress += XMLKeyPressHandler;
-            model = new TextModel();
+            
             this.textbox.Visible = true;
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(292, 66);
