@@ -13,6 +13,9 @@ namespace NotePad
         {
             model = new TextModel();
             Text = "XML Notepad";
+            MenuItem insertSection = new MenuItem("Insert & Section", MenuInsertSection );
+            Menu = new MainMenu(new MenuItem[]{insertSection});
+            
             textbox = new TesteableTextBox();
             textbox.Parent = this;
             textbox.Dock = DockStyle.Fill;
@@ -28,6 +31,11 @@ namespace NotePad
             this.ClientSize = new System.Drawing.Size(292, 66);
             this.Controls.AddRange(new System.Windows.Forms.Control[] {this.textbox});
             this.Name = "XMLNotePad";
+        }
+
+        void MenuInsertSection(object o, EventArgs args)
+        {
+            throw new System.NotImplementedException();
         }
         
         void XMLKeyPressHandler(object sender, KeyPressEventArgs kea)
