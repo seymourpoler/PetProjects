@@ -1,6 +1,7 @@
 using System.Windows.Forms;
 using System;
 using System.Drawing;
+using System.Reflection;
 
 namespace NotePad
 {
@@ -80,7 +81,8 @@ namespace NotePad
         {
             model.SetLines(textbox.Lines);
             model.SelectionStart = textbox.SelectionStart;
-            model.Perform("InsertSectionTags");
+            Type modelType = typeof(TextModel); 
+            model.Perform(methodName:"InsertSectionTags");
             PutText(textbox, model.Lines, model.SelectionStart);
         }
     }

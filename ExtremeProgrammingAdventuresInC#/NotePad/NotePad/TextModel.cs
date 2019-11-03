@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -141,14 +142,15 @@ namespace NotePad
             InsertSectionTags();
         }
 
-        public void InsertCode()
+        public void Perform(string methodName)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Perform(string tags)
-        {
-            throw new NotImplementedException();
+            object[] noArgs = {};
+            this.GetType().InvokeMember(    
+                methodName,    
+                BindingFlags.Public | BindingFlags.InvokeMethod | BindingFlags.Instance,    
+                null,    
+                this,    
+                noArgs);   
         }
     }
 }
