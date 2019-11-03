@@ -35,7 +35,9 @@ namespace NotePad
 
         void MenuInsertSection(object o, EventArgs args)
         {
-            throw new System.NotImplementedException();
+            model.SelectionStart = textbox.SelectionStart;
+            model.AltS();
+            PutText(textbox, model.Lines, model.SelectionStart);
         }
         
         void XMLKeyPressHandler(object sender, KeyPressEventArgs kea)
