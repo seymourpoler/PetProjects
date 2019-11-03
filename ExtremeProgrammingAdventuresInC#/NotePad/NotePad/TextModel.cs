@@ -12,7 +12,13 @@ namespace NotePad
         public String[] Lines
         {
             get { return lines.ToArray(); }
-            set { lines.AddRange(value.ToList()); }
+            set
+            {
+                if (value != null)
+                {
+                    lines.AddRange(value.ToList());    
+                }
+            }
         }
 
         private int selectionStart;
