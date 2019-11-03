@@ -80,15 +80,7 @@ namespace NotePad
         {
             model.SetLines(textbox.Lines);
             model.SelectionStart = textbox.SelectionStart;
-            var item = (MenuItem)sender;
-            if (item.Text == "Insert &Section")
-            {
-                model.InsertSectionTags();
-            }
-            else if (item.Text == "Insert &Code")
-            {
-                model.InsertCode();
-            }
+            model.Perform("InsertSectionTags");
             PutText(textbox, model.Lines, model.SelectionStart);
         }
     }

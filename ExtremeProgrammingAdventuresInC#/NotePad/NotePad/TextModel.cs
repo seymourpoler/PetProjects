@@ -145,5 +145,10 @@ namespace NotePad
         {
             throw new NotImplementedException();
         }
+
+        public void Perform(string tags)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
