@@ -105,7 +105,7 @@ namespace NotePad
             InsertSectionTags();
         }
 
-        private void InsertSectionTags()
+        public void InsertSectionTags()
         {
             IEnumerable<string> newSection = new [] {"<sect1><tittle></tittle>", "</sect1>" };
             

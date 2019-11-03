@@ -35,8 +35,9 @@ namespace NotePad
 
         void MenuInsertSection(object o, EventArgs args)
         {
+            model.SetLines(textbox.Lines);
             model.SelectionStart = textbox.SelectionStart;
-            model.AltS();
+            model.InsertSectionTags();
             PutText(textbox, model.Lines, model.SelectionStart);
         }
         
