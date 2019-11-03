@@ -140,5 +140,10 @@ namespace NotePad
         {
             InsertSectionTags();
         }
+
+        public void InsertCode()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -75,5 +75,21 @@ namespace NotePad
             textBox.SelectionStart = selectionStart;
             textBox.ScrollToCaret();
         }
+
+        private void MenuAllInserts(object sender, EventArgs args)
+        {
+            model.SetLines(textbox.Lines);
+            model.SelectionStart = textbox.SelectionStart;
+            var item = (MenuItem)sender;
+            if (item.Text == "Insert &Section")
+            {
+                model.InsertSectionTags();
+            }
+            else if (item.Text == "Insert &Code")
+            {
+                model.InsertCode();
+            }
+            PutText(textbox, model.Lines, model.SelectionStart);
+        }
     }
 }
