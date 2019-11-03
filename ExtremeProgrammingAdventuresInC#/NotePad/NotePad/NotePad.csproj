@@ -68,6 +68,7 @@
     <Compile Include="NotePadCloneNoMenu.Designer.cs">
       <DependentUpon>NotePadCloneNoMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TesteableTextBox.cs" />
