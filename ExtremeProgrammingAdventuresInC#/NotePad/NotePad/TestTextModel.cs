@@ -101,5 +101,17 @@ namespace NotePad
             Assert.AreEqual("<sect1><tittle></tittle>", model.Lines[1]);
             Assert.AreEqual("</sect1>", model.Lines[2]);
         }
+
+        [Test]
+        public void InsertPreTag()
+        {
+            model.SetLines(new []{"<p></p>"});
+            model.SelectionStart = 7;
+            
+            model.InsertPreTag();
+
+            Assert.Equals("<pre></pre>", model.Lines[1]);
+            Assert.Equals(14, model.SelectionStart);
+        }
     }
 }

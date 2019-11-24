@@ -152,5 +152,10 @@ namespace NotePad
                 this,    
                 noArgs);   
         }
+
+        public void InsertPreTag()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
