@@ -15,7 +15,8 @@ namespace NotePad
             model = new TextModel();
             Text = "XML Notepad";
             MenuItem insertSection = new MenuItem("Insert & Section", MenuInsertSection );
-            Menu = new MainMenu(new MenuItem[]{insertSection});
+            MenuItem insertPre = new MenuItem("Insert & Pre", MenuInsertPre);
+            Menu = new MainMenu(new MenuItem[]{insertSection, insertPre});
             
             textbox = new TesteableTextBox();
             textbox.Parent = this;
@@ -39,6 +40,14 @@ namespace NotePad
             model.SetLines(textbox.Lines);
             model.SelectionStart = textbox.SelectionStart;
             model.InsertSectionTags();
+            PutText(textbox, model.Lines, model.SelectionStart);
+        }
+
+        void MenuInsertPre(object o, EventArgs args)
+        {
+            model.SetLines(textbox.Lines);
+            model.SelectionStart = textbox.SelectionStart;
+            model.InsertPreTag();
             PutText(textbox, model.Lines, model.SelectionStart);
         }
         

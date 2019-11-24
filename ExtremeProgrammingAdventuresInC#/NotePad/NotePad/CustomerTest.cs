@@ -66,7 +66,21 @@ namespace NotePad
                 {
                     model.Enter();
                 }
+                if (line == "controlS")
+                {
+                    model.ControlS();
+                }
 
+                if (line == "*altS")
+                {
+                    model.AltS();
+                }
+                
+                if (line == "*altP")
+                {
+                    model.AltP();
+                }
+                
                 if (line == "*display")
                 {
                     Console.WriteLine("display\r\n{0}\r\nend", model.TestText);
@@ -81,11 +95,7 @@ namespace NotePad
                 {
                     SetInput(reader);
                 }
-
-                if (line == "controlS")
-                {
-                    model.ControlS();
-                }
+                
                 line = reader.ReadLine();
             }
         }

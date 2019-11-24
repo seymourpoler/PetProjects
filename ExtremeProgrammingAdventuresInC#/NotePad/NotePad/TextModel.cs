@@ -157,5 +157,10 @@ namespace NotePad
         {
             throw new NotImplementedException();
         }
+
+        public void AltP()
+        {
+            InsertPreTag();
+        }
     }
 }
