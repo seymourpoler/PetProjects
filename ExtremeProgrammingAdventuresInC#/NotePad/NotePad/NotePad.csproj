@@ -51,22 +51,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerTest.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputCommand.cs" />
+    <Compile Include="InputCommandTest.cs" />
+    <Compile Include="ITestTextBox.cs" />
+    <Compile Include="MockTextBox.cs" />
     <Compile Include="NotePadCloneNoMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NotePadCloneNoMenu.Designer.cs">
       <DependentUpon>NotePadCloneNoMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesteableTextBox.cs" />
+    <Compile Include="TestScroll.cs" />
+    <Compile Include="TestTextBoxEvent.cs" />
     <Compile Include="TextModel.cs" />
-    <Compile Include="TextModelTest.cs" />
+    <Compile Include="TestTextModel.cs" />
     <Compile Include="XMLNotePad.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\anotherInputFile.test" />
+    <Content Include="data\fileInput.test">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

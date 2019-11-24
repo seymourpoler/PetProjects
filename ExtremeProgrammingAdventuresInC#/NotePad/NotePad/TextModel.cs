@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace NotePad
 {
@@ -10,7 +13,13 @@ namespace NotePad
         public String[] Lines
         {
             get { return lines.ToArray(); }
-            set { lines = value.ToList(); }
+            set
+            {
+                if (value != null)
+                {
+                    lines.AddRange(value.ToList());    
+                }
+            }
         }
 
         private int selectionStart;
@@ -20,57 +29,46 @@ namespace NotePad
             set { selectionStart = value; }
         }
 
+        public string TestText
+        {
+            get
+            {
+                var b = new StringBuilder();
+                foreach (var s in lines)
+                {
+                    b.Append(s);
+                    b.Append((System.Environment.NewLine));
+                }
+
+                b.Insert(SelectionStart, "|");
+                return b.ToString();
+            } 
+        }
+
         public TextModel()
         {
             lines = new List<string>();
         }
 
-        public void IntertControlP()
-        {
-            lines[lines.Count - 1] += "ControlP";
-        }
-
         public void InsertParagraphTag()
         {
-            if (lines.Count == 0)
-            {
-                lines.Add("<P></P>");
-                selectionStart = 3;
-                return;
-            }
-
-            var newlines = new List<string>();
-            newlines.AddRange(LinesThroughCursor());
-            newlines.AddRange(NewParagraph());
-            newlines.AddRange(LinesAfterCursor());
-            selectionStart = NewSelectionStart(LineContainingCursor() + 2);
-
-//            
-//            int cursorLine = LineContainingCursor();
-//            String[] newlines = new String[lines.Count + 2];
-//            for (int i = 0; i <= cursorLine; i++)
-//            {
-//                newlines[i] = lines[i];
-//            }
-//
-//            newlines[cursorLine + 1] = "";
-//            newlines[cursorLine + 2] = "<P></P>";
-//            for (int i = cursorLine + 1; i < lines.Count; i++)
-//            {
-//                newlines[i + 2] = lines[i];
-//            }
-//
-//            lines = newlines.ToList();
-//            selectionStart = NewSelectionStart(cursorLine + 2);
+            var cursorLine = LineContainingCursor();
+            lines.InsertRange(cursorLine + 1, NewParagraph());
+            selectionStart = NewSelectionStart(cursorLine + 1, "<P>");
         }
 
         private int LineContainingCursor()
         {
+            if (lines.Count == 0)
+            {
+                return -1;
+            }
             int length = 0;
             int lineNr = 0;
             foreach (String line in lines)
             {
-                if (length <= selectionStart && selectionStart <= length + line.Length + 2)
+                if (length <= selectionStart && 
+                    selectionStart <= length + line.Length + Environment.NewLine.Length)
                 {
                     break;
                 }
@@ -82,32 +80,77 @@ namespace NotePad
             return lineNr;
         }
 
-        private int NewSelectionStart(int cursorLine)
-        {
-            int length = 0;
-            for (int i = 0; i < cursorLine; i++)
-            {
-                length += lines[i].Length + Environment.NewLine.Length;
-            }
-
-            return length + 3;
-        }
-        
-        public List<string> LinesThroughCursor() {  return lines.GetRange(0,LineContainingCursor()+1);}
-
-        public List<string> NewParagraph()
+        private List<string> NewParagraph()
         {
             return new List<string>
             {
-                "",
                 "<P></P>"
             };
         }
 
-        public List<string> LinesAfterCursor()
+        public void Enter()
         {
-            int cursorLine = LineContainingCursor();  
-            return lines.GetRange(cursorLine+1,lines.Count - cursorLine - 1);
+            InsertParagraphTag();
+        }
+
+        public void SetLines(string[] lines)
+        {
+            Lines = lines;
+        }
+
+        public void ChangeToH2()
+        {
+            var oldLine = lines[LineContainingCursor()];    
+            var r = new Regex("<(?<prefix>.*)>(?<body>.*)</(?<suffix>.*)>");    
+            var m = r.Match(oldLine);    
+            var newLine = "<H2>" + m.Groups["body"] + "</H2>";    
+            lines[LineContainingCursor()] = newLine;
+        }
+
+        public void ControlS()
+        {
+            InsertSectionTags();
+        }
+
+        public void InsertSectionTags()
+        {
+            IEnumerable<string> newSection = new [] {"<sect1><tittle></tittle>", "</sect1>" };
+            
+            int cursorLine = LineContainingCursor();
+            lines.InsertRange(cursorLine + 1, newSection);
+            selectionStart = NewSelectionStart(cursorLine + 1, "<sect1><title>");
+        }
+
+        private int NewSelectionStart(int cursorLine, string tags)
+        {
+            var result = SumLineLengths(cursorLine) + tags.Length;
+            return result;
+        }
+        
+        private int SumLineLengths(int cursorLine)
+        {
+            var length = 0;
+            for (var i = 0; i < cursorLine; i++)
+            {
+                length += lines[i].Length + Environment.NewLine.Length;
+            }
+            return length;
+        }
+        
+        public void AltS()
+        {
+            InsertSectionTags();
+        }
+
+        public void Perform(string methodName)
+        {
+            object[] noArgs = {};
+            this.GetType().InvokeMember(    
+                methodName,    
+                BindingFlags.Public | BindingFlags.InvokeMethod | BindingFlags.Instance,    
+                null,    
+                this,    
+                noArgs);   
         }
     }
 }

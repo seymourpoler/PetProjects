@@ -1,0 +1,9 @@
+*input
+<P>This is the first paragraph.</P>
+<P>This is the second| paragraph.</P>
+*end
+*enter
+*output
+<P>This is the first paragraph.</P>
+<P>This is the second paragraph.</P>
+<P>|</P>
