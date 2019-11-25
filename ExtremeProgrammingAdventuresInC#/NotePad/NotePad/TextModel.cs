@@ -107,11 +107,6 @@ namespace NotePad
             lines[LineContainingCursor()] = newLine;
         }
 
-        public void ControlS()
-        {
-            InsertSectionTags();
-        }
-
         public void InsertSectionTags()
         {
             IEnumerable<string> newSection = new [] {"<sect1><tittle></tittle>", "</sect1>" };

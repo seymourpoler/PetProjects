@@ -66,10 +66,6 @@ namespace NotePad
                 {
                     model.Enter();
                 }
-                if (line == "controlS")
-                {
-                    model.ControlS();
-                }
 
                 if (line == "*altS")
                 {
