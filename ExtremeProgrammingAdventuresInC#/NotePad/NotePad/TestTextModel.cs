@@ -80,11 +80,11 @@ namespace NotePad
         }
 
         [Test]
-        public void ControlS()
+        public void AltS()
         {
             model.Lines = new string[] { };
             
-            model.ControlS();
+            model.AltS();
             
             Assert.AreEqual("<sect1><tittle></tittle>", model.Lines.First());
             Assert.AreEqual("</sect1>", model.Lines[1]);
