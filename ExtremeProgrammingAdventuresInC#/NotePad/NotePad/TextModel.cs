@@ -109,13 +109,18 @@ namespace NotePad
 
         public void InsertSectionTags()
         {
-            IEnumerable<string> newSection = new [] {"<sect1><tittle></tittle>", "</sect1>" };
-            
-            int cursorLine = LineContainingCursor();
-            lines.InsertRange(cursorLine + 1, newSection);
-            selectionStart = NewSelectionStart(cursorLine + 1, "<sect1><title>");
+            var  newSection = new [] {"<sect1><tittle></tittle>", "</sect1>" };
+            var sectionSkip = "<sect1><title>";
+            InsertTags(newSection, sectionSkip);
         }
 
+        private void InsertTags(string[] tagsToInsert, string tagsPrecedingCursor)
+        {
+            int cursorLine = LineContainingCursor();
+            lines.InsertRange(cursorLine + 1, tagsToInsert);
+            selectionStart = NewSelectionStart(cursorLine + 1, tagsPrecedingCursor);     
+        }
+        
         private int NewSelectionStart(int cursorLine, string tags)
         {
             var result = SumLineLengths(cursorLine) + tags.Length;
