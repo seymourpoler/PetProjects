@@ -125,6 +125,18 @@ namespace NotePad
                 Assert.Equals(7, model.SelectionStart);
             }
             
+            [Test] 
+            public void ShiftEnterMultipleLines() 
+            {  
+                model.SetLines (new [] {"<pre>code1", "code2","code3</pre>"});  
+                model.SelectionStart = 14; // after ’co’ in ’code2’
+                
+                model.InsertParagraphTag(); 
+                
+                Assert.Equals("code3</pre>", model.Lines[2]);  
+                Assert.Equals("<P></P>", model.Lines[3]);
+            }
+            
             [Test]
             public void CursorPosition()
             {
