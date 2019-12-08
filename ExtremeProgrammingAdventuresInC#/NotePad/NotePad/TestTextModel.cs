@@ -110,6 +110,17 @@ namespace NotePad
                 model.InsertPreTag();
                 Assert.Equals("<pre></pre>", model.Lines[1]);
                 Assert.Equals(14, model.SelectionStart);
+            }
+
+            [Test]
+            public void ShiftEnter()
+            {
+                model.SetLines(new []{"<pre></pre>"});
+                model.SelectionStart = 5;
+                model.InsertPreTag();
+                Assert.Equals("<pre>", model.Lines[0]);
+                Assert.Equals("</pre>", model.Lines[1]);
+                Assert.Equals(7, model.SelectionStart);
                 
                 model.InsertReturn();
 
@@ -117,7 +128,7 @@ namespace NotePad
                 Assert.Equals("</pre>", model.Lines[2]);
                 Assert.Equals(16, model.SelectionStart);
             }
-
+            
             [Test]
             public void CursorPosition()
             {
