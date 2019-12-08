@@ -116,18 +116,18 @@ namespace NotePad
 
         private void InsertTags(string[] tagsToInsert, string tagsPrecedingCursor)
         {
-            int cursorLine = LineContainingCursor();
+            var cursorLine = LineContainingCursor();
             lines.InsertRange(cursorLine + 1, tagsToInsert);
             selectionStart = NewSelectionStart(cursorLine + 1, tagsPrecedingCursor);     
         }
         
         private int NewSelectionStart(int cursorLine, string tags)
         {
-            var result = SumLineLengths(cursorLine) + tags.Length;
+            var result = FirstPositionOfLine(cursorLine) + tags.Length;
             return result;
         }
         
-        private int SumLineLengths(int cursorLine)
+        private int FirstPositionOfLine(int cursorLine)
         {
             var length = 0;
             for (var i = 0; i < cursorLine; i++)
@@ -156,6 +156,34 @@ namespace NotePad
         public void InsertPreTag()
         {
             throw new NotImplementedException();
+        }
+
+        public void InsertReturn()
+        {
+            string front = FrontOfCursorLine();
+            string back = BackOfCursorLine();  
+            lines[LineContainingCursor()] = front;  
+            lines.Insert(LineContainingCursor()+1, back);  
+            selectionStart += Environment.NewLine.Length;
+        }
+
+        public string FrontOfCursorLine()
+        {
+            string line = lines[LineContainingCursor()];  
+            int position = PositionOfCursorInLine();
+            return line.Substring(0, position);
+        }
+
+        public int PositionOfCursorInLine()
+        {
+            return selectionStart - FirstPositionOfLine(LineContainingCursor());
+        }
+
+        public string BackOfCursorLine()
+        {
+            string line = lines[LineContainingCursor()]; 
+            int position = PositionOfCursorInLine(); 
+            return line.Substring(position);
         }
 
         public void AltP()

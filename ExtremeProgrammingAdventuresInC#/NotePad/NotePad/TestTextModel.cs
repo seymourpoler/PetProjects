@@ -71,47 +71,63 @@ namespace NotePad
         
         [Test]
         public void ControlTwo()
-        {
-            model.SetLines(new[]{"<p>The Heading</p>"});
+            {
+                model.SetLines(new[]{"<p>The Heading</p>"});
 
-            model.ChangeToH2();
-            
-            Assert.AreEqual("<H2>The Heading</H2>", model.Lines[0]);
-        }
+                model.ChangeToH2();
+                
+                Assert.AreEqual("<H2>The Heading</H2>", model.Lines[0]);
+            }
 
-        [Test]
-        public void AltS()
-        {
-            model.Lines = new string[] { };
-            
-            model.AltS();
-            
-            Assert.AreEqual("<sect1><tittle></tittle>", model.Lines.First());
-            Assert.AreEqual("</sect1>", model.Lines[1]);
-        }
+            [Test]
+            public void AltS()
+            {
+                model.Lines = new string[] { };
+                
+                model.AltS();
+                
+                Assert.AreEqual("<sect1><tittle></tittle>", model.Lines.First());
+                Assert.AreEqual("</sect1>", model.Lines[1]);
+            }
 
-        [Test]
-        public void AltSWithText()
-        {
-            model.SetLines(new[]{"<p></p>"});
-            model.SelectionStart = 7;
-            
-            model.AltS();
-            
-            Assert.AreEqual("<sect1><tittle></tittle>", model.Lines[1]);
-            Assert.AreEqual("</sect1>", model.Lines[2]);
-        }
+            [Test]
+            public void AltSWithText()
+            {
+                model.SetLines(new[]{"<p></p>"});
+                model.SelectionStart = 7;
+                
+                model.AltS();
+                
+                Assert.AreEqual("<sect1><tittle></tittle>", model.Lines[1]);
+                Assert.AreEqual("</sect1>", model.Lines[2]);
+            }
 
-        [Test]
-        public void InsertPreTag()
-        {
-            model.SetLines(new []{"<p></p>"});
-            model.SelectionStart = 7;
-            
-            model.InsertPreTag();
+            [Test]
+            public void InsertPre()
+            {
+                model.SetLines(new []{"<p></p>"});
+                model.SelectionStart = 7;
+                model.InsertPreTag();
+                Assert.Equals("<pre></pre>", model.Lines[1]);
+                Assert.Equals(14, model.SelectionStart);
+                
+                model.InsertReturn();
 
-            Assert.Equals("<pre></pre>", model.Lines[1]);
-            Assert.Equals(14, model.SelectionStart);
+                Assert.Equals("<pre>", model.Lines[1]);
+                Assert.Equals("</pre>", model.Lines[2]);
+                Assert.Equals(16, model.SelectionStart);
+            }
+
+            [Test]
+            public void CursorPosition()
+            {
+                model.SetLines(new []{ "<p></p>", "<pre></pre>"});
+                
+                model.SelectionStart = 14; //after <pre>
+
+                Assert.Equals("<pre>", model.FrontOfCursorLine()); 
+
+                Assert.Equals("</pre>", model.BackOfCursorLine());
         }
     }
 }
