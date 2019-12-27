@@ -37,10 +37,7 @@ namespace NotePad
 
         void MenuInsertSection(object o, EventArgs args)
         {
-            model.SetLines(textbox.Lines);
-            model.SelectionStart = textbox.SelectionStart;
-            model.InsertSectionTags();
-            PutText(textbox, model.Lines, model.SelectionStart);
+            HandleKeyboard(() => model.InsertSectionTags());
         }
 
         private void GetText()
@@ -51,9 +48,7 @@ namespace NotePad
 
         void MenuInsertPre(object o, EventArgs args)
         {
-            GetText();
-            model.InsertPreTag();
-            PutText(textbox, model.Lines, model.SelectionStart);
+            HandleKeyboard(() => model.InsertPreTag());
         }
         
         void XMLKeyPressHandler(object sender, KeyPressEventArgs kea)
@@ -66,21 +61,17 @@ namespace NotePad
         
         void XMLKeyDownHandler(object sender, KeyEventArgs kea)
         {
-            GetText();
-            if (kea.KeyCode == Keys.Enter) { 
-                model.Enter();
-                kea.Handled = true;
-            }
-            if (kea.KeyCode == Keys.X)
+            HandleKeyboard(() =>
             {
+                if (kea.KeyCode == Keys.Enter) { 
+                    model.Enter();
+                }
+                if (kea.KeyCode == Keys.S && kea.Alt)
+                {
+                    model.AltS();
+                }
                 kea.Handled = true;
-            }
-            if (kea.KeyCode == Keys.S && kea.Alt)
-            {
-                model.AltS();
-                kea.Handled = true;
-            }
-            PutText(textbox, model.Lines, model.SelectionStart);
+            });
         }
         
         public void PutText(ITestTextBox textBox, string[] lines, int selectionStart)
@@ -96,6 +87,13 @@ namespace NotePad
             model.SelectionStart = textbox.SelectionStart;
             Type modelType = typeof(TextModel); 
             model.Perform(methodName:"InsertSectionTags");
+            PutText(textbox, model.Lines, model.SelectionStart);
+        }
+
+        private void HandleKeyboard(Action modelAction)
+        {
+            GetText();
+            modelAction.Invoke();
             PutText(textbox, model.Lines, model.SelectionStart);
         }
     }
