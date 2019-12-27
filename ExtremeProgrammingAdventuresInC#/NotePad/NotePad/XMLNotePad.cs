@@ -61,17 +61,16 @@ namespace NotePad
         
         void XMLKeyDownHandler(object sender, KeyEventArgs kea)
         {
-            CallModel(() =>
+            if (kea.KeyCode == Keys.Enter && kea.Modifiers == Keys.None)
             {
-                if (kea.KeyCode == Keys.Enter) { 
-                    model.Enter();
-                }
-                if (kea.KeyCode == Keys.S && kea.Alt)
-                {
-                    model.AltS();
-                }
+                CallModel(() => model.Enter());
                 kea.Handled = true;
-            });
+            }
+            else if (kea.KeyCode == Keys.S && kea.Alt)
+            {
+                CallModel(() => model.AltS()); 
+                kea.Handled = true;
+            }
         }
         
         public void PutText(ITestTextBox textBox, string[] lines, int selectionStart)
@@ -81,6 +80,10 @@ namespace NotePad
             textBox.ScrollToCaret();
         }
 
+        public void PutText()
+        {
+            PutText(textbox, model.Lines, model.SelectionStart);
+        }
         private void MenuAllInserts(object sender, EventArgs args)
         {
             model.SetLines(textbox.Lines);
