@@ -37,7 +37,7 @@ namespace NotePad
 
         void MenuInsertSection(object o, EventArgs args)
         {
-            HandleKeyboard(() => model.InsertSectionTags());
+            CallModel(() => model.InsertSectionTags());
         }
 
         private void GetText()
@@ -48,7 +48,7 @@ namespace NotePad
 
         void MenuInsertPre(object o, EventArgs args)
         {
-            HandleKeyboard(() => model.InsertPreTag());
+            CallModel(() => model.InsertPreTag());
         }
         
         void XMLKeyPressHandler(object sender, KeyPressEventArgs kea)
@@ -61,7 +61,7 @@ namespace NotePad
         
         void XMLKeyDownHandler(object sender, KeyEventArgs kea)
         {
-            HandleKeyboard(() =>
+            CallModel(() =>
             {
                 if (kea.KeyCode == Keys.Enter) { 
                     model.Enter();
@@ -90,7 +90,7 @@ namespace NotePad
             PutText(textbox, model.Lines, model.SelectionStart);
         }
 
-        private void HandleKeyboard(Action modelAction)
+        private void CallModel(Action modelAction)
         {
             GetText();
             modelAction.Invoke();
