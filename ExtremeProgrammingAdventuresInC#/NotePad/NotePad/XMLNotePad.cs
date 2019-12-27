@@ -43,10 +43,15 @@ namespace NotePad
             PutText(textbox, model.Lines, model.SelectionStart);
         }
 
-        void MenuInsertPre(object o, EventArgs args)
+        private void GetText()
         {
             model.SetLines(textbox.Lines);
             model.SelectionStart = textbox.SelectionStart;
+        }
+
+        void MenuInsertPre(object o, EventArgs args)
+        {
+            GetText();
             model.InsertPreTag();
             PutText(textbox, model.Lines, model.SelectionStart);
         }
@@ -61,8 +66,7 @@ namespace NotePad
         
         void XMLKeyDownHandler(object sender, KeyEventArgs kea)
         {
-            model.SetLines(textbox.Lines);
-            model.SelectionStart = textbox.SelectionStart;
+            GetText();
             if (kea.KeyCode == Keys.Enter) { 
                 model.Enter();
                 kea.Handled = true;
