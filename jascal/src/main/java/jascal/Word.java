@@ -1,9 +1,9 @@
 package jascal;
 
-public class Token {
+public class Word {
     public final String value;
 
-    public Token(final String value) {
+    public Word(final String value) {
         this.value = value;
     }
 }

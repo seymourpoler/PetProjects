@@ -8,10 +8,10 @@ import java.util.List;
 import static jascal.StringsUtils.isNullOrWhiteSpace;
 
 public class Lexer {
-    public List<jascal.Token> scan(String text){
+    public List<Word> scan(String text){
 
         if(isNullOrWhiteSpace(text)){
-            return new ArrayList<Token>();
+            return new ArrayList<Word>();
         }
         throw new NotImplementedException();
     }
