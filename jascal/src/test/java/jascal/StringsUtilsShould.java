@@ -15,4 +15,9 @@ public class StringsUtilsShould {
     public void return_false_when_is_string_empty(){
         assertTrue(isNullOrWhiteSpace(""));
     }
+
+    @Test
+    public void return_false_when_is_white_space(){
+        assertTrue(isNullOrWhiteSpace("  "));
+    }
 }
