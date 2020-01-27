@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed69e4f3-020c-4f7e-beb4-a4bb0ac030ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/jascal/StringsUtilsShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jascal/LexerShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jascal/LexerShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jascal/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jascal/Lexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jascal/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jascal/Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/jascal/LexerShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/jascal/LexerShould.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,27 +19,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/jascal/LexerShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="323">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/jascal/StringsUtilsShould.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#128#129#0" expanded="true" />
-                <element signature="e#150#151#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,10 +85,10 @@
         <option value="$PROJECT_DIR$/src/test/java/LexerShould/LexerShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/Lexer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Token.java" />
-        <option value="$PROJECT_DIR$/src/test/java/jascal/LexerShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/jascal/StringsUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/jascal/Lexer.java" />
         <option value="$PROJECT_DIR$/src/test/java/jascal/StringsUtilsShould.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jascal/LexerShould.java" />
       </list>
     </option>
   </component>
@@ -215,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.LexerShould">
     <configuration name="LexerShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jascal" />
       <extension name="coverage">
@@ -231,9 +215,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringsUtilsShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jascal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jascal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jascal" />
+      <option name="MAIN_CLASS_NAME" value="jascal.StringsUtilsShould" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LexerShould" />
+        <item itemvalue="JUnit.StringsUtilsShould" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +249,7 @@
       <updated>1579717673767</updated>
       <workItem from="1579717675208" duration="1048000" />
       <workItem from="1579769780611" duration="7000" />
-      <workItem from="1580146385982" duration="757000" />
+      <workItem from="1580146385982" duration="881000" />
     </task>
     <task id="LOCAL-00001" summary="green return_an_empty_list_when_code_is_null">
       <created>1580147076208</created>
@@ -258,7 +258,28 @@
       <option name="project" value="LOCAL" />
       <updated>1580147076208</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="green return_false_when_is_null">
+      <created>1580147168915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580147168915</updated>
+    </task>
+    <task id="LOCAL-00003" summary="green return_false_when_is_string_empty">
+      <created>1580147206834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580147206834</updated>
+    </task>
+    <task id="LOCAL-00004" summary="green return_false_when_is_white_space">
+      <created>1580147245204</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580147245204</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -271,9 +292,24 @@
     <history-entry file="LexerShould - 2020.01.27 at 18h 43m 57s.xml">
       <configuration name="LexerShould" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LexerShould - 2020.01.27 at 18h 45m 52s.xml">
+      <configuration name="LexerShould" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LexerShould - 2020.01.27 at 18h 46m 30s.xml">
+      <configuration name="LexerShould" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LexerShould - 2020.01.27 at 18h 47m 07s.xml">
+      <configuration name="LexerShould" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringsUtilsShould - 2020.01.27 at 18h 47m 12s.xml">
+      <configuration name="StringsUtilsShould" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LexerShould - 2020.01.27 at 18h 47m 31s.xml">
+      <configuration name="LexerShould" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1812000" />
+    <option name="totallyTimeSpent" value="1936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="-1" width="1924" height="1083" extended-state="6" />
@@ -316,7 +352,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="green return_an_empty_list_when_code_is_null" />
-    <option name="LAST_COMMIT_MESSAGE" value="green return_an_empty_list_when_code_is_null" />
+    <MESSAGE value="green return_false_when_is_null" />
+    <MESSAGE value="green return_false_when_is_string_empty" />
+    <MESSAGE value="green return_false_when_is_white_space" />
+    <option name="LAST_COMMIT_MESSAGE" value="green return_false_when_is_white_space" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/jascal.iml">
@@ -358,24 +397,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/jascal/LexerShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jascal/StringsUtilsShould.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="323">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#128#129#0" expanded="true" />
             <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jascal/LexerShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
