@@ -19,4 +19,11 @@ public class LexerShould {
 
         List<Token> tokens = lexer.scan("");
     }
+
+    @Test
+    public void return_an_empty_list_when_code_is_white_space(){
+        Lexer lexer = new Lexer();
+
+        List<Token> tokens = lexer.scan(" ");
+    }
 }
