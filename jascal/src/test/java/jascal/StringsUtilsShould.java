@@ -10,4 +10,9 @@ public class StringsUtilsShould {
     public void return_false_when_is_null(){
         assertTrue(isNullOrWhiteSpace(null));
     }
+
+    @Test
+    public void return_false_when_is_string_empty(){
+        assertTrue(isNullOrWhiteSpace(""));
+    }
 }
