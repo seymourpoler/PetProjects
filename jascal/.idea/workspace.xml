@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed69e4f3-020c-4f7e-beb4-a4bb0ac030ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jascal/TextReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/jascal/LexerShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="61" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="61" />
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,10 +31,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jascal/TextReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -64,10 +74,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Token.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Word.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -96,6 +106,9 @@
         <option value="$PROJECT_DIR$/src/main/java/jascal/Lexer.java" />
         <option value="$PROJECT_DIR$/src/test/java/jascal/StringsUtilsShould.java" />
         <option value="$PROJECT_DIR$/src/test/java/jascal/LexerShould.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jascal/Token.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jascal/Word.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jascal/TextReader.java" />
       </list>
     </option>
   </component>
@@ -109,8 +122,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1918" />
     <option name="y" value="-1" />
-    <option name="width" value="1918" />
-    <option name="height" value="1080" />
+    <option name="width" value="1924" />
+    <option name="height" value="1083" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -184,7 +197,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java/jython" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -256,7 +269,7 @@
       <updated>1579717673767</updated>
       <workItem from="1579717675208" duration="1048000" />
       <workItem from="1579769780611" duration="7000" />
-      <workItem from="1580146385982" duration="1541000" />
+      <workItem from="1580146385982" duration="2445000" />
     </task>
     <task id="LOCAL-00001" summary="green return_an_empty_list_when_code_is_null">
       <created>1580147076208</created>
@@ -300,13 +313,24 @@
       <option name="project" value="LOCAL" />
       <updated>1580147357902</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adding Parser class">
+      <created>1580147943937</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580147943937</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor: rename">
+      <created>1580148041976</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1580148041976</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LexerShould - 2020.01.27 at 18h 43m 55s.xml">
-      <configuration name="LexerShould" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LexerShould - 2020.01.27 at 18h 43m 57s.xml">
       <configuration name="LexerShould" configurationId="JUnit" />
     </history-entry>
@@ -334,9 +358,12 @@
     <history-entry file="LexerShould - 2020.01.27 at 18h 49m 09s.xml">
       <configuration name="LexerShould" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LexerShould - 2020.01.27 at 19h 00m 25s.xml">
+      <configuration name="LexerShould" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2596000" />
+    <option name="totallyTimeSpent" value="3500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="-1" width="1924" height="1083" extended-state="6" />
@@ -360,7 +387,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32939914" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32939914" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -384,7 +411,9 @@
     <MESSAGE value="green return_false_when_is_white_space" />
     <MESSAGE value="green return_an_empty_list_when_code_is_string_empty" />
     <MESSAGE value="green return_an_empty_list_when_code_is_white_space" />
-    <option name="LAST_COMMIT_MESSAGE" value="green return_an_empty_list_when_code_is_white_space" />
+    <MESSAGE value="adding Parser class" />
+    <MESSAGE value="refactor: rename" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: rename" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/jascal.iml">
@@ -395,13 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -442,20 +464,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/jascal/LexerShould.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="61" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="61" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Parser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/TextReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
