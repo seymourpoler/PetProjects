@@ -1,6 +1,6 @@
 package jascal;
 
-public class StringsUtils {
+public class StringTool {
     public static Boolean isNullOrWhiteSpace(String text){
         return text == null || text.trim().isEmpty();
     }

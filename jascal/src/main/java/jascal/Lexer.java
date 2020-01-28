@@ -5,7 +5,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static jascal.StringsUtils.isNullOrWhiteSpace;
+import static jascal.StringTool.isNullOrWhiteSpace;
 
 public class Lexer {
     public List<Word> scan(String text){

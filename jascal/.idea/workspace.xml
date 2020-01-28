@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed69e4f3-020c-4f7e-beb4-a4bb0ac030ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jascal/TextReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ed69e4f3-020c-4f7e-beb4-a4bb0ac030ee" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/jascal/TextReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -197,7 +194,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java/jython" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -235,7 +232,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringsUtilsShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringToolShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jascal" />
       <extension name="coverage">
         <pattern>
@@ -244,7 +241,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="jascal" />
-      <option name="MAIN_CLASS_NAME" value="jascal.StringsUtilsShould" />
+      <option name="MAIN_CLASS_NAME" value="jascal.StringToolShould" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -253,7 +250,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LexerShould" />
-        <item itemvalue="JUnit.StringsUtilsShould" />
+        <item itemvalue="JUnit.StringToolShould" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +266,7 @@
       <updated>1579717673767</updated>
       <workItem from="1579717675208" duration="1048000" />
       <workItem from="1579769780611" duration="7000" />
-      <workItem from="1580146385982" duration="2445000" />
+      <workItem from="1580146385982" duration="2599000" />
     </task>
     <task id="LOCAL-00001" summary="green return_an_empty_list_when_code_is_null">
       <created>1580147076208</created>
@@ -327,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580148041976</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor: adding TextReader interface">
+      <created>1580198725494</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580198725494</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -363,10 +367,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3500000" />
+    <option name="totallyTimeSpent" value="3654000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1918" y="-1" width="1924" height="1083" extended-state="6" />
+    <frame x="1918" y="-1" width="1924" height="1083" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
@@ -413,7 +417,8 @@
     <MESSAGE value="green return_an_empty_list_when_code_is_white_space" />
     <MESSAGE value="adding Parser class" />
     <MESSAGE value="refactor: rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: rename" />
+    <MESSAGE value="refactor: adding TextReader interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: adding TextReader interface" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/jascal.iml">
@@ -491,7 +496,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/jascal/TextReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
