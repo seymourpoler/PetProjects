@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed69e4f3-020c-4f7e-beb4-a4bb0ac030ee" name="Default Changelist" comment="" />
+    <list default="true" id="ed69e4f3-020c-4f7e-beb4-a4bb0ac030ee" name="Default Changelist" comment="refactor: green return_end_of_file_when_there_is_not_text">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jascal/WordScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/jascal/WordScannerShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jascal/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jascal/Lexer.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,37 +25,34 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/jascal/LexerShould.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jascal/WordScanner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#137#138#0" expanded="true" />
+                <element signature="e#181#182#0" expanded="true" />
+                <element signature="e#306#312#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jascal/TextReader.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/jascal/WordScannerShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Lexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,16 +61,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jascal/StringsUtils.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="44" />
-              <folding>
-                <element signature="e#97#98#0" expanded="true" />
-                <element signature="e#139#140#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -94,18 +94,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/LexerShould/cs.java" />
         <option value="$PROJECT_DIR$/src/test/java/LexerShould/LexerShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/Lexer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Token.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jascal/StringsUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/jascal/Lexer.java" />
         <option value="$PROJECT_DIR$/src/test/java/jascal/StringsUtilsShould.java" />
         <option value="$PROJECT_DIR$/src/test/java/jascal/LexerShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/jascal/Token.java" />
         <option value="$PROJECT_DIR$/src/main/java/jascal/Word.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jascal/StringsUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jascal/StringTool.java" />
         <option value="$PROJECT_DIR$/src/main/java/jascal/TextReader.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/jascal/WordScanner.java" />
+        <option value="$PROJECT_DIR$/src/test/java/jascal/WordScannerShould.java" />
       </list>
     </option>
   </component>
@@ -216,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LexerShould">
+  <component name="RunManager" selected="JUnit.WordScannerShould">
     <configuration name="LexerShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jascal" />
       <extension name="coverage">
@@ -247,8 +250,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordScannerShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jascal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jascal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jascal" />
+      <option name="MAIN_CLASS_NAME" value="jascal.WordScannerShould" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WordScannerShould" />
         <item itemvalue="JUnit.LexerShould" />
         <item itemvalue="JUnit.StringToolShould" />
       </list>
@@ -267,6 +286,8 @@
       <workItem from="1579717675208" duration="1048000" />
       <workItem from="1579769780611" duration="7000" />
       <workItem from="1580146385982" duration="2599000" />
+      <workItem from="1580228016089" duration="132000" />
+      <workItem from="1580320055513" duration="1714000" />
     </task>
     <task id="LOCAL-00001" summary="green return_an_empty_list_when_code_is_null">
       <created>1580147076208</created>
@@ -331,16 +352,24 @@
       <option name="project" value="LOCAL" />
       <updated>1580198725494</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="refactor: rename">
+      <created>1580228051464</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580228051464</updated>
+    </task>
+    <task id="LOCAL-00011" summary="refactor: adding methods to textReader interface">
+      <created>1580228146803</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1580228146803</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LexerShould - 2020.01.27 at 18h 43m 57s.xml">
-      <configuration name="LexerShould" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LexerShould - 2020.01.27 at 18h 45m 52s.xml">
-      <configuration name="LexerShould" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LexerShould - 2020.01.27 at 18h 46m 30s.xml">
       <configuration name="LexerShould" configurationId="JUnit" />
     </history-entry>
@@ -365,15 +394,21 @@
     <history-entry file="LexerShould - 2020.01.27 at 19h 00m 25s.xml">
       <configuration name="LexerShould" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WordScannerShould - 2020.01.29 at 19h 21m 26s.xml">
+      <configuration name="WordScannerShould" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WordScannerShould - 2020.01.29 at 19h 23m 58s.xml">
+      <configuration name="WordScannerShould" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3654000" />
+    <option name="totallyTimeSpent" value="5500000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1918" y="-1" width="1924" height="1083" extended-state="7" />
+    <frame x="1918" y="-1" width="1924" height="1083" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26040554" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -383,7 +418,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32939914" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32939914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -391,7 +426,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32939914" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -416,44 +451,16 @@
     <MESSAGE value="green return_an_empty_list_when_code_is_string_empty" />
     <MESSAGE value="green return_an_empty_list_when_code_is_white_space" />
     <MESSAGE value="adding Parser class" />
-    <MESSAGE value="refactor: rename" />
     <MESSAGE value="refactor: adding TextReader interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: adding TextReader interface" />
+    <MESSAGE value="refactor: rename" />
+    <MESSAGE value="refactor: adding methods to textReader interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: adding methods to textReader interface" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/jascal.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/StringsUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="44" />
-          <folding>
-            <element signature="e#97#98#0" expanded="true" />
-            <element signature="e#139#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Lexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/jascal/StringsUtilsShould.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/jascal/StringToolShould.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="48" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="48" />
@@ -469,13 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Word.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -486,17 +486,69 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/jascal/LexerShould.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/WordScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#306#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Lexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="70" lean-forward="true" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jascal/StringTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jascal/TextReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="85">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/jascal/WordScannerShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
