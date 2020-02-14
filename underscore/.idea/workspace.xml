@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="_Should" />
+    </enabled-run-configurations>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1XnIS0r8pVu6pgHGylIAtleKyqU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="_Should" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="underscore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.underscore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.underscore" />
+      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_Should" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="underscore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.underscore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.underscore" />
+      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_Should.find_an_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="underscore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.underscore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.underscore" />
+      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
+      <option name="METHOD_NAME" value="find_an_element" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_Should.not_find_an_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="underscore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.underscore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.underscore" />
+      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
+      <option name="METHOD_NAME" value="not_find_an_element" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit._Should" />
+        <item itemvalue="JUnit._Should.find_an_element" />
+        <item itemvalue="JUnit._Should.not_find_an_element" />
+        <item itemvalue="Android JUnit._Should" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="" />
+      <created>1581675427322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581675427322</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581693292852">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
+    <state width="1320" height="222" key="GridCell.Tab.0.bottom" timestamp="1581693868142">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1581693868142" />
+    <state width="1320" height="222" key="GridCell.Tab.0.center" timestamp="1581693868142">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1581693868142" />
+    <state width="1320" height="222" key="GridCell.Tab.0.left" timestamp="1581693868142">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1581693868142" />
+    <state width="1320" height="222" key="GridCell.Tab.0.right" timestamp="1581693868142">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1581693868142" />
+    <state width="1320" height="222" key="GridCell.Tab.1.bottom" timestamp="1581693868143">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
+    <state width="1320" height="222" key="GridCell.Tab.1.center" timestamp="1581693868143">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
+    <state width="1320" height="222" key="GridCell.Tab.1.left" timestamp="1581693868142">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1581693868142" />
+    <state width="1320" height="222" key="GridCell.Tab.1.right" timestamp="1581693868143">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
+    <state x="216" y="30" width="928" height="681" key="Maven.ArtifactSearchDialog" timestamp="1581675578877">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="216" y="30" width="928" height="681" key="Maven.ArtifactSearchDialog/0.0.1366.744@0.0.1366.744" timestamp="1581675578877" />
+    <state x="172" y="0" width="1028" height="741" key="SettingsEditor" timestamp="1581690611047">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="172" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1581690611047" />
+    <state x="339" y="199" key="com.intellij.ide.util.TipDialog" timestamp="1581688312389">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="339" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.744@0.0.1366.744" timestamp="1581688312389" />
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1581690227675">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1581690227675" />
+  </component>
+</project>
