@@ -157,4 +157,28 @@ public class _Should {
 
         Assert.assertTrue( result.get(0).equals(2));
     }
+
+    @Test
+    public void return_sum(){
+        List<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(1);
+        numbers.add(2);
+
+        Integer result = _.sum(numbers);
+
+        Assert.assertTrue(result.equals(3));
+    }
+
+    @Test
+    public void return_max(){
+        List<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4)
+
+        Integer result = _.max(numbers);
+
+        Assert.assertTrue(result.equals(4));
+    }
 }

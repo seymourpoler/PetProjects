@@ -81,4 +81,16 @@ public class _ {
     public static <T> Boolean isNotNull(List<T> elements){
         return !isNull(elements);
     }
+
+    public static Integer sum(List<Integer> numbers) {
+        Integer result = 0;
+        for (Integer number: numbers){
+            result = result + number;
+        }
+        return result;
+    }
+
+    public static Integer max(List<Integer> numbers) {
+        throw new RuntimeException();
+    }
 }
