@@ -175,9 +175,22 @@ public class _Should {
         numbers.add(1);
         numbers.add(2);
         numbers.add(3);
-        numbers.add(4)
+        numbers.add(4);
 
         Integer result = _.max(numbers);
+
+        Assert.assertTrue(result.equals(4));
+    }
+
+    @Test
+    public void return_min(){
+        List<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+
+        Integer result = _.min(numbers);
 
         Assert.assertTrue(result.equals(4));
     }

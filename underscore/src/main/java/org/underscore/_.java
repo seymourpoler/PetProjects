@@ -93,4 +93,8 @@ public class _ {
     public static Integer max(List<Integer> numbers) {
         throw new RuntimeException();
     }
+
+    public static Integer min(List<Integer> numbers) {
+        throw new RuntimeException();
+    }
 }
