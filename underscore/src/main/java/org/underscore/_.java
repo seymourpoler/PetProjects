@@ -8,13 +8,13 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class _ {
-    public static <T> void each(List<T> elements, Consumer<T> consumer){
+    public static <T> void each(final List<T> elements, final Consumer<T> consumer){
         for(T element: elements){
             consumer.accept(element);
         }
     }
 
-    public static <T> List<T> where(List<T> elements, Function<T, Boolean> condition){
+    public static <T> List<T> where(final List<T> elements, final Function<T, Boolean> condition){
         List<T> result = new ArrayList<T>();
         for (T element: elements){
             if(condition.apply(element)){
@@ -24,7 +24,7 @@ public class _ {
         return result;
     }
 
-    public static <T> List<T> where(List<T> elements, Predicate<T> condition){
+    public static <T> List<T> where(final List<T> elements, final Predicate<T> condition){
         List<T> result = new ArrayList<T>();
         for (T element: elements){
             if(condition.test(element)){
@@ -34,7 +34,7 @@ public class _ {
         return result;
     }
 
-    public static <T> Optional<T> find(List<T> elements, Function<T, Boolean> condition){
+    public static <T> Optional<T> find(final List<T> elements, final Function<T, Boolean> condition){
         for (T element: elements){
             if (condition.apply(element)) {
                 return Optional.of(element);
@@ -43,7 +43,7 @@ public class _ {
         return Optional.empty();
     }
 
-    public static <T, R> List<R> map(List<T> elements, Function<T, R> mapper){
+    public static <T, R> List<R> map(final List<T> elements, final Function<T, R> mapper){
         List<R> result = new ArrayList<R>();
         for (T element: elements) {
             result.add(mapper.apply(element));
@@ -51,38 +51,38 @@ public class _ {
         return result;
     }
 
-    public static <T> Optional<T> first(List<T> elements){
+    public static <T> Optional<T> first(final List<T> elements){
         if(isNull(elements) || isEmpty(elements)){
             return Optional.empty();
         }
         return Optional.of(elements.get(0));
     }
 
-    public static <T> Optional<T> last(List<T> elements){
+    public static <T> Optional<T> last(final List<T> elements){
         if(isNull(elements) || isEmpty(elements)){
             return Optional.empty();
         }
         return Optional.of(elements.get(elements.size() -1));
     }
 
-    public static <T> Boolean isEmpty(List<T> elements){
+    public static <T> Boolean isEmpty(final List<T> elements){
         final Integer hasNoElements = 0;
         return elements.size() == hasNoElements;
     }
 
-    public static <T> Boolean isNotEmpty(List<T> elements){
+    public static <T> Boolean isNotEmpty(final List<T> elements){
         return !isEmpty(elements);
     }
 
-    public static <T> Boolean isNull(List<T> elements){
+    public static <T> Boolean isNull(final List<T> elements){
         return elements == null;
     }
 
-    public static <T> Boolean isNotNull(List<T> elements){
+    public static <T> Boolean isNotNull(final List<T> elements){
         return !isNull(elements);
     }
 
-    public static Integer sum(List<Integer> numbers) {
+    public static Integer sum(final List<Integer> numbers) {
         Integer result = 0;
         for (Integer number: numbers){
             result = result + number;
@@ -90,11 +90,15 @@ public class _ {
         return result;
     }
 
-    public static Integer max(List<Integer> numbers) {
+    public static Integer max(final List<Integer> numbers) {
         throw new RuntimeException();
     }
 
-    public static Integer min(List<Integer> numbers) {
+    public static Integer min(final List<Integer> numbers) {
+        throw new RuntimeException();
+    }
+
+    public static <T> List<T> zip(final List<T> animals, final List<T> fruits) {
         throw new RuntimeException();
     }
 }

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="">
+    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="sets up final parameters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/underscore/_.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/underscore/_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/underscore/_Should.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/underscore/_Should.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="JUnit._Should">
     <configuration name="_Should" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
@@ -162,17 +164,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="green return_sum" />
-    <option name="LAST_COMMIT_MESSAGE" value="green return_sum" />
+    <MESSAGE value="red return_zipped" />
+    <MESSAGE value="sets up final parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="sets up final parameters" />
   </component>
   <component name="WindowStateProjectService">
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581693292852">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2" timestamp="1581777762322">
+    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2" timestamp="1581783801351">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1581777762322" />
+    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1581783801351" />
     <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1581778082794">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -209,25 +213,25 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="216" y="30" width="928" height="681" key="Maven.ArtifactSearchDialog/0.0.1366.744@0.0.1366.744" timestamp="1581675578877" />
-    <state x="172" y="0" width="1028" height="741" key="SettingsEditor" timestamp="1581690611047">
+    <state x="172" y="0" width="1028" height="741" key="SettingsEditor" timestamp="1581834948680">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="172" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1581690611047" />
-    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1581777765789">
+    <state x="172" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1581834948680" />
+    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1581783807126">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1581777765789" />
-    <state x="339" y="199" key="com.intellij.ide.util.TipDialog" timestamp="1581776251471">
+    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1581783807126" />
+    <state x="339" y="199" key="com.intellij.ide.util.TipDialog" timestamp="1581834921057">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="339" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.744@0.0.1366.744" timestamp="1581776251471" />
-    <state x="451" y="292" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581777854525">
+    <state x="339" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.744@0.0.1366.744" timestamp="1581834921057" />
+    <state x="451" y="292" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581783814352">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="451" y="292" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.744@0.0.1366.744" timestamp="1581777854525" />
-    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1581690227675">
+    <state x="451" y="292" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.744@0.0.1366.744" timestamp="1581783814352" />
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1581783661841">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1581690227675" />
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1581783661841" />
   </component>
 </project>

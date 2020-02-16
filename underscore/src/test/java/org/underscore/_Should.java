@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -13,9 +14,7 @@ public class _Should {
     @Test
     public void each(){
         Boolean[] isExecuted = new Boolean[1];
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
         _.each(numbers, x -> isExecuted[0] = true);
 
@@ -24,11 +23,7 @@ public class _Should {
 
     @Test
     public void where_with_lambda_function(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
         Function<Integer, Boolean> condition = x -> (x % 2) == 0;
 
         List<Integer> result = _.where(numbers, condition);
@@ -38,11 +33,7 @@ public class _Should {
 
     @Test
     public void where_with_lambda_predicate(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
         Predicate<Integer> condition = x -> (x % 2) == 0;
 
         List<Integer> result = _.where(numbers, condition);
@@ -52,11 +43,7 @@ public class _Should {
 
     @Test
     public void find_an_element(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
         final Integer filter = 2;
         Function<Integer, Boolean> condition = x -> x == filter;
 
@@ -67,11 +54,7 @@ public class _Should {
 
     @Test
     public void not_find_an_element(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
         Function<Integer, Boolean> condition = x -> x == 20;
 
         Optional<Integer> result = _.find(numbers, condition);
@@ -88,19 +71,14 @@ public class _Should {
 
     @Test
     public void return_true_when_is_not_empty(){
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(2);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
         Assert.assertTrue(_.isNotEmpty(numbers));
     }
 
     @Test
     public void return_first(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
         Optional<Integer> result = _.first(numbers);
 
@@ -149,9 +127,7 @@ public class _Should {
 
     @Test
     public void map(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
+        List<Integer> numbers = Arrays.asList(1,2,3,4);
         Function<Integer, Integer> mapper = x ->  x + 1;
         List<Integer> result = _.map(numbers, mapper);
 
@@ -160,9 +136,7 @@ public class _Should {
 
     @Test
     public void return_sum(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
+        List<Integer> numbers = Arrays.asList(1,2);
 
         Integer result = _.sum(numbers);
 
@@ -171,27 +145,34 @@ public class _Should {
 
     @Test
     public void return_max(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
         Integer result = _.max(numbers);
 
-        Assert.assertTrue(result.equals(4));
+        Assert.assertTrue(result.equals(6));
     }
 
     @Test
     public void return_min(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
         Integer result = _.min(numbers);
 
-        Assert.assertTrue(result.equals(4));
+        Assert.assertTrue(result.equals(1));
+    }
+
+    @Test
+    public void return_zipped(){
+        List<String> animals = new ArrayList<String>();
+        animals.add("monkey");
+        animals.add("rabbit");
+        List<String> fruits = new ArrayList<String>();
+        fruits.add("berry");
+        fruits.add("banana");
+
+        List<String> result = _.zip(animals, fruits);
+
+        Assert.assertTrue(result.get(0).equals("monkey"));
+        Assert.assertTrue(result.get(4).equals("banana"));
     }
 }
