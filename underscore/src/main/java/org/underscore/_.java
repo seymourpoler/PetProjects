@@ -58,6 +58,10 @@ public class _ {
         return Optional.of(elements.get(0));
     }
 
+    public static <T> List<T> first(final List<T> elements, Integer numberOfElements){
+        throw new RuntimeException();
+    }
+
     public static <T> Optional<T> last(final List<T> elements){
         if(isNull(elements) || isEmpty(elements)){
             return Optional.empty();

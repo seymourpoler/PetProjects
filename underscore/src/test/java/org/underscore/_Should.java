@@ -95,6 +95,15 @@ public class _Should {
     }
 
     @Test
+    public void return_limit_the_first_number_of_elements(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+
+        List<Integer> result = _.first(numbers, 3);
+
+        Assert.assertEquals(3, result.size());
+    }
+
+    @Test
     public void return_last_element(){
         List<Integer> numbers = new ArrayList<Integer>();
         numbers.add(1);
@@ -169,7 +178,6 @@ public class _Should {
 
         Assert.assertTrue(result.get(0).equals(5));
     }
-
 
     @Test
     public void return_zipped(){

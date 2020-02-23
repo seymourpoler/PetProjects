@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="break build apply_chains_of_functions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/underscore/Underscore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/underscore/UnderscoreShould.java" afterDir="false" />
+    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="red return_limit_the_first_number_of_elements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" afterDir="false" />
@@ -162,6 +160,14 @@
       <option name="presentableId" value="Default" />
       <updated>1581675427322</updated>
     </task>
+    <task id="LOCAL-00001" summary="red apply_chains_of_functions">
+      <created>1582472406242</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582472406242</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -172,17 +178,20 @@
     <MESSAGE value="green return_min" />
     <MESSAGE value="green return_reversed" />
     <MESSAGE value="break build apply_chains_of_functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="break build apply_chains_of_functions" />
+    <MESSAGE value="red apply_chains_of_functions" />
+    <MESSAGE value="red return_limit_the_first_number_of_elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="red return_limit_the_first_number_of_elements" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581693292852">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2" timestamp="1582471965155">
+    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2" timestamp="1582473669100">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1582471965155" />
+    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1582473669100" />
     <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1582469183360">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -223,18 +232,18 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="172" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1581834948680" />
-    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1582471968053">
+    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1582473680110">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1582471968053" />
+    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1582473680110" />
     <state x="339" y="199" key="com.intellij.ide.util.TipDialog" timestamp="1582468721242">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="339" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.744@0.0.1366.744" timestamp="1582468721242" />
-    <state x="451" y="292" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582469321206">
+    <state x="451" y="292" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582473675596">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="451" y="292" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.744@0.0.1366.744" timestamp="1582469321206" />
+    <state x="451" y="292" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.744@0.0.1366.744" timestamp="1582473675596" />
     <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1581783661841">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
