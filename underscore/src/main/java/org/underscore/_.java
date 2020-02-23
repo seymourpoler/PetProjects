@@ -91,14 +91,36 @@ public class _ {
     }
 
     public static Integer max(final List<Integer> numbers) {
-        throw new RuntimeException();
+        Integer result = Integer.MIN_VALUE;
+        for(Integer number: numbers){
+            if(number > result){
+                result = number;
+            }
+        }
+
+        return result;
     }
 
     public static Integer min(final List<Integer> numbers) {
+        Integer result = Integer.MAX_VALUE;
+        for(Integer number: numbers){
+            if(number < result){
+                result = number;
+            }
+        }
+
+        return result;
+    }
+
+    public static <T> List<T> zip(final List<T> first, final List<T> two) {
         throw new RuntimeException();
     }
 
-    public static <T> List<T> zip(final List<T> animals, final List<T> fruits) {
-        throw new RuntimeException();
+    public static <T> List<T> reverse(List<T> elements) {
+        List<T> result = new ArrayList<>();
+        for (Integer position = elements.size()-1; position>=0; position--){
+            result.add(elements.get(position));
+        }
+        return result;
     }
 }

@@ -162,6 +162,16 @@ public class _Should {
     }
 
     @Test
+    public void return_reversed(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+
+        List<Integer> result = _.reverse(numbers);
+
+        Assert.assertTrue(result.get(0).equals(5));
+    }
+
+
+    @Test
     public void return_zipped(){
         List<String> animals = new ArrayList<String>();
         animals.add("monkey");
