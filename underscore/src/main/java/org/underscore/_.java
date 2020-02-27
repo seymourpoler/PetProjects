@@ -58,7 +58,7 @@ public class _ {
         return Optional.of(elements.get(0));
     }
 
-    public static <T> List<T> first(final List<T> elements, Integer numberOfElements){
+    public static <T> List<T> first(final List<T> elements, final Integer numberOfElements){
         throw new RuntimeException();
     }
 
