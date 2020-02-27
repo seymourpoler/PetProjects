@@ -100,7 +100,7 @@ public class _Should {
 
         List<Integer> result = _.first(numbers, 3);
 
-        Assert.assertEquals(3, result.size());
+        Assert.assertTrue(result.get(1).equals(2));
     }
 
     @Test
@@ -112,6 +112,17 @@ public class _Should {
         Optional<Integer> result = _.last(numbers);
 
         Assert.assertEquals(Optional.of(2), result);
+    }
+
+    @Test
+    public void return_last_number_of_elements(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+        numbers.add(1);
+        numbers.add(2);
+
+        List<Integer> result = _.last(numbers, 3);
+
+        Assert.assertTrue( result.get(1).equals(5));
     }
 
     @Test

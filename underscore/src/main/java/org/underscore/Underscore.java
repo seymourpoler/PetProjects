@@ -2,6 +2,7 @@ package org.underscore;
 
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class Underscore<T> {
     List<T> elements;
@@ -15,6 +16,10 @@ public class Underscore<T> {
     }
 
     public <T> Underscore<T> filter(Function<T, Boolean> condition){
+        throw new RuntimeException();
+    }
+
+    public <T> Underscore<T> filter(Predicate<T> condition){
         throw new RuntimeException();
     }
 

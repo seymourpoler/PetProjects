@@ -69,6 +69,10 @@ public class _ {
         return Optional.of(elements.get(elements.size() -1));
     }
 
+    public static <T> List<T> last(final List<T> elements, final Integer numberOfElements){
+        throw new RuntimeException();
+    }
+
     public static <T> Boolean isEmpty(final List<T> elements){
         final Integer hasNoElements = 0;
         return elements.size() == hasNoElements;
