@@ -22,6 +22,16 @@ public class _Should {
     }
 
     @Test
+    public void where_return_empty_list_when_is_empty(){
+        List<Integer> numbers = Arrays.asList();
+        Predicate<Integer> condition =  x -> x > 2;
+
+        List<Integer> result = _.where(numbers, condition);
+
+        Assert.assertEquals(0, result.size());
+    }
+
+    @Test
     public void where_with_lambda_predicate(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5);
         Predicate<Integer> condition = x -> (x % 2) == 0;
