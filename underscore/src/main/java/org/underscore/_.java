@@ -8,32 +8,38 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class _ {
-    public static <T> void each(final List<T> elements, final Consumer<T> consumer){
-        for(T element: elements){
+    public static <T> void each(final List<T> elements, final Consumer<T> consumer) {
+        for (T element : elements) {
             consumer.accept(element);
         }
     }
 
-    public static <T> List<T> where(final List<T> elements, final Predicate<T> condition){
+    public static <T> List<T> where(final List<T> elements, final Predicate<T> condition) {
+        if (isNull(elements)) {
+            return new ArrayList<T>();
+        }
         List<T> result = new ArrayList<T>();
-        for (T element: elements){
-            if(condition.test(element)){
+        for (T element : elements) {
+            if (condition.test(element)) {
                 result.add(element);
             }
         }
         return result;
     }
 
-    public static <T, R> List<R> map(final List<T> elements, final Function<T, R> mapper){
+    public static <T, R> List<R> map(final List<T> elements, final Function<T, R> mapper) {
         List<R> result = new ArrayList<R>();
-        for (T element: elements) {
+        for (T element : elements) {
             result.add(mapper.apply(element));
         }
         return result;
     }
 
-    public static <T> Optional<T> first(final List<T> elements, final Predicate<T> condition){
-        for (T element: elements){
+    public static <T> Optional<T> first(final List<T> elements, final Predicate<T> condition) {
+        if(isNull(elements)){
+            return Optional.empty();
+        }
+        for (T element : elements) {
             if (condition.test(element)) {
                 return Optional.of(element);
             }
@@ -41,48 +47,48 @@ public class _ {
         return Optional.empty();
     }
 
-    public static <T> Optional<T> first(final List<T> elements){
-        if(isNull(elements) || isEmpty(elements)){
+    public static <T> Optional<T> first(final List<T> elements) {
+        if (isNull(elements) || isEmpty(elements)) {
             return Optional.empty();
         }
         return Optional.of(elements.get(0));
     }
 
-    public static <T> List<T> first(final List<T> elements, final Integer numberOfElements){
+    public static <T> List<T> first(final List<T> elements, final Integer numberOfElements) {
         throw new RuntimeException();
     }
 
-    public static <T> Optional<T> last(final List<T> elements){
-        if(isNull(elements) || isEmpty(elements)){
+    public static <T> Optional<T> last(final List<T> elements) {
+        if (isNull(elements) || isEmpty(elements)) {
             return Optional.empty();
         }
-        return Optional.of(elements.get(elements.size() -1));
+        return Optional.of(elements.get(elements.size() - 1));
     }
 
-    public static <T> List<T> last(final List<T> elements, final Integer numberOfElements){
+    public static <T> List<T> last(final List<T> elements, final Integer numberOfElements) {
         throw new RuntimeException();
     }
 
-    public static <T> Boolean isEmpty(final List<T> elements){
+    public static <T> Boolean isEmpty(final List<T> elements) {
         final Integer hasNoElements = 0;
         return elements.size() == hasNoElements;
     }
 
-    public static <T> Boolean isNotEmpty(final List<T> elements){
+    public static <T> Boolean isNotEmpty(final List<T> elements) {
         return !isEmpty(elements);
     }
 
-    public static <T> Boolean isNull(final List<T> elements){
+    public static <T> Boolean isNull(final List<T> elements) {
         return elements == null;
     }
 
-    public static <T> Boolean isNotNull(final List<T> elements){
+    public static <T> Boolean isNotNull(final List<T> elements) {
         return !isNull(elements);
     }
 
     public static Integer sum(final List<Integer> numbers) {
         Integer result = 0;
-        for (Integer number: numbers){
+        for (Integer number : numbers) {
             result = result + number;
         }
         return result;
@@ -90,8 +96,8 @@ public class _ {
 
     public static Integer max(final List<Integer> numbers) {
         Integer result = Integer.MIN_VALUE;
-        for(Integer number: numbers){
-            if(number > result){
+        for (Integer number : numbers) {
+            if (number > result) {
                 result = number;
             }
         }
@@ -101,8 +107,8 @@ public class _ {
 
     public static Integer min(final List<Integer> numbers) {
         Integer result = Integer.MAX_VALUE;
-        for(Integer number: numbers){
-            if(number < result){
+        for (Integer number : numbers) {
+            if (number < result) {
                 result = number;
             }
         }
@@ -116,7 +122,7 @@ public class _ {
 
     public static <T> List<T> reverse(List<T> elements) {
         List<T> result = new ArrayList<>();
-        for (Integer position = elements.size()-1; position>=0; position--){
+        for (Integer position = elements.size() - 1; position >= 0; position--) {
             result.add(elements.get(position));
         }
         return result;

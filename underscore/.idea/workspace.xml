@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="">
+    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="green where_return_empty_list_when_list_is_null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/underscore/_.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/underscore/_.class" afterDir="false" />
     </list>
@@ -60,7 +61,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
-  <component name="RunManager" selected="JUnit._Should.where_return_empty_list_when_is_empty">
+  <component name="RunManager" selected="JUnit._Should.find_an_element_when_list_is_null">
     <configuration name="_Should" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -76,7 +77,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_Should.find_an_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="_Should.find_an_element_when_list_is_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
         <pattern>
@@ -86,23 +87,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.underscore" />
       <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
-      <option name="METHOD_NAME" value="find_an_element" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_Should.not_find_an_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="underscore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.underscore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.underscore" />
-      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
-      <option name="METHOD_NAME" value="not_find_an_element" />
+      <option name="METHOD_NAME" value="find_an_element_when_list_is_null" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,13 +125,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="_Should.where_return_empty_list_when_list_is_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="underscore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.underscore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.underscore" />
+      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
+      <option name="METHOD_NAME" value="where_return_empty_list_when_list_is_null" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit._Should.where_return_empty_list_when_is_empty" />
+        <item itemvalue="JUnit._Should.find_an_element_when_list_is_null" />
         <item itemvalue="JUnit._Should" />
+        <item itemvalue="JUnit._Should.where_return_empty_list_when_list_is_null" />
+        <item itemvalue="JUnit._Should.where_return_empty_list_when_is_empty" />
         <item itemvalue="JUnit._Should.return_max" />
-        <item itemvalue="JUnit._Should.find_an_element" />
-        <item itemvalue="JUnit._Should.not_find_an_element" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583161724370</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="green where_return_empty_list_when_is_empty">
+      <created>1583161957823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583161957823</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -202,7 +210,9 @@
     <MESSAGE value="change assertion" />
     <MESSAGE value="use predicate, instead Function&lt;T, Boolean&gt;" />
     <MESSAGE value="use first instead find and Predicate instead Function&lt;T, Boolean&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="use first instead find and Predicate instead Function&lt;T, Boolean&gt;" />
+    <MESSAGE value="green where_return_empty_list_when_is_empty" />
+    <MESSAGE value="green where_return_empty_list_when_list_is_null" />
+    <option name="LAST_COMMIT_MESSAGE" value="green where_return_empty_list_when_list_is_null" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -214,51 +224,51 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2" timestamp="1583161724154">
+    <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2" timestamp="1583162107989">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1582473669100" />
-    <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161724154" />
-    <state width="1874" height="356" key="GridCell.Tab.0.bottom" timestamp="1583161940402">
+    <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162107989" />
+    <state width="1874" height="288" key="GridCell.Tab.0.bottom" timestamp="1583162225663">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1582469183360" />
-    <state width="1874" height="356" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161940402" />
-    <state width="1874" height="356" key="GridCell.Tab.0.center" timestamp="1583161940402">
+    <state width="1874" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162225663" />
+    <state width="1874" height="288" key="GridCell.Tab.0.center" timestamp="1583162225663">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1582469183359" />
-    <state width="1874" height="356" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161940402" />
-    <state width="1874" height="356" key="GridCell.Tab.0.left" timestamp="1583161940401">
+    <state width="1874" height="288" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162225663" />
+    <state width="1874" height="288" key="GridCell.Tab.0.left" timestamp="1583162225663">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1582469183358" />
-    <state width="1874" height="356" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161940401" />
-    <state width="1874" height="356" key="GridCell.Tab.0.right" timestamp="1583161940402">
+    <state width="1874" height="288" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162225663" />
+    <state width="1874" height="288" key="GridCell.Tab.0.right" timestamp="1583162225663">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1582469183359" />
-    <state width="1874" height="356" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161940402" />
-    <state width="1874" height="356" key="GridCell.Tab.1.bottom" timestamp="1583161940402">
+    <state width="1874" height="288" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162225663" />
+    <state width="1874" height="356" key="GridCell.Tab.1.bottom" timestamp="1583162193564">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
-    <state width="1874" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161940402" />
-    <state width="1874" height="356" key="GridCell.Tab.1.center" timestamp="1583161940402">
+    <state width="1874" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162193564" />
+    <state width="1874" height="356" key="GridCell.Tab.1.center" timestamp="1583162193563">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
-    <state width="1874" height="356" key="GridCell.Tab.1.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161940402" />
-    <state width="1874" height="356" key="GridCell.Tab.1.left" timestamp="1583161940402">
+    <state width="1874" height="356" key="GridCell.Tab.1.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162193563" />
+    <state width="1874" height="356" key="GridCell.Tab.1.left" timestamp="1583162193563">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1581693868142" />
-    <state width="1874" height="356" key="GridCell.Tab.1.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161940402" />
-    <state width="1874" height="356" key="GridCell.Tab.1.right" timestamp="1583161940402">
+    <state width="1874" height="356" key="GridCell.Tab.1.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162193563" />
+    <state width="1874" height="356" key="GridCell.Tab.1.right" timestamp="1583162193564">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
-    <state width="1874" height="356" key="GridCell.Tab.1.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583161940402" />
+    <state width="1874" height="356" key="GridCell.Tab.1.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583162193564" />
     <state x="216" y="30" width="928" height="681" key="Maven.ArtifactSearchDialog" timestamp="1581675578877">
       <screen x="0" y="0" width="1366" height="744" />
     </state>

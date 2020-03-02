@@ -22,11 +22,20 @@ public class _Should {
     }
 
     @Test
-    public void where_return_empty_list_when_is_empty(){
+    public void where_return_empty_list_when_list_is_empty(){
         List<Integer> numbers = Arrays.asList();
         Predicate<Integer> condition =  x -> x > 2;
 
         List<Integer> result = _.where(numbers, condition);
+
+        Assert.assertEquals(0, result.size());
+    }
+
+    @Test
+    public void where_return_empty_list_when_list_is_null(){
+        Predicate<Integer> condition =  x -> x > 2;
+
+        List<Integer> result = _.where(null, condition);
 
         Assert.assertEquals(0, result.size());
     }
@@ -50,6 +59,16 @@ public class _Should {
         Optional<Integer> result = _.first(numbers, condition);
 
         Assert.assertEquals(Optional.of(filter), result);
+    }
+
+    @Test
+    public void find_an_element_when_list_is_null(){
+        final Integer filter = 2;
+        Predicate<Integer> condition = x -> x == filter;
+
+        Optional<Integer> result = _.first(null, condition);
+
+        Assert.assertEquals(Optional.empty(), result);
     }
 
     @Test
