@@ -14,16 +14,6 @@ public class _ {
         }
     }
 
-    public static <T> List<T> where(final List<T> elements, final Function<T, Boolean> condition){
-        List<T> result = new ArrayList<T>();
-        for (T element: elements){
-            if(condition.apply(element)){
-                result.add(element);
-            }
-        }
-        return result;
-    }
-
     public static <T> List<T> where(final List<T> elements, final Predicate<T> condition){
         List<T> result = new ArrayList<T>();
         for (T element: elements){
@@ -34,21 +24,21 @@ public class _ {
         return result;
     }
 
-    public static <T> Optional<T> find(final List<T> elements, final Function<T, Boolean> condition){
-        for (T element: elements){
-            if (condition.apply(element)) {
-                return Optional.of(element);
-            }
-        }
-        return Optional.empty();
-    }
-
     public static <T, R> List<R> map(final List<T> elements, final Function<T, R> mapper){
         List<R> result = new ArrayList<R>();
         for (T element: elements) {
             result.add(mapper.apply(element));
         }
         return result;
+    }
+
+    public static <T> Optional<T> first(final List<T> elements, final Predicate<T> condition){
+        for (T element: elements){
+            if (condition.test(element)) {
+                return Optional.of(element);
+            }
+        }
+        return Optional.empty();
     }
 
     public static <T> Optional<T> first(final List<T> elements){

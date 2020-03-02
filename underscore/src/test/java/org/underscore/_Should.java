@@ -22,16 +22,6 @@ public class _Should {
     }
 
     @Test
-    public void where_with_lambda_function(){
-        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
-        Function<Integer, Boolean> condition = x -> (x % 2) == 0;
-
-        List<Integer> result = _.where(numbers, condition);
-
-        Assert.assertEquals(2, result.size());
-    }
-
-    @Test
     public void where_with_lambda_predicate(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5);
         Predicate<Integer> condition = x -> (x % 2) == 0;
@@ -45,9 +35,9 @@ public class _Should {
     public void find_an_element(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
         final Integer filter = 2;
-        Function<Integer, Boolean> condition = x -> x == filter;
+        Predicate<Integer> condition = x -> x == filter;
 
-        Optional<Integer> result = _.find(numbers, condition);
+        Optional<Integer> result = _.first(numbers, condition);
 
         Assert.assertEquals(Optional.of(filter), result);
     }
@@ -55,9 +45,9 @@ public class _Should {
     @Test
     public void not_find_an_element(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
-        Function<Integer, Boolean> condition = x -> x == 20;
+        Predicate<Integer> condition = x -> x == 20;
 
-        Optional<Integer> result = _.find(numbers, condition);
+        Optional<Integer> result = _.first(numbers, condition);
 
         Assert.assertFalse(result.isPresent());
     }
