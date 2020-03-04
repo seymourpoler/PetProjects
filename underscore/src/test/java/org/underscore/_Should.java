@@ -193,6 +193,16 @@ public class _Should {
     }
 
     @Test
+    public void return_true_if_all_pass_the_condition(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+        Predicate<Integer> condition = x -> x > 0;
+
+        Boolean result = _.all(numbers, condition);
+
+        Assert.assertTrue(result);
+    }
+
+    @Test
     public void map(){
         List<Integer> numbers = Arrays.asList(1,2,3,4);
         Function<Integer, Integer> mapper = x ->  x + 1;

@@ -143,6 +143,6 @@ public class _ {
                 return false;
             }
         }
-        throw new RuntimeException();
+        return true;
     }
 }
