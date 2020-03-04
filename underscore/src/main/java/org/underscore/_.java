@@ -127,4 +127,13 @@ public class _ {
         }
         return result;
     }
+
+    public static <T> Boolean any(List<T> elements, Predicate<T> condition) {
+        for (T element: elements){
+            if(condition.test(element)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -136,8 +136,6 @@ public class _Should {
     @Test
     public void return_last_number_of_elements(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
-        numbers.add(1);
-        numbers.add(2);
 
         List<Integer> result = _.last(numbers, 3);
 
@@ -162,6 +160,16 @@ public class _Should {
         List<Integer> numbers = new ArrayList<Integer>();
 
         Assert.assertTrue(_.isNotNull(numbers));
+    }
+
+    @Test
+    public void return_true_if_any_pass_the_condition(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+        Predicate<Integer> condition = x -> x > 2;
+
+        Boolean result = _.any(numbers, condition);
+
+        Assert.assertTrue(result);
     }
 
     @Test
