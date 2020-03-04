@@ -163,13 +163,33 @@ public class _Should {
     }
 
     @Test
-    public void return_true_if_any_pass_the_condition(){
+    public void return_true_if_some_one_pass_the_condition(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
         Predicate<Integer> condition = x -> x > 2;
 
         Boolean result = _.any(numbers, condition);
 
         Assert.assertTrue(result);
+    }
+
+    @Test
+    public void return_false_if_nothing_pass_the_condition(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+        Predicate<Integer> condition = x -> x > 100;
+
+        Boolean result = _.any(numbers, condition);
+
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void return_false_if_some_one_not_pass_the_condition(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+        Predicate<Integer> condition = x -> x > 2;
+
+        Boolean result = _.all(numbers, condition);
+
+        Assert.assertFalse(result);
     }
 
     @Test

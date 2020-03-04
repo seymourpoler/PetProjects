@@ -136,4 +136,13 @@ public class _ {
         }
         return false;
     }
+
+    public static <T> Boolean all(List<T> elements, Predicate<T> condition) {
+        for (T element: elements){
+            if(!condition.test(element)){
+                return false;
+            }
+        }
+        throw new RuntimeException();
+    }
 }
