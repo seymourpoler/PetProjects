@@ -134,6 +134,15 @@ public class _Should {
     }
 
     @Test
+    public void return_empty_when_there_is_no_last_element(){
+        List<Integer> numbers = new ArrayList<Integer>();
+
+        Optional<Integer> result = _.last(numbers);
+
+        Assert.assertEquals(Optional.empty(), result);
+    }
+
+    @Test
     public void return_last_number_of_elements(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
