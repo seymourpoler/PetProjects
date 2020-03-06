@@ -82,6 +82,13 @@ public class _Should {
     }
 
     @Test
+    public void return_true_when_there_are_null_elements() {
+        Boolean result = _.isEmpty(null);
+
+        Assert.assertTrue(result);
+    }
+
+    @Test
     public void return_true_when_is_empty(){
         List<Integer> numbers = new ArrayList<>();
 
@@ -161,6 +168,7 @@ public class _Should {
 
     @Test
     public void return_true_when_is_null(){
+
         Assert.assertTrue(_.isNull(null));
     }
 
@@ -229,6 +237,13 @@ public class _Should {
         Boolean result = _.none(numbers, condition);
 
         Assert.assertFalse(result);
+    }
+
+    @Test
+    public void return_zero_elements_when_is_null(){
+        Integer result = _.count(null);
+
+        Assert.assertTrue(result.equals(0));
     }
 
     @Test

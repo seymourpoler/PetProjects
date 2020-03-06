@@ -8,6 +8,9 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class _ {
+
+    private static  final Integer hasNoElements = 0;
+
     public static <T> void each(final List<T> elements, final Consumer<T> consumer) {
         for (T element : elements) {
             consumer.accept(element);
@@ -70,7 +73,6 @@ public class _ {
     }
 
     public static <T> Boolean isEmpty(final List<T> elements) {
-        final Integer hasNoElements = 0;
         return elements.size() == hasNoElements;
     }
 
@@ -114,6 +116,11 @@ public class _ {
         }
 
         return result;
+    }
+
+    public static <T> Integer count(final List<T> elements){
+        if(isNull(elements)) return hasNoElements;
+        throw new RuntimeException();
     }
 
     public static <T> List<T> zip(final List<T> first, final List<T> two) {
