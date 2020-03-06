@@ -145,4 +145,13 @@ public class _ {
         }
         return true;
     }
+
+    public static <T> Boolean none(List<T> elements, Predicate<T> condition){
+        for (T element: elements){
+            if(condition.test(element)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

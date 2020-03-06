@@ -172,7 +172,7 @@ public class _Should {
     }
 
     @Test
-    public void return_true_if_some_one_pass_the_condition(){
+    public void return_true_when_some_one_pass_the_condition(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
         Predicate<Integer> condition = x -> x > 2;
 
@@ -182,7 +182,7 @@ public class _Should {
     }
 
     @Test
-    public void return_false_if_nothing_pass_the_condition(){
+    public void return_false_when_nothing_pass_the_condition(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
         Predicate<Integer> condition = x -> x > 100;
 
@@ -192,7 +192,7 @@ public class _Should {
     }
 
     @Test
-    public void return_false_if_some_one_not_pass_the_condition(){
+    public void return_false_when_some_one_not_pass_the_condition(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
         Predicate<Integer> condition = x -> x > 2;
 
@@ -202,7 +202,7 @@ public class _Should {
     }
 
     @Test
-    public void return_true_if_all_pass_the_condition(){
+    public void return_true_when_all_pass_the_condition(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
         Predicate<Integer> condition = x -> x > 0;
 
@@ -212,12 +212,41 @@ public class _Should {
     }
 
     @Test
+    public void return_true_when_none_pass_the_condition(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+        Predicate<Integer> condition = x -> x > 100;
+
+        Boolean result = _.none(numbers, condition);
+
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void return_true_when_some_pass_the_condition(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+        Predicate<Integer> condition = x -> x > 5;
+
+        Boolean result = _.none(numbers, condition);
+
+        Assert.assertFalse(result);
+    }
+
+    @Test
     public void map(){
         List<Integer> numbers = Arrays.asList(1,2,3,4);
         Function<Integer, Integer> mapper = x ->  x + 1;
         List<Integer> result = _.map(numbers, mapper);
 
         Assert.assertTrue( result.get(0).equals(2));
+    }
+
+    @Test
+    public void return_zero_when_there_is_no_numbers(){
+        List<Integer> numbers = Arrays.asList();
+
+        Integer result = _.sum(numbers);
+
+        Assert.assertTrue(result.equals(0));
     }
 
     @Test
