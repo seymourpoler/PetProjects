@@ -121,7 +121,7 @@ public class _ {
     public static <T> Integer count(final List<T> elements){
         if(isNull(elements) || isEmpty(elements)) return hasNoElements;
 
-        throw new RuntimeException();
+        return elements.size();
     }
 
     public static <T> List<T> zip(final List<T> first, final List<T> two) {

@@ -255,6 +255,15 @@ public class _Should {
     }
 
     @Test
+    public void return_number_of_elements(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+
+        Integer result = _.count(numbers);
+
+        Assert.assertTrue(result.equals(5));
+    }
+
+    @Test
     public void map(){
         List<Integer> numbers = Arrays.asList(1,2,3,4);
         Function<Integer, Integer> mapper = x ->  x + 1;

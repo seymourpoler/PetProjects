@@ -4,6 +4,7 @@
     <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
-  <component name="RunManager" selected="JUnit._Should">
+  <component name="RunManager" selected="JUnit._Should.return_number_of_elements">
     <configuration name="_Should" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -75,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_Should.return_true_when_there_are_null_elements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="_Should.return_number_of_elements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
         <pattern>
@@ -85,7 +86,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.underscore" />
       <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
-      <option name="METHOD_NAME" value="return_true_when_there_are_null_elements" />
+      <option name="METHOD_NAME" value="return_number_of_elements" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit._Should.return_number_of_elements" />
         <item itemvalue="JUnit._Should" />
         <item itemvalue="JUnit._Should.return_zero_elements_when_there_are_no_elements" />
         <item itemvalue="JUnit._Should.return_zero_elements_when_there_is_no_elements" />
         <item itemvalue="JUnit._Should.return_zero_elements_when_is_null" />
-        <item itemvalue="JUnit._Should.return_true_when_there_are_null_elements" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583479107845</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="green return_zero_elements_when_there_are_no_elements">
+      <created>1583479182769</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1583479182769</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -289,31 +297,31 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2" timestamp="1583479107683">
+    <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2" timestamp="1583479182648">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1582473669100" />
-    <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479107683" />
-    <state width="1874" height="288" key="GridCell.Tab.0.bottom" timestamp="1583479158983">
+    <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479182648" />
+    <state width="1874" height="288" key="GridCell.Tab.0.bottom" timestamp="1583479233138">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1582469183360" />
-    <state width="1874" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479158983" />
-    <state width="1874" height="288" key="GridCell.Tab.0.center" timestamp="1583479158983">
+    <state width="1874" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479233138" />
+    <state width="1874" height="288" key="GridCell.Tab.0.center" timestamp="1583479233138">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1582469183359" />
-    <state width="1874" height="288" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479158983" />
-    <state width="1874" height="288" key="GridCell.Tab.0.left" timestamp="1583479158982">
+    <state width="1874" height="288" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479233138" />
+    <state width="1874" height="288" key="GridCell.Tab.0.left" timestamp="1583479233138">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1582469183358" />
-    <state width="1874" height="288" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479158982" />
-    <state width="1874" height="288" key="GridCell.Tab.0.right" timestamp="1583479158983">
+    <state width="1874" height="288" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479233138" />
+    <state width="1874" height="288" key="GridCell.Tab.0.right" timestamp="1583479233138">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1582469183359" />
-    <state width="1874" height="288" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479158983" />
+    <state width="1874" height="288" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583479233138" />
     <state width="1874" height="356" key="GridCell.Tab.1.bottom" timestamp="1583225682559">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
