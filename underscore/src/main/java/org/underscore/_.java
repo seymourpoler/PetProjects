@@ -120,6 +120,8 @@ public class _ {
 
     public static <T> Integer count(final List<T> elements){
         if(isNull(elements)) return hasNoElements;
+        if(isEmpty(elements)) return hasNoElements;
+
         throw new RuntimeException();
     }
 
