@@ -249,6 +249,7 @@ public class _Should {
     @Test
     public void return_zero_elements_when_there_are_no_elements(){
         List<Integer> numbers = Arrays.asList();
+
         Integer result = _.count(numbers);
 
         Assert.assertTrue(result.equals(0));
