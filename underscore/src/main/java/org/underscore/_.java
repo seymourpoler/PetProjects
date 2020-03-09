@@ -62,6 +62,9 @@ public class _ {
         if(isNull(elements)) {
             return Arrays.asList();
         }
+        if(isEmpty(elements)){
+            return elements;
+        }
         throw new RuntimeException();
     }
 
