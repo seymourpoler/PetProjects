@@ -65,10 +65,24 @@ public class _ {
         if(isEmpty(elements)){
             return elements;
         }
-        if(numberOfElements > elements.size()){
+        if(numberOfElements >= elements.size()){
             return elements;
         }
-        throw new RuntimeException();
+
+        List<T> result = new ArrayList<>();
+
+        for (T element: elements){
+            if(result.size()<= numberOfElements){
+                result.add(element);
+            }else{
+                return result;
+            }
+        }
+        return result;
+
+//        return elements.stream()
+//                .limit(numberOfElements)
+//                .collect(Collectors.toList());
     }
 
     public static <T> Optional<T> last(final List<T> elements) {
@@ -83,6 +97,9 @@ public class _ {
     }
 
     public static <T> Boolean isEmpty(final List<T> elements) {
+        if(isNull(elements)) {
+            return true;
+        }
         return elements.size() == hasNoElements;
     }
 

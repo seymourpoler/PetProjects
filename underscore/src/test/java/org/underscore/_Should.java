@@ -137,10 +137,19 @@ public class _Should {
     }
 
     @Test
-    public void return_the_same_list_of_elements_when_the_limit_is_hihger_than_the_number_of_elements(){
+    public void return_the_same_list_of_elements_when_the_limit_is_higher_than_the_number_of_elements(){
         List<Integer> numbers = Arrays.asList(1,2,3,4);
 
         List<Integer> result = _.first(numbers, 7);
+
+        Assert.assertEquals(numbers.size(), result.size());
+    }
+
+    @Test
+    public void return_the_same_list_of_elements_when_the_limit_is_equals_than_the_number_of_elements(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4);
+
+        List<Integer> result = _.first(numbers, 4);
 
         Assert.assertEquals(numbers.size(), result.size());
     }
