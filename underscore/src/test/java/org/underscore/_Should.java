@@ -121,6 +121,13 @@ public class _Should {
     }
 
     @Test
+    public void return_list_empty_when_list_of_elements_are_null(){
+        List<Integer> result = _.first(null, 3);
+
+        Assert.assertTrue(result.isEmpty());
+    }
+
+    @Test
     public void return_limit_the_first_number_of_elements(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 

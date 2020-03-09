@@ -1,6 +1,7 @@
 package org.underscore;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -58,6 +59,9 @@ public class _ {
     }
 
     public static <T> List<T> first(final List<T> elements, final Integer numberOfElements) {
+        if(isNull(elements)) {
+            return Arrays.asList();
+        }
         throw new RuntimeException();
     }
 
