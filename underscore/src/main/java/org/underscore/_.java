@@ -93,6 +93,13 @@ public class _ {
     }
 
     public static <T> List<T> last(final List<T> elements, final Integer numberOfElements) {
+        if(isNull(elements)) {
+            return Arrays.asList();
+        }
+        if(isEmpty(elements)){
+            return elements;
+        }
+
         throw new RuntimeException();
     }
 

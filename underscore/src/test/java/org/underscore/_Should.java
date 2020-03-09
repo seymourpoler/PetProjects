@@ -184,6 +184,20 @@ public class _Should {
     }
 
     @Test
+    public void return_empty_when_last_elements_are_null(){
+        List<Integer> result = _.last(null, 3);
+
+        Assert.assertTrue(result.isEmpty());
+    }
+
+    @Test
+    public void return_empty_when_last_elements_are_empty(){
+        List<Integer> result = _.last(Arrays.asList(), 3);
+
+        Assert.assertTrue(result.isEmpty());
+    }
+
+    @Test
     public void return_last_number_of_elements(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
