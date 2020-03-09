@@ -65,6 +65,9 @@ public class _ {
         if(isEmpty(elements)){
             return elements;
         }
+        if(numberOfElements > elements.size()){
+            return elements;
+        }
         throw new RuntimeException();
     }
 
