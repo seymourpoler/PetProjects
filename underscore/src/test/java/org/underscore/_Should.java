@@ -216,6 +216,15 @@ public class _Should {
     }
 
     @Test
+    public void return_list_empty_when_last_number_is_zero(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+
+        List<Integer> result = _.last(numbers, 0);
+
+        Assert.assertEquals(result, Arrays.asList());
+    }
+
+    @Test
     public void return_last_number_of_elements(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 

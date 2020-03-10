@@ -102,6 +102,9 @@ public class _ {
         if(numberOfElements >= elements.size()) {
             return elements;
         }
+        if(numberOfElements == 0){
+            return Arrays.asList();
+        }
 
         throw new RuntimeException();
     }
