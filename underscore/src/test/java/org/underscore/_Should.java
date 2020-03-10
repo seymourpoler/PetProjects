@@ -183,9 +183,7 @@ public class _Should {
 
     @Test
     public void return_last_element(){
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
+        List<Integer> numbers = Arrays.asList(1,2);
 
         Optional<Integer> result = _.last(numbers);
 
