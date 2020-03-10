@@ -155,6 +155,24 @@ public class _Should {
     }
 
     @Test
+    public void return_list_empty_when_the_limit_is_zero_on_first_elements(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4);
+
+        List<Integer> result = _.first(numbers, 0);
+
+        Assert.assertEquals(Arrays.asList(), result);
+    }
+
+    @Test
+    public void return_list_empty_when_the_limit_is_negative_on_first_elements(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4);
+
+        List<Integer> result = _.first(numbers, -2);
+
+        Assert.assertEquals(Arrays.asList(), result);
+    }
+
+    @Test
     public void return_limit_the_first_number_of_elements(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
@@ -220,6 +238,15 @@ public class _Should {
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
         List<Integer> result = _.last(numbers, 0);
+
+        Assert.assertEquals(result, Arrays.asList());
+    }
+
+    @Test
+    public void return_list_empty_when_last_number_is_negative(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+
+        List<Integer> result = _.last(numbers, -2);
 
         Assert.assertEquals(result, Arrays.asList());
     }

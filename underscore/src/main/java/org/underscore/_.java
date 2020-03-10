@@ -68,6 +68,9 @@ public class _ {
         if(numberOfElements >= elements.size()){
             return elements;
         }
+        if(numberOfElements <= hasNoElements){
+            return Arrays.asList();
+        }
 
         List<T> result = new ArrayList<>();
 
@@ -102,7 +105,7 @@ public class _ {
         if(numberOfElements >= elements.size()) {
             return elements;
         }
-        if(numberOfElements == 0){
+        if(numberOfElements <= hasNoElements){
             return Arrays.asList();
         }
 
