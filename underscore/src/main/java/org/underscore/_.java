@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 
 public class _ {
 
-    private static  final Integer hasNoElements = 0;
+    private static  final Integer noElements = 0;
 
     public static <T> void each(final List<T> elements, final Consumer<T> consumer) {
         for (T element : elements) {
@@ -68,7 +68,7 @@ public class _ {
         if(numberOfElements >= elements.size()){
             return elements;
         }
-        if(numberOfElements <= hasNoElements){
+        if(numberOfElements <= noElements){
             return Arrays.asList();
         }
 
@@ -105,7 +105,7 @@ public class _ {
         if(numberOfElements >= elements.size()) {
             return elements;
         }
-        if(numberOfElements <= hasNoElements){
+        if(numberOfElements <= noElements){
             return Arrays.asList();
         }
 
@@ -116,7 +116,7 @@ public class _ {
         if(isNull(elements)) {
             return true;
         }
-        return elements.size() == hasNoElements;
+        return elements.size() == noElements;
     }
 
     public static <T> Boolean isNotEmpty(final List<T> elements) {
@@ -162,7 +162,7 @@ public class _ {
     }
 
     public static <T> Integer count(final List<T> elements){
-        if(isNull(elements) || isEmpty(elements)) return hasNoElements;
+        if(isNull(elements) || isEmpty(elements)) return noElements;
 
         return elements.size();
     }
