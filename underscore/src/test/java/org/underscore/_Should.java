@@ -207,6 +207,15 @@ public class _Should {
     }
 
     @Test
+    public void return_the_same_elements_when_last_number_is_equals_than_the_number_of_elements(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
+
+        List<Integer> result = _.last(numbers, 6);
+
+        Assert.assertEquals(numbers.size(), result.size());
+    }
+
+    @Test
     public void return_last_number_of_elements(){
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
 
