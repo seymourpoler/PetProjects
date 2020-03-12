@@ -109,7 +109,13 @@ public class _ {
             return Arrays.asList();
         }
 
-        throw new RuntimeException();
+        List<T> result = new ArrayList<T>();
+
+        for(Integer position=elements.size() - numberOfElements; position < elements.size(); position++){
+            result.add((T)elements.get(position));
+        }
+
+        return result;
     }
 
     public static <T> Boolean isEmpty(final List<T> elements) {
