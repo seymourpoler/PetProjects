@@ -420,12 +420,8 @@ public class _Should {
 
     @Test
     public void return_zipped(){
-        List<String> animals = new ArrayList<String>();
-        animals.add("monkey");
-        animals.add("rabbit");
-        List<String> fruits = new ArrayList<String>();
-        fruits.add("berry");
-        fruits.add("banana");
+        List<String> animals = Arrays.asList("monkey", "rabbit");
+        List<String> fruits = Arrays.asList("berry", "banana");
 
         List<String> result = _.zip(animals, fruits);
 
