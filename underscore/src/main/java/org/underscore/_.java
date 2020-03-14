@@ -185,6 +185,13 @@ public class _ {
         return result;
     }
 
+    public static <T> T[] toArray(List<T> elements){
+        if(isNull(elements)){
+            throw  new IllegalArgumentException();
+        }
+        throw new RuntimeException();
+    }
+
     public static <T> Boolean any(List<T> elements, Predicate<T> condition) {
         for (T element: elements){
             if(condition.test(element)){
