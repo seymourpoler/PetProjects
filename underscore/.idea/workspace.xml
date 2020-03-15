@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="remove toArray feature">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" afterDir="false" />
+    <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/underscore/_.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/underscore/_.class" afterDir="false" />
     </list>
     <list id="74caabd0-9869-47c8-aa35-533d5522f9cc" name="Revert: " comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -373,11 +373,17 @@
       <option name="project" value="LOCAL" />
       <updated>1584201235489</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="remove commented code">
+      <created>1584284435295</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1584284435295</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="green return_true_if_all_pass_the_condition" />
     <MESSAGE value="green return_empty_when_there_is_no_last_element" />
     <MESSAGE value="refactor rename" />
     <MESSAGE value="green return_true_when_none_pass_the_condition" />
@@ -402,7 +408,8 @@
     <MESSAGE value="refactor: rename" />
     <MESSAGE value="use Arrays.asList" />
     <MESSAGE value="green throw_illegal_argument_exception_when_is_null" />
-    <option name="LAST_COMMIT_MESSAGE" value="green throw_illegal_argument_exception_when_is_null" />
+    <MESSAGE value="remove commented code" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove commented code" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
