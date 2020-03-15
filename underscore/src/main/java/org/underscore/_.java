@@ -82,10 +82,6 @@ public class _ {
             }
         }
         return result;
-
-//        return elements.stream()
-//                .limit(numberOfElements)
-//                .collect(Collectors.toList());
     }
 
     public static <T> Optional<T> last(final List<T> elements) {
