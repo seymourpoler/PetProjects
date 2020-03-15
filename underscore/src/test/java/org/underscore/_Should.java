@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -427,5 +428,16 @@ public class _Should {
 
         Assert.assertTrue(result.get(0).equals("monkey"));
         Assert.assertTrue(result.get(4).equals("banana"));
+    }
+
+    @Test
+    public void execute_number_of_times(){
+        AtomicReference<Integer> numberOfTimesResult = new AtomicReference<>(0);
+
+        _.times(3, () ->{
+            numberOfTimesResult.getAndSet(numberOfTimesResult.get() + 1);
+        });
+
+        Assert.assertTrue( numberOfTimesResult.get().equals(3));
     }
 }

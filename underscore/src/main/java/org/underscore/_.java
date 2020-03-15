@@ -164,8 +164,9 @@ public class _ {
     }
 
     public static <T> Integer count(final List<T> elements){
-        if(isNull(elements) || isEmpty(elements)) return noElements;
-
+        if(isNull(elements) || isEmpty(elements)) {
+            return noElements;
+        }
         return elements.size();
     }
 
@@ -206,5 +207,11 @@ public class _ {
             }
         }
         return true;
+    }
+
+    public static void times(Integer numberOfTimes, Runnable runnable){
+        for (Integer position = 0; position < numberOfTimes; position++){
+            runnable.run();
+        }
     }
 }
