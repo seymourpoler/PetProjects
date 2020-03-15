@@ -57,7 +57,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
-  <component name="RunManager" selected="JUnit._Should.throws_illegal_argument_exception_when_is_null">
+  <component name="RunManager" selected="JUnit._Should">
     <configuration name="_Should" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -89,6 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="_Should.return_empty_array_when_is_empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="underscore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.underscore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.underscore" />
+      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
+      <option name="METHOD_NAME" value="return_empty_array_when_is_empty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="_Should.return_last_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -100,22 +116,6 @@
       <option name="PACKAGE_NAME" value="org.underscore" />
       <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
       <option name="METHOD_NAME" value="return_last_element" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_Should.return_list_empty_when_the_limit_is_negative_on_first_elements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="underscore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.underscore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.underscore" />
-      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
-      <option name="METHOD_NAME" value="return_list_empty_when_the_limit_is_negative_on_first_elements" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit._Should" />
+        <item itemvalue="JUnit._Should.return_empty_array_when_is_empty" />
         <item itemvalue="JUnit._Should.throws_illegal_argument_exception_when_is_null" />
         <item itemvalue="JUnit._Should.return_an_emtpy_array_when_is_null" />
-        <item itemvalue="JUnit._Should" />
         <item itemvalue="JUnit._Should.return_last_element" />
-        <item itemvalue="JUnit._Should.return_list_empty_when_the_limit_is_negative_on_first_elements" />
       </list>
     </recent_temporary>
   </component>
@@ -368,11 +368,17 @@
       <option name="project" value="LOCAL" />
       <updated>1584198890953</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="green throw_illegal_argument_exception_when_is_null">
+      <created>1584201235489</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1584201235489</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="green return_false_if_some_one_not_pass_the_condition" />
     <MESSAGE value="green return_true_if_all_pass_the_condition" />
     <MESSAGE value="green return_empty_when_there_is_no_last_element" />
     <MESSAGE value="refactor rename" />
@@ -397,7 +403,8 @@
     <MESSAGE value="green return_list_empty_when_the_limit_is_zero_on_first_elements and return_list_empty_when_the_limit_is_negative_on_first_elements" />
     <MESSAGE value="refactor: rename" />
     <MESSAGE value="use Arrays.asList" />
-    <option name="LAST_COMMIT_MESSAGE" value="use Arrays.asList" />
+    <MESSAGE value="green throw_illegal_argument_exception_when_is_null" />
+    <option name="LAST_COMMIT_MESSAGE" value="green throw_illegal_argument_exception_when_is_null" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -418,35 +425,35 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="210" y="0" width="1468" height="1056" key="CommitChangelistDialog2" timestamp="1584198890342">
+    <state x="210" y="0" width="1468" height="1056" key="CommitChangelistDialog2" timestamp="1584283756155">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1584198890342" />
+    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1584283756155" />
     <state x="0" y="0" width="1468" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852737421" />
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776343714" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1056@0.0.1920.1056" timestamp="1584034035114" />
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1584201191298">
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1584204048610">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1584201191298" />
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1584204048610" />
     <state width="1920" height="355" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1584201191295">
+    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1584204048609">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1584201191295" />
+    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1584204048609" />
     <state width="1920" height="355" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="295" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1584201191275">
+    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1584204048608">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1584201191275" />
+    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1584204048608" />
     <state width="1920" height="355" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="295" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1584201191297">
+    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1584204048609">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1584201191297" />
+    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1584204048609" />
     <state width="1920" height="355" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="295" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
     <state width="1920" height="355" key="GridCell.Tab.1.bottom" timestamp="1583852916400">
@@ -482,24 +489,24 @@
     </state>
     <state x="172" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1584197239754" />
     <state x="2162" y="0" key="SettingsEditor/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583775890783" />
-    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1584198898015">
+    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1584283760241">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1584198898015" />
+    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1584283760241" />
     <state x="391" y="154" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852598254" />
     <state x="2311" y="157" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776345929" />
-    <state x="476" y="283" key="com.intellij.ide.util.TipDialog" timestamp="1584033780030">
-      <screen x="0" y="0" width="1920" height="1056" />
+    <state x="339" y="199" key="com.intellij.ide.util.TipDialog" timestamp="1584282209986">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="339" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.744@0.0.1366.744" timestamp="1582468721242" />
+    <state x="339" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.744@0.0.1366.744" timestamp="1584282209986" />
     <state x="476" y="283" key="com.intellij.ide.util.TipDialog/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583851663398" />
     <state x="476" y="283" key="com.intellij.ide.util.TipDialog/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@0.0.1920.1056" timestamp="1583775377030" />
     <state x="2396" y="289" key="com.intellij.ide.util.TipDialog/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583775579284" />
     <state x="476" y="283" key="com.intellij.ide.util.TipDialog/0.0.1920.1056@0.0.1920.1056" timestamp="1584033780030" />
-    <state x="451" y="292" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584198894675">
+    <state x="451" y="292" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584283699417">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="451" y="292" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.744@0.0.1366.744" timestamp="1584198894675" />
+    <state x="451" y="292" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.744@0.0.1366.744" timestamp="1584283699417" />
     <state x="634" y="415" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852569446" />
     <state x="2554" y="424" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776014733" />
     <state x="444" y="171" key="run.anything.popup" timestamp="1584201128324">
@@ -507,9 +514,9 @@
     </state>
     <state x="444" y="171" key="run.anything.popup/0.0.1366.744@0.0.1366.744" timestamp="1584201128324" />
     <state x="2544" y="248" key="run.anything.popup/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776243129" />
-    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1581783661841">
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1584204011983">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1581783661841" />
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1584204011983" />
   </component>
 </project>

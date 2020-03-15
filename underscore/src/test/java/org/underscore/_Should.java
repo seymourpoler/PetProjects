@@ -428,11 +428,4 @@ public class _Should {
         Assert.assertTrue(result.get(0).equals("monkey"));
         Assert.assertTrue(result.get(4).equals("banana"));
     }
-
-    @Test (expected = IllegalArgumentException.class)
-    public void throw_illegal_argument_exception_when_is_null(){
-        String[] result = (String[]) _.toArray(null);
-
-        Assert.fail("expected IllegalArgumentException");
     }
-}
