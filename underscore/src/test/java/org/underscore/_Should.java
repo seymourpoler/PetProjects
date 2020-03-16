@@ -438,6 +438,28 @@ public class _Should {
     }
 
     @Test
+    public void no_execute_when_number_of_times_is_zero(){
+        AtomicReference<Integer> numberOfTimesResult = new AtomicReference<>(0);
+
+        _.times(0, () ->{
+            numberOfTimesResult.getAndSet(numberOfTimesResult.get() + 1);
+        });
+
+        Assert.assertTrue( numberOfTimesResult.get().equals(0));
+    }
+
+    @Test
+    public void no_execute_when_number_of_times_is_negative(){
+        AtomicReference<Integer> numberOfTimesResult = new AtomicReference<>(0);
+
+        _.times(-3, () ->{
+            numberOfTimesResult.getAndSet(numberOfTimesResult.get() + 1);
+        });
+
+        Assert.assertTrue( numberOfTimesResult.get().equals(0));
+    }
+
+    @Test
     public void execute_number_of_times(){
         AtomicReference<Integer> numberOfTimesResult = new AtomicReference<>(0);
 
