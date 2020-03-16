@@ -1,6 +1,7 @@
 package org.underscore;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -420,6 +421,7 @@ public class _Should {
     }
 
     @Test
+    @Ignore
     public void return_zipped(){
         List<String> animals = Arrays.asList("monkey", "rabbit");
         List<String> fruits = Arrays.asList("berry", "banana");
@@ -468,5 +470,12 @@ public class _Should {
         });
 
         Assert.assertTrue( numberOfTimesResult.get().equals(3));
+    }
+
+    @Test
+    public void return_false_when_is_not_included(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4);
+
+        Assert.assertFalse(_.include(numbers, 4));
     }
 }
