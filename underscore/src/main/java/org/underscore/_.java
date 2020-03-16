@@ -219,6 +219,9 @@ public class _ {
     }
 
     public static <T> Boolean include(List<T> elements, T includedElement){
+        if(elements == null){
+            return false;
+        }
         for (T element: elements){
             if(element.equals(includedElement)){
                 return true;
