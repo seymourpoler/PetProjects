@@ -219,7 +219,11 @@ public class _ {
     }
 
     public static <T> Boolean include(List<T> elements, T includedElement){
+        for (T element: elements){
+            if(element.equals(includedElement)){
+                return true;
+            }
+        }
         return false;
     }
-
 }

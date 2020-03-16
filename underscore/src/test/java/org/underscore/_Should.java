@@ -476,6 +476,13 @@ public class _Should {
     public void return_false_when_is_not_included(){
         List<Integer> numbers = Arrays.asList(1,2,3,4);
 
-        Assert.assertFalse(_.include(numbers, 4));
+        Assert.assertFalse(_.include(numbers, 5));
+    }
+
+    @Test
+    public void return_true_when_is_not_included(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4);
+
+        Assert.assertTrue(_.include(numbers, 4));
     }
 }
