@@ -222,6 +222,9 @@ public class _ {
         if(elements == null){
             return false;
         }
+        if(includedElement == null){
+            return false;
+        }
         for (T element: elements){
             if(element.equals(includedElement)){
                 return true;
