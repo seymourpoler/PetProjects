@@ -478,6 +478,13 @@ public class _Should {
     }
 
     @Test
+    public void return_false_when_included_element_is_null(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4);
+
+        Assert.assertFalse(_.include(numbers, null));
+    }
+
+    @Test
     public void return_false_when_is_not_included(){
         List<Integer> numbers = Arrays.asList(1,2,3,4);
 
