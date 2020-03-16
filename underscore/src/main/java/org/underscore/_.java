@@ -210,6 +210,9 @@ public class _ {
     }
 
     public static void times(Integer numberOfTimes, Runnable runnable){
+        if(runnable == null){
+            throw new IllegalArgumentException();
+        }
         for (Integer position = 0; position < numberOfTimes; position++){
             runnable.run();
         }

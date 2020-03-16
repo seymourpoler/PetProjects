@@ -430,6 +430,13 @@ public class _Should {
         Assert.assertTrue(result.get(4).equals("banana"));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void throws_illegal_argument_exception_when_runable_is_null(){
+        _.times(2, null);
+
+        Assert.fail("IllegalArgumentException expected");
+    }
+
     @Test
     public void execute_number_of_times(){
         AtomicReference<Integer> numberOfTimesResult = new AtomicReference<>(0);
