@@ -219,17 +219,19 @@ public class _ {
     }
 
     public static <T> Boolean include(List<T> elements, T includedElement){
-        if(elements == null){
+        if(elements == null || includedElement == null){
             return false;
         }
-        if(includedElement == null){
-            return false;
-        }
+
         for (T element: elements){
             if(element.equals(includedElement)){
                 return true;
             }
         }
         return false;
+    }
+
+    public static <T> List<T> union(List<T> aList, List<T> anotherList){
+        throw new RuntimeException();
     }
 }

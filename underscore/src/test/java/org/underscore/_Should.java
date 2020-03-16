@@ -497,4 +497,11 @@ public class _Should {
 
         Assert.assertTrue(_.include(numbers, 4));
     }
+
+    @Test
+    public void return_union_of_lists(){
+        List<Integer> numbers = _.union(Arrays.asList(1,2,3,4), Arrays.asList(5,6,7,8));
+
+        Assert.assertTrue(numbers.get(4).equals(5));
+    }
 }
