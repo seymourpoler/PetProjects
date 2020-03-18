@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class _ {
+public class U {
 
     private static  final Integer noElements = 0;
 
@@ -245,5 +245,9 @@ public class _ {
         result.addAll(aList);
         result.addAll(anotherList);
         return result;
+    }
+
+    public static  <T> List<T> intersection(final List<T> firstList, final List<T> secondList){
+        throw new RuntimeException();
     }
 }
