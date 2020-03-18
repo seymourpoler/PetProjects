@@ -231,7 +231,7 @@ public class _ {
         return false;
     }
 
-    public static <T> List<T> union(List<T> aList, List<T> anotherList){
+    public static <T> List<T> union(final List<T> aList, final List<T> anotherList){
         if(isNull(aList) && isNull(anotherList)){
             return Arrays.asList();
         }
@@ -241,6 +241,9 @@ public class _ {
         if(isNotNull(aList) && isNull(anotherList)){
             return aList;
         }
-        throw new RuntimeException();
+        List<T> result = new ArrayList<>();
+        result.addAll(aList);
+        result.addAll(anotherList);
+        return result;
     }
 }

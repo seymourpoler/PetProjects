@@ -521,4 +521,13 @@ public class _Should {
         Assert.assertEquals(result, numbers);
     }
 
+    @Test
+    public void return_zipped_list(){
+        List<Integer> firstList = Arrays.asList(1,2,3,4);
+        List<Integer> secondList = Arrays.asList(5,6,7,7,9);
+        List<Integer> result = _.union(firstList, secondList);
+
+        Assert.assertEquals(firstList.size() + secondList.size(), result.size());
+    }
+
 }
