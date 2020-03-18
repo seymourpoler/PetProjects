@@ -238,6 +238,9 @@ public class _ {
         if(isNull(aList) && isNotNull(anotherList)){
             return anotherList;
         }
+        if(isNotNull(aList) && isNull(anotherList)){
+            return aList;
+        }
         throw new RuntimeException();
     }
 }
