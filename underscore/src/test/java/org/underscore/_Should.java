@@ -499,9 +499,11 @@ public class _Should {
     }
 
     @Test
-    public void return_empty_list_when_all_lists_are_empty(){
+    public void return_empty_list_when_all_lists_are_null(){
         List<Integer> numbers = _.union(null, null);
 
         Assert.assertTrue(numbers.isEmpty());
     }
+
+
 }
