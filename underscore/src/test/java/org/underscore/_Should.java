@@ -522,7 +522,7 @@ public class _Should {
     }
 
     @Test
-    public void return_zipped_list(){
+    public void return_union_list(){
         List<Integer> firstList = Arrays.asList(1,2,3,4);
         List<Integer> secondList = Arrays.asList(5,6,7,7,9);
         List<Integer> result = _.union(firstList, secondList);
