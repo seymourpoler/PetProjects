@@ -505,5 +505,12 @@ public class _Should {
         Assert.assertTrue(numbers.isEmpty());
     }
 
+    @Test
+    public void return_second_list_when_first_list_is_null(){
+        List<Integer> numbers = Arrays.asList(1,2,3,4);
+        List<Integer> result = _.union(null, numbers);
+
+        Assert.assertEquals(result, numbers);
+    }
 
 }

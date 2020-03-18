@@ -235,6 +235,9 @@ public class _ {
         if(isNull(aList) && isNull(anotherList)){
             return Arrays.asList();
         }
+        if(isNull(aList) && isNotNull(anotherList)){
+            return anotherList;
+        }
         throw new RuntimeException();
     }
 }
