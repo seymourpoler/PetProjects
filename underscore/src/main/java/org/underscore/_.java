@@ -232,6 +232,9 @@ public class _ {
     }
 
     public static <T> List<T> union(List<T> aList, List<T> anotherList){
+        if(isNull(aList) && isNull(anotherList)){
+            return Arrays.asList();
+        }
         throw new RuntimeException();
     }
 }
