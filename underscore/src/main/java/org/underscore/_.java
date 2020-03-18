@@ -174,7 +174,7 @@ public class _ {
         throw new RuntimeException();
     }
 
-    public static <T> List<T> reverse(List<T> elements) {
+    public static <T> List<T> reverse(final List<T> elements) {
         List<T> result = new ArrayList<>();
         for (Integer position = elements.size() - 1; position >= 0; position--) {
             result.add(elements.get(position));
@@ -182,7 +182,7 @@ public class _ {
         return result;
     }
 
-    public static <T> Boolean any(List<T> elements, Predicate<T> condition) {
+    public static <T> Boolean any(final List<T> elements, final Predicate<T> condition) {
         for (T element: elements){
             if(condition.test(element)){
                 return true;
@@ -191,7 +191,7 @@ public class _ {
         return false;
     }
 
-    public static <T> Boolean all(List<T> elements, Predicate<T> condition) {
+    public static <T> Boolean all(final List<T> elements, final Predicate<T> condition) {
         for (T element: elements){
             if(!condition.test(element)){
                 return false;
@@ -200,7 +200,7 @@ public class _ {
         return true;
     }
 
-    public static <T> Boolean none(List<T> elements, Predicate<T> condition){
+    public static <T> Boolean none(final List<T> elements, final Predicate<T> condition){
         for (T element: elements){
             if(condition.test(element)) {
                 return false;
@@ -209,7 +209,7 @@ public class _ {
         return true;
     }
 
-    public static void times(Integer numberOfTimes, Runnable runnable){
+    public static void times(final Integer numberOfTimes, final Runnable runnable){
         if(runnable == null){
             throw new IllegalArgumentException();
         }
@@ -218,7 +218,7 @@ public class _ {
         }
     }
 
-    public static <T> Boolean include(List<T> elements, T includedElement){
+    public static <T> Boolean include(final List<T> elements, final T includedElement){
         if(elements == null || includedElement == null){
             return false;
         }
