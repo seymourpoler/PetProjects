@@ -4,7 +4,6 @@
     <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" afterDir="false" />
     </list>
     <list id="74caabd0-9869-47c8-aa35-533d5522f9cc" name="Revert: " comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +58,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit._Should.return_empty_list_when_second_list_is_empty">
+  <component name="RunManager" selected="JUnit._Should">
     <configuration name="UnderscoreShould.apply_chains_of_functions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -141,8 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit._Should.return_empty_list_when_second_list_is_empty" />
         <item itemvalue="JUnit._Should" />
+        <item itemvalue="JUnit._Should.return_empty_list_when_second_list_is_empty" />
         <item itemvalue="JUnit._Should.return_empty_list_when_first_list_is_null" />
         <item itemvalue="JUnit.UnderscoreShould.apply_chains_of_functions" />
         <item itemvalue="JUnit._Should.return_zippped_list" />
@@ -159,13 +158,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581675427322</updated>
-    </task>
-    <task id="LOCAL-00005" summary="green find_an_element_when_list_is_null">
-      <created>1583162238935</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1583162238935</updated>
     </task>
     <task id="LOCAL-00006" summary="green return_true_if_any_pass_the_condition">
       <created>1583344882905</created>
@@ -503,11 +495,17 @@
       <option name="project" value="LOCAL" />
       <updated>1584626399808</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="green return_empty_list_when_first_list_is_empty">
+      <created>1584626492654</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1584626492655</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="green return_list_empty_when_the_limit_is_zero_on_first_elements" />
     <MESSAGE value="green return_list_empty_when_the_limit_is_zero_on_first_elements and return_list_empty_when_the_limit_is_negative_on_first_elements" />
     <MESSAGE value="use Arrays.asList" />
     <MESSAGE value="green throw_illegal_argument_exception_when_is_null" />
@@ -532,7 +530,8 @@
     <MESSAGE value="green return_empty_list_when_first_list_is_null" />
     <MESSAGE value="green return_empty_list_when_second_list_is_null" />
     <MESSAGE value="green return_empty_list_when_second_list_is_empty" />
-    <option name="LAST_COMMIT_MESSAGE" value="green return_empty_list_when_second_list_is_empty" />
+    <MESSAGE value="green return_empty_list_when_first_list_is_empty" />
+    <option name="LAST_COMMIT_MESSAGE" value="green return_empty_list_when_first_list_is_empty" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -561,7 +560,7 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2" timestamp="1584626399465">
+    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2" timestamp="1584626492460">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1584284584319" />
@@ -569,43 +568,43 @@
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380746960" />
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776343714" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1056@0.0.1920.1056" timestamp="1584034035114" />
-    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626399465" />
+    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626492460" />
     <state x="743" y="286" width="428" height="481" key="FileChooserDialogImpl" timestamp="1584467215279">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="743" y="286" width="428" height="481" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584467215279" />
-    <state width="1920" height="287" key="GridCell.Tab.0.bottom" timestamp="1584626472888">
+    <state width="1920" height="287" key="GridCell.Tab.0.bottom" timestamp="1584626567873">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1584285533859" />
     <state width="1920" height="355" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380738482" />
     <state width="1920" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626472888" />
-    <state width="1920" height="287" key="GridCell.Tab.0.center" timestamp="1584626472888">
+    <state width="1920" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626567873" />
+    <state width="1920" height="287" key="GridCell.Tab.0.center" timestamp="1584626567873">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1584285533858" />
     <state width="1920" height="355" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380738482" />
     <state width="1920" height="295" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626472888" />
-    <state width="1920" height="287" key="GridCell.Tab.0.left" timestamp="1584626472888">
+    <state width="1920" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626567873" />
+    <state width="1920" height="287" key="GridCell.Tab.0.left" timestamp="1584626567873">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1584285533858" />
     <state width="1920" height="355" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380738481" />
     <state width="1920" height="295" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626472888" />
-    <state width="1920" height="287" key="GridCell.Tab.0.right" timestamp="1584626472888">
+    <state width="1920" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626567873" />
+    <state width="1920" height="287" key="GridCell.Tab.0.right" timestamp="1584626567873">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1584285533859" />
     <state width="1920" height="355" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380738482" />
     <state width="1920" height="295" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626472888" />
+    <state width="1920" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626567873" />
     <state width="1920" height="355" key="GridCell.Tab.1.bottom" timestamp="1584379988609">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
@@ -645,14 +644,14 @@
     <state x="242" y="0" width="1028" height="842" key="SettingsEditor/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584378442662" />
     <state x="2162" y="0" key="SettingsEditor/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583775890783" />
     <state x="242" y="0" width="1028" height="842" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584602601491" />
-    <state x="391" y="153" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1584605249628">
+    <state x="391" y="153" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1584626496281">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1584283760241" />
     <state x="391" y="154" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852598254" />
     <state x="391" y="153" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380749371" />
     <state x="2311" y="157" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776345929" />
-    <state x="391" y="153" width="804" height="525" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584605249628" />
+    <state x="391" y="153" width="804" height="525" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626496281" />
     <state x="476" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1584626258924">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>

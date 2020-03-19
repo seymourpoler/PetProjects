@@ -248,10 +248,8 @@ public class _ {
     }
 
     public static  <T> List<T> intersection(final List<T> firstList, final List<T> secondList){
-        if(isNull(firstList) || isNull(secondList)) {
-            return Arrays.asList();
-        }
-        if(isEmpty(secondList) || isEmpty(firstList)){
+        if(isNull(firstList) || isEmpty(firstList) ||
+            isNull(secondList) || isEmpty(secondList)) {
             return Arrays.asList();
         }
         throw new RuntimeException();
