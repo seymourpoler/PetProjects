@@ -252,6 +252,12 @@ public class _ {
             isNull(secondList) || isEmpty(secondList)) {
             return Arrays.asList();
         }
-        throw new RuntimeException();
+        List<T> result = new ArrayList<>();
+        for (T element: firstList){
+            if(include(secondList, element)){
+                result.add(element);
+            }
+        }
+        return result;
     }
 }
