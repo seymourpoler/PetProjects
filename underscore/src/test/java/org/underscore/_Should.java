@@ -540,6 +540,16 @@ public class _Should {
     }
 
     @Test
+    public void return_empty_list_when_second_list_is_empty(){
+        List<Integer> firstList = Arrays.asList(5,6,7,7,9);
+        List<Integer> secondList = Arrays.asList();
+
+        List<Integer> result = _.intersection(firstList, secondList);
+
+        Assert.assertEquals(0, result.size());
+    }
+
+    @Test
     public void return_empty_list_when_first_list_is_null(){
         List<Integer> secondList = Arrays.asList(5,6,7,7,9);
 
