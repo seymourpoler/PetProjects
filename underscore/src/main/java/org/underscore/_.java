@@ -251,7 +251,7 @@ public class _ {
         if(isNull(firstList) || isNull(secondList)) {
             return Arrays.asList();
         }
-        if(isEmpty(secondList)){
+        if(isEmpty(secondList) || isEmpty(firstList)){
             return Arrays.asList();
         }
         throw new RuntimeException();

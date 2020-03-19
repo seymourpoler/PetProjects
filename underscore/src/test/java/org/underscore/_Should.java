@@ -557,4 +557,14 @@ public class _Should {
 
         Assert.assertEquals(0, result.size());
     }
+
+    @Test
+    public void return_empty_list_when_first_list_is_empty(){
+        List<Integer> firstList = Arrays.asList();
+        List<Integer> secondList = Arrays.asList(5,6,7,7,9);
+
+        List<Integer> result = _.intersection(firstList, secondList);
+
+        Assert.assertEquals(0, result.size());
+    }
 }
