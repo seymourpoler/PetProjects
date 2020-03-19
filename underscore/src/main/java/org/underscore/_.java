@@ -249,7 +249,10 @@ public class _ {
 
     public static  <T> List<T> intersection(final List<T> firstList, final List<T> secondList){
         if(isNull(firstList)) {
-            return secondList;
+            return Arrays.asList();
+        }
+        if(isNull(secondList)){
+            return Arrays.asList();
         }
         throw new RuntimeException();
     }
