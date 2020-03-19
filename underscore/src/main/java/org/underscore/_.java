@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class U {
+public class _ {
 
     private static  final Integer noElements = 0;
 
