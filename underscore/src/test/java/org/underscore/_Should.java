@@ -579,7 +579,7 @@ public class _Should {
     }
 
     @Test
-    public void return_emoty_list_when_all_lists_are_null(){
+    public void return_empty_list_when_the_two_lists_are_null(){
         List<Integer> result = _.difference(null, null);
 
         Assert.assertTrue(result.isEmpty());
