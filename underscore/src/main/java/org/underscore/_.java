@@ -248,6 +248,9 @@ public class _ {
     }
 
     public static  <T> List<T> intersection(final List<T> firstList, final List<T> secondList){
+        if(isNull(firstList)) {
+            return secondList;
+        }
         throw new RuntimeException();
     }
 }
