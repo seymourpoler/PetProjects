@@ -577,4 +577,11 @@ public class _Should {
 
         Assert.assertEquals(Arrays.asList(6,9), result);
     }
+
+    @Test
+    public void return_emoty_list_when_all_lists_are_null(){
+        List<Integer> result = _.difference(null, null);
+
+        Assert.assertTrue(result.isEmpty());
+    }
 }

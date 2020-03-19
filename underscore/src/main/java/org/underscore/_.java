@@ -260,4 +260,8 @@ public class _ {
         }
         return result;
     }
+
+    public static <T> List<T> difference(final List<T> firstList, final List<T> secondList){
+        throw new RuntimeException();
+    }
 }
