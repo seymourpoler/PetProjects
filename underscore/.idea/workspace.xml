@@ -160,13 +160,6 @@
       <option name="presentableId" value="Default" />
       <updated>1581675427322</updated>
     </task>
-    <task id="LOCAL-00011" summary="green return_zero_elements_when_is_null">
-      <created>1583479037651</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1583479037651</updated>
-    </task>
     <task id="LOCAL-00012" summary="green return_zero_elements_when_there_are_no_elements">
       <created>1583479107845</created>
       <option name="number" value="00012" />
@@ -503,11 +496,17 @@
       <option name="project" value="LOCAL" />
       <updated>1584893425091</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="red return_list_with_removed_duplicates">
+      <created>1584896092380</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1584896092380</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="green throws_illegal_argument_exception_when_runable_is_null" />
     <MESSAGE value="green no_execute_when_number_of_times_is_zero" />
     <MESSAGE value="green no_execute_when_number_of_times_is_negative" />
     <MESSAGE value="green return_true_when_is_not_included" />
@@ -532,7 +531,8 @@
     <MESSAGE value="fix merge" />
     <MESSAGE value="green return_empty_list_when_the_lists_are_null" />
     <MESSAGE value="red return_the_first_list_when_the_second_one_is_null" />
-    <option name="LAST_COMMIT_MESSAGE" value="red return_the_first_list_when_the_second_one_is_null" />
+    <MESSAGE value="red return_list_with_removed_duplicates" />
+    <option name="LAST_COMMIT_MESSAGE" value="red return_list_with_removed_duplicates" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -561,10 +561,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="210" y="0" width="870" height="803" key="CommitChangelistDialog2" timestamp="1584893424585">
+    <state x="210" y="0" width="870" height="803" key="CommitChangelistDialog2" timestamp="1584896091664">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1584893424585" />
+    <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1584896091664" />
     <state x="0" y="0" width="1468" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852737421" />
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380746960" />
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776343714" />
@@ -645,10 +645,10 @@
     <state x="242" y="0" width="1028" height="842" key="SettingsEditor/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584378442662" />
     <state x="2162" y="0" key="SettingsEditor/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583775890783" />
     <state x="242" y="0" width="1028" height="842" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584602601491" />
-    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1584893427912">
+    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1584896102624">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1584893427912" />
+    <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1584896102624" />
     <state x="391" y="154" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852598254" />
     <state x="391" y="153" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380749371" />
     <state x="2311" y="157" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776345929" />

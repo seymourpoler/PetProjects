@@ -602,4 +602,13 @@ public class _Should {
 
         Assert.assertTrue(result.equals(Arrays.asList(1,2,3,4,5,6)));
     }
+
+    @Test
+    public void return_list_without_some_items(){
+        List<Integer> numbers = Arrays.asList(1,2,3,9,4,5,7,6);
+
+        List<Integer> result = _.without(numbers, 9, 7);
+
+        Assert.assertTrue(result.equals(Arrays.asList(1,2,3,4,5,6)));
+    }
 }

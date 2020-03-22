@@ -272,4 +272,8 @@ public class _ {
     public static <T> List<T> uniq(final List<T> elements){
         throw new RuntimeException();
     }
+
+    public static <T> List<T> without(final List<T> elements, final T ... items){
+        throw new RuntimeException();
+    }
 }
