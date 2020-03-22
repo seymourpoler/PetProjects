@@ -584,4 +584,13 @@ public class _Should {
 
         Assert.assertTrue(result.isEmpty());
     }
+
+    @Test
+    public void return_the_first_list_when_the_second_one_is_null(){
+        List<Integer> firstList = Arrays.asList(1,2,3,4,5);
+
+        List<Integer> result = _.difference(firstList, null);
+
+        Assert.assertTrue(result.equals(firstList));
+    }
 }
