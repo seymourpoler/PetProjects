@@ -268,4 +268,8 @@ public class _ {
 
         throw new RuntimeException();
     }
+
+    public static <T> List<T> uniq(final List<T> elements){
+        throw new RuntimeException();
+    }
 }

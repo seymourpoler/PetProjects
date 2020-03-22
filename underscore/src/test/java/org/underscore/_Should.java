@@ -593,4 +593,13 @@ public class _Should {
 
         Assert.assertTrue(result.equals(firstList));
     }
+
+    @Test
+    public void return_list_with_removed_duplicates(){
+        List<Integer> numbers = Arrays.asList(1,2,3,3,4,5,5,6);
+
+        List<Integer> result = _.uniq(numbers);
+
+        Assert.assertTrue(result.equals(Arrays.asList(1,2,3,4,5,6)));
+    }
 }
