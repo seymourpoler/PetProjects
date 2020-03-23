@@ -262,6 +262,18 @@ public class _ {
     }
 
     public static <T> List<T> difference(final List<T> firstList, final List<T> secondList){
+        if(isNull(firstList) && isNull(secondList)){
+            return new ArrayList<>();
+        }
+
+        throw new RuntimeException();
+    }
+
+    public static <T> List<T> uniq(final List<T> elements){
+        throw new RuntimeException();
+    }
+
+    public static <T> List<T> without(final List<T> elements, final T ... items){
         throw new RuntimeException();
     }
 }

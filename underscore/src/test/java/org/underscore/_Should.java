@@ -579,9 +579,36 @@ public class _Should {
     }
 
     @Test
-    public void return_empty_list_when_the_two_lists_are_null(){
+    public void return_empty_list_when_the_lists_are_null(){
         List<Integer> result = _.difference(null, null);
 
         Assert.assertTrue(result.isEmpty());
+    }
+
+    @Test
+    public void return_the_first_list_when_the_second_one_is_null(){
+        List<Integer> firstList = Arrays.asList(1,2,3,4,5);
+
+        List<Integer> result = _.difference(firstList, null);
+
+        Assert.assertTrue(result.equals(firstList));
+    }
+
+    @Test
+    public void return_list_with_removed_duplicates(){
+        List<Integer> numbers = Arrays.asList(1,2,3,3,4,5,5,6);
+
+        List<Integer> result = _.uniq(numbers);
+
+        Assert.assertTrue(result.equals(Arrays.asList(1,2,3,4,5,6)));
+    }
+
+    @Test
+    public void return_list_without_some_items(){
+        List<Integer> numbers = Arrays.asList(1,2,3,9,4,5,7,6);
+
+        List<Integer> result = _.without(numbers, 9, 7);
+
+        Assert.assertTrue(result.equals(Arrays.asList(1,2,3,4,5,6)));
     }
 }
