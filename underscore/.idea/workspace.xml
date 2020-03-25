@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4e3f261-840a-4868-9f74-aff8a98fe820" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/underscore/Checker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/underscore/CheckerShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/underscore/_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/underscore/_Should.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/underscore/UnderscoreShould.class" beforeDir="false" />
     </list>
     <list id="74caabd0-9869-47c8-aa35-533d5522f9cc" name="Revert: " comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +60,25 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
-  <component name="RunManager" selected="JUnit._Should.return_the_first_list_when_the_second_one_is_null">
+  <component name="RunManager" selected="JUnit.CheckerShould.throw_exception_when_is_null">
+    <configuration name="CheckerShould.throw_exception_when_is_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="underscore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.underscore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.underscore" />
+      <option name="MAIN_CLASS_NAME" value="org.underscore.CheckerShould" />
+      <option name="METHOD_NAME" value="throw_exception_when_is_null" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="_Should" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -107,22 +126,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_Should.return_intersected_elements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="underscore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.underscore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.underscore" />
-      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
-      <option name="METHOD_NAME" value="return_intersected_elements" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="_Should.return_the_first_list_when_the_second_one_is_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -141,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckerShould.throw_exception_when_is_null" />
+        <item itemvalue="JUnit._Should" />
         <item itemvalue="JUnit._Should.return_the_first_list_when_the_second_one_is_null" />
         <item itemvalue="JUnit._Should.return_empty_list_when_the_lists_are_null" />
-        <item itemvalue="JUnit._Should" />
         <item itemvalue="JUnit._Should.return_emoty_list_when_all_lists_are_null" />
-        <item itemvalue="JUnit._Should.return_intersected_elements" />
       </list>
     </recent_temporary>
   </component>
@@ -548,10 +551,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2338" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583775705382" />
-    <state x="570" y="298" width="403" height="256" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584197200056">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state x="801" y="423" width="403" height="256" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585069894920">
+      <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="570" y="298" width="403" height="256" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.744@0.0.1366.744" timestamp="1584197200056" />
+    <state x="801" y="423" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585069894920" />
     <state x="2721" y="432" width="312" height="213" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582824497018" />
     <state x="2563" y="268" width="628" height="541" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583344865889">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -574,36 +578,36 @@
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="743" y="286" width="428" height="481" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584467215279" />
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1584895609495">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state width="1920" height="287" key="GridCell.Tab.0.bottom" timestamp="1585158662005">
+      <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1584895609495" />
     <state width="1920" height="355" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
-    <state width="1920" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380738482" />
+    <state width="1920" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158662005" />
     <state width="1920" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
     <state width="1920" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584627789137" />
-    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1584895609493">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state width="1920" height="287" key="GridCell.Tab.0.center" timestamp="1585158662004">
+      <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1584895609493" />
     <state width="1920" height="355" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
-    <state width="1920" height="287" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380738482" />
+    <state width="1920" height="287" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158662004" />
     <state width="1920" height="295" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
     <state width="1920" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584627789137" />
-    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1584895609493">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state width="1920" height="287" key="GridCell.Tab.0.left" timestamp="1585158662004">
+      <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1584895609493" />
     <state width="1920" height="355" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
-    <state width="1920" height="287" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380738481" />
+    <state width="1920" height="287" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158662004" />
     <state width="1920" height="295" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
     <state width="1920" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584627789137" />
-    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1584895609494">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state width="1920" height="287" key="GridCell.Tab.0.right" timestamp="1585158662005">
+      <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1584895609494" />
     <state width="1920" height="355" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
-    <state width="1920" height="287" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380738482" />
+    <state width="1920" height="287" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158662005" />
     <state width="1920" height="295" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
     <state width="1920" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584627789137" />
     <state width="1920" height="355" key="GridCell.Tab.1.bottom" timestamp="1584379988609">
@@ -638,11 +642,11 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="216" y="30" width="928" height="681" key="Maven.ArtifactSearchDialog/0.0.1366.744@0.0.1366.744" timestamp="1584200534240" />
-    <state x="172" y="0" width="1028" height="842" key="SettingsEditor" timestamp="1584893130868">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state x="242" y="0" width="1590" height="985" key="SettingsEditor" timestamp="1585158544491">
+      <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="172" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1584893130868" />
-    <state x="242" y="0" width="1028" height="842" key="SettingsEditor/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584378442662" />
+    <state x="242" y="0" width="1590" height="985" key="SettingsEditor/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158544491" />
     <state x="2162" y="0" key="SettingsEditor/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583775890783" />
     <state x="242" y="0" width="1028" height="842" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584602601491" />
     <state x="278" y="108" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1584896102624">
@@ -653,32 +657,33 @@
     <state x="391" y="153" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584380749371" />
     <state x="2311" y="157" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776345929" />
     <state x="391" y="153" width="804" height="525" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626866335" />
-    <state x="476" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1584626258924">
+    <state x="476" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1585158015309">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="339" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.744@0.0.1366.744" timestamp="1584282209986" />
     <state x="476" y="283" key="com.intellij.ide.util.TipDialog/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583851663398" />
-    <state x="476" y="282" key="com.intellij.ide.util.TipDialog/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584455034299" />
+    <state x="476" y="282" key="com.intellij.ide.util.TipDialog/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158015309" />
     <state x="476" y="283" key="com.intellij.ide.util.TipDialog/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@0.0.1920.1056" timestamp="1583775377030" />
     <state x="2396" y="289" key="com.intellij.ide.util.TipDialog/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583775579284" />
     <state x="476" y="283" key="com.intellij.ide.util.TipDialog/0.0.1920.1056@0.0.1920.1056" timestamp="1584033780030" />
     <state x="476" y="282" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1584626258924" />
-    <state x="451" y="292" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584283699417">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state x="634" y="414" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585069882933">
+      <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="451" y="292" width="458" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.744@0.0.1366.744" timestamp="1584283699417" />
     <state x="634" y="415" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852569446" />
+    <state x="634" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585069882933" />
     <state x="2554" y="424" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776014733" />
     <state x="444" y="171" key="run.anything.popup" timestamp="1584201128324">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="444" y="171" key="run.anything.popup/0.0.1366.744@0.0.1366.744" timestamp="1584201128324" />
     <state x="2544" y="248" key="run.anything.popup/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776243129" />
-    <state x="486" y="92" width="945" height="963" key="search.everywhere.popup" timestamp="1584378648644">
+    <state x="486" y="92" width="945" height="963" key="search.everywhere.popup" timestamp="1585127962075">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1584204011983" />
-    <state x="486" y="92" width="945" height="963" key="search.everywhere.popup/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584378648644" />
+    <state x="486" y="92" width="945" height="963" key="search.everywhere.popup/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585127962075" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/underscore$_Should.ic" NAME="_Should Coverage Results" MODIFIED="1584378447664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
