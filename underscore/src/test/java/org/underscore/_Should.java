@@ -11,8 +11,6 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-package org.underscore;
-
 public class _Should {
     @Test
     public void each(){
