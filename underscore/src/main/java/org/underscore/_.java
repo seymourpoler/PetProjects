@@ -273,7 +273,13 @@ public class _ {
         if(isNull(elements) || isEmpty(elements)){
             return Arrays.asList();
         }
-        throw new RuntimeException();
+        List<T> result = new ArrayList<>();
+        for (T element: elements){
+            if(!include(result, element)){
+                result.add(element);
+            }
+        }
+        return result;
     }
 
     public static <T> List<T> without(final List<T> elements, final T ... items){

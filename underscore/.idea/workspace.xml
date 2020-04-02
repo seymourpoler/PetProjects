@@ -59,7 +59,7 @@
     <property name="project.structure.side.proportion" value="0.31609195" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
-  <component name="RunManager" selected="JUnit._Should.return_empty_list_when_unique_list_is_empty">
+  <component name="RunManager" selected="JUnit._Should">
     <configuration name="_Should" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -123,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_Should.return_list_with_removed_duplicates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="_Should.return_list_without_duplicated_elements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
         <pattern>
@@ -133,7 +133,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.underscore" />
       <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
-      <option name="METHOD_NAME" value="return_list_with_removed_duplicates" />
+      <option name="METHOD_NAME" value="return_list_without_duplicated_elements" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit._Should" />
+        <item itemvalue="JUnit._Should.return_list_without_duplicated_elements" />
         <item itemvalue="JUnit._Should.return_empty_list_when_unique_list_is_empty" />
         <item itemvalue="JUnit._Should.retuen_empty_list_when_unique_list_is_null" />
         <item itemvalue="JUnit._Should.return_empty_list_when_the_lists_are_null" />
-        <item itemvalue="JUnit._Should.return_list_with_removed_duplicates" />
-        <item itemvalue="JUnit._Should" />
       </list>
     </recent_temporary>
   </component>
@@ -159,13 +159,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581675427322</updated>
-    </task>
-    <task id="LOCAL-00016" summary="green return_list_empty_when_list_of_elements_are_null">
-      <created>1583740025821</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1583740025821</updated>
     </task>
     <task id="LOCAL-00017" summary="green return_list_empty_when_list_of_elements_are_empty">
       <created>1583740421123</created>
@@ -503,11 +496,17 @@
       <option name="project" value="LOCAL" />
       <updated>1585847682835</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="green return_empty_list_when_unique_list_is_empty">
+      <created>1585847723941</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1585847723941</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="green return_false_when_included_element_is_null" />
     <MESSAGE value="green return_false_when_is_not_included" />
     <MESSAGE value="green return_union_of_lists" />
     <MESSAGE value="green return_empty_list_when_all_lists_are_empty" />
@@ -532,7 +531,8 @@
     <MESSAGE value="force to compile into java 8" />
     <MESSAGE value="green throw_exception_when_is_null" />
     <MESSAGE value="green return_empty_list_when_unique_list_is_null" />
-    <option name="LAST_COMMIT_MESSAGE" value="green return_empty_list_when_unique_list_is_null" />
+    <MESSAGE value="green return_empty_list_when_unique_list_is_empty" />
+    <option name="LAST_COMMIT_MESSAGE" value="green return_empty_list_when_unique_list_is_empty" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -567,7 +567,7 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2" timestamp="1585847682327">
+    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2" timestamp="1585847723801">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1584896091664" />
@@ -575,71 +575,79 @@
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585159235374" />
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776343714" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1056@0.0.1920.1056" timestamp="1584034035114" />
-    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585847682327" />
+    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585847723801" />
+    <state width="442" height="466" key="DebuggerActiveHint" timestamp="1585848154437">
+      <screen x="0" y="0" width="1920" height="1056" />
+    </state>
+    <state width="442" height="466" key="DebuggerActiveHint/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848154437" />
     <state x="743" y="286" width="428" height="481" key="FileChooserDialogImpl" timestamp="1585759539754">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="743" y="286" width="428" height="481" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585759539754" />
-    <state width="1920" height="287" key="GridCell.Tab.0.bottom" timestamp="1585847714332">
+    <state width="1920" height="287" key="GridCell.Tab.0.bottom" timestamp="1585848552598">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1584895609495" />
     <state width="1920" height="355" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158745178" />
     <state width="1920" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585847714332" />
-    <state width="1920" height="287" key="GridCell.Tab.0.center" timestamp="1585847714332">
+    <state width="1920" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848552598" />
+    <state width="1920" height="287" key="GridCell.Tab.0.center" timestamp="1585848552598">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1584895609493" />
     <state width="1920" height="355" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158745178" />
     <state width="1920" height="295" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585847714332" />
-    <state width="1920" height="287" key="GridCell.Tab.0.left" timestamp="1585847714332">
+    <state width="1920" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848552598" />
+    <state width="1920" height="287" key="GridCell.Tab.0.left" timestamp="1585848552598">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1584895609493" />
     <state width="1920" height="355" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158745177" />
     <state width="1920" height="295" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585847714332" />
-    <state width="1920" height="287" key="GridCell.Tab.0.right" timestamp="1585847714332">
+    <state width="1920" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848552598" />
+    <state width="1920" height="287" key="GridCell.Tab.0.right" timestamp="1585848552598">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1584895609494" />
     <state width="1920" height="355" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158745178" />
     <state width="1920" height="295" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585847714332" />
-    <state width="1920" height="355" key="GridCell.Tab.1.bottom" timestamp="1584379988609">
+    <state width="1920" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848552598" />
+    <state width="1920" height="355" key="GridCell.Tab.1.bottom" timestamp="1585848508972">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
     <state width="1920" height="355" key="GridCell.Tab.1.bottom/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="355" key="GridCell.Tab.1.bottom/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584379988609" />
     <state width="1874" height="356" key="GridCell.Tab.1.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583742486127" />
-    <state width="1920" height="355" key="GridCell.Tab.1.center" timestamp="1584379988609">
+    <state width="1920" height="355" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848508972" />
+    <state width="1920" height="355" key="GridCell.Tab.1.center" timestamp="1585848508972">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
     <state width="1920" height="355" key="GridCell.Tab.1.center/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="355" key="GridCell.Tab.1.center/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584379988609" />
     <state width="1874" height="356" key="GridCell.Tab.1.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583742486126" />
-    <state width="1920" height="355" key="GridCell.Tab.1.left" timestamp="1584379988609">
+    <state width="1920" height="355" key="GridCell.Tab.1.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848508972" />
+    <state width="1920" height="355" key="GridCell.Tab.1.left" timestamp="1585848508972">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1581693868142" />
     <state width="1920" height="355" key="GridCell.Tab.1.left/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="355" key="GridCell.Tab.1.left/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584379988609" />
     <state width="1874" height="356" key="GridCell.Tab.1.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583742486126" />
-    <state width="1920" height="355" key="GridCell.Tab.1.right" timestamp="1584379988609">
+    <state width="1920" height="355" key="GridCell.Tab.1.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848508972" />
+    <state width="1920" height="355" key="GridCell.Tab.1.right" timestamp="1585848508972">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1581693868143" />
     <state width="1920" height="355" key="GridCell.Tab.1.right/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="355" key="GridCell.Tab.1.right/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1584379988609" />
     <state width="1874" height="356" key="GridCell.Tab.1.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583742486126" />
+    <state width="1920" height="355" key="GridCell.Tab.1.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585848508972" />
     <state x="216" y="30" width="928" height="681" key="Maven.ArtifactSearchDialog" timestamp="1584200534240">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -686,6 +694,17 @@
     </state>
     <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1584204011983" />
     <state x="486" y="92" width="945" height="963" key="search.everywhere.popup/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585127962075" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/underscore/_Should.java</url>
+          <line>616</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/underscore$_Should.ic" NAME="_Should Coverage Results" MODIFIED="1584378447664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

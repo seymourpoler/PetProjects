@@ -11,6 +11,8 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+package org.underscore;
+
 public class _Should {
     @Test
     public void each(){
@@ -611,7 +613,7 @@ public class _Should {
     }
 
     @Test
-    public void return_list_with_removed_duplicates(){
+    public void return_list_without_duplicated_elements(){
         final List<Integer> numbers = Arrays.asList(1,2,3,3,4,5,5,6);
 
         final List<Integer> result = _.uniq(numbers);
