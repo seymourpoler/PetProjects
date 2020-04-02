@@ -270,7 +270,7 @@ public class _ {
     }
 
     public static <T> List<T> uniq(final List<T> elements){
-        if(isNull(elements)){
+        if(isNull(elements) || isEmpty(elements)){
             return Arrays.asList();
         }
         throw new RuntimeException();

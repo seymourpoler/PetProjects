@@ -604,6 +604,13 @@ public class _Should {
     }
 
     @Test
+    public void return_empty_list_when_unique_list_is_empty(){
+        final List<Integer> result = _.uniq(null);
+
+        Assert.assertTrue(result != null);
+    }
+
+    @Test
     public void return_list_with_removed_duplicates(){
         final List<Integer> numbers = Arrays.asList(1,2,3,3,4,5,5,6);
 
