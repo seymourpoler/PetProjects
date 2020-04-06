@@ -265,6 +265,9 @@ public class _ {
         if(isNull(firstList) && isNull(secondList)){
             return new ArrayList<>();
         }
+        if(isNotNull(firstList) && isNull(secondList)) {
+            return firstList;
+        }
 
         throw new RuntimeException();
     }
