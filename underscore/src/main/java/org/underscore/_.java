@@ -269,6 +269,10 @@ public class _ {
             return firstList;
         }
 
+        if(isNull(firstList) && isNotNull(secondList)) {
+            return secondList;
+        }
+
         throw new RuntimeException();
     }
 

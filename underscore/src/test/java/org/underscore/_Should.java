@@ -597,6 +597,15 @@ public class _Should {
     }
 
     @Test
+    public void return_the_second_list_when_the_first_one_is_null(){
+        final List<Integer> secondList = Arrays.asList(1,2,3,4,5);
+
+        final List<Integer> result = _.difference(null, secondList);
+
+        Assert.assertTrue(result.equals(secondList));
+    }
+
+    @Test
     public void return_empty_list_when_unique_list_is_null(){
         final List<Integer> result = _.uniq(null);
 
