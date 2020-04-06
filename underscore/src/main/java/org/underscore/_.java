@@ -298,6 +298,9 @@ public class _ {
         if(isNull(elements)){
             return Arrays.asList();
         }
+        if(items == null){
+            return Arrays.asList();
+        }
         throw new RuntimeException();
     }
 }

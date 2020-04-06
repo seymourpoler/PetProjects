@@ -646,6 +646,13 @@ public class _Should {
     }
 
     @Test
+    public void return_empty_list_when_numbers_are_null(){
+        final List<Integer> result = _.without(Arrays.asList(1,2,3,4), null);
+
+        Assert.assertTrue(result.equals(Arrays.asList()));
+    }
+
+    @Test
     public void return_list_without_some_items(){
         final List<Integer> numbers = Arrays.asList(1,2,3,9,4,5,7,6);
 
