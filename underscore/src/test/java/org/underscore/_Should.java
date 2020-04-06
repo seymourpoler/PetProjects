@@ -606,7 +606,7 @@ public class _Should {
     }
 
     @Test
-    public void return_the_diferences(){
+    public void return_the_differences(){
         final List<Integer> firstList = Arrays.asList(1,2,3,4,6);
         final List<Integer> secondList = Arrays.asList(1,2,3,4,5);
 
