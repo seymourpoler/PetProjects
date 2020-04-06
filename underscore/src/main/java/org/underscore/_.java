@@ -301,6 +301,21 @@ public class _ {
         if(items == null){
             return Arrays.asList();
         }
-        throw new RuntimeException();
+        List<T> result = new ArrayList<>();
+        for (T element: elements){
+            if(isNotIn(element, items)){
+                result.add(element);
+            }
+        }
+        return result;
+    }
+
+    private static <T> Boolean isNotIn(final T element, final T ... items){
+        for (T item : items) {
+            if(item == element) {
+                return false;
+            }
+        }
+        return true;
     }
 }
