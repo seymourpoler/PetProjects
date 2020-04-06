@@ -272,8 +272,13 @@ public class _ {
         if(isNull(firstList) && isNotNull(secondList)) {
             return secondList;
         }
-
-        throw new RuntimeException();
+        List<T> result = new ArrayList<>();
+        for (T element: firstList){
+            if(!include(secondList, element)){
+                result.add(element);
+            }
+        }
+        return result;
     }
 
     public static <T> List<T> uniq(final List<T> elements){

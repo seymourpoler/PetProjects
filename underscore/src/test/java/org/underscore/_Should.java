@@ -606,6 +606,16 @@ public class _Should {
     }
 
     @Test
+    public void return_the_diferences(){
+        final List<Integer> firstList = Arrays.asList(1,2,3,4,6);
+        final List<Integer> secondList = Arrays.asList(1,2,3,4,5);
+
+        final List<Integer> result = _.difference(firstList, secondList);
+
+        Assert.assertTrue(result.equals(Arrays.asList(6)));
+    }
+
+    @Test
     public void return_empty_list_when_unique_list_is_null(){
         final List<Integer> result = _.uniq(null);
 
