@@ -295,6 +295,9 @@ public class _ {
     }
 
     public static <T> List<T> without(final List<T> elements, final T ... items){
+        if(isNull(elements)){
+            return Arrays.asList();
+        }
         throw new RuntimeException();
     }
 }
