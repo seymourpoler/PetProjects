@@ -1,7 +1,6 @@
 package org.underscore;
 
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -658,15 +657,5 @@ public class _Should {
         final List<Integer> result = _.without(Arrays.asList(1,2,3,4,5,6), 3,7);
 
         Assert.assertTrue(result.equals(Arrays.asList(1,2,4,5,6)));
-    }
-
-    @Test
-    @Ignore
-    public void return_list_without_some_items(){
-        final List<Integer> numbers = Arrays.asList(1,2,3,9,4,5,7,6);
-
-        final List<Integer> result = _.without(numbers, 9, 7);
-
-        Assert.assertTrue(result.equals(Arrays.asList(1,2,3,4,5,6)));
     }
 }
