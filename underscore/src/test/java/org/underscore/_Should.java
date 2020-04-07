@@ -481,6 +481,17 @@ public class _Should {
         Assert.assertTrue(result.get(3).equals("banana"));
     }
 
+    @Test
+    public void return_zipped_when_the_first_list_is_longer_than_the_second(){
+        final List<String> animals = Arrays.asList("monkey", "rabbit", "horse");
+        final List<String> fruits = Arrays.asList("berry", "banana");
+
+        final List<String> result = _.zip(animals, fruits);
+
+        Assert.assertTrue(result.get(0).equals("monkey"));
+        Assert.assertTrue(result.get(4).equals("horse"));
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void throws_illegal_argument_exception_when_runable_is_null(){
         _.times(2, null);

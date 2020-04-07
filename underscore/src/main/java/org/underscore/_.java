@@ -182,11 +182,23 @@ public class _ {
         }
 
         List<T> result = new ArrayList<>();
-        for (Integer position = 0; position < first.size(); position++){
-            result.add(first.get(position));
-            result.add(second.get(position));
+        Integer longerSize = getLonger(first, second);
+        for (Integer position = 0; position < longerSize; position++){
+            if(first.size() > position) {
+                result.add(first.get(position));
+            }
+            if(second.size() > position){
+                result.add(second.get(position));
+            }
         }
         return result;
+    }
+
+    private static <T> Integer getLonger(final List<T> first, final List<T> second){
+        if(first.size()< second.size()){
+            return second.size();
+        }
+        return first.size();
     }
 
     public static <T> List<T> reverse(final List<T> elements) {
