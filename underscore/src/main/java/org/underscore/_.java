@@ -350,6 +350,10 @@ public class _ {
         if(items == null){
             return elements;
         }
-        throw new RuntimeException();
+        List<T> result = new ArrayList<>(elements);
+        for (T item: items){
+            result.add(item);
+        }
+        return result;
     }
 }
