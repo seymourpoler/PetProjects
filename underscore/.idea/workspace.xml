@@ -59,7 +59,7 @@
     <property name="project.structure.side.proportion" value="0.31609195" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
-  <component name="RunManager" selected="JUnit._Should.return_empty_list_when_zipping_the_first_list_or_empty">
+  <component name="RunManager" selected="JUnit._Should.return_empty_list_when_zipping_the_second_list_is_empty">
     <configuration name="_Should" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -91,22 +91,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_Should.return_empty_list_when_zipping_one_list_is_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="underscore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.underscore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.underscore" />
-      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
-      <option name="METHOD_NAME" value="return_empty_list_when_zipping_one_list_is_null" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="_Should.return_empty_list_when_zipping_the_first_list_or_empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="underscore" />
       <extension name="coverage">
@@ -118,6 +102,22 @@
       <option name="PACKAGE_NAME" value="org.underscore" />
       <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
       <option name="METHOD_NAME" value="return_empty_list_when_zipping_the_first_list_or_empty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_Should.return_empty_list_when_zipping_the_second_list_is_empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="underscore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.underscore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.underscore" />
+      <option name="MAIN_CLASS_NAME" value="org.underscore._Should" />
+      <option name="METHOD_NAME" value="return_empty_list_when_zipping_the_second_list_is_empty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit._Should.return_empty_list_when_zipping_the_second_list_is_empty" />
         <item itemvalue="JUnit._Should.return_empty_list_when_zipping_the_first_list_or_empty" />
         <item itemvalue="JUnit._Should" />
         <item itemvalue="JUnit._Should.return_empty_list_when_zipping_and_lists_are_null" />
         <item itemvalue="JUnit._Should.return_empty_list_when_zipping_the_second_list_is_null" />
-        <item itemvalue="JUnit._Should.return_empty_list_when_zipping_one_list_is_null" />
       </list>
     </recent_temporary>
   </component>
@@ -159,13 +159,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581675427322</updated>
-    </task>
-    <task id="LOCAL-00028" summary="use Arrays.asList">
-      <created>1583852708312</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1583852708312</updated>
     </task>
     <task id="LOCAL-00029" summary="refactor: rename">
       <created>1583852737532</created>
@@ -503,11 +496,17 @@
       <option name="project" value="LOCAL" />
       <updated>1586241098509</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="green return_empty_list_when_zipping_the_first_list_or_empty">
+      <created>1586241324512</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1586241324512</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="green return_empty_list_when_second_list_is_null" />
     <MESSAGE value="green return_empty_list_when_second_list_is_empty" />
     <MESSAGE value="green return_empty_list_when_first_list_is_empty" />
     <MESSAGE value="if validation" />
@@ -532,7 +531,8 @@
     <MESSAGE value="remove duplicated test" />
     <MESSAGE value="green return_empty_list_when_zipping_the_first_list_is_null" />
     <MESSAGE value="green return_empty_list_when_zipping_and_lists_are_null" />
-    <option name="LAST_COMMIT_MESSAGE" value="green return_empty_list_when_zipping_and_lists_are_null" />
+    <MESSAGE value="green return_empty_list_when_zipping_the_first_list_or_empty" />
+    <option name="LAST_COMMIT_MESSAGE" value="green return_empty_list_when_zipping_the_first_list_or_empty" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -567,7 +567,7 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="359" y="0" width="641" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1581693292852" />
-    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2" timestamp="1586241098365">
+    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2" timestamp="1586241324356">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="210" y="0" width="939" height="741" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1584896091664" />
@@ -575,7 +575,7 @@
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585159235374" />
     <state x="0" y="0" width="1920" height="1056" key="CommitChangelistDialog2/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776343714" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1056@0.0.1920.1056" timestamp="1584034035114" />
-    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241098365" />
+    <state x="0" y="0" width="870" height="803" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241324356" />
     <state width="442" height="466" key="DebuggerActiveHint" timestamp="1585848154437">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
@@ -584,38 +584,38 @@
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="743" y="286" width="428" height="481" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1585759539754" />
-    <state width="1920" height="287" key="GridCell.Tab.0.bottom" timestamp="1586241265971">
+    <state width="1920" height="287" key="GridCell.Tab.0.bottom" timestamp="1586241362662">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1584895609495" />
     <state width="1920" height="355" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.bottom/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158745178" />
     <state width="1920" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241265971" />
-    <state width="1920" height="287" key="GridCell.Tab.0.center" timestamp="1586241265971">
+    <state width="1920" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241362662" />
+    <state width="1920" height="287" key="GridCell.Tab.0.center" timestamp="1586241362662">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1584895609493" />
     <state width="1920" height="355" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.center/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158745178" />
     <state width="1920" height="295" key="GridCell.Tab.0.center/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241265971" />
-    <state width="1920" height="287" key="GridCell.Tab.0.left" timestamp="1586241265971">
+    <state width="1920" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241362662" />
+    <state width="1920" height="287" key="GridCell.Tab.0.left" timestamp="1586241362662">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1584895609493" />
     <state width="1920" height="355" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.left/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158745177" />
     <state width="1920" height="295" key="GridCell.Tab.0.left/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241265971" />
-    <state width="1920" height="287" key="GridCell.Tab.0.right" timestamp="1586241265971">
+    <state width="1920" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241362662" />
+    <state width="1920" height="287" key="GridCell.Tab.0.right" timestamp="1586241362662">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1584895609494" />
     <state width="1920" height="355" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1583852916400" />
     <state width="1920" height="287" key="GridCell.Tab.0.right/0.0.1920.1056/0.0.1920.1056@0.0.1920.1056" timestamp="1585158745178" />
     <state width="1920" height="295" key="GridCell.Tab.0.right/0.0.1920.1056/3840.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583776334961" />
-    <state width="1920" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241265971" />
+    <state width="1920" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1586241362662" />
     <state width="1920" height="355" key="GridCell.Tab.1.bottom" timestamp="1586179667500">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>

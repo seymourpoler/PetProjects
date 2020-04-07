@@ -448,6 +448,15 @@ public class _Should {
     }
 
     @Test
+    public void return_empty_list_when_zipping_the_second_list_is_empty(){
+        final List<String> fruits = Arrays.asList("berry", "banana");
+
+        final List<String> result = _.zip(fruits, Arrays.asList());
+
+        Assert.assertEquals(result, fruits);
+    }
+
+    @Test
     public void return_empty_list_when_zipping_and_lists_are_null(){
         final List<String> result = _.zip(null, null);
 

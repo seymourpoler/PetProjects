@@ -177,7 +177,7 @@ public class _ {
         if(isNull(first) || isEmpty(first)) {
             return second;
         }
-        if(isNull(second)){
+        if(isNull(second) || isEmpty(second)){
             return first;
         }
         throw new RuntimeException();
