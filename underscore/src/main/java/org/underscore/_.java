@@ -174,7 +174,7 @@ public class _ {
         if(isNull(first) && isNull(second)){
             return Arrays.asList();
         }
-        if(isNull(first)) {
+        if(isNull(first) || isEmpty(first)) {
             return second;
         }
         if(isNull(second)){
