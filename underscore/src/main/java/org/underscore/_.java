@@ -170,9 +170,15 @@ public class _ {
         return elements.size();
     }
 
-    public static <T> List<T> zip(final List<T> first, final List<T> two) {
+    public static <T> List<T> zip(final List<T> first, final List<T> second) {
+        if(isNull(first) && isNull(second)){
+            return Arrays.asList();
+        }
         if(isNull(first)) {
-            return two;
+            return second;
+        }
+        if(isNull(second)){
+            return first;
         }
         throw new RuntimeException();
     }
