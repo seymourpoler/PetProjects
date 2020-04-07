@@ -746,4 +746,12 @@ public class _Should {
 
         Assert.assertEquals(result, Arrays.asList(1,2,3,4,5));
     }
+
+    @Test
+    public void return_the_list_with_added_elements()
+    {
+        final List<Integer> result = _.add(Arrays.asList(1,2,3,4), 5,6,7);
+
+        Assert.assertEquals(result, Arrays.asList(1,2,3,4,5,6,7));
+    }
 }
