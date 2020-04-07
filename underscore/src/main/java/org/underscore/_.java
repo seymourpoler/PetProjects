@@ -18,6 +18,11 @@ public class _ {
         }
     }
 
+    public static <T> T[] toArray(List<T> elements) {
+
+        return (T[]) new ArrayList(elements).toArray();
+    }
+
     public static <T> List<T> where(final List<T> elements, final Predicate<T> condition) {
         if (isNull(elements)) {
             return new ArrayList<T>();
