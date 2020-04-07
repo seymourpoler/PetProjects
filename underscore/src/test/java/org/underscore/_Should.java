@@ -23,16 +23,6 @@ public class _Should {
     }
 
     @Test
-    public void return_array()
-    {
-        final List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
-
-        final Integer[] result = _.toArray(numbers);
-
-        Assert.assertTrue(result instanceof Integer[]);
-    }
-
-    @Test
     public void where_return_empty_list_when_list_is_empty(){
         final List<Integer> numbers = Arrays.asList();
         final Predicate<Integer> condition =  x -> x > 2;
@@ -739,5 +729,13 @@ public class _Should {
         final List<Integer> result = _.without(Arrays.asList(1,2,3,4,5,6), 3,7);
 
         Assert.assertTrue(result.equals(Arrays.asList(1,2,4,5,6)));
+    }
+
+    @Test
+    public void return_the_same_list_when_elements_to_be_added_are_null()
+    {
+        final List<Integer> result = _.add(Arrays.asList(1,2,3,4), null);
+
+        Assert.assertEquals(result, Arrays.asList(1,2,3,4));
     }
 }

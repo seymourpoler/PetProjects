@@ -18,11 +18,6 @@ public class _ {
         }
     }
 
-    public static <T> T[] toArray(List<T> elements) {
-
-        return (T[]) new ArrayList(elements).toArray();
-    }
-
     public static <T> List<T> where(final List<T> elements, final Predicate<T> condition) {
         if (isNull(elements)) {
             return new ArrayList<T>();
@@ -349,5 +344,12 @@ public class _ {
             }
         }
         return true;
+    }
+
+    public static <T> List<T> add(final List<T> elements, final T ... items){
+        if(items == null){
+            return elements;
+        }
+        throw new RuntimeException();
     }
 }
