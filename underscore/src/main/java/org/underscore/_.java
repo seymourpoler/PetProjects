@@ -171,6 +171,9 @@ public class _ {
     }
 
     public static <T> List<T> zip(final List<T> first, final List<T> two) {
+        if(isNull(first)) {
+            return two;
+        }
         throw new RuntimeException();
     }
 
