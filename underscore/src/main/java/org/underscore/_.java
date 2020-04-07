@@ -180,7 +180,13 @@ public class _ {
         if(isNull(second) || isEmpty(second)){
             return first;
         }
-        throw new RuntimeException();
+
+        List<T> result = new ArrayList<>();
+        for (Integer position = 0; position < first.size(); position++){
+            result.add(first.get(position));
+            result.add(second.get(position));
+        }
+        return result;
     }
 
     public static <T> List<T> reverse(final List<T> elements) {

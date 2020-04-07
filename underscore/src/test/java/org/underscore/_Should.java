@@ -471,14 +471,14 @@ public class _Should {
     }
 
     @Test
-    public void return_zipped(){
+    public void return_zipped_when_the_lists_are_the_same_length(){
         final List<String> animals = Arrays.asList("monkey", "rabbit");
         final List<String> fruits = Arrays.asList("berry", "banana");
 
         final List<String> result = _.zip(animals, fruits);
 
         Assert.assertTrue(result.get(0).equals("monkey"));
-        Assert.assertTrue(result.get(4).equals("banana"));
+        Assert.assertTrue(result.get(3).equals("banana"));
     }
 
     @Test(expected = IllegalArgumentException.class)
