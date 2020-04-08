@@ -761,5 +761,4 @@ public class _Should {
 
         Assert.assertFalse(result.isPresent());
     }
-
 }
