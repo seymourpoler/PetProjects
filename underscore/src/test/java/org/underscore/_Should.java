@@ -771,8 +771,8 @@ public class _Should {
     }
 
     @Test
-    public void return_empty_list_when_there_are_no_elements(){
-        List<String> elements = _.newList();
+    public void return_empty_list_when_elements_are_null(){
+        List<String> elements = _.newList(null);
 
         Assert.assertEquals(elements.size(), 0);
     }
