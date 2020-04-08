@@ -358,6 +358,9 @@ public class _ {
     }
 
     public static <T> List<T> copyOf(final List<T> elements){
+        if(isNull(elements)){
+            return Arrays.asList();
+        }
         throw new RuntimeException();
     }
 
