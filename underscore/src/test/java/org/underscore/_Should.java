@@ -779,7 +779,8 @@ public class _Should {
 
     @Test
     public void return_new_list(){
-
         List<String> animals = _.newList("horse", "bird");
+
+        Assert.assertEquals(animals.size(), 2);
     }
 }

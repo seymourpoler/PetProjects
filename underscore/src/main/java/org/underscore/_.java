@@ -368,6 +368,6 @@ public class _ {
         if(elements == null || elements.length == noElements){
             return Arrays.asList();
         }
-        throw new RuntimeException();
+        return Arrays.asList(elements);
     }
 }
