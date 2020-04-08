@@ -761,4 +761,11 @@ public class _Should {
 
         Assert.assertFalse(result.isPresent());
     }
+
+    @Test
+    public void return_empty_element_when_list_is_empty(){
+        final Optional<Integer> result = _.pop(Arrays.asList());
+
+        Assert.assertFalse(result.isPresent());
+    }
 }

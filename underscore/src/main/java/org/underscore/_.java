@@ -358,7 +358,7 @@ public class _ {
     }
 
     public static <T> Optional<T> pop(final List<T> elements){
-        if(isNull(elements)){
+        if(isNull(elements) || isEmpty(elements)){
             return Optional.empty();
         }
 
