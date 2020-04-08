@@ -360,4 +360,8 @@ public class _ {
     public static <T> List<T> copyOf(final List<T> elements){
         throw new RuntimeException();
     }
+
+    public static <T> List<T> newList(T... elements){
+        throw new RuntimeException();
+    }
 }
