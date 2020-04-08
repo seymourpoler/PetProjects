@@ -356,12 +356,4 @@ public class _ {
         }
         return result;
     }
-
-    public static <T> Optional<T> pop(final List<T> elements){
-        if(isNull(elements) || isEmpty(elements)){
-            return Optional.empty();
-        }
-
-        throw new RuntimeException();
-    }
 }

@@ -754,18 +754,4 @@ public class _Should {
 
         Assert.assertEquals(result, Arrays.asList(1,2,3,4,5,6,7));
     }
-
-    @Test
-    public void return_empty_element_when_list_is_null(){
-        final Optional<Integer> result = _.pop(null);
-
-        Assert.assertFalse(result.isPresent());
-    }
-
-    @Test
-    public void return_empty_element_when_list_is_empty(){
-        final Optional<Integer> result = _.pop(Arrays.asList());
-
-        Assert.assertFalse(result.isPresent());
-    }
 }
