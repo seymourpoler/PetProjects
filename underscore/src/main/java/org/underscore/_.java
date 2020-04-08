@@ -361,7 +361,7 @@ public class _ {
         if(isNull(elements)){
             return Arrays.asList();
         }
-        throw new RuntimeException();
+        return new ArrayList<>(elements);
     }
 
     public static <T> List<T> newList(T... elements){

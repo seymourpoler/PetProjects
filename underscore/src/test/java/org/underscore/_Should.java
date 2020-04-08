@@ -763,6 +763,14 @@ public class _Should {
     }
 
     @Test
+    public void return_copy_of_list(){
+        List<Integer> numbers = Arrays.asList(1,3,3,4);
+        List<Integer> result = _.copyOf(numbers);
+
+        Assert.assertEquals(result, numbers);
+    }
+
+    @Test
     public void return_new_list(){
         List<String> animals = _.newList("horse", "bird");
     }
