@@ -356,4 +356,8 @@ public class _ {
         }
         return result;
     }
+
+    public static <T> List<T> copyOf(final List<T> elements){
+        throw new RuntimeException();
+    }
 }

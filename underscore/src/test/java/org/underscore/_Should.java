@@ -754,4 +754,11 @@ public class _Should {
 
         Assert.assertEquals(result, Arrays.asList(1,2,3,4,5,6,7));
     }
+
+    @Test
+    public void return_empty_list_when_copying_a_null_list(){
+        List<String> result = _.copyOf(null);
+
+        Assert.assertEquals(result.size(), 0);
+    }
 }
