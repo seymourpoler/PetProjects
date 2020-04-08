@@ -365,6 +365,9 @@ public class _ {
     }
 
     public static <T> List<T> newList(T... elements){
+        if(elements.length == noElements){
+            return Arrays.asList();
+        }
         throw new RuntimeException();
     }
 }
