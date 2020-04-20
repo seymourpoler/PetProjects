@@ -13,6 +13,16 @@ public class CreateTableShould {
         Assert.fail("exception expected");
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void
+    throw_exception_when_table_name_is_null(){
+        var createTable = new CreateTable(null);
+
+        createTable.toSql();
+
+        Assert.fail("exception expected");
+    }
+
     @Test
     public void
     create_table(){

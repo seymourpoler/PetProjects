@@ -6,7 +6,7 @@ public class CreateTable {
     }
 
     public String toSql(){
-        if(name == ""){
+        if(name == null || name == ""){
             throw new IllegalArgumentException();
         }
         return "CREATE TABLE " + name + ";";
