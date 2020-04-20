@@ -6,6 +6,9 @@ public class CreateTable {
     }
 
     public String toSql(){
+        if(name == ""){
+            throw new IllegalArgumentException();
+        }
         return "CREATE TABLE " + name + ";";
     }
 }
