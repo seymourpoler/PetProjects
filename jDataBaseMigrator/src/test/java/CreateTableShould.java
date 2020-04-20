@@ -5,7 +5,7 @@ public class CreateTableShould {
 
     @Test(expected = IllegalArgumentException.class)
     public void
-    throw_exception_when_table_name_is_null(){
+    throw_exception_when_table_name_is_empty(){
         var createTable = new CreateTable("");
 
         createTable.toSql();

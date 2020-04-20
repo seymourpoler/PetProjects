@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CreateTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreateTableShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateTableShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CreateTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CreateTableShould.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,9 +87,25 @@
       <option name="presentableId" value="Default" />
       <updated>1587392751873</updated>
     </task>
+    <task id="LOCAL-00001" summary="green throw_exception_when_table_name_is_null">
+      <created>1587393706270</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587393706270</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="green throw_exception_when_table_name_is_null" />
+    <option name="LAST_COMMIT_MESSAGE" value="green throw_exception_when_table_name_is_null" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2" timestamp="1587393706113">
+      <screen x="0" y="0" width="1920" height="1056" />
+    </state>
+    <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393706113" />
     <state width="1920" height="288" key="GridCell.Tab.0.bottom" timestamp="1587393687386">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
@@ -114,6 +126,10 @@
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="449" y="163" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393557144" />
+    <state x="555" y="264" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1587393707384">
+      <screen x="0" y="0" width="1920" height="1056" />
+    </state>
+    <state x="555" y="264" width="804" height="525" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393707384" />
     <state x="705" y="147" width="504" height="759" key="refactoring.ChangeSignatureDialog" timestamp="1587393126071">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
