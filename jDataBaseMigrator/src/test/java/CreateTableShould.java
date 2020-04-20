@@ -15,6 +15,16 @@ public class CreateTableShould {
 
     @Test(expected = IllegalArgumentException.class)
     public void
+    throw_exception_when_table_name_is_white_space(){
+        var createTable = new CreateTable("   ");
+
+        createTable.toSql();
+
+        Assert.fail("exception expected");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void
     throw_exception_when_table_name_is_null(){
         var createTable = new CreateTable(null);
 
