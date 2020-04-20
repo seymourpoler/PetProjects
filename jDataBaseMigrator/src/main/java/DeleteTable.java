@@ -6,6 +6,9 @@ public class DeleteTable {
     }
 
     public String toSql() {
+        if(name == null || name == ""){
+            throw new IllegalArgumentException();
+        }
         throw new RuntimeException();
     }
 }

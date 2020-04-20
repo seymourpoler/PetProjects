@@ -13,4 +13,13 @@ public class DeleteTableShould {
         Assert.fail("exception expected");
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void
+    throw_exception_when_name_is_empty(){
+        var deleteTable = new DeleteTable("");
+
+        deleteTable.toSql();
+
+        Assert.fail("exception expected");
+    }
 }
