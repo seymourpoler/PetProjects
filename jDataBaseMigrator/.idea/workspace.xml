@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/seymourpoler/RenameTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/RenameTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/seymourpoler/RenameTableShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/seymourpoler/RenameTableShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/RenameTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/RenameTableShould.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -56,7 +62,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RenameTableShould">
+  <component name="RunManager" selected="JUnit.RenameTableShould.throw_exception_when_old_name_is_white_space">
     <configuration name="All in jDataBaseMigrator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <option name="PACKAGE_NAME" value="" />
@@ -99,23 +105,6 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckShould.throw_exception_when_is_white_space" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jDataBaseMigrator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.seymourpoler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.seymourpoler" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.CheckShould" />
-      <option name="METHOD_NAME" value="throw_exception_when_is_white_space" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RenameTableShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <extension name="coverage">
@@ -132,6 +121,23 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RenameTableShould.throw_exception_when_old_name_is_white_space" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jDataBaseMigrator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.seymourpoler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.seymourpoler" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.RenameTableShould" />
+      <option name="METHOD_NAME" value="throw_exception_when_old_name_is_white_space" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -141,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RenameTableShould.throw_exception_when_old_name_is_white_space" />
         <item itemvalue="JUnit.RenameTableShould" />
         <item itemvalue="JUnit.All in jDataBaseMigrator" />
         <item itemvalue="JUnit.CheckShould" />
         <item itemvalue="JUnit.CheckShould.do_nothing_when_has_value" />
-        <item itemvalue="JUnit.CheckShould.throw_exception_when_is_white_space" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +204,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="green throw_exception_when_table_name_is_white_space" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="278" y="16" width="804" height="709" key="#Plugins" timestamp="1587741376528">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="278" y="16" width="804" height="709" key="#Plugins/0.0.1366.744@0.0.1366.744" timestamp="1587741376528" />
     <state x="491" y="91" width="378" height="559" key="#com.intellij.ide.util.MemberChooser" timestamp="1587737971799">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -215,25 +225,25 @@
     </state>
     <state x="334" y="86" width="916" height="570" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1587738296652" />
     <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393868436" />
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587741103576">
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587741218925">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587741103576" />
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587741218925" />
     <state width="1920" height="288" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587741103573">
+    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587741218924">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587741103573" />
+    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587741218924" />
     <state width="1920" height="288" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587741103570">
+    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587741218924">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587741103570" />
+    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587741218924" />
     <state width="1920" height="288" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587741103575">
+    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587741218924">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587741103575" />
+    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587741218924" />
     <state width="1920" height="288" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
     <state width="1320" height="222" key="GridCell.Tab.1.bottom" timestamp="1587739560095">
       <screen x="0" y="0" width="1366" height="744" />
@@ -251,10 +261,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state width="1320" height="222" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1587739560094" />
-    <state x="319" y="14" key="SettingsEditor" timestamp="1587737281725">
+    <state x="319" y="0" width="1028" height="741" key="SettingsEditor" timestamp="1587741441813">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="319" y="14" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1587737281725" />
+    <state x="319" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1587741441813" />
     <state x="449" y="163" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393557144" />
     <state x="395" y="186" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1587740863677">
       <screen x="0" y="0" width="1366" height="744" />
@@ -270,10 +280,10 @@
     </state>
     <state x="502" y="104" width="481" height="535" key="refactoring.ChangeSignatureDialog/0.0.1366.744@0.0.1366.744" timestamp="1587737976007" />
     <state x="705" y="147" width="504" height="759" key="refactoring.ChangeSignatureDialog/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587394664116" />
-    <state x="443" y="164" width="672" height="478" key="search.everywhere.popup" timestamp="1587738398607">
+    <state x="443" y="164" width="672" height="478" key="search.everywhere.popup" timestamp="1587741288719">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="443" y="164" width="672" height="478" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1587738398607" />
+    <state x="443" y="164" width="672" height="478" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1587741288719" />
     <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393536757" />
   </component>
   <component name="XDebuggerManager">

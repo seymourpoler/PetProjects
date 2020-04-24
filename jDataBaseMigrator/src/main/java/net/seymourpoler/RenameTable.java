@@ -10,7 +10,7 @@ public class RenameTable {
     }
 
     public String toSql(){
-        if(oldName == null || oldName.equals("")){
+        if(oldName == null || oldName.equals("") || oldName.trim().equals("")){
             throw new IllegalArgumentException();
         }
         throw new RuntimeException();

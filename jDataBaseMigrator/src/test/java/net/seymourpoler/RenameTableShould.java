@@ -18,4 +18,12 @@ public class RenameTableShould {
 
         renameTable.toSql();
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void
+    throw_exception_when_old_name_is_white_space(){
+        var renameTable = new RenameTable("      ", "new_table");
+
+        renameTable.toSql();
+    }
 }
