@@ -20,4 +20,10 @@ public class CheckShould {
     throw_exception_when_is_white_space(){
         Check.isNullOrWhiteSpace("     ");
     }
+
+    @Test
+    public void
+    do_nothing_when_has_value(){
+        Check.isNullOrWhiteSpace(" some value    ");
+    }
 }

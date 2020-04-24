@@ -58,11 +58,28 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CheckShould.throw_exception_when_is_white_space">
+  <component name="RunManager" selected="JUnit.CheckShould.do_nothing_when_has_value">
     <configuration name="All in jDataBaseMigrator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckShould.do_nothing_when_has_value" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jDataBaseMigrator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.seymourpoler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.seymourpoler" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.CheckShould" />
+      <option name="METHOD_NAME" value="do_nothing_when_has_value" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -119,22 +136,6 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringUtilShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jDataBaseMigrator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.seymourpoler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.seymourpoler" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.StringUtilShould" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -144,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckShould.do_nothing_when_has_value" />
         <item itemvalue="JUnit.CheckShould.throw_exception_when_is_white_space" />
         <item itemvalue="JUnit.CheckShould.throw_exception_when_is_string_empty" />
         <item itemvalue="JUnit.CheckShould.throw_exception_when_is_null" />
         <item itemvalue="JUnit.All in jDataBaseMigrator" />
-        <item itemvalue="JUnit.StringUtilShould" />
       </list>
     </recent_temporary>
   </component>
@@ -218,25 +219,25 @@
     </state>
     <state x="334" y="86" width="916" height="570" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1587738296652" />
     <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393868436" />
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587740690513">
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587740768810">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587740690513" />
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587740768810" />
     <state width="1920" height="288" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587740690513">
+    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587740768803">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587740690513" />
+    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587740768803" />
     <state width="1920" height="288" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587740690512">
+    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587740768802">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587740690512" />
+    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587740768802" />
     <state width="1920" height="288" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587740690513">
+    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587740768803">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587740690513" />
+    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587740768803" />
     <state width="1920" height="288" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
     <state width="1320" height="222" key="GridCell.Tab.1.bottom" timestamp="1587739560095">
       <screen x="0" y="0" width="1366" height="744" />

@@ -5,6 +5,5 @@ public class Check {
         if(value == null || value.equals("") || value.trim().equals("")){
             throw new IllegalArgumentException();
         }
-        throw new RuntimeException();
     }
 }
