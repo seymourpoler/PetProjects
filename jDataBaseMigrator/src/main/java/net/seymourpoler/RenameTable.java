@@ -2,16 +2,16 @@ package net.seymourpoler;
 
 public class RenameTable {
     private final String oldName;
-    private final String newTable;
+    private final String newName;
 
-    public RenameTable(String oldName, String newTable) {
+    public RenameTable(String oldName, String newName) {
         this.oldName = oldName;
-        this.newTable = newTable;
+        this.newName = newName;
     }
 
     public String toSql(){
         Check.isNullOrWhiteSpace(oldName);
-        if(newTable == null){
+        if(newName == null){
             throw new IllegalArgumentException();
         }
         throw new RuntimeException();
