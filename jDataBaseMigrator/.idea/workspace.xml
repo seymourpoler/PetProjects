@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/seymourpoler/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/StringUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/seymourpoler/StringUtilShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/seymourpoler/StringUtilShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/StringUtilShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/StringUtilShould.class" afterDir="false" />
@@ -59,22 +58,11 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StringUtilShould">
+  <component name="RunManager" selected="JUnit.StringUtilShould.return_true_when_is_white_space">
     <configuration name="All in jDataBaseMigrator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeleteTableShould.throw_exception_when_table_name_is_white_space" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jDataBaseMigrator" />
-      <option name="PACKAGE_NAME" value="net.seymourpoler" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.DeleteTableShould" />
-      <option name="METHOD_NAME" value="throw_exception_when_table_name_is_white_space" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -130,6 +118,23 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringUtilShould.return_true_when_is_white_space" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jDataBaseMigrator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.seymourpoler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.seymourpoler" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.StringUtilShould" />
+      <option name="METHOD_NAME" value="return_true_when_is_white_space" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -139,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringUtilShould.return_true_when_is_white_space" />
         <item itemvalue="JUnit.StringUtilShould" />
         <item itemvalue="JUnit.StringUtilShould.return_true_when_is_empty" />
         <item itemvalue="JUnit.StringUtilShould.return_true_when_is_null" />
         <item itemvalue="JUnit.All in jDataBaseMigrator" />
-        <item itemvalue="JUnit.DeleteTableShould.throw_exception_when_table_name_is_white_space" />
       </list>
     </recent_temporary>
   </component>
@@ -213,26 +218,42 @@
     </state>
     <state x="334" y="86" width="916" height="570" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1587738296652" />
     <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393868436" />
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587739114271">
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587739580335">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587739114271" />
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587739580335" />
     <state width="1920" height="288" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587739114270">
+    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587739580335">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587739114270" />
+    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587739580335" />
     <state width="1920" height="288" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587739114269">
+    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587739580334">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587739114269" />
+    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587739580334" />
     <state width="1920" height="288" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587739114270">
+    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587739580335">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587739114270" />
+    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587739580335" />
     <state width="1920" height="288" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
+    <state width="1320" height="222" key="GridCell.Tab.1.bottom" timestamp="1587739560095">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587739560095" />
+    <state width="1320" height="222" key="GridCell.Tab.1.center" timestamp="1587739560094">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1587739560094" />
+    <state width="1320" height="222" key="GridCell.Tab.1.left" timestamp="1587739560093">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1587739560093" />
+    <state width="1320" height="222" key="GridCell.Tab.1.right" timestamp="1587739560094">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state width="1320" height="222" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1587739560094" />
     <state x="319" y="14" key="SettingsEditor" timestamp="1587737281725">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -257,5 +278,12 @@
     </state>
     <state x="443" y="164" width="672" height="478" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1587738398607" />
     <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393536757" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="value.trim()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

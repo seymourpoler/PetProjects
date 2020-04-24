@@ -16,4 +16,10 @@ public class StringUtilShould {
     return_true_when_is_empty(){
         assertThat(StringUtil.isNullOrWhiteSpace("")).isTrue();
     }
+
+    @Test
+    public void
+    return_true_when_is_white_space(){
+        assertThat(StringUtil.isNullOrWhiteSpace("   ")).isTrue();
+    }
 }
