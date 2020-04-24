@@ -1,12 +1,19 @@
 package net.seymourpoler;
 
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class StringUtilShould {
     @Test
     public void
     return_true_when_is_null(){
-        Assert.assertTrue(StringUtil.isNullOrWhiteSpace(null));
+        assertThat(StringUtil.isNullOrWhiteSpace(null)).isTrue();
+    }
+
+    @Test
+    public void
+    return_true_when_is_empty(){
+        assertThat(StringUtil.isNullOrWhiteSpace("")).isTrue();
     }
 }

@@ -13,6 +13,7 @@
         <java.version>13</java.version>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
         <junit.platform.version>1.5.2</junit.platform.version>
+        <assertj.version>3.15.0</assertj.version>
     </properties>
     <dependencies>
         <dependency>
@@ -27,6 +28,13 @@
             <version>${junit.platform.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
