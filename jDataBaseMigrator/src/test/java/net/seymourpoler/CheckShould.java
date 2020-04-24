@@ -14,4 +14,10 @@ public class CheckShould {
     throw_exception_when_is_string_empty(){
         Check.isNullOrWhiteSpace("");
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void
+    throw_exception_when_is_white_space(){
+        Check.isNullOrWhiteSpace("     ");
+    }
 }
