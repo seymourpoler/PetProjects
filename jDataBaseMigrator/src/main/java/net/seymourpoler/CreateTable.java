@@ -8,9 +8,7 @@ public class CreateTable {
     }
 
     public String toSql(){
-        if(StringUtil.isNullOrWhiteSpace(name)){
-            throw new IllegalArgumentException();
-        }
+        Check.isNullOrWhiteSpace(name);
         return "CREATE TABLE " + name + ";";
     }
 }

@@ -13,4 +13,14 @@ public class RenameTableShould {
 
         Assert.fail("exception expected");
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void
+    throw_exception_when_old_name_is_empty(){
+        var renameTable = new RenameTable("", "new_table");
+
+        renameTable.toSql();
+
+        Assert.fail("exception expected");
+    }
 }
