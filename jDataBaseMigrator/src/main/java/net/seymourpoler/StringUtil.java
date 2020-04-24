@@ -2,9 +2,9 @@ package net.seymourpoler;
 
 public class StringUtil {
     public static Boolean isNullOrWhiteSpace(String value){
-        if (value == null || value.equals("") || value.trim().equals("")){
-            return true;
-        }
-        return false;
+        final String stringEmpty = "";
+        return value == null ||
+                value.equals(stringEmpty) ||
+                value.trim().equals(stringEmpty);
     }
 }
