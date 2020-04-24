@@ -1,3 +1,5 @@
+package net.seymourpoler;
+
 public class DeleteTable {
     private final String name;
 
@@ -6,7 +8,7 @@ public class DeleteTable {
     }
 
     public String toSql() {
-        if(name == null || name == ""){
+        if(name == null || name == "" || name == "   "){
             throw new IllegalArgumentException();
         }
         throw new RuntimeException();

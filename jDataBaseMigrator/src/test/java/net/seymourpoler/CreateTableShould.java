@@ -1,3 +1,6 @@
+package net.seymourpoler;
+
+import net.seymourpoler.CreateTable;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,3 +1,5 @@
+package net.seymourpoler;
+
 public class CreateTable {
     private final String name;
 

@@ -1,3 +1,5 @@
+package net.seymourpoler;
+
 import org.junit.Assert;
 import org.junit.Test;
 

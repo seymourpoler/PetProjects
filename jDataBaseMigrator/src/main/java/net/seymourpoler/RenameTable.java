@@ -1,3 +1,5 @@
+package net.seymourpoler;
+
 public class RenameTable {
     private final String oldName;
     private final String newTable;
