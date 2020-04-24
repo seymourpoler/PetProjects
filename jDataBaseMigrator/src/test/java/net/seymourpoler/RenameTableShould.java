@@ -1,6 +1,5 @@
 package net.seymourpoler;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 public class RenameTableShould {
@@ -10,8 +9,6 @@ public class RenameTableShould {
         var renameTable = new RenameTable(null, "new_table");
 
         renameTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -20,7 +17,5 @@ public class RenameTableShould {
         var renameTable = new RenameTable("", "new_table");
 
         renameTable.toSql();
-
-        Assert.fail("exception expected");
     }
 }
