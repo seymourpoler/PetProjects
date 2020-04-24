@@ -5,6 +5,6 @@ public class StringUtil {
         if (value == null || value.equals("") || value.trim().equals("")){
             return true;
         }
-        throw new RuntimeException();
+        return false;
     }
 }

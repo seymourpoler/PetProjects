@@ -22,4 +22,10 @@ public class StringUtilShould {
     return_true_when_is_white_space(){
         assertThat(StringUtil.isNullOrWhiteSpace("   ")).isTrue();
     }
+
+    @Test
+    public void
+    return_true_when_has_value(){
+        assertThat(StringUtil.isNullOrWhiteSpace("aswdef")).isFalse();
+    }
 }
