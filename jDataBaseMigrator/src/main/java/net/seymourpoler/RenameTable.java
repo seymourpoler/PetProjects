@@ -11,6 +11,9 @@ public class RenameTable {
 
     public String toSql(){
         Check.isNullOrWhiteSpace(oldName);
-            throw new RuntimeException();
+        if(newTable == null){
+            throw new IllegalArgumentException();
+        }
+        throw new RuntimeException();
     }
 }

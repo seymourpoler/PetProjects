@@ -26,4 +26,12 @@ public class RenameTableShould {
 
         renameTable.toSql();
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void
+    throw_exception_when_new_name_is_null(){
+        var renameTable = new RenameTable("old_table", null);
+
+        renameTable.toSql();
+    }
 }
