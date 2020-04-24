@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/DeleteTable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/DeleteTableShould.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RenameTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/AlterTableShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeleteTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeleteTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DeleteTableShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeleteTableShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CreateTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeleteTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CreateTableShould.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DeleteTableShould.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,32 +37,25 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.DeleteTableShould.throw_exception_when_name_is_empty">
-    <configuration name="CreateTableShould.create_table" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.RenameTableShould.throw_exeception_when_old_name_is_null">
+    <configuration name="All in jDataBaseMigrator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateTableShould" />
-      <option name="METHOD_NAME" value="create_table" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateTableShould.throw_exception_when_table_name_is_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jDataBaseMigrator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateTableShould" />
-      <option name="METHOD_NAME" value="throw_exception_when_table_name_is_null" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,15 +88,26 @@
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenameTableShould.throw_exeception_when_old_name_is_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jDataBaseMigrator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RenameTableShould" />
+      <option name="METHOD_NAME" value="throw_exeception_when_old_name_is_null" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RenameTableShould.throw_exeception_when_old_name_is_null" />
+        <item itemvalue="JUnit.All in jDataBaseMigrator" />
         <item itemvalue="JUnit.DeleteTableShould.throw_exception_when_name_is_empty" />
         <item itemvalue="JUnit.DeleteTableShould.throw_exception_when_name_is_null" />
         <item itemvalue="JUnit.CreateTableShould.throw_exception_when_table_name_is_white_space" />
-        <item itemvalue="JUnit.CreateTableShould.throw_exception_when_table_name_is_null" />
-        <item itemvalue="JUnit.CreateTableShould.create_table" />
       </list>
     </recent_temporary>
   </component>
@@ -152,41 +160,52 @@
     <option name="LAST_COMMIT_MESSAGE" value="green throw_exception_when_table_name_is_white_space" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="491" y="91" width="378" height="559" key="#com.intellij.ide.util.MemberChooser" timestamp="1587737971799">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="491" y="91" width="378" height="559" key="#com.intellij.ide.util.MemberChooser/0.0.1366.744@0.0.1366.744" timestamp="1587737971799" />
     <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2" timestamp="1587393868436">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393868436" />
-    <state width="1920" height="288" key="GridCell.Tab.0.bottom" timestamp="1587395116076">
-      <screen x="0" y="0" width="1920" height="1056" />
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587737885277">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587737885277" />
     <state width="1920" height="288" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1920" height="288" key="GridCell.Tab.0.center" timestamp="1587395116076">
-      <screen x="0" y="0" width="1920" height="1056" />
+    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587737885276">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587737885276" />
     <state width="1920" height="288" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1920" height="288" key="GridCell.Tab.0.left" timestamp="1587395116076">
-      <screen x="0" y="0" width="1920" height="1056" />
+    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587737885276">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587737885276" />
     <state width="1920" height="288" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1920" height="288" key="GridCell.Tab.0.right" timestamp="1587395116076">
-      <screen x="0" y="0" width="1920" height="1056" />
+    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587737885277">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587737885277" />
     <state width="1920" height="288" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state x="449" y="163" key="SettingsEditor" timestamp="1587393557144">
-      <screen x="0" y="0" width="1920" height="1056" />
+    <state x="319" y="14" key="SettingsEditor" timestamp="1587737281725">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state x="319" y="14" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1587737281725" />
     <state x="449" y="163" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393557144" />
     <state x="555" y="264" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1587393871174">
       <screen x="0" y="0" width="1920" height="1056" />
     </state>
     <state x="555" y="264" width="804" height="525" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393871174" />
-    <state x="705" y="147" width="504" height="759" key="refactoring.ChangeSignatureDialog" timestamp="1587394664116">
-      <screen x="0" y="0" width="1920" height="1056" />
+    <state x="502" y="104" width="481" height="535" key="refactoring.ChangeSignatureDialog" timestamp="1587737976007">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state x="502" y="104" width="481" height="535" key="refactoring.ChangeSignatureDialog/0.0.1366.744@0.0.1366.744" timestamp="1587737976007" />
     <state x="705" y="147" width="504" height="759" key="refactoring.ChangeSignatureDialog/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587394664116" />
-    <state x="623" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1587393536757">
-      <screen x="0" y="0" width="1920" height="1056" />
+    <state x="443" y="164" width="672" height="478" key="search.everywhere.popup" timestamp="1587737916285">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state x="443" y="164" width="672" height="478" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1587737916285" />
     <state x="623" y="233" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393536757" />
   </component>
 </project>
