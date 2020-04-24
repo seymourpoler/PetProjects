@@ -19,7 +19,7 @@ public class CreateTableShould {
     @Test(expected = IllegalArgumentException.class)
     public void
     throw_exception_when_table_name_is_white_space(){
-        var createTable = new CreateTable("   ");
+        var createTable = new CreateTable("      ");
 
         createTable.toSql();
 
