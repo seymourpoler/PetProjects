@@ -1,4 +1,4 @@
-package net.seymourpoler;
+package net.seymourpoler.jDataBaseMigrator;
 
 public class CreateTable {
     private final String name;

@@ -1,4 +1,4 @@
-package net.seymourpoler;
+package net.seymourpoler.jDataBaseMigrator;
 
 public class StringUtil {
     public static Boolean isNullOrWhiteSpace(String value){

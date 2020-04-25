@@ -1,4 +1,4 @@
-package net.seymourpoler;
+package net.seymourpoler.jDataBaseMigrator;
 
 import org.junit.Test;
 

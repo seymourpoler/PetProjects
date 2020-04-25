@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/seymourpoler/RenameTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/RenameTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/seymourpoler/RenameTableShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/seymourpoler/RenameTableShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/RenameTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/RenameTableShould.class" afterDir="false" />
-    </list>
+    <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +60,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RenameTableShould">
+  <component name="RunManager" selected="JUnit.All in jDataBaseMigrator">
     <configuration name="All in jDataBaseMigrator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,12 +74,12 @@
       <module name="jDataBaseMigrator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.seymourpoler.*" />
+          <option name="PATTERN" value="net.seymourpoler.jDataBaseMigrator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="net.seymourpoler" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.CheckShould" />
+      <option name="PACKAGE_NAME" value="net.seymourpoler.jDataBaseMigrator" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.jDataBaseMigrator.CheckShould" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,12 +90,12 @@
       <module name="jDataBaseMigrator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.seymourpoler.*" />
+          <option name="PATTERN" value="net.seymourpoler.jDataBaseMigrator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="net.seymourpoler" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.CheckShould" />
+      <option name="PACKAGE_NAME" value="net.seymourpoler.jDataBaseMigrator" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.jDataBaseMigrator.CheckShould" />
       <option name="METHOD_NAME" value="do_nothing_when_has_value" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -112,12 +107,12 @@
       <module name="jDataBaseMigrator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.seymourpoler.*" />
+          <option name="PATTERN" value="net.seymourpoler.jDataBaseMigrator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="net.seymourpoler" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.RenameTableShould" />
+      <option name="PACKAGE_NAME" value="net.seymourpoler.jDataBaseMigrator" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.jDataBaseMigrator.RenameTableShould" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,12 +123,12 @@
       <module name="jDataBaseMigrator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.seymourpoler.*" />
+          <option name="PATTERN" value="net.seymourpoler.jDataBaseMigrator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="net.seymourpoler" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.RenameTableShould" />
+      <option name="PACKAGE_NAME" value="net.seymourpoler.jDataBaseMigrator" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.jDataBaseMigrator.RenameTableShould" />
       <option name="METHOD_NAME" value="throw_exception_when_old_name_is_white_space" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -150,8 +145,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RenameTableShould" />
         <item itemvalue="JUnit.All in jDataBaseMigrator" />
+        <item itemvalue="JUnit.RenameTableShould" />
         <item itemvalue="JUnit.RenameTableShould.throw_exception_when_old_name_is_white_space" />
         <item itemvalue="JUnit.CheckShould" />
         <item itemvalue="JUnit.CheckShould.do_nothing_when_has_value" />
