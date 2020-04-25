@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/jDataBaseMigrator/Column.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/seymourpoler/jDataBaseMigrator/CreateTableShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/seymourpoler/jDataBaseMigrator/CreateTableShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateTableShould.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +61,7 @@
       <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="net.seymourpoler.jDataBaseMigrator" />
       <recent name="net.seymourpoler" />
       <recent name="" />
     </key>
@@ -283,6 +284,10 @@
     </state>
     <state x="502" y="104" width="481" height="535" key="refactoring.ChangeSignatureDialog/0.0.1366.744@0.0.1366.744" timestamp="1587741958463" />
     <state x="705" y="147" width="504" height="759" key="refactoring.ChangeSignatureDialog/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587394664116" />
+    <state x="345" y="164" key="run.anything.popup" timestamp="1587827294178">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="345" y="164" key="run.anything.popup/0.0.1366.744@0.0.1366.744" timestamp="1587827294178" />
     <state x="443" y="164" width="672" height="478" key="search.everywhere.popup" timestamp="1587741288719">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
