@@ -3,6 +3,8 @@ package net.seymourpoler.jDataBaseMigrator;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class CreateTableShould {
 
     @Test(expected = IllegalArgumentException.class)
@@ -36,6 +38,6 @@ public class CreateTableShould {
 
         var result = createTable.toSql();
 
-        Assert.assertEquals("CREATE TABLE table_name;", result);
+        assertThat(result).isEqualTo("CREATE TABLE table_name;");
     }
 }
