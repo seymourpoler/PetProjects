@@ -1,6 +1,5 @@
 package net.seymourpoler;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,8 +12,6 @@ public class DeleteTableShould {
         var deleteTable = new DeleteTable(null);
 
         deleteTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -23,8 +20,6 @@ public class DeleteTableShould {
         var deleteTable = new DeleteTable("");
 
         deleteTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -33,8 +28,6 @@ public class DeleteTableShould {
         var createTable = new DeleteTable("   ");
 
         createTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test
