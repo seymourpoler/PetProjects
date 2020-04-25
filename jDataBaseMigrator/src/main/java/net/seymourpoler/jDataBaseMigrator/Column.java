@@ -8,9 +8,7 @@ public class Column {
     }
 
     public String toSql(){
-        if(name == null || name.equals("") || name.trim().equals("") ){
-            throw new IllegalArgumentException();
-        }
+        Check.isNullOrWhiteSpace(name);
         throw new RuntimeException();
     }
 }
