@@ -1,6 +1,5 @@
 package net.seymourpoler;
 
-import net.seymourpoler.DeleteTable;
 import org.junit.Assert;
 import org.junit.Test;
 
