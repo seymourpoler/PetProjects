@@ -11,8 +11,6 @@ public class CreateTableShould {
         var createTable = new CreateTable("");
 
         createTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test(expected = IllegalArgumentException.class)
