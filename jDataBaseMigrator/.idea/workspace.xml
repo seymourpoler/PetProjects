@@ -3,7 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/seymourpoler/RenameTableShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/seymourpoler/RenameTableShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/seymourpoler/RenameTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/RenameTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/jDataBaseMigrator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/Check.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/CreateTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/DeleteTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/RenameTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/StringUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/jDataBaseMigrator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/CheckShould.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/CreateTableShould.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/DeleteTableShould.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/RenameTableShould.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/StringUtilShould.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RenameTableShould.throw_exception_when_old_name_is_white_space">
+  <component name="RunManager" selected="JUnit.All in jDataBaseMigrator">
     <configuration name="All in jDataBaseMigrator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <option name="PACKAGE_NAME" value="" />
@@ -148,9 +160,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in jDataBaseMigrator" />
         <item itemvalue="JUnit.RenameTableShould.throw_exception_when_old_name_is_white_space" />
         <item itemvalue="JUnit.RenameTableShould" />
-        <item itemvalue="JUnit.All in jDataBaseMigrator" />
         <item itemvalue="JUnit.CheckShould" />
         <item itemvalue="JUnit.CheckShould.do_nothing_when_has_value" />
       </list>
