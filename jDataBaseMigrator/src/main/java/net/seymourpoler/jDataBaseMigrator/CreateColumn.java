@@ -1,9 +1,9 @@
 package net.seymourpoler.jDataBaseMigrator;
 
-public class Column {
+public class CreateColumn {
     private final String name;
 
-    public Column(String name) {
+    public CreateColumn(String name) {
         this.name = name;
     }
 

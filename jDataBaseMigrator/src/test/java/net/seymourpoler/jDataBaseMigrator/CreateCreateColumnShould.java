@@ -2,11 +2,11 @@ package net.seymourpoler.jDataBaseMigrator;
 
 import org.junit.Test;
 
-public class CreateColumnShould {
+public class CreateCreateColumnShould {
     @Test(expected = IllegalArgumentException.class)
     public void
     throw_exception_when_name_is_null(){
-        var column = new Column(null);
+        var column = new CreateColumn(null);
 
         column.toSql();
     }
@@ -14,7 +14,7 @@ public class CreateColumnShould {
     @Test(expected = IllegalArgumentException.class)
     public void
     throw_exception_when_name_is_empty(){
-        var column = new Column("");
+        var column = new CreateColumn("");
 
         column.toSql();
     }
@@ -22,7 +22,7 @@ public class CreateColumnShould {
     @Test(expected = IllegalArgumentException.class)
     public void
     throw_exception_when_name_is_white_space(){
-        var column = new Column("     ");
+        var column = new CreateColumn("     ");
 
         column.toSql();
     }
