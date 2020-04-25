@@ -3,19 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/seymourpoler/RenameTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/RenameTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/seymourpoler/DeleteTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/DeleteTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/jDataBaseMigrator.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/Check.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/CreateTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/DeleteTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/RenameTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/StringUtil.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/jDataBaseMigrator.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/CheckShould.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/CreateTableShould.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/DeleteTableShould.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/RenameTableShould.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/StringUtilShould.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,25 +228,25 @@
     </state>
     <state x="334" y="86" width="916" height="570" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1587738296652" />
     <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393868436" />
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587741522540">
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587795542558">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587741522540" />
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587795542558" />
     <state width="1920" height="288" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587741522539">
+    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587795542556">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587741522539" />
+    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587795542556" />
     <state width="1920" height="288" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587741522539">
+    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587795542555">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587741522539" />
+    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587795542555" />
     <state width="1920" height="288" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587741522540">
+    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587795542557">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587741522540" />
+    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587795542557" />
     <state width="1920" height="288" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
     <state width="1320" height="222" key="GridCell.Tab.1.bottom" timestamp="1587739560095">
       <screen x="0" y="0" width="1366" height="744" />

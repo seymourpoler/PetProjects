@@ -8,9 +8,7 @@ public class DeleteTable {
     }
 
     public String toSql() {
-        if(StringUtil.isNullOrWhiteSpace(name)){
-            throw new IllegalArgumentException();
-        }
+        Check.isNullOrWhiteSpace(name);
         throw new RuntimeException();
     }
 }
