@@ -2,7 +2,7 @@ package net.seymourpoler.jDataBaseMigrator;
 
 import org.junit.Test;
 
-public class CreateCreateColumnShould {
+public class CreateColumnShould {
     @Test(expected = IllegalArgumentException.class)
     public void
     throw_exception_when_name_is_null(){
