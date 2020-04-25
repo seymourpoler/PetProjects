@@ -11,4 +11,8 @@ public class CreateColumn {
         Check.isNullOrWhiteSpace(name);
         throw new RuntimeException();
     }
+
+    public CreateColumn asInteger() {
+        throw new RuntimeException();
+    }
 }
