@@ -9,6 +9,6 @@ public class DeleteTable {
 
     public String toSql() {
         Check.isNullOrWhiteSpace(name);
-        throw new RuntimeException();
+        return "DELETE TABLE " + name;
     }
 }

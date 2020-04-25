@@ -3,6 +3,8 @@ package net.seymourpoler;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class DeleteTableShould {
 
     @Test(expected = IllegalArgumentException.class)
@@ -33,5 +35,15 @@ public class DeleteTableShould {
         createTable.toSql();
 
         Assert.fail("exception expected");
+    }
+
+    @Test
+    public void
+    return_delete_table_sql(){
+        var createTable = new DeleteTable("users");
+
+        var result = createTable.toSql();
+
+        assertThat(result).isEqualTo("DELETE TABLE users");
     }
 }
