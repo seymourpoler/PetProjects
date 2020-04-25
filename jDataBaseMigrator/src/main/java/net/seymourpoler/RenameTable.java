@@ -11,7 +11,7 @@ public class RenameTable {
 
     public String toSql(){
         Check.isNullOrWhiteSpace(oldName);
-        if(newName == null || newName.equals("")){
+        if(newName == null || newName.equals("") || newName.trim().equals("")){
             throw new IllegalArgumentException();
         }
         throw new RuntimeException();

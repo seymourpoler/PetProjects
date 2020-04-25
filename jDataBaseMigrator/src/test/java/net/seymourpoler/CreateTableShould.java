@@ -33,7 +33,7 @@ public class CreateTableShould {
 
     @Test
     public void
-    create_table(){
+    return_create_table_sql(){
         var createTable = new CreateTable("table_name");
 
         var result = createTable.toSql();
