@@ -1,6 +1,5 @@
 package net.seymourpoler;
 
-import net.seymourpoler.CreateTable;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,8 +21,6 @@ public class CreateTableShould {
         var createTable = new CreateTable("      ");
 
         createTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -32,8 +29,6 @@ public class CreateTableShould {
         var createTable = new CreateTable(null);
 
         createTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test
