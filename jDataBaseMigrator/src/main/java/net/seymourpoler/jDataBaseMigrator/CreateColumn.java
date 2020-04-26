@@ -21,7 +21,7 @@ public class CreateColumn {
 
     public String toSql(){
         Check.isNullOrWhiteSpace(name);
-        return name + " " + typeName() + getIsNotNull() + getDefaultValue() + getIsPrimaryKey();
+        return name + " " + getTypeName() + getIsNotNull() + getDefaultValue() + getIsPrimaryKey();
     }
 
     private String getDefaultValue() {
@@ -64,7 +64,7 @@ public class CreateColumn {
         return this;
     }
 
-    private String typeName(){
+    private String getTypeName(){
         if(length == 0){
             return type.getName().toLowerCase();
         }
