@@ -104,4 +104,8 @@ public class CreateColumn {
         type = JDBCType.TIMESTAMP;
         return this;
     }
+
+    public CreateColumn asMoney() {
+        throw new RuntimeException();
+    }
 }

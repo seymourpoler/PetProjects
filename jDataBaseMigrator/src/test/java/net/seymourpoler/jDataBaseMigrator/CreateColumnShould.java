@@ -61,6 +61,16 @@ public class CreateColumnShould {
 
     @Test
     public void
+    create_money_column(){
+        var column = new CreateColumn("price").asMoney().notNull();
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("prie money not null");
+    }
+
+    @Test
+    public void
     create_string_column(){
         var column = new CreateColumn("a_column").asString();
 
