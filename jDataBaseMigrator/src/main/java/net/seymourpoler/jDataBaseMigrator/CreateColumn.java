@@ -99,4 +99,9 @@ public class CreateColumn {
         isPrimaryKey = true;
         return this;
     }
+
+    public CreateColumn asDateTime() {
+        type = JDBCType.TIMESTAMP;
+        return this;
+    }
 }

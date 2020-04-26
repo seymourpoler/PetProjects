@@ -101,6 +101,16 @@ public class CreateColumnShould {
 
     @Test
     public void
+    create_date_and_time_column(){
+        var column = new CreateColumn("a_column").asDateTime();
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column timestamp");
+    }
+
+    @Test
+    public void
     create_not_null_column(){
         var column = new CreateColumn("a_column").asInteger().notNull();
 
