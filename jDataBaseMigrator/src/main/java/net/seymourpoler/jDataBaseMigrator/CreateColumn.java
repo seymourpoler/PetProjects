@@ -6,16 +6,18 @@ public class CreateColumn {
     private final String name;
     private JDBCType type;
     private Integer length;
+    private Boolean isNotNull;
 
     public CreateColumn(String name) {
 
         this.name = name;
         length = 0;
+        isNotNull = false;
     }
 
     public String toSql(){
         Check.isNullOrWhiteSpace(name);
-        return name + " " + typeName();
+        return name + " " + typeName() + getIsNotNull();
     }
 
     public CreateColumn asInteger() {
@@ -54,5 +56,17 @@ public class CreateColumn {
     public CreateColumn asBoolean() {
         type = JDBCType.BOOLEAN;
         return this;
+    }
+
+    public CreateColumn notNull() {
+        isNotNull = true;
+        return this;
+    }
+
+    private String getIsNotNull(){
+        if(isNotNull){
+            return " not null";
+        }
+        return "";
     }
 }

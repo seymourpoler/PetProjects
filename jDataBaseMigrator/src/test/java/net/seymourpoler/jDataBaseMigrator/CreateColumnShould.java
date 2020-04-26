@@ -88,4 +88,14 @@ public class CreateColumnShould {
 
         assertThat(result).isEqualTo("a_column boolean");
     }
+
+    @Test
+    public void
+    create_not_null_column(){
+        var column = new CreateColumn("a_column").asInteger().notNull();
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column integer not null");
+    }
 }
