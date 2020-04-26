@@ -36,6 +36,6 @@ public class CreateColumnShould {
 
         var result = column.toSql();
 
-        assertThat(result).isEqualTo("a_column int");
+        assertThat(result).isEqualTo("a_column integer");
     }
 }

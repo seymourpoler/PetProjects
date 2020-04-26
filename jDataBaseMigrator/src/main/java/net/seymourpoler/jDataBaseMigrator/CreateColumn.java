@@ -1,18 +1,21 @@
 package net.seymourpoler.jDataBaseMigrator;
 
+import java.sql.JDBCType;
+
 public class CreateColumn {
     private final String name;
-
+    private JDBCType type;
     public CreateColumn(String name) {
         this.name = name;
     }
 
     public String toSql(){
         Check.isNullOrWhiteSpace(name);
-        throw new RuntimeException();
+        return name + " integer";
     }
 
     public CreateColumn asInteger() {
-        throw new RuntimeException();
+        type = JDBCType.INTEGER;
+        return this;
     }
 }
