@@ -91,6 +91,16 @@ public class CreateColumnShould {
 
     @Test
     public void
+    create_boolean_with_default_value_column(){
+        var column = new CreateColumn("a_column").asBoolean(false);
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column boolean default false");
+    }
+
+    @Test
+    public void
     create_not_null_column(){
         var column = new CreateColumn("a_column").asInteger().notNull();
 
@@ -101,7 +111,7 @@ public class CreateColumnShould {
 
     @Test
     public void
-    create_primary_key_column(){
+        create_primary_key_column(){
         var column = new CreateColumn("a_column").asInteger().asPrimaryKey();
 
         var result = column.toSql();

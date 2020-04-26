@@ -8,18 +8,27 @@ public class CreateColumn {
     private Integer length;
     private Boolean isNotNull;
     private Boolean isPrimaryKey;
+    private Boolean defaultValue;
 
     public CreateColumn(String name) {
 
         this.name = name;
         length = 0;
+        defaultValue = null;
         isNotNull = false;
         isPrimaryKey = false;
     }
 
     public String toSql(){
         Check.isNullOrWhiteSpace(name);
-        return name + " " + typeName() + getIsNotNull() + getIsPrimaryKey();
+        return name + " " + typeName() + getIsNotNull() + getDefaultValue() + getIsPrimaryKey();
+    }
+
+    private String getDefaultValue() {
+        if(defaultValue != null){
+            return " default " + defaultValue.toString();
+        }
+        return "";
     }
 
     private String getIsPrimaryKey() {
@@ -64,6 +73,12 @@ public class CreateColumn {
 
     public CreateColumn asBoolean() {
         type = JDBCType.BOOLEAN;
+        return this;
+    }
+
+    public CreateColumn asBoolean(Boolean defaultBooleanValue) {
+        type = JDBCType.BOOLEAN;
+        this.defaultValue = defaultBooleanValue;
         return this;
     }
 
