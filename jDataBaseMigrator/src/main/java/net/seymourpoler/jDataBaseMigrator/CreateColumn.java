@@ -23,4 +23,9 @@ public class CreateColumn {
         type = JDBCType.SMALLINT;
         return this;
     }
+
+    public CreateColumn asBigInteger() {
+        type = JDBCType.BIGINT;
+        return this;
+    }
 }

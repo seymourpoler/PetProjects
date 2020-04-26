@@ -48,4 +48,14 @@ public class CreateColumnShould {
 
         assertThat(result).isEqualTo("a_column smallint");
     }
+
+    @Test
+    public void
+    create_big_integer_column(){
+        var column = new CreateColumn("a_column").asBigInteger();
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column bigint");
+    }
 }
