@@ -68,4 +68,14 @@ public class CreateColumnShould {
 
         assertThat(result).isEqualTo("a_column varchar");
     }
+
+    @Test
+    public void
+    create_length_string_column(){
+        var column = new CreateColumn("a_column").asString(50);
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column varchar(50)");
+    }
 }
