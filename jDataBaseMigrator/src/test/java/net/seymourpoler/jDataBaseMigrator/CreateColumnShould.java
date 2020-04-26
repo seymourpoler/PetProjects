@@ -31,7 +31,7 @@ public class CreateColumnShould {
 
     @Test
     public void
-    create_number_column(){
+    create_integer_column(){
         var column = new CreateColumn("a_column").asInteger();
 
         var result = column.toSql();
