@@ -58,4 +58,14 @@ public class CreateColumnShould {
 
         assertThat(result).isEqualTo("a_column bigint");
     }
+
+    @Test
+    public void
+    create_string_column(){
+        var column = new CreateColumn("a_column").asString();
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column varchar");
+    }
 }

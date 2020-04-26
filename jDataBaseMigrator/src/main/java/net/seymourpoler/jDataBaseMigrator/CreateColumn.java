@@ -28,4 +28,9 @@ public class CreateColumn {
         type = JDBCType.BIGINT;
         return this;
     }
+
+    public CreateColumn asString() {
+        type = JDBCType.VARCHAR;
+        return this;
+    }
 }
