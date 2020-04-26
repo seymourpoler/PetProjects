@@ -111,7 +111,7 @@ public class CreateColumnShould {
 
     @Test
     public void
-        create_primary_key_column(){
+    create_primary_key_column(){
         var column = new CreateColumn("a_column").asInteger().asPrimaryKey();
 
         var result = column.toSql();
