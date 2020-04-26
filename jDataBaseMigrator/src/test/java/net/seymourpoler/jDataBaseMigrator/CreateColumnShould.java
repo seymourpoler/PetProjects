@@ -78,4 +78,14 @@ public class CreateColumnShould {
 
         assertThat(result).isEqualTo("a_column varchar(50)");
     }
+
+    @Test
+    public void
+    create_boolean_column(){
+        var column = new CreateColumn("a_column").asBoolean();
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column boolean");
+    }
 }

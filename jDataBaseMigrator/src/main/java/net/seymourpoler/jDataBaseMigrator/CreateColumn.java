@@ -50,4 +50,9 @@ public class CreateColumn {
         }
         return type.getName().toLowerCase() + "(" + length + ")";
     }
+
+    public CreateColumn asBoolean() {
+        type = JDBCType.BOOLEAN;
+        return this;
+    }
 }
