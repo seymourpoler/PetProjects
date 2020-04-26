@@ -11,11 +11,16 @@ public class CreateColumn {
 
     public String toSql(){
         Check.isNullOrWhiteSpace(name);
-        return name + " integer";
+        return name + " " + type.toString().toLowerCase();
     }
 
     public CreateColumn asInteger() {
         type = JDBCType.INTEGER;
+        return this;
+    }
+
+    public CreateColumn asSmallInteger() {
+        type = JDBCType.SMALLINT;
         return this;
     }
 }

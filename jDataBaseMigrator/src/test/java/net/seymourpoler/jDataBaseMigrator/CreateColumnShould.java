@@ -38,4 +38,14 @@ public class CreateColumnShould {
 
         assertThat(result).isEqualTo("a_column integer");
     }
+
+    @Test
+    public void
+    create_small_integer_column(){
+        var column = new CreateColumn("a_column").asSmallInteger();
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column smallint");
+    }
 }
