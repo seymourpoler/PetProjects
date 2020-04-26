@@ -98,4 +98,14 @@ public class CreateColumnShould {
 
         assertThat(result).isEqualTo("a_column integer not null");
     }
+
+    @Test
+    public void
+    create_primary_key_column(){
+        var column = new CreateColumn("a_column").asInteger().asPrimaryKey();
+
+        var result = column.toSql();
+
+        assertThat(result).isEqualTo("a_column integer not null primary key");
+    }
 }

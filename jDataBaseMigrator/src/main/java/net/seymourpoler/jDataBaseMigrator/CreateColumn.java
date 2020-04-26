@@ -7,17 +7,26 @@ public class CreateColumn {
     private JDBCType type;
     private Integer length;
     private Boolean isNotNull;
+    private Boolean isPrimaryKey;
 
     public CreateColumn(String name) {
 
         this.name = name;
         length = 0;
         isNotNull = false;
+        isPrimaryKey = false;
     }
 
     public String toSql(){
         Check.isNullOrWhiteSpace(name);
-        return name + " " + typeName() + getIsNotNull();
+        return name + " " + typeName() + getIsNotNull() + getIsPrimaryKey();
+    }
+
+    private String getIsPrimaryKey() {
+        if(isPrimaryKey) {
+            return " primary key";
+        }
+        return "";
     }
 
     public CreateColumn asInteger() {
@@ -68,5 +77,11 @@ public class CreateColumn {
             return " not null";
         }
         return "";
+    }
+
+    public CreateColumn asPrimaryKey() {
+        isNotNull = true;
+        isPrimaryKey = true;
+        return this;
     }
 }
