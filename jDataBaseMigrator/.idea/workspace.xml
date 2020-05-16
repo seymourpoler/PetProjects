@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null">
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/seymourpoler/jDataBaseMigrator/CreateColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/jDataBaseMigrator/CreateColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jDataBaseMigrator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jDataBaseMigrator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/jDataBaseMigrator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/Check.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/CreateColumn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/CreateColumn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/CreateTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/CreateTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/DeleteTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/DeleteTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/RenameTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/RenameTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/StringUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/jDataBaseMigrator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CheckShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CheckShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateTableShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/DeleteTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/DeleteTableShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/RenameTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/RenameTableShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/StringUtilShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/StringUtilShould.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +56,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -168,6 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587392751873</updated>
+      <workItem from="1589638680932" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="green throw_exception_when_table_name_is_null">
       <created>1587393706270</created>
@@ -199,6 +218,9 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor: rename" />
@@ -272,10 +294,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="266" y="109" width="828" height="523" key="IDE.errors.dialog/0.0.1366.744@0.0.1366.744" timestamp="1587913098578" />
-    <state x="319" y="0" width="1028" height="741" key="SettingsEditor" timestamp="1587741658002">
+    <state x="319" y="0" width="1028" height="741" key="SettingsEditor" timestamp="1589638845013">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="319" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1587741658002" />
+    <state x="319" y="0" width="1028" height="741" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1589638845013" />
     <state x="449" y="163" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393557144" />
     <state x="395" y="186" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1587740863677">
       <screen x="0" y="0" width="1366" height="744" />
