@@ -66,7 +66,7 @@ public class CreateColumnShould {
 
         var result = column.toSql();
 
-        assertThat(result).isEqualTo("prie money not null");
+        assertThat(result).isEqualTo("price decimal(2,2) not null");
     }
 
     @Test

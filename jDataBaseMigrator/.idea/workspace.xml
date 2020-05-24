@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ccbec24-9531-4ee4-941a-159b755d5892" name="Default Changelist" comment="green throw_exeception_when_old_name_is_null">
-      <change beforePath="$PROJECT_DIR$/.idea/jDataBaseMigrator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jDataBaseMigrator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/jDataBaseMigrator.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/Check.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/seymourpoler/jDataBaseMigrator/CreateColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/seymourpoler/jDataBaseMigrator/CreateColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/CreateColumn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/CreateColumn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/CreateTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/CreateTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/DeleteTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/DeleteTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/RenameTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/RenameTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/seymourpoler/jDataBaseMigrator/StringUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/jDataBaseMigrator.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CheckShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CheckShould.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateColumnShould.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/CreateTableShould.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/DeleteTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/DeleteTableShould.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/RenameTableShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/RenameTableShould.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/StringUtilShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/net/seymourpoler/jDataBaseMigrator/StringUtilShould.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +70,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in jDataBaseMigrator">
+  <component name="RunManager" selected="JUnit.CreateColumnShould">
     <configuration name="All in jDataBaseMigrator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <option name="PACKAGE_NAME" value="" />
@@ -93,7 +80,7 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateColumnShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <extension name="coverage">
         <pattern>
@@ -102,14 +89,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="net.seymourpoler.jDataBaseMigrator" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.jDataBaseMigrator.CheckShould" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.jDataBaseMigrator.CreateColumnShould" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckShould.do_nothing_when_has_value" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateColumnShould.create_money_column" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jDataBaseMigrator" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +105,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="net.seymourpoler.jDataBaseMigrator" />
-      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.jDataBaseMigrator.CheckShould" />
-      <option name="METHOD_NAME" value="do_nothing_when_has_value" />
+      <option name="MAIN_CLASS_NAME" value="net.seymourpoler.jDataBaseMigrator.CreateColumnShould" />
+      <option name="METHOD_NAME" value="create_money_column" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateColumnShould" />
+        <item itemvalue="JUnit.CreateColumnShould.create_money_column" />
         <item itemvalue="JUnit.All in jDataBaseMigrator" />
         <item itemvalue="JUnit.RenameTableShould" />
         <item itemvalue="JUnit.RenameTableShould.throw_exception_when_old_name_is_white_space" />
-        <item itemvalue="JUnit.CheckShould" />
-        <item itemvalue="JUnit.CheckShould.do_nothing_when_has_value" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +173,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587392751873</updated>
-      <workItem from="1589638680932" duration="624000" />
+      <workItem from="1589638680932" duration="1118000" />
+      <workItem from="1589726043884" duration="2224000" />
     </task>
     <task id="LOCAL-00001" summary="green throw_exception_when_table_name_is_null">
       <created>1587393706270</created>
@@ -229,6 +217,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="green throw_exception_when_table_name_is_white_space" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="241" width="255" height="260" key="#Notifications" timestamp="1590299784923">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="552" y="241" width="255" height="260" key="#Notifications/0.0.1366.744@0.0.1366.744" timestamp="1590299784923" />
     <state x="278" y="16" width="804" height="709" key="#Plugins" timestamp="1587741376528">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -254,25 +246,25 @@
     </state>
     <state x="334" y="86" width="916" height="570" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1587738296652" />
     <state x="469" y="122" width="976" height="808" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587393868436" />
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1587913111750">
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom" timestamp="1590301422378">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1587913111750" />
+    <state width="1320" height="178" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1590301422378" />
     <state width="1920" height="288" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1587913111749">
+    <state width="1320" height="178" key="GridCell.Tab.0.center" timestamp="1590301422377">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1587913111749" />
+    <state width="1320" height="178" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1590301422377" />
     <state width="1920" height="288" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1587913111748">
+    <state width="1320" height="178" key="GridCell.Tab.0.left" timestamp="1590301422375">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1587913111748" />
+    <state width="1320" height="178" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1590301422375" />
     <state width="1920" height="288" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
-    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1587913111750">
+    <state width="1320" height="178" key="GridCell.Tab.0.right" timestamp="1590301422378">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1587913111750" />
+    <state width="1320" height="178" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1590301422378" />
     <state width="1920" height="288" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1056@0.0.1920.1056" timestamp="1587395116076" />
     <state width="1320" height="222" key="GridCell.Tab.1.bottom" timestamp="1587739560095">
       <screen x="0" y="0" width="1366" height="744" />

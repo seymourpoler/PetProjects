@@ -9,6 +9,8 @@ public class CreateColumn {
     private Boolean isNotNull;
     private Boolean isPrimaryKey;
     private Boolean defaultValue;
+    private Integer decimalRealPart;
+    private Integer decimalImaginaryPart;
 
     public CreateColumn(String name) {
 
@@ -17,6 +19,8 @@ public class CreateColumn {
         defaultValue = null;
         isNotNull = false;
         isPrimaryKey = false;
+        decimalRealPart = 8;
+        decimalImaginaryPart = 2;
     }
 
     public String toSql(){
@@ -65,10 +69,13 @@ public class CreateColumn {
     }
 
     private String getTypeName(){
-        if(length == 0){
-            return type.getName().toLowerCase();
+        if(JDBCType.VARCHAR == type){
+            return type.getName().toLowerCase() + "(" + length + ")";
         }
-        return type.getName().toLowerCase() + "(" + length + ")";
+        if(JDBCType.DECIMAL == type || JDBCType.NUMERIC == type){
+            return type.getName().toLowerCase() + "(" + decimalRealPart + "," + decimalImaginaryPart + ")";
+        }
+        return type.getName().toLowerCase();
     }
 
     public CreateColumn asBoolean() {
@@ -106,6 +113,10 @@ public class CreateColumn {
     }
 
     public CreateColumn asMoney() {
-        throw new RuntimeException();
+        type = JDBCType.DECIMAL;
+        decimalRealPart = 12;
+        decimalRealPart = 2;
+
+        return this;
     }
 }
