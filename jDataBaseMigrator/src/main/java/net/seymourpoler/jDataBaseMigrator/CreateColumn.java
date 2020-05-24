@@ -70,6 +70,9 @@ public class CreateColumn {
 
     private String getTypeName(){
         if(JDBCType.VARCHAR == type){
+            if(length == null) {
+                return type.getName().toLowerCase();
+            }
             return type.getName().toLowerCase() + "(" + length + ")";
         }
         if(JDBCType.DECIMAL == type || JDBCType.NUMERIC == type){
