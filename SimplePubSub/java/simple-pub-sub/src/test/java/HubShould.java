@@ -71,7 +71,20 @@ public class HubShould {
         assertThat(anotherResult[0]).isEqualTo("");
     }
 
-    private class Message
+    @Test
+    public void
+    unSubscribe_when_there_is_no_handler() {
+        final String[] result = {""};
+        var contentMessage = "Message";
+        hub.subscribe(AnotherMessage.class, x -> result[0] = x.Id);
+        hub.unSubscribe(Message.class);
+        var message = new Message(); message.Content = contentMessage;
+
+        hub.publish(message);
+
+    }
+
+        private class Message
     {
         public String Content;
     }
