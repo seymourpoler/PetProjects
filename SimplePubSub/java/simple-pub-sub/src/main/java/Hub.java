@@ -19,13 +19,13 @@ public class Hub {
     }
 
     public <T> void publish(T event) {
-        if(isNotContainHandlersFor(event)){return;}
+        if(thereIsNoHandlersFor(event)){return;}
 
         handlers.get(event.getClass()).stream()
             .forEach(handler -> handler.accept(event));
     }
 
-    private <T> boolean isNotContainHandlersFor(T event) {
+    private <T> boolean thereIsNoHandlersFor(T event) {
         return !handlers.containsKey(event.getClass());
     }
 }
