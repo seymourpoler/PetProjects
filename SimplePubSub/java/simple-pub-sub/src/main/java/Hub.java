@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 public class Hub {
-    private Map<Class, List<Consumer>> handlers;
+    private final Map<Class, List<Consumer>> handlers;
 
     public Hub() {
         this.handlers = new HashMap<>();
@@ -19,11 +19,13 @@ public class Hub {
     }
 
     public <T> void publish(T event) {
-        var currentHandlers = this.handlers.get(event.getClass());
-        if(currentHandlers == null){ return; }
-        
-        for (var handler: currentHandlers) {
-            handler.accept(event);
-        }
+        if(isNotContainHandlersFor(event)){return;}
+
+        handlers.get(event.getClass()).stream()
+            .forEach(handler -> handler.accept(event));
+    }
+
+    private <T> boolean isNotContainHandlersFor(T event) {
+        return !handlers.containsKey(event.getClass());
     }
 }

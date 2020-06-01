@@ -4,8 +4,7 @@ import org.junit.Test;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 public class HubShould {
-
-    Hub hub;
+    private Hub hub;
 
     @Before
     public void setUp(){
@@ -27,8 +26,7 @@ public class HubShould {
 
     @Test
     public void
-    unsubscribe_one_handler()
-    {
+    unsubscribe_one_handler(){
         final String[] result = {""};
         var contentMessage = "Message";
         hub.subscribe(Message.class, x -> result[0] = x.content);
@@ -43,8 +41,7 @@ public class HubShould {
 
     @Test
     public void
-    does_nothing_when_there_are_no_handlers()
-    {
+    does_nothing_when_there_are_no_handlers(){
         var result = "";
         var contentMessage = "Message";
         var message = new Message(); message.content = contentMessage;
@@ -56,8 +53,7 @@ public class HubShould {
 
     @Test
     public void
-    publish_message_with_some_handlers()
-    {
+    publish_message_with_some_handlers(){
         final String[] result = {""};
         final String[] anotherResult = {""};
         var contentMessage = "Message";
@@ -81,13 +77,11 @@ public class HubShould {
         var message = new Message(); message.content = contentMessage;
 
         hub.publish(message);
-
     }
 
     @Test
     public void
-    unSubscribe_when_there_are_handlers()
-    {
+    unSubscribe_when_there_are_handlers(){
         final String[] result = {""};
         var contentMessage = "Message";
         hub.subscribe(Message.class, x -> result[0] = x.content);
@@ -103,8 +97,7 @@ public class HubShould {
 
     @Test
     public void
-    unSubscribe_one_handler()
-    {
+    unSubscribe_one_handler(){
         final String[] result = {""};
         var contentMessage = "Message";
         hub.subscribe(Message.class, x -> result[0] = x.content);
