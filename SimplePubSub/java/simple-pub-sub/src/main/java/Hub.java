@@ -21,6 +21,7 @@ public class Hub {
     public <T> void publish(T event) {
         var currentHandlers = this.handlers.get(event.getClass());
         if(currentHandlers == null){ return; }
+        
         for (var handler: currentHandlers) {
             handler.accept(event);
         }
