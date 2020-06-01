@@ -84,6 +84,24 @@ public class HubShould {
 
     }
 
+    @Test
+    public void
+    unSubscribe_when_there_are_handlers()
+    {
+        final String[] result = {""};
+        var contentMessage = "Message";
+        hub.subscribe(Message.class, x -> result[0] = x.Content);
+        hub.subscribe(AnotherMessage.class, x -> result[0] = x.Id);
+        hub.unSubscribe(Message.class);
+        var message = new Message(); message.Content = contentMessage;
+
+        hub.publish(message);
+
+        assertThat(result[0]).isNotEqualTo(contentMessage);
+        assertThat(result[0]).isEqualTo("");
+    }
+
+
     private class Message
     {
         public String Content;
