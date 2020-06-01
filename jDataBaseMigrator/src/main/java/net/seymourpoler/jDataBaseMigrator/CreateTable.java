@@ -1,3 +1,5 @@
+package net.seymourpoler.jDataBaseMigrator;
+
 public class CreateTable {
     private final String name;
 
@@ -6,9 +8,7 @@ public class CreateTable {
     }
 
     public String toSql(){
-        if(name == null || name == "" || name == "   "){
-            throw new IllegalArgumentException();
-        }
+        Check.isNullOrWhiteSpace(name);
         return "CREATE TABLE " + name + ";";
     }
 }

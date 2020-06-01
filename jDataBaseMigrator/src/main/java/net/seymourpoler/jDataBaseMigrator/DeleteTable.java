@@ -1,3 +1,5 @@
+package net.seymourpoler.jDataBaseMigrator;
+
 public class DeleteTable {
     private final String name;
 
@@ -6,9 +8,7 @@ public class DeleteTable {
     }
 
     public String toSql() {
-        if(name == null || name == ""){
-            throw new IllegalArgumentException();
-        }
-        throw new RuntimeException();
+        Check.isNullOrWhiteSpace(name);
+        return "DELETE TABLE " + name;
     }
 }

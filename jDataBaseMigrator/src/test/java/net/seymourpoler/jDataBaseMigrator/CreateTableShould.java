@@ -1,5 +1,9 @@
+package net.seymourpoler.jDataBaseMigrator;
+
 import org.junit.Assert;
 import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CreateTableShould {
 
@@ -9,18 +13,14 @@ public class CreateTableShould {
         var createTable = new CreateTable("");
 
         createTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void
     throw_exception_when_table_name_is_white_space(){
-        var createTable = new CreateTable("   ");
+        var createTable = new CreateTable("      ");
 
         createTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -29,17 +29,15 @@ public class CreateTableShould {
         var createTable = new CreateTable(null);
 
         createTable.toSql();
-
-        Assert.fail("exception expected");
     }
 
     @Test
     public void
-    create_table(){
+    return_create_table_sql(){
         var createTable = new CreateTable("table_name");
 
         var result = createTable.toSql();
 
-        Assert.assertEquals("CREATE TABLE table_name;", result);
+        assertThat(result).isEqualTo("CREATE TABLE table_name;");
     }
 }
