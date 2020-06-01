@@ -84,7 +84,7 @@ public class HubShould {
 
     }
 
-        private class Message
+    private class Message
     {
         public String Content;
     }
