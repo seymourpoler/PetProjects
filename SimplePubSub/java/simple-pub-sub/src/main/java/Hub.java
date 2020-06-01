@@ -14,6 +14,10 @@ public class Hub {
         this.handlers.put(eventType , List.of(handler));
     }
 
+    public <T> void unSubscribe(Class<T> eventType) {
+        this.handlers.remove(eventType);
+    }
+
     public <T> void publish(T event) {
         var currentHandlers = this.handlers.get(event.getClass());
         for (var handler: currentHandlers) {
