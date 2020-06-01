@@ -101,6 +101,22 @@ public class HubShould {
         assertThat(result[0]).isEqualTo("");
     }
 
+    @Test
+    public void
+    unSubscribe_one_handler()
+    {
+        final String[] result = {""};
+        var contentMessage = "Message";
+        hub.subscribe(Message.class, x -> result[0] = x.content);
+        hub.subscribe(AnotherMessage.class, x -> result[0] = x.id);
+        hub.unSubscribe(Message.class);
+        var anotherMessage = new AnotherMessage(); anotherMessage.id = contentMessage;
+
+        hub.publish(anotherMessage);
+
+        assertThat(result[0]).isEqualTo(contentMessage);
+    }
+
 
     private class Message
     {
