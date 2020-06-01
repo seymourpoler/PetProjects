@@ -54,6 +54,23 @@ public class HubShould {
         assertThat(result).isNotEqualTo(contentMessage);
     }
 
+    @Test
+    public void
+    publish_message_with_some_handlers()
+    {
+        final String[] result = {""};
+        final String[] anotherResult = {""};
+        var contentMessage = "Message";
+        hub.subscribe(Message.class, x -> result[0] = x.Content);
+        hub.subscribe(AnotherMessage.class, x -> anotherResult[0] = x.Id);
+        var message = new Message(); message.Content = contentMessage;
+
+        hub.publish(message);
+
+        assertThat(result[0]).isEqualTo(contentMessage);
+        assertThat(anotherResult[0]).isEqualTo("");
+    }
+
     private class Message
     {
         public String Content;
