@@ -17,8 +17,8 @@ public class HubShould {
     publish_message_with_one_handler(){
         final String[] result = {""};
         final String contentMessage = "Message";
-        hub.subscribe(Message.class, x -> result[0] = x.Content);
-        var message = new Message(); message.Content = contentMessage;
+        hub.subscribe(Message.class, x -> result[0] = x.content);
+        var message = new Message(); message.content = contentMessage;
 
         hub.publish(message);
 
@@ -31,10 +31,10 @@ public class HubShould {
     {
         final String[] result = {""};
         var contentMessage = "Message";
-        hub.subscribe(Message.class, x -> result[0] = x.Content);
-        hub.subscribe(AnotherMessage.class , x -> result[0] = x.Id);
+        hub.subscribe(Message.class, x -> result[0] = x.content);
+        hub.subscribe(AnotherMessage.class , x -> result[0] = x.id);
         hub.unSubscribe(Message.class);
-        var anotherMessage = new AnotherMessage(); anotherMessage.Id = contentMessage;
+        var anotherMessage = new AnotherMessage(); anotherMessage.id = contentMessage;
 
         hub.publish(anotherMessage);
 
@@ -47,7 +47,7 @@ public class HubShould {
     {
         var result = "";
         var contentMessage = "Message";
-        var message = new Message(); message.Content = contentMessage;
+        var message = new Message(); message.content = contentMessage;
 
         hub.publish(message);
 
@@ -61,9 +61,9 @@ public class HubShould {
         final String[] result = {""};
         final String[] anotherResult = {""};
         var contentMessage = "Message";
-        hub.subscribe(Message.class, x -> result[0] = x.Content);
-        hub.subscribe(AnotherMessage.class, x -> anotherResult[0] = x.Id);
-        var message = new Message(); message.Content = contentMessage;
+        hub.subscribe(Message.class, x -> result[0] = x.content);
+        hub.subscribe(AnotherMessage.class, x -> anotherResult[0] = x.id);
+        var message = new Message(); message.content = contentMessage;
 
         hub.publish(message);
 
@@ -76,9 +76,9 @@ public class HubShould {
     unSubscribe_when_there_is_no_handler() {
         final String[] result = {""};
         var contentMessage = "Message";
-        hub.subscribe(AnotherMessage.class, x -> result[0] = x.Id);
+        hub.subscribe(AnotherMessage.class, x -> result[0] = x.id);
         hub.unSubscribe(Message.class);
-        var message = new Message(); message.Content = contentMessage;
+        var message = new Message(); message.content = contentMessage;
 
         hub.publish(message);
 
@@ -90,10 +90,10 @@ public class HubShould {
     {
         final String[] result = {""};
         var contentMessage = "Message";
-        hub.subscribe(Message.class, x -> result[0] = x.Content);
-        hub.subscribe(AnotherMessage.class, x -> result[0] = x.Id);
+        hub.subscribe(Message.class, x -> result[0] = x.content);
+        hub.subscribe(AnotherMessage.class, x -> result[0] = x.id);
         hub.unSubscribe(Message.class);
-        var message = new Message(); message.Content = contentMessage;
+        var message = new Message(); message.content = contentMessage;
 
         hub.publish(message);
 
@@ -104,11 +104,11 @@ public class HubShould {
 
     private class Message
     {
-        public String Content;
+        public String content;
     }
 
     private class AnotherMessage
     {
-        public String Id;
+        public String id;
     }
 }
