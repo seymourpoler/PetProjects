@@ -41,6 +41,19 @@ public class HubShould {
         assertThat(result[0]).isEqualTo(contentMessage);
     }
 
+    @Test
+    public void
+    does_nothing_when_there_are_no_handlers()
+    {
+        var result = "";
+        var contentMessage = "Message";
+        var message = new Message(); message.Content = contentMessage;
+
+        hub.publish(message);
+
+        assertThat(result).isNotEqualTo(contentMessage);
+    }
+
     private class Message
     {
         public String Content;
