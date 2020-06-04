@@ -3,7 +3,7 @@ import { UserPresenter } from './UserPresenter';
 import { spyAllMethodsOf } from '../Testing';
 import { createUserView } from './UserView';
 
-describe('User Presenter', () => {
+xdescribe('User Presenter', () => {
 
     let view;
     let service;

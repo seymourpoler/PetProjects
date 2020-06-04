@@ -40,6 +40,11 @@ export class UserView extends React.Component  {
     hideSpinner = () => {
         this.setState({ showSpinner: false });
     }
+
+    showInternalServerError = () => {
+        throw 'not implemented';
+    }
+
     render(){
         return (
             <div>Users

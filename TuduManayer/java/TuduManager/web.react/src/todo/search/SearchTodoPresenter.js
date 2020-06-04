@@ -1,6 +1,12 @@
 export function SearchTodoPresenter(view){
+    let self = this;
 
-    search = async () => {
-        throw 'not implemented';
+    self.search = async (search) => {
+        view.showInternalServerError();
+        //throw 'not implemented';
     }
+}
+
+export function createSearchTodoPresenter(view){
+    return new SearchTodoPresenter(view);
 }

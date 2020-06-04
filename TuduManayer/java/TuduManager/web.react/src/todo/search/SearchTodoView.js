@@ -1,6 +1,6 @@
 import React from 'react';
-import { Spinner } from '../Spinner';
-import { SearchTodoPresenter } './SearchTodoPresenter';
+import { Spinner } from '../../Spinner';
+import { createSearchTodoPresenter } from './SearchTodoPresenter';
 
 export class SearchTodoView extends React.Component  {
 
@@ -15,18 +15,30 @@ export class SearchTodoView extends React.Component  {
         }
     }
 
-    presenter = createUserPresenter(this);
+    presenter = createSearchTodoPresenter(this);
 
     render(){
         return (
                 <div>
                     <Spinner show={this.state.showSpinner}/>
-                    <input type='text' /> <a onclic>Search</a>
+                    <input type='text' onChange={this.updateInputValue}/> <button onClick={this.search}>Search</button>
                     <p>{this.state.errorMessage}</p>
                 </div>);
     }
+
+    onSearchTextChange = (event) =>{
+        this.setState({ searchText: event.target.value });
+    }
+
+    search = () => {
+        this.presenter.search(this.state.searchText);
+    }
+
+    showInternalServerError = () => {
+        throw 'not implemented';
+    }
 }
 
-export createSearchTodoView(){
+export function createSearchTodoView(){
     return new SearchTodoView();
 }
