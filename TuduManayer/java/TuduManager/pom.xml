@@ -18,6 +18,7 @@
     <modules>
         <module>web.react</module>
         <module>web.api.spring.boot</module>
+        <module>domain</module>
     </modules>
 
     <build>
