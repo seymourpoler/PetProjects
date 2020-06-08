@@ -16,13 +16,23 @@ describe('Search Todo Presenter', () =>{
      });
 
     describe('when search is requested', () => {
-        it('shows error if there is an internal server error', () => {
-            service.search = () => { statusCode : 500 };
+        it('shows error if there is an internal server error', async () => {
             const searchText = 'tonight';
+            service.search = async (searchText) => { return { statusCode: 500 }; };
 
-            presenter.search(searchText);
+            await presenter.search(searchText);
 
             expect(view.showInternalServerError).toHaveBeenCalled();
+        });
+
+        it('shows errors if there are errors', async () => {
+            const errors = [{fieldId: 'searchText', errorCode:'required'}];
+            const searchText = 'tonight';
+            service.search = async (searchText) => { return {statusCode: 400, errors}; };
+
+            await presenter.search(searchText);
+
+            expect(view.showErrors).toHaveBeenCalledWith(errors);
         });
     });
 });

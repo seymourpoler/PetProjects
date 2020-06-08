@@ -1,7 +1,7 @@
 export function SearchTodoService(){
     let self = this;
 
-    self.search = () => {
+    self.search = async (text) => {
         throw 'not implemented';
     }
 }

@@ -35,7 +35,11 @@ export class SearchTodoView extends React.Component  {
     }
 
     showInternalServerError = () => {
-        throw 'not implemented';
+        //throw 'not implemented';
+    }
+
+    showErrors = (errors) => {
+        //throw 'not implemented';
     }
 }
 
