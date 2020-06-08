@@ -2,7 +2,7 @@ import React from 'react';
 import { Spinner } from '../../Spinner';
 import { createSearchTodoPresenter } from './SearchTodoPresenter';
 
-export class SearchTodoView extends React.Component  {
+export class SearchTodoView extends React.Component {
 
     constructor(props){
         super(props);
@@ -26,7 +26,7 @@ export class SearchTodoView extends React.Component  {
                 </div>);
     }
 
-    onSearchTextChange = (event) =>{
+    onSearchTextChange = (event) => {
         this.setState({ searchText: event.target.value });
     }
 
@@ -35,11 +35,11 @@ export class SearchTodoView extends React.Component  {
     }
 
     showInternalServerError = () => {
-        //throw 'not implemented';
+        throw 'not implemented';
     }
 
     showErrors = (errors) => {
-        //throw 'not implemented';
+        throw 'not implemented';
     }
 
     showTodos = (todos) => {
