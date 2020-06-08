@@ -23,5 +23,8 @@ export function Http(){
 			data: response.json()           		
 		};                                      	
 	}
+}
 
+export function createHttp(){
+	return new Http();
 }
