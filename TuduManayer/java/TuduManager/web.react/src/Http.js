@@ -10,7 +10,7 @@ export function Http(){
 		};
 	};
 
-	self.post = (url) => {
+	self.post = async (url) => {
 		const response = await fetch(url, {
 			method: 'POST',
   			headers: {

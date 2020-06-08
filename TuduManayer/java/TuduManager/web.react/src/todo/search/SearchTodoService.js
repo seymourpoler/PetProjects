@@ -1,6 +1,6 @@
-import { http } from '../../Http';
+import { createHttp, http } from '../../Http';
 
-export function SearchTodoService(){
+export function SearchTodoService(http){
     let self = this;
 
     self.search = async (text) => {
@@ -10,5 +10,6 @@ export function SearchTodoService(){
 
 
 export function createSearchTodoService(){
-    return new SearchTodoService();
+	const http = createHttp();
+    return new SearchTodoService(http);
 }
