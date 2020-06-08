@@ -10,7 +10,8 @@ export function SearchTodoPresenter(view, searchService){
         if(result.statusCode === 400){
             return view.showErrors(result.errors);
         }
-        //throw 'not implemented';
+        const todos = result.todos;
+        view.showTodos(todos);
     }
 }
 

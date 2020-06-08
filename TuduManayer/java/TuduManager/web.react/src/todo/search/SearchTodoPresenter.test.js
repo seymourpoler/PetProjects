@@ -34,5 +34,15 @@ describe('Search Todo Presenter', () =>{
 
             expect(view.showErrors).toHaveBeenCalledWith(errors);
         });
+
+        it('shows todos', async () => {
+            const todos = [{id:1, title: 'a title'}, {id:2, title: 'another title'}];
+            const searchText = 'tonight';
+            service.search = async (searchText) => { return {statusCode: 200, todos}; };
+
+            await presenter.search(searchText);
+
+            expect(view.showTodos).toHaveBeenCalledWith(todos);
+        });
     });
 });
