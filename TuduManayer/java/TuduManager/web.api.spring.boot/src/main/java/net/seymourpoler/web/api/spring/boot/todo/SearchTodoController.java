@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SearchTodoController {
 
     private final net.seymourpoler.domain.todo.search.ISearchTodoService searchTodoService;
+
     public SearchTodoController(net.seymourpoler.domain.todo.search.ISearchTodoService searchTodoService) {
         this.searchTodoService = searchTodoService;
     }
