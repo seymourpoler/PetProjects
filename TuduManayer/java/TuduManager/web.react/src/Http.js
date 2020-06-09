@@ -13,11 +13,13 @@ export function Http(){
 	self.post = async (url) => {
 		const response = await fetch(url, {
 			method: 'POST',
-  			headers: {
+			headers: {
 				'Content-Type': 'application/json;charset=utf-8'
 			}
-		}
-		//TODO: duplicated code extract method
+
+		});
+
+		//TODO: duplicated code extraict method
 		return {
 			statusCode: response.statusCode,
 			data: response.json()           		
