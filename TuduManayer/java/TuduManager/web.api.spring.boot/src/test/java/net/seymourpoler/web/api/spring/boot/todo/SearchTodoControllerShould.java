@@ -3,6 +3,7 @@ package net.seymourpoler.web.api.spring.boot.todo;
 import net.seymourpoler.domain.todo.search.ISearchTodoService;
 import net.seymourpoler.domain.todo.search.models.Todo;
 import org.junit.Test;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class SearchTodoControllerShould {
 
         var result = controller.seach(searchText);
 
+        assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(result.getBody()).isEqualTo(todos);
     }
 }

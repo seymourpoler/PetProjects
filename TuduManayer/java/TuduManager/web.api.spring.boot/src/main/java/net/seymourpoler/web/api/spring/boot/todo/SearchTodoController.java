@@ -18,6 +18,7 @@ public class SearchTodoController {
 
     @GetMapping("/api/todos")
     public ResponseEntity seach(@RequestParam("searchText") String searchText){
-        throw new RuntimeException();
+        var todos = searchTodoService.search(searchText);
+        return ResponseEntity.ok(todos);
     }
 }
