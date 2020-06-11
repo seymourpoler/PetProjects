@@ -12,6 +12,12 @@ public class SearchTodoService implements ISearchTodoService {
 
     @Override
     public List<Todo> search(String searchText) {
+
+        if(searchText == null){
+            return List.of();
+        }
+
+
         throw new RuntimeException();
     }
 }
