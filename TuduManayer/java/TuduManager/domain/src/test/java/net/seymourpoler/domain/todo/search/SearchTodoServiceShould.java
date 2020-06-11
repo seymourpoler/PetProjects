@@ -7,6 +7,7 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 public class SearchTodoServiceShould {
+
     @Test
     public void
     accept_null_search_text(){
