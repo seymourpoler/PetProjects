@@ -13,13 +13,18 @@ public class SearchTodoService implements ISearchTodoService {
     @Override
     public List<Todo> search(String searchText) {
 
-        if(searchText == null || isWhiteSpace(searchText)){
+        if(isNotValid(searchText)){
             return List.of();
         }
 
 
         throw new RuntimeException();
     }
+
+    private boolean isNotValid(String searchText) {
+        return searchText == null || isWhiteSpace(searchText);
+    }
+
 
     private boolean isWhiteSpace(String searchText) {
         return searchText.replaceAll("\\s+", "").isEmpty();
