@@ -5,7 +5,7 @@ export function SearchTodoPresenter(view, searchService){
 
     self.search = async (textSearch) => {
         const result = await searchService.search(textSearch);
-        if(result.statusCode == 500){
+        if(result.statusCode === 500){
             view.showInternalServerError();
             return;
         }
