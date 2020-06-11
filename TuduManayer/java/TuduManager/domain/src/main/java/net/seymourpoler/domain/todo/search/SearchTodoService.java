@@ -13,7 +13,7 @@ public class SearchTodoService implements ISearchTodoService {
     @Override
     public List<Todo> search(String searchText) {
 
-        if(searchText == null || searchText == ""){
+        if(searchText == null || searchText.replaceAll("\\s+", "").isEmpty()){
             return List.of();
         }
 
