@@ -5,8 +5,10 @@ export function SearchTodoService(http){
     let self = this;
 
     self.search = async (text) => {
-        const response = await http.get();
-        if(response.statusCode === HttpStatusCode.internalServerError){
+        const url = '/api/todos?searchText=' + text;
+        const response = await fetch(url);
+        //const response = await http.get(url);
+        if(response.status === HttpStatusCode.internalServerError){
             return  {
                 statusCode: HttpStatusCode.internalServerError
             };

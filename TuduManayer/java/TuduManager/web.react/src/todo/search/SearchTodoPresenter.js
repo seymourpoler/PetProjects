@@ -1,3 +1,5 @@
+import { createSearchTodoService } from './SearchTodoService';
+
 export function SearchTodoPresenter(view, searchService){
     let self = this;
 
@@ -16,5 +18,6 @@ export function SearchTodoPresenter(view, searchService){
 }
 
 export function createSearchTodoPresenter(view){
-    return new SearchTodoPresenter(view);
+    const service = createSearchTodoService();
+    return new SearchTodoPresenter(view, service);
 }
