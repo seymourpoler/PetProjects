@@ -16,4 +16,14 @@ public class SearchTodoServiceShould {
 
         assertThat(todos).isEqualTo(List.of());
     }
+
+    @Test
+    public void
+    accept_string_empty_search_text(){
+        var service = new SearchTodoService();
+
+        var todos = service.search("");
+
+        assertThat(todos).isEqualTo(List.of());
+    }
 }
