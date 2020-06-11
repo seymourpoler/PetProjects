@@ -8,6 +8,12 @@ import java.util.List;
 @Service
 public class SearchTodoService implements ISearchTodoService {
 
+    private final ISearchTodoRepository repository;
+
+    public SearchTodoService(ISearchTodoRepository repository) {
+        this.repository = repository;
+    }
+
     @Override
     public List<Todo> search(String searchText) {
 
