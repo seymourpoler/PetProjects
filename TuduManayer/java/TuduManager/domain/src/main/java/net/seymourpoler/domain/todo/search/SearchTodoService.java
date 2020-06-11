@@ -8,8 +8,6 @@ import java.util.List;
 @Service
 public class SearchTodoService implements ISearchTodoService {
 
-    public SearchTodoService(){}
-
     @Override
     public List<Todo> search(String searchText) {
 
