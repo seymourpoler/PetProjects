@@ -6,8 +6,8 @@ export function SearchTodoService(http){
 
     self.search = async (text) => {
         const url = '/api/todos?searchText=' + text;
-        const response = await fetch(url);
-        //const response = await http.get(url);
+        //const response = await fetch(url);
+        const response = await http.get(url);
         if(response.status === HttpStatusCode.internalServerError){
             return  {
                 statusCode: HttpStatusCode.internalServerError

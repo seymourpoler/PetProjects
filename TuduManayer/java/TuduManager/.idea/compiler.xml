@@ -8,8 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="domain" />
         <module name="web.api.spring.boot" />
+        <module name="repository.postgres.sql2o" />
         <module name="web.react" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="repository.sql2o" target="13" />
+    </bytecodeTargetLevel>
   </component>
 </project>

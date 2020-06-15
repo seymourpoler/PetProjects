@@ -19,6 +19,8 @@
         <module>web.react</module>
         <module>web.api.spring.boot</module>
         <module>domain</module>
+        <module>repository.sql2o</module>
+        <module>repository.postgres.sql2o</module>
     </modules>
 
     <build>
