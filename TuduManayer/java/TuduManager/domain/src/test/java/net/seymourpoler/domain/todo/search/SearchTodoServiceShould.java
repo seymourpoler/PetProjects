@@ -48,7 +48,7 @@ public class SearchTodoServiceShould {
 
     @Test
     public void
-    todos_by_search_text(){
+    return_todos_by_search_text(){
         final String searchText = "search-text";
         var todos = List.of(new Todo());
         when(repository.search(searchText)).thenReturn(todos);
