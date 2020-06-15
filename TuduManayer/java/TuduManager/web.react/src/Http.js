@@ -5,8 +5,8 @@ export function Http(){
 		const response = await fetch(url);
 		//TODO: duplicated code extract method
 		return {
-			statusCode: response.statusCode,
-			data: response.json()
+			statusCode: response.status,
+			data: await response.json()
 		};
 	};
 

@@ -8,7 +8,7 @@ export function SearchTodoService(http){
         const url = '/api/todos?searchText=' + text;
         //const response = await fetch(url);
         const response = await http.get(url);
-        if(response.status === HttpStatusCode.internalServerError){
+        if(response.statusCode   === HttpStatusCode.internalServerError){
             return  {
                 statusCode: HttpStatusCode.internalServerError
             };
