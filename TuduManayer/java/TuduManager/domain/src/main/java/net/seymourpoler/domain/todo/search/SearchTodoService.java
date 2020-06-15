@@ -21,8 +21,7 @@ public class SearchTodoService implements ISearchTodoService {
             return List.of();
         }
 
-
-        throw new RuntimeException();
+        return repository.search(searchText);
     }
 
     private boolean isNotValid(String searchText) {

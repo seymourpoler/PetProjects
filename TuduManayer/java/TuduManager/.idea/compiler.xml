@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="domain" />
-        <module name="web.react" />
         <module name="web.api.spring.boot" />
+        <module name="web.react" />
       </profile>
     </annotationProcessing>
   </component>
