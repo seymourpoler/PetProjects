@@ -15,6 +15,8 @@ public class DataBaseConnectionFactory {
     }
 
     public Connection create(){
-        return new Sql2o(dataBaseConfiguration.url(), dataBaseConfiguration.user(), dataBaseConfiguration.password()).open();
+        return new Sql2o(dataBaseConfiguration.url(),
+                dataBaseConfiguration.user(),
+                dataBaseConfiguration.password()).open();
     }
 }
