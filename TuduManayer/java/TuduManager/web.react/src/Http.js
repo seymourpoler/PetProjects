@@ -19,7 +19,7 @@ export function Http(){
 
 		});
 
-		//TODO: duplicated code extraict method
+		//TODO: duplicated code extract method
 		return {
 			statusCode: response.statusCode,
 			data: response.json()           		
