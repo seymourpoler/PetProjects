@@ -12,7 +12,11 @@ export function SearchTodoService(http){
                 statusCode: HttpStatusCode.internalServerError
             };
         }
-        throw 'not implemented';
+
+        return {
+            statusCode: HttpStatusCode.ok,
+            todos: response.body
+        }
     }
 }
 

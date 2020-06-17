@@ -6,7 +6,7 @@ export function Http(){
 		//TODO: duplicated code extract method
 		return {
 			statusCode: response.status,
-			data: await response.json()
+			body: await response.json()
 		};
 	};
 
@@ -22,7 +22,7 @@ export function Http(){
 		//TODO: duplicated code extract method
 		return {
 			statusCode: response.statusCode,
-			data: response.json()           		
+			body: response.json()
 		};                                      	
 	}
 }

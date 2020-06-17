@@ -1,5 +1,5 @@
 import { HttpStatusCode } from '../../HttpStatusCode';
-import { Http, createHttp } from '../../Http';
+import { Http, createHttp  } from '../../Http';
 import { spyAllMethodsOf } from '../../Testing';
 import { SearchTodoService } from './SearchTodoService';
 
@@ -19,5 +19,16 @@ describe('Search Todo Service', () =>{
         const result = await service.search();
 		
         expect(result.statusCode).toBe(HttpStatusCode.internalServerError);
+	});
+
+	it('returns todos', async () => {
+	    const text = 'a text';
+        const content = [];
+        http.get = () => {return { statusCode: HttpStatusCode.ok, body: content }};
+    
+        const result = await service.search();
+    
+        expect(result.statusCode).toBe(HttpStatusCode.ok);
+        expect(result.todos).toBe(content);
 	});
 });
