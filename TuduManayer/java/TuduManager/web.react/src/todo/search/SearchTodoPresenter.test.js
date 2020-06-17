@@ -38,4 +38,12 @@ describe('Search Todo Presenter', () =>{
             expect(view.showTodos).toHaveBeenCalledWith(todos);
         });
     });
+
+    describe('when creation a new todo is requested', () => {
+        it('redirects to a creation of a new todo', () => {
+            presenter.createNewTodo();
+
+            expect(view.redirectToCreateNewTodo).toHaveBeenCalled();
+        });
+    });
 });
