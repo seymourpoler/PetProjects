@@ -23,6 +23,7 @@ export class SearchTodoView extends React.Component {
                     <Spinner show={this.state.showSpinner}/>
                     <input type='text' onChange={this.onSearchTextChange}/> <button onClick={this.search}>Search</button>
                     <p>{this.state.errorMessage}</p>
+                    <p>{this.state.todos}</p>
                 </div>);
     }
 
