@@ -10,9 +10,6 @@ export function SearchTodoPresenter(view, searchService){
             view.showInternalServerError();
             return;
         }
-        if(result.statusCode === 400){
-            return view.showErrors(result.errors);
-        }
         const todos = result.todos;
         view.showTodos(todos);
     }
