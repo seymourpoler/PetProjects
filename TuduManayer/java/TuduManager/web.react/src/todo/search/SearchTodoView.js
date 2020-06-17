@@ -35,7 +35,7 @@ export class SearchTodoView extends React.Component {
     }
 
     showInternalServerError = () => {
-        throw 'not implemented';
+        this.setState({ errorMessage: 'There is an internal server error.' });
     }
 
     showTodos = (todos) => {
