@@ -17,7 +17,7 @@ public class SearchTodoControllerShould {
     public void return_todos() {
         var searchTodoService = mock(ISearchTodoService.class);
         final String searchText = "search text";
-        var todos = List.of(new Todo());
+        var todos = List.of(new Todo(1, "title"));
         when(searchTodoService.search(searchText)).thenReturn(todos);
         var controller = new SearchTodoController(searchTodoService);
 

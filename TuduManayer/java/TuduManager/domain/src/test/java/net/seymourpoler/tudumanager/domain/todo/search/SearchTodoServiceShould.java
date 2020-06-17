@@ -51,7 +51,7 @@ public class SearchTodoServiceShould {
     public void
     return_todos_by_search_text(){
         final String searchText = "search-text";
-        var todos = List.of(new Todo());
+        var todos = List.of(new Todo(1, "title"));
         when(repository.search(searchText)).thenReturn(todos);
 
         var result = service.search(searchText);

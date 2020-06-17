@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="web.react" />
         <module name="domain" />
         <module name="repository.postgres.sql2o" />
         <module name="web.api.spring.boot" />
+        <module name="web.react" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

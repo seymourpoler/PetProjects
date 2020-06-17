@@ -2,11 +2,11 @@ package net.seymourpoler.tudumanager.domain.todo.search;
 
 import net.seymourpoler.tudumanager.domain.todo.search.models.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Service
+@Component
 public class SearchTodoService implements ISearchTodoService {
 
     private final ISearchTodoRepository repository;

@@ -14,12 +14,10 @@
         <java.version>13</java.version>
     </properties>
 
-
     <modules>
         <module>web.react</module>
         <module>web.api.spring.boot</module>
         <module>domain</module>
-        <module>repository.sql2o</module>
         <module>repository.postgres.sql2o</module>
     </modules>
 
@@ -36,6 +34,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

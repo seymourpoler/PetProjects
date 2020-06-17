@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>repository.postgres.sql2o</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>net.seymourpoler</groupId>
@@ -30,6 +31,7 @@
             <artifactId>sql2o</artifactId>
             <version>1.6.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

@@ -10,7 +10,7 @@ public class DataBaseConnectionFactory {
     private final DataBaseConfiguration dataBaseConfiguration;
 
     @Autowired
-    public DataBaseConnectionFactory(DataBaseConfiguration dataBaseConfiguration) {
+    public DataBaseConnectionFactory(final DataBaseConfiguration dataBaseConfiguration) {
         this.dataBaseConfiguration = dataBaseConfiguration;
     }
 
