@@ -1,4 +1,4 @@
-import { createHttp, http } from '../../Http';
+import { createHttp } from '../../Http';
 import { HttpStatusCode } from '../../HttpStatusCode';
 
 export function SearchTodoService(http){
