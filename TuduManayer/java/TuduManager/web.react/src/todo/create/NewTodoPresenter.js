@@ -6,6 +6,7 @@ export function NewTodoPresenter(view, service){
     let self = this;
 
     self.save = async (todo) => {
+        view.cleanMessage();
         const result = await service.save(todo);
         if(result.statusCode === HttpStatusCode.internalServerError){
             view.showInternalServerError();
@@ -15,7 +16,7 @@ export function NewTodoPresenter(view, service){
             view.showErrors(result.errors);
             return;
         }
-        throw 'not implemented';
+        view.showTodoCreated();
     };
 }
 

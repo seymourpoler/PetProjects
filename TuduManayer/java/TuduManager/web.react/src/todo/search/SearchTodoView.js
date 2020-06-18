@@ -44,6 +44,11 @@ export class SearchTodoView extends React.Component {
         this.setState({ showSpinner: false });
     }
 
+    cleanMessage = () => {
+        this.setState({errorMessage: ''});
+    }
+
+
     showInternalServerError = () => {
         this.setState({ errorMessage: 'There is an internal server error.' });
     }

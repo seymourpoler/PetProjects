@@ -5,6 +5,7 @@ export function SearchTodoPresenter(view, searchService) {
     let self = this;
 
     self.search = async (textSearch) => {
+        view.cleanMessages();
         view.showSpinner();
         const result = await searchService.search(textSearch);
         view.hideSpinner();

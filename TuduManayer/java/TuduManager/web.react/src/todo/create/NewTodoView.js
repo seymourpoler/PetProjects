@@ -10,7 +10,10 @@ export class NewTodoView extends React.Component {
             this.state = {
                 showSpinner: false,
                 title: '',
-                description: ''
+                titleErrorMessage: '',
+                description: '',
+                descriptionErrorMessage: '',
+                errorMessage: ''
             }
         }
 
@@ -20,8 +23,11 @@ export class NewTodoView extends React.Component {
         return(<div>
             <Spinner show={this.state.showSpinner}/>
             <input type='text' id='txtTitle' onChange={this.onTitleChanged} />
+            <p id='lblTitleErrorMessage'>{this.state.titleErrorMessage}</p>
             <input type='text' id='txtDescription' onChange={this.onDescriptionChanged} />
+            <p id='lblDescriptionErrorMessage'>{this.state.descriptionErrorMessage}</p>
             <button onClick={this.onSaveClicked}>Save</button>
+            <p>{this.state.errorMessage}</p>
         </div>);
     }
 
@@ -40,11 +46,21 @@ export class NewTodoView extends React.Component {
         });
     }
 
+    cleanMessages = () => {
+        this.setState({ errorMessage: '' });
+        this.setState({ titleErrorMessage: ''});
+        this.setState({ descriptionErrorMessage: ''});
+    }
+
     showInternalServerError = () => {
         throw 'not implemented';
     }
 
     showErrors = (errors) => {
+        throw 'not implemented';
+    }
+
+    showTodoCreated = () => {
         throw 'not implemented';
     }
 }
