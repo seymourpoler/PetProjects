@@ -31,10 +31,14 @@ describe('Search Todo Presenter', () =>{
         it('shows todos', async () => {
             const todos = [{id:1, title: 'a title'}, {id:2, title: 'another title'}];
             const searchText = 'tonight';
-            http.get = () => { return { statusCode: HttpStatusCode.ok, body: todos }; };
+            http.get = () => {
+                expect(view.showSpinner).toHaveBeenCalled();
+                return { statusCode: HttpStatusCode.ok, body: todos };
+            };
 
             await presenter.search(searchText);
 
+            expect(view.hideSpinner).toHaveBeenCalled();
             expect(view.showTodos).toHaveBeenCalledWith(todos);
         });
     });

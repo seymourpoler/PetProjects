@@ -36,6 +36,14 @@ export class SearchTodoView extends React.Component {
         this.presenter.search(this.state.searchText);
     }
 
+    showSpinner = () => {
+        this.setState({ showSpinner: true });
+    }
+
+    hideSpinner = () => {
+        this.setState({ showSpinner: false });
+    }
+
     showInternalServerError = () => {
         this.setState({ errorMessage: 'There is an internal server error.' });
     }

@@ -5,13 +5,15 @@ export function SearchTodoPresenter(view, searchService) {
     let self = this;
 
     self.search = async (textSearch) => {
+        view.showSpinner();
         const result = await searchService.search(textSearch);
+        view.hideSpinner();
+
         if(result.statusCode === HttpStatusCode.internalServerError){
             view.showInternalServerError();
             return;
         }
-        const todos = result.todos;
-        view.showTodos(todos);
+        view.showTodos(result.todos);
     }
 
     self.createNewTodo = () => {
