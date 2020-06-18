@@ -14,7 +14,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test:watch": "react-scripts test --env=jsdom --runInBand --no-cache --verbose",
+    "test": "react-scripts test --verbose --watchAll=false",
+    "test:watch": "react-scripts test --env=jsdom --runInBand --no-cache --verbose --watchAll",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:8080",
