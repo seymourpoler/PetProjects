@@ -22,13 +22,13 @@ export class SearchTodoView extends React.Component {
                 <div>
                     <Spinner show={this.state.showSpinner}/>
                     <a href='#' onClick={this.onNewTodoClicked} >new todo</a>
-                    <input type='text' onChange={this.onSearchTextChange}/> <button onClick={this.search}>Search</button>
+                    <input type='text' onChange={this.onSearchTextChanged}/> <button onClick={this.search}>Search</button>
                     <p>{this.state.errorMessage}</p>
                     <p>{this.state.todos}</p>
                 </div>);
     }
 
-    onSearchTextChange = (event) => {
+    onSearchTextChanged = (event) => {
         this.setState({ searchText: event.target.value });
     }
 
