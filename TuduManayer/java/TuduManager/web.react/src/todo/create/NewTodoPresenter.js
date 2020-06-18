@@ -11,6 +11,10 @@ export function NewTodoPresenter(view, service){
             view.showInternalServerError();
             return;
         }
+        if(result.statusCode === HttpStatusCode.badRequest){
+            view.showErrors(result.errors);
+            return;
+        }
         throw 'not implemented';
     };
 }

@@ -43,6 +43,10 @@ export class NewTodoView extends React.Component {
     showInternalServerError = () => {
         throw 'not implemented';
     }
+
+    showErrors = (errors) => {
+        throw 'not implemented';
+    }
 }
 
 export function createNewTodoView(){

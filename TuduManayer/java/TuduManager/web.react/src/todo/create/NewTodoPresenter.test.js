@@ -28,5 +28,20 @@ describe('New Todo Presenter', () => {
 
             expect(view.showInternalServerError).toHaveBeenCalled();
         });
+
+        it('shows errors if there are errors', async () => {           
+            const newTodo = {title: 'title', description: 'description'};
+            const errors = [];
+            http.post = () => {
+                return {
+                    statusCode: HttpStatusCode.badRequest,
+                    body: errors
+                }
+            };
+
+            await presenter.save(newTodo);
+
+            expect(view.showErrors).toHaveBeenCalledWith(errors);
+        });
     });
 });

@@ -10,7 +10,13 @@ export function NewTodoService(http){
         if(response.statusCode === HttpStatusCode.internalServerError){
             return { statusCode: HttpStatusCode.internalServerError };
         }
-        //throw 'not implemented';
+        if(response.statusCode === HttpStatusCode.badRequest){
+            return {
+                statusCode: HttpStatusCode.badRequest,
+                errors: response.body
+            }
+        }
+        throw 'not implemented';
     };
 }
 
