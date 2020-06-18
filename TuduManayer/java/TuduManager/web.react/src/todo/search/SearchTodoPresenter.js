@@ -13,6 +13,10 @@ export function SearchTodoPresenter(view, searchService){
         const todos = result.todos;
         view.showTodos(todos);
     }
+
+    self.createNewTodo = function(){
+        view.redirectToCreateNewTodo();
+    };
 }
 
 export function createSearchTodoPresenter(view){

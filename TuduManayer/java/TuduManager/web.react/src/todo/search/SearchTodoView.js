@@ -42,6 +42,10 @@ export class SearchTodoView extends React.Component {
     showTodos = (todos) => {
         this.setState({ todos });
     }
+
+    redirectToCreateNewTodo = () => {
+        throw 'not implemented';
+    }
 }
 
 export function createSearchTodoView(){
