@@ -1,4 +1,4 @@
 import React from 'react';
 
-export class CreatTodoView extends React.Component {
+export class CreateTodoView extends React.Component {
 }
