@@ -43,5 +43,19 @@ describe('New Todo Presenter', () => {
 
             expect(view.showErrors).toHaveBeenCalledWith(errors);
         });
+
+        it('creates new todo', async () => {
+            const newTodo = {title: 'title', description: 'description'};
+            const errors = [];
+            http.post = () => {
+                expect(view.showSpinner).toHaveBeenCalled();
+                return { statusCode: HttpStatusCode.ok }
+            };
+
+            await presenter.save(newTodo);
+
+            expect(view.hideSpinner).toHaveBeenCalled();
+            expect(view.showTodoCreated).toHaveBeenCalled();
+        });
     });
 });
