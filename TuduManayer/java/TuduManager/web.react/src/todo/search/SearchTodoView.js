@@ -21,6 +21,7 @@ export class SearchTodoView extends React.Component {
         return (
                 <div>
                     <Spinner show={this.state.showSpinner}/>
+                    <a href='#' onClick={this.onNewTodoClicked} >new todo</a>
                     <input type='text' onChange={this.onSearchTextChange}/> <button onClick={this.search}>Search</button>
                     <p>{this.state.errorMessage}</p>
                     <p>{this.state.todos}</p>
@@ -41,6 +42,10 @@ export class SearchTodoView extends React.Component {
 
     showTodos = (todos) => {
         this.setState({ todos });
+    }
+
+    onNewTodoClicked = () => {
+        this.presenter.createNewTodo();
     }
 
     redirectToCreateNewTodo = () => {

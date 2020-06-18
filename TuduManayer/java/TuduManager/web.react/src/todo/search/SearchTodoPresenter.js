@@ -1,7 +1,7 @@
 import { createSearchTodoService } from './SearchTodoService';
 import { HttpStatusCode } from '../../HttpStatusCode';
 
-export function SearchTodoPresenter(view, searchService){
+export function SearchTodoPresenter(view, searchService) {
     let self = this;
 
     self.search = async (textSearch) => {
@@ -14,12 +14,12 @@ export function SearchTodoPresenter(view, searchService){
         view.showTodos(todos);
     }
 
-    self.createNewTodo = function(){
+    self.createNewTodo = () => {
         view.redirectToCreateNewTodo();
     };
 }
 
-export function createSearchTodoPresenter(view){
+export function createSearchTodoPresenter(view) {
     const service = createSearchTodoService();
     return new SearchTodoPresenter(view, service);
 }
