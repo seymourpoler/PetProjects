@@ -48,7 +48,7 @@ describe('New Todo Presenter', () => {
             const newTodo = {title: 'title', description: 'description'};
             const errors = [];
             http.post = () => {
-                expect(view.cleanMessage).toHaveBeenCalled();
+                expect(view.cleanMessages).toHaveBeenCalled();
                 expect(view.showSpinner).toHaveBeenCalled();
                 return { statusCode: HttpStatusCode.ok }
             };

@@ -6,7 +6,7 @@ export function NewTodoPresenter(view, service){
     let self = this;
 
     self.save = async (todo) => {
-        view.cleanMessage();
+        view.cleanMessages();
         const result = await service.save(todo);
         if(result.statusCode === HttpStatusCode.internalServerError){
             view.showInternalServerError();
