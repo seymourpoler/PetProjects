@@ -53,11 +53,11 @@ export class NewTodoView extends React.Component {
     }
 
     showSpinner = () => {
-        throw 'not implemented';
+        this.setState({ showSpinner: true });
     }
 
     hideSpinner = () => {
-        throw 'not implemented';
+        this.setState({ showSpinner: false });
     }
 
 
