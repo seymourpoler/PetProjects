@@ -74,7 +74,7 @@ export class NewTodoView extends React.Component {
     }
 
     redirectToPageBefore = () => {
-        throw 'not implemented';
+        this.props.history.push('/search');
     }
 }
 
