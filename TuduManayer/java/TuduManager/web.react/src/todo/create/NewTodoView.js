@@ -6,18 +6,18 @@ import { ErrorMessages } from '../../ErrorMessages';
 export class NewTodoView extends React.Component {
 
     constructor(props){
-            super(props);
+        super(props);
 
-            this.state = {
-                showSpinner: false,
-                title: '',
-                titleErrorMessage: '',
-                description: '',
-                descriptionErrorMessage: '',
-                errorMessage: '',
-                message: '',
-            }
+        this.state = {
+            showSpinner: false,
+            title: '',
+            titleErrorMessage: '',
+            description: '',
+            descriptionErrorMessage: '',
+            errorMessage: '',
+            message: '',
         }
+    }
 
     presenter = createNewTodoPresenter(this);
 
