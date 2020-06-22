@@ -1,6 +1,7 @@
 import React from 'react';
 import { Spinner } from '../../Spinner';
 import { createNewTodoPresenter } from './NewTodoPresenter';
+import { ErrorMessages } from '../../ErrorMessages';
 
 export class NewTodoView extends React.Component {
 
