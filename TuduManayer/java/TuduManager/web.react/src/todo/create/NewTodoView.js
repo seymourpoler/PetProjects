@@ -13,7 +13,8 @@ export class NewTodoView extends React.Component {
                 titleErrorMessage: '',
                 description: '',
                 descriptionErrorMessage: '',
-                errorMessage: ''
+                errorMessage: '',
+                message: '',
             }
         }
 
@@ -47,9 +48,10 @@ export class NewTodoView extends React.Component {
     }
 
     cleanMessages = () => {
+        this.setState({ message: '' });
         this.setState({ errorMessage: '' });
-        this.setState({ titleErrorMessage: ''});
-        this.setState({ descriptionErrorMessage: ''});
+        this.setState({ titleErrorMessage: '' });
+        this.setState({ descriptionErrorMessage: '' });
     }
 
     showSpinner = () => {
@@ -70,7 +72,7 @@ export class NewTodoView extends React.Component {
     }
 
     showTodoCreated = () => {
-        throw 'not implemented';
+        this.setState({ message: 'todo created' });
     }
 
     redirectToPageBefore = () => {
