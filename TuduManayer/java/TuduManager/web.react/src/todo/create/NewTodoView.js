@@ -62,7 +62,7 @@ export class NewTodoView extends React.Component {
 
 
     showInternalServerError = () => {
-        throw 'not implemented';
+        this.setState({ errorMessage: 'Internal server error.'});
     }
 
     showErrors = (errors) => {
