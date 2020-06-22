@@ -18,6 +18,10 @@ export function NewTodoPresenter(view, service){
         }
         view.showTodoCreated();
     };
+
+    self.cancel = () => {
+        throw 'not implemented';
+    }
 }
 
 export function createNewTodoPresenter(view){

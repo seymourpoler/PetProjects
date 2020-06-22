@@ -63,6 +63,10 @@ export class NewTodoView extends React.Component {
     showTodoCreated = () => {
         throw 'not implemented';
     }
+
+    redirectToPageBefore = () => {
+        throw 'not implemented';
+    }
 }
 
 export function createNewTodoView(){

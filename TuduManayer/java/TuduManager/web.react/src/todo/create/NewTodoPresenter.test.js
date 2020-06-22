@@ -59,4 +59,12 @@ describe('New Todo Presenter', () => {
             expect(view.showTodoCreated).toHaveBeenCalled();
         });
     });
+
+    describe('when cancel new todo is requested', () => {
+        it('redirects to place before', () => {
+            presenter.cancel();
+
+            expect(view.redirectToPageBefore).toHaveBeenCalled();
+        });
+    });
 });
