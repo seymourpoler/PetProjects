@@ -18,6 +18,16 @@ describe('New Todo Presenter', () => {
     });
 
     describe('when save new todo is requested',() => {
+        it('cleans messages', async () => {
+            const newTodo = {title: 'title', description: 'description'};
+            http.post = () => {
+                return { statusCode: HttpStatusCode.internalServerError };
+            };
+            await presenter.save(newTodo);
+
+            expect(view.cleanMessages).toHaveBeenCalled();
+        });
+
         it('shows error if there is an internal server error', async () => {
             const newTodo = {title: 'title', description: 'description'};
             http.post = () => {
@@ -46,7 +56,6 @@ describe('New Todo Presenter', () => {
 
         it('creates new todo', async () => {
             const newTodo = {title: 'title', description: 'description'};
-            const errors = [];
             http.post = () => {
                 expect(view.cleanMessages).toHaveBeenCalled();
                 expect(view.showSpinner).toHaveBeenCalled();
