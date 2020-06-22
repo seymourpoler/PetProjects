@@ -29,6 +29,7 @@ export class NewTodoView extends React.Component {
             <p>Description: <input type='text' id='txtDescription' onChange={this.onDescriptionChanged} /></p>
             <p id='lblDescriptionErrorMessage'>{this.state.descriptionErrorMessage}</p>
             <button onClick={this.onSaveClicked}>Save</button>
+            <button onClick={this.onCancelClicked}>Cancel</button>
             <p>{this.state.errorMessage}</p>
         </div>);
     }
@@ -46,6 +47,10 @@ export class NewTodoView extends React.Component {
             title: this.state.title,
             description: this.state.description
         });
+    }
+
+    onCancelClicked = (event) => {
+        this.presenter.cancel();
     }
 
     cleanMessages = () => {
