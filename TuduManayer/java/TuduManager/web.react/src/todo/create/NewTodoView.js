@@ -68,7 +68,7 @@ export class NewTodoView extends React.Component {
     }
 
     showErrors = (errors) => {
-        errors.forEach(error =>{
+        errors.forEach(error => {
             const message = ErrorMessages[error.errorCode];
             if(error.fieldId === 'title'){
                 this.setState({ titleErrorMessage: message });
