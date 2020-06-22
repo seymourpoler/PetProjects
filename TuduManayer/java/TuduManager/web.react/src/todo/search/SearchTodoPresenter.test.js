@@ -18,10 +18,20 @@ describe('Search Todo Presenter', () =>{
      });
 
     describe('when search is requested', () => {
-        it('clean all messages', async () => {
+        it('cleans all messages', async () => {
+            const searchText = 'tonight';
+            http.get = () => { return { statusCode: HttpStatusCode.internalServerError }; };
             await presenter.search(searchText);
 
             expect(view.cleanMessages).toHaveBeenCalled();
+        });
+
+        it('shows spinner', async () => {
+            const searchText = 'tonight';
+            http.get = () => { return { statusCode: HttpStatusCode.internalServerError }; };
+            await presenter.search(searchText);
+
+            expect(view.showSpinner).toHaveBeenCalled();
         });
 
         it('shows error if there is an internal server error', async () => {
@@ -37,8 +47,6 @@ describe('Search Todo Presenter', () =>{
             const todos = [{id:1, title: 'a title'}, {id:2, title: 'another title'}];
             const searchText = 'tonight';
             http.get = () => {
-                expect(view.cleanMessages).toHaveBeenCalled();
-                expect(view.showSpinner).toHaveBeenCalled();
                 return { statusCode: HttpStatusCode.ok, body: todos };
             };
 

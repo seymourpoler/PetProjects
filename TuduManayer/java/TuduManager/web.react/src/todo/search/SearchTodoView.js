@@ -62,7 +62,7 @@ export class SearchTodoView extends React.Component {
     }
 
     redirectToCreateNewTodo = () => {
-        throw 'not implemented';
+        this.props.history.push("/new");
     }
 }
 
