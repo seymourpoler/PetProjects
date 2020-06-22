@@ -28,5 +28,5 @@ export function NewTodoPresenter(view, service){
 
 export function createNewTodoPresenter(view){
     const service = createNewTodoService();
-    return new NewTodoPresenter(view);
+    return new NewTodoPresenter(view, service);
 }
