@@ -70,7 +70,7 @@ export class NewTodoView extends React.Component {
 
 
     showInternalServerError = () => {
-        this.setState({ errorMessage: 'Internal server error.'});
+        this.setState({ errorMessage: ErrorMessages.InternalServerError });
     }
 
     showErrors = (errors) => {

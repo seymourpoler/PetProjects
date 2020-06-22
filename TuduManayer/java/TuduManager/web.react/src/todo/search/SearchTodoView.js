@@ -1,6 +1,7 @@
 import React from 'react';
 import { Spinner } from '../../Spinner';
 import { createSearchTodoPresenter } from './SearchTodoPresenter';
+import { ErrorMessages } from '../../ErrorMessages';
 
 export class SearchTodoView extends React.Component {
 
@@ -21,8 +22,8 @@ export class SearchTodoView extends React.Component {
         return (
                 <div>
                     <Spinner show={this.state.showSpinner}/>
-                    <a href='#' onClick={this.onNewTodoClicked} > - new todo - </a>
-                    <input type='text' onChange={this.onSearchTextChanged}/> <button onClick={this.onSearchClicked}>Search</button>
+                    <button onClick={this.onNewTodoClicked} > new </button>
+                    <input type='text' onChange={this.onSearchTextChanged}/><button onClick={this.onSearchClicked}> search </button>
                     <p>{this.state.errorMessage}</p>
                     <p>{this.state.todos}</p>
                 </div>);
@@ -50,7 +51,7 @@ export class SearchTodoView extends React.Component {
 
 
     showInternalServerError = () => {
-        this.setState({ errorMessage: 'There is an internal server error.' });
+        this.setState({ errorMessage: ErrorMessages.InternalServerError });
     }
 
     showTodos = (todos) => {
