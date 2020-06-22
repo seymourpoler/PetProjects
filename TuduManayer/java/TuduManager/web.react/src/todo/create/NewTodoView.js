@@ -24,9 +24,9 @@ export class NewTodoView extends React.Component {
     render(){
         return(<div>
             <Spinner show={this.state.showSpinner}/>
-            <p>Title: </p><input type='text' id='txtTitle' onChange={this.onTitleChanged} />
+            <p>Title: <input type='text' id='txtTitle' onChange={this.onTitleChanged} /></p>
             <p id='lblTitleErrorMessage'>{this.state.titleErrorMessage}</p>
-            <p>Description: </p><input type='text' id='txtDescription' onChange={this.onDescriptionChanged} />
+            <p>Description: <input type='text' id='txtDescription' onChange={this.onDescriptionChanged} /></p>
             <p id='lblDescriptionErrorMessage'>{this.state.descriptionErrorMessage}</p>
             <button onClick={this.onSaveClicked}>Save</button>
             <p>{this.state.errorMessage}</p>
