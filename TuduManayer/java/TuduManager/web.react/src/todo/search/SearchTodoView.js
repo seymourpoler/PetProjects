@@ -44,7 +44,7 @@ export class SearchTodoView extends React.Component {
         this.setState({ showSpinner: false });
     }
 
-    cleanMessage = () => {
+    cleanMessages = () => {
         this.setState({errorMessage: ''});
     }
 

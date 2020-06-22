@@ -5,7 +5,6 @@ import { spyAllMethodsOf } from '../../Testing';
 import { Http, createHttp } from '../../Http';
 import { HttpStatusCode } from '../../HttpStatusCode';
 
-
 describe('Search Todo Presenter', () =>{
     let view, service, presenter, http;
 
@@ -19,6 +18,12 @@ describe('Search Todo Presenter', () =>{
      });
 
     describe('when search is requested', () => {
+        it('clean all messages', async () => {
+            await presenter.search(searchText);
+
+            expect(view.cleanMessages).toHaveBeenCalled();
+        });
+
         it('shows error if there is an internal server error', async () => {
             const searchText = 'tonight';
             http.get = () => { return { statusCode: HttpStatusCode.internalServerError }; };
@@ -32,6 +37,7 @@ describe('Search Todo Presenter', () =>{
             const todos = [{id:1, title: 'a title'}, {id:2, title: 'another title'}];
             const searchText = 'tonight';
             http.get = () => {
+                expect(view.cleanMessages).toHaveBeenCalled();
                 expect(view.showSpinner).toHaveBeenCalled();
                 return { statusCode: HttpStatusCode.ok, body: todos };
             };
