@@ -68,7 +68,14 @@ export class NewTodoView extends React.Component {
     }
 
     showErrors = (errors) => {
-        throw 'not implemented';
+        errors.forEach(error =>{
+            const message = ErrorMessages[error.errorCode];
+            id(error.fieldId === 'title'){
+                this.setState({ titleErrorMessage: message });
+                return;
+            }
+            this.setState({ descriptionErrorMessage: message });
+        });
     }
 
     showTodoCreated = () => {
