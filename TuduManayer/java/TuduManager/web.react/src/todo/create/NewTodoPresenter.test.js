@@ -67,8 +67,8 @@ describe('New Todo Presenter', () => {
         it('creates new todo', async () => {
             const newTodo = {title: 'title', description: 'description'};
             http.post = () => {
-                return { statusCode: HttpStatusCode.ok }
-            };
+                return { statusCode: HttpStatusCode.ok };
+            }
 
             await presenter.save(newTodo);
 
@@ -84,4 +84,5 @@ describe('New Todo Presenter', () => {
             expect(view.redirectToPageBefore).toHaveBeenCalled();
         });
     });
+
 });

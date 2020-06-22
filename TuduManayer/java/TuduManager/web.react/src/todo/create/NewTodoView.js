@@ -52,6 +52,15 @@ export class NewTodoView extends React.Component {
         this.setState({ descriptionErrorMessage: ''});
     }
 
+    showSpinner = () => {
+        throw 'not implemented';
+    }
+
+    hideSpinner = () => {
+        throw 'not implemented';
+    }
+
+
     showInternalServerError = () => {
         throw 'not implemented';
     }

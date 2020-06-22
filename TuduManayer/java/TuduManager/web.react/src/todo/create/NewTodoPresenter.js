@@ -7,7 +7,9 @@ export function NewTodoPresenter(view, service){
 
     self.save = async (todo) => {
         view.cleanMessages();
+        view.showSpinner();
         const result = await service.save(todo);
+        view.hideSpinner();
         if(result.statusCode === HttpStatusCode.internalServerError){
             view.showInternalServerError();
             return;
@@ -20,7 +22,7 @@ export function NewTodoPresenter(view, service){
     };
 
     self.cancel = () => {
-        throw 'not implemented';
+        view.redirectToPageBefore();
     }
 }
 
