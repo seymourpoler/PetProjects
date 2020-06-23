@@ -21,13 +21,11 @@ public class SearchTodoRepository implements ISearchTodoRepository {
 
     @Override
     public List<Todo> search(String searchText) {
-//        final String sql = "select id, title from public.todo where title like '%:searchText%' OR body like '%:searchText%'";
         final String sql = "select id, title from public.todo where title like '%" + searchText + "%' OR body like '%" + searchText + "%'";
 
         try(var connection = dataBaseConnectionFactory.create()) {
             return connection
                     .createQuery(sql)
-                    //.addParameter("searchText", searchText)
                     .executeAndFetch(Todo.class).stream()
                     .map(x -> new Todo(x.id, x.title))
                     .collect(Collectors.toList());
