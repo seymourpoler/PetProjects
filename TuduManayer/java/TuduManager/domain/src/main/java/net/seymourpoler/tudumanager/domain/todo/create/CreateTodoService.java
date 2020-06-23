@@ -23,11 +23,14 @@ public class CreateTodoService implements ICreateTodoService {
     @Override
     public ServiceExecutionResult create(TodoCreationRequest request) {
         var errors = validate(request);
-
         if (!errors.isEmpty()){
             return ServiceExecutionResult.of(errors);
         }
 
+        return createTodo(request);
+    }
+
+    private ServiceExecutionResult createTodo(TodoCreationRequest request) {
         var todo = new Todo(request.title, request.description);
         repository.save(todo);
         return ServiceExecutionResult.ok();
@@ -35,10 +38,10 @@ public class CreateTodoService implements ICreateTodoService {
 
     private List<Error> validate(TodoCreationRequest request){
         final String titleField = "title";
+
         if(request.title == null || request.title.isEmpty() || request.title.trim().isEmpty() ){
             return List.of(new Error(titleField, ErrorCodes.Required));
         }
-
         if(request.title.length() > MaximumNumberOfCharactersForTitle){
             return List.of(new Error(titleField, ErrorCodes.InvalidLength));
         }
