@@ -4,6 +4,7 @@ import net.seymourpoler.tudumanager.domain.Error;
 import net.seymourpoler.tudumanager.domain.ErrorCodes;
 import net.seymourpoler.tudumanager.domain.ServiceExecutionResult;
 import net.seymourpoler.tudumanager.domain.todo.create.models.Todo;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class CreateTodoService implements ICreateTodoService {
 
     private final ISaveTodoRepository repository;
 
+    @Autowired
     public CreateTodoService(ISaveTodoRepository saveTodoRepository) {
         this.repository = saveTodoRepository;
     }
