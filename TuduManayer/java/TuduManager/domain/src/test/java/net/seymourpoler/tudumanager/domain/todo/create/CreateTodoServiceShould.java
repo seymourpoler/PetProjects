@@ -1,13 +1,9 @@
 package net.seymourpoler.tudumanager.domain.todo.create;
 
-import net.seymourpoler.tudumanager.domain.Error;
 import net.seymourpoler.tudumanager.domain.ErrorCodes;
-import org.assertj.core.api.AssertionsForClassTypes;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.nio.charset.Charset;
-import java.util.List;
 import java.util.Random;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
