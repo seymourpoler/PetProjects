@@ -12,7 +12,7 @@ public class CreateTodoService implements ICreateTodoService {
     @Override
     public ServiceExecutionResult create(TodoCreationRequest request) {
 
-        if(request.title == null){
+        if(request.title == null || request.title.isEmpty()){
             return ServiceExecutionResult.of(List.of(new Error("title", ErrorCodes.Required)));
         }
 

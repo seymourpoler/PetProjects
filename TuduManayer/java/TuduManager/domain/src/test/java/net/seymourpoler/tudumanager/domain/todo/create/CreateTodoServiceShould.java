@@ -33,6 +33,17 @@ public class CreateTodoServiceShould {
 
     @Test
     public void
+    return_error_when_title_is_empty(){
+        var request = new TodoCreationRequest("", null);
+
+        var result = service.create(request);
+
+        assertThat(result.errors().get(0).fieldId).isEqualTo("title");
+        assertThat(result.errors().get(0).errorCode).isEqualTo(ErrorCodes.Required);
+    }
+
+    @Test
+    public void
     return_error_when_title_is_longer_than_maximum_number_of_characters(){
         final String title = generate(CreateTodoService.MaximumNumberOfCharactersForTitle + 1);
         var request = new TodoCreationRequest(title, null);
