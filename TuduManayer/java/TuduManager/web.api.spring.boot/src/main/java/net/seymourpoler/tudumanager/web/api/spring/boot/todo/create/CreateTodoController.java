@@ -19,7 +19,7 @@ public class CreateTodoController {
         var creationResult = service.create(creationRequest);
 
         if(creationResult.isOk()){
-            throw new RuntimeException();
+            return new ResponseEntity(HttpStatus.OK);
         }
         return new ResponseEntity(creationResult.errors(), HttpStatus.BAD_REQUEST);
     }

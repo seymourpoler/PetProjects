@@ -26,8 +26,7 @@ public class CreateTodoControllerShould {
     }
 
     @Test
-    public void
-    return_bad_request_when_there_are_errors(){
+    public void return_bad_request_when_there_are_errors(){
         var errors = List.of(new net.seymourpoler.tudumanager.domain.Error("email", ErrorCodes.Required));
         var errorResult = ServiceExecutionResult.of(errors);
         when(service.create(any())).thenReturn(errorResult);
@@ -37,5 +36,16 @@ public class CreateTodoControllerShould {
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
         assertThat(response.getBody()).isEqualTo(errors);
+    }
+
+    @Test
+    public void create_todo(){
+        var okResult = ServiceExecutionResult.ok();
+        when(service.create(any())).thenReturn(okResult);
+        var request = new HttpTodoCreationRequest();
+
+        var response = controller.create(request);
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
 }
