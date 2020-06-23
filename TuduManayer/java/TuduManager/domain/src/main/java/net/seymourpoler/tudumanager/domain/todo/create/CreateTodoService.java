@@ -7,12 +7,19 @@ import net.seymourpoler.tudumanager.domain.ServiceExecutionResult;
 import java.util.List;
 
 public class CreateTodoService implements ICreateTodoService {
+    public static final Integer MaximumNumberOfCharactersForTitle = 250;
+
     @Override
     public ServiceExecutionResult create(TodoCreationRequest request) {
 
         if(request.title == null){
             return ServiceExecutionResult.of(List.of(new Error("title", ErrorCodes.Required)));
         }
+
+        if(request.title.length() > MaximumNumberOfCharactersForTitle){
+            return ServiceExecutionResult.of(List.of(new Error("title", ErrorCodes.InvalidLength)));
+        }
+
         throw new RuntimeException();
     }
 }
