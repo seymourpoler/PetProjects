@@ -23,11 +23,10 @@ public class CreateTodoService implements ICreateTodoService {
     @Override
     public ServiceExecutionResult create(TodoCreationRequest request) {
         var errors = validate(request);
-        if (!errors.isEmpty()){
-            return ServiceExecutionResult.of(errors);
+        if (errors.isEmpty()){
+            return createTodo(request);
         }
-
-        return createTodo(request);
+        return ServiceExecutionResult.of(errors);
     }
 
     private ServiceExecutionResult createTodo(TodoCreationRequest request) {
