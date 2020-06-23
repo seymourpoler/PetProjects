@@ -22,17 +22,26 @@ public class CreateTodoService implements ICreateTodoService {
 
     @Override
     public ServiceExecutionResult create(TodoCreationRequest request) {
+        var errors = validate(request);
 
-        if(request.title == null || request.title.isEmpty() || request.title.trim().isEmpty() ){
-            return ServiceExecutionResult.of(List.of(new Error("title", ErrorCodes.Required)));
-        }
-
-        if(request.title.length() > MaximumNumberOfCharactersForTitle){
-            return ServiceExecutionResult.of(List.of(new Error("title", ErrorCodes.InvalidLength)));
+        if (!errors.isEmpty()){
+            return ServiceExecutionResult.of(errors);
         }
 
         var todo = new Todo(request.title, request.description);
         repository.save(todo);
         return ServiceExecutionResult.ok();
+    }
+
+    private List<Error> validate(TodoCreationRequest request){
+        final String titleField = "title";
+        if(request.title == null || request.title.isEmpty() || request.title.trim().isEmpty() ){
+            return List.of(new Error(titleField, ErrorCodes.Required));
+        }
+
+        if(request.title.length() > MaximumNumberOfCharactersForTitle){
+            return List.of(new Error(titleField, ErrorCodes.InvalidLength));
+        }
+        return List.of();
     }
 }
