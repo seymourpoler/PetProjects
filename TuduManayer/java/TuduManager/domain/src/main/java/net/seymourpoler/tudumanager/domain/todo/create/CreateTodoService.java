@@ -5,9 +5,11 @@ import net.seymourpoler.tudumanager.domain.ErrorCodes;
 import net.seymourpoler.tudumanager.domain.ServiceExecutionResult;
 import net.seymourpoler.tudumanager.domain.todo.create.models.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class CreateTodoService implements ICreateTodoService {
     public static final Integer MaximumNumberOfCharactersForTitle = 250;
 
