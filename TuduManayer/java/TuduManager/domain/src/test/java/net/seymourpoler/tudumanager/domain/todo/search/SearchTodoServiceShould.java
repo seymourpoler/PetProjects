@@ -1,13 +1,12 @@
 package net.seymourpoler.tudumanager.domain.todo.search;
 
 import net.seymourpoler.tudumanager.domain.todo.search.models.Todo;
-import org.assertj.core.api.AssertionsForInterfaceTypes;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
 
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -28,7 +27,7 @@ public class SearchTodoServiceShould {
     accept_null_search_text(){
         var todos = service.search(null);
 
-        AssertionsForInterfaceTypes.assertThat(todos).isEqualTo(List.of());
+        assertThat(todos).isEqualTo(List.of());
     }
 
     @Test
@@ -36,7 +35,7 @@ public class SearchTodoServiceShould {
     accept_string_empty_search_text(){
         var todos = service.search("");
 
-        AssertionsForInterfaceTypes.assertThat(todos).isEqualTo(List.of());
+        assertThat(todos).isEqualTo(List.of());
     }
 
     @Test
@@ -44,7 +43,7 @@ public class SearchTodoServiceShould {
     accept_white_space_search_text(){
         var todos = service.search("    ");
 
-        AssertionsForInterfaceTypes.assertThat(todos).isEqualTo(List.of());
+        assertThat(todos).isEqualTo(List.of());
     }
 
     @Test
@@ -56,6 +55,6 @@ public class SearchTodoServiceShould {
 
         var result = service.search(searchText);
 
-        AssertionsForInterfaceTypes.assertThat(result).isEqualTo(todos);
+        assertThat(result).isEqualTo(todos);
     }
 }
