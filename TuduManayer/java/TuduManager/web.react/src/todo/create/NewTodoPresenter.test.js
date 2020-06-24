@@ -78,6 +78,12 @@ describe('New Todo Presenter', () => {
     });
 
     describe('when cancel new todo is requested', () => {
+        it('cleans messages', async () => {
+            presenter.cancel();
+
+            expect(view.cleanMessages).toHaveBeenCalled();
+        });
+
         it('redirects to place before', () => {
             presenter.cancel();
 

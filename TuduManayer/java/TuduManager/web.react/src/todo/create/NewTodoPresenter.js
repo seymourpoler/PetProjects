@@ -22,6 +22,7 @@ export function NewTodoPresenter(view, service){
     };
 
     self.cancel = () => {
+        view.cleanMessages();
         view.redirectToPageBefore();
     }
 }
