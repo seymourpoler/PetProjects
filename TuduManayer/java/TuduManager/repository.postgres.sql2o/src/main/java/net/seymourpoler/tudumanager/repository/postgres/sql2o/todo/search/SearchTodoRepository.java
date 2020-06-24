@@ -21,7 +21,7 @@ public class SearchTodoRepository implements ISearchTodoRepository {
 
     @Override
     public List<Todo> search(String searchText) {
-        final String sql = "select id, title from public.todo where title like '%" + searchText + "%' OR body like '%" + searchText + "%'";
+        final String sql = "select id, title from public.todos where title like '%" + searchText + "%' OR description like '%" + searchText + "%'";
 
         try(var connection = dataBaseConnectionFactory.create()) {
             return connection
