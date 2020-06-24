@@ -22,19 +22,23 @@ export class SearchTodoView extends React.Component {
         return (
                 <div>
                     <Spinner show={this.state.showSpinner}/>
-                    <button onClick={this.onNewTodoClicked} > new </button>
-                    <input type='text' onChange={this.onSearchTextChanged}/><button onClick={this.onSearchClicked}> search </button>
+                    <button onClick={this.onNewTodoClickedHandler} > new </button>
+                    <input type='text' onChange={this.onSearchTextChangedHandler}/><button onClick={this.onSearchClickedHandler}> search </button>
                     <p>{this.state.errorMessage}</p>
                     <p>{this.state.todos}</p>
                 </div>);
     }
 
-    onSearchTextChanged = (event) => {
+    onSearchTextChangedHandler = (event) => {
         this.setState({ searchText: event.target.value });
     }
 
-    onSearchClicked = (event) => {
+    onSearchClickedHandler = (event) => {
         this.presenter.search(this.state.searchText);
+    }
+
+    onNewTodoClickedHandler = () => {
+        this.presenter.createNewTodo();
     }
 
     showSpinner = () => {
@@ -56,10 +60,6 @@ export class SearchTodoView extends React.Component {
 
     showTodos = (todos) => {
         this.setState({ todos });
-    }
-
-    onNewTodoClicked = () => {
-        this.presenter.createNewTodo();
     }
 
     redirectToCreateNewTodo = () => {
