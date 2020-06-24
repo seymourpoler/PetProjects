@@ -31,6 +31,7 @@ export class NewTodoView extends React.Component {
             <button onClick={this.onSaveClickedHandler}>Save</button>
             <button onClick={this.onCancelClickedHandler}>Cancel</button>
             <p>{this.state.errorMessage}</p>
+            <p>{this.state.message}</p>
         </div>);
     }
 
