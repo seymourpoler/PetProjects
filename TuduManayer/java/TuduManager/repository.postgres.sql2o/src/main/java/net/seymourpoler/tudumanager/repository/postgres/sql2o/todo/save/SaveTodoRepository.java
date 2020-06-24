@@ -17,7 +17,7 @@ public class SaveTodoRepository implements ISaveTodoRepository {
 
     @Override
     public void save(Todo todo) {
-        final String sql = "INSERT INTO public.todo (title, description, creation_date) VALUES (:email, :description, :creation_date)";
+        final String sql = "INSERT INTO public.todos (title, description, creation_date) VALUES (:title, :description, :creation_date)";
         var dbModel = buildFrom(todo);
         try (var connection = dataBaseConnectionFactory.create()) {
             connection
