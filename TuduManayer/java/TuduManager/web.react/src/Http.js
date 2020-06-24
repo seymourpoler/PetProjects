@@ -15,14 +15,23 @@ export function Http(){
 			},
             body: JSON.stringify(entity)
 		});
-        return buildResultFrom(response);
+        return await buildResultFrom(response);
 		                                      	
 	}
 
-    function buildResultFrom(response){
+    async function buildResultFrom(response){
+        const body = await buildBody(response);
         return {
             statusCode: response.status,
-            body: response.json()
+            body
+        }
+    }
+
+    async function buildBody(response){
+        try{
+            return await response.json();
+        }catch{
+            return {};
         }
     }
 }
