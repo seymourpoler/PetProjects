@@ -24,32 +24,32 @@ export class NewTodoView extends React.Component {
     render(){
         return(<div>
             <Spinner show={this.state.showSpinner}/>
-            <p>Title: <input type='text' id='txtTitle' onChange={this.onTitleChanged} /></p>
+            <p>Title: <input type='text' id='txtTitle' onChange={this.onTitleChangedHandler} /></p>
             <p id='lblTitleErrorMessage'>{this.state.titleErrorMessage}</p>
-            <p>Description: <input type='text' id='txtDescription' onChange={this.onDescriptionChanged} /></p>
+            <p>Description: <input type='text' id='txtDescription' onChange={this.onDescriptionChangedHandler} /></p>
             <p id='lblDescriptionErrorMessage'>{this.state.descriptionErrorMessage}</p>
-            <button onClick={this.onSaveClicked}>Save</button>
-            <button onClick={this.onCancelClicked}>Cancel</button>
+            <button onClick={this.onSaveClickedHandler}>Save</button>
+            <button onClick={this.onCancelClickedHandler}>Cancel</button>
             <p>{this.state.errorMessage}</p>
         </div>);
     }
 
-    onTitleChanged = (event) => {
+    onTitleChangedHandler = (event) => {
         this.setState({ title: event.target.value });
     }
 
-    onDescriptionChanged = (event) => {
+    onDescriptionChangedHandler = (event) => {
         this.setState({ description: event.target.value });
     }
 
-    onSaveClicked = (event) => {
+    onSaveClickedHandler = (event) => {
         this.presenter.save({
             title: this.state.title,
             description: this.state.description
         });
     }
 
-    onCancelClicked = (event) => {
+    onCancelClickedHandler = (event) => {
         this.presenter.cancel();
     }
 
