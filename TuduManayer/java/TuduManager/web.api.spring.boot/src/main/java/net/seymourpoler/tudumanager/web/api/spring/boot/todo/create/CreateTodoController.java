@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,7 +19,7 @@ public class CreateTodoController {
     }
 
     @PostMapping("/api/todos")
-    public ResponseEntity create(HttpTodoCreationRequest request){
+    public ResponseEntity create(@RequestBody HttpTodoCreationRequest request){
         var creationRequest = new TodoCreationRequest(request.title, request.description);
         var creationResult = service.create(creationRequest);
 
