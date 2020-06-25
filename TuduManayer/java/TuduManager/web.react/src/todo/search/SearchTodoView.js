@@ -2,6 +2,7 @@ import React from 'react';
 import { Spinner } from '../../Spinner';
 import { createSearchTodoPresenter } from './SearchTodoPresenter';
 import { ErrorMessages } from '../../ErrorMessages';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 export class SearchTodoView extends React.Component {
 
@@ -25,7 +26,10 @@ export class SearchTodoView extends React.Component {
                     <button onClick={this.onNewTodoClickedHandler} > new </button>
                     <input type='text' onChange={this.onSearchTextChangedHandler}/><button onClick={this.onSearchClickedHandler}> search </button>
                     <p>{this.state.errorMessage}</p>
-                    <p>{this.state.todos}</p>
+                    <BootstrapTable data={this.state.todos} striped hover>
+                      <TableHeaderColumn isKey dataField='id'>ID</TableHeaderColumn>
+                      <TableHeaderColumn dataField='title'>Title</TableHeaderColumn>
+                  </BootstrapTable>
                 </div>);
     }
 

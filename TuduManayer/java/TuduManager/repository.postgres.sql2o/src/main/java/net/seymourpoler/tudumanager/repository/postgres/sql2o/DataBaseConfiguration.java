@@ -11,10 +11,10 @@ public class DataBaseConfiguration {
     }
 
     public String user(){
-        return "admin";
+        return "lgabriel";
     }
 
     public String password(){
-        return "1234";
+        return "itatum33";
     }
 }
