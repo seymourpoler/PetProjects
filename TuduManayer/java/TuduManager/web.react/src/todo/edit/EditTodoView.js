@@ -21,6 +21,10 @@ export class EditTodoView extends React.Component {
     cleanMessages = () => {
         throw 'not implemented';
     }
+
+    showSpinner = () => {
+        throw 'not implemented';
+    }
 }
 
 export function createEditTodoView(){

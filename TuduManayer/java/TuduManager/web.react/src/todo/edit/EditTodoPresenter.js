@@ -3,6 +3,7 @@ export function EditTodoPresenter(view){
 
     self.update = (todo) => {
         view.cleanMessages();
+        view.showSpinner();
     }
 }
 

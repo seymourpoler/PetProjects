@@ -18,5 +18,11 @@ describe('EditTodoPresenter', () => {
 
             expect(view.cleanMessages).toHaveBeenCalled();
         });
+
+        it('shows spinner', () => {
+            presenter.update();
+
+            expect(view.showSpinner).toHaveBeenCalled();
+        });
     });
 });
