@@ -22,7 +22,11 @@ export class SearchTodoView extends React.Component {
         btnEditTodo = (cell, row, enumObject, rowIndex) => {
         	return (
           	<button type="button"
-                onClick={() => {console.log('row: ', row);}}>
+                onClick={() => {
+                        console.log('row: ', row);
+                        presenter.editTodo(row.id);
+                    }
+                }>
             	edit
             </button>
           )
@@ -82,7 +86,7 @@ export class SearchTodoView extends React.Component {
     }
 
     redirectToEditTodo = (todoId) => {
-        throw 'not implemented';
+        this.props.history.push("/todos/" + todoId);
     }
 }
 
