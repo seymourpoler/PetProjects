@@ -19,7 +19,11 @@ export function SearchTodoPresenter(view, searchService) {
 
     self.createNewTodo = () => {
         view.redirectToCreateNewTodo();
-    };
+    }
+
+    self.editTodo = (todoId) => {
+        view.redirectToEditTodo(todoId);
+    }
 }
 
 export function createSearchTodoPresenter(view) {

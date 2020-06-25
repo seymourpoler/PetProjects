@@ -57,6 +57,16 @@ describe('Search Todo Presenter', () =>{
         });
     });
 
+    describe('when edit is requested', () => {
+        it('redirects to edit todo', () => {
+            const todoId = 2;
+
+            presenter.editTodo(todoId);
+
+            expect(view.redirectToEditTodo).toHaveBeenCalledWith(todoId);
+        });
+    });
+
     describe('when creation a new todo is requested', () => {
         it('redirects to a creation of a new todo', () => {
             presenter.createNewTodo();

@@ -19,6 +19,15 @@ export class SearchTodoView extends React.Component {
 
     presenter = createSearchTodoPresenter(this);
 
+        btnEditTodo = (cell, row, enumObject, rowIndex) => {
+        	return (
+          	<button type="button"
+                onClick={() => {console.log('row: ', row);}}>
+            	edit
+            </button>
+          )
+        }
+
     render(){
         return (
                 <div>
@@ -29,6 +38,8 @@ export class SearchTodoView extends React.Component {
                     <BootstrapTable data={this.state.todos} striped hover>
                       <TableHeaderColumn isKey dataField='id'>ID</TableHeaderColumn>
                       <TableHeaderColumn dataField='title'>Title</TableHeaderColumn>
+                      <TableHeaderColumn dataField='button' dataFormat={this.btnEditTodo}
+                                />
                   </BootstrapTable>
                 </div>);
     }
@@ -68,6 +79,10 @@ export class SearchTodoView extends React.Component {
 
     redirectToCreateNewTodo = () => {
         this.props.history.push("/new");
+    }
+
+    redirectToEditTodo = (todoId) => {
+        throw 'not implemented';
     }
 }
 
