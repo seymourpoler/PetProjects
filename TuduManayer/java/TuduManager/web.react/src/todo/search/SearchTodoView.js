@@ -2,7 +2,7 @@ import React from 'react';
 import { Spinner } from '../../Spinner';
 import { createSearchTodoPresenter } from './SearchTodoPresenter';
 import { ErrorMessages } from '../../ErrorMessages';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 export class SearchTodoView extends React.Component {
 
@@ -19,18 +19,18 @@ export class SearchTodoView extends React.Component {
 
     presenter = createSearchTodoPresenter(this);
 
-        btnEditTodo = (cell, row, enumObject, rowIndex) => {
-        	return (
-          	<button type="button"
-                onClick={() => {
-                        console.log('row: ', row);
-                        presenter.editTodo(row.id);
-                    }
-                }>
-            	edit
-            </button>
-          )
-        }
+    btnEditTodo = (cell, row, enumObject, rowIndex) => {
+        return (
+        <button type="button"
+            onClick={() => {
+                    console.log('row: ', row);
+                    this.presenter.editTodo(row.id);
+                }
+            }>
+            edit
+        </button>
+      )
+    }
 
     render(){
         return (
@@ -82,7 +82,7 @@ export class SearchTodoView extends React.Component {
     }
 
     redirectToCreateNewTodo = () => {
-        this.props.history.push("/new");
+        this.props.history.push("/create");
     }
 
     redirectToEditTodo = (todoId) => {

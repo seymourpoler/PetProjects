@@ -1,6 +1,7 @@
 import { createEditTodoView } from './EditTodoView';
 import { spyAllMethodsOf } from '../../Testing';
 import { EditTodoPresenter } from './EditTodoPresenter';
+import { createEditTodoService } from './EditTodoService';
 import { HttpStatusCode } from '../../HttpStatusCode';
 
 describe('EditTodoPresenter', () => {
