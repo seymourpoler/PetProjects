@@ -25,6 +25,10 @@ export class EditTodoView extends React.Component {
         throw 'not implemented';
     }
 
+    hideSpinner = () => {
+        throw 'not implemented';
+    }
+
     showInternalServerError = () => {
         throw 'not implemented';
     }

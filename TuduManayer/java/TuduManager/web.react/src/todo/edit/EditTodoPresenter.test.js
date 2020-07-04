@@ -30,6 +30,15 @@ describe('EditTodoPresenter', () => {
             expect(view.showSpinner).toHaveBeenCalled();
         });
 
+        it('hides spinner', async () => {
+            http.put = () => {
+                return { statusCode: HttpStatusCode.internalServerError };
+            }
+            await presenter.update();
+
+            expect(view.hideSpinner).toHaveBeenCalled();
+        });
+
         it('shows error if there is an internal server error', async () => {
             http.put = () => {
                 return { statusCode: HttpStatusCode.internalServerError };

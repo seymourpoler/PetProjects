@@ -8,6 +8,7 @@ export function EditTodoPresenter(view, service){
         view.cleanMessages();
         view.showSpinner();
         const response = await service.update(todo);
+        view.hideSpinner();
         if(response.statusCode === HttpStatusCode.internalServerError){
             view.showInternalServerError();
             return;
