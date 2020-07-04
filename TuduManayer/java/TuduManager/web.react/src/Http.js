@@ -19,6 +19,18 @@ export function Http(){
 		                                      	
 	}
 
+    self.put = async (url, entity) => {
+        const response = await fetch(url, {
+            method: 'PUT',
+            cache: 'no-cache',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(entity)
+        });
+        return await buildResultFrom(response);
+    }
+
     async function buildResultFrom(response){
         const body = await buildBody(response);
         return {

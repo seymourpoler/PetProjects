@@ -25,6 +25,10 @@ export class EditTodoView extends React.Component {
     showSpinner = () => {
         throw 'not implemented';
     }
+
+    showInternalServerError = () => {
+        throw 'not implemented';
+    }
 }
 
 export function createEditTodoView(){

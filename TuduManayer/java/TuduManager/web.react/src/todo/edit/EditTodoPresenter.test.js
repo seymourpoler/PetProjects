@@ -1,17 +1,19 @@
 import { createEditTodoView } from './EditTodoView';
 import { spyAllMethodsOf } from '../../Testing';
 import { EditTodoPresenter } from './EditTodoPresenter';
-import { createEditTodoService } from './EditTodoService';
+import { EditTodoService } from './EditTodoService';
 import { HttpStatusCode } from '../../HttpStatusCode';
+import { createHttp } from '../../Http';
 
 describe('EditTodoPresenter', () => {
-    let view, service, presenter;
+    let view, service, http, presenter;
 
     beforeEach(() => {
         view = createEditTodoView();
         spyAllMethodsOf(view);
-        service = createEditTodoService();
-        spyAllMethodsOf(service);
+        http = createHttp();
+        spyAllMethodsOf(http);
+        service = new EditTodoService(http);
         presenter = new EditTodoPresenter(view, service);
     });
 
@@ -28,10 +30,13 @@ describe('EditTodoPresenter', () => {
             expect(view.showSpinner).toHaveBeenCalled();
         });
 
-        it('shows error if there is an internal server error', () => {
-            service.update = () => { return { statusCode: HttpStatusCode.internalServerError }};
+        it('shows error if there is an internal server error', async () => {
+            http.put = () => {
+                return { statusCode: HttpStatusCode.internalServerError };
+            }
+            const todo = {title: 'a title', description:'a description'};
 
-            presenter.update();
+            await presenter.update(todo);
 
             expect(view.showInternalServerError).toHaveBeenCalled();
         });
