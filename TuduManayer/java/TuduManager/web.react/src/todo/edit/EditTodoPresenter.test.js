@@ -52,5 +52,16 @@ describe('EditTodoPresenter', () => {
 
             expect(view.showErrors).toHaveBeenCalledWith(errors);
         });
+
+        it('shows updated todo message', async() => {
+            http.put = () => {
+                return { statusCode: HttpStatusCode.ok };
+            }
+            const todo = {title: 'a title', description:'a description'};
+
+            await presenter.update(todo);
+
+            expect(view.showUpdatedTodoMessage).toHaveBeenCalled();
+        });
     });
 });

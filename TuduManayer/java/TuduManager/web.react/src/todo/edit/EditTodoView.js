@@ -33,6 +33,10 @@ export class EditTodoView extends React.Component {
     showErrors = (errors) => {
         throw 'not implemented';
     }
+
+    showUpdatedTodoMessage = () => {
+        throw 'not implemented';
+    }
 }
 
 export function createEditTodoView(){

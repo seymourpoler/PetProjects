@@ -16,7 +16,7 @@ export function EditTodoPresenter(view, service){
             view.showErrors(response.errors);
             return;
         }
-        throw 'not implemented';
+        view.showUpdatedTodoMessage();
     }
 }
 

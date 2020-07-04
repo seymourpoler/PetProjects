@@ -18,7 +18,10 @@ export function EditTodoService(http){
                 errors: response.body
             }
         }
-        throw 'not implemented';
+
+        return {
+            statusCode: response.statusCode
+        }
     }
 }
 
