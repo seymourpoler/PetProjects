@@ -40,5 +40,17 @@ describe('EditTodoPresenter', () => {
 
             expect(view.showInternalServerError).toHaveBeenCalled();
         });
+
+        it('shows errors if there are errors', async () => {
+            const errors = [];
+            http.put = () => {
+                return { statusCode: HttpStatusCode.badRequest, body: errors };
+            }
+            const todo = {title: 'a title', description:'a description'};
+
+            await presenter.update(todo);
+
+            expect(view.showErrors).toHaveBeenCalledWith(errors);
+        });
     });
 });

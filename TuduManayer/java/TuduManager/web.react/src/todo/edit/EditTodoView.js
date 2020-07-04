@@ -29,6 +29,10 @@ export class EditTodoView extends React.Component {
     showInternalServerError = () => {
         throw 'not implemented';
     }
+
+    showErrors = (errors) => {
+        throw 'not implemented';
+    }
 }
 
 export function createEditTodoView(){

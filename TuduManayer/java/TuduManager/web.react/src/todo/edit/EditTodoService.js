@@ -9,7 +9,13 @@ export function EditTodoService(http){
         const response = await http.put(url, JSON.stringify(todo));
         if(response.statusCode === HttpStatusCode.internalServerError){
             return {
-                statusCode: HttpStatusCode.internalServerError
+                statusCode: response.statusCode
+            }
+        }
+        if(response.statusCode === HttpStatusCode.badRequest){
+            return {
+                statusCode: response.statusCode,
+                errors: response.body
             }
         }
         throw 'not implemented';
