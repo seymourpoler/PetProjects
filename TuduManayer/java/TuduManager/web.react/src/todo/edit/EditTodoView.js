@@ -1,7 +1,6 @@
 import React from 'react';
 import { Spinner } from '../../Spinner';
 
-
 export class EditTodoView extends React.Component {
     constructor(props){
         super(props);

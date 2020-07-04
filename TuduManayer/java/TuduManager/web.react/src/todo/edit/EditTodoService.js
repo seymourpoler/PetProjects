@@ -7,11 +7,6 @@ export function EditTodoService(http){
     self.update = async function(todo) {
         const url = '/api/todos';
         const response = await http.put(url, JSON.stringify(todo));
-        if(response.statusCode === HttpStatusCode.internalServerError){
-            return {
-                statusCode: response.statusCode
-            }
-        }
         if(response.statusCode === HttpStatusCode.badRequest){
             return {
                 statusCode: response.statusCode,

@@ -1,5 +1,5 @@
 import { createEditTodoService } from "./EditTodoService";
-import {HttpStatusCode} from "../../HttpStatusCode";
+import { HttpStatusCode } from "../../HttpStatusCode";
 
 export function EditTodoPresenter(view, service){
     let self = this;
