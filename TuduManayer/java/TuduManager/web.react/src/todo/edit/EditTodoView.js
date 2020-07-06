@@ -54,7 +54,7 @@ export class EditTodoView extends React.Component {
     }
 
     redirectToSearchPage = () => {
-        throw 'not implemented';
+        this.props.history.push('/search');
     }
 
     onTitleChangedHandler = (event) => {
