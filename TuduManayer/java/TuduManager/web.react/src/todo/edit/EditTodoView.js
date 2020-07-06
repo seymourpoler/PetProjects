@@ -67,7 +67,7 @@ export class EditTodoView extends React.Component {
     }
 
     onCancelClickedHandler = (event) => {
-        throw 'not implemented';
+        this.presenter.cancel();
     }
 }
 
