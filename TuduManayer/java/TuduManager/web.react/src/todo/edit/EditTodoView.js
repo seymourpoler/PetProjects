@@ -30,7 +30,8 @@ export class EditTodoView extends React.Component {
     cleanMessages = () => {
         this.setState({
             titleErrorMessage: '',
-            errorMessage: ''});
+            errorMessage: ''
+        });
     }
 
     showSpinner = () => {
