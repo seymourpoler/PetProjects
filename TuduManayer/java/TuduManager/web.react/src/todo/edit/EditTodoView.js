@@ -15,6 +15,10 @@ export class EditTodoView extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.setState({id: this.props.match.params.todoId });
+    }
+
     render(){
         return (<div>
                 <Spinner show={this.state.showSpinner} />
