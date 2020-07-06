@@ -73,4 +73,13 @@ describe('EditTodoPresenter', () => {
             expect(view.showUpdatedTodoMessage).toHaveBeenCalled();
         });
     });
+
+    describe('when cancel is requested', () => {
+        it('returns to search page', () => {
+            presenter.cancel();
+
+            expect(view.redirectToSearchPage).toHaveBeenCalled();
+
+        });
+    });
 });

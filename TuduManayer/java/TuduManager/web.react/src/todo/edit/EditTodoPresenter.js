@@ -19,6 +19,10 @@ export function EditTodoPresenter(view, service){
         }
         view.showUpdatedTodoMessage();
     }
+
+    self.cancel = function () {
+        view.redirectToSearchPage();
+    }
 }
 
 export function createEditTodoPresenter(view) {

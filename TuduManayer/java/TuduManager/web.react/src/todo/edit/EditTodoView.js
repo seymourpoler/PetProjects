@@ -50,6 +50,10 @@ export class EditTodoView extends React.Component {
         throw 'not implemented';
     }
 
+    redirectToSearchPage = () => {
+        throw 'not implemented';
+    }
+
     onTitleChangedHandler = (event) => {
         throw 'not implemented';
     }
