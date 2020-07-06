@@ -11,7 +11,8 @@ export class EditTodoView extends React.Component {
             title: '',
             description: '',
             titleErrorMessage: '',
-            errorMessage: ''
+            errorMessage: '',
+            message: ''
         }
     }
 
@@ -28,13 +29,15 @@ export class EditTodoView extends React.Component {
                 <button id='save' onClick={this.onSaveClickedHandler}></button>
                 <button id='cancel' onClick={this.onCancelClickedHandler}></button>
                 <p id='errorMessage'>{this.state.errorMessage}</p>
+                <p id='message'>{this.state.message}</p>
             </div>);
     }
 
     cleanMessages = () => {
         this.setState({
             titleErrorMessage: '',
-            errorMessage: ''
+            errorMessage: '',
+            message: ''
         });
     }
 
@@ -55,7 +58,7 @@ export class EditTodoView extends React.Component {
     }
 
     showUpdatedTodoMessage = () => {
-        throw 'not implemented';
+        this.setState({message: 'TODO updated'});
     }
 
     redirectToSearchPage = () => {
