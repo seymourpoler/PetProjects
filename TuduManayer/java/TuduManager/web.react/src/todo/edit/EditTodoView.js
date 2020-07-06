@@ -7,6 +7,9 @@ export class EditTodoView extends React.Component {
 
         this.state = {
             showSpinner: false,
+            id: '',
+            title: '',
+            description: '',
             titleErrorMessage: '',
             errorMessage: ''
         }
@@ -63,7 +66,11 @@ export class EditTodoView extends React.Component {
     }
 
     onSaveClickedHandler = (event) => {
-        throw 'not implemented';
+        this.presenter.update({
+            id: this.state.id,
+            title: this.state.title,
+            description: this.state.description
+        })
     }
 
     onCancelClickedHandler = (event) => {
