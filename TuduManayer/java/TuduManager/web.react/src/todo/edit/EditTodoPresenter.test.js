@@ -79,7 +79,6 @@ describe('EditTodoPresenter', () => {
             presenter.cancel();
 
             expect(view.redirectToSearchPage).toHaveBeenCalled();
-
         });
     });
 });
