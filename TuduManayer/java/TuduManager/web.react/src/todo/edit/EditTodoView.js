@@ -62,7 +62,7 @@ export class EditTodoView extends React.Component {
     }
 
     onDescriptionChangedHandler = (event) => {
-        throw 'not implemented';
+        this.setState({ description: event.target.value });
     }
 
     onSaveClickedHandler = (event) => {
