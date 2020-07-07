@@ -16,7 +16,7 @@ class App extends Component {
           <Route path='/users' exact={true} component={UserView}/>
           <Route path='/search' exact={true} component={SearchTodoView}/>
           <Route path='/create' exact={true} component={CreateTodoView}/>
-          <Route path='/edit:todoId' exact={true} component={EditTodoView}/>
+          <Route path='/todos/:todoId' exact={true} component={EditTodoView}/>
         </Switch>
       </Router>
     )
