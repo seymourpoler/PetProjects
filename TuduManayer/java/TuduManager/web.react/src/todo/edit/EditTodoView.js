@@ -1,7 +1,9 @@
 import React from 'react';
 import { Spinner } from '../../Spinner';
+import {createEditTodoPresenter} from "./EditTodoPresenter";
 
 export class EditTodoView extends React.Component {
+
     constructor(props){
         super(props);
 
@@ -16,6 +18,8 @@ export class EditTodoView extends React.Component {
         }
     }
 
+    presenter = createEditTodoPresenter(this);
+
     componentDidMount() {
         this.setState({id: this.props.match.params.todoId });
     }
@@ -26,8 +30,8 @@ export class EditTodoView extends React.Component {
                 <p>Title: <input type='text' id='title' onChange={this.onTitleChangedHandler} /></p>
                 <p id='titleErrorMessage'>{this.state.titleErrorMessage}</p>
                 <p>Description: <input type='text' id='description' onChange={this.onDescriptionChangedHandler} /></p>
-                <button id='save' onClick={this.onSaveClickedHandler}></button>
-                <button id='cancel' onClick={this.onCancelClickedHandler}></button>
+                <button id='save' onClick={this.onSaveClickedHandler}>Save</button>
+                <button id='cancel' onClick={this.onCancelClickedHandler}>Cancel</button>
                 <p id='errorMessage'>{this.state.errorMessage}</p>
                 <p id='message'>{this.state.message}</p>
             </div>);
