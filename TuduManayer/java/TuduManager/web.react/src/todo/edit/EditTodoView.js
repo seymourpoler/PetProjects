@@ -65,8 +65,8 @@ export class EditTodoView extends React.Component {
         this.setState({message: 'TODO updated'});
     }
 
-    redirectToSearchPage = () => {
-        this.props.history.push('/search');
+    redirectToPageBefore = () => {
+        this.props.history.push('/manage');
     }
 
     onTitleChangedHandler = (event) => {
@@ -74,6 +74,7 @@ export class EditTodoView extends React.Component {
     }
 
     onDescriptionChangedHandler = (event) => {
+        this.setState({ description: event.target.value });
         this.setState({ description: event.target.value });
     }
 

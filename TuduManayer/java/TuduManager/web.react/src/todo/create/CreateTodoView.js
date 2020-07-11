@@ -90,7 +90,7 @@ export class CreateTodoView extends React.Component {
     }
 
     redirectToPageBefore = () => {
-        this.props.history.push('/search');
+        this.props.history.push('/manage');
     }
 }
 

@@ -75,10 +75,10 @@ describe('EditTodoPresenter', () => {
     });
 
     describe('when cancel is requested', () => {
-        it('returns to search page', () => {
+        it('returns to page before', () => {
             presenter.cancel();
 
-            expect(view.redirectToSearchPage).toHaveBeenCalled();
+            expect(view.redirectToPageBefore).toHaveBeenCalled();
         });
     });
 });

@@ -21,7 +21,7 @@ export function EditTodoPresenter(view, service){
     }
 
     self.cancel = function () {
-        view.redirectToSearchPage();
+        view.redirectToPageBefore();
     }
 }
 
