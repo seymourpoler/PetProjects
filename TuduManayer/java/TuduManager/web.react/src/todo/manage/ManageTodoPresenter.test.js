@@ -1,6 +1,6 @@
-import { createSearchTodoView } from './SearchTodoView';
+import { createManageTodoView } from './ManageTodoView';
 import { SearchTodoService, createSearchTodoService } from './SearchTodoService';
-import { SearchTodoPresenter } from './SearchTodoPresenter';
+import { ManageTodoPresenter } from './ManageTodoPresenter';
 import { spyAllMethodsOf } from '../../Testing';
 import { Http, createHttp } from '../../Http';
 import { HttpStatusCode } from '../../HttpStatusCode';
@@ -11,10 +11,10 @@ describe('Search Todo Presenter', () =>{
      beforeEach(() => {
         http = createHttp();
         spyAllMethodsOf(http);
-        view = createSearchTodoView();
+        view = createManageTodoView();
         spyAllMethodsOf(view);
         service = new SearchTodoService(http);
-        presenter = new SearchTodoPresenter(view, service);
+        presenter = new ManageTodoPresenter(view, service);
      });
 
     describe('when search is requested', () => {

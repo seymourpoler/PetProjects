@@ -1,10 +1,10 @@
 import React from 'react';
 import { Spinner } from '../../Spinner';
-import { createSearchTodoPresenter } from './SearchTodoPresenter';
+import { createManageTodoPresenter } from './ManageTodoPresenter';
 import { ErrorMessages } from '../../ErrorMessages';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
-export class SearchTodoView extends React.Component {
+export class ManageTodoView extends React.Component {
 
     constructor(props){
         super(props);
@@ -17,7 +17,7 @@ export class SearchTodoView extends React.Component {
         }
     }
 
-    presenter = createSearchTodoPresenter(this);
+    presenter = createManageTodoPresenter(this);
 
     btnEditTodo = (cell, row, enumObject, rowIndex) => {
         return (
@@ -90,6 +90,6 @@ export class SearchTodoView extends React.Component {
     }
 }
 
-export function createSearchTodoView(){
-    return new SearchTodoView();
+export function createManageTodoView(){
+    return new ManageTodoView();
 }
