@@ -6,7 +6,7 @@ namespace TuduManayer.web.api.Todo.Search
     public class SearchTodoController: Controller
     {
         [HttpGet("/api/todos")]
-        public IActionResult search([FromQuery] string searchText)
+        public IActionResult Search([FromQuery] string searchText)
         {
             return Ok();
             throw new NotImplementedException();
