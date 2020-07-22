@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Moq;
 using Shouldly;
 using TuduManayer.Domain.Todo.Search;
@@ -21,10 +22,13 @@ namespace TuduManayer.Domain.Test.Todo.Search
         public void return_todos()
         {
             const string searchText = "search-text";
+            repository
+                .Setup(x => x.Search(searchText))
+                .Returns(new List<Domain.Todo.Search.Models.Todo>().AsReadOnly());
             
             var result = service.Search(searchText);
 
-            result.ShouldBeOfType<IReadOnlyCollection<Domain.Todo.Search.Models.Todo>>();
+            result.ShouldBeOfType<ReadOnlyCollection<Domain.Todo.Search.Models.Todo>>();
         }
     }
 }

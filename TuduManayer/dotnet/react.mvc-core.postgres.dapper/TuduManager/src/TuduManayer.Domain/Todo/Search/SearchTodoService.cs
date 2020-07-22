@@ -18,7 +18,7 @@ namespace TuduManayer.Domain.Todo.Search
 
         public IReadOnlyCollection<Models.Todo> Search(string searchText)
         {
-            throw new System.NotImplementedException();
+            return repository.Search(searchText);
         }
     }
 }
