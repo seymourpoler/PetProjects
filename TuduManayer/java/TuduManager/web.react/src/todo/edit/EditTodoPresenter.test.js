@@ -17,6 +17,14 @@ describe('EditTodoPresenter', () => {
         presenter = new EditTodoPresenter(view, service);
     });
 
+    describe('when load todo is requested', () => {
+        it('shows spinner', () => {
+            presenter.load();
+
+            expect(view.showSpinner).toHaveBeenCalled();
+        });
+    });
+
     describe('when update todo is requested', () => {
         it('cleans messages', () => {
             presenter.update();

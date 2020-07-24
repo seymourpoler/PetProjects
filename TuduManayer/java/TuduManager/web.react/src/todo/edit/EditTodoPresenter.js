@@ -4,6 +4,10 @@ import { HttpStatusCode } from "../../HttpStatusCode";
 export function EditTodoPresenter(view, service){
     let self = this;
 
+    self.load = async function(todoId){
+        view.showSpinner();
+    }
+
     self.update = async function(todo) {
         view.cleanMessages();
         view.showSpinner();
