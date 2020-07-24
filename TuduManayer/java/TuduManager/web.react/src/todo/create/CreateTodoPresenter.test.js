@@ -5,7 +5,7 @@ import { HttpStatusCode } from '../../HttpStatusCode';
 import { createHttp } from '../../Http';
 import { spyAllMethodsOf } from '../../Testing';
 
-describe('New Todo Presenter', () => {
+describe('Create Todo Presenter', () => {
     let view, presenter, service, http;
 
     beforeEach(() => {
