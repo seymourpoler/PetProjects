@@ -1,6 +1,6 @@
 import { createManageTodoView } from './ManageTodoView';
 import { SearchTodoService, createSearchTodoService } from './SearchTodoService';
-import { ManageTodoPresenter } from './ManageTodoPresenter';
+import { createManageTodoPresenter } from './CreateManageTodoPresenter';
 import { spyAllMethodsOf } from '../../Testing';
 import { Http, createHttp } from '../../Http';
 import { HttpStatusCode } from '../../HttpStatusCode';
@@ -14,7 +14,7 @@ describe('Manage Todo Presenter', () =>{
         view = createManageTodoView();
         spyAllMethodsOf(view);
         service = new SearchTodoService(http);
-        presenter = new ManageTodoPresenter(view, service);
+        presenter = new createManageTodoPresenter(view, service);
      });
 
     describe('when search is requested', () => {
@@ -72,6 +72,16 @@ describe('Manage Todo Presenter', () =>{
             presenter.createNewTodo();
 
             expect(view.redirectToCreateNewTodo).toHaveBeenCalled();
+        });
+    });
+
+    describe('when delete is requested', () => {
+        it('cleans messages', () => {
+            const someId = 3;
+
+            presenter.deleteTodo(someId);
+
+            expect(view.cleanMessages).toHaveBeenCalled();
         });
     });
 });

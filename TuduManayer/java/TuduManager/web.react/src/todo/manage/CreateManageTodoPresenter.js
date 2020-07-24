@@ -1,8 +1,8 @@
 import { createSearchTodoService } from './SearchTodoService';
 import { HttpStatusCode } from '../../HttpStatusCode';
 
-export function ManageTodoPresenter(view, searchService) {
-    let self = this;
+export function createManageTodoPresenter(view, searchService = createSearchTodoService()) {
+    let self = {};
 
     self.search = async (textSearch) => {
         view.cleanMessages();
@@ -24,9 +24,10 @@ export function ManageTodoPresenter(view, searchService) {
     self.editTodo = (todoId) => {
         view.redirectToEditTodo(todoId);
     }
-}
 
-export function createManageTodoPresenter(view) {
-    const service = createSearchTodoService();
-    return new ManageTodoPresenter(view, service);
+    self.deleteTodo = function(todoId) {
+        view.cleanMessages();
+    }
+
+    return self;
 }
