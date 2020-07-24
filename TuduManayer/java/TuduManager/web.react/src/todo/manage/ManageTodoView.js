@@ -20,17 +20,19 @@ export class ManageTodoView extends React.Component {
     presenter = createManageTodoPresenter(this);
 
     btnEditTodo = (cell, row, enumObject, rowIndex) => {
-        return (
-        <button type="button"
+        return (<button type="button"
             onClick={() => {
-                    console.log('row: ', row);
-                    this.presenter.editTodo(row.id);
-                }
-            }>
-            edit
-        </button>
-      )
+                this.presenter.editTodo(row.id);
+            }}> edit </button>)
     }
+
+    btnDeleteTodo = (cell, row, enumObject, rowIndex) => {
+        return (<button type="button"
+            onClick={() => {
+                this.presenter.deleteTodo(row.id);
+            }}> delete </button>)
+    }
+
 
     render(){
         return (
@@ -42,8 +44,8 @@ export class ManageTodoView extends React.Component {
                     <BootstrapTable data={this.state.todos} striped hover>
                       <TableHeaderColumn isKey dataField='id'>ID</TableHeaderColumn>
                       <TableHeaderColumn dataField='title'>Title</TableHeaderColumn>
-                      <TableHeaderColumn dataField='button' dataFormat={this.btnEditTodo}
-                                />
+                      <TableHeaderColumn dataField='button' dataFormat={this.btnEditTodo} />
+                        <TableHeaderColumn dataField='button' dataFormat={this.btnDeleteTodo} />
                   </BootstrapTable>
                 </div>);
     }
