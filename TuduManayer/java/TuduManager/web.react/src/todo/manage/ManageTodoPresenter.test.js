@@ -91,5 +91,16 @@ describe('Manage Todo Presenter', () =>{
 
             expect(view.showSpinner).toHaveBeenCalled();
         });
+
+        it('shows error if there is an internal server error', async () => {
+            const  someId = 3;
+            http.delete = () => {
+                return {statusCode: HttpStatusCode.internalServerError};
+            }
+
+            await presenter.deleteTodo(someId);
+
+            expect(view.showInternalServerError).toHaveBeenCalled();
+        });
     });
 });

@@ -25,9 +25,16 @@ export function createManageTodoPresenter(view, searchService = createSearchTodo
         view.redirectToEditTodo(todoId);
     }
 
-    self.deleteTodo = function(todoId) {
+    self.deleteTodo = async function(todoId) {
         view.cleanMessages();
         view.showSpinner();
+
+        const response = await searchService.delete(todoId);
+        if(response.statusCode === HttpStatusCode.internalServerError){
+            view.showInternalServerError();
+            return;
+        }
+        throw 'not implemented';
     }
 
     return self;

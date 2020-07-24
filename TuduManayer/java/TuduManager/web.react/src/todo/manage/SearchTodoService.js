@@ -18,6 +18,15 @@ export function SearchTodoService(http){
             todos: response.body
         }
     }
+
+    self.delete = async (todoId) => {
+        const url = '/api/todos/' + todoId;
+        const response = await http.delete(url);
+        if(response.statusCode === HttpStatusCode.internalServerError){
+            return {statusCode: response.statusCode};
+        }
+        throw 'not implemented';
+    }
 }
 
 
