@@ -7,6 +7,12 @@ export function EditTodoPresenter(view, service){
     self.load = async function(todoId){
         view.showSpinner();
         view.cleanMessages();
+        const response = await service.find(todoId);
+        if(response.statusCode === HttpStatusCode.internalServerError){
+            view.showInternalServerError();
+            return;
+        }
+        throw 'not implemented';
     }
 
     self.update = async function(todo) {

@@ -29,6 +29,17 @@ describe('EditTodoPresenter', () => {
 
             expect(view.cleanMessages).toHaveBeenCalled();
         });
+
+        it('shows an error if there is an internal server error', async () => {
+            const todoId = 1;
+            http.get = () => {
+                return { statusCode: HttpStatusCode.internalServerError };
+            };
+
+            await presenter.load(todoId);
+
+            expect(view.showInternalServerError).toHaveBeenCalled();
+        });
     });
 
     describe('when update todo is requested', () => {
