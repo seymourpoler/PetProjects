@@ -6,6 +6,7 @@ export function EditTodoPresenter(view, service){
 
     self.load = async function(todoId){
         view.showSpinner();
+        view.cleanMessages();
     }
 
     self.update = async function(todo) {

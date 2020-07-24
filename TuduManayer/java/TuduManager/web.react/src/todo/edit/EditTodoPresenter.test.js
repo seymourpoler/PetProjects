@@ -23,6 +23,12 @@ describe('EditTodoPresenter', () => {
 
             expect(view.showSpinner).toHaveBeenCalled();
         });
+
+        it('cleans messages', () => {
+            presenter.load();
+
+            expect(view.cleanMessages).toHaveBeenCalled();
+        });
     });
 
     describe('when update todo is requested', () => {
