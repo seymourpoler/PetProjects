@@ -32,7 +32,7 @@ export default class AppNavbar extends Component {
             <NavLink href="/users">Users</NavLink>
           </NavItem>
           <NavItem>
-              <NavLink href="/search">Todos</NavLink>
+              <NavLink href="/manage">Todos</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
