@@ -83,5 +83,13 @@ describe('Manage Todo Presenter', () =>{
 
             expect(view.cleanMessages).toHaveBeenCalled();
         });
+
+        it('shows spinner', () => {
+            const someId = 3;
+
+            presenter.deleteTodo(someId);
+
+            expect(view.showSpinner).toHaveBeenCalled();
+        });
     });
 });

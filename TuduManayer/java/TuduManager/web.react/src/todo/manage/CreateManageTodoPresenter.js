@@ -27,6 +27,7 @@ export function createManageTodoPresenter(view, searchService = createSearchTodo
 
     self.deleteTodo = function(todoId) {
         view.cleanMessages();
+        view.showSpinner();
     }
 
     return self;
