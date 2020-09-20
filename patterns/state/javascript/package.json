@@ -1,0 +1,13 @@
+{
+  "name": "state.pattern",
+  "version": "0.0.1",
+  "url": "https://exceptionnotfound.net/state-pattern-in-csharp/",
+  "dependencies": {},
+  "scripts": {
+    "test": "jest --verbose --watchAll=false",
+    "test:watch": "jest test --env=jsdom --runInBand --no-cache --verbose --watchAll"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
