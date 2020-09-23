@@ -5,35 +5,46 @@ const createMedium = require('./Medium');
 const createWellDone = require('./WellDone');
 
 function createSteak(){
+    const initialTemperature = 0;
     let self = {};
     let doneness = createUnCooked();
-    let currentTemperature = 0;
+    let currentTemperature = initialTemperature;
 
     self.getDoneness = function(){
         return doneness.getDoneness();
     };
 
-    self.addTemperature = function(temperatue){
+    self.increaseTemperature = function(temperatue){
         currentTemperature += temperatue;
         updateDoneness();
 
-        function updateDoneness(){
-            if(currentTemperature < 100){
-                doneness = createRaw();
-                return;
-            }
-            if(currentTemperature < 130){
-                doneness = createMediumRaw();
-                return;
-                
-            }
-            if(currentTemperature < 160){
-                doneness = createMedium();
-                return;
-            }
-            return doneness = createWellDone();
-        }
     };
+
+    self.decreaseTemperature = function(temperature){
+        if(currentTemperature < temperature){
+            currentTemperature = initialTemperature;
+            return;
+        }
+        currentTemperature -= temperature
+        updateDoneness();
+    }
+
+    function updateDoneness(){
+        if(currentTemperature < 100){
+            doneness = createRaw();
+            return;
+        }
+        if(currentTemperature < 130){
+            doneness = createMediumRaw();
+            return;
+            
+        }
+        if(currentTemperature < 160){
+            doneness = createMedium();
+            return;
+        }
+        return doneness = createWellDone();
+    }
 
     self.getTemperature = function(){
         return currentTemperature;
