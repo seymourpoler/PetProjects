@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Ruity</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <button id="btnHeading" title="Heading format" >Heading</button>
+        <button id="btnSubHeading" title="SubHeading format" >SubHeading</button>
+        <button id="btnBody" title="Body format" >Body</button>
+        <button id="btnCaption" title="Caption format">Caption</button>
+        <button id="btnBold" title="Bold format">Bold</button>
+        <button id="btnItalic" title="Italic  format">Italic</button>
+        <button id="btnUnderline" title="Underline  format">Underline</button>
+        <button id="btnQuote" title="Quote  format">Quote</button>
+        <button id="btnUnOrderedList" title="UnOrderedList  format">UnOrdered list</button>
+        <button id="btnOrderedList" title="OrderedList  format">Ordered list</button>
+        <button id="btnInsertLink" title="Insert Link">Insert Link</button>
+        <input type="file" name="btnUploadImage" id="btnUploadImage" name="btnUploadImage" accept=".gif,.jpg,.jpeg,.png" value="Upload image">
+        <button id="btnDownloadAsHtml" title="Download as Html">Download as Html</button>
+        <button id="btnDownloadAsTxt" title="Download as Txt">Download as Txt</button>
+        <input type="file" id="btnImportFile" title="Import Txt" accept=".txt">Import Txt
+        <button id="btnClean" title="Clean text">Clean Text</button>
+        <br />
+        <div id="content" class="content" contenteditable="true">
+            <p id="text"></p>
+        </div>
+
+        <span>characters: <span id="numberOfCharacters">0</span></span><br />
+        <span>words: <span id="numberOfWords">0</span></span>
+    </body>
+    <link rel="stylesheet" href="Ruity.css">
+    <script src="RuityPresenter.js"></script>
+    <script src="RuityView.js"></script>
+    <script src="ImageReader.js"></script>
+    <script src="FileService.js"></script>
+    <script>
+        createRuityPresenter();
+    </script>    
+
+</html>
