@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using ExtensionMethods;
 using ExtensionMethods.ReadOnlyCollection;
-using Microsoft.VisualStudio.TestPlatform.Common.DataCollection;
 using Shouldly;
 using Xunit;
 
@@ -14,51 +12,51 @@ namespace ExtensionMethodsTests
         {
             IReadOnlyCollection<string> values = null;
 
-            var result = values.IsEmpty();
-            
+            var result = values.IsNull();
+
             result.ShouldBeTrue();
         }
-        
+
         [Fact]
         public void ReturnTrueWhenIsEmpty()
         {
             var values = new List<string>().AsReadOnly();
 
             var result = values.IsEmpty();
-            
+
             result.ShouldBeTrue();
         }
-        
+
         [Fact]
         public void ReturnFalseWhenIsNull()
         {
             IReadOnlyCollection<string> values = null;
 
             var result = values.IsNotEmpty();
-            
+
             result.ShouldBeFalse();
         }
-        
+
         [Fact]
         public void ReturnFalseWhenIsEmpty()
         {
             var values = new List<string>().AsReadOnly();
 
             var result = values.IsNotEmpty();
-            
+
             result.ShouldBeFalse();
         }
-        
+
         [Fact]
         public void ReturnTrueWhenIsNotEmpty()
         {
-            var values = new List<string> {"John"}.AsReadOnly();
+            var values = new List<string> { "John" }.AsReadOnly();
 
             var result = values.IsNotEmpty();
-            
+
             result.ShouldBeTrue();
         }
-        
+
         [Fact]
         public void ReturnsTrueWhenIsNull()
         {
@@ -68,7 +66,7 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeTrue();
         }
-        
+
         [Fact]
         public void ReturnsTrueWhenIsEmpty()
         {
@@ -78,17 +76,17 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeTrue();
         }
-        
+
         [Fact]
         public void ReturnsFalseWhenIsNoEmpty()
         {
-            var values = new List<string> {"John"}.AsReadOnly();
+            var values = new List<string> { "John" }.AsReadOnly();
 
             var result = values.IsNullOrEmpty();
 
             result.ShouldBeFalse();
         }
-        
+
         [Fact]
         public void ReturnsFalseWhenIsNull()
         {
@@ -98,7 +96,7 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeFalse();
         }
-        
+
         [Fact]
         public void ReturnsFalseWhenIsEmpty()
         {
@@ -108,11 +106,11 @@ namespace ExtensionMethodsTests
 
             result.ShouldBeFalse();
         }
-        
+
         [Fact]
         public void ReturnsTrueWhenIsNotNullAndNotEmpty()
         {
-            var values = new List<string> {"John"}.AsReadOnly();
+            var values = new List<string> { "John" }.AsReadOnly();
 
             var result = values.IsNotNullAndNotEmpty();
 
@@ -126,29 +124,29 @@ namespace ExtensionMethodsTests
             var result = 0;
 
             values.ForEach(x => result = result + x);
-            
+
             result.ShouldBe(0);
         }
 
         [Fact]
         public void DoesNotingWhenActionIsNull()
         {
-            var values = new List<int>{1,2,3}.AsReadOnly();
+            var values = new List<int> { 1, 2, 3 }.AsReadOnly();
             var result = 0;
 
             values.ForEach(null);
-            
+
             result.ShouldBe(0);
         }
 
         [Fact]
         public void ReturnsTheSumOfItems()
         {
-            var values = new List<int>{1,2,3}.AsReadOnly();
+            var values = new List<int> { 1, 2, 3 }.AsReadOnly();
 
             var result = 0;
             values.ForEach(x => result = result + x);
-            
+
             result.ShouldBe(6);
         }
     }
