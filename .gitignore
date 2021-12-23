@@ -155,6 +155,9 @@ $RECYCLE.BIN/
 # Mac desktop service store files
 .DS_Store
 
+.idea
+.vs
+
 Linqjs/node_modules
 ArrayWithLinqInJS/node_modules
 example-mongodb/node_modules
