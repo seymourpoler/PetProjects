@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using ExtensionMethods.ReadOnlyCollection;
 using Shouldly;
 using Xunit;
@@ -118,7 +119,7 @@ namespace ExtensionMethodsTests
         }
 
         [Fact]
-        public void ReturnsNullWhenIsNull()
+        public void ReturnsZeroWhenIsNull()
         {
             IReadOnlyCollection<int> values = null;
             var result = 0;
@@ -148,6 +149,16 @@ namespace ExtensionMethodsTests
             values.ForEach(x => result = result + x);
 
             result.ShouldBe(6);
+        }
+
+        [Fact]
+        public void ReturnsReadOnlyCollectionWithValues()
+        {
+            var result = ReadOnlyCollectionCreator.Of(1, 2, 3, 4);
+
+            result.ShouldBeOfType<ReadOnlyCollection<int>>();
+            result.ShouldNotBeEmpty();
+            result[2].ShouldBe(3);
         }
     }
 }
