@@ -22,5 +22,22 @@ namespace ExtensionMethodsTests
 
             action.ShouldThrow<ArgumentNullException>();
         }
+        
+        [Fact]
+        public void ThrowsArgumentNullExceptionWithMessageWhenArgumentSatisfyTheCondition()
+        {
+            const string  aMessage = "simple exception message";
+
+            Should.Throw<CustomException>(() =>
+                Check.If<CustomException>(() => string.IsNullOrWhiteSpace(string.Empty), aMessage)
+            ).Message.ShouldBe(aMessage);
+        }
+
+        private class CustomException : Exception
+        {
+            public CustomException(string message): base(message)
+            {
+            }
+        }
     }
 }

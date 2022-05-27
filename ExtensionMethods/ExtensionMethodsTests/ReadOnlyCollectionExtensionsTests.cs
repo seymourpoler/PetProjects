@@ -148,6 +148,7 @@ namespace ExtensionMethodsTests
             var result = 0;
             values.ForEach(x => result = result + x);
 
-            result.ShouldBe(6)
+            result.ShouldBe(6);
         }
+    }
 }

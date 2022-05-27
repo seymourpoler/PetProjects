@@ -22,5 +22,16 @@ namespace ExtensionMethods
             }
             
         }
+        
+        public static void If<TException>(Func<bool> condition, string message)
+        {
+            if (!condition.Invoke()) return;
+            
+            var type = typeof(TException);
+            var constructor = type.GetConstructor(new[] { typeof(string) });
+            Exception  exception = (Exception)constructor.Invoke(new [] { message });
+            throw exception;
+            // throw  (Exception)Activator.CreateInstance(typeof(TException), message);
+        }
     }
 }
