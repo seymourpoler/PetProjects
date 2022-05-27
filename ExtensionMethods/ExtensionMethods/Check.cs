@@ -11,7 +11,16 @@ namespace ExtensionMethods
             {
                 throw  (Exception)Activator.CreateInstance(typeof(TException));
             }
+        }
+        
+        public static void IsNull<TException>(object anObject, string message)
+        {
+            if (!anObject.IsNull()) return;
             
+            var type = typeof(TException);
+            var constructor = type.GetConstructor(new[] { typeof(string) });
+            var  exception = (Exception)constructor.Invoke(new [] { message });
+            throw exception;
         }
         
         public static void If<TException>(Func<bool> condition)
@@ -20,7 +29,6 @@ namespace ExtensionMethods
             {
                 throw  (Exception)Activator.CreateInstance(typeof(TException));
             }
-            
         }
         
         public static void If<TException>(Func<bool> condition, string message)
@@ -29,9 +37,8 @@ namespace ExtensionMethods
             
             var type = typeof(TException);
             var constructor = type.GetConstructor(new[] { typeof(string) });
-            Exception  exception = (Exception)constructor.Invoke(new [] { message });
+            var  exception = (Exception)constructor.Invoke(new [] { message });
             throw exception;
-            // throw  (Exception)Activator.CreateInstance(typeof(TException), message);
         }
     }
 }

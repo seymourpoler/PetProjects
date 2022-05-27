@@ -14,6 +14,16 @@ namespace ExtensionMethodsTests
 
             action.ShouldThrow<ArgumentNullException>();
         }
+        
+        [Fact]
+        public void ThrowsExceptionWithMessageWhenArgumentIsNull()
+        {
+            const string aMessage = "simple exception message";
+
+            Should.Throw<CustomException>(() =>
+                Check.IsNull<CustomException>(null, aMessage)
+            ).Message.ShouldBe(aMessage);
+        }
 
         [Fact]
         public void ThrowsArgumentNullExceptionWhenArgumentSatisfyTheCondition()
@@ -24,7 +34,7 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
-        public void ThrowsArgumentNullExceptionWithMessageWhenArgumentSatisfyTheCondition()
+        public void ThrowsExceptionWithMessageWhenArgumentSatisfyTheCondition()
         {
             const string  aMessage = "simple exception message";
 
