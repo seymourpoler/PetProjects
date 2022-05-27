@@ -148,17 +148,6 @@ namespace ExtensionMethodsTests
             var result = 0;
             values.ForEach(x => result = result + x);
 
-            result.ShouldBe(6);
+            result.ShouldBe(6)
         }
-
-        [Fact]
-        public void ReturnsReadOnlyCollectionWithValues()
-        {
-            var result = ReadOnlyCollectionCreator.Of(1, 2, 3, 4);
-
-            result.ShouldBeOfType<ReadOnlyCollection<int>>();
-            result.ShouldNotBeEmpty();
-            result[2].ShouldBe(3);
-        }
-    }
 }
