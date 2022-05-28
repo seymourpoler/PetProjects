@@ -10,7 +10,7 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ThrowsArgumentNullExceptionWhenArgumentIsNull()
         {
-            Action action = () => Check.IsNull<ArgumentNullException>(null);
+            var action = () => Check.IsNull<ArgumentNullException>(null);
 
             action.ShouldThrow<ArgumentNullException>();
         }
@@ -28,7 +28,7 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ThrowsArgumentNullExceptionWhenArgumentSatisfyTheCondition()
         {
-            Action action = () => Check.If<ArgumentNullException>(() => string.IsNullOrWhiteSpace(string.Empty));
+            var action = () => Check.If<ArgumentNullException>(() => string.IsNullOrWhiteSpace(string.Empty));
 
             action.ShouldThrow<ArgumentNullException>();
         }
