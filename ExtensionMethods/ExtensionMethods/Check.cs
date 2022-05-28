@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using ExtensionMethods.Object;
 
 namespace ExtensionMethods
@@ -40,6 +42,21 @@ namespace ExtensionMethods
             var type = typeof(TException);
             var constructor = type.GetConstructor(new[] { typeof(string) });
             return (Exception)constructor.Invoke(new[] { message });
+        }
+
+        public static void IsEmpty<TException>(object[] values)
+        {
+            if (values.Any()) return;
+            
+            throw  (Exception)Activator.CreateInstance(typeof(TException));
+        }
+        
+        public static void IsEmpty<TException>(object[] values, string message)
+        {
+            if (values.Any()) return;
+            
+            var exception = BuildException<TException>(message);
+            throw exception;
         }
     }
 }

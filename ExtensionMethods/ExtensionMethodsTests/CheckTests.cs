@@ -43,6 +43,24 @@ namespace ExtensionMethodsTests
             ).Message.ShouldBe(aMessage);
         }
 
+        [Fact]
+        public void ThrowsAnExceptionWhenArgumnentIsAnEmptyArray()
+        {
+            var action = () => Check.IsEmpty<ArgumentException>(Array.Empty<string>());
+
+            action.ShouldThrow<ArgumentException>();
+        }
+        
+        [Fact]
+        public void ThrowsAnExceptioWithMessageWhenArgumnentIsAnEmptyArray()
+        {
+            const string aMessage = "simple exception message";
+            
+            var action = () => Check.IsEmpty<ArgumentException>(Array.Empty<string>(), aMessage);
+
+            action.ShouldThrow<ArgumentException>();
+        }
+
         private class CustomException : Exception
         {
             public CustomException(string message): base(message)
