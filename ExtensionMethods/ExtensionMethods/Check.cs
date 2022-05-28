@@ -7,10 +7,9 @@ namespace ExtensionMethods
     {
         public static void IsNull<TException>(object anObject)
         {
-            if (anObject.IsNull())
-            {
-                throw  (Exception)Activator.CreateInstance(typeof(TException));
-            }
+            if (!anObject.IsNull()) return;
+            
+            throw  (Exception)Activator.CreateInstance(typeof(TException));
         }
         
         public static void IsNull<TException>(object anObject, string message)
@@ -25,10 +24,9 @@ namespace ExtensionMethods
         
         public static void If<TException>(Func<bool> condition)
         {
-            if (condition.Invoke())
-            {
-                throw  (Exception)Activator.CreateInstance(typeof(TException));
-            }
+            if (!condition.Invoke()) return;
+            
+            throw  (Exception)Activator.CreateInstance(typeof(TException));
         }
         
         public static void If<TException>(Func<bool> condition, string message)
