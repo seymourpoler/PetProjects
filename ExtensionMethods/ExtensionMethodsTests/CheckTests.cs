@@ -44,19 +44,19 @@ namespace ExtensionMethodsTests
         }
 
         [Fact]
-        public void ThrowsAnExceptionWhenArgumnentIsAnEmptyArray()
+        public void ThrowsAnExceptionWhenArgumentIsAnEmptyArray()
         {
-            var action = () => Check.IsEmpty<ArgumentException>(Array.Empty<string>());
+            var action = () => Check.IsEmpty<ArgumentException, string>(Array.Empty<string>());
 
             action.ShouldThrow<ArgumentException>();
         }
         
         [Fact]
-        public void ThrowsAnExceptioWithMessageWhenArgumnentIsAnEmptyArray()
+        public void ThrowsAnExceptionWithMessageWhenArgumentIsAnEmptyArray()
         {
             const string aMessage = "simple exception message";
             
-            var action = () => Check.IsEmpty<ArgumentException>(Array.Empty<string>(), aMessage);
+            var action = () => Check.IsEmpty<ArgumentException, int>(Array.Empty<int>(), aMessage);
 
             action.ShouldThrow<ArgumentException>();
         }
