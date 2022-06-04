@@ -17,8 +17,7 @@ namespace ExtensionMethods
         {
             if (!anObject.IsNull()) return;
 
-            var exception = BuildException<TException>(message);
-            throw exception;
+            throw BuildException<TException>(message);
         }
 
         public static void If<TException>(Func<bool> condition)
@@ -31,9 +30,8 @@ namespace ExtensionMethods
         public static void If<TException>(Func<bool> condition, string message)
         {
             if (!condition.Invoke()) return;
-            
-            var exception = BuildException<TException>(message);
-            throw exception;
+
+            throw BuildException<TException>(message);
         }
 
         public static void IsEmpty<TException, T>(T[] values)
@@ -46,9 +44,8 @@ namespace ExtensionMethods
         public static void IsEmpty<TException, T>(T[] values, string message)
         {
             if (values.Any()) return;
-            
-            var exception = BuildException<TException>(message);
-            throw exception;
+
+            throw BuildException<TException>(message);
         }
 
         private static Exception  BuildException<TException>(string message)
