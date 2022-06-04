@@ -76,6 +76,16 @@ namespace ExtensionMethodsTests
                 Check.If<CustomException>(() => string.IsNullOrWhiteSpace(string.Empty), aMessage)
             ).Message.ShouldBe(aMessage);
         }
+        
+        [Fact]
+        public void DoesNotThrowAnExceptionWithMessageWhenArgumentDoesNotSatisfyTheCondition()
+        {
+            const string anyString = "simple string of characters";
+
+            var action = () => Check.If<ArgumentNullException>(() => string.IsNullOrWhiteSpace(anyString), aMessage);
+
+            action.ShouldNotThrow();
+        }
 
         [Fact]
         public void ThrowsAnExceptionWhenArgumentIsAnEmptyArray()
