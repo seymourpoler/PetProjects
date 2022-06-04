@@ -88,6 +88,14 @@ namespace ExtensionMethodsTests
         }
 
         [Fact]
+        public void ThrowsArgumentNullExceptionWhenArgumentIsANullEmptyArray()
+        {
+            var action = () => Check.IsEmpty<CustomException, string>(null);
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+        
+        [Fact]
         public void ThrowsAnExceptionWhenArgumentIsAnEmptyArray()
         {
             var action = () => Check.IsEmpty<ArgumentException, string>(Array.Empty<string>());
@@ -96,13 +104,13 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
-        public void ThrowsArgumentNullExceptionWhenArgumentIsANullEmptyArray()
+        public void DoesNotThrowAnExceptionWhenArgumentIsNotEmptyArray()
         {
-            var action = () => Check.IsEmpty<CustomException, string>(null);
+            var action = () => Check.IsEmpty<CustomException, int>(new[] { 1,2,3 });
 
-            action.ShouldThrow<ArgumentNullException>();
+            action.ShouldNotThrow();
         }
-        
+
         [Fact]
         public void ThrowsAnExceptionWithMessageWhenArgumentIsAnEmptyArray()
         {
