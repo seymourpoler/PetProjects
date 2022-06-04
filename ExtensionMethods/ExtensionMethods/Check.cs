@@ -9,14 +9,16 @@ namespace ExtensionMethods
     {
         public static void IsNull<TException>(object anObject)
         {
-            if (!anObject.IsNull()) return;
+            if (!anObject.IsNull()) 
+                return;
             
             throw  (Exception)Activator.CreateInstance(typeof(TException));
         }
         
         public static void IsNull<TException>(object anObject, string message)
         {
-            if (!anObject.IsNull()) return;
+            if (!anObject.IsNull())
+                return;
 
             throw BuildException<TException>(message);
         }
@@ -34,7 +36,8 @@ namespace ExtensionMethods
 
         public static void If<TException>(Func<bool> condition, string message)
         {
-            if (!condition.Invoke()) return;
+            if (!condition.Invoke()) 
+                return;
 
             throw BuildException<TException>(message);
         }
@@ -52,7 +55,8 @@ namespace ExtensionMethods
 
         public static void IsEmpty<TException, T>(IEnumerable<T> values, string message)
         {
-            if (values.Any()) return;
+            if (values.Any())
+                return;
 
             throw BuildException<TException>(message);
         }
