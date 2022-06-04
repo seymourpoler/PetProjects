@@ -77,11 +77,18 @@ namespace ExtensionMethodsTests
             action.ShouldThrow<ArgumentException>();
         }
 
+        [Fact]
+        public void ThrowsAnExceptionWhenArgumentIsANullArray()
+        {
+            var action = () => Check.IsNullOrEmpty<CustomException, double>(null);
+
+            action.ShouldThrow<CustomException>();
+        }
+        
         private class CustomException : Exception
         {
-            public CustomException(string message): base(message)
-            {
-            }
+            public CustomException(){}
+            public CustomException(string message): base(message) { }
         }
     }
 }

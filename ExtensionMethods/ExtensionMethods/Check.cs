@@ -50,7 +50,7 @@ namespace ExtensionMethods
             if (values.Any()) 
                 return;
             
-            throw  (Exception)Activator.CreateInstance(typeof(TException));
+            throw (Exception)Activator.CreateInstance(typeof(TException));
         }
 
         public static void IsEmpty<TException, T>(IEnumerable<T> values, string message)
@@ -66,6 +66,14 @@ namespace ExtensionMethods
             var type = typeof(TException);
             var constructor = type.GetConstructor(new[] { typeof(string) });
             return (Exception)constructor.Invoke(new[] { message });
+        }
+
+        public static void IsNullOrEmpty<TException, T>(IEnumerable<T> values)
+        {
+            if (values is null)
+                throw (Exception)Activator.CreateInstance(typeof(TException));
+            
+            throw new NotImplementedException();
         }
     }
 }
