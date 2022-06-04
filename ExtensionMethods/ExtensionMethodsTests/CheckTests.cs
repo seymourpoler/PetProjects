@@ -36,7 +36,7 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ThrowsExceptionWithMessageWhenArgumentSatisfyTheCondition()
         {
-            const string  aMessage = "simple exception message";
+            const string aMessage = "simple exception message";
 
             Should.Throw<CustomException>(() =>
                 Check.If<CustomException>(() => string.IsNullOrWhiteSpace(string.Empty), aMessage)
