@@ -61,19 +61,27 @@ namespace ExtensionMethods
             throw BuildException<TException>(message);
         }
 
-        private static Exception  BuildException<TException>(string message)
-        {
-            var type = typeof(TException);
-            var constructor = type.GetConstructor(new[] { typeof(string) });
-            return (Exception)constructor.Invoke(new[] { message });
-        }
-
         public static void IsNullOrEmpty<TException, T>(IEnumerable<T> values)
         {
             if (values is null)
                 throw (Exception)Activator.CreateInstance(typeof(TException));
             
             throw new NotImplementedException();
+        }
+        
+        public static void IsNullOrEmpty<TException, T>(IEnumerable<T> values, string message)
+        {
+            if (values is null)
+                throw BuildException<TException>(message);
+            
+            throw new NotImplementedException();
+        }
+        
+        private static Exception  BuildException<TException>(string message)
+        {
+            var type = typeof(TException);
+            var constructor = type.GetConstructor(new[] { typeof(string) });
+            return (Exception)constructor.Invoke(new[] { message });
         }
     }
 }

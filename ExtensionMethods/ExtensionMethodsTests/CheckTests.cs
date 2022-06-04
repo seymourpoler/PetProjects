@@ -85,6 +85,16 @@ namespace ExtensionMethodsTests
             action.ShouldThrow<CustomException>();
         }
         
+        [Fact]
+        public void ThrowsAnExceptionWithMessageWhenArgumentIsANullArray()
+        {
+            const string aMessage = "simple exception message";
+            
+            Should.Throw<CustomException>(() =>
+                Check.IsNullOrEmpty<CustomException, double>(null, aMessage)
+            ).Message.ShouldBe(aMessage);
+        }
+        
         private class CustomException : Exception
         {
             public CustomException(){}
