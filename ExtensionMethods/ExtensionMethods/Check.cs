@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using ExtensionMethods.Object;
 
@@ -22,7 +23,11 @@ namespace ExtensionMethods
 
         public static void If<TException>(Func<bool> condition)
         {
-            if (!condition.Invoke()) return;
+            if (condition is null) 
+                throw new ArgumentNullException();
+            
+            if (!condition.Invoke()) 
+                return;
             
             throw  (Exception)Activator.CreateInstance(typeof(TException));
         }
@@ -34,14 +39,14 @@ namespace ExtensionMethods
             throw BuildException<TException>(message);
         }
 
-        public static void IsEmpty<TException, T>(T[] values)
+        public static void IsEmpty<TException, T>(IEnumerable<T> values)
         {
             if (values.Any()) return;
             
             throw  (Exception)Activator.CreateInstance(typeof(TException));
         }
 
-        public static void IsEmpty<TException, T>(T[] values, string message)
+        public static void IsEmpty<TException, T>(IEnumerable<T> values, string message)
         {
             if (values.Any()) return;
 

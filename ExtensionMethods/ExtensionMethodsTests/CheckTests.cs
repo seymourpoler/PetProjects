@@ -34,6 +34,14 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
+        public void ThrowsArgumentNullExceptionWhenConditionIsNull()
+        {
+            var action = () => Check.If<CustomException>(null);
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+        
+        [Fact]
         public void ThrowsExceptionWithMessageWhenArgumentSatisfyTheCondition()
         {
             const string aMessage = "simple exception message";
