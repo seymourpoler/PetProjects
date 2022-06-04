@@ -63,15 +63,13 @@ namespace ExtensionMethods
 
         public static void IsNullOrEmpty<TException, T>(IEnumerable<T> values)
         {
-            if (values is null)
+            if (values is null || !values.Any())
                 throw (Exception)Activator.CreateInstance(typeof(TException));
-            
-            throw new NotImplementedException();
         }
         
         public static void IsNullOrEmpty<TException, T>(IEnumerable<T> values, string message)
         {
-            if (values is null)
+            if (values is null || !values.Any())
                 throw BuildException<TException>(message);
             
             throw new NotImplementedException();

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using ExtensionMethods;
 using Shouldly;
 using Xunit;
@@ -82,10 +83,26 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
+        public void ThrowsAnExceptionWhenArgumentIsAnEmptyList()
+        {
+            var action = () => Check.IsNullOrEmpty<CustomException, double>(new List<double>());
+
+            action.ShouldThrow<CustomException>();
+        }
+        
+        [Fact]
         public void ThrowsAnExceptionWithMessageWhenArgumentIsANullArray()
         {
             Should.Throw<CustomException>(() =>
                 Check.IsNullOrEmpty<CustomException, double>(null, aMessage)
+            ).Message.ShouldBe(aMessage);
+        }
+        
+        [Fact]
+        public void ThrowsAnExceptionWithMessageWhenArgumentIsAnEmptyList()
+        {
+            Should.Throw<CustomException>(() =>
+                Check.IsNullOrEmpty<CustomException, double>(new List<double>(), aMessage)
             ).Message.ShouldBe(aMessage);
         }
         
