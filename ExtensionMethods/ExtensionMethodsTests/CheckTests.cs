@@ -142,7 +142,15 @@ namespace ExtensionMethodsTests
 
             action.ShouldThrow<CustomException>();
         }
-        
+
+        [Fact]
+        public void DoesNotThrowAnExceptionWhenArgumentIsNotNullAndNeitherEmptyArray()
+        {
+            var action = () => Check.IsNullOrEmpty<CustomException, int>(new[] { 1, 2, 3 });
+
+            action.ShouldNotThrow();
+        }
+
         [Fact]
         public void ThrowsAnExceptionWithMessageWhenArgumentIsANullArray()
         {
