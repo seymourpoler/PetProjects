@@ -19,7 +19,7 @@ namespace ExtensionMethodsTests
         }
         
         [Fact]
-        public void DoesNotThrowArgumentNullExceptionWhenArgumentIsNotNull()
+        public void DoesNotThrowAnExceptionWhenArgumentIsNotNull()
         {
             var action = () => Check.IsNull<CustomException>(aMessage);
 
@@ -32,6 +32,15 @@ namespace ExtensionMethodsTests
             Should.Throw<CustomException>(() =>
                 Check.IsNull<CustomException>(null, aMessage)
             ).Message.ShouldBe(aMessage);
+        }
+        
+        [Fact]
+        public void DoesNotThrowAnExceptionWithMessageWhenArgumentIsNotNull()
+        {
+            const string notNull = "not null";
+            var action = () => Check.IsNull<CustomException>(notNull, aMessage);
+
+            action.ShouldNotThrow();
         }
 
         [Fact]
