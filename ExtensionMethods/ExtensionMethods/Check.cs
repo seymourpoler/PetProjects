@@ -71,8 +71,6 @@ namespace ExtensionMethods
         {
             if (values is null || !values.Any())
                 throw BuildException<TException>(message);
-            
-            throw new NotImplementedException();
         }
         
         private static Exception  BuildException<TException>(string message)
