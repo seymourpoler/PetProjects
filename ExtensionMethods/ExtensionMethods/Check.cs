@@ -41,7 +41,11 @@ namespace ExtensionMethods
 
         public static void IsEmpty<TException, T>(IEnumerable<T> values)
         {
-            if (values.Any()) return;
+            if (values is null)
+                throw new ArgumentNullException();
+                
+            if (values.Any()) 
+                return;
             
             throw  (Exception)Activator.CreateInstance(typeof(TException));
         }

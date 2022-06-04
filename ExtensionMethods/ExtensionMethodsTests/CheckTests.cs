@@ -26,14 +26,6 @@ namespace ExtensionMethodsTests
         }
 
         [Fact]
-        public void ThrowsArgumentNullExceptionWhenArgumentSatisfyTheCondition()
-        {
-            var action = () => Check.If<ArgumentNullException>(() => string.IsNullOrWhiteSpace(string.Empty));
-
-            action.ShouldThrow<ArgumentNullException>();
-        }
-        
-        [Fact]
         public void ThrowsArgumentNullExceptionWhenConditionIsNull()
         {
             var action = () => Check.If<CustomException>(null);
@@ -41,6 +33,14 @@ namespace ExtensionMethodsTests
             action.ShouldThrow<ArgumentNullException>();
         }
         
+        [Fact]
+        public void ThrowsArgumentNullExceptionWhenArgumentSatisfyTheCondition()
+        {
+            var action = () => Check.If<ArgumentNullException>(() => string.IsNullOrWhiteSpace(string.Empty));
+
+            action.ShouldThrow<ArgumentNullException>();
+        }
+
         [Fact]
         public void ThrowsExceptionWithMessageWhenArgumentSatisfyTheCondition()
         {
@@ -57,6 +57,14 @@ namespace ExtensionMethodsTests
             var action = () => Check.IsEmpty<ArgumentException, string>(Array.Empty<string>());
 
             action.ShouldThrow<ArgumentException>();
+        }
+        
+        [Fact]
+        public void ThrowsArgumentNullExceptionWhenArgumentIsANullEmptyArray()
+        {
+            var action = () => Check.IsEmpty<CustomException, string>(null);
+
+            action.ShouldThrow<ArgumentNullException>();
         }
         
         [Fact]
