@@ -58,6 +58,16 @@ namespace ExtensionMethodsTests
 
             action.ShouldThrow<ArgumentNullException>();
         }
+        
+        [Fact]
+        public void DoesNotThrowAnExceptionWhenArgumentDoesNotSatisfyTheCondition()
+        {
+            const string anyString = "simple string of characters";
+            
+            var action = () => Check.If<ArgumentNullException>(() => string.IsNullOrWhiteSpace(anyString));
+
+            action.ShouldNotThrow();
+        }
 
         [Fact]
         public void ThrowsExceptionWithMessageWhenArgumentSatisfyTheCondition()
