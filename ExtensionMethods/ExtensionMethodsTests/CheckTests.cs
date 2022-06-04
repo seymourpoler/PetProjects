@@ -7,6 +7,8 @@ namespace ExtensionMethodsTests
 {
     public class CheckTests
     {
+        const string aMessage = "simple exception message";
+        
         [Fact]
         public void ThrowsArgumentNullExceptionWhenArgumentIsNull()
         {
@@ -18,8 +20,6 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ThrowsExceptionWithMessageWhenArgumentIsNull()
         {
-            const string aMessage = "simple exception message";
-
             Should.Throw<CustomException>(() =>
                 Check.IsNull<CustomException>(null, aMessage)
             ).Message.ShouldBe(aMessage);
@@ -44,8 +44,6 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ThrowsExceptionWithMessageWhenArgumentSatisfyTheCondition()
         {
-            const string aMessage = "simple exception message";
-
             Should.Throw<CustomException>(() =>
                 Check.If<CustomException>(() => string.IsNullOrWhiteSpace(string.Empty), aMessage)
             ).Message.ShouldBe(aMessage);
@@ -70,8 +68,6 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ThrowsAnExceptionWithMessageWhenArgumentIsAnEmptyArray()
         {
-            const string aMessage = "simple exception message";
-            
             var action = () => Check.IsEmpty<ArgumentException, int>(Array.Empty<int>(), aMessage);
 
             action.ShouldThrow<ArgumentException>();
@@ -88,8 +84,6 @@ namespace ExtensionMethodsTests
         [Fact]
         public void ThrowsAnExceptionWithMessageWhenArgumentIsANullArray()
         {
-            const string aMessage = "simple exception message";
-            
             Should.Throw<CustomException>(() =>
                 Check.IsNullOrEmpty<CustomException, double>(null, aMessage)
             ).Message.ShouldBe(aMessage);
