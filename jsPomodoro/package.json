@@ -1,0 +1,12 @@
+{
+  "name": "jspomodoro",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "2.0.0"
+  }
+}
