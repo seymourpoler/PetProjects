@@ -21,6 +21,9 @@ function View(){
     }
 
     self.showTime = function(time){
+        if(!document.getElementById('minutes') || !document.getElementById('hours')){
+            return;
+        }
         document.getElementById('minutes').innerHTML = time.minutes;
         document.getElementById('seconds').innerHTML = time.seconds.toString().padStart(2, '0');;
     }
