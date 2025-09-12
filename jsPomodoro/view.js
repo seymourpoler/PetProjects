@@ -1,5 +1,5 @@
 function View(){
-    const self = this;
+    let self = this;
 
     let onStartClicked;
     let onStopClicked;
@@ -20,8 +20,8 @@ function View(){
         onStopClicked();
     }
 
-    self.show = function(time){
-        throw new Error('not implemented');
+    self.showTime = function(time){
+        // throw new Error('not implemented');
     }
 }
 
