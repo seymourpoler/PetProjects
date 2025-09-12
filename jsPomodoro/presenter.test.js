@@ -7,8 +7,7 @@ describe('Presenter', () =>{
 
     beforeEach(() =>{
         view = new View();
-        // spyAllMethodsOf(view);
-        vi.spyOn(view, 'showTime');
+        spyAllMethodsOf(view);
         presenter = new Presenter(view);
     });
 
@@ -21,7 +20,7 @@ describe('Presenter', () =>{
     describe('When Reset is requested', () =>{
         it('shows the default time', () =>{
             let onResetRequestedHandler;
-            vi.spyOn(view, 'subscribeToOnResetClicked').mockImplementation((handler)=>{
+            view.subscribeToOnResetClicked.mockImplementation((handler)=>{
                     onResetRequestedHandler = handler;
                 });
             new Presenter(view);
