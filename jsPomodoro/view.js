@@ -12,6 +12,15 @@ function View(){
         onStopClicked = handler;
     }
 
+    self.subscribeToOnResetClicked = function(handler){
+        if(!document.getElementById("reset")){
+            return;
+        }
+        document.getElementById("reset").addEventListener('click', function(){
+            handler();
+        });
+    }
+
     self.start = function(){
         onStartClicked();
     }

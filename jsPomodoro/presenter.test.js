@@ -7,6 +7,7 @@ describe('Presenter', () =>{
 
     beforeEach(() =>{
         view = new View();
+        // spyAllMethodsOf(view);
         vi.spyOn(view, 'showTime');
         presenter = new Presenter(view);
     });
@@ -16,4 +17,27 @@ describe('Presenter', () =>{
             expect(view.showTime).toHaveBeenCalledWith({minutes: 25, seconds: 0});
         });
     });
+
+    describe('When Reset is requested', () =>{
+        it('shows the default time', () =>{
+            let onResetRequestedHandler;
+            vi.spyOn(view, 'subscribeToOnResetClicked').mockImplementation((handler)=>{
+                    onResetRequestedHandler = handler;
+                });
+            new Presenter(view);
+
+            onResetRequestedHandler();
+
+            expect(view.showTime).toHaveBeenCalledWith({minutes: 25, seconds: 0});
+        });
+    });
 });
+
+function spyAllMethodsOf(element){
+
+    for (const property in element) {
+        if (typeof element[property] == "function") {
+            vi.spyOn(element, property);
+        }
+    }
+}
