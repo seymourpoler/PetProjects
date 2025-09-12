@@ -21,11 +21,11 @@ function View(){
     }
 
     self.showTime = function(time){
-        if(!document.getElementById('minutes') || !document.getElementById('hours')){
+        if(!document.getElementById('minutes') || !document.getElementById('seconds')){
             return;
         }
         document.getElementById('minutes').innerHTML = time.minutes;
-        document.getElementById('seconds').innerHTML = time.seconds.toString().padStart(2, '0');;
+        document.getElementById('seconds').innerHTML = time.seconds.toString().padStart(2, '0');
     }
 }
 
