@@ -21,7 +21,8 @@ function View(){
     }
 
     self.showTime = function(time){
-        // throw new Error('not implemented');
+        document.getElementById('minutes').innerHTML = time.minutes;
+        document.getElementById('seconds').innerHTML = time.seconds.toString().padStart(2, '0');;
     }
 }
 
