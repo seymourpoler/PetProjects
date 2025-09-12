@@ -1,4 +1,4 @@
-console.log('it is working');
+console.log('it works');
 
 
 const view = new View();
