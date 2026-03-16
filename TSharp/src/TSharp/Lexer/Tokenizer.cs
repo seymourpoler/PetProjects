@@ -9,6 +9,7 @@ public class Tokenizer(FileReader fileReader)
             {
                 
             }
+            tokens.Add(new Token(TokenType.EndOfFile, string.Empty, fileReader.LineNumber()));
             return tokens;
             // if (string.IsNullOrWhiteSpace(input))
             // {

@@ -18,9 +18,12 @@ public class TokenizerShould
     public void ReturnEmptyListForEmptyInput()
     {
         A.CallTo(() => fileReader.IsAtTheEnd()).Returns(true);
+        A.CallTo(() => fileReader.LineNumber()).Returns(3);
         
         var tokens = tokenizer.Tokenize();
         
-        tokens.ShouldBeEmpty();
+        tokens.Length().ShouldBe(1);
+        tokens.First().Type.ShouldBe(TokenType.EndOfFile);
+        tokens.First().Line.ShouldBe(3);
     }
 }
