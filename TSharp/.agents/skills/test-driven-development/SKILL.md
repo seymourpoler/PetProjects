@@ -15,7 +15,7 @@ Red → Green → Refactor cycle for all code changes.
 
 ## The TDD Cycle
 
-1. **RED**: Write failing test
+1. **RED**: Write failing [test](../unit-test/SKILL.md)
 2. **GREEN**: Write minimal code to pass
 3. **REFACTOR**: Improve code quality
 
@@ -39,7 +39,7 @@ Red → Green → Refactor cycle for all code changes.
 
 ## Process
 
-### 1. Write Failing Test First
+### 1. Write Failing [Test](../unit-test/SKILL.md) First
 
 ```csharp
 // Start with test
@@ -71,17 +71,12 @@ public static double CalculateTotal(List<double> prices)
 
 Extract constants, improve naming, etc.
 
-## Test Patterns by Stack
+## [Test](../unit-test/SKILL.md) Patterns by Stack
 
 ### Backend (C#)
 
 - File: `tests/CalculatorTests.cs`
 - Pattern: `src/<ProjectName>/Tests/CalculatorTests.cs`
-
-### Frontend (TypeScript)
-
-- File: `ComponentName.test.tsx`
-- Pattern: `mobile/libraries/atorasu/atoms/Button/Button.test.tsx`
 
 ## Critical Rules
 
