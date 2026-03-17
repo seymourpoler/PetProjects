@@ -1,4 +1,4 @@
-﻿namespace TSharp;
+﻿namespace TSharp.Lexer;
 
 public class FileReader
 {
@@ -14,12 +14,12 @@ public class FileReader
       throw new NotImplementedException();
    }
 
-   public virtual char NextCharacter()
+   public virtual string Next()
    {
       throw new NotImplementedException();
    }
    
-   public virtual char CurrentCharacter()
+   public virtual string Current()
    {
       throw new NotImplementedException();
    }

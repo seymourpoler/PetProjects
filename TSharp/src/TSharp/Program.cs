@@ -1,8 +1,8 @@
-﻿
-
-using LanguageExt;
+﻿using LanguageExt;
 using Microsoft.Extensions.DependencyInjection;
-using TSharp;
+using TSharp.Lexer;
+
+namespace TSharp;
 
 public class Program
 {

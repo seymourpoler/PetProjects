@@ -1,4 +1,4 @@
-﻿namespace TSharp;
+﻿namespace TSharp.Lexer;
 
 public class Tokenizer(FileReader fileReader)
 {

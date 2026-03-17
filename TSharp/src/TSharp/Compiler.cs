@@ -1,4 +1,5 @@
 ﻿using LanguageExt;
+using TSharp.Lexer;
 
 namespace TSharp;
 
