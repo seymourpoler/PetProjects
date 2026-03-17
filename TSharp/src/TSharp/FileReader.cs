@@ -13,8 +13,13 @@ public class FileReader
    {
       throw new NotImplementedException();
    }
+
+   public virtual char NextCharacter()
+   {
+      throw new NotImplementedException();
+   }
    
-   public virtual char Read()
+   public virtual char CurrentCharacter()
    {
       throw new NotImplementedException();
    }
