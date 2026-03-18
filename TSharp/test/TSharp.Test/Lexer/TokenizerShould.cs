@@ -6,25 +6,31 @@ namespace TSharp.Test.Lexer;
 
 public class TokenizerShould
 {
-    private readonly FileReader fileReader;
+    private readonly IO io;
     private readonly Tokenizer tokenizer;
-
 
     public TokenizerShould()
     {
-        fileReader = A.Fake<FileReader>();
-        tokenizer = new Tokenizer(fileReader);
+        io = A.Fake<IO>();
+        tokenizer = new Tokenizer(new FileReader(io));
     }
 
     [Fact]
-    public void Tokenize_ConstDeclaration_ReturnsCorrectTokens()
+    public void ReturnEmptyListForEmptyInput()
     {
-        const int lineNumber = 1;
-        var chars = new Queue<char>("const a = 4;");
-        A.CallTo(() => fileReader.IsAtTheEnd()).ReturnsLazily(() => chars.Count == 0);
-        A.CallTo(() => fileReader.Next()).ReturnsLazily(() => chars.Count > 0 ? chars.Dequeue().ToString() : "");
-        A.CallTo(() => fileReader.Current()).ReturnsLazily(() => chars.Count > 0 ? chars.Peek().ToString() : "");
-        A.CallTo(() => fileReader.LineNumber()).Returns(lineNumber);
+        A.CallTo(() => io.ReadAllText()).Returns(string.Empty);
+        
+        var tokens = tokenizer.Tokenize();
+        
+        tokens.Length().ShouldBe(1);
+        tokens.First().Type.ShouldBe(TokenType.EndOfFile);
+        tokens.First().LineNumber.ShouldBe(3);
+    }
+    
+    [Fact]
+    public void ReturnsConstDeclarationCorrectTokens()
+    {
+        A.CallTo(() => io.ReadAllText()).Returns("const a = 4;");
         
         var tokens = tokenizer.Tokenize().ToList();
         
@@ -40,19 +46,5 @@ public class TokenizerShould
         tokens[4].Type.ShouldBe(TokenType.Semicolon);
         tokens[4].Lexeme.ShouldBe(";");
         tokens[5].Type.ShouldBe(TokenType.EndOfFile);
-    }
-
-
-    [Fact]
-    public void ReturnEmptyListForEmptyInput()
-    {
-        A.CallTo(() => fileReader.IsAtTheEnd()).Returns(true);
-        A.CallTo(() => fileReader.LineNumber()).Returns(3);
-        
-        var tokens = tokenizer.Tokenize();
-        
-        tokens.Length().ShouldBe(1);
-        tokens.First().Type.ShouldBe(TokenType.EndOfFile);
-        tokens.First().Line.ShouldBe(3);
     }
 }

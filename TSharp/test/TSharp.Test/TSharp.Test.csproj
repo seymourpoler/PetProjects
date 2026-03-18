@@ -17,10 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Using Include="Xunit"/>
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\..\src\TSharp\TSharp.csproj" />
     </ItemGroup>
 

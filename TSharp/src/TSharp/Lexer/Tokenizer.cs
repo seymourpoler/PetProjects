@@ -6,55 +6,45 @@ public class Tokenizer(FileReader fileReader)
         {
             var tokens = new List<Token>();
             
-        while (!fileReader.IsAtTheEnd())
-        {
-            var ch = fileReader.Next();
-            if (char.IsWhiteSpace(ch[0]))
-                continue;
-            // Keyword or identifier
-            if (char.IsLetter(ch[0]))
+            while (!fileReader.IsAtTheEnd())
             {
-                var start = ch[0];
-                var lexeme = start.ToString();
-                while (!fileReader.IsAtTheEnd() && char.IsLetterOrDigit(fileReader.Current()[0]))
+                var currentCharacter = fileReader.FindNextCharacter();
+                if (currentCharacter.IsWhiteSpace())
+                    continue;
+                
+                if (currentCharacter.IsNumber())
                 {
-                    lexeme += fileReader.Next();
+                    var currentNumber = fileReader.GetCurrentString();
+                    tokens.Add(new Token(TokenType.Number, currentNumber, fileReader.GetCurrentLineNumber()));
+                    continue;
                 }
-                // Check for keyword const
-                if (lexeme == "const")
-                    tokens.Add(new Token(TokenType.Constant, lexeme, fileReader.LineNumber()));
-                else
-                    tokens.Add(new Token(TokenType.Identifier, lexeme, fileReader.LineNumber()));
-                continue;
-            }
-            // Number
-            if (char.IsDigit(ch[0]))
-            {
-                var lexeme = ch[0].ToString();
-                while (!fileReader.IsAtTheEnd() && char.IsDigit(fileReader.Current()[0]))
+                
+                if (currentCharacter.IsLetter())
                 {
-                    lexeme += fileReader.Next();
+                    var currentWord = fileReader.GetCurrentString();
+                    if (currentWord == "const")
+                        tokens.Add(new Token(TokenType.Constant, currentWord, fileReader.GetCurrentLineNumber()));
+                    else
+                        tokens.Add(new Token(TokenType.Identifier, currentWord, fileReader.GetCurrentLineNumber()));
+                    continue;
                 }
-                tokens.Add(new Token(TokenType.Number, lexeme, fileReader.LineNumber()));
-                continue;
+               
+                switch (currentCharacter)
+                {
+                    case '=':
+                        tokens.Add(new Token(TokenType.Equal, currentCharacter, fileReader.GetCurrentLineNumber()));
+                        break;
+                    case ';':
+                        tokens.Add(new Token(TokenType.Semicolon, currentCharacter, fileReader.GetCurrentLineNumber()));
+                        break;
+                    default:
+                        // Ignore unknown for now
+                        break;
+                }
             }
-            // Symbols
-            switch (ch)
-            {
-                case "=":
-                    tokens.Add(new Token(TokenType.Equal, ch, fileReader.LineNumber()));
-                    break;
-                case ";":
-                    tokens.Add(new Token(TokenType.Semicolon, ch, fileReader.LineNumber()));
-                    break;
-                default:
-                    // Ignore unknown for now
-                    break;
-            }
-        }
-        tokens.Add(new Token(TokenType.EndOfFile, string.Empty, fileReader.LineNumber()));
+            tokens.Add(new Token(TokenType.EndOfFile, string.Empty, fileReader.GetCurrentLineNumber()));
 
-                    
-                    return tokens;
-                }
+                        
+            return tokens;
         }
+}

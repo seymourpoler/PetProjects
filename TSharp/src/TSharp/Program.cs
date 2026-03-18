@@ -28,7 +28,8 @@ public class Program
         var services = new ServiceCollection();
         services.AddSingleton<Compiler>();
         services.AddSingleton<Tokenizer>();
-        services.AddSingleton<FileReader>(_ => new FileReader(filePath));
+        services.AddSingleton<FileReader>();
+        services.AddSingleton<IO>(_ => new IO(filePath));
 		
         using var serviceProvider = services.BuildServiceProvider();
         return serviceProvider.GetRequiredService<Compiler>();
