@@ -47,54 +47,37 @@ public virtual string GetCurrentString()
         var start = position;
         if (content[start].IsLetter())
         {
-            var end = start;
-            while (end < content.Length && content[end].IsLetter())
-            {
-                end++;
-            }
-            var word = content.Substring(start, end - start);
-            position = end-1;
-            return word;
+            return GetCurrentWord();
         }
         if (content[start].IsNumber())
         {
-            var end = start;
-            while (end < content.Length && content[end].IsNumber())
-            {
-                end++;
-            }
-            var number = content.Substring(start, end - start);
-            position = end-1;
-            return number;
+            return GetCurrentNumber();
         }
         position++;
         return content[start].ToString();
     }
 
-
-
     private string GetCurrentNumber()
     {
-        var start = position;
-        while (start < content.Length && content[start].IsNumber())
+        var end = position;
+        while (end < content.Length && content[end].IsNumber())
         {
-            start++;
+            end++;
         }
-        var number = content.Substring(position, start - position);
-        position = start;
+        var number = content.Substring(position, end - position);
+        position = end-1;
         return number;
     }
 
     private string GetCurrentWord()
     {
-        var start = position;
-        while (start < content.Length && content[start].IsLetter())
+        var end = position;
+        while (end < content.Length && content[end].IsLetter())
         {
-            start++;
+            end++;
         }
-        var word = content.Substring(position, start - position);
-        position = start;
-            
+        var word = content.Substring(position, end - position);
+        position = end-1;
         return word;
     }
 
