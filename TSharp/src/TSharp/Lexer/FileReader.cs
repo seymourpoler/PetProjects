@@ -23,10 +23,9 @@ public class FileReader
             return '\0';
         }
         var currentCharacter = content[position++];
-        // Handle Windows line ending \r\n as a single newline
         if (currentCharacter == '\r' && position < content.Length && content[position] == '\n')
         {
-            position++; // skip the '\n'
+            position++;
             currentCharacter = '\n';
         }
         if (currentCharacter == '\n')
@@ -57,7 +56,7 @@ public class FileReader
     private string GetCurrentNumber()
     {
         var start = position;
-        while (start < content.Length && char.IsNumber(content[start]))
+        while (start < content.Length && content[start].IsNumber())
         {
             start++;
         }

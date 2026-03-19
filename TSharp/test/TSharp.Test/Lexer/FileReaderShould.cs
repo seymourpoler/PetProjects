@@ -7,30 +7,37 @@ namespace TSharp.Test.Lexer;
 
 public class FileReaderShould
 {
+    private readonly IO io;
+    private FileReader fileReader;
+    
+    public FileReaderShould()
+    {
+         io = A.Fake<IO>();
+         fileReader = new FileReader(io);
+    }
     [Fact]
     public void IsAtTheEnd_ReturnsTrue_WhenContentIsEmpty()
     {
-        var io = A.Fake<IO>();
         A.CallTo(() => io.ReadAllText()).Returns(string.Empty);
-        var fileReader = new FileReader(io);
+        
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
 
     [Fact]
     public void IsAtTheEnd_ReturnsFalse_WhenContentRemaining()
     {
-        var io = A.Fake<IO>();
         A.CallTo(() => io.ReadAllText()).Returns("abc");
-        var fileReader = new FileReader(io);
+        fileReader = new FileReader(io);
+        
         fileReader.IsAtTheEnd().ShouldBeFalse();
     }
 
     [Fact]
     public void FindNextCharacter_AdvancesAndReturnsChars()
     {
-        var io = A.Fake<IO>();
         A.CallTo(() => io.ReadAllText()).Returns("ab");
-        var fileReader = new FileReader(io);
+        fileReader = new FileReader(io);
+
         fileReader.FindNextCharacter().ShouldBe('a');
         fileReader.FindNextCharacter().ShouldBe('b');
         fileReader.FindNextCharacter().ShouldBe('\0');
@@ -40,9 +47,9 @@ public class FileReaderShould
     [Fact]
     public void GetCurrentString_ExtractsWord_AndAdvancesPosition()
     {
-        var io = A.Fake<IO>();
         A.CallTo(() => io.ReadAllText()).Returns("hello world");
-        var fileReader = new FileReader(io);
+        fileReader = new FileReader(io);
+
         fileReader.GetCurrentString().ShouldBe("hello");
         fileReader.FindNextCharacter().ShouldBe(' ');
         fileReader.GetCurrentString().ShouldBe("world");
@@ -52,9 +59,9 @@ public class FileReaderShould
     [Fact]
     public void GetCurrentString_ExtractsNumber_AndAdvancesPosition()
     {
-        var io = A.Fake<IO>();
         A.CallTo(() => io.ReadAllText()).Returns("42 abc");
-        var fileReader = new FileReader(io);
+        fileReader = new FileReader(io);
+
         fileReader.GetCurrentString().ShouldBe("42");
         fileReader.FindNextCharacter().ShouldBe(' ');
         fileReader.GetCurrentString().ShouldBe("abc");
@@ -64,9 +71,8 @@ public class FileReaderShould
     [Fact]
     public void GetCurrentLineNumber_IncrementsOnNewLine()
     {
-        var io = A.Fake<IO>();
         A.CallTo(() => io.ReadAllText()).Returns("a\nb\nc");
-        var fileReader = new FileReader(io);
+        fileReader = new FileReader(io);
 
         fileReader.GetCurrentLineNumber().ShouldBe(1);
         fileReader.FindNextCharacter().ShouldBe('a');
@@ -82,9 +88,9 @@ public class FileReaderShould
     [Fact]
     public void GetCurrentLineNumber_WindowsNewlines()
     {
-        var io = A.Fake<IO>();
         A.CallTo(() => io.ReadAllText()).Returns("a\r\nb\r\nc");
-        var fileReader = new FileReader(io);
+        fileReader = new FileReader(io);
+
         fileReader.GetCurrentLineNumber().ShouldBe(1);
         fileReader.FindNextCharacter().ShouldBe('a');
         fileReader.FindNextCharacter().ShouldBe('\n'); // now line 2
