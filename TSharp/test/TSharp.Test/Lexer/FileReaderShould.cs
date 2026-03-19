@@ -7,64 +7,77 @@ namespace TSharp.Test.Lexer;
 
 public class FileReaderShould
 {
-    private readonly IO io;
-    private FileReader fileReader;
+    private readonly IO io = A.Fake<IO>();
     
-    public FileReaderShould()
-    {
-         io = A.Fake<IO>();
-         fileReader = new FileReader(io);
-    }
     [Fact]
-    public void IsAtTheEnd_ReturnsTrue_WhenContentIsEmpty()
+    public void BeAtTheEndWhenContentIsEmpty()
     {
         A.CallTo(() => io.ReadAllText()).Returns(string.Empty);
+        var fileReader = new FileReader(io);
         
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
 
     [Fact]
-    public void IsAtTheEnd_ReturnsFalse_WhenContentRemaining()
+    public void NotBeAtTheEndWhenContentRemains()
     {
         A.CallTo(() => io.ReadAllText()).Returns("abc");
-        fileReader = new FileReader(io);
+        var fileReader = new FileReader(io);
         
         fileReader.IsAtTheEnd().ShouldBeFalse();
     }
+    
+    [Fact]
+    public void ReturnTheWholeString()
+    {
+        A.CallTo(() => io.ReadAllText()).Returns("abc");
+        var fileReader = new FileReader(io);
+        
+        fileReader.GetNextCharacter().ShouldBe('a');
+        fileReader.GetCurrentString().ShouldBe("abc");
+        fileReader.GetNextCharacter();
+        fileReader.IsAtTheEnd().ShouldBeTrue();
+    }
 
     [Fact]
-    public void FindNextCharacter_AdvancesAndReturnsChars()
+    public void ReturnNextCharacter()
     {
         A.CallTo(() => io.ReadAllText()).Returns("ab");
-        fileReader = new FileReader(io);
+        var fileReader = new FileReader(io);
 
-        fileReader.FindNextCharacter().ShouldBe('a');
-        fileReader.FindNextCharacter().ShouldBe('b');
-        fileReader.FindNextCharacter().ShouldBe('\0');
+        fileReader.GetNextCharacter().ShouldBe('a');
+        fileReader.GetNextCharacter().ShouldBe('b');
+        fileReader.GetNextCharacter().ShouldBe('\0');
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
 
     [Fact]
-    public void GetCurrentString_ExtractsWord_AndAdvancesPosition()
+    public void ReturnCurrentString()
     {
         A.CallTo(() => io.ReadAllText()).Returns("hello world");
-        fileReader = new FileReader(io);
-
+        var fileReader = new FileReader(io);
+        
+        fileReader.GetNextCharacter().ShouldBe('h');
         fileReader.GetCurrentString().ShouldBe("hello");
-        fileReader.FindNextCharacter().ShouldBe(' ');
+        fileReader.GetNextCharacter().ShouldBe(' ');
+        fileReader.GetNextCharacter().ShouldBe('w');
         fileReader.GetCurrentString().ShouldBe("world");
+        fileReader.GetNextCharacter();
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
 
     [Fact]
-    public void GetCurrentString_ExtractsNumber_AndAdvancesPosition()
+    public void ReturnIdentifierAndNumber()
     {
         A.CallTo(() => io.ReadAllText()).Returns("42 abc");
-        fileReader = new FileReader(io);
+        var fileReader = new FileReader(io);
 
+        fileReader.GetNextCharacter().ShouldBe('4');
         fileReader.GetCurrentString().ShouldBe("42");
-        fileReader.FindNextCharacter().ShouldBe(' ');
+        fileReader.GetNextCharacter().ShouldBe(' ');
+        fileReader.GetNextCharacter().ShouldBe('a');
         fileReader.GetCurrentString().ShouldBe("abc");
+        fileReader.GetNextCharacter();
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
 
@@ -72,10 +85,12 @@ public class FileReaderShould
     public void ReturnIdentifier()
     {
         A.CallTo(() => io.ReadAllText()).Returns("abc;");
-        fileReader = new FileReader(io);
+        var fileReader = new FileReader(io);
         
+        fileReader.GetNextCharacter().ShouldBe('a');
         fileReader.GetCurrentString().ShouldBe("abc");
-        fileReader.FindNextCharacter().ShouldBe(';');
+        fileReader.GetNextCharacter().ShouldBe(';');
+        fileReader.GetNextCharacter();
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
     
@@ -83,44 +98,48 @@ public class FileReaderShould
     public void ReturnNumber()
     {
         A.CallTo(() => io.ReadAllText()).Returns("123;");
-        fileReader = new FileReader(io);
+        var fileReader = new FileReader(io);
         
+        fileReader.GetNextCharacter().ShouldBe('1');
         fileReader.GetCurrentString().ShouldBe("123");
-        fileReader.FindNextCharacter().ShouldBe(';');
+        fileReader.GetNextCharacter().ShouldBe(';');
+        fileReader.GetNextCharacter();
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
     
     [Fact]
-    public void GetCurrentLineNumber_IncrementsOnNewLine()
+    public void ReturnNumberOfLinesWithNewLine()
     {
         A.CallTo(() => io.ReadAllText()).Returns("a\nb\nc");
-        fileReader = new FileReader(io);
+        var fileReader = new FileReader(io);
 
         fileReader.GetCurrentLineNumber().ShouldBe(1);
-        fileReader.FindNextCharacter().ShouldBe('a');
-        fileReader.FindNextCharacter().ShouldBe('\n');
+        fileReader.GetNextCharacter().ShouldBe('a');
+        fileReader.GetNextCharacter().ShouldBe('\n');
         fileReader.GetCurrentLineNumber().ShouldBe(2);
-        fileReader.FindNextCharacter().ShouldBe('b');
-        fileReader.FindNextCharacter().ShouldBe('\n');
+        fileReader.GetNextCharacter().ShouldBe('b');
+        fileReader.GetNextCharacter().ShouldBe('\n');
         fileReader.GetCurrentLineNumber().ShouldBe(3);
-        fileReader.FindNextCharacter().ShouldBe('c');
+        fileReader.GetNextCharacter().ShouldBe('c');
+        fileReader.GetNextCharacter();
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
 
     [Fact]
-    public void GetCurrentLineNumber_WindowsNewlines()
+    public void ReturnNumberOfLinesWithWindowsNewLine()
     {
         A.CallTo(() => io.ReadAllText()).Returns("a\r\nb\r\nc");
-        fileReader = new FileReader(io);
+        var fileReader = new FileReader(io);
 
         fileReader.GetCurrentLineNumber().ShouldBe(1);
-        fileReader.FindNextCharacter().ShouldBe('a');
-        fileReader.FindNextCharacter().ShouldBe('\n'); // now line 2
+        fileReader.GetNextCharacter().ShouldBe('a');
+        fileReader.GetNextCharacter().ShouldBe('\n'); // now line 2
         fileReader.GetCurrentLineNumber().ShouldBe(2);
-        fileReader.FindNextCharacter().ShouldBe('b');
-        fileReader.FindNextCharacter().ShouldBe('\n'); // now line 3
+        fileReader.GetNextCharacter().ShouldBe('b');
+        fileReader.GetNextCharacter().ShouldBe('\n'); // now line 3
         fileReader.GetCurrentLineNumber().ShouldBe(3);
-        fileReader.FindNextCharacter().ShouldBe('c');
+        fileReader.GetNextCharacter().ShouldBe('c');
+        fileReader.GetNextCharacter();
         fileReader.IsAtTheEnd().ShouldBeTrue();
     }
 }

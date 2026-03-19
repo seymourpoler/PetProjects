@@ -2,7 +2,7 @@
 
 public class FileReader
 {
-    private int position = 0;
+    private int position = -1;
     private int lineNumber = 1;
    private readonly string content;
 
@@ -13,21 +13,24 @@ public class FileReader
 
     public virtual bool IsAtTheEnd()
     {
-        return position >= content.Length;
+        
+        return string.IsNullOrWhiteSpace(content) || content.Length <= position;
     }
        
-    public virtual char FindNextCharacter()
+    public virtual char GetNextCharacter()
     {
+        position++;
         if (IsAtTheEnd())
         {
             return '\0';
         }
-        var currentCharacter = content[position++];
-        if (currentCharacter == '\r' && position < content.Length && content[position] == '\n')
+        var currentCharacter = content[position];
+        if (currentCharacter == '\r' && position < content.Length && content[position+1] == '\n')
         {
-            position++;
             currentCharacter = '\n';
+            position++;
         }
+
         if (currentCharacter == '\n')
         {
             lineNumber++;
@@ -35,23 +38,40 @@ public class FileReader
         return currentCharacter;
     }
        
-    public virtual string GetCurrentString()
+public virtual string GetCurrentString()
     {
         if (IsAtTheEnd())
         {
             return string.Empty;
         }
-        
-        if (content[position].IsLetter())
+        var start = position;
+        if (content[start].IsLetter())
         {
-            return GetCurrentWord();
+            var end = start;
+            while (end < content.Length && content[end].IsLetter())
+            {
+                end++;
+            }
+            var word = content.Substring(start, end - start);
+            position = end-1;
+            return word;
         }
-        if (content[position].IsNumber())
+        if (content[start].IsNumber())
         {
-            return GetCurrentNumber();
+            var end = start;
+            while (end < content.Length && content[end].IsNumber())
+            {
+                end++;
+            }
+            var number = content.Substring(start, end - start);
+            position = end-1;
+            return number;
         }
-        return content[position].ToString();
+        position++;
+        return content[start].ToString();
     }
+
+
 
     private string GetCurrentNumber()
     {
