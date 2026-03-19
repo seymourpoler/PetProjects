@@ -4,12 +4,12 @@ public class FileReader
 {
     private int position = -1;
     private int lineNumber = 1;
-   private readonly string content;
+    private readonly string content;
 
-   public FileReader(IO io)
-   {
-      content = io.ReadAllText();
-   }
+    public FileReader(IO io)
+    {
+        content = io.ReadAllText();
+    }
 
     public virtual bool IsAtTheEnd()
     {
@@ -38,7 +38,7 @@ public class FileReader
         return currentCharacter;
     }
        
-public virtual string GetCurrentString()
+    public virtual string GetCurrentString()
     {
         if (IsAtTheEnd())
         {
