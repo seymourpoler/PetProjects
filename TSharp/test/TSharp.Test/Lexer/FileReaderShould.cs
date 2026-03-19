@@ -69,6 +69,28 @@ public class FileReaderShould
     }
 
     [Fact]
+    public void ReturnIdentifier()
+    {
+        A.CallTo(() => io.ReadAllText()).Returns("abc;");
+        fileReader = new FileReader(io);
+        
+        fileReader.GetCurrentString().ShouldBe("abc");
+        fileReader.FindNextCharacter().ShouldBe(';');
+        fileReader.IsAtTheEnd().ShouldBeTrue();
+    }
+    
+    [Fact]
+    public void ReturnNumber()
+    {
+        A.CallTo(() => io.ReadAllText()).Returns("123;");
+        fileReader = new FileReader(io);
+        
+        fileReader.GetCurrentString().ShouldBe("123");
+        fileReader.FindNextCharacter().ShouldBe(';');
+        fileReader.IsAtTheEnd().ShouldBeTrue();
+    }
+    
+    [Fact]
     public void GetCurrentLineNumber_IncrementsOnNewLine()
     {
         A.CallTo(() => io.ReadAllText()).Returns("a\nb\nc");
