@@ -7,31 +7,26 @@ namespace TSharp.Test.Lexer;
 
 public class TokenizerShould
 {
-    private readonly IO io;
-    private readonly Tokenizer tokenizer;
-
-    public TokenizerShould()
-    {
-        io = A.Fake<IO>();
-        tokenizer = new Tokenizer(new FileReader(io));
-    }
-
+    private readonly IO io = A.Fake<IO>();
+    
     [Fact]
     public void ReturnEmptyListForEmptyInput()
     {
         A.CallTo(() => io.ReadAllText()).Returns(string.Empty);
+        var tokenizer = new Tokenizer(new FileReader(io));
         
         var tokens = tokenizer.Tokenize();
         
         tokens.Length().ShouldBe(1);
         tokens.First().Type.ShouldBe(TokenType.EndOfFile);
-        tokens.First().LineNumber.ShouldBe(3);
+        tokens.First().LineNumber.ShouldBe(1);
     }
     
     [Fact]
     public void ReturnsConstDeclarationCorrectTokens()
     {
         A.CallTo(() => io.ReadAllText()).Returns("const a = 4;");
+        var tokenizer = new Tokenizer(new FileReader(io));
         
         var tokens = tokenizer.Tokenize().ToList();
         
