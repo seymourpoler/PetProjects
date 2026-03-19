@@ -8,7 +8,7 @@ public class Tokenizer(FileReader fileReader)
             
             while (!fileReader.IsAtTheEnd())
             {
-                var currentCharacter = fileReader.FindNextCharacter();
+                var currentCharacter = fileReader.GetNextCharacter();
                 if (currentCharacter.IsWhiteSpace())
                     continue;
                 
