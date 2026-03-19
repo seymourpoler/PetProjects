@@ -5,7 +5,7 @@ description: Provides guidance for generating comprehensive C# unit tests in .NE
 
 # .NET Unit Test Generation
 
-Guidance for producing high-quality, comprehensive C# unit tests in .NET projects. This skill covers how to detect the test framework in use (MSTest, NUnit, or xUnit) and how to structure well-formed tests that follow best practices, cover edge cases, and avoid common pitfalls.
+Guidance for producing high-quality, comprehensive C# unit tests in .NET projects. This skill covers how to detect the test framework in use xUnit and how to structure well-formed tests that follow best practices, cover edge cases, and avoid common pitfalls.
 
 ## When to Use
 
@@ -93,8 +93,8 @@ If the provided file or scope only contains interfaces or delegates, do not gene
 
 For each public, protected, or internal class in the provided scope:
 
-- Create a corresponding test class named `[ClassName]Tests`
-- Place the test class in namespace `[SourceNamespace].UnitTests`
+- Create a corresponding test class named `[ClassName]Should`
+- Place the test class in namespace `[SourceNamespace].Tests`
 - If the tested source class is partial, the test class must also be partial
 - Follow the initialization pattern that matches the detected test framework (see framework references)
 
@@ -102,7 +102,7 @@ For each public, protected, or internal class in the provided scope:
 
 ### Naming
 
-- Use meaningful, descriptive, and standardized naming: `MethodName_Condition_ExpectedOutcome`
+- Use meaningful, descriptive, and standardized naming: `ReturnExpectedOutcome` or `ThrowExpectedException` if throws an exception
 - Follow the existing test naming conventions found in the project
 - Each test method must include a clear XML documentation comment explaining:
     - The test purpose
@@ -118,6 +118,7 @@ For each public, protected, or internal class in the provided scope:
 - When testing multiple preconditions, write a separate test for each
 - When testing multiple outcomes for one precondition, use parameterized tests
 - Tests should be able to run in any order or in parallel
+- No complex logic (conditionals or loops) in a unit test.
 
 ## Input and Edge Case Analysis
 
