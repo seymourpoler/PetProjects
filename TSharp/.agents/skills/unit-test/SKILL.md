@@ -43,7 +43,7 @@ Check the project for existing test framework references:
 
 Based on the detected framework, load the corresponding reference:
 
-- xUnit → [references/xunit.md](references/xunit.md)
+- xUnit → [references/xunit.md](../xunit/SKILL.md)
 
 ### Step 3: Analyze the source code
 
