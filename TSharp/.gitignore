@@ -1,0 +1,90 @@
+# Ignore build outputs
+bin/
+obj/
+build/
+Debug/
+Release/
+x64/
+
+# User-specific files
+*.user
+*.suo
+*.sln.docstates
+*.DotSettings.user
+
+# IDE files
+.vs/
+.idea/
+
+# Logs
+*.log
+
+# Publish and test results
+publish/
+TestResult*/
+BuildLog.*
+
+# Other files
+*.pidb
+*.cachefile
+*.ncb
+*.sdf
+*.psess
+*.vsp*
+
+# ReSharper files
+_ReSharper*/
+*.ReSharper
+
+# TeamCity
+_TeamCity*
+
+# DocProject
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# Installshield
+Express/
+
+# DotCover
+*.dotCover
+
+# NuGet
+packages/
+!packages/*/build/
+
+# Unnecessary temp files
+*.tmp
+*.tmp_proj
+*.log
+*.scc
+*.aps
+*.opensdf
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*,meta
+
+# Misc
+*.pdb
+*.ilk
+*.pch
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+
+# Exclude test/
+# Uncomment the next line if you want to exclude test files
+# test/
