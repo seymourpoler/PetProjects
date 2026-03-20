@@ -9,6 +9,7 @@ public class Compiler(Tokenizer tokenizer, Parser.Parser parser)
     {
         var tokens = tokenizer.Tokenize();
         var abstractSyntaxTree = parser.Parse(tokens);
+        
         throw new NotImplementedException();
     }
 }

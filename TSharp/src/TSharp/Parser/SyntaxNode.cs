@@ -1,6 +1,9 @@
-﻿namespace TSharp.Parser;
+﻿using TSharp.Lexer;
 
-public class SyntaxNode
+namespace TSharp.Parser;
+
+public abstract record SyntaxNode
 {
-    
+    public record Expression(TSharp.Parser.Expression AnExpression) : SyntaxNode;
+    public record Constant(Token Name, TSharp.Parser.Expression Value) : SyntaxNode;
 }

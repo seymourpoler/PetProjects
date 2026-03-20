@@ -4,6 +4,13 @@ public class ListOfTokens
 {
     private int position = -1;
     private List<Token> tokens = new List<Token>();
+
+    public ListOfTokens(List<Token> tokens)
+    {
+        this.tokens = tokens;
+    }
+    public ListOfTokens(){}
+
     
     public void Add(Token token)
     {
@@ -18,6 +25,8 @@ public class ListOfTokens
     public Token GetNextToken()
     {
         position++;
+        if (position >= tokens.Count)
+            return new Token(TokenType.EndOfFile, "EOF", -1);
         return tokens[position];
     }
 
