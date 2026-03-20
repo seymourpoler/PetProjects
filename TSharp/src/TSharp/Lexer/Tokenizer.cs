@@ -2,9 +2,9 @@
 
 public class Tokenizer(FileReader fileReader)
 {
-        public List<Token> Tokenize()
+        public ListOfTokens Tokenize()
         {
-            var tokens = new List<Token>();
+            var listOfTokens = new ListOfTokens();
             
             while (!fileReader.IsAtTheEnd())
             {
@@ -15,7 +15,7 @@ public class Tokenizer(FileReader fileReader)
                 if (currentCharacter.IsNumber())
                 {
                     var currentNumber = fileReader.GetCurrentString();
-                    tokens.Add(new Token(TokenType.Number, currentNumber, fileReader.GetCurrentLineNumber()));
+                    listOfTokens.Add(new Token(TokenType.Number, currentNumber, fileReader.GetCurrentLineNumber()));
                     continue;
                 }
                 
@@ -23,28 +23,32 @@ public class Tokenizer(FileReader fileReader)
                 {
                     var currentWord = fileReader.GetCurrentString();
                     if (currentWord == "const")
-                        tokens.Add(new Token(TokenType.Constant, currentWord, fileReader.GetCurrentLineNumber()));
+                    {
+                        listOfTokens.Add(new Token(TokenType.Constant, currentWord, fileReader.GetCurrentLineNumber()));
+                    }
                     else
-                        tokens.Add(new Token(TokenType.Identifier, currentWord, fileReader.GetCurrentLineNumber()));
+                    {
+                        listOfTokens.Add(new Token(TokenType.Identifier, currentWord, fileReader.GetCurrentLineNumber()));
+                    }
                     continue;
                 }
                
                 switch (currentCharacter)
                 {
                     case '=':
-                        tokens.Add(new Token(TokenType.Equal, currentCharacter, fileReader.GetCurrentLineNumber()));
+                        listOfTokens.Add(new Token(TokenType.Equal, currentCharacter, fileReader.GetCurrentLineNumber()));
                         break;
                     case ';':
-                        tokens.Add(new Token(TokenType.Semicolon, currentCharacter, fileReader.GetCurrentLineNumber()));
+                        listOfTokens.Add(new Token(TokenType.Semicolon, currentCharacter, fileReader.GetCurrentLineNumber()));
                         break;
                     default:
                         // Ignore unknown for now
                         break;
                 }
             }
-            tokens.Add(new Token(TokenType.EndOfFile, string.Empty, fileReader.GetCurrentLineNumber()));
+            listOfTokens.Add(new Token(TokenType.EndOfFile, string.Empty, fileReader.GetCurrentLineNumber()));
 
                         
-            return tokens;
+            return listOfTokens;
         }
 }
