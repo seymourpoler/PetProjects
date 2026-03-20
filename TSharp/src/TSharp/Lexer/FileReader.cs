@@ -13,7 +13,6 @@ public class FileReader
 
     public virtual bool IsAtTheEnd()
     {
-        
         return string.IsNullOrWhiteSpace(content) || content.Length <= position;
     }
        
