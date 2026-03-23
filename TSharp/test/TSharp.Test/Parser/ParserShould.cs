@@ -1,3 +1,4 @@
+using Shouldly;
 using Xunit;
 using TSharp.Lexer;
 using TSharp.Parser;
@@ -6,6 +7,8 @@ namespace TSharp.Test.Parser;
 
 public class ParserShould
 {
+    private readonly TSharp.Parser.Parser parser = new TSharp.Parser.Parser();
+    
     [Fact]
     public void ParsesValidConstDeclaration()
     {
@@ -15,19 +18,19 @@ public class ParserShould
         listOfTokens.Add(new Token(TokenType.Equal, "=", 1));
         listOfTokens.Add(new Token(TokenType.Number, "4", 1));
         listOfTokens.Add(new Token(TokenType.Semicolon, ";", 1));
-        var parser = new TSharp.Parser.Parser();
 
         var result = parser.Parse(listOfTokens);
 
-        Assert.True(result.IsRight);
-        SyntaxNode node = null;
-        result.IfRight(r => node = r);
-        result.IfLeft(e => Assert.Fail($"Unexpected error: {e.Message}"));
-        Assert.NotNull(node);
-        Assert.IsType<SyntaxNode.Constant>(node);
-        var constNode = (SyntaxNode.Constant)node;
-        Assert.Equal("a", constNode.Name.Lexeme);
-        Assert.Equal("4", ((Expression.Literal)constNode.Value).Value);
+        result.Match(
+            Right: node =>
+            {
+                node.ShouldBeOfType<SyntaxNode.Constant>();
+                ((SyntaxNode.Constant)node).Name.Lexeme.ShouldBe("a");
+                var constNode = (SyntaxNode.Constant)node;
+                ((Expression.Literal)constNode.Value).Value.ShouldBe("4");
+            },
+            Left: error => error.ShouldNotBeNull("Should not get here")
+        );
     }
 
     [Theory]
@@ -48,7 +51,6 @@ public class ParserShould
         var testTokens = validTokens.Select((t, i) => i==wrongIndex ?
             new Token(wrongType, wrongLexeme, 1) : t).ToList();
         var tokens = new ListOfTokens(testTokens);
-        var parser = new TSharp.Parser.Parser();
 
         var result = parser.Parse(tokens);
         
@@ -66,15 +68,16 @@ public class ParserShould
         var tokens = new ListOfTokens(new List<Token>{
             new Token(TokenType.Constant, "const", 1)
         });
-        var parser = new TSharp.Parser.Parser();
         
         var result = parser.Parse(tokens);
         
-        Assert.True(result.IsLeft);
-        Error err = null;
-        result.IfLeft(e => err = e);
-        result.IfRight(r => Assert.Fail("Unexpected success"));
-        Assert.NotNull(err);
-        Assert.Contains("Expected identifier", err.Message);
+        result.Match(
+            Right: node => node.ShouldNotBeNull("Should not get here"),
+            Left: error =>
+            {
+                error.ShouldNotBeNull();
+                Assert.Contains("Expected identifier", error.Message);
+            }
+        );
     }
 }
