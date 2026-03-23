@@ -1,13 +1,13 @@
 using Shouldly;
+using TSharp.Lex;
+using TSharp.Parse;
 using Xunit;
-using TSharp.Lexer;
-using TSharp.Parser;
 
 namespace TSharp.Test.Parser;
 
 public class ParserShould
 {
-    private readonly TSharp.Parser.Parser parser = new TSharp.Parser.Parser();
+    private readonly Parse.Parser parser = new Parse.Parser();
     
     [Fact]
     public void ParsesValidConstDeclaration()
@@ -29,38 +29,117 @@ public class ParserShould
                 var constNode = (SyntaxNode.Constant)node;
                 ((Expression.Literal)constNode.Value).Value.ShouldBe("4");
             },
-            Left: error => error.ShouldNotBeNull("Should not get here")
+            Left: error => error.ShouldBeNull("Should not get here")
         );
     }
 
-    [Theory]
-    [InlineData(1, TokenType.Constant, "Expected identifier, found 'a'")]
-    [InlineData(2, TokenType.Identifier, "Expected '=', found '='")]
-    [InlineData(3, TokenType.Equal, "Expected value, found '4'")]
-    [InlineData(4, TokenType.Number, "Expected ';', found '4'")]
-    public void ReturnsErrorOnMalformedInput(int wrongIndex, TokenType wrongType, string expectedError)
+    [Fact]
+    public void ReturnsErrorWhenConstKeywordIsMissing()
     {
-        var validTokens = new List<Token>{
+        var tokens = new ListOfTokens(new List<Token> {
+            new Token(TokenType.Identifier, "a", 1), // wrong type at index 1
+            new Token(TokenType.Equal, "=", 1),
+            new Token(TokenType.Number, "4", 1),
+            new Token(TokenType.Semicolon, ";", 1)
+        });
+
+        var result = parser.Parse(tokens);
+
+        result.Match(
+            Right: node => node.ShouldBeNull("Should not get here"),
+            Left: err => {
+                err.Message.ShouldContain("Expected 'const', found 'a'");
+            }
+        );
+    }
+    
+    [Fact]
+    public void ReturnsErrorWhenIdentifierIsWrongType()
+    {
+        var tokens = new ListOfTokens(new List<Token> {
+            new Token(TokenType.Constant, "const", 1),
+            new Token(TokenType.Constant, "const", 1), // wrong type at index 1
+            new Token(TokenType.Equal, "=", 1),
+            new Token(TokenType.Number, "4", 1),
+            new Token(TokenType.Semicolon, ";", 1)
+        });
+
+        var result = parser.Parse(tokens);
+
+        result.Match(
+            Right: node => node.ShouldBeNull("Should not get here"),
+            Left: err => {
+                err.Message.ShouldContain("Expected identifier, found 'const'");
+            }
+        );
+    }
+
+    [Fact]
+    public void ReturnsErrorWhenAssignmentOperatorIsWrongType()
+    {
+        var tokens = new ListOfTokens(new List<Token> {
+            new Token(TokenType.Constant, "const", 1),
+            new Token(TokenType.Identifier, "a", 1),
+            new Token(TokenType.Identifier, "a", 1), // wrong type at index 2
+            new Token(TokenType.Number, "4", 1),
+            new Token(TokenType.Semicolon, ";", 1)
+        });
+
+        var result = parser.Parse(tokens);
+
+        result.Match(
+            Right: node => node.ShouldBeNull("Should not get here"),
+            Left: err => {
+                err.ShouldNotBeNull();
+                err.Message.ShouldContain("Expected '=', found 'a'");
+            }
+        );
+    }
+
+    [Fact]
+    public void ReturnsErrorWhenValueIsWrongType()
+    {
+        var tokens = new ListOfTokens(new List<Token> {
+            new Token(TokenType.Constant, "const", 1),
+            new Token(TokenType.Identifier, "a", 1),
+            new Token(TokenType.Equal, "=", 1),
+            new Token(TokenType.Equal, "=", 1), // wrong type at index 3
+            new Token(TokenType.Semicolon, ";", 1)
+        });
+
+        var result = parser.Parse(tokens);
+
+        result.Match(
+            Right: node => node.ShouldBeNull("Should not get here"),
+            Left: err => {
+                err.ShouldNotBeNull();
+                err.Message.ShouldContain("Expected value, found '='");
+            }
+        );
+    }
+
+    [Fact]
+    public void ReturnsErrorWhenSemicolonIsWrongType()
+    {
+        var tokens = new ListOfTokens(new List<Token> {
             new Token(TokenType.Constant, "const", 1),
             new Token(TokenType.Identifier, "a", 1),
             new Token(TokenType.Equal, "=", 1),
             new Token(TokenType.Number, "4", 1),
-            new Token(TokenType.Semicolon, ";", 1)
-        };
-        var wrongLexeme = wrongIndex == 4 ? "4" : validTokens[wrongIndex].Lexeme;
-        var testTokens = validTokens.Select((t, i) => i==wrongIndex ?
-            new Token(wrongType, wrongLexeme, 1) : t).ToList();
-        var tokens = new ListOfTokens(testTokens);
+            new Token(TokenType.Number, "4", 1) // wrong type at index 4
+        });
 
         var result = parser.Parse(tokens);
-        
-        Assert.True(result.IsLeft);
-        Error err = null;
-        result.IfLeft(e => err = e);
-        result.IfRight(r => Assert.Fail("Unexpected success"));
-        Assert.NotNull(err);
-        Assert.Contains(expectedError, err.Message);
+
+        result.Match(
+            Right: node => node.ShouldBeNull("Should not get here"),
+            Left: err => {
+                err.ShouldNotBeNull();
+                err.Message.ShouldContain("Expected ';', found '4'");
+            }
+        );
     }
+
 
     [Fact]
     public void ReturnsErrorOnMissingTokens()
@@ -72,7 +151,7 @@ public class ParserShould
         var result = parser.Parse(tokens);
         
         result.Match(
-            Right: node => node.ShouldNotBeNull("Should not get here"),
+            Right: node => node.ShouldBeNull("Should not get here"),
             Left: error =>
             {
                 error.ShouldNotBeNull();

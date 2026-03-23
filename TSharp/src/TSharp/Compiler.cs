@@ -1,9 +1,10 @@
 ﻿using LanguageExt;
-using TSharp.Lexer;
+using TSharp.Lex;
+using TSharp.Parse;
 
 namespace TSharp;
 
-public class Compiler(Tokenizer tokenizer, Parser.Parser parser)
+public class Compiler(Tokenizer tokenizer, Parser parser)
 {
     public async Task<Either<Error, Unit>> Compile()
     {

@@ -1,7 +1,7 @@
-using TSharp.Lexer;
 using LanguageExt;
+using TSharp.Lex;
 
-namespace TSharp.Parser;
+namespace TSharp.Parse;
 
 public class Parser
 {

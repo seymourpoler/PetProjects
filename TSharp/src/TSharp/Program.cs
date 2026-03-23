@@ -1,6 +1,7 @@
 ﻿using LanguageExt;
 using Microsoft.Extensions.DependencyInjection;
-using TSharp.Lexer;
+using TSharp.Lex;
+using TSharp.Parse;
 
 namespace TSharp;
 
@@ -28,7 +29,7 @@ public class Program
         var services = new ServiceCollection();
         services.AddSingleton<Compiler>();
         services.AddSingleton<Tokenizer>();
-        services.AddSingleton<Parser.Parser>();
+        services.AddSingleton<Parser>();
         services.AddSingleton<FileReader>();
         services.AddSingleton<IO>(_ => new IO(filePath));
 		

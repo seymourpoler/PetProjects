@@ -1,6 +1,6 @@
 ﻿using FakeItEasy;
 using Shouldly;
-using TSharp.Lexer;
+using TSharp.Lex;
 using Xunit;
 
 namespace TSharp.Test.Lexer;

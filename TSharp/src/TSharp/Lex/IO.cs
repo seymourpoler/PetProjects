@@ -1,4 +1,4 @@
-﻿namespace TSharp.Lexer;
+﻿namespace TSharp.Lex;
 
 public class IO
 {

@@ -1,6 +1,6 @@
-﻿using TSharp.Lexer;
+﻿using TSharp.Lex;
 
-namespace TSharp.Parser;
+namespace TSharp.Parse;
 
 public abstract record Expression
 {
