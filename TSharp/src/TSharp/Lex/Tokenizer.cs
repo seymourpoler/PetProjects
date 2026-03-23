@@ -1,8 +1,10 @@
-﻿namespace TSharp.Lex;
+﻿using LanguageExt;
+
+namespace TSharp.Lex;
 
 public class Tokenizer(FileReader fileReader)
 {
-        public ListOfTokens Tokenize()
+        public Either<Error, ListOfTokens> Tokenize()
         {
             var listOfTokens = new ListOfTokens();
             

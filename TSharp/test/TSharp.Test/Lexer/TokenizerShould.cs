@@ -15,11 +15,17 @@ public class TokenizerShould
         A.CallTo(() => io.ReadAllText()).Returns(string.Empty);
         var tokenizer = new Tokenizer(new FileReader(io));
         
-        var tokens = tokenizer.Tokenize();
-        
-        var token = tokens.GetNextToken();
-        token.Type.ShouldBe(TokenType.EndOfFile);
-        token.LineNumber.ShouldBe(1);
+        var result = tokenizer.Tokenize();
+
+        result.Match(
+            Right: tokens =>
+            {
+                var token = tokens.GetNextToken();
+                token.Type.ShouldBe(TokenType.EndOfFile);
+                token.LineNumber.ShouldBe(1);
+            },
+            Left: error => error.ShouldBeNull("Should not get here")
+        );
     }
     
     [Fact]
@@ -28,24 +34,30 @@ public class TokenizerShould
         A.CallTo(() => io.ReadAllText()).Returns("const a = 4;");
         var tokenizer = new Tokenizer(new FileReader(io));
         
-        var tokens = tokenizer.Tokenize();
-        
-        var constantToken = tokens.GetNextToken();
-        constantToken.Type.ShouldBe(TokenType.Constant);
-        constantToken.Lexeme.ShouldBe("const");
-        var identifierToken = tokens.GetNextToken();
-        identifierToken.Type.ShouldBe(TokenType.Identifier);
-        identifierToken.Lexeme.ShouldBe("a");
-        var equalToken = tokens.GetNextToken();
-        equalToken.Type.ShouldBe(TokenType.Equal);
-        equalToken.Lexeme.ShouldBe("=");
-        var numberToken = tokens.GetNextToken();
-        numberToken.Type.ShouldBe(TokenType.Number);
-        numberToken.Lexeme.ShouldBe("4");
-        var semicolonToken = tokens.GetNextToken();
-        semicolonToken.Type.ShouldBe(TokenType.Semicolon);
-        semicolonToken.Lexeme.ShouldBe(";");
-        var endOfFileToken = tokens.GetNextToken();
-        endOfFileToken.Type.ShouldBe(TokenType.EndOfFile);
+        var result = tokenizer.Tokenize();
+
+        result.Match(
+            Right: tokens =>
+            {
+                var constantToken = tokens.GetNextToken();
+                constantToken.Type.ShouldBe(TokenType.Constant);
+                constantToken.Lexeme.ShouldBe("const");
+                var identifierToken = tokens.GetNextToken();
+                identifierToken.Type.ShouldBe(TokenType.Identifier);
+                identifierToken.Lexeme.ShouldBe("a");
+                var equalToken = tokens.GetNextToken();
+                equalToken.Type.ShouldBe(TokenType.Equal);
+                equalToken.Lexeme.ShouldBe("=");
+                var numberToken = tokens.GetNextToken();
+                numberToken.Type.ShouldBe(TokenType.Number);
+                numberToken.Lexeme.ShouldBe("4");
+                var semicolonToken = tokens.GetNextToken();
+                semicolonToken.Type.ShouldBe(TokenType.Semicolon);
+                semicolonToken.Lexeme.ShouldBe(";");
+                var endOfFileToken = tokens.GetNextToken();
+                endOfFileToken.Type.ShouldBe(TokenType.EndOfFile);
+            },
+            Left: error => error.ShouldBeNull("Should not get here")
+        );
     }
 }

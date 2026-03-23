@@ -1,5 +1,6 @@
 ﻿using LanguageExt;
 using Microsoft.Extensions.DependencyInjection;
+using TSharp.CommonIntermediateLanguage;
 using TSharp.Lex;
 using TSharp.Parse;
 
@@ -31,6 +32,8 @@ public class Program
         services.AddSingleton<Tokenizer>();
         services.AddSingleton<Parser>();
         services.AddSingleton<FileReader>();
+        services.AddSingleton<IntermediateLanguageEmitter>();
+        services.AddSingleton<FileWriter>(_ => new FileWriter(filePath));
         services.AddSingleton<IO>(_ => new IO(filePath));
 		
         using var serviceProvider = services.BuildServiceProvider();
