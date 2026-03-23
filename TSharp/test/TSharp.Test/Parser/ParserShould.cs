@@ -1,7 +1,6 @@
 using Xunit;
 using TSharp.Lexer;
 using TSharp.Parser;
-using ParserClass = TSharp.Parser.Parser;
 
 namespace TSharp.Test.Parser;
 
@@ -16,7 +15,7 @@ public class ParserShould
         listOfTokens.Add(new Token(TokenType.Equal, "=", 1));
         listOfTokens.Add(new Token(TokenType.Number, "4", 1));
         listOfTokens.Add(new Token(TokenType.Semicolon, ";", 1));
-        var parser = new ParserClass();
+        var parser = new TSharp.Parser.Parser();
 
         var result = parser.Parse(listOfTokens);
 
@@ -28,7 +27,7 @@ public class ParserShould
         Assert.IsType<SyntaxNode.Constant>(node);
         var constNode = (SyntaxNode.Constant)node;
         Assert.Equal("a", constNode.Name.Lexeme);
-        Assert.Equal("4", ((Expression.Literal)constNode.Value).Value.Lexeme);
+        Assert.Equal("4", ((Expression.Literal)constNode.Value).Value);
     }
 
     [Theory]
@@ -38,7 +37,6 @@ public class ParserShould
     [InlineData(4, TokenType.Number, "Expected ';', found '4'")]
     public void ReturnsErrorOnMalformedInput(int wrongIndex, TokenType wrongType, string expectedError)
     {
-        // Arrange: tokens for 'const a = 4;'
         var validTokens = new List<Token>{
             new Token(TokenType.Constant, "const", 1),
             new Token(TokenType.Identifier, "a", 1),
@@ -46,17 +44,14 @@ public class ParserShould
             new Token(TokenType.Number, "4", 1),
             new Token(TokenType.Semicolon, ";", 1)
         };
-        // Swap only the intended token to a wrong type
         var wrongLexeme = wrongIndex == 4 ? "4" : validTokens[wrongIndex].Lexeme;
         var testTokens = validTokens.Select((t, i) => i==wrongIndex ?
             new Token(wrongType, wrongLexeme, 1) : t).ToList();
         var tokens = new ListOfTokens(testTokens);
-        var parser = new ParserClass();
+        var parser = new TSharp.Parser.Parser();
 
-        // Act
         var result = parser.Parse(tokens);
-
-        // Assert
+        
         Assert.True(result.IsLeft);
         Error err = null;
         result.IfLeft(e => err = e);
@@ -68,16 +63,13 @@ public class ParserShould
     [Fact]
     public void ReturnsErrorOnMissingTokens()
     {
-        // Arrange: only first token
         var tokens = new ListOfTokens(new List<Token>{
             new Token(TokenType.Constant, "const", 1)
         });
-        var parser = new ParserClass();
-
-        // Act
+        var parser = new TSharp.Parser.Parser();
+        
         var result = parser.Parse(tokens);
-
-        // Assert
+        
         Assert.True(result.IsLeft);
         Error err = null;
         result.IfLeft(e => err = e);
