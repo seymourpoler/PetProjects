@@ -140,7 +140,6 @@ public class ParserShould
         );
     }
 
-
     [Fact]
     public void ReturnsErrorOnMissingTokens()
     {
