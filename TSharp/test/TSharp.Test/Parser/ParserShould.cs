@@ -24,9 +24,9 @@ public class ParserShould
         result.Match(
             Right: node =>
             {
-                node.ShouldBeOfType<SyntaxNode.Constant>();
-                ((SyntaxNode.Constant)node).Name.Lexeme.ShouldBe("a");
-                var constNode = (SyntaxNode.Constant)node;
+                node.ShouldBeOfType<List<SyntaxNode>>();
+                ((SyntaxNode.Constant)node.First()).Name.Lexeme.ShouldBe("a");
+                var constNode = (SyntaxNode.Constant)node.First();
                 ((Expression.Literal)constNode.Value).Value.ShouldBe("4");
             },
             Left: error => error.ShouldBeNull("Should not get here")

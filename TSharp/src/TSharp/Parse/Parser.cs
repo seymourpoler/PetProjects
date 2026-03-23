@@ -5,7 +5,7 @@ namespace TSharp.Parse;
 
 public class Parser
 {
-    public Either<Error, SyntaxNode> Parse(ListOfTokens tokens)
+    public Either<Error, List<SyntaxNode>> Parse(ListOfTokens tokens)
     {
         var constant = tokens.GetNextToken();
         if (constant.Type != TokenType.Constant)
@@ -27,6 +27,9 @@ public class Parser
         if (semicolon.Type != TokenType.Semicolon)
             return new Error($"Expected ';', found '{semicolon.Lexeme}'");
 
-        return new SyntaxNode.Constant(identifier, new Expression.Literal(valueToken.Lexeme));
+        return new List<SyntaxNode>
+        {
+            new SyntaxNode.Constant(identifier, new Expression.Literal(valueToken.Lexeme))
+        };
     }
 }
