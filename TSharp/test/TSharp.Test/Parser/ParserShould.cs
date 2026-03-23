@@ -37,7 +37,7 @@ public class ParserShould
     public void ReturnsErrorWhenConstKeywordIsMissing()
     {
         var tokens = new ListOfTokens(new List<Token> {
-            new Token(TokenType.Identifier, "a", 1), // wrong type at index 1
+            new Token(TokenType.Identifier, "a", 1),
             new Token(TokenType.Equal, "=", 1),
             new Token(TokenType.Number, "4", 1),
             new Token(TokenType.Semicolon, ";", 1)
@@ -58,7 +58,7 @@ public class ParserShould
     {
         var tokens = new ListOfTokens(new List<Token> {
             new Token(TokenType.Constant, "const", 1),
-            new Token(TokenType.Constant, "const", 1), // wrong type at index 1
+            new Token(TokenType.Constant, "const", 1),
             new Token(TokenType.Equal, "=", 1),
             new Token(TokenType.Number, "4", 1),
             new Token(TokenType.Semicolon, ";", 1)
@@ -80,7 +80,7 @@ public class ParserShould
         var tokens = new ListOfTokens(new List<Token> {
             new Token(TokenType.Constant, "const", 1),
             new Token(TokenType.Identifier, "a", 1),
-            new Token(TokenType.Identifier, "a", 1), // wrong type at index 2
+            new Token(TokenType.Identifier, "a", 1),
             new Token(TokenType.Number, "4", 1),
             new Token(TokenType.Semicolon, ";", 1)
         });
@@ -103,7 +103,7 @@ public class ParserShould
             new Token(TokenType.Constant, "const", 1),
             new Token(TokenType.Identifier, "a", 1),
             new Token(TokenType.Equal, "=", 1),
-            new Token(TokenType.Equal, "=", 1), // wrong type at index 3
+            new Token(TokenType.Equal, "=", 1),
             new Token(TokenType.Semicolon, ";", 1)
         });
 
@@ -126,7 +126,7 @@ public class ParserShould
             new Token(TokenType.Identifier, "a", 1),
             new Token(TokenType.Equal, "=", 1),
             new Token(TokenType.Number, "4", 1),
-            new Token(TokenType.Number, "4", 1) // wrong type at index 4
+            new Token(TokenType.Number, "4", 1)
         });
 
         var result = parser.Parse(tokens);
