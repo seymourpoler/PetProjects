@@ -1,9 +1,9 @@
 ﻿using LanguageExt;
 using TSharp.Parse;
 
-namespace TSharp.CommonIntermediateLanguage;
+namespace TSharp.Emit;
 
-public class IntermediateLanguageEmitter
+public class CommonIntermediateLanguageEmitter
 {
     public Either<Error, Unit> Emit(List<SyntaxNode> nodes)
     {

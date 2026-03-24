@@ -4,7 +4,7 @@ using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Reflection.PortableExecutable;
 
-namespace TSharp.CommonIntermediateLanguage;
+namespace TSharp.Emit;
 
 public class FileWriter(string filePath)
 {
