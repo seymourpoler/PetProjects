@@ -1,8 +1,14 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSharp", "src\TSharp\TSharp.csproj", "{80364004-A85C-407C-9571-C5A2EBDC4F67}"
+﻿fix Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1C9C3A6E-6F5C-4A1E-9B0F-1A2B3C4D5E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSharp.Test", "test\TSharp.Test\TSharp.Test.csproj", "{A7D588AF-258F-4385-8D87-55B921EACB91}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2D8D4B7F-7A6D-4B2F-8C1A-2B3C4D5E6F70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSharp", "src\TSharp\TSharp.csproj", "{80364004-A85C-407C-9571-C5A2EBDC4F67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSharp.Test", "test\TSharp.Test\TSharp.Test.csproj", "{A7D588AF-258F-4385-8D87-55B921EACB91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +24,15 @@ Global
 		{A7D588AF-258F-4385-8D87-55B921EACB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7D588AF-258F-4385-8D87-55B921EACB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7D588AF-258F-4385-8D87-55B921EACB91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{80364004-A85C-407C-9571-C5A2EBDC4F67} = {1C9C3A6E-6F5C-4A1E-9B0F-1A2B3C4D5E6F}
+		{A7D588AF-258F-4385-8D87-55B921EACB91} = {2D8D4B7F-7A6D-4B2F-8C1A-2B3C4D5E6F70}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E9F5C80-8B7E-4C3A-9D2B-3C4D5E6F7081}
 	EndGlobalSection
 EndGlobal
