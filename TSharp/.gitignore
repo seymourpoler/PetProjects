@@ -15,6 +15,7 @@ x64/
 # IDE files
 .vs/
 .idea/
+.openidea/
 
 # Logs
 *.log
