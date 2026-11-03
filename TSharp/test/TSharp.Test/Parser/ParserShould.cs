@@ -7,17 +7,18 @@ namespace TSharp.Test.Parser;
 
 public class ParserShould
 {
+    private const int AnyLine = 1;
     private readonly Parse.Parser parser = new Parse.Parser();
     
     [Fact]
     public void ParsesValidConstDeclaration()
     {
         var listOfTokens = new ListOfTokens();
-        listOfTokens.Add(new Token(TokenType.Constant, "const", 1));
-        listOfTokens.Add(new Token(TokenType.Identifier, "a", 1));
-        listOfTokens.Add(new Token(TokenType.Equal, "=", 1));
-        listOfTokens.Add(new Token(TokenType.Number, "4", 1));
-        listOfTokens.Add(new Token(TokenType.Semicolon, ";", 1));
+        listOfTokens.Add(new Token(TokenType.Constant, "const", AnyLine));
+        listOfTokens.Add(new Token(TokenType.Identifier, "a", AnyLine));
+        listOfTokens.Add(new Token(TokenType.Equal, "=", AnyLine));
+        listOfTokens.Add(new Token(TokenType.Number, "4", AnyLine));
+        listOfTokens.Add(new Token(TokenType.Semicolon, ";", AnyLine));
 
         var result = parser.Parse(listOfTokens);
 
@@ -37,10 +38,10 @@ public class ParserShould
     public void ReturnsErrorWhenConstKeywordIsMissing()
     {
         var tokens = new ListOfTokens(new List<Token> {
-            new Token(TokenType.Identifier, "a", 1),
-            new Token(TokenType.Equal, "=", 1),
-            new Token(TokenType.Number, "4", 1),
-            new Token(TokenType.Semicolon, ";", 1)
+            new Token(TokenType.Identifier, "a", AnyLine),
+            new Token(TokenType.Equal, "=", AnyLine),
+            new Token(TokenType.Number, "4", AnyLine),
+            new Token(TokenType.Semicolon, ";", AnyLine)
         });
 
         var result = parser.Parse(tokens);
@@ -57,11 +58,11 @@ public class ParserShould
     public void ReturnsErrorWhenIdentifierIsWrongType()
     {
         var tokens = new ListOfTokens(new List<Token> {
-            new Token(TokenType.Constant, "const", 1),
-            new Token(TokenType.Constant, "const", 1),
-            new Token(TokenType.Equal, "=", 1),
-            new Token(TokenType.Number, "4", 1),
-            new Token(TokenType.Semicolon, ";", 1)
+            new Token(TokenType.Constant, "const", AnyLine),
+            new Token(TokenType.Constant, "const", AnyLine),
+            new Token(TokenType.Equal, "=", AnyLine),
+            new Token(TokenType.Number, "4", AnyLine),
+            new Token(TokenType.Semicolon, ";", AnyLine)
         });
 
         var result = parser.Parse(tokens);
@@ -78,11 +79,11 @@ public class ParserShould
     public void ReturnsErrorWhenAssignmentOperatorIsWrongType()
     {
         var tokens = new ListOfTokens(new List<Token> {
-            new Token(TokenType.Constant, "const", 1),
-            new Token(TokenType.Identifier, "a", 1),
-            new Token(TokenType.Identifier, "a", 1),
-            new Token(TokenType.Number, "4", 1),
-            new Token(TokenType.Semicolon, ";", 1)
+            new Token(TokenType.Constant, "const", AnyLine),
+            new Token(TokenType.Identifier, "a", AnyLine),
+            new Token(TokenType.Identifier, "a", AnyLine),
+            new Token(TokenType.Number, "4", AnyLine),
+            new Token(TokenType.Semicolon, ";", AnyLine)
         });
 
         var result = parser.Parse(tokens);
@@ -100,11 +101,11 @@ public class ParserShould
     public void ReturnsErrorWhenValueIsWrongType()
     {
         var tokens = new ListOfTokens(new List<Token> {
-            new Token(TokenType.Constant, "const", 1),
-            new Token(TokenType.Identifier, "a", 1),
-            new Token(TokenType.Equal, "=", 1),
-            new Token(TokenType.Equal, "=", 1),
-            new Token(TokenType.Semicolon, ";", 1)
+            new Token(TokenType.Constant, "const", AnyLine),
+            new Token(TokenType.Identifier, "a", AnyLine),
+            new Token(TokenType.Equal, "=", AnyLine),
+            new Token(TokenType.Equal, "=", AnyLine),
+            new Token(TokenType.Semicolon, ";", AnyLine)
         });
 
         var result = parser.Parse(tokens);
@@ -122,11 +123,11 @@ public class ParserShould
     public void ReturnsErrorWhenSemicolonIsWrongType()
     {
         var tokens = new ListOfTokens(new List<Token> {
-            new Token(TokenType.Constant, "const", 1),
-            new Token(TokenType.Identifier, "a", 1),
-            new Token(TokenType.Equal, "=", 1),
-            new Token(TokenType.Number, "4", 1),
-            new Token(TokenType.Number, "4", 1)
+            new Token(TokenType.Constant, "const", AnyLine),
+            new Token(TokenType.Identifier, "a", AnyLine),
+            new Token(TokenType.Equal, "=", AnyLine),
+            new Token(TokenType.Number, "4", AnyLine),
+            new Token(TokenType.Number, "4", AnyLine)
         });
 
         var result = parser.Parse(tokens);
@@ -144,7 +145,7 @@ public class ParserShould
     public void ReturnsErrorOnMissingTokens()
     {
         var tokens = new ListOfTokens(new List<Token>{
-            new Token(TokenType.Constant, "const", 1)
+            new Token(TokenType.Constant, "const", AnyLine)
         });
         
         var result = parser.Parse(tokens);
